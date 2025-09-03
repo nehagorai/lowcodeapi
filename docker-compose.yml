@@ -33,6 +33,7 @@ services:
       - MYSQL_USER=${MYSQL_USER:-lowcodeapi}
       - MYSQL_PASSWORD=${MYSQL_PASSWORD:-lowcodeapi}
     env_file:
+      - .env
       - ./server/.env
     ports:
       - ${SERVER_PORT:-3001}:${SERVER_PORT:-3001}
