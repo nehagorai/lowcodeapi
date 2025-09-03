@@ -512,41 +512,11 @@ export const getStaticProps = async () => {
       user
     } = contextObj;
   
-    let apisMap = {};
-    let apis = [];
-    const featuredUrl = `https://network.lowcodeapi.com/api/v1/featured?location=build-tool`;
-    const { data: featuredData } = await axios(featuredUrl);
-    const { results : results2,  } = featuredData;
-    const { data: featured, meta2= {} } = results2;
-    Object.keys(featured).forEach(provider => {
-      const { openapi, app } = featured[provider];
-      const result  = processPath(openapi, provider, [], app);
-      const { apiList, details } = result;
-      let apiPin = [];
-
-      let selected = { ...app};
-      if (meta2.api_endpoint) {
-          details.service_url = `${meta2.api_endpoint}/${provider}`;
-          selected.logo_url = `https://assets.lowcodeapi.com/connectors/logos/${provider}.svg`;
-      } else {
-          details.service_url = `https://api.lowcodeapi.com/${provider}`;
-          selected.logo_url = `https://assets.lowcodeapi.com/connectors/logos/${provider}.svg`;
-      }
-
-      Object.keys(apiList).forEach(api => {
-        apiList[api].forEach(apiItem => {
-          const localItem = { ...apiItem, selected, details,  };
-          apiPin.push(localItem);
-        });
-      });
-      apisMap = { ...apisMap, ...apiList };
-      apis = apis.concat([ ...apiPin ]);
-    });
     return { 
       props: { 
         providerGroup,
         providers: providers.filter((item) => item.released && !item.testing),
-        apis,
+        apis : [],
         categories: [`All`, ...categories],
         categoryIndex,
         config, 

@@ -3,7 +3,6 @@ import axios from 'axios';
 import express, { Request, Response, Router } from 'express';
 import { loggerService, safePromise } from '../../../../utilities';
 import { providerList, providerMap } from '../../../../intents';
-import { unifiedList, unifiedMap } from '../../../../intents/unified';
 
 import Middlewares from '../../../middlewares';
 
@@ -154,84 +153,6 @@ router.get('/provider-list', async (req: Request, res: Response) => {
   loggerService.info(`Provider list, ${list.length} providers returned.`);
   res.json({
     message: 'Provider list',
-    total: list.length,
-    meta,
-    res: list,
-  });
-});
-
-router.get('/unified-list', async (req: Request, res: Response) => {
-  const {
-    filter, skip, providers, skip_providers,
-  } : { [key:string]: any} = req.query;
-
-  const meta = {};
-  let list = [];
-  let filterList: Array<string> = [];
-  if (filter) {
-    filterList = filter.split(',');
-  }
-
-  let selectProviders: Array<string> = [];
-  if (providers) {
-    selectProviders = providers.trim().toLowerCase().split(',');
-  }
-
-  if (selectProviders.length) {
-    list = providerList.filter((provider: any) => selectProviders.includes(provider.id));
-  }
-
-  let ingoreProviders: Array<string> = [];
-  if (skip_providers) {
-    ingoreProviders = skip_providers.trim().toLowerCase().split(',');
-  }
-
-  if (ingoreProviders.length) {
-    list = unifiedList.filter((provider: any) => !ingoreProviders.includes(provider.id));
-  }
-
-  if (!list.length) {
-    list = unifiedList;
-  }
-
-  list = list.map((item: any) => {
-    const local : { [key: string]: any} = {
-      alias: item.alias || undefined,
-      auth_type: item.access_type,
-      name: item.service,
-      logo: item.logo,
-      disabled: !item.released,
-      released: !!item.released,
-      visible: !!(+item.visible),
-      ...(unifiedMap[item.id] || {}),
-      provider_link: undefined,
-      href: undefined,
-      rank: undefined,
-
-    };
-
-    const target = local;
-    if (filterList.length) {
-      filterList.forEach((filter) => {
-        if (item[filter]) {
-          target[filter] = item[filter];
-        }
-      });
-    }
-
-    if (skip) {
-      let skipList: Array<string> = [];
-      skipList = skip.split(',');
-      skipList.forEach((item) => {
-        target[item] = undefined;
-      });
-    }
-    return target;
-  });
-
-  loggerService.info(`Unified list, ${list.length} providers returned.`);
-  res.json({
-    message: 'Unified list',
     total: list.length,
     meta,
     res: list,
