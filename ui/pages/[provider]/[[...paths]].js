@@ -141,18 +141,6 @@ export function Explorer({
     });
 
     
-    useEffect(() => {
-        ;(async() => {
-            const location = window.location.href;
-            const url = `https://telemetry.lowcodeapi.com/api/v1/send?location=${location}`
-            try {
-                await axios(url);
-            } catch (e) {
-                // Handle url block 
-            }
-        })();
-    }, []);
-
     //sidebar
     useEffect(() => {
         (async () => {
