@@ -120,6 +120,7 @@ CREATE TABLE IF NOT EXISTS `providers_credential_and_tokens` (
   `auth_type` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `config` json DEFAULT NULL,
   `provider_data` json DEFAULT NULL,
+  `credentials` json DEFAULT NULL,
   `active` tinyint(1) DEFAULT '1',
   `descriptions` text,
   `remark` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,

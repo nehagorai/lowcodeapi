@@ -133,3 +133,7 @@ CREATE TABLE `providers_intent_default_payloads` (
   PRIMARY KEY (`id`),
   KEY `ref_idx` (`ref_id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- 19 Dec 2024 - Fix missing credentials column in providers_credential_and_tokens table
+
+ALTER TABLE providers_credential_and_tokens ADD COLUMN credentials JSON DEFAULT NULL AFTER provider_data;
