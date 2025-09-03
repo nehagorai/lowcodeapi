@@ -11,7 +11,7 @@ FROM node:20-alpine AS prod
 WORKDIR /app
 
 ENV NODE_ENV=production
-ENV PORT=3000
+ENV PORT=${PORT:-3001}
 
 # Copy built artifacts from builder stage
 COPY --from=builder /app/dist ./dist
