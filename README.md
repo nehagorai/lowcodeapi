@@ -1,112 +1,43 @@
 # LowCodeAPI
 
-An unified API connector that abstracts third-party service integrations through a single, standardized interface. Build, deploy, and manage your integrations with ease.
+A unified API connector that abstracts third-party service integrations through a single, standardized interface. Build, deploy, and manage your integrations with ease.
 
-## ✨ Features
+## 🏗️ Project Overview
 
-## 🏗️ Architecture
+LowCodeAPI is a comprehensive platform consisting of two main components:
 
-```
-lowcodeapi/
-├── server/                 # Backend API server (Node.js/TypeScript)
-│   ├── src/               # Source code
-│   │   ├── core/          # Core business logic
-│   │   ├── api-access/    # Direct provider access
-│   │   ├── api-extra/     # Extended functionality
-│   │   ├── oauth/         # OAuth authentication
-│   │   └── intents/       # Provider configurations
-│   ├── deploy/            # Deployment automation
-│   └── build-prep/        # Build preparation
-└── ui/                    # Frontend dashboard (Next.js/React)
-    ├── components/        # Reusable UI components
-    ├── pages/            # Application pages
-    └── styles/           # Tailwind CSS styles
-```
+- **[🚀 Server](./server/README.md)** - Backend with unified API gateway
+- **[🎨 UI](./ui/README.md)** - Frontend
 
-## 🚀 Quick Start
+## 📚 Documentation
 
-### Prerequisites
+- **[Server Documentation](./server/README.md)** - Backend setup, API endpoints, and development
+- **[UI Documentation](./ui/README.md)** - Frontend development, components, and deployment
+- **[Contributing Guide](./CONTRIBUTING.md)** - How to contribute to the project
 
-- Node.js 18+ 
-- npm or yarn
-- MySQL or SQLite database
-- Redis (for sessions and caching)
-
-### Backend Setup
-
-1. **Clone and install dependencies:**
-```bash
-cd lowcodeapi/server
-npm install
-```
-
-2. **Environment configuration:**
-```bash
-cp .env.copy .env
-# Edit .env with your configuration
-```
-
-3. **Database setup:**
-```bash
+## 🏛️ Architecture
 
 ```
-
-4. **Start development server:**
-```bash
-npm run dev
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Frontend UI   │    │  Backend API    │    │ Third-party     │
+│   (Next.js)     │◄──►│   (Node.js)     │◄──►│   Services      │
+│   Port: 3000    │    │   Port: 3001    │    │                 │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
 ```
-
-### Frontend Setup
-
-1. **Install dependencies:**
-```bash
-cd lowcodeapi/ui
-npm install
-```
-
-2. **Start development server:**
-```bash
-npm run dev
-```
-
-## 🔧 Configuration
-
-### Environment Variables
-
-## 📚 API Usage
-
-### Authentication
-
-
-### Provider Integration
-
-
-## 🛠️ Development
-
-### Available Scripts
-
-
-### Code Quality
-
-
-### Testing
-
-
-## 🚀 Deployment
-
-### Docker Deployment
-
-
-### Production Build
-
-### Custom Builds
-
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md) for details.
 
 ### Development Workflow
 
 
 ## 📄 License
+
+See the [LICENSE](./LICENSE) file for details.
+
+## 🆘 Support
+
+- **Issues**: [GitHub Issues](https://github.com/your-repo/lowcodeapi/issues)
+- **Documentation**: [Server](./server/README.md) | [UI](./ui/README.md)
+- **Contributing**: [CONTRIBUTING.md](./CONTRIBUTING.md)
