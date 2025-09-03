@@ -1,0 +1,2191 @@
+{
+  "app": {
+    "title": "Wordpress (Custom) API",
+    "description": "",
+    "api_base": "/wordpressorg",
+    "copyright": "",
+    "copyright_year": "",
+    "contact_email": ""
+  },
+  "category": {
+    "All": ""
+  },
+  "routes": {
+    "retrieve_a_application_password": {
+      "provider_intent": "retrieve_a_application_password",
+      "provider_alias_intent": "/wp/v2/users/_user_id/application-passwords/_uuid",
+      "text": "Retrieve a Application Password",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve a Application Password",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/users/<user_id>/application-passwords/<uuid>",
+        "alias_endpoint": "/wordpressorg/wp/v2/users/_user_id/application-passwords/_uuid",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/application-passwords/#retrieve-a-application-password-2"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "create_a_application_password": {
+      "provider_intent": "create_a_application_password",
+      "provider_alias_intent": "/wp/v2/users/_user_id/application-passwords",
+      "text": "Create a Application Password",
+      "category": "All",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Create a Application Password",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/users/<user_id>/application-passwords",
+        "alias_endpoint": "/wordpressorg/wp/v2/users/_user_id/application-passwords",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/application-passwords/#create-a-application-password"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "delete_a_application_password": {
+      "provider_intent": "delete_a_application_password",
+      "provider_alias_intent": "/wp/v2/users/_user_id/application-passwords/_uuid",
+      "text": "Delete a Application Password",
+      "category": "All",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Delete a Application Password",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/users/<user_id>/application-passwords/<uuid>",
+        "alias_endpoint": "/wordpressorg/wp/v2/users/_user_id/application-passwords/_uuid",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/application-passwords/#delete-a-application-password-2"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "update_a_application_password": {
+      "provider_intent": "update_a_application_password",
+      "provider_alias_intent": "/wp/v2/users/_user_id/application-passwords/_uuid",
+      "text": "Update a Application Password",
+      "category": "All",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Update a Application Password",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/users/<user_id>/application-passwords/<uuid>",
+        "alias_endpoint": "/wordpressorg/wp/v2/users/_user_id/application-passwords/_uuid",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/application-passwords/#update-a-application-password"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "retrieve_a_block_type": {
+      "provider_intent": "retrieve_a_block_type",
+      "provider_alias_intent": "/wp/v2/block-types/_namespace/_name",
+      "text": "Retrieve a Block Type",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve a Block Type",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/block-types/<namespace>/<name>",
+        "alias_endpoint": "/wordpressorg/wp/v2/block-types/_namespace/_name",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/block-types/#retrieve-a-block-type-3"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "list_editor_blocks": {
+      "provider_intent": "list_editor_blocks",
+      "provider_alias_intent": "/wp/v2/blocks",
+      "text": "List Editor Blocks",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List Editor Blocks",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/blocks",
+        "alias_endpoint": "/wordpressorg/wp/v2/blocks",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/blocks/#list-editor-blocks"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "create_a_editor_block": {
+      "provider_intent": "create_a_editor_block",
+      "provider_alias_intent": "/wp/v2/blocks",
+      "text": "Create a Editor Block",
+      "category": "All",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Create a Editor Block",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/blocks",
+        "alias_endpoint": "/wordpressorg/wp/v2/blocks",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/blocks/#create-a-editor-block"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "retrieve_a_editor_block": {
+      "provider_intent": "retrieve_a_editor_block",
+      "provider_alias_intent": "/wp/v2/blocks/_id",
+      "text": "Retrieve a Editor Block",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve a Editor Block",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/blocks/<id>",
+        "alias_endpoint": "/wordpressorg/wp/v2/blocks/_id",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/blocks/#retrieve-a-editor-block"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "update_a_editor_block": {
+      "provider_intent": "update_a_editor_block",
+      "provider_alias_intent": "/wp/v2/blocks/_id",
+      "text": "Update a Editor Block",
+      "category": "All",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Update a Editor Block",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/blocks/<id>",
+        "alias_endpoint": "/wordpressorg/wp/v2/blocks/_id",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/blocks/#update-a-editor-block"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "delete_a_editor_block": {
+      "provider_intent": "delete_a_editor_block",
+      "provider_alias_intent": "/wp/v2/blocks/_id",
+      "text": "Delete a Editor Block",
+      "category": "All",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Delete a Editor Block",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/blocks/<id>",
+        "alias_endpoint": "/wordpressorg/wp/v2/blocks/_id",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/blocks/#delete-a-editor-block"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "retrieve_a_block_revision": {
+      "provider_intent": "retrieve_a_block_revision",
+      "provider_alias_intent": "/wp/v2/blocks/_parent/autosaves/_id",
+      "text": "Retrieve a Block Revision",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve a Block Revision",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/blocks/<parent>/autosaves/<id>",
+        "alias_endpoint": "/wordpressorg/wp/v2/blocks/_parent/autosaves/_id",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/block-revisions/#retrieve-a-block-revision-2"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "create_a_block_revision": {
+      "provider_intent": "create_a_block_revision",
+      "provider_alias_intent": "/wp/v2/blocks/_id/autosaves",
+      "text": "Create a Block Revision",
+      "category": "All",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Create a Block Revision",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/blocks/<id>/autosaves",
+        "alias_endpoint": "/wordpressorg/wp/v2/blocks/_id/autosaves",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/block-revisions/#create-a-block-revision"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "create_a_rendered_block": {
+      "provider_intent": "create_a_rendered_block",
+      "provider_alias_intent": "/wp/v2/block-renderer/_name",
+      "text": "Create a Rendered Block",
+      "category": "All",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Create a Rendered Block",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/block-renderer/<name>",
+        "alias_endpoint": "/wordpressorg/wp/v2/block-renderer/_name",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/rendered-blocks/#create-a-rendered-block"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "list_categories": {
+      "provider_intent": "list_categories",
+      "provider_alias_intent": "/wp/v2/categories",
+      "text": "List Categories",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List Categories",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/categories",
+        "alias_endpoint": "/wordpressorg/wp/v2/categories",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/categories/#list-categories"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "create_a_category": {
+      "provider_intent": "create_a_category",
+      "provider_alias_intent": "/wp/v2/categories",
+      "text": "Create a Category",
+      "category": "All",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Create a Category",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/categories",
+        "alias_endpoint": "/wordpressorg/wp/v2/categories",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/categories/#create-a-category"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "retrieve_a_category": {
+      "provider_intent": "retrieve_a_category",
+      "provider_alias_intent": "/wp/v2/categories/_id",
+      "text": "Retrieve a Category",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve a Category",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/categories/<id>",
+        "alias_endpoint": "/wordpressorg/wp/v2/categories/_id",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/categories/#retrieve-a-category"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "update_a_category": {
+      "provider_intent": "update_a_category",
+      "provider_alias_intent": "/wp/v2/categories/_id",
+      "text": "Update a Category",
+      "category": "All",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Update a Category",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/categories/<id>",
+        "alias_endpoint": "/wordpressorg/wp/v2/categories/_id",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/categories/#update-a-category"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "delete_a_category": {
+      "provider_intent": "delete_a_category",
+      "provider_alias_intent": "/wp/v2/categories/_id",
+      "text": "Delete a Category",
+      "category": "All",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Delete a Category",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/categories/<id>",
+        "alias_endpoint": "/wordpressorg/wp/v2/categories/_id",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/categories/#delete-a-category"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "list_comments": {
+      "provider_intent": "list_comments",
+      "provider_alias_intent": "/wp/v2/comments",
+      "text": "List Comments",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List Comments",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/comments",
+        "alias_endpoint": "/wordpressorg/wp/v2/comments",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/comments/#list-comments"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "create_a_comment": {
+      "provider_intent": "create_a_comment",
+      "provider_alias_intent": "/wp/v2/comments",
+      "text": "Create a Comment",
+      "category": "All",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Create a Comment",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/comments",
+        "alias_endpoint": "/wordpressorg/wp/v2/comments",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/comments/#create-a-comment"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "retrieve_a_comment": {
+      "provider_intent": "retrieve_a_comment",
+      "provider_alias_intent": "/wp/v2/comments/_id",
+      "text": "Retrieve a Comment",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve a Comment",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/comments/<id>",
+        "alias_endpoint": "/wordpressorg/wp/v2/comments/_id",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/comments/#retrieve-a-comment"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "update_a_comment": {
+      "provider_intent": "update_a_comment",
+      "provider_alias_intent": "/wp/v2/comments/_id",
+      "text": "Update a Comment",
+      "category": "All",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Update a Comment",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/comments/<id>",
+        "alias_endpoint": "/wordpressorg/wp/v2/comments/_id",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/comments/#update-a-comment"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "delete_a_comment": {
+      "provider_intent": "delete_a_comment",
+      "provider_alias_intent": "/wp/v2/comments/_id",
+      "text": "Delete a Comment",
+      "category": "All",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Delete a Comment",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/comments/<id>",
+        "alias_endpoint": "/wordpressorg/wp/v2/comments/_id",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/comments/#delete-a-comment"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "list_media": {
+      "provider_intent": "list_media",
+      "provider_alias_intent": "/wp/v2/media",
+      "text": "List Media",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List Media",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/media",
+        "alias_endpoint": "/wordpressorg/wp/v2/media",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/media/#list-media"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "create_a_media_item": {
+      "provider_intent": "create_a_media_item",
+      "provider_alias_intent": "/wp/v2/media",
+      "text": "Create a Media Item",
+      "category": "All",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Create a Media Item",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/media",
+        "alias_endpoint": "/wordpressorg/wp/v2/media",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/media/#create-a-media-item"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "retrieve_a_media_item": {
+      "provider_intent": "retrieve_a_media_item",
+      "provider_alias_intent": "/wp/v2/media/_id",
+      "text": "Retrieve a Media Item",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve a Media Item",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/media/<id>",
+        "alias_endpoint": "/wordpressorg/wp/v2/media/_id",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/media/#retrieve-a-media-item"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "update_a_media_item": {
+      "provider_intent": "update_a_media_item",
+      "provider_alias_intent": "/wp/v2/media/_id",
+      "text": "Update a Media Item",
+      "category": "All",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Update a Media Item",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/media/<id>",
+        "alias_endpoint": "/wordpressorg/wp/v2/media/_id",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/media/#update-a-media-item"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "delete_a_media_item": {
+      "provider_intent": "delete_a_media_item",
+      "provider_alias_intent": "/wp/v2/media/_id",
+      "text": "Delete a Media Item",
+      "category": "All",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Delete a Media Item",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/media/<id>",
+        "alias_endpoint": "/wordpressorg/wp/v2/media/_id",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/media/#delete-a-media-item"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "list_pages": {
+      "provider_intent": "list_pages",
+      "provider_alias_intent": "/wp/v2/pages",
+      "text": "List Pages",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List Pages",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/pages",
+        "alias_endpoint": "/wordpressorg/wp/v2/pages",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/pages/#list-pages"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "create_a_page": {
+      "provider_intent": "create_a_page",
+      "provider_alias_intent": "/wp/v2/pages",
+      "text": "Create a Page",
+      "category": "All",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Create a Page",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/pages",
+        "alias_endpoint": "/wordpressorg/wp/v2/pages",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/pages/#create-a-page"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "retrieve_a_page": {
+      "provider_intent": "retrieve_a_page",
+      "provider_alias_intent": "/wp/v2/pages/_id",
+      "text": "Retrieve a Page",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve a Page",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/pages/<id>",
+        "alias_endpoint": "/wordpressorg/wp/v2/pages/_id",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/pages/#retrieve-a-page"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "update_a_page": {
+      "provider_intent": "update_a_page",
+      "provider_alias_intent": "/wp/v2/pages/_id",
+      "text": "Update a Page",
+      "category": "All",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Update a Page",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/pages/<id>",
+        "alias_endpoint": "/wordpressorg/wp/v2/pages/_id",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/pages/#update-a-page"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "delete_a_page": {
+      "provider_intent": "delete_a_page",
+      "provider_alias_intent": "/wp/v2/pages/_id",
+      "text": "Delete a Page",
+      "category": "All",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Delete a Page",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/pages/<id>",
+        "alias_endpoint": "/wordpressorg/wp/v2/pages/_id",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/pages/#delete-a-page"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "list_page_revisions": {
+      "provider_intent": "list_page_revisions",
+      "provider_alias_intent": "/wp/v2/pages/_parent/revisions",
+      "text": "List Page Revisions",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List Page Revisions",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/pages/<parent>/revisions",
+        "alias_endpoint": "/wordpressorg/wp/v2/pages/_parent/revisions",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/page-revisions/#list-page-revisions"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "retrieve_a_page_revision": {
+      "provider_intent": "retrieve_a_page_revision",
+      "provider_alias_intent": "/wp/v2/pages/_parent/autosaves/_id",
+      "text": "Retrieve a Page Revision",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve a Page Revision",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/pages/<parent>/autosaves/<id>",
+        "alias_endpoint": "/wordpressorg/wp/v2/pages/_parent/autosaves/_id",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/page-revisions/#retrieve-a-page-revision-3"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "delete_a_page_revision": {
+      "provider_intent": "delete_a_page_revision",
+      "provider_alias_intent": "/wp/v2/pages/_parent/revisions/_id",
+      "text": "Delete a Page Revision",
+      "category": "All",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Delete a Page Revision",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/pages/<parent>/revisions/<id>",
+        "alias_endpoint": "/wordpressorg/wp/v2/pages/_parent/revisions/_id",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/page-revisions/#delete-a-page-revision"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "create_a_page_revision": {
+      "provider_intent": "create_a_page_revision",
+      "provider_alias_intent": "/wp/v2/pages/_id/autosaves",
+      "text": "Create a Page Revision",
+      "category": "All",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Create a Page Revision",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/pages/<id>/autosaves",
+        "alias_endpoint": "/wordpressorg/wp/v2/pages/_id/autosaves",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/page-revisions/#create-a-page-revision"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "list_posts": {
+      "provider_intent": "list_posts",
+      "provider_alias_intent": "/wp/v2/posts",
+      "text": "List Posts",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List Posts",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/posts",
+        "alias_endpoint": "/wordpressorg/wp/v2/posts",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/posts/#list-posts"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "create_a_post": {
+      "provider_intent": "create_a_post",
+      "provider_alias_intent": "/wp/v2/posts",
+      "text": "Create a Post",
+      "category": "All",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Create a Post",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/posts",
+        "alias_endpoint": "/wordpressorg/wp/v2/posts",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/posts/#create-a-post"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "retrieve_a_post": {
+      "provider_intent": "retrieve_a_post",
+      "provider_alias_intent": "/wp/v2/posts/_id",
+      "text": "Retrieve a Post",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve a Post",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/posts/<id>",
+        "alias_endpoint": "/wordpressorg/wp/v2/posts/_id",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/posts/#retrieve-a-post"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "update_a_post": {
+      "provider_intent": "update_a_post",
+      "provider_alias_intent": "/wp/v2/posts/_id",
+      "text": "Update a Post",
+      "category": "All",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Update a Post",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/posts/<id>",
+        "alias_endpoint": "/wordpressorg/wp/v2/posts/_id",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/posts/#update-a-post"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "delete_a_post": {
+      "provider_intent": "delete_a_post",
+      "provider_alias_intent": "/wp/v2/posts/_id",
+      "text": "Delete a Post",
+      "category": "All",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Delete a Post",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/posts/<id>",
+        "alias_endpoint": "/wordpressorg/wp/v2/posts/_id",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/posts/#delete-a-post"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "list_post_revisions": {
+      "provider_intent": "list_post_revisions",
+      "provider_alias_intent": "/wp/v2/posts/_parent/revisions",
+      "text": "List Post Revisions",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List Post Revisions",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/posts/<parent>/revisions",
+        "alias_endpoint": "/wordpressorg/wp/v2/posts/_parent/revisions",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/post-revisions/#list-post-revisions"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "retrieve_a_post_revision": {
+      "provider_intent": "retrieve_a_post_revision",
+      "provider_alias_intent": "/wp/v2/posts/_parent/autosaves/_id",
+      "text": "Retrieve a Post Revision",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve a Post Revision",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/posts/<parent>/autosaves/<id>",
+        "alias_endpoint": "/wordpressorg/wp/v2/posts/_parent/autosaves/_id",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/post-revisions/#retrieve-a-post-revision-3"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "delete_a_post_revision": {
+      "provider_intent": "delete_a_post_revision",
+      "provider_alias_intent": "/wp/v2/posts/_parent/revisions/_id",
+      "text": "Delete a Post Revision",
+      "category": "All",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Delete a Post Revision",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/posts/<parent>/revisions/<id>",
+        "alias_endpoint": "/wordpressorg/wp/v2/posts/_parent/revisions/_id",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/post-revisions/#delete-a-post-revision"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "create_a_post_revision": {
+      "provider_intent": "create_a_post_revision",
+      "provider_alias_intent": "/wp/v2/posts/_id/autosaves",
+      "text": "Create a Post Revision",
+      "category": "All",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Create a Post Revision",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/posts/<id>/autosaves",
+        "alias_endpoint": "/wordpressorg/wp/v2/posts/_id/autosaves",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/post-revisions/#create-a-post-revision"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "list_search_results": {
+      "provider_intent": "list_search_results",
+      "provider_alias_intent": "/wp/v2/search",
+      "text": "List Search Results",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List Search Results",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/search",
+        "alias_endpoint": "/wordpressorg/wp/v2/search",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/search-results/#list-search-results"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "retrieve_a_site_setting": {
+      "provider_intent": "retrieve_a_site_setting",
+      "provider_alias_intent": "/wp/v2/settings",
+      "text": "Retrieve a Site Setting",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve a Site Setting",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/settings",
+        "alias_endpoint": "/wordpressorg/wp/v2/settings",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/settings/#retrieve-a-site-setting"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "update_a_site_setting": {
+      "provider_intent": "update_a_site_setting",
+      "provider_alias_intent": "/wp/v2/settings",
+      "text": "Update a Site Setting",
+      "category": "All",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Update a Site Setting",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/settings",
+        "alias_endpoint": "/wordpressorg/wp/v2/settings",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/settings/#update-a-site-setting"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "retrieve_a_status": {
+      "provider_intent": "retrieve_a_status",
+      "provider_alias_intent": "/wp/v2/statuses/_status",
+      "text": "Retrieve a Status",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve a Status",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/statuses/<status>",
+        "alias_endpoint": "/wordpressorg/wp/v2/statuses/_status",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/post-statuses/#retrieve-a-status-2"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "list_tags": {
+      "provider_intent": "list_tags",
+      "provider_alias_intent": "/wp/v2/tags",
+      "text": "List Tags",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List Tags",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/tags",
+        "alias_endpoint": "/wordpressorg/wp/v2/tags",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/tags/#list-tags"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "create_a_tag": {
+      "provider_intent": "create_a_tag",
+      "provider_alias_intent": "/wp/v2/tags",
+      "text": "Create a Tag",
+      "category": "All",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Create a Tag",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/tags",
+        "alias_endpoint": "/wordpressorg/wp/v2/tags",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/tags/#create-a-tag"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "retrieve_a_tag": {
+      "provider_intent": "retrieve_a_tag",
+      "provider_alias_intent": "/wp/v2/tags/_id",
+      "text": "Retrieve a Tag",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve a Tag",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/tags/<id>",
+        "alias_endpoint": "/wordpressorg/wp/v2/tags/_id",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/tags/#retrieve-a-tag"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "update_a_tag": {
+      "provider_intent": "update_a_tag",
+      "provider_alias_intent": "/wp/v2/tags/_id",
+      "text": "Update a Tag",
+      "category": "All",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Update a Tag",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/tags/<id>",
+        "alias_endpoint": "/wordpressorg/wp/v2/tags/_id",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/tags/#update-a-tag"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "delete_a_tag": {
+      "provider_intent": "delete_a_tag",
+      "provider_alias_intent": "/wp/v2/tags/_id",
+      "text": "Delete a Tag",
+      "category": "All",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Delete a Tag",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/tags/<id>",
+        "alias_endpoint": "/wordpressorg/wp/v2/tags/_id",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/tags/#delete-a-tag"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "retrieve_a_taxonomy": {
+      "provider_intent": "retrieve_a_taxonomy",
+      "provider_alias_intent": "/wp/v2/taxonomies/_taxonomy",
+      "text": "Retrieve a Taxonomy",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve a Taxonomy",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/taxonomies/<taxonomy>",
+        "alias_endpoint": "/wordpressorg/wp/v2/taxonomies/_taxonomy",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/taxonomies/#retrieve-a-taxonomy-2"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "list_themes": {
+      "provider_intent": "list_themes",
+      "provider_alias_intent": "/wp/v2/themes",
+      "text": "List Themes",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List Themes",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/themes",
+        "alias_endpoint": "/wordpressorg/wp/v2/themes",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/themes/#list-themes"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "retrieve_a_type": {
+      "provider_intent": "retrieve_a_type",
+      "provider_alias_intent": "/wp/v2/types/_type",
+      "text": "Retrieve a Type",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve a Type",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/types/<type>",
+        "alias_endpoint": "/wordpressorg/wp/v2/types/_type",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/post-types/#retrieve-a-type-2"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "list_users": {
+      "provider_intent": "list_users",
+      "provider_alias_intent": "/wp/v2/users",
+      "text": "List Users",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List Users",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/users",
+        "alias_endpoint": "/wordpressorg/wp/v2/users",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/users/#list-users"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "create_a_user": {
+      "provider_intent": "create_a_user",
+      "provider_alias_intent": "/wp/v2/users",
+      "text": "Create a User",
+      "category": "All",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Create a User",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/users",
+        "alias_endpoint": "/wordpressorg/wp/v2/users",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/users/#create-a-user"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "retrieve_a_user": {
+      "provider_intent": "retrieve_a_user",
+      "provider_alias_intent": "/wp/v2/users/me",
+      "text": "Retrieve a User",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve a User",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/users/me",
+        "alias_endpoint": "/wordpressorg/wp/v2/users/me",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/users/#retrieve-a-user-2"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "update_a_user": {
+      "provider_intent": "update_a_user",
+      "provider_alias_intent": "/wp/v2/users/me",
+      "text": "Update a User",
+      "category": "All",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Update a User",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/users/me",
+        "alias_endpoint": "/wordpressorg/wp/v2/users/me",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/users/#update-a-user-2"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "delete_a_user": {
+      "provider_intent": "delete_a_user",
+      "provider_alias_intent": "/wp/v2/users/me",
+      "text": "Delete a User",
+      "category": "All",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Delete a User",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/users/me",
+        "alias_endpoint": "/wordpressorg/wp/v2/users/me",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/users/#delete-a-user-2"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "list_block_directory_items": {
+      "provider_intent": "list_block_directory_items",
+      "provider_alias_intent": "/wp/v2/block-directory/search",
+      "text": "List Block Directory Items",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List Block Directory Items",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/block-directory/search",
+        "alias_endpoint": "/wordpressorg/wp/v2/block-directory/search",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/block-directory-items/#list-block-directory-items"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "retrieve_a_plugin": {
+      "provider_intent": "retrieve_a_plugin",
+      "provider_alias_intent": "/wp/v2/plugins/_plugin",
+      "text": "Retrieve a Plugin",
+      "category": "All",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve a Plugin",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/plugins/<plugin>",
+        "alias_endpoint": "/wordpressorg/wp/v2/plugins/_plugin",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/plugins/#retrieve-a-plugin-2"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "create_a_plugin": {
+      "provider_intent": "create_a_plugin",
+      "provider_alias_intent": "/wp/v2/plugins",
+      "text": "Create a Plugin",
+      "category": "All",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Create a Plugin",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/plugins",
+        "alias_endpoint": "/wordpressorg/wp/v2/plugins",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/plugins/#create-a-plugin"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "update_a_plugin": {
+      "provider_intent": "update_a_plugin",
+      "provider_alias_intent": "/wp/v2/plugins/_plugin",
+      "text": "Update a Plugin",
+      "category": "All",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Update a Plugin",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/plugins/<plugin>",
+        "alias_endpoint": "/wordpressorg/wp/v2/plugins/_plugin",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/plugins/#update-a-plugin"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "delete_a_plugin": {
+      "provider_intent": "delete_a_plugin",
+      "provider_alias_intent": "/wp/v2/plugins/_plugin",
+      "text": "Delete a Plugin",
+      "category": "All",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Delete a Plugin",
+        "rate_limit": [],
+        "api_endpoint": "/wp/v2/plugins/<plugin>",
+        "alias_endpoint": "/wordpressorg/wp/v2/plugins/_plugin",
+        "api_ref": "https://developer.wordpress.org/rest-api/reference/plugins/#delete-a-plugin"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    }
+  }
+}

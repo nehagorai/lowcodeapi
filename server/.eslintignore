@@ -1,0 +1,21 @@
+# Build and deployment directories
+build/
+bulk-target/
+build-prep/
+
+# Build outputs
+dist/
+*/dist/
+node_modules/
+
+# Configuration files
+*.config.js
+*.config.ts
+
+# Other common ignores
+coverage/
+guide/
+*.min.js
+*.bundle.js
+
+__tests__/

@@ -1,0 +1,58 @@
+{
+  "routes": {
+    "sendfox__me___get": {
+      "provider_intent": "sendfox__me___get",
+      "provider_alias_intent": "/me",
+      "text": "Gets information for authenticated user.",
+      "category": "authenticated user",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Gets information for authenticated user.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.sendfox.com/me",
+        "alias_endpoint": "/sendfox/me",
+        "api_ref": "https://help.sendfox.com/article/278-endpoints"
+      },
+      "auth": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "sendfox__lists___get": {
+      "provider_intent": "sendfox__lists___get",
+      "provider_alias_intent": "/lists",
+      "text": "Gets paginated contact lists.",
+      "category": "contact",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Gets paginated contact lists.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.sendfox.com/lists",
+        "alias_endpoint": "/sendfox/lists",
+        "api_ref": "https://help.sendfox.com/article/278-endpoints"
+      },
+      "auth": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

@@ -1,0 +1,4059 @@
+{
+  "routes": {
+    "gmail__v1__users__userid__messages__send___post": {
+      "provider_intent": "gmail__v1__users__userid__messages__send___post",
+      "provider_alias_intent": "/v1/users/userId/messages/send",
+      "text": "Send email",
+      "category": "Send",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "raw": {
+          "type": "string",
+          "text": "RFC 2822 formatted and base64url encoded string",
+          "required": true,
+          "examples": ""
+        },
+        "snippet": {
+          "type": "string",
+          "text": "A short part of the message text",
+          "required": true
+        }
+      },
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Send email\n\nGamil uses RFC 2822 formatted, base64url encoded string as a payload for sending email. To, From, Subject, CC, BCC, ReplyTo gets formatted as per RFC 2822 and gets converted to base64string \n\n\n```\n\n\n\n// RFC2822 payload format\n\nFrom: Name<send@example.com>\nTo: hello@example.com\nContent-Type: text/html; charset=utf-8\nMIME-Version: 1.0\nSubject: =?utf-8?B?SGVsbG8=?=\n\n<p>This is email</p>\n\n\n\n\n```\n\n\n\n### Sending Quota\n\nYou can send 100* email per day on free gmail account. \nYou can send 1500 - 2000* email per day on Google workspace account. \n\nMore details [https://developers.google.com/apps-script/guides/services/quotas](https://developers.google.com/apps-script/guides/services/quotas)",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/messages/send",
+        "alias_endpoint": "/gmail/v1/users/userId/messages/send",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.messages/send,https://developers.google.com/apps-script/guides/services/quotas,\nhttps://developers.google.com/gmail/api/reference/quota"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "send",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__upload__v1__users__userid__messages__send___post": {
+      "provider_intent": "gmail__upload__v1__users__userid__messages__send___post",
+      "provider_alias_intent": "/upload/v1/users/userId/messages/send",
+      "text": "Send email with attachement",
+      "category": "Send",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "raw": {
+          "type": "string",
+          "text": "RFC 2822 formatted and base64url encoded string",
+          "required": true,
+          "examples": ""
+        },
+        "payload": {
+          "type": "object",
+          "text": "The parsed email structure in the message parts",
+          "required": true,
+          "examples": {}
+        },
+        "snippet": {
+          "type": "string",
+          "text": "A short part of the message text",
+          "required": true,
+          "examples": ""
+        }
+      },
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Send email with attachments\n\nGamil uses RFC 2822 formatted, base64url encoded string as a payload for sending email. To, From, Subject, CC, BCC, ReplyTo gets formatted as per RFC 2822 and gets converted to base64string \n\n\n```\n\n\n\n\n// RFC2822 payload format\n\nFrom: Name<send@example.com>\nTo: hello@example.com\nContent-Type: text/html; charset=utf-8\nMIME-Version: 1.0\nSubject: =?utf-8?B?SGVsbG8=?=\n\n<p>This is email</p>\n\n\n\n\n```\n\n\n\n### Sending Quota\n\nYou can send 100* email per day on free gmail account. \nYou can send 1500 - 2000* email per day on Google workspace account. \n\nMore details [https://developers.google.com/apps-script/guides/services/quotas](https://developers.google.com/apps-script/guides/services/quotas)",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/upload/gmail/v1/users/{userId}/messages/send",
+        "alias_endpoint": "/gmail/upload/v1/users/userId/messages/send",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.messages/send,https://developers.google.com/gmail/api/guides/uploads,https://developers.google.com/apps-script/guides/services/quotas,\nhttps://developers.google.com/gmail/api/reference/quota"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userMessagesSend",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__profile___get": {
+      "provider_intent": "gmail__v1__users__userid__profile___get",
+      "provider_alias_intent": "/v1/users/userId/profile",
+      "text": "Gets the current user's Gmail profile",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Gets the current user's Gmail profile",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/profile",
+        "alias_endpoint": "/gmail/v1/users/userId/profile",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users/getProfile"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userGetProfile",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__stop___post": {
+      "provider_intent": "gmail__v1__users__userid__stop___post",
+      "provider_alias_intent": "/v1/users/userId/stop",
+      "text": "User mailbox push notification receiver",
+      "category": "Users",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "receiving push notifications for the given user mailbox",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/stop",
+        "alias_endpoint": "/gmail/v1/users/userId/stop",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users/stop"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userStop",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__watch___post": {
+      "provider_intent": "gmail__v1__users__userid__watch___post",
+      "provider_alias_intent": "/v1/users/userId/watch",
+      "text": "Configure push notification for user mailbox",
+      "category": "Users",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "labelIds[]": {
+          "type": "string",
+          "text": "List of labelIds to restrict notifications about"
+        },
+        "labelFilterAction": {
+          "type": "enum",
+          "text": "Filtering behavior of labelIds list specified"
+        },
+        "labelFilterBehavior": {
+          "type": "enum",
+          "text": "Filtering behavior of labelIds list specified"
+        },
+        "topicName": {
+          "type": "string",
+          "text": "A fully qualified Google Cloud Pub/Sub API topic name to publish the events to"
+        }
+      },
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Set up or update a push notification watch on the given user mailbox.",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/watch",
+        "alias_endpoint": "/gmail/v1/users/userId/watch",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users/watch"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userWatch",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__history___get": {
+      "provider_intent": "gmail__v1__users__userid__history___get",
+      "provider_alias_intent": "/v1/users/userId/history",
+      "text": "Mailbox change history list",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        },
+        "maxResults": {
+          "type": "integer",
+          "text": "Maximum number of drafts to return",
+          "enum": [
+            "defaults-100"
+          ]
+        },
+        "pageToken": {
+          "type": "string",
+          "text": "Page token to retrieve a specific page of results in the list"
+        },
+        "startHistoryId": {
+          "type": "string",
+          "text": "Returns history records after the specified startHistoryId"
+        },
+        "labelId": {
+          "type": "string",
+          "text": "Only return messages with a label matching the ID."
+        },
+        "historyTypes": {
+          "type": "enum",
+          "enum": []
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Lists the history of all changes to the given mailbox",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/history",
+        "alias_endpoint": "/gmail/v1/users/userId/history",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.history/list"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userHistoryList",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__drafts___post": {
+      "provider_intent": "gmail__v1__users__userid__drafts___post",
+      "provider_alias_intent": "/v1/users/userId/drafts",
+      "text": "Creates draft with DRAFT label",
+      "category": "Draft",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Creates a new draft with the DRAFT label.",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/upload/gmail/v1/users/{userId}/drafts",
+        "alias_endpoint": "/gmail/v1/users/userId/drafts",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/create"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userDraftCreate",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__drafts__id___delete": {
+      "provider_intent": "gmail__v1__users__userid__drafts__id___delete",
+      "provider_alias_intent": "/v1/users/userId/drafts/id",
+      "text": "Deletes the specified draft",
+      "category": "Draft",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the draft to delete"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the draft to delete"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "deletes the specified draft",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/drafts/{id}",
+        "alias_endpoint": "/gmail/v1/users/userId/drafts/id",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/delete"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userDraftDelete",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__drafts__id___get": {
+      "provider_intent": "gmail__v1__users__userid__drafts__id___get",
+      "provider_alias_intent": "/v1/users/userId/drafts/id",
+      "text": "Gets the specified draft",
+      "category": "Draft",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the draft to retrieve"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        },
+        "format": {
+          "type": "enum",
+          "text": "The format to return the draft in",
+          "enum": []
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the draft to retrieve"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Gets the specified draft.",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/drafts/{id}",
+        "alias_endpoint": "/gmail/v1/users/userId/drafts/id",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/get"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userDraftGet",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__drafts___get": {
+      "provider_intent": "gmail__v1__users__userid__drafts___get",
+      "provider_alias_intent": "/v1/users/userId/drafts",
+      "text": "Lists the drafts in the user's mailbox",
+      "category": "Draft",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        },
+        "maxResults": {
+          "type": "integer",
+          "text": "Maximum number of drafts to return",
+          "enum": [
+            "defaults-100"
+          ]
+        },
+        "pageToken": {
+          "type": "string",
+          "text": "Page token to retrieve a specific page of results in the list"
+        },
+        "q": {
+          "type": "string",
+          "text": "Only return draft messages matching the specified query"
+        },
+        "includeSpamTrash": {
+          "type": "boolean",
+          "text": "Include drafts from SPAM and TRASH in the results",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Lists the drafts in the user's mailbox",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/drafts",
+        "alias_endpoint": "/gmail/v1/users/userId/drafts",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/list"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userDraftList",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__drafts__send___post": {
+      "provider_intent": "gmail__v1__users__userid__drafts__send___post",
+      "provider_alias_intent": "/v1/users/userId/drafts/send",
+      "text": "Send draft to specified recipients",
+      "category": "Draft",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Sends the specified, existing draft to the recipients",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/upload/gmail/v1/users/{userId}/drafts/send",
+        "alias_endpoint": "/gmail/v1/users/userId/drafts/send",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/send"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userDraftSend",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__drafts__id___put": {
+      "provider_intent": "gmail__v1__users__userid__drafts__id___put",
+      "provider_alias_intent": "/v1/users/userId/drafts/id",
+      "text": "Replaces a draft's content",
+      "category": "Draft",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the draft to update"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the draft to update"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Replaces a draft's content",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/upload/gmail/v1/users/{userId}/drafts/{id}",
+        "alias_endpoint": "/gmail/v1/users/userId/drafts/id",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/update"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userDraftUpdate",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__labels___post": {
+      "provider_intent": "gmail__v1__users__userid__labels___post",
+      "provider_alias_intent": "/v1/users/userId/labels",
+      "text": "Creates a new label",
+      "category": "Labels",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Creates a new label",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/labels",
+        "alias_endpoint": "/gmail/v1/users/userId/labels",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.labels/create"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userLabelCreate",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__labels__id___delete": {
+      "provider_intent": "gmail__v1__users__userid__labels__id___delete",
+      "provider_alias_intent": "/v1/users/userId/labels/id",
+      "text": "Delete label, remove permanently",
+      "category": "Labels",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the draft to delete"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the draft to delete"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Immediately and permanently deletes the specified label and removes",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/labels/{id}",
+        "alias_endpoint": "/gmail/v1/users/userId/labels/id",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.labels/delete"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userLabelDelete",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__labels__id___get": {
+      "provider_intent": "gmail__v1__users__userid__labels__id___get",
+      "provider_alias_intent": "/v1/users/userId/labels/id",
+      "text": "Gets the specified label",
+      "category": "Labels",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the draft to retrieve"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the draft to retrieve"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Gets the specified label.",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/labels/{id}",
+        "alias_endpoint": "/gmail/v1/users/userId/labels/id",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.labels/get"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userLabelGet",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__labels___get": {
+      "provider_intent": "gmail__v1__users__userid__labels___get",
+      "provider_alias_intent": "/v1/users/userId/labels",
+      "text": "Lists all labels in the user's mailbox",
+      "category": "Labels",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Lists all labels in the user's mailbox",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/labels",
+        "alias_endpoint": "/gmail/v1/users/userId/labels",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.labels/list"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userLabelList",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__labels__id___patch": {
+      "provider_intent": "gmail__v1__users__userid__labels__id___patch",
+      "provider_alias_intent": "/v1/users/userId/labels/id",
+      "text": "Patch the specified label",
+      "category": "Labels",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the label to update"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the label to update"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Patch the specified label.",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/labels/{id}",
+        "alias_endpoint": "/gmail/v1/users/userId/labels/id",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.labels/patch"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userLabelPatch",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__labels__id___put": {
+      "provider_intent": "gmail__v1__users__userid__labels__id___put",
+      "provider_alias_intent": "/v1/users/userId/labels/id",
+      "text": "Updates the specified label",
+      "category": "Labels",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the label to update"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the label to update"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Updates the specified label.",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/labels/{id}",
+        "alias_endpoint": "/gmail/v1/users/userId/labels/id",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.labels/update"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userLabelUpdate",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__messages__batchdelete___post": {
+      "provider_intent": "gmail__v1__users__userid__messages__batchdelete___post",
+      "provider_alias_intent": "/v1/users/userId/messages/batchDelete",
+      "text": "Delete messages by message ID",
+      "category": "Messages",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "ids": {
+          "type": "string",
+          "text": "The IDs of the messages to delete"
+        }
+      },
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Deletes many messages by message ID.",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/messages/batchDelete",
+        "alias_endpoint": "/gmail/v1/users/userId/messages/batchDelete",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.messages/batchDelete"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userMessagesBatchDelete",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__messages__batchmodify___post": {
+      "provider_intent": "gmail__v1__users__userid__messages__batchmodify___post",
+      "provider_alias_intent": "/v1/users/userId/messages/batchModify",
+      "text": "Label modification for specified messages",
+      "category": "Messages",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "ids": {
+          "type": "string",
+          "text": "The IDs of the messages to modify;\naddLabelIds",
+          "enum": [
+            "string"
+          ]
+        }
+      },
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Modifies the labels on the specified messages.",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/messages/batchModify",
+        "alias_endpoint": "/gmail/v1/users/userId/messages/batchModify",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.messages/batchModify"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userMessagesBatchModify",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__messages__id___delete": {
+      "provider_intent": "gmail__v1__users__userid__messages__id___delete",
+      "provider_alias_intent": "/v1/users/userId/messages/id",
+      "text": "Instantly erases specified message, permanently",
+      "category": "Messages",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the message to delete"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the message to delete"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Immediately and permanently deletes the specified message",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/messages/{id}",
+        "alias_endpoint": "/gmail/v1/users/userId/messages/id",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.messages/delete"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userMessagesDelete",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__messages__id___get": {
+      "provider_intent": "gmail__v1__users__userid__messages__id___get",
+      "provider_alias_intent": "/v1/users/userId/messages/id",
+      "text": "Gets the specified message.",
+      "category": "Messages",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the message to retrieve",
+          "required": true
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        },
+        "format": {
+          "type": "enum",
+          "text": "The format to return the message in"
+        },
+        "metadataHeaders[]": {
+          "type": "string",
+          "text": "When given and format is METADATA, only include headers specified"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the message to retrieve",
+          "required": true
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Gets the specified message.",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/messages/{id}",
+        "alias_endpoint": "/gmail/v1/users/userId/messages/id",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.messages/get"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userMessagesGet",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__messages__import___post": {
+      "provider_intent": "gmail__v1__users__userid__messages__import___post",
+      "provider_alias_intent": "/v1/users/userId/messages/import",
+      "text": "Message imported to user's mailbox",
+      "category": "Messages",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "internalDateSource": {
+          "type": "enum",
+          "text": "Source for Gmail's internal date of the message;\nneverMarkSpam",
+          "enum": [
+            "boolean"
+          ]
+        }
+      },
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Imports a message into only this user's mailbox",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/upload/gmail/v1/users/{userId}/messages/import",
+        "alias_endpoint": "/gmail/v1/users/userId/messages/import",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.messages/import"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userMessagesImport",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__messages___post": {
+      "provider_intent": "gmail__v1__users__userid__messages___post",
+      "provider_alias_intent": "/v1/users/userId/messages",
+      "text": "Message insertion into user's mailbox",
+      "category": "Messages",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "internalDateSource": {
+          "type": "enum",
+          "text": "Source for Gmail's internal date of the message;\ndeleted",
+          "enum": [
+            "boolean"
+          ]
+        }
+      },
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Directly inserts a message into only this user's mailbox",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/upload/gmail/v1/users/{userId}/messages",
+        "alias_endpoint": "/gmail/v1/users/userId/messages",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.messages/insert"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userMessagesInsert",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__messages___get": {
+      "provider_intent": "gmail__v1__users__userid__messages___get",
+      "provider_alias_intent": "/v1/users/userId/messages",
+      "text": "Listing user's mailbox messages",
+      "category": "Messages",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        },
+        "maxResults": {
+          "type": "integer",
+          "text": "Maximum number of messages to return defaults-100 maximum-500"
+        },
+        "pageToken": {
+          "type": "string",
+          "text": "Page token to retrieve a specific page of results in the list"
+        },
+        "q": {
+          "type": "string",
+          "text": "Only return messages matching the specified query"
+        },
+        "labelIds": {
+          "type": "string",
+          "text": "Only return messages with labels that match all of the specified label IDs"
+        },
+        "includeSpamTrash": {
+          "type": "boolean",
+          "text": "Include messages from SPAM and TRASH in the results",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Lists the messages in the user's mailbox.",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/messages",
+        "alias_endpoint": "/gmail/v1/users/userId/messages",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.messages/list"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userMessagesList",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__messages__id__modify___post": {
+      "provider_intent": "gmail__v1__users__userid__messages__id__modify___post",
+      "provider_alias_intent": "/v1/users/userId/messages/id/modify",
+      "text": "Message label modification",
+      "category": "Messages",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the message to modify"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "addLabelIds": {
+          "type": "string",
+          "text": "A list of IDs of labels to add to this message;\nremoveLabelIds",
+          "enum": [
+            "string"
+          ]
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the message to modify"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Modifies the labels on the specified message",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/messages/{id}/modify",
+        "alias_endpoint": "/gmail/v1/users/userId/messages/id/modify",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.messages/modify"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userMessagesModify",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__messages__id__trash___post": {
+      "provider_intent": "gmail__v1__users__userid__messages__id__trash___post",
+      "provider_alias_intent": "/v1/users/userId/messages/id/trash",
+      "text": "Moves message to the trash",
+      "category": "Messages",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the message to modify"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the message to modify"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Moves the specified message to the trash",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/messages/{id}/trash",
+        "alias_endpoint": "/gmail/v1/users/userId/messages/id/trash",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.messages/trash"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userMessagesTrash",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__messages__id__untrash___post": {
+      "provider_intent": "gmail__v1__users__userid__messages__id__untrash___post",
+      "provider_alias_intent": "/v1/users/userId/messages/id/untrash",
+      "text": "Delete message from trash",
+      "category": "Messages",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the message to modify"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the message to modify"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Removes the specified message from the trash",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/messages/{id}/untrash",
+        "alias_endpoint": "/gmail/v1/users/userId/messages/id/untrash",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.messages/untrash"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userMessagesUntrash",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__messages__messageid__attachments__id___get": {
+      "provider_intent": "gmail__v1__users__userid__messages__messageid__attachments__id___get",
+      "provider_alias_intent": "/v1/users/userId/messages/messageId/attachments/id",
+      "text": "Gets the specified message attachment",
+      "category": "Messages",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "messageId": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "messageId": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Gets the specified message attachment",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/messages/{messageId}/attachments/{id}",
+        "alias_endpoint": "/gmail/v1/users/userId/messages/messageId/attachments/id",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.messages/untrash"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userMessagesAttachmentsGet",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__autoforwarding___get": {
+      "provider_intent": "gmail__v1__users__userid__settings__autoforwarding___get",
+      "provider_alias_intent": "/v1/users/userId/settings/autoForwarding",
+      "text": "Retrieve auto-forwarding setting for account",
+      "category": "Settings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Gets the auto-forwarding setting for the specified account",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/autoForwarding",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/autoForwarding",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings/getAutoForwarding"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingGetAutoForwarding",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__imap___get": {
+      "provider_intent": "gmail__v1__users__userid__settings__imap___get",
+      "provider_alias_intent": "/v1/users/userId/settings/imap",
+      "text": "Gets IMAP settings",
+      "category": "Settings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Gets IMAP settings",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/imap",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/imap",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings/getImap"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingGetImap",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__language___get": {
+      "provider_intent": "gmail__v1__users__userid__settings__language___get",
+      "provider_alias_intent": "/v1/users/userId/settings/language",
+      "text": "Gets language settings",
+      "category": "Settings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Gets language settings",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/language",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/language",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings/getLanguage"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingGetLanguage",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__pop___get": {
+      "provider_intent": "gmail__v1__users__userid__settings__pop___get",
+      "provider_alias_intent": "/v1/users/userId/settings/pop",
+      "text": "Gets POP settings",
+      "category": "Settings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Gets POP settings",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/pop",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/pop",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings/getPop"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingGetPop",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__vacation___get": {
+      "provider_intent": "gmail__v1__users__userid__settings__vacation___get",
+      "provider_alias_intent": "/v1/users/userId/settings/vacation",
+      "text": "Gets vacation responder settings",
+      "category": "Settings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Gets vacation responder settings",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/vacation",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/vacation",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings/getVacation"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingGetVacation",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__autoforwarding___put": {
+      "provider_intent": "gmail__v1__users__userid__settings__autoforwarding___put",
+      "provider_alias_intent": "/v1/users/userId/settings/autoForwarding",
+      "text": "Account auto-forwarding setting updated",
+      "category": "Settings",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Updates the auto-forwarding setting for the specified account",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/autoForwarding",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/autoForwarding",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings/updateAutoForwarding"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingUpdateAutoForwarding",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__imap___put": {
+      "provider_intent": "gmail__v1__users__userid__settings__imap___put",
+      "provider_alias_intent": "/v1/users/userId/settings/imap",
+      "text": "Updates IMAP settings",
+      "category": "Settings",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Updates IMAP settings",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/imap",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/imap",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings/updateImap"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingUpdateImap",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__language___put": {
+      "provider_intent": "gmail__v1__users__userid__settings__language___put",
+      "provider_alias_intent": "/v1/users/userId/settings/language",
+      "text": "Updates language settings",
+      "category": "Settings",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Updates language settings",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/language",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/language",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings/updateLanguage"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingUpdateLanguage",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__pop___put": {
+      "provider_intent": "gmail__v1__users__userid__settings__pop___put",
+      "provider_alias_intent": "/v1/users/userId/settings/pop",
+      "text": "Updates POP settings",
+      "category": "Settings",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Updates POP settings",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/pop",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/pop",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings/updatePop"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingUpdatePop",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__vacation___put": {
+      "provider_intent": "gmail__v1__users__userid__settings__vacation___put",
+      "provider_alias_intent": "/v1/users/userId/settings/vacation",
+      "text": "Updates vacation responder settings",
+      "category": "Settings",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Updates vacation responder settings",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/vacation",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/vacation",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings/updateVacation"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingUpdateVacation",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__delegates___post": {
+      "provider_intent": "gmail__v1__users__userid__settings__delegates___post",
+      "provider_alias_intent": "/v1/users/userId/settings/delegates",
+      "text": "Adds a delegate",
+      "category": "Settings",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Adds a delegate",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/delegates",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/delegates",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings.delegates/create"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingDelegatesCreate",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__delegates__delegateemail___delete": {
+      "provider_intent": "gmail__v1__users__userid__settings__delegates__delegateemail___delete",
+      "provider_alias_intent": "/v1/users/userId/settings/delegates/delegateEmail",
+      "text": "Removes the specified delegate",
+      "category": "Settings",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "delegateEmail": {
+          "type": "string",
+          "text": "The email address of the user to be removed as a delegate"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "delegateEmail": {
+          "type": "string",
+          "text": "The email address of the user to be removed as a delegate"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Removes the specified delegate",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/delegates/{delegateEmail}",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/delegates/delegateEmail",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings.delegates/delete"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingDelegatesDelete",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__delegates__delegateemail___get": {
+      "provider_intent": "gmail__v1__users__userid__settings__delegates__delegateemail___get",
+      "provider_alias_intent": "/v1/users/userId/settings/delegates/delegateEmail",
+      "text": "Gets the specified delegate",
+      "category": "Settings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "delegateEmail": {
+          "type": "string",
+          "text": "The email address of the user whose delegate relationship is to be retrieved"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "delegateEmail": {
+          "type": "string",
+          "text": "The email address of the user whose delegate relationship is to be retrieved"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Gets the specified delegate.",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/delegates/{delegateEmail}",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/delegates/delegateEmail",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings.delegates/get"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingDelegatesGet",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__delegates___get": {
+      "provider_intent": "gmail__v1__users__userid__settings__delegates___get",
+      "provider_alias_intent": "/v1/users/userId/settings/delegates",
+      "text": "Account delegates listing",
+      "category": "Settings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Lists the delegates for the specified account",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/delegates",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/delegates",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings.delegates/list"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingDelegatesList",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__filters___post": {
+      "provider_intent": "gmail__v1__users__userid__settings__filters___post",
+      "provider_alias_intent": "/v1/users/userId/settings/filters",
+      "text": "Creates a filter",
+      "category": "Settings",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email addressuserId",
+          "enum": [
+            "string"
+          ],
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email addressuserId",
+          "enum": [
+            "string"
+          ],
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Creates a filter",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/filters",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/filters",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings.filters/create"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingFiltersCreate",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__filters__id___delete": {
+      "provider_intent": "gmail__v1__users__userid__settings__filters__id___delete",
+      "provider_alias_intent": "/v1/users/userId/settings/filters/id",
+      "text": "Instantly erases specified filter permanently",
+      "category": "Settings",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the filter to be deleted"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the filter to be deleted"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Immediately and permanently deletes the specified filter.",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/filters/{id}",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/filters/id",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings.filters/delete"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingFiltersDelete",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__filters__id___get": {
+      "provider_intent": "gmail__v1__users__userid__settings__filters__id___get",
+      "provider_alias_intent": "/v1/users/userId/settings/filters/id",
+      "text": "Gets a filter",
+      "category": "Settings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the filter to be fetched"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the filter to be fetched"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Gets a filter",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/filters/{id}",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/filters/id",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings.filters/get"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingFiltersGet",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__filters___get": {
+      "provider_intent": "gmail__v1__users__userid__settings__filters___get",
+      "provider_alias_intent": "/v1/users/userId/settings/filters",
+      "text": "Lists the message filters of a Gmail user",
+      "category": "Settings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Lists the message filters of a Gmail user",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/filters",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/filters",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings.filters/list"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingFiltersList",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__forwardingaddresses___post": {
+      "provider_intent": "gmail__v1__users__userid__settings__forwardingaddresses___post",
+      "provider_alias_intent": "/v1/users/userId/settings/forwardingAddresses",
+      "text": "Creates a forwarding address",
+      "category": "Settings",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Creates a forwarding address",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/forwardingAddresses",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/forwardingAddresses",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings.forwardingAddresses/create"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingforwardingAddressesCreate",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__forwardingaddresses___delete": {
+      "provider_intent": "gmail__v1__users__userid__settings__forwardingaddresses___delete",
+      "provider_alias_intent": "/v1/users/userId/settings/forwardingAddresses",
+      "text": "Deletes the specified forwarding address",
+      "category": "Settings",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "forwardingEmail": {
+          "type": "string",
+          "text": "The forwarding address to be deleted"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "forwardingEmail": {
+          "type": "string",
+          "text": "The forwarding address to be deleted"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Deletes the specified forwarding address",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/forwardingAddresses",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/forwardingAddresses",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings.forwardingAddresses/delete"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingForwardingAddressesDelete",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__forwardingaddresses__forwardingemail___get": {
+      "provider_intent": "gmail__v1__users__userid__settings__forwardingaddresses__forwardingemail___get",
+      "provider_alias_intent": "/v1/users/userId/settings/forwardingAddresses/forwardingEmail",
+      "text": "Gets the specified forwarding address",
+      "category": "Settings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "forwardingEmail": {
+          "type": "string",
+          "text": "The forwarding address to be retrieved"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "forwardingEmail": {
+          "type": "string",
+          "text": "The forwarding address to be retrieved"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Gets the specified forwarding address",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/forwardingAddresses/{forwardingEmail}",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/forwardingAddresses/forwardingEmail",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings.forwardingAddresses/get"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingForwardingAddressesGet",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__forwardingaddresses___get": {
+      "provider_intent": "gmail__v1__users__userid__settings__forwardingaddresses___get",
+      "provider_alias_intent": "/v1/users/userId/settings/forwardingAddresses",
+      "text": "Forwarding address list for specified account",
+      "category": "Settings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Lists the forwarding addresses for the specified account",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/forwardingAddresses",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/forwardingAddresses",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings.forwardingAddresses/list"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingForwardingAddressesList",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__sendas___post": {
+      "provider_intent": "gmail__v1__users__userid__settings__sendas___post",
+      "provider_alias_intent": "/v1/users/userId/settings/sendAs",
+      "text": "Creates a custom \"from\" send-as alias",
+      "category": "Settings",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Creates a custom \"from\" send-as alias",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/sendAs",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/sendAs",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings.sendAs/create"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingSendAsCreate",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__sendas__sendasemail___delete": {
+      "provider_intent": "gmail__v1__users__userid__settings__sendas__sendasemail___delete",
+      "provider_alias_intent": "/v1/users/userId/settings/sendAs/sendAsEmail",
+      "text": "Deletes the specified send-as alias",
+      "category": "Settings",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "sendAsEmail": {
+          "type": "string",
+          "text": "The send-as alias to be deleted"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "sendAsEmail": {
+          "type": "string",
+          "text": "The send-as alias to be deleted"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Deletes the specified send-as alias",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/sendAs/{sendAsEmail}",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/sendAs/sendAsEmail",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings.sendAs/delete"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingsendAsDelete",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__sendas__sendasemail___get": {
+      "provider_intent": "gmail__v1__users__userid__settings__sendas__sendasemail___get",
+      "provider_alias_intent": "/v1/users/userId/settings/sendAs/sendAsEmail",
+      "text": "Gets the specified send-as alias",
+      "category": "Settings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "sendAsEmail": {
+          "type": "string",
+          "text": "The send-as alias to be retrieved"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "sendAsEmail": {
+          "type": "string",
+          "text": "The send-as alias to be retrieved"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Gets the specified send-as alias",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/sendAs/{sendAsEmail}",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/sendAs/sendAsEmail",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings.sendAs/get"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingsendAsGet",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__sendas___get": {
+      "provider_intent": "gmail__v1__users__userid__settings__sendas___get",
+      "provider_alias_intent": "/v1/users/userId/settings/sendAs",
+      "text": "Send-as aliases listed for account",
+      "category": "Settings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Lists the send-as aliases for the specified account",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/sendAs",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/sendAs",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings.sendAs/list"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingsendAsList",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__sendas__sendasemail___patch": {
+      "provider_intent": "gmail__v1__users__userid__settings__sendas__sendasemail___patch",
+      "provider_alias_intent": "/v1/users/userId/settings/sendAs/sendAsEmail",
+      "text": "Patch the specified send-as alias",
+      "category": "Settings",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "sendAsEmail": {
+          "type": "string",
+          "text": "The send-as alias to be updated"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "sendAsEmail": {
+          "type": "string",
+          "text": "The send-as alias to be updated"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Patch the specified send-as alias",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/sendAs/{sendAsEmail}",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/sendAs/sendAsEmail",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings.sendAs/patch"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingSendAsPatch",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__sendas__sendasemail___put": {
+      "provider_intent": "gmail__v1__users__userid__settings__sendas__sendasemail___put",
+      "provider_alias_intent": "/v1/users/userId/settings/sendAs/sendAsEmail",
+      "text": "Updates a send-as alias",
+      "category": "Settings",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "sendAsEmail": {
+          "type": "string",
+          "text": "The send-as alias to be updated"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "sendAsEmail": {
+          "type": "string",
+          "text": "The send-as alias to be updated"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Updates a send-as alias",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/sendAs/{sendAsEmail}",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/sendAs/sendAsEmail",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings.sendAs/update"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingSendAsUpdate",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__sendas__sendasemail__verify___post": {
+      "provider_intent": "gmail__v1__users__userid__settings__sendas__sendasemail__verify___post",
+      "provider_alias_intent": "/v1/users/userId/settings/sendAs/sendAsEmail/verify",
+      "text": "Verify send-as alias with email",
+      "category": "Settings",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "sendAsEmail": {
+          "type": "string",
+          "text": "The send-as alias to be verified."
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "sendAsEmail": {
+          "type": "string",
+          "text": "The send-as alias to be verified."
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Sends a verification email to the specified send-as alias address",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/sendAs/{sendAsEmail}/verify",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/sendAs/sendAsEmail/verify",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings.sendAs/verify"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingSendAsVerify",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__sendas__sendasemail__smimeinfo__id___delete": {
+      "provider_intent": "gmail__v1__users__userid__settings__sendas__sendasemail__smimeinfo__id___delete",
+      "provider_alias_intent": "/v1/users/userId/settings/sendAs/sendAsEmail/smimeInfo/id",
+      "text": "S/MIME config deletion for send-as alias",
+      "category": "Settings",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "sendAsEmail": {
+          "type": "string",
+          "text": "The email address that appears in the \"From\" header for mail sent using this alias"
+        },
+        "id": {
+          "type": "string",
+          "text": "The immutable ID for the SmimeInfo"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "sendAsEmail": {
+          "type": "string",
+          "text": "The email address that appears in the \"From\" header for mail sent using this alias"
+        },
+        "id": {
+          "type": "string",
+          "text": "The immutable ID for the SmimeInfo"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Deletes the specified S/MIME config for the specified send-as alias",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/sendAs/{sendAsEmail}/smimeInfo/{id}",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/sendAs/sendAsEmail/smimeInfo/id",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings.sendAs.smimeInfo/delete"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingSendAsSmimeInfoDelete",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__sendas__sendasemail__smimeinfo__id___get": {
+      "provider_intent": "gmail__v1__users__userid__settings__sendas__sendasemail__smimeinfo__id___get",
+      "provider_alias_intent": "/v1/users/userId/settings/sendAs/sendAsEmail/smimeInfo/id",
+      "text": "Gets S/MIME config for send-as alias",
+      "category": "Settings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "sendAsEmail": {
+          "type": "string",
+          "text": "The email address that appears in the \"From\" header for mail sent using this alias"
+        },
+        "id": {
+          "type": "string",
+          "text": "The immutable ID for the SmimeInfo"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "sendAsEmail": {
+          "type": "string",
+          "text": "The email address that appears in the \"From\" header for mail sent using this alias"
+        },
+        "id": {
+          "type": "string",
+          "text": "The immutable ID for the SmimeInfo"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Gets the specified S/MIME config for the specified send-as alias",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/sendAs/{sendAsEmail}/smimeInfo/{id}",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/sendAs/sendAsEmail/smimeInfo/id",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings.sendAs.smimeInfo/get"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingSendAsSmimeInfoGet",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__sendas__sendasemail__smimeinfo___post": {
+      "provider_intent": "gmail__v1__users__userid__settings__sendas__sendasemail__smimeinfo___post",
+      "provider_alias_intent": "/v1/users/userId/settings/sendAs/sendAsEmail/smimeInfo",
+      "text": "Upload S/MIME config for send-as alias",
+      "category": "Settings",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "sendAsEmail": {
+          "type": "string",
+          "text": "The email address that appears in the \"From\" header for mail sent using this alias"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "sendAsEmail": {
+          "type": "string",
+          "text": "The email address that appears in the \"From\" header for mail sent using this alias"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Insert (upload) the given S/MIME config for the specified send-as alias.",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/sendAs/{sendAsEmail}/smimeInfo",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/sendAs/sendAsEmail/smimeInfo",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings.sendAs.smimeInfo/insert"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingSendAsSmimeInfoInsert",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__sendas__sendasemail__smimeinfo___get": {
+      "provider_intent": "gmail__v1__users__userid__settings__sendas__sendasemail__smimeinfo___get",
+      "provider_alias_intent": "/v1/users/userId/settings/sendAs/sendAsEmail/smimeInfo",
+      "text": "Lists S/MIME configs for send-as alias",
+      "category": "Settings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "sendAsEmail": {
+          "type": "string",
+          "text": "The email address that appears in the \"From\" header for mail sent using this alias"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "sendAsEmail": {
+          "type": "string",
+          "text": "The email address that appears in the \"From\" header for mail sent using this alias"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Lists S/MIME configs for the specified send-as alias",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/sendAs/{sendAsEmail}/smimeInfo",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/sendAs/sendAsEmail/smimeInfo",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings.sendAs.smimeInfo/list"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingSendAsSmimeInfoList",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__settings__sendas__sendasemail__smimeinfo__id__setdefault___post": {
+      "provider_intent": "gmail__v1__users__userid__settings__sendas__sendasemail__smimeinfo__id__setdefault___post",
+      "provider_alias_intent": "/v1/users/userId/settings/sendAs/sendAsEmail/smimeInfo/id/setDefault",
+      "text": "Default S/MIME config for send-as alias",
+      "category": "Settings",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "sendAsEmail": {
+          "type": "string",
+          "text": "The email address that appears in the \"From\" header for mail sent using this alias"
+        },
+        "id": {
+          "type": "string",
+          "text": "The immutable ID for the SmimeInfo"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "sendAsEmail": {
+          "type": "string",
+          "text": "The email address that appears in the \"From\" header for mail sent using this alias"
+        },
+        "id": {
+          "type": "string",
+          "text": "The immutable ID for the SmimeInfo"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Sets the default S/MIME config for the specified send-as alias",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/settings/sendAs/{sendAsEmail}/smimeInfo/{id}/setDefault",
+        "alias_endpoint": "/gmail/v1/users/userId/settings/sendAs/sendAsEmail/smimeInfo/id/setDefault",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings.sendAs.smimeInfo/setDefault"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userSettingSendAsSmimeInfoSetDefault",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__threads__id___get": {
+      "provider_intent": "gmail__v1__users__userid__threads__id___get",
+      "provider_alias_intent": "/v1/users/userId/threads/id",
+      "text": "Gets the specified thread",
+      "category": "Thread",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the thread to retrieve"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        },
+        "format": {
+          "type": "enum",
+          "enum": []
+        },
+        "metadataHeaders": {
+          "type": "string",
+          "text": "When given and format is METADATA"
+        },
+        "only include headers specified": {
+          "type": ""
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the thread to retrieve"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Gets the specified thread",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/threads/{id}",
+        "alias_endpoint": "/gmail/v1/users/userId/threads/id",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.threads/get"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userThreadGet",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__threads___get": {
+      "provider_intent": "gmail__v1__users__userid__threads___get",
+      "provider_alias_intent": "/v1/users/userId/threads",
+      "text": "Lists the threads in the user's mailbox",
+      "category": "Thread",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        },
+        "maxResults": {
+          "type": "integer",
+          "text": "Maximum number of messages to return defaults-100 maximum-500"
+        },
+        "pageToken": {
+          "type": "string",
+          "text": "Page token to retrieve a specific page of results in the list"
+        },
+        "q": {
+          "type": "string",
+          "text": "Only return messages matching the specified query"
+        },
+        "labelIds": {
+          "type": "string",
+          "text": "Only return messages with labels that match all of the specified label IDs"
+        },
+        "includeSpamTrash": {
+          "type": "boolean",
+          "text": "Include messages from SPAM and TRASH in the results",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Lists the threads in the user's mailbox",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/threads",
+        "alias_endpoint": "/gmail/v1/users/userId/threads",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.threads/list"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userThreadList",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__threads__id__modify___post": {
+      "provider_intent": "gmail__v1__users__userid__threads__id__modify___post",
+      "provider_alias_intent": "/v1/users/userId/threads/id/modify",
+      "text": "Modifies the labels applied to the thread",
+      "category": "Thread",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the thread to modify"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "addLabelIds": {
+          "type": "string",
+          "text": "A list of IDs of labels to add to this thread. You can add up to 100 labels with each update;\nremoveLabelIds",
+          "enum": [
+            "string"
+          ]
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the thread to modify"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Modifies the labels applied to the thread",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/threads/{id}/modify",
+        "alias_endpoint": "/gmail/v1/users/userId/threads/id/modify",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.threads/modify"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userThreadModify",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__threads__id__trash___post": {
+      "provider_intent": "gmail__v1__users__userid__threads__id__trash___post",
+      "provider_alias_intent": "/v1/users/userId/threads/id/trash",
+      "text": "Moves the specified thread to the trash",
+      "category": "Thread",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the thread to Trash"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the thread to Trash"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Moves the specified thread to the trash",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/threads/{id}/trash",
+        "alias_endpoint": "/gmail/v1/users/userId/threads/id/trash",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.threads/trash"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userThreadTrash",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gmail__v1__users__userid__threads__id__untrash___post": {
+      "provider_intent": "gmail__v1__users__userid__threads__id__untrash___post",
+      "provider_alias_intent": "/v1/users/userId/threads/id/untrash",
+      "text": "Removes the specified thread from the trash",
+      "category": "Thread",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the thread to remove from Trash"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the thread to remove from Trash"
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's email address",
+          "required": true,
+          "disabled": true,
+          "replace_key": "{userId}",
+          "key_alias": "sub"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Removes the specified thread from the trash",
+        "rate_limit": [],
+        "api_endpoint": "https://gmail.googleapis.com/gmail/v1/users/{userId}/threads/{id}/untrash",
+        "alias_endpoint": "/gmail/v1/users/userId/threads/id/untrash",
+        "api_ref": "https://developers.google.com/gmail/api/reference/rest/v1/users.threads/untrash"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "provider_intent_unknown": "userThreadUntrash",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

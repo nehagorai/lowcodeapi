@@ -1,0 +1,38 @@
+{
+  "routes": {
+    "linguix__v1__projects___post": {
+      "provider_intent": "linguix__v1__projects___post",
+      "provider_alias_intent": "/v1/projects",
+      "text": "",
+      "category": "Linguix API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "",
+        "rate_limit": [],
+        "api_endpoint": "https://api.linguix.com/api/v1/projects",
+        "alias_endpoint": "/linguix/v1/projects",
+        "api_ref": "https://help.linguix.com/docs/linguix-api/linguix-checker-rest-api/"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "{\n    \"status\": 200,\n    \"alerts\": [\n        {\n            \"length\": 6,\n            \"offset\": 60,\n            \"message\": \"Possible grammar mistake found.\",\n            \"category\": \"Noun Number\",\n            \"replacements\": [\n                \"uploads\"\n            ]\n        },\n        {\n            \"length\": 3,\n            \"offset\": 92,\n            \"message\": \"Use a comma before ‘so’ if it connects two independent clauses (unless they are closely connected and short).\",\n            \"category\": \"Punctuation\",\n            \"replacements\": [\n                \", so\"\n            ]\n        },\n        {\n            \"length\": 4,\n            \"offset\": 121,\n            \"message\": \"Possible grammar mistake found.\",\n            \"category\": \"Noun Number\",\n            \"replacements\": [\n                \"cases\"\n            ]\n        }\n    ],\n    \"stats\": {\n        \"wordsCount\": 26,\n        \"charsCount\": 115,\n        \"sentencesCount\": 1,\n        \"avgWordLength\": 4.346153846153846,\n        \"avgSentenceLength\": 26,\n        \"fleschIndex\": 47.037307692307735,\n        \"readingTimeSeconds\": 8,\n        \"speakingTimeSeconds\": 12,\n        \"textScore\": 5\n    }\n}",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

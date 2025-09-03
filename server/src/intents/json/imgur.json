@@ -1,0 +1,3001 @@
+{
+  "app": {
+    "title": "Imgur API",
+    "description": "",
+    "api_base": "/imgur",
+    "copyright": "",
+    "copyright_year": "",
+    "contact_email": ""
+  },
+  "category": {
+    "All": ""
+  },
+  "routes": {
+    "generate_access_token": {
+      "provider_intent": "generate_access_token",
+      "provider_alias_intent": "/oauth2/token",
+      "text": "Given a user's refresh token this endpoint generates an access token",
+      "category": "Account",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "refresh_token": {
+          "type": "text",
+          "text": "The refresh token returned from the authorization code exchange"
+        },
+        "client_id": {
+          "type": "text",
+          "text": "The client_id obtained during application registration"
+        },
+        "client_secret": {
+          "type": "text",
+          "text": "The client secret obtained during application registration"
+        },
+        "grant_type": {
+          "type": "text",
+          "text": "As defined in the OAuth2 specification this field must contain a value of",
+          "enum": [
+            "`refresh_token`"
+          ]
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Given a user's refresh token this endpoint generates an access token",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/oauth2/token",
+        "alias_endpoint": "/imgur/oauth2/token",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "account_base": {
+      "provider_intent": "account_base",
+      "provider_alias_intent": "/3/account/username",
+      "text": "Request standard user information",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Request standard user information",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/{{username}}",
+        "alias_endpoint": "/imgur/3/account/username",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "account_block_status": {
+      "provider_intent": "account_block_status",
+      "provider_alias_intent": "/account/v1/username/block",
+      "text": "Determine if the user making the request has blocked a username",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Determine if the user making the request has blocked a username",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/account/v1/{{username}}/block",
+        "alias_endpoint": "/imgur/account/v1/username/block",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "account_blocks": {
+      "provider_intent": "account_blocks",
+      "provider_alias_intent": "/3/account/me/block",
+      "text": "List all accounts being blocked",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "List all accounts being blocked",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/me/block",
+        "alias_endpoint": "/imgur/3/account/me/block",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "account_block_create": {
+      "provider_intent": "account_block_create",
+      "provider_alias_intent": "/account/v1/username/block",
+      "text": "Block a user",
+      "category": "Account",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Block a user",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/account/v1/{{username}}/block",
+        "alias_endpoint": "/imgur/account/v1/username/block",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "account_block_delete": {
+      "provider_intent": "account_block_delete",
+      "provider_alias_intent": "/account/v1/username/block",
+      "text": "Unblock a user",
+      "category": "Account",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Unblock a user",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/account/v1/{{username}}/block",
+        "alias_endpoint": "/imgur/account/v1/username/block",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "account_images": {
+      "provider_intent": "account_images",
+      "provider_alias_intent": "/3/account/me/images",
+      "text": "To make requests for the current account you may use `me` as the `{{username}}` parameter",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "To make requests for the current account you may use `me` as the `{{username}}` parameter",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/me/images",
+        "alias_endpoint": "/imgur/3/account/me/images",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "account_gallery_favorites": {
+      "provider_intent": "account_gallery_favorites",
+      "provider_alias_intent": "/3/account/username/gallery_favorites/page/favoritessort",
+      "text": "Return the images the user has favorited in the gallery",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Return the images the user has favorited in the gallery",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/{{username}}/gallery_favorites/{{page}}/{{favoritesSort}}",
+        "alias_endpoint": "/imgur/3/account/username/gallery_favorites/page/favoritessort",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "account_favorites": {
+      "provider_intent": "account_favorites",
+      "provider_alias_intent": "/3/account/username/favorites/page/favoritessort",
+      "text": "Returns the users favorited images only accessible if you're logged in as the user",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns the users favorited images only accessible if you're logged in as the user",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/{{username}}/favorites/{{page}}/{{favoritesSort}}",
+        "alias_endpoint": "/imgur/3/account/username/favorites/page/favoritessort",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "account_submissions": {
+      "provider_intent": "account_submissions",
+      "provider_alias_intent": "/3/account/username/submissions/page",
+      "text": "Return the images a user has submitted to the gallery",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Return the images a user has submitted to the gallery",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/{{username}}/submissions/{{page}}",
+        "alias_endpoint": "/imgur/3/account/username/submissions/page",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "account_available_avatars_(un-authed_/_authed)": {
+      "provider_intent": "account_available_avatars_(un-authed_/_authed)",
+      "provider_alias_intent": "/3/account/username/available_avatars",
+      "text": "If unauthentiated get list of default trophies a user can select from",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "If unauthentiated get list of default trophies a user can select from",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/{{username}}/available_avatars",
+        "alias_endpoint": "/imgur/3/account/username/available_avatars",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "account_avatar_(authed)": {
+      "provider_intent": "account_avatar_(authed)",
+      "provider_alias_intent": "/3/account/username/avatar",
+      "text": "Get the current account's avatar URL and avatar name",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get the current account's avatar URL and avatar name",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/{{username}}/avatar",
+        "alias_endpoint": "/imgur/3/account/username/avatar",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "account_settings": {
+      "provider_intent": "account_settings",
+      "provider_alias_intent": "/3/account/me/settings",
+      "text": "Returns the account settings only accessible if you're logged in as the user",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns the account settings only accessible if you're logged in as the user",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/me/settings",
+        "alias_endpoint": "/imgur/3/account/me/settings",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "change_account_settings": {
+      "provider_intent": "change_account_settings",
+      "provider_alias_intent": "/3/account/username/settings",
+      "text": "Updates the account settings for a given user the user must be logged in",
+      "category": "Account",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "bio": {
+          "type": "text"
+        },
+        "public_images": {
+          "type": "text"
+        },
+        "messaging_enabled": {
+          "type": "text"
+        },
+        "album_privacy": {
+          "type": "text",
+          "text": "(deprecated)"
+        },
+        "accepted_gallery_terms": {
+          "type": "text"
+        },
+        "username": {
+          "type": "text"
+        },
+        "show_mature": {
+          "type": "text"
+        },
+        "newsletter_subscribed": {
+          "type": "text"
+        },
+        "avatar": {
+          "type": "text",
+          "text": "See Account Available Avatars for possible values"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Updates the account settings for a given user the user must be logged in",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/{{username}}/settings",
+        "alias_endpoint": "/imgur/3/account/username/settings",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "account_gallery_profile": {
+      "provider_intent": "account_gallery_profile",
+      "provider_alias_intent": "/3/account/username/settings",
+      "text": "Returns the totals for the gallery profile",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns the totals for the gallery profile",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/{{username}}/settings",
+        "alias_endpoint": "/imgur/3/account/username/settings",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "verify_user's_e-mail": {
+      "provider_intent": "verify_user's_e-mail",
+      "provider_alias_intent": "/3/account/username/verifyemail",
+      "text": "Checks to see if user has verified their email address",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Checks to see if user has verified their email address",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/{{username}}/verifyemail",
+        "alias_endpoint": "/imgur/3/account/username/verifyemail",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "send_verification_e-mail": {
+      "provider_intent": "send_verification_e-mail",
+      "provider_alias_intent": "/3/account/username/verifyemail",
+      "text": "Sends an email to the user to verify that their email is valid to upload to gallery",
+      "category": "Account",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Sends an email to the user to verify that their email is valid to upload to gallery",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/{{username}}/verifyemail",
+        "alias_endpoint": "/imgur/3/account/username/verifyemail",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "albums_(un-authed_/_authed)": {
+      "provider_intent": "albums_(un-authed_/_authed)",
+      "provider_alias_intent": "/3/account/username/albums/page",
+      "text": "Get all the albums associated with the account",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get all the albums associated with the account",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/{{username}}/albums/{{page}}",
+        "alias_endpoint": "/imgur/3/account/username/albums/page",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "account_album": {
+      "provider_intent": "account_album",
+      "provider_alias_intent": "/3/account/username/album/albumhash",
+      "text": "Get additional information about an album this endpoint works the same as the [Album Endpoint]()",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get additional information about an album this endpoint works the same as the [Album Endpoint]()",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/{{username}}/album/{{albumHash}}",
+        "alias_endpoint": "/imgur/3/account/username/album/albumhash",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "album_ids_(un-authed_/_authed)": {
+      "provider_intent": "album_ids_(un-authed_/_authed)",
+      "provider_alias_intent": "/3/account/username/albums/ids/page",
+      "text": "Return an array of all of the album IDs (hashes)",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Return an array of all of the album IDs (hashes)",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/{{username}}/albums/ids/{{page}}",
+        "alias_endpoint": "/imgur/3/account/username/albums/ids/page",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "album_count_(un-authed_/_authed)": {
+      "provider_intent": "album_count_(un-authed_/_authed)",
+      "provider_alias_intent": "/3/account/username/albums/count",
+      "text": "Return the total number of albums associated with the account",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Return the total number of albums associated with the account",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/{{username}}/albums/count",
+        "alias_endpoint": "/imgur/3/account/username/albums/count",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "album_deletion": {
+      "provider_intent": "album_deletion",
+      "provider_alias_intent": "/3/account/username/album/albumhash",
+      "text": "Delete an Album with a given id",
+      "category": "Account",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Delete an Album with a given id",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/{{username}}/album/{{albumHash}}",
+        "alias_endpoint": "/imgur/3/account/username/album/albumhash",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "comments": {
+      "provider_intent": "comments",
+      "provider_alias_intent": "/3/account/username/comments/commentsort/page",
+      "text": "Return the comments the user has created",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Return the comments the user has created",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/{{username}}/comments/{{commentSort}}/{{page}}",
+        "alias_endpoint": "/imgur/3/account/username/comments/commentsort/page",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "account_comment": {
+      "provider_intent": "account_comment",
+      "provider_alias_intent": "/3/account/username/comment/commentid",
+      "text": "Return information about a specific comment",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Return information about a specific comment",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/{{username}}/comment/{{commentId}}",
+        "alias_endpoint": "/imgur/3/account/username/comment/commentid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "comment_ids": {
+      "provider_intent": "comment_ids",
+      "provider_alias_intent": "/3/account/username/comments/ids/sort/page",
+      "text": "Return an array of all of the comment IDs",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Return an array of all of the comment IDs",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/{{username}}/comments/ids/{{sort}}/{{page}}",
+        "alias_endpoint": "/imgur/3/account/username/comments/ids/sort/page",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "comment_count": {
+      "provider_intent": "comment_count",
+      "provider_alias_intent": "/3/account/username/comments/count",
+      "text": "Return a count of all of the comments associated with the account",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Return a count of all of the comments associated with the account",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/{{username}}/comments/count",
+        "alias_endpoint": "/imgur/3/account/username/comments/count",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "account_comment_deletion": {
+      "provider_intent": "account_comment_deletion",
+      "provider_alias_intent": "/3/account/username/comment/commentid",
+      "text": "Delete a comment",
+      "category": "Account",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Delete a comment",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/{{username}}/comment/{{commentId}}",
+        "alias_endpoint": "/imgur/3/account/username/comment/commentid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "images": {
+      "provider_intent": "images",
+      "provider_alias_intent": "/3/account/username/images/page",
+      "text": "Return all of the images associated with the account",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Return all of the images associated with the account",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/{{username}}/images/{{page}}",
+        "alias_endpoint": "/imgur/3/account/username/images/page",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "account_image": {
+      "provider_intent": "account_image",
+      "provider_alias_intent": "/3/account/username/image/imageid",
+      "text": "Return information about a specific image",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Return information about a specific image",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/{{username}}/image/{{imageId}}",
+        "alias_endpoint": "/imgur/3/account/username/image/imageid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "image_ids": {
+      "provider_intent": "image_ids",
+      "provider_alias_intent": "/3/account/username/images/ids/page",
+      "text": "Returns an array of Image IDs that are associated with the account",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns an array of Image IDs that are associated with the account",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/{{username}}/images/ids/{{page}}",
+        "alias_endpoint": "/imgur/3/account/username/images/ids/page",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "image_count": {
+      "provider_intent": "image_count",
+      "provider_alias_intent": "/3/account/username/images/count",
+      "text": "Returns the total number of images associated with the account",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns the total number of images associated with the account",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/{{username}}/images/count",
+        "alias_endpoint": "/imgur/3/account/username/images/count",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "image_deletion": {
+      "provider_intent": "image_deletion",
+      "provider_alias_intent": "/3/account/username/image/deletehash",
+      "text": "Deletes an Image",
+      "category": "Account",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Deletes an Image",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/{{username}}/image/{{deleteHash}}",
+        "alias_endpoint": "/imgur/3/account/username/image/deletehash",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "accont_replies": {
+      "provider_intent": "accont_replies",
+      "provider_alias_intent": "/3/account/username/notifications/replies",
+      "text": "Returns all of the reply notifications for the user",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns all of the reply notifications for the user",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/{{username}}/notifications/replies",
+        "alias_endpoint": "/imgur/3/account/username/notifications/replies",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "follow_tag": {
+      "provider_intent": "follow_tag",
+      "provider_alias_intent": "/3/account/me/follow/tag/tagname",
+      "text": "Follows the {{tagName}} specified for the currently logged in user",
+      "category": "Account",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Follows the {{tagName}} specified for the currently logged in user",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/me/follow/tag/{{tagName}}",
+        "alias_endpoint": "/imgur/3/account/me/follow/tag/tagname",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "unfollow_tag": {
+      "provider_intent": "unfollow_tag",
+      "provider_alias_intent": "/3/account/me/follow/tag/tagname",
+      "text": "Unfollows the {{tagName}} specified for the currently logged in user",
+      "category": "Account",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Unfollows the {{tagName}} specified for the currently logged in user",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/me/follow/tag/{{tagName}}",
+        "alias_endpoint": "/imgur/3/account/me/follow/tag/tagname",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "account_delete_me": {
+      "provider_intent": "account_delete_me",
+      "provider_alias_intent": "/3/account/me/delete",
+      "text": "Delete the account of the auth'd user with delete feedback",
+      "category": "Account",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "client_id": {
+          "type": "string",
+          "text": "Client id"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Delete the account of the auth'd user with delete feedback",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/account/me/delete",
+        "alias_endpoint": "/imgur/3/account/me/delete",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "album": {
+      "provider_intent": "album",
+      "provider_alias_intent": "/3/album/albumhash",
+      "text": "Get additional information about an album",
+      "category": "Album",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get additional information about an album",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/album/{{albumHash}}",
+        "alias_endpoint": "/imgur/3/album/albumhash",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "album_images": {
+      "provider_intent": "album_images",
+      "provider_alias_intent": "/3/album/albumhash/images",
+      "text": "Return all of the images in the album",
+      "category": "Album",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Return all of the images in the album",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/album/{{albumHash}}/images",
+        "alias_endpoint": "/imgur/3/album/albumhash/images",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "album_image": {
+      "provider_intent": "album_image",
+      "provider_alias_intent": "/3/album/albumhash/image/imagehash",
+      "text": "Get information about an image in an album any additional actions found in [Image Endpoint](https://api",
+      "category": "Album",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get information about an image in an album any additional actions found in [Image Endpoint](https://api",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/album/{{albumHash}}/image/{{imageHash}}",
+        "alias_endpoint": "/imgur/3/album/albumhash/image/imagehash",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "album_creation_(un-authed_/_authed)": {
+      "provider_intent": "album_creation_(un-authed_/_authed)",
+      "provider_alias_intent": "/3/album",
+      "text": "Create a new album",
+      "category": "Album",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "ids[]": {
+          "type": "text",
+          "text": "any additional image ids"
+        },
+        "deletehashes[]": {
+          "type": "text",
+          "text": "any additional deletehashes"
+        },
+        "title": {
+          "type": "text",
+          "text": "The title of the album"
+        },
+        "description": {
+          "type": "text",
+          "text": "The description of the album"
+        },
+        "privacy": {
+          "type": "text",
+          "text": "(deprecated) Sets the privacy level of the album"
+        },
+        "cover": {
+          "type": "text",
+          "text": "The ID of an image that you want to be the cover of the album"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Create a new album",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/album",
+        "alias_endpoint": "/imgur/3/album",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "update_album_(un-authed_/_authed)": {
+      "provider_intent": "update_album_(un-authed_/_authed)",
+      "provider_alias_intent": "/3/album/albumhash",
+      "text": "Update the information of an album",
+      "category": "Album",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "ids[]": {
+          "type": "text",
+          "text": "any additional image ids"
+        },
+        "deletehashes": {
+          "type": "text",
+          "text": "Optional"
+        },
+        "title": {
+          "type": "text",
+          "text": "Optional"
+        },
+        "description": {
+          "type": "text",
+          "text": "Optional"
+        },
+        "privacy": {
+          "type": "text",
+          "text": "(deprecated) Optional"
+        },
+        "cover": {
+          "type": "text",
+          "text": "Optional"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Update the information of an album",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/album/{{albumHash}}",
+        "alias_endpoint": "/imgur/3/album/albumhash",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "album_deletion_(un-authed)": {
+      "provider_intent": "album_deletion_(un-authed)",
+      "provider_alias_intent": "/3/album/albumdeletehash",
+      "text": "Delete an album with a given deletehash",
+      "category": "Album",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Delete an album with a given deletehash",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/album/{{albumDeleteHash}}",
+        "alias_endpoint": "/imgur/3/album/albumdeletehash",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "album_deletion_(authed)": {
+      "provider_intent": "album_deletion_(authed)",
+      "provider_alias_intent": "/3/album/albumhash",
+      "text": "Delete an album with a given ID",
+      "category": "Album",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Delete an album with a given ID",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/album/{{albumHash}}",
+        "alias_endpoint": "/imgur/3/album/albumhash",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "favorite_album": {
+      "provider_intent": "favorite_album",
+      "provider_alias_intent": "/3/album/albumhash/favorite",
+      "text": "Favorite an album with a given ID",
+      "category": "Album",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Favorite an album with a given ID",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/album/{{albumHash}}/favorite",
+        "alias_endpoint": "/imgur/3/album/albumhash/favorite",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "set_album_images_(un-authed)": {
+      "provider_intent": "set_album_images_(un-authed)",
+      "provider_alias_intent": "/3/album/albumdeletehash",
+      "text": "Sets the images for an album removes all other images and only uses the images in this request",
+      "category": "Album",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "deletehashes[]": {
+          "type": "text"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Sets the images for an album removes all other images and only uses the images in this request",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/album/{{albumDeleteHash}}",
+        "alias_endpoint": "/imgur/3/album/albumdeletehash",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "set_album_images_(authed)": {
+      "provider_intent": "set_album_images_(authed)",
+      "provider_alias_intent": "/3/album/albumhash",
+      "text": "Sets the images for an album removes all other images and only uses the images in this request",
+      "category": "Album",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "ids[]": {
+          "type": "text"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Sets the images for an album removes all other images and only uses the images in this request",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/album/{{albumHash}}",
+        "alias_endpoint": "/imgur/3/album/albumhash",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "add_images_to_an_album_(un-authed)": {
+      "provider_intent": "add_images_to_an_album_(un-authed)",
+      "provider_alias_intent": "/3/album/albumdeletehash/add",
+      "text": "Takes parameter `deletehashes[]` as an array of deletehashes to add to the album",
+      "category": "Album",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "deletehashes[]": {
+          "type": "text"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Takes parameter `deletehashes[]` as an array of deletehashes to add to the album",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/album/{{albumDeleteHash}}/add",
+        "alias_endpoint": "/imgur/3/album/albumdeletehash/add",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "add_images_to_an_album_(authed)": {
+      "provider_intent": "add_images_to_an_album_(authed)",
+      "provider_alias_intent": "/3/album/albumhash/add",
+      "text": "Adds the images to an album",
+      "category": "Album",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "ids[]": {
+          "type": "text"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Adds the images to an album",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/album/{{albumHash}}/add",
+        "alias_endpoint": "/imgur/3/album/albumhash/add",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "remove_images_from_an_album_(un-authed)": {
+      "provider_intent": "remove_images_from_an_album_(un-authed)",
+      "provider_alias_intent": "/3/album/albumdeletehash/remove_images",
+      "text": "Takes parameter `ids[]` as an array of ids and removes from the album",
+      "category": "Album",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "ids[]": {
+          "type": "text"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Takes parameter `ids[]` as an array of ids and removes from the album",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/album/{{albumDeleteHash}}/remove_images",
+        "alias_endpoint": "/imgur/3/album/albumdeletehash/remove_images",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "remove_images_from_an_album_(authed)": {
+      "provider_intent": "remove_images_from_an_album_(authed)",
+      "provider_alias_intent": "/3/album/albumhash/remove_images",
+      "text": "Takes parameter `ids[]` as an array of ids and removes from the album",
+      "category": "Album",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "ids[]": {
+          "type": "text"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Takes parameter `ids[]` as an array of ids and removes from the album",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/album/{{albumHash}}/remove_images",
+        "alias_endpoint": "/imgur/3/album/albumhash/remove_images",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "comment": {
+      "provider_intent": "comment",
+      "provider_alias_intent": "/3/comment/commentid",
+      "text": "Get information about a specific comment",
+      "category": "Comment",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get information about a specific comment",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/comment/{{commentId}}",
+        "alias_endpoint": "/imgur/3/comment/commentid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "comment_creation": {
+      "provider_intent": "comment_creation",
+      "provider_alias_intent": "/3/comment",
+      "text": "Creates a new comment returns the ID of the comment",
+      "category": "Comment",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "image_id": {
+          "type": "text"
+        },
+        "comment": {
+          "type": "text"
+        },
+        "parent_id": {
+          "type": "text"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Creates a new comment returns the ID of the comment",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/comment",
+        "alias_endpoint": "/imgur/3/comment",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "comment_deletion": {
+      "provider_intent": "comment_deletion",
+      "provider_alias_intent": "/3/comment/commentid",
+      "text": "Delete a comment by the given id",
+      "category": "Comment",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Delete a comment by the given id",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/comment/{{commentId}}",
+        "alias_endpoint": "/imgur/3/comment/commentid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "replies": {
+      "provider_intent": "replies",
+      "provider_alias_intent": "/3/comment/commentid/replies",
+      "text": "Get the comment with all of the replies for the comment",
+      "category": "Comment",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get the comment with all of the replies for the comment",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/comment/{{commentId}}/replies",
+        "alias_endpoint": "/imgur/3/comment/commentid/replies",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "reply_creation": {
+      "provider_intent": "reply_creation",
+      "provider_alias_intent": "/3/comment/commentid",
+      "text": "Create a reply for the given comment",
+      "category": "Comment",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "image_id": {
+          "type": "text"
+        },
+        "comment": {
+          "type": "text"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Create a reply for the given comment",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/comment/{{commentId}}",
+        "alias_endpoint": "/imgur/3/comment/commentid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "vote": {
+      "provider_intent": "vote",
+      "provider_alias_intent": "/3/comment/commentid/vote/vote",
+      "text": "Vote on a comment",
+      "category": "Comment",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Vote on a comment",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/comment/{{commentId}}/vote/{{vote}}",
+        "alias_endpoint": "/imgur/3/comment/commentid/vote/vote",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "report": {
+      "provider_intent": "report",
+      "provider_alias_intent": "/3/comment/commentid/report",
+      "text": "Report a comment for being inappropriate",
+      "category": "Comment",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "reason": {
+          "type": "text",
+          "text": "Optional"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Report a comment for being inappropriate",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/comment/{{commentId}}/report",
+        "alias_endpoint": "/imgur/3/comment/commentid/report",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "feed": {
+      "provider_intent": "feed",
+      "provider_alias_intent": "/3/feed",
+      "text": "Returns the account settings only accessible if you're logged in as the user",
+      "category": "Feed",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns the account settings only accessible if you're logged in as the user",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/feed",
+        "alias_endpoint": "/imgur/3/feed",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "gallery": {
+      "provider_intent": "gallery",
+      "provider_alias_intent": "/3/gallery/section/sort/window/page?showviral=showviral&mature=showmature&album_previews=albumpreviews",
+      "text": "Key | Required | Value                                                                                             |",
+      "category": "Gallery",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "| Key       | Required | Value                                                                                             |",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/gallery/{{section}}/{{sort}}/{{window}}/{{page}}?showViral={{showViral}}&mature={{showMature}}&album_previews={{albumPreviews}}",
+        "alias_endpoint": "/imgur/3/gallery/section/sort/window/page?showviral=showviral&mature=showmature&album_previews=albumpreviews",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "subreddit_galleries": {
+      "provider_intent": "subreddit_galleries",
+      "provider_alias_intent": "/3/gallery/r/subreddit/sort/window/page",
+      "text": "View gallery images for a subreddit",
+      "category": "Gallery",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "View gallery images for a subreddit",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/gallery/r/{{subreddit}}/{{sort}}/{{window}}/{{page}}",
+        "alias_endpoint": "/imgur/3/gallery/r/subreddit/sort/window/page",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "subreddit_image": {
+      "provider_intent": "subreddit_image",
+      "provider_alias_intent": "/3/gallery/r/subreddit/subredditimageid",
+      "text": "View a single image in the subreddit",
+      "category": "Gallery",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "View a single image in the subreddit",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/gallery/r/{{subreddit}}/{{subredditImageId}}",
+        "alias_endpoint": "/imgur/3/gallery/r/subreddit/subredditimageid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "gallery_tag": {
+      "provider_intent": "gallery_tag",
+      "provider_alias_intent": "/3/gallery/t/tagname/sort/window/page",
+      "text": "Returns tag metadata and posts tagged with the `tagName` provided",
+      "category": "Gallery",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns tag metadata and posts tagged with the `tagName` provided",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/gallery/t/{{tagName}}/{{sort}}/{{window}}/{{page}}",
+        "alias_endpoint": "/imgur/3/gallery/t/tagname/sort/window/page",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "gallery_tags": {
+      "provider_intent": "gallery_tags",
+      "provider_alias_intent": "/3/tags",
+      "text": "Gets a list of default tags",
+      "category": "Gallery",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Gets a list of default tags",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/tags",
+        "alias_endpoint": "/imgur/3/tags",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "gallery_tag_info": {
+      "provider_intent": "gallery_tag_info",
+      "provider_alias_intent": "/3/gallery/tag_info/tagname",
+      "text": "Gets metadata about a tag",
+      "category": "Gallery",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Gets metadata about a tag",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/gallery/tag_info/{{tagName}}",
+        "alias_endpoint": "/imgur/3/gallery/tag_info/tagname",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "gallery_item_tags": {
+      "provider_intent": "gallery_item_tags",
+      "provider_alias_intent": "/3/gallery/galleryhash/tags",
+      "text": "| Key | Required | Value                  |",
+      "category": "Gallery",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "| Key | Required | Value                  |",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/gallery/{{galleryHash}}/tags",
+        "alias_endpoint": "/imgur/3/gallery/galleryhash/tags",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "update_gallery_item_tags": {
+      "provider_intent": "update_gallery_item_tags",
+      "provider_alias_intent": "/3/gallery/tags/galleryhash",
+      "text": "Update the tags for a post in the gallery",
+      "category": "Gallery",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "id": {
+          "type": "text",
+          "text": "Required"
+        },
+        "tags": {
+          "type": "text",
+          "text": "Required"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Update the tags for a post in the gallery",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/gallery/tags/{{galleryHash}}",
+        "alias_endpoint": "/imgur/3/gallery/tags/galleryhash",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "gallery_search": {
+      "provider_intent": "gallery_search",
+      "provider_alias_intent": "/3/gallery/search/sort/window/page?q=cats",
+      "text": "Search the gallery with a given query string",
+      "category": "Gallery",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "q": {
+          "type": "string",
+          "text": "Query"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Search the gallery with a given query string",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/gallery/search/{{sort}}/{{window}}/{{page}}?q=cats",
+        "alias_endpoint": "/imgur/3/gallery/search/sort/window/page?q=cats",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "share_with_community_(image)": {
+      "provider_intent": "share_with_community_(image)",
+      "provider_alias_intent": "/3/gallery/image/imagehash",
+      "text": "Share an Album or Image to the Gallery",
+      "category": "Gallery",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "title": {
+          "type": "text",
+          "text": "Required"
+        },
+        "topic": {
+          "type": "text",
+          "text": "Optional"
+        },
+        "terms": {
+          "type": "text",
+          "text": "Optional"
+        },
+        "mature": {
+          "type": "text",
+          "text": "Optional"
+        },
+        "tags": {
+          "type": "text",
+          "text": "Optional"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Share an Album or Image to the Gallery",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/gallery/image/{{imageHash}}",
+        "alias_endpoint": "/imgur/3/gallery/image/imagehash",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "share_with_community_(album)": {
+      "provider_intent": "share_with_community_(album)",
+      "provider_alias_intent": "/3/gallery/album/albumhash",
+      "text": "Share an Album or Image to the Gallery",
+      "category": "Gallery",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "title": {
+          "type": "",
+          "text": "Required"
+        },
+        "topic": {
+          "type": "",
+          "text": "Optional"
+        },
+        "terms": {
+          "type": "",
+          "text": "Optional"
+        },
+        "mature": {
+          "type": "",
+          "text": "Optional"
+        },
+        "tags": {
+          "type": "",
+          "text": "Optional"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Share an Album or Image to the Gallery",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/gallery/album/{{albumHash}}",
+        "alias_endpoint": "/imgur/3/gallery/album/albumhash",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "remove_from_gallery": {
+      "provider_intent": "remove_from_gallery",
+      "provider_alias_intent": "/3/gallery/galleryhash",
+      "text": "Remove an image from the public gallery",
+      "category": "Gallery",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Remove an image from the public gallery",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/gallery/{{galleryHash}}",
+        "alias_endpoint": "/imgur/3/gallery/galleryhash",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "gallery_album": {
+      "provider_intent": "gallery_album",
+      "provider_alias_intent": "/3/gallery/album/galleryhash",
+      "text": "Get additional information about an album in the gallery",
+      "category": "Gallery",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get additional information about an album in the gallery",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/gallery/album/{{galleryHash}}",
+        "alias_endpoint": "/imgur/3/gallery/album/galleryhash",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "gallery_image": {
+      "provider_intent": "gallery_image",
+      "provider_alias_intent": "/3/gallery/image/galleryimagehash",
+      "text": "Get additional information about an image in the gallery",
+      "category": "Gallery",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get additional information about an image in the gallery",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/gallery/image/{{galleryImageHash}}",
+        "alias_endpoint": "/imgur/3/gallery/image/galleryimagehash",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "album_/_image_reporting": {
+      "provider_intent": "album_/_image_reporting",
+      "provider_alias_intent": "/3/gallery/image/galleryhash/report",
+      "text": "Report an Image in the gallery",
+      "category": "Gallery",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "reason": {
+          "type": "text"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Report an Image in the gallery",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/gallery/image/{{galleryHash}}/report",
+        "alias_endpoint": "/imgur/3/gallery/image/galleryhash/report",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "album_/_image_votes": {
+      "provider_intent": "album_/_image_votes",
+      "provider_alias_intent": "/3/gallery/galleryhash/votes",
+      "text": "Get the vote information about an image",
+      "category": "Gallery",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get the vote information about an image",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/gallery/{{galleryHash}}/votes",
+        "alias_endpoint": "/imgur/3/gallery/galleryhash/votes",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "album_/_image_voting": {
+      "provider_intent": "album_/_image_voting",
+      "provider_alias_intent": "/3/gallery/galleryhash/vote/vote",
+      "text": "Vote for an image `up` or `down` vote",
+      "category": "Gallery",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Vote for an image `up` or `down` vote",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/gallery/{{galleryHash}}/vote/{{vote}}",
+        "alias_endpoint": "/imgur/3/gallery/galleryhash/vote/vote",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "album_/_image_comments": {
+      "provider_intent": "album_/_image_comments",
+      "provider_alias_intent": "/3/gallery/galleryhash/comments/commentsort",
+      "text": "Get comments on an image or album in the gallery",
+      "category": "Gallery",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "access_token": {
+          "type": "text"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get comments on an image or album in the gallery",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/gallery/{{galleryHash}}/comments/{{commentSort}}",
+        "alias_endpoint": "/imgur/3/gallery/galleryhash/comments/commentsort",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "album_/_image_comment": {
+      "provider_intent": "album_/_image_comment",
+      "provider_alias_intent": "/3/gallery/galleryhash/comment/commentid",
+      "text": "Information about a specific comment",
+      "category": "Gallery",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Information about a specific comment",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/gallery/{{galleryHash}}/comment/{{commentId}}",
+        "alias_endpoint": "/imgur/3/gallery/galleryhash/comment/commentid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "album_/_image_comment_creation": {
+      "provider_intent": "album_/_image_comment_creation",
+      "provider_alias_intent": "/3/gallery/galleryhash/comment",
+      "text": "#### Response Model: [Basic](https://api",
+      "category": "Gallery",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "comment": {
+          "type": "text"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "#### Response Model: [Basic](https://api",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/gallery/{{galleryHash}}/comment",
+        "alias_endpoint": "/imgur/3/gallery/galleryhash/comment",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "image": {
+      "provider_intent": "image",
+      "provider_alias_intent": "/3/image/imagehash",
+      "text": "Get information about an image",
+      "category": "Image",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get information about an image",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/image/{{imageHash}}",
+        "alias_endpoint": "/imgur/3/image/imagehash",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "image_upload": {
+      "provider_intent": "image_upload",
+      "provider_alias_intent": "/3/upload",
+      "text": "Upload a new image or video",
+      "category": "Image",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "image": {
+          "type": "file",
+          "text": "A binary file base64 data or a URL for an image"
+        },
+        "video": {
+          "type": "file",
+          "text": "A binary file (up to 200MB)"
+        },
+        "album": {
+          "type": "text",
+          "text": "The id of the album you want to add the image to"
+        },
+        "type": {
+          "type": "text",
+          "text": "The type of the file that's being sent; file base64 or URL"
+        },
+        "name": {
+          "type": "text",
+          "text": "The name of the file this is automatically detected if uploading a file with a POST and multipart / form-data"
+        },
+        "title": {
+          "type": "text",
+          "text": "The title of the image"
+        },
+        "description": {
+          "type": "text",
+          "text": "The description of the image"
+        },
+        "disable_audio": {
+          "type": "text",
+          "text": "Will remove the audio track from a video file"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Upload a new image or video",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/upload",
+        "alias_endpoint": "/imgur/3/upload",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "image_deletion_(un-authed)": {
+      "provider_intent": "image_deletion_(un-authed)",
+      "provider_alias_intent": "/3/image/imagedeletehash",
+      "text": "Deletes an image",
+      "category": "Image",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Deletes an image",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/image/{{imageDeleteHash}}",
+        "alias_endpoint": "/imgur/3/image/imagedeletehash",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "image_deletion_(authed)": {
+      "provider_intent": "image_deletion_(authed)",
+      "provider_alias_intent": "/3/image/imagehash",
+      "text": "Deletes an image",
+      "category": "Image",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Deletes an image",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/image/{{imageHash}}",
+        "alias_endpoint": "/imgur/3/image/imagehash",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "update_image_information_(un-authed)": {
+      "provider_intent": "update_image_information_(un-authed)",
+      "provider_alias_intent": "/3/image/imagedeletehash",
+      "text": "Updates the title or description of an image",
+      "category": "Image",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "title": {
+          "type": "text"
+        },
+        "description": {
+          "type": "text"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Updates the title or description of an image",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/image/{{imageDeleteHash}}",
+        "alias_endpoint": "/imgur/3/image/imagedeletehash",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "update_image_information_(authed)": {
+      "provider_intent": "update_image_information_(authed)",
+      "provider_alias_intent": "/3/image/imagehash",
+      "text": "Updates the title or description of an image",
+      "category": "Image",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "title": {
+          "type": "text"
+        },
+        "description": {
+          "type": "text"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Updates the title or description of an image",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/image/{{imageHash}}",
+        "alias_endpoint": "/imgur/3/image/imagehash",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "favorite_an_image": {
+      "provider_intent": "favorite_an_image",
+      "provider_alias_intent": "/3/image/imagehash/favorite",
+      "text": "Favorite an image with the given ID",
+      "category": "Image",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Favorite an image with the given ID",
+        "rate_limit": [],
+        "api_endpoint": "https://api.imgur.com/3/image/{{imageHash}}/favorite",
+        "alias_endpoint": "/imgur/3/image/imagehash/favorite",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    }
+  }
+}

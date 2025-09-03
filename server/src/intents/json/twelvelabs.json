@@ -1,0 +1,2153 @@
+{
+  "routes": {
+    "twelvelabs__v1-2__search-v22___post": {
+      "provider_intent": "twelvelabs__v1-2__search-v22___post",
+      "provider_alias_intent": "/v1.2/search-v22",
+      "text": "Make any-to-video search requests",
+      "category": "Any-to-video search",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "query_media_type": {
+          "type": "string",
+          "text": "The type of media you wish to use"
+        },
+        "query_media_url": {
+          "type": "string",
+          "text": "The publicly accessible URL of the media file you wish to use"
+        },
+        "query_media_file": {
+          "type": "array",
+          "text": "The media you wish to use as a local file"
+        },
+        "query_text": {
+          "type": "staing",
+          "text": "The text query to search for"
+        },
+        "index_id": {
+          "type": "string",
+          "text": "The unique identifier of the index to search",
+          "required": true
+        },
+        "search_options": {
+          "type": "array",
+          "text": "An array that specifies the sources of information the platform uses when performing a search",
+          "required": true
+        },
+        "adjust_confidence_level": {
+          "type": "number",
+          "text": "This parameter specifies the strictness of the thresholds for assigning the high, medium, or low confidence levels to search results"
+        },
+        "group_by": {
+          "type": "string",
+          "text": "Use this parameter to group or ungroup items in a response"
+        },
+        "threshold": {
+          "type": "string",
+          "text": "Use this parameter to filter on the level of confidence that the results match your query"
+        },
+        "sort_option": {
+          "type": "string",
+          "text": "Use this parameter to specify the sort order for the response"
+        },
+        "operator": {
+          "type": "string",
+          "text": "When you perform a search specifying multiple sources of information, you can use the this parameter to broaden or narrow your search"
+        },
+        "conversation_option": {
+          "type": "string",
+          "text": "Specifies the type of match the platform performs"
+        },
+        "page_limit": {
+          "type": "number",
+          "text": "The number of items to return on each page"
+        },
+        "filter": {
+          "type": "string",
+          "text": "A stringified version of an object that specifies the criteria for filtering the search results"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "Use this endpoint to search for relevant matches in an index using text or various media formats",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/search-v22",
+        "alias_endpoint": "/twelvelabs/v1.2/search-v22",
+        "api_ref": "https://docs.twelvelabs.io/reference/perform-any-to-video-search-requests"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__search-v2__page-token___get": {
+      "provider_intent": "twelvelabs__v1-2__search-v2__page-token___get",
+      "provider_alias_intent": "/v1.2/search-v2/page-token",
+      "text": "Retrieve a specific page of search results",
+      "category": "Any-to-video search",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page-token": {
+          "type": "string",
+          "text": "A token that identifies the page to retrieve",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "page-token": {
+          "type": "string",
+          "text": "A token that identifies the page to retrieve",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "Use this endpoint to retrieve a specific page of search results",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/search-v2/{page-token}",
+        "alias_endpoint": "/twelvelabs/v1.2/search-v2/page-token",
+        "api_ref": "https://docs.twelvelabs.io/reference/any-to-video-retrieve-specific-page"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__classify___post": {
+      "provider_intent": "twelvelabs__v1-2__classify___post",
+      "provider_alias_intent": "/v1.2/classify",
+      "text": "Classify a set of videos",
+      "category": "Classify",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "video_ids": {
+          "type": "array",
+          "text": "An array containing the unique identifiers of the videos that you want to classify",
+          "required": true
+        },
+        "page_limit": {
+          "type": "number",
+          "text": "The number of items to return on each page"
+        },
+        "include_clips": {
+          "type": "boolean",
+          "text": "When this parameter is set to true, the platform will return detailed information about each matching video clip",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "threshold": {
+          "type": "object",
+          "text": "An object that allows you to filter the results"
+        },
+        "show_detailed_score": {
+          "type": "boolean",
+          "text": "Set this parameter to true to specify that the platform should return a detailed score for each matching video clip",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "options": {
+          "type": "array",
+          "text": "An array that specifies the sources of information the platform uses when it categorizes a video",
+          "required": true
+        },
+        "conversation_option": {
+          "type": "string",
+          "text": "Specifies the type of match the platform will perform",
+          "required": true
+        },
+        "classes": {
+          "type": "array",
+          "text": "An array of objects containing the names and the definitions of entities or actions that the platform must identify",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "Use this method to classify a set of videos based on the entities or actions shown in those videos",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/classify",
+        "alias_endpoint": "/twelvelabs/v1.2/classify",
+        "api_ref": "https://docs.twelvelabs.io/reference/classify-videos"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__classify__bulk___post": {
+      "provider_intent": "twelvelabs__v1-2__classify__bulk___post",
+      "provider_alias_intent": "/v1.2/classify/bulk",
+      "text": "Classify all the videos in an index",
+      "category": "Classify",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "index_id": {
+          "type": "string",
+          "text": "The unique identifier of the index that you want to classify",
+          "required": true
+        },
+        "page_limit": {
+          "type": "number",
+          "text": "The number of items to return on each page"
+        },
+        "include_clips": {
+          "type": "boolean",
+          "text": "When this parameter is set to true, the platform will return detailed information about each matching video clip",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "threshold": {
+          "type": "object",
+          "text": "An object that allows you to filter the results"
+        },
+        "show_detailed_score": {
+          "type": "boolean",
+          "text": "Set this parameter to true to specify that the platform should return a detailed score for each matching video clip",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "options": {
+          "type": "array",
+          "text": "An array that specifies the sources of information the platform uses when it categorizes a video",
+          "required": true
+        },
+        "conversation_option": {
+          "type": "string",
+          "text": "Specifies the type of match the platform will perform",
+          "required": true
+        },
+        "classes": {
+          "type": "array",
+          "text": "An array of objects containing the names and the definitions of entities or actions that the platform must identify",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "Use this method to classify all the videos in the specified index based on the entities or actions shown in those videos",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/classify/bulk",
+        "alias_endpoint": "/twelvelabs/v1.2/classify/bulk",
+        "api_ref": "https://docs.twelvelabs.io/reference/classify-bulk"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__classify__page_token___get": {
+      "provider_intent": "twelvelabs__v1-2__classify__page_token___get",
+      "provider_alias_intent": "/v1.2/classify/page_token",
+      "text": "Retrieve a specific page of results",
+      "category": "Classify",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page-token": {
+          "type": "string",
+          "text": "A token that identifies the page to retrieve",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "page-token": {
+          "type": "string",
+          "text": "A token that identifies the page to retrieve",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "You can use this endpoint to retrieve the rest of the pages",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/classify/{page_token}",
+        "alias_endpoint": "/twelvelabs/v1.2/classify/page_token",
+        "api_ref": "https://docs.twelvelabs.io/reference/classify-retrieve-specific-page"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__engines___get": {
+      "provider_intent": "twelvelabs__v1-2__engines___get",
+      "provider_alias_intent": "/v1.2/engines",
+      "text": "List engines",
+      "category": "Engines",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "This method lists all the engines that are available in your account",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/engines",
+        "alias_endpoint": "/twelvelabs/v1.2/engines",
+        "api_ref": "https://docs.twelvelabs.io/reference/list-engines"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__engines__engine-id___get": {
+      "provider_intent": "twelvelabs__v1-2__engines__engine-id___get",
+      "provider_alias_intent": "/v1.2/engines/engine-id",
+      "text": "Retrieve an engine",
+      "category": "Engines",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "engine-id": {
+          "type": "string",
+          "text": "The identifier of the engine to retrieve",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "This method retrieves an engine",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/engines/{engine-id}",
+        "alias_endpoint": "/twelvelabs/v1.2/engines/engine-id",
+        "api_ref": "https://docs.twelvelabs.io/reference/retrieve-engine"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__gist___post": {
+      "provider_intent": "twelvelabs__v1-2__gist___post",
+      "provider_alias_intent": "/v1.2/gist",
+      "text": "Titles, topics, or hashtags",
+      "category": "Generate text from video",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "video_id": {
+          "type": "string",
+          "text": "The unique identifier of the video for which you want to generate a gist",
+          "required": true
+        },
+        "types": {
+          "type": "array",
+          "text": "An array specifying the type of text the platform must generate",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "This endpoint generates concise overviews in the form of titles, topics, and hashtags representing the key elements or themes of a video",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/gist",
+        "alias_endpoint": "/twelvelabs/v1.2/gist",
+        "api_ref": "https://docs.twelvelabs.io/reference/generate-gist"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__summarize___post": {
+      "provider_intent": "twelvelabs__v1-2__summarize___post",
+      "provider_alias_intent": "/v1.2/summarize",
+      "text": "Summaries, chapters, or highlights",
+      "category": "Generate text from video",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "video_id": {
+          "type": "string",
+          "text": "The unique identifier of the video that you want to summarize",
+          "required": true
+        },
+        "types": {
+          "type": "string",
+          "text": "Specifies the type of summary",
+          "required": true
+        },
+        "prompt": {
+          "type": "string",
+          "text": "Use this field to provide context for the summarization task, such as the target audience, style, tone of voice, and purpose"
+        },
+        "temperature": {
+          "type": "number",
+          "text": "Controls the randomness of the text output generated by the model"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "This endpoint generates summaries, chapters, or highlights for your videos",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/summarize",
+        "alias_endpoint": "/twelvelabs/v1.2/summarize",
+        "api_ref": "https://docs.twelvelabs.io/reference/summarize"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__generate___post": {
+      "provider_intent": "twelvelabs__v1-2__generate___post",
+      "provider_alias_intent": "/v1.2/generate",
+      "text": "Open-ended texts",
+      "category": "Generate text from video",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "video_id": {
+          "type": "string",
+          "text": "The unique identifier of the video for which you wish to generate a text",
+          "required": true
+        },
+        "prompt": {
+          "type": "string",
+          "text": "A prompt that guides the model on the desired format or content",
+          "required": true
+        },
+        "temperature": {
+          "type": "number",
+          "text": "Controls the randomness of the text output generated by the model"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "This endpoint generates open-ended texts based on your videos, including but not limited to tables of content, action items, memos, and detailed analyses",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/generate",
+        "alias_endpoint": "/twelvelabs/v1.2/generate",
+        "api_ref": "https://docs.twelvelabs.io/reference/generate-text-representation"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__indexes___post": {
+      "provider_intent": "twelvelabs__v1-2__indexes___post",
+      "provider_alias_intent": "/v1.2/indexes",
+      "text": "Create an index",
+      "category": "Indexes",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "index_name": {
+          "type": "string",
+          "text": "The name of the index",
+          "required": true
+        },
+        "engines": {
+          "type": "array",
+          "text": "An array that specifies the video understanding engines",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "This method creates an index",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/indexes",
+        "alias_endpoint": "/twelvelabs/v1.2/indexes",
+        "api_ref": "https://docs.twelvelabs.io/reference/create-index"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__indexes___get": {
+      "provider_intent": "twelvelabs__v1-2__indexes___get",
+      "provider_alias_intent": "/v1.2/indexes",
+      "text": "List indexes",
+      "category": "Indexes",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "number",
+          "text": "A number that identifies the page to retrieve"
+        },
+        "page_limit": {
+          "type": "number",
+          "text": "The number of items to return on each page"
+        },
+        "sort_by": {
+          "type": "string",
+          "text": "The field to sort on"
+        },
+        "sort_option": {
+          "type": "string",
+          "text": "The sorting direction"
+        },
+        "id": {
+          "type": "string",
+          "text": "Filter by the unique identifier of an index"
+        },
+        "index_name": {
+          "type": "string",
+          "text": "Filter by the name of an inde"
+        },
+        "engine_options": {
+          "type": "string",
+          "text": "Filter by the engine options"
+        },
+        "index_options": {
+          "type": "string",
+          "text": "Filter by the indexing options"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "This method returns a list of the indexes in your account",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/indexes",
+        "alias_endpoint": "/twelvelabs/v1.2/indexes",
+        "api_ref": "https://docs.twelvelabs.io/reference/list-indexes"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__indexes__index-id___get": {
+      "provider_intent": "twelvelabs__v1-2__indexes__index-id___get",
+      "provider_alias_intent": "/v1.2/indexes/index-id",
+      "text": "Retrieve an index",
+      "category": "Indexes",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "index-id": {
+          "type": "string",
+          "text": "Unique identifier of the index to retrieve",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "index-id": {
+          "type": "string",
+          "text": "Unique identifier of the index to retrieve",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "This method retrieves details about the specified index",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/indexes/{index-id}",
+        "alias_endpoint": "/twelvelabs/v1.2/indexes/index-id",
+        "api_ref": "https://docs.twelvelabs.io/reference/retrieve-index"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__indexes__index-id___put": {
+      "provider_intent": "twelvelabs__v1-2__indexes__index-id___put",
+      "provider_alias_intent": "/v1.2/indexes/index-id",
+      "text": "Update an index",
+      "category": "Indexes",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "index-id": {
+          "type": "string",
+          "text": "Unique identifier of the index to retrieve",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "index_name": {
+          "type": "string",
+          "text": "The name of the index",
+          "required": true
+        }
+      },
+      "path": {
+        "index-id": {
+          "type": "string",
+          "text": "Unique identifier of the index to retrieve",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "This method updates the name of the specified index",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/indexes/{index-id}",
+        "alias_endpoint": "/twelvelabs/v1.2/indexes/index-id",
+        "api_ref": "https://docs.twelvelabs.io/reference/update-index"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__indexes__index-id___delete": {
+      "provider_intent": "twelvelabs__v1-2__indexes__index-id___delete",
+      "provider_alias_intent": "/v1.2/indexes/index-id",
+      "text": "Delete an index",
+      "category": "Indexes",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "index-id": {
+          "type": "string",
+          "text": "Unique identifier of the index to retrieve",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "index-id": {
+          "type": "string",
+          "text": "Unique identifier of the index to retrieve",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "This method deletes the specified index and all the videos within it",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/indexes/{index-id}",
+        "alias_endpoint": "/twelvelabs/v1.2/indexes/index-id",
+        "api_ref": "https://docs.twelvelabs.io/reference/delete-index"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__indexes__index-id__videos___get": {
+      "provider_intent": "twelvelabs__v1-2__indexes__index-id__videos___get",
+      "provider_alias_intent": "/v1.2/indexes/index-id/videos",
+      "text": "List videos",
+      "category": "Indexes/Videos",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "index-id": {
+          "type": "string",
+          "text": "The unique identifier of the index for which the API will retrieve the videos",
+          "required": true
+        },
+        "page": {
+          "type": "number",
+          "text": "A number that identifies the page to retrieve"
+        },
+        "page_limit": {
+          "type": "number",
+          "text": "The number of items to return on each page"
+        },
+        "sort_by": {
+          "type": "string",
+          "text": "The field to sort on"
+        },
+        "id": {
+          "type": "string",
+          "text": "Filter by the unique identifier of a video index"
+        },
+        "filename": {
+          "type": "string",
+          "text": "Filter by filename"
+        },
+        "duration": {
+          "type": "number",
+          "text": "Filter by duration"
+        },
+        "fps": {
+          "type": "number",
+          "text": "Filter by frames per second"
+        },
+        "width": {
+          "type": "number",
+          "text": "Filter by width"
+        },
+        "height": {
+          "type": "number",
+          "text": "Filter by height"
+        },
+        "size": {
+          "type": "number",
+          "text": "Filter by size. Expressed in bytes"
+        },
+        "created_at": {
+          "type": "string",
+          "text": "Filter by the date and time, in the RFC 3339 format, that the video indexing task was created"
+        },
+        "updated_at": {
+          "type": "string",
+          "text": "Filter by the date and time, in the RFC 3339 format, that the video indexing task was updated"
+        },
+        "indexed_at": {
+          "type": "string",
+          "text": "Filter by the date and time, in the RFC 3339 format, that the video has finished indexing"
+        },
+        "metadata": {
+          "type": "object",
+          "text": "To enable filtering by custom fields, first add metadata to your video by calling the `PUT method of the /indexes/:index-id/videos/:video-id endpoint"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "index-id": {
+          "type": "string",
+          "text": "The unique identifier of the index for which the API will retrieve the videos",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "This method returns a list of the videos in the specified index",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/indexes/{index-id}/videos",
+        "alias_endpoint": "/twelvelabs/v1.2/indexes/index-id/videos",
+        "api_ref": "https://docs.twelvelabs.io/reference/list-videos"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__indexes__index-id__videos__video-id___get": {
+      "provider_intent": "twelvelabs__v1-2__indexes__index-id__videos__video-id___get",
+      "provider_alias_intent": "/v1.2/indexes/index-id/videos/video-id",
+      "text": "Retrieve video information",
+      "category": "Indexes/Videos",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "index-id": {
+          "type": "string",
+          "text": "The unique identifier of the index to which the video has been uploaded",
+          "required": true
+        },
+        "video-id": {
+          "type": "string",
+          "text": "The unique identifier of the video to update",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "index-id": {
+          "type": "string",
+          "text": "The unique identifier of the index to which the video has been uploaded",
+          "required": true
+        },
+        "video-id": {
+          "type": "string",
+          "text": "The unique identifier of the video to update",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "This method retrieves information about the specified video",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/indexes/{index-id}/videos/{video-id}",
+        "alias_endpoint": "/twelvelabs/v1.2/indexes/index-id/videos/video-id",
+        "api_ref": "https://docs.twelvelabs.io/reference/retrieve-video-information"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__indexes__index-id__videos__video-id___put": {
+      "provider_intent": "twelvelabs__v1-2__indexes__index-id__videos__video-id___put",
+      "provider_alias_intent": "/v1.2/indexes/index-id/videos/video-id",
+      "text": "Update video information",
+      "category": "Indexes/Videos",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "index-id": {
+          "type": "string",
+          "text": "The unique identifier of the index to which the video has been uploaded",
+          "required": true
+        },
+        "video-id": {
+          "type": "string",
+          "text": "The unique identifier of the video to update",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "video_title": {
+          "type": "string",
+          "text": "Specifies the new title of the video"
+        },
+        "metadata": {
+          "type": "object",
+          "text": "Metadata that helps you categorize your videos"
+        }
+      },
+      "path": {
+        "index-id": {
+          "type": "string",
+          "text": "The unique identifier of the index to which the video has been uploaded",
+          "required": true
+        },
+        "video-id": {
+          "type": "string",
+          "text": "The unique identifier of the video to update",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "Use this method to update the title and the metadata of a video",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/indexes/{index-id}/videos/{video-id}",
+        "alias_endpoint": "/twelvelabs/v1.2/indexes/index-id/videos/video-id",
+        "api_ref": "https://docs.twelvelabs.io/reference/update-video-information"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__indexes__index-id__videos__video-id___delete": {
+      "provider_intent": "twelvelabs__v1-2__indexes__index-id__videos__video-id___delete",
+      "provider_alias_intent": "/v1.2/indexes/index-id/videos/video-id",
+      "text": "Delete video information",
+      "category": "Indexes/Videos",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "index-id": {
+          "type": "string",
+          "text": "The unique identifier of the index to which the video has been uploaded",
+          "required": true
+        },
+        "video-id": {
+          "type": "string",
+          "text": "The unique identifier of the video to update",
+          "required": true
+        },
+        "x-api-key": {
+          "type": "string",
+          "text": "Your API key",
+          "required": true
+        },
+        "Content-Type": {
+          "type": "string",
+          "text": "Must be set to application/json",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "index-id": {
+          "type": "string",
+          "text": "The unique identifier of the index to which the video has been uploaded",
+          "required": true
+        },
+        "video-id": {
+          "type": "string",
+          "text": "The unique identifier of the video to update",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "This method deletes all the information about the specified video",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/indexes/{index-id}/videos/{video-id}",
+        "alias_endpoint": "/twelvelabs/v1.2/indexes/index-id/videos/video-id",
+        "api_ref": "https://docs.twelvelabs.io/reference/delete-video-information"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__indexes__index-id__videos__video-id__transcription___get": {
+      "provider_intent": "twelvelabs__v1-2__indexes__index-id__videos__video-id__transcription___get",
+      "provider_alias_intent": "/v1.2/indexes/index-id/videos/video-id/transcription",
+      "text": "Retrieve a transcription",
+      "category": "Indexes/Videos",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "index-id": {
+          "type": "string",
+          "text": "The unique identifier of the index to which the video has been uploaded",
+          "required": true
+        },
+        "video-id": {
+          "type": "string",
+          "text": "The unique identifier of the video to update",
+          "required": true
+        },
+        "start": {
+          "type": "number",
+          "text": "The start of the time range (in seconds) to retrieve transcription for"
+        },
+        "end": {
+          "type": "number",
+          "text": "The end of the time range (in seconds) to retrieve transcription for"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "index-id": {
+          "type": "string",
+          "text": "The unique identifier of the index to which the video has been uploaded",
+          "required": true
+        },
+        "video-id": {
+          "type": "string",
+          "text": "The unique identifier of the video to update",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "This method retrieves a transcription of the spoken words",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/indexes/{index-id}/videos/{video-id}/transcription",
+        "alias_endpoint": "/twelvelabs/v1.2/indexes/index-id/videos/video-id/transcription",
+        "api_ref": "https://docs.twelvelabs.io/reference/retrieve-transcription"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__indexes__index-id__videos__video-id__text-in-video___get": {
+      "provider_intent": "twelvelabs__v1-2__indexes__index-id__videos__video-id__text-in-video___get",
+      "provider_alias_intent": "/v1.2/indexes/index-id/videos/video-id/text-in-video",
+      "text": "Retrieve text recognized in video (OCR)",
+      "category": "Indexes/Videos",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "index-id": {
+          "type": "string",
+          "text": "The unique identifier of the index to which the video has been uploaded",
+          "required": true
+        },
+        "video-id": {
+          "type": "string",
+          "text": "The unique identifier of the video to update",
+          "required": true
+        },
+        "start": {
+          "type": "number",
+          "text": "The start of the time range (in seconds) to retrieve transcription for"
+        },
+        "end": {
+          "type": "number",
+          "text": "The end of the time range (in seconds) to retrieve transcription for"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "index-id": {
+          "type": "string",
+          "text": "The unique identifier of the index to which the video has been uploaded",
+          "required": true
+        },
+        "video-id": {
+          "type": "string",
+          "text": "The unique identifier of the video to update",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "This method retrieves text recognized in video (OCR)",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/indexes/{index-id}/videos/{video-id}/text-in-video",
+        "alias_endpoint": "/twelvelabs/v1.2/indexes/index-id/videos/video-id/text-in-video",
+        "api_ref": "https://docs.twelvelabs.io/reference/retrieve-ocr"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__indexes__index-id__videos__video-id__logo___get": {
+      "provider_intent": "twelvelabs__v1-2__indexes__index-id__videos__video-id__logo___get",
+      "provider_alias_intent": "/v1.2/indexes/index-id/videos/video-id/logo",
+      "text": "Extract logos",
+      "category": "Indexes/Videos",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "index-id": {
+          "type": "string",
+          "text": "The unique identifier of the index to which the video has been uploaded",
+          "required": true
+        },
+        "video-id": {
+          "type": "string",
+          "text": "The unique identifier of the video to update",
+          "required": true
+        },
+        "start": {
+          "type": "number",
+          "text": "The start of the time range (in seconds) to retrieve transcription for"
+        },
+        "end": {
+          "type": "number",
+          "text": "The end of the time range (in seconds) to retrieve transcription for"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "index-id": {
+          "type": "string",
+          "text": "The unique identifier of the index to which the video has been uploaded",
+          "required": true
+        },
+        "video-id": {
+          "type": "string",
+          "text": "The unique identifier of the video to update",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "Use this method to identify the presence of brand logos within your videos",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/indexes/{index-id}/videos/{video-id}/logo",
+        "alias_endpoint": "/twelvelabs/v1.2/indexes/index-id/videos/video-id/logo",
+        "api_ref": "https://docs.twelvelabs.io/reference/identify-logos"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__indexes__index_id__videos__video_id__thumbnail___get": {
+      "provider_intent": "twelvelabs__v1-2__indexes__index_id__videos__video_id__thumbnail___get",
+      "provider_alias_intent": "/v1.2/indexes/index_id/videos/video_id/thumbnail",
+      "text": "Retrieve a thumbnail",
+      "category": "Indexes/Videos",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "index-id": {
+          "type": "string",
+          "text": "The unique identifier of the index to which the video has been uploaded",
+          "required": true
+        },
+        "video-id": {
+          "type": "string",
+          "text": "The unique identifier of the video to update",
+          "required": true
+        },
+        "time": {
+          "type": "number",
+          "text": "Specifies the time, in seconds, at which the platform must retrieve the thumbnai"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "index-id": {
+          "type": "string",
+          "text": "The unique identifier of the index to which the video has been uploaded",
+          "required": true
+        },
+        "video-id": {
+          "type": "string",
+          "text": "The unique identifier of the video to update",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "To use this feature, you must enable thumbnail generation for the index to which the video has been uploaded",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/indexes/{index_id}/videos/{video_id}/thumbnail",
+        "alias_endpoint": "/twelvelabs/v1.2/indexes/index_id/videos/video_id/thumbnail",
+        "api_ref": "https://docs.twelvelabs.io/reference/retrieve-thumbnail"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__tasks___post": {
+      "provider_intent": "twelvelabs__v1-2__tasks___post",
+      "provider_alias_intent": "/v1.2/tasks",
+      "text": "Create a video indexing task",
+      "category": "Tasks",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "index_id": {
+          "type": "string",
+          "text": "The unique identifier of the index to which the video is being uploaded"
+        },
+        "provide_transcription": {
+          "type": "boolean",
+          "text": "A boolean value specifying whether or not you provide a transcription for this video",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "language": {
+          "type": "string",
+          "text": "Must be set to en"
+        },
+        "video_file": {
+          "type": "array",
+          "text": "Specify this parameter to upload a video from your local file system"
+        },
+        "transcription_file": {
+          "type": "array",
+          "text": "When the provide_transcription parameter is set to true, and you want to provide a transcription from the local file system, use the transcription_file parameter to pass your transcription file to the platform"
+        },
+        "video_url": {
+          "type": "string",
+          "text": "Specify this parameter to upload a video from a publicly accessible URL"
+        },
+        "transcription_url": {
+          "type": "string",
+          "text": "When the provide_transcription parameter is set to true, and you want to provide a transcription from a publicly accessible URL"
+        },
+        "disable_video_stream": {
+          "type": "boolean",
+          "text": "This parameter indicates if the platform stores the video for streaming. When set to false, the platform stores the video, and you can retrieve its URL by calling the GET",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "Use this method to create a new video indexing task that uploads a video to the platform and makes it searchable",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/tasks",
+        "alias_endpoint": "/twelvelabs/v1.2/tasks",
+        "api_ref": "https://docs.twelvelabs.io/reference/create-video-indexing-task"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__tasks___get": {
+      "provider_intent": "twelvelabs__v1-2__tasks___get",
+      "provider_alias_intent": "/v1.2/tasks",
+      "text": "List video indexing tasks",
+      "category": "Tasks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "number",
+          "text": "A number that identifies the page to retrieve"
+        },
+        "page_limit": {
+          "type": "number",
+          "text": "The number of items to return on each page"
+        },
+        "sort_by": {
+          "type": "string",
+          "text": "The field to sort on"
+        },
+        "sort_option": {
+          "type": "string",
+          "text": "The sorting direction"
+        },
+        "id": {
+          "type": "string",
+          "text": "Filter by the unique identifier of a video indexing task"
+        },
+        "index_id": {
+          "type": "string",
+          "text": "Filter by the unique identifier of an index"
+        },
+        "filename": {
+          "type": "string",
+          "text": "Filter by filename"
+        },
+        "duration": {
+          "type": "number",
+          "text": "Filter by duration"
+        },
+        "width": {
+          "type": "number",
+          "text": "Filter by width"
+        },
+        "height": {
+          "type": "number",
+          "text": "Filter by height"
+        },
+        "created_at": {
+          "type": "string",
+          "text": "Filter by the date and time, in the RFC 3339 format, that the video indexing task was created"
+        },
+        "updated_at": {
+          "type": "string",
+          "text": "Filter by the date and time, in the RFC 3339 format, that the video indexing task was updated"
+        },
+        "estimated_time": {
+          "type": "string",
+          "text": "Filter by the date and time, in the RFC 3339 format, that the video indexing task is ready to be searched"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "This method returns a list of the video indexing tasks in your account",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/tasks",
+        "alias_endpoint": "/twelvelabs/v1.2/tasks",
+        "api_ref": "https://docs.twelvelabs.io/reference/list-video-indexing-tasks"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__tasks__task_id___get": {
+      "provider_intent": "twelvelabs__v1-2__tasks__task_id___get",
+      "provider_alias_intent": "/v1.2/tasks/task_id",
+      "text": "Retrieve a video indexing task",
+      "category": "Tasks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "task_id": {
+          "type": "string",
+          "text": "The unique identifier of the video indexing task to retrieve",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "task_id": {
+          "type": "string",
+          "text": "The unique identifier of the video indexing task to retrieve",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "This method retrieves a video indexing task",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/tasks/{task_id}",
+        "alias_endpoint": "/twelvelabs/v1.2/tasks/task_id",
+        "api_ref": "https://docs.twelvelabs.io/reference/retrieve-video-indexing-task"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__tasks__task_id___delete": {
+      "provider_intent": "twelvelabs__v1-2__tasks__task_id___delete",
+      "provider_alias_intent": "/v1.2/tasks/task_id",
+      "text": "Delete a video indexing task",
+      "category": "Tasks",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "task_id": {
+          "type": "string",
+          "text": "The unique identifier of the video indexing task to retrieve",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "task_id": {
+          "type": "string",
+          "text": "The unique identifier of the video indexing task to retrieve",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "This action cannot be undone",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/tasks/{task_id}",
+        "alias_endpoint": "/twelvelabs/v1.2/tasks/task_id",
+        "api_ref": "https://docs.twelvelabs.io/reference/delete-video-indexing-task"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__tasks__status___get": {
+      "provider_intent": "twelvelabs__v1-2__tasks__status___get",
+      "provider_alias_intent": "/v1.2/tasks/status",
+      "text": "Retrieve tasks by status",
+      "category": "Tasks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "index_id": {
+          "type": "string",
+          "text": "The unique identifier of the index for which you want to retrieve the number video indexing tasks in each status",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "This method retrieves the number video indexing tasks in each status for the specified index",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/tasks/status",
+        "alias_endpoint": "/twelvelabs/v1.2/tasks/status",
+        "api_ref": "https://docs.twelvelabs.io/reference/video-indexing-tasks-by-status"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__tasks__external-provider___post": {
+      "provider_intent": "twelvelabs__v1-2__tasks__external-provider___post",
+      "provider_alias_intent": "/v1.2/tasks/external-provider",
+      "text": "Upload videos from external providers",
+      "category": "Tasks",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "index_id": {
+          "type": "string",
+          "text": "The unique identifier of the index to which the video is being uploaded",
+          "required": true
+        },
+        "url": {
+          "type": "string",
+          "text": "The URL of the video that you wish to upload",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "Use this endpoint to upload videos from external providers",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/tasks/external-provider",
+        "alias_endpoint": "/twelvelabs/v1.2/tasks/external-provider",
+        "api_ref": "https://docs.twelvelabs.io/reference/upload-external-provider"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__tasks__transfers___post": {
+      "provider_intent": "twelvelabs__v1-2__tasks__transfers___post",
+      "provider_alias_intent": "/v1.2/tasks/transfers",
+      "text": "Make a cloud-to-cloud transfer",
+      "category": "Tasks/Transfers",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "file": {
+          "type": "array",
+          "text": "A JSON file that contains a list. Each element of the list is an object representing a file to be uploaded and indexed"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "This method makes a cloud-to-cloud transfer",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/tasks/transfers",
+        "alias_endpoint": "/twelvelabs/v1.2/tasks/transfers",
+        "api_ref": "https://docs.twelvelabs.io/reference/cloud-to-cloud-transfer"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__embed___post": {
+      "provider_intent": "twelvelabs__v1-2__embed___post",
+      "provider_alias_intent": "/v1.2/embed",
+      "text": "Create text embeddings",
+      "category": "Text embeddings",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "engine_name": {
+          "type": "string",
+          "text": "The name of the engine you want to use",
+          "required": true
+        },
+        "text": {
+          "type": "string",
+          "text": "The text for which you want to create an embedding",
+          "required": true
+        },
+        "text_truncate": {
+          "type": "string",
+          "text": "Specifies how the platform truncates text that exceeds 77 tokens to fit the maximum length allowed for an embedding"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "This endpoint creates text embeddings",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/embed",
+        "alias_endpoint": "/twelvelabs/v1.2/embed",
+        "api_ref": "https://docs.twelvelabs.io/reference/create-text-embedding"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__search___post": {
+      "provider_intent": "twelvelabs__v1-2__search___post",
+      "provider_alias_intent": "/v1.2/search",
+      "text": "Make a text-to-video search request",
+      "category": "Text-to-video search",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "query": {
+          "type": "string",
+          "text": "Your search query",
+          "required": true
+        },
+        "index_id": {
+          "type": "string",
+          "text": "The unique identifier of the index to search",
+          "required": true
+        },
+        "search_options": {
+          "type": "array",
+          "text": "An array that specifies the sources of information the platform uses when performing a search. For details",
+          "required": true
+        },
+        "adjust_confidence_level": {
+          "type": "float",
+          "text": "This parameter specifies the strictness of the thresholds for assigning the high, medium, or low confidence levels to search results"
+        },
+        "group_by": {
+          "type": "string",
+          "text": "Use this parameter to group or ungroup items in a response"
+        },
+        "threshold": {
+          "type": "string",
+          "text": "Use this parameter to filter on the level of confidence that the results match your query"
+        },
+        "sort_option": {
+          "type": "string",
+          "text": "Use this parameter to specify the sort order for the response"
+        },
+        "operator": {
+          "type": "string",
+          "text": "When you perform a search specifying multiple sources of information, you can use the this parameter to broaden or narrow your search"
+        },
+        "conversation_option": {
+          "type": "string",
+          "text": "Specifies the type of match the platform will perform"
+        },
+        "page_limit": {
+          "type": "number",
+          "text": "The number of items to return on each page"
+        },
+        "filter": {
+          "type": "object",
+          "text": "For string fields, the filter parameter returns only the results that equal the value you specify"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "This endpoint will be deprecated",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/search",
+        "alias_endpoint": "/twelvelabs/v1.2/search",
+        "api_ref": "https://docs.twelvelabs.io/reference/make-search-request"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__search__combined___post": {
+      "provider_intent": "twelvelabs__v1-2__search__combined___post",
+      "provider_alias_intent": "/v1.2/search/combined",
+      "text": "Make a combined search request",
+      "category": "Text-to-video search",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "index_id": {
+          "type": "string",
+          "text": "The unique identifier of the index to search",
+          "required": true
+        },
+        "search_options": {
+          "type": "array",
+          "text": "An array that specifies the sources of information the platform uses when performing a search",
+          "required": true
+        },
+        "conversation_option": {
+          "type": "string",
+          "text": "Specifies the type of match the platform will perform"
+        },
+        "adjust_confidence_level": {
+          "type": "number",
+          "text": "This parameter specifies the strictness of the thresholds for assigning the high, medium, or low confidence levels to search results"
+        },
+        "query": {
+          "type": "object",
+          "text": "Use the query parameter to build combined queries"
+        },
+        "filter": {
+          "type": "object",
+          "text": "Use this parameter to filter your search results by metadata"
+        },
+        "page_limit": {
+          "type": "number",
+          "text": "The number of items to return on each page"
+        },
+        "threshold": {
+          "type": "string",
+          "text": "Use this parameter to filter on the level of confidence that the results match your query"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "Use this method to search for relevant matches in an index using combined queries",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/search/combined",
+        "alias_endpoint": "/twelvelabs/v1.2/search/combined",
+        "api_ref": "https://docs.twelvelabs.io/reference/combined-queries-make-search-request"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__search__page-token___get": {
+      "provider_intent": "twelvelabs__v1-2__search__page-token___get",
+      "provider_alias_intent": "/v1.2/search/page-token",
+      "text": "Retrieve a specific page of search results",
+      "category": "Text-to-video search",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page-token": {
+          "type": "string",
+          "text": "A token that identifies the page to retrieve",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "page-token": {
+          "type": "string",
+          "text": "A token that identifies the page to retrieve",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "This endpoint will be deprecated",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/search/{page-token}",
+        "alias_endpoint": "/twelvelabs/v1.2/search/page-token",
+        "api_ref": "https://docs.twelvelabs.io/reference/search-retrieve-specific-page"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__search__combined__page-token___get": {
+      "provider_intent": "twelvelabs__v1-2__search__combined__page-token___get",
+      "provider_alias_intent": "/v1.2/search/combined/page-token",
+      "text": "Retrieve a specific page of combined search results",
+      "category": "Text-to-video search",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page-token": {
+          "type": "string",
+          "text": "A token that identifies the page to retrieve",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "page-token": {
+          "type": "string",
+          "text": "A token that identifies the page to retrieve",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "Use this endpoint to retrieve a specific page of search results",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/search/combined/{page-token}",
+        "alias_endpoint": "/twelvelabs/v1.2/search/combined/page-token",
+        "api_ref": "https://docs.twelvelabs.io/reference/combined-queries-retrieve-specific-page"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__embed__tasks___post": {
+      "provider_intent": "twelvelabs__v1-2__embed__tasks___post",
+      "provider_alias_intent": "/v1.2/embed/tasks",
+      "text": "Create a video embedding task",
+      "category": "Video embeddings",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "engine_name": {
+          "type": "string",
+          "text": "The name of the engine you want to use",
+          "required": true
+        },
+        "video_file": {
+          "type": "array",
+          "text": "Specify this parameter to upload a video from your local file system"
+        },
+        "video_url": {
+          "type": "string",
+          "text": "Specify this parameter to upload a video from a publicly accessible URL"
+        },
+        "video_start_offset_sec": {
+          "type": "number",
+          "text": "The start offset in seconds from the beginning of the video where processing should begin"
+        },
+        "video_end_offset_sec": {
+          "type": "number",
+          "text": "The end offset in seconds from the beginning of the video where processing should stop"
+        },
+        "video_clip_length": {
+          "type": "number",
+          "text": "The desired duration in seconds for each clip for which the platform generates an embedding"
+        },
+        "video_embedding_scope": {
+          "type": "string",
+          "text": "Defines the scope of the video embedding generation"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "This method creates a new video embedding task",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/embed/tasks",
+        "alias_endpoint": "/twelvelabs/v1.2/embed/tasks",
+        "api_ref": "https://docs.twelvelabs.io/reference/create-video-embeding-task"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__embed__tasks__task_id__status___get": {
+      "provider_intent": "twelvelabs__v1-2__embed__tasks__task_id__status___get",
+      "provider_alias_intent": "/v1.2/embed/tasks/task_id/status",
+      "text": "Retrieve the status of a video embedding task",
+      "category": "Video embeddings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "task_id": {
+          "type": "string",
+          "text": "The unique identifier of your video embedding task",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "task_id": {
+          "type": "string",
+          "text": "The unique identifier of your video embedding task",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "This method retrieves the status of a video embedding task",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/embed/tasks/{task_id}/status",
+        "alias_endpoint": "/twelvelabs/v1.2/embed/tasks/task_id/status",
+        "api_ref": "https://docs.twelvelabs.io/reference/retrieve-video-embeding-task"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "twelvelabs__v1-2__embed__tasks__task_id___get": {
+      "provider_intent": "twelvelabs__v1-2__embed__tasks__task_id___get",
+      "provider_alias_intent": "/v1.2/embed/tasks/task_id",
+      "text": "Retrieve video embeddings",
+      "category": "Video embeddings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "task_id": {
+          "type": "string",
+          "text": "The unique identifier of your video embedding task",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "task_id": {
+          "type": "string",
+          "text": "The unique identifier of your video embedding task",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1.2",
+        "auth": [],
+        "description": "This method retrieves embeddings for a specific video embedding task",
+        "rate_limit": [],
+        "api_endpoint": "https://api.twelvelabs.io/v1.2/embed/tasks/{task_id}",
+        "alias_endpoint": "/twelvelabs/v1.2/embed/tasks/task_id",
+        "api_ref": "https://docs.twelvelabs.io/reference/retrieve-video-embeding"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

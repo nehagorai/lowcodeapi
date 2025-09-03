@@ -1,0 +1,3 @@
+{
+    "monolith"          : ["core", "oauth", "openapi", "apiUnified", "apiUtilities", "apiExtra", "api"]
+}

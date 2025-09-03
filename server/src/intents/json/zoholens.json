@@ -1,0 +1,91 @@
+{
+  "app": {
+    "title": "zoholens API",
+    "description": "",
+    "api_base": "/zoholens",
+    "copyright": "",
+    "copyright_year": "",
+    "contact_email": ""
+  },
+  "category": {
+    "All": ""
+  },
+  "routes": {
+    "create_a_session": {
+      "provider_intent": "create_a_session",
+      "provider_alias_intent": "/api/v2/lens_session",
+      "text": "Create a session",
+      "category": "Session",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Create a session",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/lens_session",
+        "alias_endpoint": "/zoholens/api/v2/lens_session",
+        "api_ref": "https://www.zoho.com/lens/resources/api/session/create-a-session.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoLens.sessionapi.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_user_info": {
+      "provider_intent": "get_user_info",
+      "provider_alias_intent": "/api/v2/user",
+      "text": "Get user info",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Get user info",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/user",
+        "alias_endpoint": "/zoholens/api/v2/user",
+        "api_ref": "https://www.zoho.com/lens/resources/api/users/userinfo.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    }
+  }
+}

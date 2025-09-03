@@ -1,0 +1,848 @@
+{
+  "routes": {
+    "zohozeptomail__v1-1__email__batch___post": {
+      "provider_intent": "zohozeptomail__v1-1__email__batch___post",
+      "provider_alias_intent": "/v1.1/email/batch",
+      "text": "Send a batch of transactional emails",
+      "category": "Batch Email Sending",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "from": {
+          "type": "object",
+          "text": "Form data",
+          "required": true
+        },
+        "to": {
+          "type": "array",
+          "text": "To",
+          "required": true
+        },
+        "subject": {
+          "type": "string",
+          "text": "Subject",
+          "required": true
+        },
+        "htmlbody": {
+          "type": "string",
+          "text": "Htmlbody"
+        },
+        "textbody": {
+          "type": "string",
+          "text": "Textbody"
+        },
+        "cc": {
+          "type": "array",
+          "text": "Cc"
+        },
+        "bcc": {
+          "type": "array",
+          "text": "Bcc"
+        },
+        "track_clicks": {
+          "type": "boolean",
+          "text": "Track Clicks",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "track_opens": {
+          "type": "boolean",
+          "text": "Track Opens",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "client_reference": {
+          "type": "string",
+          "text": "Client Reference"
+        },
+        "mime_headers": {
+          "type": "object",
+          "text": "Mime Headers"
+        },
+        "attachment": {
+          "type": "array",
+          "text": "Attachment"
+        },
+        "inline_images": {
+          "type": "array",
+          "text": "Inline Images"
+        },
+        "cid": {
+          "type": "string",
+          "text": "Cid"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "The API is used to send a batch of transactional emails",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1.1/email/batch",
+        "alias_endpoint": "/zohozeptomail/v1.1/email/batch",
+        "api_ref": "https://www.zoho.com/zeptomail/help/api/batch-email-sending.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-enczapikey",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/v1.1/email/batch",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohozeptomail__v1-1__email___post": {
+      "provider_intent": "zohozeptomail__v1-1__email___post",
+      "provider_alias_intent": "/v1.1/email",
+      "text": "Send transactional emails",
+      "category": "Email Sending API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "bounce_address": {
+          "type": "string",
+          "text": "Bounce Address"
+        },
+        "from": {
+          "type": "object",
+          "text": "Form Data",
+          "required": true,
+          "examples": {
+            "address": "",
+            "name": ""
+          }
+        },
+        "to": {
+          "type": "array",
+          "text": "To",
+          "required": true,
+          "examples": [
+            {
+              "email_address": {
+                "address": "",
+                "name": ""
+              }
+            }
+          ]
+        },
+        "reply_to": {
+          "type": "array",
+          "text": "Reply To",
+          "examples": []
+        },
+        "subject": {
+          "type": "string",
+          "text": "Subject",
+          "required": true,
+          "examples": ""
+        },
+        "textbody": {
+          "type": "string",
+          "text": "Text body",
+          "examples": ""
+        },
+        "htmlbody": {
+          "type": "string",
+          "text": "Html body",
+          "examples": ""
+        },
+        "cc": {
+          "type": "array",
+          "text": "CC",
+          "examples": []
+        },
+        "bcc": {
+          "type": "array",
+          "text": "Bcc",
+          "examples": []
+        },
+        "track_clicks": {
+          "type": "boolean",
+          "text": "Track Clicks",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "track_opens": {
+          "type": "boolean",
+          "text": "Track Opens",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "client_reference": {
+          "type": "string",
+          "text": "Client Reference"
+        },
+        "mime_headers": {
+          "type": "object",
+          "text": "Mime Headers"
+        },
+        "attachments": {
+          "type": "array",
+          "text": "Attachments"
+        },
+        "name": {
+          "type": "string",
+          "text": "Name"
+        },
+        "inline_images": {
+          "type": "array",
+          "text": "Inline Images"
+        },
+        "cid": {
+          "type": "string",
+          "text": "Cid"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "The API is used to send transactional emails",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1.1/email",
+        "alias_endpoint": "/zohozeptomail/v1.1/email",
+        "api_ref": "https://www.zoho.com/zeptomail/help/api/email-sending.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-enczapikey",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/v1.1/email",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohozeptomail__v1-1__files___post": {
+      "provider_intent": "zohozeptomail__v1-1__files___post",
+      "provider_alias_intent": "/v1.1/files",
+      "text": "Upload files to File Cache",
+      "category": "File Cache Upload API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Name of the file you are uploading to File Cache"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "The API is used to upload files to File Cache",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1.1/files",
+        "alias_endpoint": "/zohozeptomail/v1.1/files",
+        "api_ref": "https://www.zoho.com/zeptomail/help/api/file-upload.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-enczapikey",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/v1.1/files",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohozeptomail__v1-1__email__template__batch___post": {
+      "provider_intent": "zohozeptomail__v1-1__email__template__batch___post",
+      "provider_alias_intent": "/v1.1/email/template/batch",
+      "text": "Send a batch of emails using the template",
+      "category": "Templates API - Batch Emails",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "template_key": {
+          "type": "string",
+          "text": "Template key",
+          "required": true
+        },
+        "bounce_address": {
+          "type": "string",
+          "text": "Bounce Address"
+        },
+        "from": {
+          "type": "object",
+          "text": "Form Data",
+          "required": true
+        },
+        "to": {
+          "type": "array",
+          "text": "To",
+          "required": true
+        },
+        "reply_to": {
+          "type": "array",
+          "text": "Reply To"
+        },
+        "track_clicks": {
+          "type": "boolean",
+          "text": "Track Clicks",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "track_opens": {
+          "type": "boolean",
+          "text": "Track Opens",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "client_reference": {
+          "type": "string",
+          "text": "Client Reference"
+        },
+        "mime_headers": {
+          "type": "object",
+          "text": "Mime Headers"
+        },
+        "attachments": {
+          "type": "array",
+          "text": "Attachments"
+        },
+        "cid": {
+          "type": "string",
+          "text": "Cid"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "The API is used to send a batch of transactional emails using the template",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1.1/email/template/batch",
+        "alias_endpoint": "/zohozeptomail/v1.1/email/template/batch",
+        "api_ref": "https://www.zoho.com/zeptomail/help/api/batch-email-templates.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-enczapikey",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/v1.1/email/template/batch",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohozeptomail__v1-1__mailagents__mailagent_alias__templates___post": {
+      "provider_intent": "zohozeptomail__v1-1__mailagents__mailagent_alias__templates___post",
+      "provider_alias_intent": "/v1.1/mailagents/mailagent_alias/templates",
+      "text": "Adding email templates",
+      "category": "Templates API - Batch Emails",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "mailagent_alias": {
+          "type": "string",
+          "text": "It is available in the Setup info section of your Mail Agent",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "template_name": {
+          "type": "string",
+          "text": "Name of the template",
+          "required": true
+        },
+        "template_alias": {
+          "type": "string",
+          "text": "Template Alias"
+        },
+        "subject": {
+          "type": "string",
+          "text": "Subject",
+          "required": true
+        },
+        "htmlbody": {
+          "type": "string",
+          "text": "Html body",
+          "required": true
+        },
+        "textbody": {
+          "type": "string",
+          "text": "Text body"
+        }
+      },
+      "path": {
+        "mailagent_alias": {
+          "type": "string",
+          "text": "It is available in the Setup info section of your Mail Agent",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "This API can be used to add an email template",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1.1/mailagents/{mailagent_alias}/templates",
+        "alias_endpoint": "/zohozeptomail/v1.1/mailagents/mailagent_alias/templates",
+        "api_ref": "https://www.zoho.com/zeptomail/help/api/add-template.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-enczapikey",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "Zeptomail.MailTemplates.All,\nZeptomail.MailTemplates.CREATE",
+      "api_endpoint_src": "{endpoint}/v1.1/mailagents/{mailagent-alias}/templates",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohozeptomail__v1-1__mailagents__mailagent_alias__templates__template_key___put": {
+      "provider_intent": "zohozeptomail__v1-1__mailagents__mailagent_alias__templates__template_key___put",
+      "provider_alias_intent": "/v1.1/mailagents/mailagent_alias/templates/template_key",
+      "text": "Update email template",
+      "category": "Templates API - Batch Emails",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "mailagent_alias": {
+          "type": "string",
+          "text": "It is available in the Setup info section of your Mail Agent",
+          "required": true
+        },
+        "template_key": {
+          "type": "string",
+          "text": "Unique key for the template",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "template_name": {
+          "type": "string",
+          "text": "Name of the template",
+          "required": true
+        },
+        "template_alias": {
+          "type": "string",
+          "text": "Template Alias"
+        },
+        "subject": {
+          "type": "string",
+          "text": "Subject",
+          "required": true
+        },
+        "htmlbody": {
+          "type": "string",
+          "text": "Htmlbody",
+          "required": true
+        },
+        "textbody": {
+          "type": "string",
+          "text": "Textbody"
+        }
+      },
+      "path": {
+        "mailagent_alias": {
+          "type": "string",
+          "text": "It is available in the Setup info section of your Mail Agent",
+          "required": true
+        },
+        "template_key": {
+          "type": "string",
+          "text": "Unique key for the template",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "This API is used to edit your existing templates",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1.1/mailagents/{mailagent_alias}/templates/{template_key}",
+        "alias_endpoint": "/zohozeptomail/v1.1/mailagents/mailagent_alias/templates/template_key",
+        "api_ref": "https://www.zoho.com/zeptomail/help/api/update-template.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-enczapikey",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "Zeptomail.MailTemplates.All,\nZeptomail.MailTemplates.UPDATE",
+      "api_endpoint_src": "{endpoint}/v1.1/mailagents/{mailagent-alias}/templates/{template-key}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohozeptomail__v1-1__mailagents__mailagent_alias__templatestemplate_key___get": {
+      "provider_intent": "zohozeptomail__v1-1__mailagents__mailagent_alias__templatestemplate_key___get",
+      "provider_alias_intent": "/v1.1/mailagents/mailagent_alias/templatestemplate_key",
+      "text": "Get email templates",
+      "category": "Templates API - Batch Emails",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "mailagent_alias": {
+          "type": "string",
+          "text": "It is available in the Setup info section of your Mail Agent",
+          "required": true
+        },
+        "template_key": {
+          "type": "string",
+          "text": "Unique key for the template",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "mailagent_alias": {
+          "type": "string",
+          "text": "It is available in the Setup info section of your Mail Agent",
+          "required": true
+        },
+        "template_key": {
+          "type": "string",
+          "text": "Unique key for the template",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "This API is used to fetch a particular email template",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1.1/mailagents/{mailagent_alias}/templates{template_key}",
+        "alias_endpoint": "/zohozeptomail/v1.1/mailagents/mailagent_alias/templatestemplate_key",
+        "api_ref": "https://www.zoho.com/zeptomail/help/api/get-template.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-enczapikey",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "Zeptomail.MailTemplates.All,\nZeptomail.MailTemplates.READ",
+      "api_endpoint_src": "{endpoint}/v1.1/mailagents/{mailagent-alias}/templates{template-key}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohozeptomail__v1-1__mailagents__mailagent_alias__templates___get": {
+      "provider_intent": "zohozeptomail__v1-1__mailagents__mailagent_alias__templates___get",
+      "provider_alias_intent": "/v1.1/mailagents/mailagent_alias/templates",
+      "text": "List email templates",
+      "category": "Templates API - Batch Emails",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "mailagent_alias": {
+          "type": "string",
+          "text": "It is available in the Setup info section of your Mail Agent",
+          "required": true
+        },
+        "offset": {
+          "type": "number",
+          "text": "Offset"
+        },
+        "limit": {
+          "type": "number",
+          "text": "Limit"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "mailagent_alias": {
+          "type": "string",
+          "text": "It is available in the Setup info section of your Mail Agent",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "You can use this API to list the required number of email templates",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1.1/mailagents/{mailagent_alias}/templates",
+        "alias_endpoint": "/zohozeptomail/v1.1/mailagents/mailagent_alias/templates",
+        "api_ref": "https://www.zoho.com/zeptomail/help/api/list-template.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-enczapikey",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "Zeptomail.MailTemplates.All,\nZeptomail.MailTemplates.READ",
+      "api_endpoint_src": "{endpoint}/v1.1/mailagents/{mailagent-alias}/templates",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohozeptomail__v1-1__mailagents__mailagent_alias__templatestemplate_key___delete": {
+      "provider_intent": "zohozeptomail__v1-1__mailagents__mailagent_alias__templatestemplate_key___delete",
+      "provider_alias_intent": "/v1.1/mailagents/mailagent_alias/templatestemplate_key",
+      "text": "Delete template",
+      "category": "Templates API - Batch Emails",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "mailagent_alias": {
+          "type": "string",
+          "text": "It is available in the Setup info section of your Mail Agent",
+          "required": true
+        },
+        "template_key": {
+          "type": "string",
+          "text": "Unique key for the template",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "mailagent_alias": {
+          "type": "string",
+          "text": "It is available in the Setup info section of your Mail Agent",
+          "required": true
+        },
+        "template_key": {
+          "type": "string",
+          "text": "Unique key for the template",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "This API can be used to delete a template using template key.",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1.1/mailagents/{mailagent_alias}/templates{template_key}",
+        "alias_endpoint": "/zohozeptomail/v1.1/mailagents/mailagent_alias/templatestemplate_key",
+        "api_ref": "https://www.zoho.com/zeptomail/help/api/delete-template.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-enczapikey",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "Zeptomail.MailTemplates.All,\nZeptomail.MailTemplates.DELETE",
+      "api_endpoint_src": "{endpoint}/v1.1/mailagents/{mailagent-alias}/templates{template-key}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohozeptomail__v1-1__email__template___post": {
+      "provider_intent": "zohozeptomail__v1-1__email__template___post",
+      "provider_alias_intent": "/v1.1/email/template",
+      "text": "Send one email at a time using the template",
+      "category": "Templates API - Single Email",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "template_key": {
+          "type": "string",
+          "text": "Template key",
+          "required": true
+        },
+        "bounce_address": {
+          "type": "string",
+          "text": "Bounce Address"
+        },
+        "from": {
+          "type": "object",
+          "text": "Form Data",
+          "required": true
+        },
+        "to": {
+          "type": "array",
+          "text": "To",
+          "required": true
+        },
+        "merge_info": {
+          "type": "object",
+          "text": "Merge Info",
+          "required": true
+        },
+        "reply_to": {
+          "type": "array",
+          "text": "Reply To"
+        },
+        "track_clicks": {
+          "type": "boolean",
+          "text": "Track Clicks",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "track_opens": {
+          "type": "boolean",
+          "text": "Track Opens",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "client_reference": {
+          "type": "string",
+          "text": "Client Reference"
+        },
+        "mime_headers": {
+          "type": "object",
+          "text": "Mime Headers"
+        },
+        "attachments": {
+          "type": "array",
+          "text": "Attachments"
+        },
+        "cid": {
+          "type": "string",
+          "text": "Cid"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "The API is used to send one transactional email at a time using the template",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1.1/email/template",
+        "alias_endpoint": "/zohozeptomail/v1.1/email/template",
+        "api_ref": "https://www.zoho.com/zeptomail/help/api/email-templates.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-enczapikey",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/v1.1/email/template",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

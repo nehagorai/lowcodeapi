@@ -1,0 +1,28 @@
+{% include "email/partials/layout_header" %}
+
+<body>
+<div class="body">
+	<table>
+		<tr> 
+			<td>
+				{% include "email/bodycontent" %}
+			</td>
+		</tr>
+	</table>
+	{% if (unsubscribe_link) %}	
+		<table>
+			<tr> <td>
+				<br/>
+				<small>
+				<a href="{{unsubscribe_link}}">Unsubscribe</a> 
+				{% if (unsubscribe_link) %}
+					<span>&nbsp;| {{sender_address}}</span>
+				{% endif %}				        
+				</small>
+			</td>
+		</tr>	
+		</table>	
+	{% endif %}		
+</div>
+</body>
+</html>

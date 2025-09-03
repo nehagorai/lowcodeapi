@@ -1,0 +1,81 @@
+{
+  "app": {
+    "title": "Apple Developer API",
+    "description": "",
+    "api_base": "/appledeveloper",
+    "copyright": "",
+    "copyright_year": "",
+    "contact_email": ""
+  },
+  "category": {
+    "All": ""
+  },
+  "routes": {
+    "appledeveloper_v1_apps_get": {
+      "provider_intent": "appledeveloper_v1_apps_get",
+      "provider_alias_intent": "/v1/apps",
+      "text": "List Apps",
+      "category": "Apps",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List apps in App Store Connect",
+        "rate_limit": [],
+        "api_endpoint": "https://api.appstoreconnect.apple.com/v1/apps",
+        "alias_endpoint": "/appledevloper/v1/apps",
+        "api_ref": "https://developer.apple.com/documentation/appstoreconnectapi/list_apps"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": ""
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "appledeveloper_v1_builds_get": {
+      "provider_intent": "appledeveloper_v1_builds_get",
+      "provider_alias_intent": "/v1/builds",
+      "text": "List Builds",
+      "category": "Builds",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List builds for all apps in App Store Connect",
+        "rate_limit": [],
+        "api_endpoint": "https://api.appstoreconnect.apple.com/v1/builds",
+        "alias_endpoint": "/appledevloper/v1/builds",
+        "api_ref": "https://developer.apple.com/documentation/appstoreconnectapi/list_builds"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": ""
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

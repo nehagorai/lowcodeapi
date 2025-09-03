@@ -1,0 +1,1128 @@
+{
+  "routes": {
+    "deepgram__v1__projects__project_id__balances___get": {
+      "provider_intent": "deepgram__v1__projects__project_id__balances___get",
+      "provider_alias_intent": "/v1/projects/project_id/balances",
+      "text": "Get All Balances",
+      "category": "Billing",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "Generates a list of outstanding balances for the specified project. To see balances the authenticated account must be a project owner or administrator.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "Generates a list of outstanding balances for the specified project. To see balances the authenticated account must be a project owner or administrator.",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get All Balances",
+        "rate_limit": [],
+        "api_endpoint": "https://api.deepgram.com/v1/projects/{project_id}/balances",
+        "alias_endpoint": "/deepgram/v1/projects/project_id/balances",
+        "api_ref": "https://developers.deepgram.com/reference/get-all-balances"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "deepgram__v1__projects__project_id__balances__balance_id___get": {
+      "provider_intent": "deepgram__v1__projects__project_id__balances__balance_id___get",
+      "provider_alias_intent": "/v1/projects/project_id/balances/balance_id",
+      "text": "Get Balance",
+      "category": "Billing",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project for which you want to retrieve the specified balance",
+          "required": true
+        },
+        "balance_id": {
+          "type": "string",
+          "text": "Unique identifier of the balance that you want to retrieve.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project for which you want to retrieve the specified balance",
+          "required": true
+        },
+        "balance_id": {
+          "type": "string",
+          "text": "Unique identifier of the balance that you want to retrieve.",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get Balance",
+        "rate_limit": [],
+        "api_endpoint": "https://api.deepgram.com/v1/projects/{project_id}/balances/{balance_id}",
+        "alias_endpoint": "/deepgram/v1/projects/project_id/balances/balance_id",
+        "api_ref": "https://developers.deepgram.com/reference/get-balance"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "deepgram__v1__projects__project_id__invites___get": {
+      "provider_intent": "deepgram__v1__projects__project_id__invites___get",
+      "provider_alias_intent": "/v1/projects/project_id/invites",
+      "text": "List Invites",
+      "category": "Invitations",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project for which you want to list invites.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project for which you want to list invites.",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List Invites",
+        "rate_limit": [],
+        "api_endpoint": "https://api.deepgram.com/v1/projects/{project_id}/invites",
+        "alias_endpoint": "/deepgram/v1/projects/project_id/invites",
+        "api_ref": "https://developers.deepgram.com/reference/list-invites"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "deepgram__v1__projects__project_id__invites___post": {
+      "provider_intent": "deepgram__v1__projects__project_id__invites___post",
+      "provider_alias_intent": "/v1/projects/project_id/invites",
+      "text": "Send Invite",
+      "category": "Invitations",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project for which you want to send an invite for.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "email": {
+          "type": "string",
+          "text": "Email to invite to the project",
+          "required": true
+        },
+        "scope": {
+          "type": "string",
+          "text": "Scope to give the user",
+          "required": true
+        }
+      },
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project for which you want to send an invite for.",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Send Invite",
+        "rate_limit": [],
+        "api_endpoint": "https://api.deepgram.com/v1/projects/{project_id}/invites",
+        "alias_endpoint": "/deepgram/v1/projects/project_id/invites",
+        "api_ref": "https://developers.deepgram.com/reference/send-invites"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "deepgram__v1__projects__project_id__invites__email___delete": {
+      "provider_intent": "deepgram__v1__projects__project_id__invites__email___delete",
+      "provider_alias_intent": "/v1/projects/project_id/invites/email",
+      "text": "Delete Invite",
+      "category": "Invitations",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project from which you want to remove the authenticated account",
+          "required": true
+        },
+        "email": {
+          "type": "string",
+          "text": "Email of the invite you want to delete",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project from which you want to remove the authenticated account",
+          "required": true
+        },
+        "email": {
+          "type": "string",
+          "text": "Email of the invite you want to delete",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete Invite",
+        "rate_limit": [],
+        "api_endpoint": "https://api.deepgram.com/v1/projects/{project_id}/invites/{email}",
+        "alias_endpoint": "/deepgram/v1/projects/project_id/invites/email",
+        "api_ref": "https://developers.deepgram.com/reference/delete-invite"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "deepgram__v1__projects__project_id__leave____delete": {
+      "provider_intent": "deepgram__v1__projects__project_id__leave____delete",
+      "provider_alias_intent": "/v1/projects/project_id/leave ",
+      "text": "Leave Project",
+      "category": "Invitations",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project from which you want to remove the authenticated account.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project from which you want to remove the authenticated account.",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Leave Project",
+        "rate_limit": [],
+        "api_endpoint": "https://api.deepgram.com/v1/projects/{project_id}/leave ",
+        "alias_endpoint": "/deepgram/v1/projects/project_id/leave ",
+        "api_ref": "https://developers.deepgram.com/reference/leave-project"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "deepgram__v1__projects__project_id__keys___get": {
+      "provider_intent": "deepgram__v1__projects__project_id__keys___get",
+      "provider_alias_intent": "/v1/projects/project_id/keys",
+      "text": "List Keys",
+      "category": "Keys",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project for which you want to get keys",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project for which you want to get keys",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List Keys",
+        "rate_limit": [],
+        "api_endpoint": "https://api.deepgram.com/v1/projects/{project_id}/keys",
+        "alias_endpoint": "/deepgram/v1/projects/project_id/keys",
+        "api_ref": "https://developers.deepgram.com/reference/list-keys"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "deepgram__v1__projects__project_idkeys__key_id___get": {
+      "provider_intent": "deepgram__v1__projects__project_idkeys__key_id___get",
+      "provider_alias_intent": "/v1/projects/project_idkeys/key_id",
+      "text": "Get Key",
+      "category": "Keys",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project for which you want to get keys",
+          "required": true
+        },
+        "key_id": {
+          "type": "string",
+          "text": "Unique identifier of the key that you want to retrieve.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project for which you want to get keys",
+          "required": true
+        },
+        "key_id": {
+          "type": "string",
+          "text": "Unique identifier of the key that you want to retrieve.",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get Key",
+        "rate_limit": [],
+        "api_endpoint": "https://api.deepgram.com/v1/projects/{project_id}keys/{key_id}",
+        "alias_endpoint": "/deepgram/v1/projects/project_idkeys/key_id",
+        "api_ref": "https://developers.deepgram.com/reference/get-key"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "deepgram__v1__projects__project_id__keys___post": {
+      "provider_intent": "deepgram__v1__projects__project_id__keys___post",
+      "provider_alias_intent": "/v1/projects/project_id/keys",
+      "text": "Create Key",
+      "category": "Keys",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project for which you want to create a key",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "comment": {
+          "type": "string",
+          "text": "Comments associated with the key you would like to create. Must be between 1 and 128 characters long not including whitespace",
+          "required": true
+        },
+        "scopes": {
+          "type": "strings",
+          "text": "Scopes for the key you would like to create.",
+          "required": true
+        }
+      },
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project for which you want to create a key",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create Key",
+        "rate_limit": [],
+        "api_endpoint": "https://api.deepgram.com/v1/projects/{project_id}/keys",
+        "alias_endpoint": "/deepgram/v1/projects/project_id/keys",
+        "api_ref": "https://developers.deepgram.com/reference/create-key"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "deepgram__v1__projects__project_id__keys__key_id___delete": {
+      "provider_intent": "deepgram__v1__projects__project_id__keys__key_id___delete",
+      "provider_alias_intent": "/v1/projects/project_id/keys/key_id",
+      "text": "Delete Key",
+      "category": "Keys",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project that contains the key that you want to delete",
+          "required": true
+        },
+        "key_id": {
+          "type": "string",
+          "text": "Unique identifier of the key that you want to delete.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project that contains the key that you want to delete",
+          "required": true
+        },
+        "key_id": {
+          "type": "string",
+          "text": "Unique identifier of the key that you want to delete.",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete Key",
+        "rate_limit": [],
+        "api_endpoint": "https://api.deepgram.com/v1/projects/{project_id}/keys/{key_id}",
+        "alias_endpoint": "/deepgram/v1/projects/project_id/keys/key_id",
+        "api_ref": "https://developers.deepgram.com/reference/delete-key"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "deepgram__v1__projects__project_id__members___get": {
+      "provider_intent": "deepgram__v1__projects__project_id__members___get",
+      "provider_alias_intent": "/v1/projects/project_id/members",
+      "text": "Get Members",
+      "category": "Members",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project for which you want to get members.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project for which you want to get members.",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get Members",
+        "rate_limit": [],
+        "api_endpoint": "https://api.deepgram.com/v1/projects/{project_id}/members",
+        "alias_endpoint": "/deepgram/v1/projects/project_id/members",
+        "api_ref": "https://developers.deepgram.com/reference/get-members"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "deepgram__v1__projects__project_id__members__member_id___delete": {
+      "provider_intent": "deepgram__v1__projects__project_id__members__member_id___delete",
+      "provider_alias_intent": "/v1/projects/project_id/members/member_id",
+      "text": "Remove Member",
+      "category": "Members",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project for which you want to get members",
+          "required": true
+        },
+        "member_id": {
+          "type": "string",
+          "text": "Unique identifier of the account that you want to remove.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project for which you want to get members",
+          "required": true
+        },
+        "member_id": {
+          "type": "string",
+          "text": "Unique identifier of the account that you want to remove.",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Remove Member",
+        "rate_limit": [],
+        "api_endpoint": "https://api.deepgram.com/v1/projects/{project_id}/members/{member_id}",
+        "alias_endpoint": "/deepgram/v1/projects/project_id/members/member_id",
+        "api_ref": "https://developers.deepgram.com/reference/remove-member"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "deepgram__v1__projects___get": {
+      "provider_intent": "deepgram__v1__projects___get",
+      "provider_alias_intent": "/v1/projects",
+      "text": "Get Projects",
+      "category": "Projects",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get Projects",
+        "rate_limit": [],
+        "api_endpoint": "https://api.deepgram.com/v1/projects",
+        "alias_endpoint": "/deepgram/v1/projects",
+        "api_ref": "https://developers.deepgram.com/reference/get-projects"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "deepgram__v1__projects__project_id___get": {
+      "provider_intent": "deepgram__v1__projects__project_id___get",
+      "provider_alias_intent": "/v1/projects/project_id",
+      "text": "Get Project",
+      "category": "Projects",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project for which you want to retrieve information.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project for which you want to retrieve information.",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get Project",
+        "rate_limit": [],
+        "api_endpoint": "https://api.deepgram.com/v1/projects/{project_id}",
+        "alias_endpoint": "/deepgram/v1/projects/project_id",
+        "api_ref": "https://developers.deepgram.com/reference/get-project"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "deepgram__v1__projects__project_id___patch": {
+      "provider_intent": "deepgram__v1__projects__project_id___patch",
+      "provider_alias_intent": "/v1/projects/project_id",
+      "text": "Update Project",
+      "category": "Projects",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project that you want to update",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project that you want to update",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update Project",
+        "rate_limit": [],
+        "api_endpoint": "https://api.deepgram.com/v1/projects/{project_id}",
+        "alias_endpoint": "/deepgram/v1/projects/project_id",
+        "api_ref": "https://developers.deepgram.com/reference/update-project"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "deepgram__v1__projects__project_id___delete": {
+      "provider_intent": "deepgram__v1__projects__project_id___delete",
+      "provider_alias_intent": "/v1/projects/project_id",
+      "text": "Delete Project",
+      "category": "Projects",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project that you want to delete.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project that you want to delete.",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete Project",
+        "rate_limit": [],
+        "api_endpoint": "https://api.deepgram.com/v1/projects/{project_id}",
+        "alias_endpoint": "/deepgram/v1/projects/project_id",
+        "api_ref": "https://developers.deepgram.com/reference/delete-project"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "deepgram__v1__projects__project_id__members__member_id__scopes___get": {
+      "provider_intent": "deepgram__v1__projects__project_id__members__member_id__scopes___get",
+      "provider_alias_intent": "/v1/projects/project_id/members/member_id/scopes",
+      "text": "Get Member Scopes",
+      "category": "Scopes",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "Identifier of the project that contains the member for whom you want to get scopes",
+          "required": true
+        },
+        "member_id": {
+          "type": "string",
+          "text": "Unique identifier of the member for whom you want to get scopes.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "Identifier of the project that contains the member for whom you want to get scopes",
+          "required": true
+        },
+        "member_id": {
+          "type": "string",
+          "text": "Unique identifier of the member for whom you want to get scopes.",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get Member Scopes",
+        "rate_limit": [],
+        "api_endpoint": "https://api.deepgram.com/v1/projects/{project_id}/members/{member_id}/scopes",
+        "alias_endpoint": "/deepgram/v1/projects/project_id/members/member_id/scopes",
+        "api_ref": "https://developers.deepgram.com/reference/get-member-scopes"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "deepgram__v1__projects__project_id__members__member_id__scopes___put": {
+      "provider_intent": "deepgram__v1__projects__project_id__members__member_id__scopes___put",
+      "provider_alias_intent": "/v1/projects/project_id/members/member_id/scopes",
+      "text": "Update Scope",
+      "category": "Scopes",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project that contains the specified member and scope that you want to update",
+          "required": true
+        },
+        "member_id": {
+          "type": "string",
+          "text": "Unique identifier of the member for whom you want to update the scope.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "scope": {
+          "type": "string",
+          "text": "Scope for the specified member and project."
+        }
+      },
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project that contains the specified member and scope that you want to update",
+          "required": true
+        },
+        "member_id": {
+          "type": "string",
+          "text": "Unique identifier of the member for whom you want to update the scope.",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update Scope",
+        "rate_limit": [],
+        "api_endpoint": "https://api.deepgram.com/v1/projects/project_id/members/{member_id}/scopes",
+        "alias_endpoint": "/deepgram/v1/projects/project_id/members/member_id/scopes",
+        "api_ref": "https://developers.deepgram.com/reference/update-scope"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "deepgram__v1__projects__project_id__requests___get": {
+      "provider_intent": "deepgram__v1__projects__project_id__requests___get",
+      "provider_alias_intent": "/v1/projects/project_id/requests",
+      "text": "Get All Requests",
+      "category": "Usage",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project for which you want to retrieve requests..",
+          "required": true
+        },
+        "start": {
+          "type": "",
+          "text": "Start date of the requested date range"
+        },
+        "end": {
+          "type": "",
+          "text": "End date of the requested date range"
+        },
+        "limit": {
+          "type": "number",
+          "text": "Number of results to return per page"
+        },
+        "status": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project for which you want to retrieve requests..",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get All Requests",
+        "rate_limit": [],
+        "api_endpoint": "https://api.deepgram.com/v1/projects/{project_id}/requests",
+        "alias_endpoint": "/deepgram/v1/projects/project_id/requests",
+        "api_ref": "https://developers.deepgram.com/reference/get-all-requests"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "deepgram__v1__projects__project_id__requests__request_id___get": {
+      "provider_intent": "deepgram__v1__projects__project_id__requests__request_id___get",
+      "provider_alias_intent": "/v1/projects/project_id/requests/request_id",
+      "text": "Get Request",
+      "category": "Usage",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project for which you want to retrieve the specified request",
+          "required": true
+        },
+        "request_id": {
+          "type": "string",
+          "text": "Unique identifier of the request that you want to retrieve.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project for which you want to retrieve the specified request",
+          "required": true
+        },
+        "request_id": {
+          "type": "string",
+          "text": "Unique identifier of the request that you want to retrieve.",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get Request",
+        "rate_limit": [],
+        "api_endpoint": "https://api.deepgram.com/v1/projects/{project_id}/requests/{request_id}",
+        "alias_endpoint": "/deepgram/v1/projects/project_id/requests/request_id",
+        "api_ref": "https://developers.deepgram.com/reference/get-request"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "deepgram__v1__projects__project_id__usage___get": {
+      "provider_intent": "deepgram__v1__projects__project_id__usage___get",
+      "provider_alias_intent": "/v1/projects/project_id/usage",
+      "text": "Summarize Usage",
+      "category": "Usage",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project for which you want to retrieve the specified request.",
+          "required": true
+        },
+        "start": {
+          "type": "",
+          "text": "Start date of the requested date range"
+        },
+        "end": {
+          "type": "",
+          "text": "End date of the requested date range"
+        },
+        "accessor": {
+          "type": "string",
+          "text": "Limits results to the given API key"
+        },
+        "tag": {
+          "type": "string",
+          "text": "Limits results to requests associated with the specified tag"
+        },
+        "method": {
+          "type": "string",
+          "text": "Limits results to requests processed using the specified method"
+        },
+        "model": {
+          "type": "string",
+          "text": "Limits results to requests run with the specified model UUID applied"
+        },
+        "multichannel": {
+          "type": "boolean",
+          "text": "Limits results to requests that include the multichannel feature",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "interim_results": {
+          "type": "boolean",
+          "text": "Limits results to requests that include the interim_results feature",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "punctuate": {
+          "type": "boolean",
+          "text": "Limits results to requests that include the punctuate feature",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "ner": {
+          "type": "boolean",
+          "text": "Limits results to requests that include the ner feature",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "utterances": {
+          "type": "boolean",
+          "text": "Limits results to requests that include the utterances feature",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "replace": {
+          "type": "boolean",
+          "text": "Limits results to requests that include the replace feature",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "profanity_filter": {
+          "type": "boolean",
+          "text": "Limits results to requests that include the profanity_filter feature",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "keywords": {
+          "type": "boolean",
+          "text": "Limits results to requests that include the keywords feature",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "detect_topics": {
+          "type": "boolean",
+          "text": "Limits results to requests that include the detect_topics feature",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "diarize": {
+          "type": "boolean",
+          "text": "Limits results to requests that include the diarize feature",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "search": {
+          "type": "boolean",
+          "text": "Limits results to requests that include the search feature",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "redact": {
+          "type": "boolean",
+          "text": "Limits results to requests that include the redact feature",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "alternatives": {
+          "type": "boolean",
+          "text": "Limits results to requests that include the alternatives feature",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "numerals": {
+          "type": "boolean",
+          "text": "Limits results to requests that include the numerals feature",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "smart_format": {
+          "type": "boolean",
+          "text": "Limits results to requests that include the smart_format feature.",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "Unique identifier of the project for which you want to retrieve the specified request.",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Summarize Usage",
+        "rate_limit": [],
+        "api_endpoint": "https://api.deepgram.com/v1/projects/{project_id}/usage",
+        "alias_endpoint": "/deepgram/v1/projects/project_id/usage",
+        "api_ref": "https://developers.deepgram.com/reference/summarize-usage"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "deepgram__v1__projects__project_id__usage__fields___get": {
+      "provider_intent": "deepgram__v1__projects__project_id__usage__fields___get",
+      "provider_alias_intent": "/v1/projects/project_id/usage/fields",
+      "text": "Get Fields",
+      "category": "Usage",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "Unique identifier of the project for which you want to retrieve fields."
+          ]
+        },
+        "start": {
+          "type": "string",
+          "text": "Start date of the requested date range. Format is YYYY-MM-DD. If a full timestamp is given it will be truncated to a day. Dates are UTC. Defaults to the date of your first request"
+        },
+        "end": {
+          "type": "string",
+          "text": "End date of the requested date range. Format is YYYY-MM-DD. If a full timestamp is given it will be truncated to a day. Dates are UTC. Defaults to the current date."
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "Unique identifier of the project for which you want to retrieve fields."
+          ]
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get Fields",
+        "rate_limit": [],
+        "api_endpoint": "https://api.deepgram.com/v1/projects/{project_id}/usage/fields",
+        "alias_endpoint": "/deepgram/v1/projects/project_id/usage/fields",
+        "api_ref": "https://developers.deepgram.com/reference/get-fields"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

@@ -1,0 +1,1944 @@
+{
+  "routes": {
+    "apptek__v2__userlexicon__suggest__model___post": {
+      "provider_intent": "apptek__v2__userlexicon__suggest__model___post",
+      "provider_alias_intent": "/v2/userlexicon/suggest/model",
+      "text": "Request similar sounding words",
+      "category": "Custom Vocabulary Management",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "model": {
+          "type": "string",
+          "text": "The model name for which suggested words will be retrieved from",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "RAW_BODY": {
+          "type": "array",
+          "text": "The words to retrieve similar sounding words for"
+        }
+      },
+      "path": {
+        "model": {
+          "type": "string",
+          "text": "The model name for which suggested words will be retrieved from",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "This can be used to check if a word already exists in the base model lexicon or return a list of words that sound similar. Using the similar word list, the user can validate the system's phonetic generation.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/userlexicon/suggest/{model}",
+        "alias_endpoint": "/apptek/v2/userlexicon/suggest/model",
+        "api_ref": "https://docs.apptek.com/reference/request-similar-sounding-words"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__userlexicon__build__model___post": {
+      "provider_intent": "apptek__v2__userlexicon__build__model___post",
+      "provider_alias_intent": "/v2/userlexicon/build/model",
+      "text": "Build a new User Lexicon",
+      "category": "Custom Vocabulary Management",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "model": {
+          "type": "string",
+          "text": "The model id for which suggested words will be retrieved from",
+          "required": true
+        },
+        "name": {
+          "type": "string",
+          "text": "An optional descriptive name for this lexicon"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "RAW_BODY": {
+          "type": "array",
+          "text": "The words and optional pronunciation guides (or sounds-like words)"
+        }
+      },
+      "path": {
+        "model": {
+          "type": "string",
+          "text": "The model id for which suggested words will be retrieved from",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Build a new user lexicon using the supplied word list.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/userlexicon/build/{model}",
+        "alias_endpoint": "/apptek/v2/userlexicon/build/model",
+        "api_ref": "https://docs.apptek.com/reference/build-user-lexicon"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__userlexicon__request_id___get": {
+      "provider_intent": "apptek__v2__userlexicon__request_id___get",
+      "provider_alias_intent": "/v2/userlexicon/request_id",
+      "text": "Query the status of a Custom Vocabulary request and retrieve results",
+      "category": "Custom Vocabulary Management",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when submitting the user lexicon request",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when submitting the user lexicon request",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Check on the status of the suggest or build request using the request ID received on submission of that request.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/userlexicon/{request_id}",
+        "alias_endpoint": "/apptek/v2/userlexicon/request_id",
+        "api_ref": "https://docs.apptek.com/reference/query-request-status-and-retrieve-results-3"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__userlexicon__list\n___get": {
+      "provider_intent": "apptek__v2__userlexicon__list\n___get",
+      "provider_alias_intent": "/v2/userlexicon/list\n",
+      "text": "Query available User Lexicons",
+      "category": "Custom Vocabulary Management",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Return a list of user lexicons already built.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/userlexicon/list\n",
+        "alias_endpoint": "/apptek/v2/userlexicon/list\n",
+        "api_ref": "https://docs.apptek.com/reference/query-a-list-of-user-lexicons"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__userlexicon__lexicon_id___delete": {
+      "provider_intent": "apptek__v2__userlexicon__lexicon_id___delete",
+      "provider_alias_intent": "/v2/userlexicon/lexicon_id",
+      "text": "Remove an existing User Lexicon",
+      "category": "Custom Vocabulary Management",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "lexicon_id": {
+          "type": "string",
+          "text": "The lexicon_id received when a user lexicon was successfully built.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "lexicon_id": {
+          "type": "string",
+          "text": "The lexicon_id received when a user lexicon was successfully built.",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Use this method to remove a user lexicon.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/userlexicon/{lexicon_id}",
+        "alias_endpoint": "/apptek/v2/userlexicon/lexicon_id",
+        "api_ref": "https://docs.apptek.com/reference/remove-user-lexicon"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__language_id___post": {
+      "provider_intent": "apptek__v2__language_id___post",
+      "provider_alias_intent": "/v2/language_id",
+      "text": "Perform language identification",
+      "category": "Language Identification",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "RAW_BODY": {
+          "type": "string",
+          "text": "The body of the POST contains the data to analyze."
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "A simple HTTP service for submitting audio or text to determine the language within. For audio, the service returns a list of languages for each speech segment along with a confidence score. For text, the service returns a list of languages indentified with a confidence score for each. Data to be analyzed is provided within the body of the HTTP POST. It is important the that “Content-Type” is set correctly so that the correct engine is invoked for analysis. For audio, most popular audio and video file formats like the following are supported. mp3 - audio/mpeg, m4a - audio/m4a , ogg - audio/ogg , flac - audio/x-flac , wav - audio/x-wav or audio/wav. For text, only plain utf-8 encoded test is supported. txt - text/plain",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/language_id",
+        "alias_endpoint": "/apptek/v2/language_id",
+        "api_ref": "https://docs.apptek.com/reference/performing-language-identification"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__language_id__request_id\n___get": {
+      "provider_intent": "apptek__v2__language_id__request_id\n___get",
+      "provider_alias_intent": "/v2/language_id/request_id\n",
+      "text": "Query language identification request status and retrieve results",
+      "category": "Language Identification",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when the request was submitted.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when the request was submitted.",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Check on the status of request which has been successfully submitted, using the request_id received on submission of that request.\n\nIf results are available, the body of the response will contain a CSV text document in the format described below.\nOtherwise, HTTP status code 204 is returned with an empty response. Use the x-status header in the response to determine the request status.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/language_id/{request_id}\n",
+        "alias_endpoint": "/apptek/v2/language_id/request_id\n",
+        "api_ref": "https://docs.apptek.com/reference/2-query-the-status-of-a-submitted-request"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__language_id__request_id\n___delete": {
+      "provider_intent": "apptek__v2__language_id__request_id\n___delete",
+      "provider_alias_intent": "/v2/language_id/request_id\n",
+      "text": "Remove language identification results",
+      "category": "Language Identification",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when the request was submitted.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when the request was submitted.",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Use this method to remove request results.\n\nIMPORTANT: Once results are removed, subsequent requests to retrieve the results will fail.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/language_id/{request_id}\n",
+        "alias_endpoint": "/apptek/v2/language_id/request_id\n",
+        "api_ref": "https://docs.apptek.com/reference/remove-language-id-results"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__audio_align__model___post": {
+      "provider_intent": "apptek__v2__audio_align__model___post",
+      "provider_alias_intent": "/v2/audio_align/model",
+      "text": "Perform audio alignment",
+      "category": "Language Identification",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "model": {
+          "type": "string",
+          "text": "The name of the model to use. E.g. 'en.bcn'. You can use either the services endpoint or the audioalign/models endpoint or retrieve the available models.",
+          "required": true
+        },
+        "priority": {
+          "type": "string",
+          "text": "An integer priority level between 1 (low priority) and 100 (high priority) for this request. Additional charges may be applied to jobs with higher priority values. Default value is 50."
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "RAW_BODY": {
+          "type": "string",
+          "text": "The body of the request must contain text and audio file fields."
+        }
+      },
+      "path": {
+        "model": {
+          "type": "string",
+          "text": "The name of the model to use. E.g. 'en.bcn'. You can use either the services endpoint or the audioalign/models endpoint or retrieve the available models.",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Audio and text files are submitted via a HTTP multipart form POST. Each file is included as a multipart file attachment within the POST. The service supports several different formats for the audio file. The text must be a plain utf-8 encoded text file.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/audio_align/{model}",
+        "alias_endpoint": "/apptek/v2/audio_align/model",
+        "api_ref": "https://docs.apptek.com/reference/submit-text-for-audio-alignment"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__audio_align__models___get": {
+      "provider_intent": "apptek__v2__audio_align__models___get",
+      "provider_alias_intent": "/v2/audio_align/models",
+      "text": "Query available audio alignment models",
+      "category": "Language Identification",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Returns a list of models available for audio alignment.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/audio_align/models",
+        "alias_endpoint": "/apptek/v2/audio_align/models",
+        "api_ref": "https://docs.apptek.com/reference/query-available-audio-alignment-models"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__audio_align__request_id___get": {
+      "provider_intent": "apptek__v2__audio_align__request_id___get",
+      "provider_alias_intent": "/v2/audio_align/request_id",
+      "text": "Query audio alignment request status and retrieve results",
+      "category": "Language Identification",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when the request was submitted.",
+          "required": true
+        },
+        "output": {
+          "type": "enum",
+          "text": "The type of output file to retrieve. eg. 'srt', 'xsrt', 'csv', 'html'",
+          "enum": [
+            "srt",
+            "xsrt",
+            "csv",
+            "html"
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when the request was submitted.",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Check on the status of request which has been successfully submitted, using the request ID received on submission of that request.\n\nIf results are available, the body of the response will contain a document containing the output requested with the output query parameter (default is SRT).\n\nsrt - Primary clean SRT.\nxml - A speech-to-text compatible XML.\nxsrt - An SRT document which includes differences between untimed text reference and ASR transcript.\ncsv - A semicolon separated list of timed text segments with “INSERTION”, “SUBSTITUTION” and “DELETION” tags identifying difference between the untimed text and the ASR transcript.\nhtml - A html formatted document with difference between the untimed text and the ASR transcript color coded.\n\nIf results are not available, HTTP status code 204 is returned with an empty response. Use the x-status header in the response to determine the request status.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/audio_align/{request_id}",
+        "alias_endpoint": "/apptek/v2/audio_align/request_id",
+        "api_ref": "https://docs.apptek.com/reference/query-the-status-of-a-submitted-request-1"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__audio_align__request_id___delete": {
+      "provider_intent": "apptek__v2__audio_align__request_id___delete",
+      "provider_alias_intent": "/v2/audio_align/request_id",
+      "text": "Remove audio alignment results",
+      "category": "Language Identification",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when the request was submitted.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when the request was submitted.",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Use this method to remove request results.\n\nIMPORTANT: Once results are removed, subsequent requests to retrieve the results will fail.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/audio_align/{request_id}",
+        "alias_endpoint": "/apptek/v2/audio_align/request_id",
+        "api_ref": "https://docs.apptek.com/reference/remove-audio-alignment-results"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__translate__model___post": {
+      "provider_intent": "apptek__v2__translate__model___post",
+      "provider_alias_intent": "/v2/translate/model",
+      "text": "Translate a text file",
+      "category": "Machine Translation",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "model": {
+          "type": "string",
+          "text": "The 'translation model' to use. You can use either the services endpoint or the translate/models endpoint or retrieve the available models.",
+          "required": true
+        },
+        "meta_controls": {
+          "type": "string",
+          "text": "Provide a list of meta controls to refine the translation output"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "RAW_BODY": {
+          "type": "string",
+          "text": "The body of the POST contains the utf-8 text to be translated"
+        }
+      },
+      "path": {
+        "model": {
+          "type": "string",
+          "text": "The 'translation model' to use. You can use either the services endpoint or the translate/models endpoint or retrieve the available models.",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Submit text for translation.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/translate/{model}",
+        "alias_endpoint": "/apptek/v2/translate/model",
+        "api_ref": "https://docs.apptek.com/reference/machine-translation"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__translate__models___get": {
+      "provider_intent": "apptek__v2__translate__models___get",
+      "provider_alias_intent": "/v2/translate/models",
+      "text": "Query available translation models",
+      "category": "Machine Translation",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Retrieve the available translation models.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/translate/models",
+        "alias_endpoint": "/apptek/v2/translate/models",
+        "api_ref": "https://docs.apptek.com/reference/query-available-translation-models"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__translate__request_id\n___get": {
+      "provider_intent": "apptek__v2__translate__request_id\n___get",
+      "provider_alias_intent": "/v2/translate/request_id\n",
+      "text": "Query translation request status and retrieve results",
+      "category": "Machine Translation",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when the request was submitted",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when the request was submitted",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Check on the status of request which has been successfully submitted, using the request_id received on submission of that request.\n\nIf results are available, the body of the response will contain a document in the same format as the document sent with the request.\nOtherwise, HTTP status code 204 is returned with an empty response. Use the x-status header in the response to determine the request status.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/translate/{request_id}\n",
+        "alias_endpoint": "/apptek/v2/translate/request_id\n",
+        "api_ref": "https://docs.apptek.com/reference/query-the-status-of-a-submitted-request"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__translate__request_id___delete": {
+      "provider_intent": "apptek__v2__translate__request_id___delete",
+      "provider_alias_intent": "/v2/translate/request_id",
+      "text": "Remove translation results",
+      "category": "Machine Translation",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when the request was submitted",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when the request was submitted",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Use this method to remove translation results.\n\nIMPORTANT: Once results are removed, subsequent requests to retrieve the results will fail.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/translate/{request_id}",
+        "alias_endpoint": "/apptek/v2/translate/request_id",
+        "api_ref": "https://docs.apptek.com/reference/remove-translation-results"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__iextract__language\n___post": {
+      "provider_intent": "apptek__v2__iextract__language\n___post",
+      "provider_alias_intent": "/v2/iextract/language\n",
+      "text": "Perform NLP Information Extraction",
+      "category": "NLP Information Extraction",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "language": {
+          "type": "string",
+          "text": "The two-letter language identifier of the input text. E.g. 'en' for English.",
+          "required": true
+        },
+        "priority": {
+          "type": "string",
+          "text": "An integer priority level between 1 (low priority) and 100 (high priority) for this request. Additional charges may be applied to jobs with higher priority values. Default value is 50."
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "text": {
+          "type": "string",
+          "text": "The text to analyze",
+          "required": true
+        }
+      },
+      "path": {
+        "language": {
+          "type": "string",
+          "text": "The two-letter language identifier of the input text. E.g. 'en' for English.",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Submit text to perform NLP Information Extraction and receive a tagged result with marked-up language constructs",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/iextract/{language}\n",
+        "alias_endpoint": "/apptek/v2/iextract/language\n",
+        "api_ref": "https://docs.apptek.com/reference/perform-nlp-information-extraction"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__iextract__request_id\n___get": {
+      "provider_intent": "apptek__v2__iextract__request_id\n___get",
+      "provider_alias_intent": "/v2/iextract/request_id\n",
+      "text": "Query NLP Information Extraction request status and retrieve results",
+      "category": "NLP Information Extraction",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when submitting the request",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when submitting the request",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Check on the status of the request which has been successfully submitted, using the request_id received on submission of that request",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/iextract/{request_id}\n",
+        "alias_endpoint": "/apptek/v2/iextract/request_id\n",
+        "api_ref": "https://docs.apptek.com/reference/query-nlp-information-extraction-request-status-and-retrieve-results"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__iextract__request_id___delete": {
+      "provider_intent": "apptek__v2__iextract__request_id___delete",
+      "provider_alias_intent": "/v2/iextract/request_id",
+      "text": "Remove NLP Information Extraction results",
+      "category": "NLP Information Extraction",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when the request was submitted.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when the request was submitted.",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Use this method to remove request results.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/iextract/{request_id}",
+        "alias_endpoint": "/apptek/v2/iextract/request_id",
+        "api_ref": "https://docs.apptek.com/reference/remove-nlp-information-extraction-results"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__namedentity__language___post": {
+      "provider_intent": "apptek__v2__namedentity__language___post",
+      "provider_alias_intent": "/v2/namedentity/language",
+      "text": "Perform Named Entity Identification",
+      "category": "Named Entity Identification",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "language": {
+          "type": "string",
+          "text": "The two-letter language identifier of the input text. E.g. 'en' for English.",
+          "required": true
+        },
+        "priority": {
+          "type": "number",
+          "text": "An integer priority level between 1 (low priority) and 100 (high priority) for this request. Additional charges may be applied to jobs with higher priority values. Default value is 50."
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "text": {
+          "type": "string",
+          "text": "The text to analyze",
+          "required": true
+        }
+      },
+      "path": {
+        "language": {
+          "type": "string",
+          "text": "The two-letter language identifier of the input text. E.g. 'en' for English.",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Submit utf-8 text to perform Named Entity Identification",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/namedentity/{language}",
+        "alias_endpoint": "/apptek/v2/namedentity/language",
+        "api_ref": "https://docs.apptek.com/reference/submit-text-ner"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__namedentity__request_id___get": {
+      "provider_intent": "apptek__v2__namedentity__request_id___get",
+      "provider_alias_intent": "/v2/namedentity/request_id",
+      "text": "Query Named Entity Identification request status and retrieve results",
+      "category": "Named Entity Identification",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when submitting the request",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when submitting the request",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Check on the status of the request which has been successfully submitted, using the request_id received on submission of that request.\n\nIf results are available, the body of the response will contain a JSON object with entities labelled and extracted.\nOtherwise, HTTP status code 204 is returned with an empty response. Use the x-status header in the response to determine the request status.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/namedentity/{request_id}",
+        "alias_endpoint": "/apptek/v2/namedentity/request_id",
+        "api_ref": "https://docs.apptek.com/reference/query-request-status-and-retrieve-results-1"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__namedentity__request_id\n___delete": {
+      "provider_intent": "apptek__v2__namedentity__request_id\n___delete",
+      "provider_alias_intent": "/v2/namedentity/request_id\n",
+      "text": "Remove Named Entity Identification results",
+      "category": "Named Entity Identification",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when the request was submitted.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when the request was submitted.",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Use this method to remove request results.\n\nIMPORTANT: Once results are removed, subsequent requests to retrieve the results will fail.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/namedentity/{request_id}\n",
+        "alias_endpoint": "/apptek/v2/namedentity/request_id\n",
+        "api_ref": "https://docs.apptek.com/reference/remove-name-e-results"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__sentiment__language___post": {
+      "provider_intent": "apptek__v2__sentiment__language___post",
+      "provider_alias_intent": "/v2/sentiment/language",
+      "text": "Perform Sentiment Analysis",
+      "category": "Sentiment Analysis",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "language": {
+          "type": "string",
+          "text": "The model id to use to synthesize speech. Use the services endpoint to determine the available languages",
+          "required": true
+        },
+        "priority": {
+          "type": "number",
+          "text": "An integer priority level between 1 (low priority) and 100 (high priority) for this request. Additional charges may be applied to jobs with higher priority values. Default value is 50."
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "text": {
+          "type": "array",
+          "text": "The text to analyze",
+          "required": true
+        }
+      },
+      "path": {
+        "language": {
+          "type": "string",
+          "text": "The model id to use to synthesize speech. Use the services endpoint to determine the available languages",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Submit a JSON array containing text for analysis.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/sentiment/{language}",
+        "alias_endpoint": "/apptek/v2/sentiment/language",
+        "api_ref": "https://docs.apptek.com/reference/submit-text-for-sentiment-analysis"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__sentiment__models___get": {
+      "provider_intent": "apptek__v2__sentiment__models___get",
+      "provider_alias_intent": "/v2/sentiment/models",
+      "text": "Query available sentiment models",
+      "category": "Sentiment Analysis",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "This method returns a list of available models/languages for sentiment analysis.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/sentiment/models",
+        "alias_endpoint": "/apptek/v2/sentiment/models",
+        "api_ref": "https://docs.apptek.com/reference/query-sentiment-models"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__sentiment__request_id___get": {
+      "provider_intent": "apptek__v2__sentiment__request_id___get",
+      "provider_alias_intent": "/v2/sentiment/request_id",
+      "text": "Query Sentiment Analysis request status and retrieve results",
+      "category": "Sentiment Analysis",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when submitting the request",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when submitting the request",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Check on the status of the request which has been successfully submitted, using the request_id received on submission of that request.\n\nIf results are available, the body of the response will contain a JSON object matching the input with sentiment score added to each segment.\nOtherwise, HTTP status code 204 is returned with an empty response. Use the x-status header in the response to determine the request status.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/sentiment/{request_id}",
+        "alias_endpoint": "/apptek/v2/sentiment/request_id",
+        "api_ref": "https://docs.apptek.com/reference/query-request-status-and-retrieve-results-2"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__sentiment__request_id___delete": {
+      "provider_intent": "apptek__v2__sentiment__request_id___delete",
+      "provider_alias_intent": "/v2/sentiment/request_id",
+      "text": "Remove Sentiment Analysis results",
+      "category": "Sentiment Analysis",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when the request was submitted.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when the request was submitted.",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Use this endpoint to remove request results.\n\nIMPORTANT: Once results are removed, subsequent requests to retrieve the results will fail.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/sentiment/{request_id}",
+        "alias_endpoint": "/apptek/v2/sentiment/request_id",
+        "api_ref": "https://docs.apptek.com/reference/remove-sentiment-analysis-results"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__services___get": {
+      "provider_intent": "apptek__v2__services___get",
+      "provider_alias_intent": "/v2/services",
+      "text": "Query available services and models",
+      "category": "Services and Models",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "{\n    \"type\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"text\"": {
+          "type": "\"An array of model description objects.\"\n        \"required\""
+        },
+        "\"required\"": {
+          "type": "true\n    }"
+        },
+        "\"models\"": {
+          "type": "{\n        \"type\""
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "{\n    \"type\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"text\"": {
+          "type": "\"An array of model description objects.\"\n        \"required\""
+        },
+        "\"required\"": {
+          "type": "true\n    }"
+        },
+        "\"models\"": {
+          "type": "{\n        \"type\""
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "This is a unified endpoint for all API services and will return a complete list of all services and models available for each",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/services",
+        "alias_endpoint": "/apptek/v2/services",
+        "api_ref": "https://docs.apptek.com/reference/query-available-services-and-models"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__transcribe__model___post": {
+      "provider_intent": "apptek__v2__transcribe__model___post",
+      "provider_alias_intent": "/v2/transcribe/model",
+      "text": "Transcribe an audio/video file",
+      "category": "Speech to Text",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "model": {
+          "type": "string",
+          "text": "The ASR model to submit this request to. You can use either the services endpoint or the /transcribe/models endpoint or retrieve the available models",
+          "required": true
+        },
+        "{\n    \"punc\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"text\"": {
+          "type": "\"Convert to numbers in word form to digit form. E.g. 'two thousand three' converted to \"2003\"\"\n    }\n}"
+        },
+        "punctuation will be added to the results (if available).\"\n    }": {
+          "type": ""
+        },
+        "\"diar\"": {
+          "type": "{\n        \"type\""
+        },
+        "speaker diarization annotations will be added to the results.\"\n    }": {
+          "type": ""
+        },
+        "\"custom_vocabulary_id\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"channel_layout\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"sentiment\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"emotion\"": {
+          "type": "{\n        \"type\""
+        },
+        "Neutral": {
+          "type": ""
+        },
+        "Angry": {
+          "type": ""
+        },
+        "etc.)\"\n    }": {
+          "type": ""
+        },
+        "\"redact\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"priority\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"numeric_output\"": {
+          "type": "{\n        \"type\""
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "RAW_BODY": {
+          "type": "string",
+          "text": "The body of the POST contains the binary audio data.",
+          "required": true
+        }
+      },
+      "path": {
+        "model": {
+          "type": "string",
+          "text": "The ASR model to submit this request to. You can use either the services endpoint or the /transcribe/models endpoint or retrieve the available models",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Submit audio for transcription, The body of the POST contains the binary audio.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/transcribe/{model}",
+        "alias_endpoint": "/apptek/v2/transcribe/model",
+        "api_ref": "https://docs.apptek.com/reference/submit-audio-file-for-transcription"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__transcribe___post": {
+      "provider_intent": "apptek__v2__transcribe___post",
+      "provider_alias_intent": "/v2/transcribe",
+      "text": "Transcribe an audio/video file from a remote url",
+      "category": "Speech to Text",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "RAW_BODY": {
+          "type": "array",
+          "text": "Array of items with urls and configuration for each url"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "This API allows the user to provide one or more urls to remote files to be downloaded and processed by the service.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/transcribe",
+        "alias_endpoint": "/apptek/v2/transcribe",
+        "api_ref": "https://docs.apptek.com/reference/submit-request-to-process-audio-from-a-remote-url"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__transcribe__models___get": {
+      "provider_intent": "apptek__v2__transcribe__models___get",
+      "provider_alias_intent": "/v2/transcribe/models",
+      "text": "Query available transcribe models",
+      "category": "Speech to Text",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Retrieve the available transcription models.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/transcribe/models",
+        "alias_endpoint": "/apptek/v2/transcribe/models",
+        "api_ref": "https://docs.apptek.com/reference/query-available-transcribe-models"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__transcribe__request_id___get": {
+      "provider_intent": "apptek__v2__transcribe__request_id___get",
+      "provider_alias_intent": "/v2/transcribe/request_id",
+      "text": "Query transcribe request status and retrieve results",
+      "category": "Speech to Text",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when the request was submitted.",
+          "required": true
+        },
+        "format": {
+          "type": "string",
+          "text": "Specify the result format to retrieve and optional formatting controls."
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when the request was submitted.",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Check on the status of a request which has been successfully submitted, using the request_id received on submission of that request.\n\nIf results are available, the body of the response will contain a document in the format requested (default is XML).\nOtherwise, HTTP status code 204 is returned with an empty response. Use the x-status header in the response to determine the request status.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/transcribe/{request_id}",
+        "alias_endpoint": "/apptek/v2/transcribe/request_id",
+        "api_ref": "https://docs.apptek.com/reference/query-a-request-status-and-retrieve-results"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__transcribe__request_id___delete": {
+      "provider_intent": "apptek__v2__transcribe__request_id___delete",
+      "provider_alias_intent": "/v2/transcribe/request_id",
+      "text": "Remove transcription results",
+      "category": "Speech to Text",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when the request was submitted.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when the request was submitted.",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Use this method to remove results.\n\nIMPORTANT: Once results are removed, subsequent requests to retrieve the results will fail",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/transcribe/{request_id}",
+        "alias_endpoint": "/apptek/v2/transcribe/request_id",
+        "api_ref": "https://docs.apptek.com/reference/remove-transcription-results"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__transcribe__reformat___post": {
+      "provider_intent": "apptek__v2__transcribe__reformat___post",
+      "provider_alias_intent": "/v2/transcribe/reformat",
+      "text": "Reformat ASR results",
+      "category": "Speech to Text",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "format": {
+          "type": "string",
+          "text": "Specify the result format to retrieve and optional formatting controls.",
+          "required": true
+        },
+        "language_code": {
+          "type": "string",
+          "text": "Specify the ISO 639-1 two-letter language code for the input XML. E.g. “en” for English.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "RAW_BODY": {
+          "type": "string",
+          "text": ""
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "After retrieving a speech-to-text result in XML format, you can use this method to reformat the XML into one of several supported formats",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/transcribe/reformat",
+        "alias_endpoint": "/apptek/v2/transcribe/reformat",
+        "api_ref": "https://docs.apptek.com/reference/reformat-asr-results"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__texttospeech__model\n___post": {
+      "provider_intent": "apptek__v2__texttospeech__model\n___post",
+      "provider_alias_intent": "/v2/texttospeech/model\n",
+      "text": "Perform text to synthesized speech",
+      "category": "Text to Speech",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "model": {
+          "type": "string",
+          "text": "The name of the model to use to synthesize speech. E.g., 'en-US.default-en_male_35'. You can use the Query available text to speech models method to determine the available models",
+          "required": true
+        },
+        "priority": {
+          "type": "number",
+          "text": "An integer priority level between 1 (low priority) and 100 (high priority) for this request. Additional charges may be applied to jobs with higher priority values. Default value is 50."
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "RAW_BODY": {
+          "type": "string",
+          "text": "The text to convert to speech.",
+          "required": true
+        }
+      },
+      "path": {
+        "model": {
+          "type": "string",
+          "text": "The name of the model to use to synthesize speech. E.g., 'en-US.default-en_male_35'. You can use the Query available text to speech models method to determine the available models",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Use this method to submit text to be synthesized.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/texttospeech/{model}\n",
+        "alias_endpoint": "/apptek/v2/texttospeech/model\n",
+        "api_ref": "https://docs.apptek.com/reference/submit-text-to-synthesize-speech"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__texttospeech__adapted__model___post": {
+      "provider_intent": "apptek__v2__texttospeech__adapted__model___post",
+      "provider_alias_intent": "/v2/texttospeech/adapted/model",
+      "text": "Perform text to adapted synthesize speech",
+      "category": "Text to Speech",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "model": {
+          "type": "string",
+          "text": "The model to use for speech synthesis",
+          "required": true
+        },
+        "priority": {
+          "type": "number",
+          "text": "An integer priority level between 1 (low priority) and 100 (high priority) for this request. Additional charges may be applied to jobs with higher priority values. Default value is 50"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "RAW_BODY": {
+          "type": "string",
+          "text": "The multipart request body containing both text and audio file fields."
+        }
+      },
+      "path": {
+        "model": {
+          "type": "string",
+          "text": "The model to use for speech synthesis",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Use this method to submit text to be synthesized. The synthesize output will use features from the provided audio file to mimic the speech within the audio.\nAudio and text files are submitted via a HTTP multipart form POST. Each file is included as a multipart file attachment within the POST. The service supports several different formats for the audio file. The text must be a plain utf-8 encoded text file.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/texttospeech/adapted/{model}",
+        "alias_endpoint": "/apptek/v2/texttospeech/adapted/model",
+        "api_ref": "https://docs.apptek.com/reference/perform-adapted-text-synthesis"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__texttospeech__models___get": {
+      "provider_intent": "apptek__v2__texttospeech__models___get",
+      "provider_alias_intent": "/v2/texttospeech/models",
+      "text": "Query available text to speech models",
+      "category": "Text to Speech",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "This method returns a list of available models that can be used for text to speech",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/texttospeech/models",
+        "alias_endpoint": "/apptek/v2/texttospeech/models",
+        "api_ref": "https://docs.apptek.com/reference/query-available-text-to-speech-models"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__texttospeech__request_id___get": {
+      "provider_intent": "apptek__v2__texttospeech__request_id___get",
+      "provider_alias_intent": "/v2/texttospeech/request_id",
+      "text": "Query text to speech request status and retrieve results",
+      "category": "Text to Speech",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when submitting the request",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when submitting the request",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Check on the status of the request which has been successfully submitted, using the request_id received on submission of that request.\n\nIf results are available, the body of the response will contain a WAV file with the synthesized speech.\nOtherwise, HTTP status code 204 is returned with an empty response. Use the x-status header in the response to determine the request status.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/texttospeech/{request_id}",
+        "alias_endpoint": "/apptek/v2/texttospeech/request_id",
+        "api_ref": "https://docs.apptek.com/reference/query-request-status-and-retrieve-results"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "apptek__v2__texttospeech__request_id___delete": {
+      "provider_intent": "apptek__v2__texttospeech__request_id___delete",
+      "provider_alias_intent": "/v2/texttospeech/request_id",
+      "text": "Remove text to speech results",
+      "category": "Text to Speech",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when the request was submitted.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "request_id": {
+          "type": "string",
+          "text": "The request_id received when the request was submitted.",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "V2",
+        "auth": [],
+        "description": "Use this method to remove text to speech request results.\n\nIMPORTANT: Once results are removed, subsequent requests to retrieve the results will fail.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.apptek.com/api/v2/texttospeech/{request_id}",
+        "alias_endpoint": "/apptek/v2/texttospeech/request_id",
+        "api_ref": "https://docs.apptek.com/reference/remove-text-to-speech-results"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

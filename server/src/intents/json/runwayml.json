@@ -1,0 +1,134 @@
+{
+  "routes": {
+    "runwayml__v1__image_to_video___post": {
+      "provider_intent": "runwayml__v1__image_to_video___post",
+      "provider_alias_intent": "/v1/image_to_video",
+      "text": "Generate a video from an image",
+      "category": "Start generating",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "uri": {
+          "text": "A HTTPS URL or data URI containing an encoded image.",
+          "type": "string",
+          "required": true
+        },
+        "seed": {
+          "text": "If unspecified, a random number is chosen",
+          "type": "number"
+        },
+        "model": {
+          "text": "The model variant to use.",
+          "type": "string",
+          "required": true
+        },
+        "ratio": {
+          "text": "The resolution of the output video.",
+          "type": "string"
+        },
+        "duration": {
+          "text": "The number of seconds of duration for the output video.",
+          "type": "number",
+          "default": "10"
+        },
+        "position": {
+          "text": "The position of the image in the output video.",
+          "type": "string",
+          "required": true
+        },
+        "watermark": {
+          "text": "A boolean indicating whether or not the output video will contain a Runway watermark.",
+          "type": "boolean",
+          "default": "false"
+        },
+        "promptText": {
+          "text": "This should describe in detail what should appear in the output.",
+          "type": "string"
+        },
+        "promptImage": {
+          "text": "PromptImage",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dev.runwayml.com/api/#tag/Start-generating/paths/~1v1~1image_to_video/post",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "It will start a new task to generate a video from an image prompt.",
+        "api_endpoint": "https://api.dev.runwayml.com/v1/image_to_video"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-21T13:05:35.000Z"
+    },
+    "runwayml__v1__tasks__id___get": {
+      "provider_intent": "runwayml__v1__tasks__id___get",
+      "provider_alias_intent": "/v1/tasks/id",
+      "text": "Get task detail",
+      "category": "Task management",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "id": {
+          "text": "The ID of a previously-submitted task that has not been canceled or deleted.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dev.runwayml.com/api/#tag/Task-management/paths/~1v1~1tasks~1%7Bid%7D/get",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Return details about a task. Consumers of this API should not expect updates more frequent than once every five seconds for a given task.",
+        "api_endpoint": "https://api.dev.runwayml.com/v1/tasks/{id}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-21T13:12:58.000Z"
+    },
+    "runwayml__v1__tasks__id___delete": {
+      "provider_intent": "runwayml__v1__tasks__id___delete",
+      "provider_alias_intent": "/v1/tasks/id",
+      "text": "Cancel or delete a task",
+      "category": "Task management",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "id": {
+          "text": "The ID of a previously-submitted task that has not been canceled or deleted.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dev.runwayml.com/api/#tag/Task-management/paths/~1v1~1tasks~1%7Bid%7D/delete",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Tasks that are running, pending, or throttled can be canceled by invoking this method. Invoking this method for other tasks will delete them.",
+        "api_endpoint": "https://api.dev.runwayml.com/v1/tasks/{id}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-21T13:14:05.000Z"
+    }
+  }
+}

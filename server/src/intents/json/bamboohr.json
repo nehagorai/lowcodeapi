@@ -1,0 +1,160 @@
+{
+  "routes": {
+    "bamboohr__api__gateway-php__companydomain__v1__employees__id___get": {
+      "provider_intent": "bamboohr__api__gateway-php__companydomain__v1__employees__id___get",
+      "provider_alias_intent": "/api/gateway.php/companydomain/v1/employees/id",
+      "text": "Get Employee",
+      "category": "Employee",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "{\n  \"id\"": {
+          "type": "{\n    \"type\""
+        },
+        "\"text\"": {
+          "type": "\"ID\"\n    \"required\""
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "{\n  \"id\"": {
+          "type": "{\n    \"type\""
+        },
+        "\"text\"": {
+          "type": "\"ID\"\n    \"required\""
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get Employee",
+        "rate_limit": [],
+        "api_endpoint": "https://api.bamboohr.com/api/gateway.php/{companyDomain}/v1/employees/{id}",
+        "alias_endpoint": "/bamboohr/api/gateway.php/companydomain/v1/employees/id",
+        "api_ref": "https://documentation.bamboohr.com/reference/get-employee"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "api_key",
+          "password": ""
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "bamboohr__api__gateway-php__companydomain__v1__employees__directory___get": {
+      "provider_intent": "bamboohr__api__gateway-php__companydomain__v1__employees__directory___get",
+      "provider_alias_intent": "/api/gateway.php/companydomain/v1/employees/directory",
+      "text": "Get Employee Directory",
+      "category": "Employee",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get Employee Directory",
+        "rate_limit": [],
+        "api_endpoint": "https://api.bamboohr.com/api/gateway.php/{companyDomain}/v1/employees/directory",
+        "alias_endpoint": "/bamboohr/api/gateway.php/companydomain/v1/employees/directory",
+        "api_ref": "https://documentation.bamboohr.com/reference/get-employees-directory-1"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "api_key",
+          "password": ""
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "bamboohr__api__gateway-php__companydomain__v1__employees__id___post": {
+      "provider_intent": "bamboohr__api__gateway-php__companydomain__v1__employees__id___post",
+      "provider_alias_intent": "/api/gateway.php/companydomain/v1/employees/id",
+      "text": "Update Employee",
+      "category": "Employee",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "{\n  \"id\"": {
+          "type": "{\n    \"type\""
+        },
+        "\"text\"": {
+          "type": "\"ID\"\n    \"required\""
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "{\n  \"id\"": {
+          "type": "{\n    \"type\""
+        },
+        "\"text\"": {
+          "type": "\"ID\"\n    \"required\""
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update Employee",
+        "rate_limit": [],
+        "api_endpoint": "https://api.bamboohr.com/api/gateway.php/{companyDomain}/v1/employees/{id}",
+        "alias_endpoint": "/bamboohr/api/gateway.php/companydomain/v1/employees/id",
+        "api_ref": "https://documentation.bamboohr.com/reference/update-employee"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "api_key",
+          "password": ""
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "bamboohr__api__gateway-php__companydomain__v1__employees___post": {
+      "provider_intent": "bamboohr__api__gateway-php__companydomain__v1__employees___post",
+      "provider_alias_intent": "/api/gateway.php/companydomain/v1/employees",
+      "text": "Add Employee",
+      "category": "Employee",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Add Employee",
+        "rate_limit": [],
+        "api_endpoint": "https://api.bamboohr.com/api/gateway.php/{companyDomain}/v1/employees",
+        "alias_endpoint": "/bamboohr/api/gateway.php/companydomain/v1/employees",
+        "api_ref": "https://documentation.bamboohr.com/reference/add-employee-1"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "api_key",
+          "password": ""
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

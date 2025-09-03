@@ -1,0 +1,154 @@
+{
+  "routes": {
+    "xero__api-xro__2-0__accounts___get": {
+      "provider_intent": "xero__api-xro__2-0__accounts___get",
+      "provider_alias_intent": "/api.xro/2.0/accounts",
+      "text": "GET Accounts",
+      "category": "Accounts",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "Allows you to archive an account",
+        "rate_limit": [],
+        "api_endpoint": "https://api.xero.com/api.xro/2.0/Accounts",
+        "alias_endpoint": "/xero/api.xro/2.0/accounts",
+        "api_ref": "https://developer.xero.com/documentation/api/accounting/accounts"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "xero__api-xro__2-0__endpoint__guid__attachments___get": {
+      "provider_intent": "xero__api-xro__2-0__endpoint__guid__attachments___get",
+      "provider_alias_intent": "/api.xro/2.0/endpoint/guid/attachments",
+      "text": "GET Attachments",
+      "category": "Attachments",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "Endpoint": {
+          "type": "string",
+          "text": "Endpoint"
+        },
+        "Guid": {
+          "type": "string",
+          "text": "Guid"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "Endpoint": {
+          "type": "string",
+          "text": "Endpoint"
+        },
+        "Guid": {
+          "type": "string",
+          "text": "Guid"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "Allows you to download the content of a specific attachments.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.xero.com/api.xro/2.0/{Endpoint}/{Guid}/Attachments",
+        "alias_endpoint": "/xero/api.xro/2.0/endpoint/guid/attachments",
+        "api_ref": "https://developer.xero.com/documentation/api/accounting/attachments"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "xero__api-xro__2-0__banktransactions___get": {
+      "provider_intent": "xero__api-xro__2-0__banktransactions___get",
+      "provider_alias_intent": "/api.xro/2.0/banktransactions",
+      "text": "GET BankTransactions",
+      "category": "Bank Transactions",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "Allows you to retrieve any spend or receive money transactions",
+        "rate_limit": [],
+        "api_endpoint": "https://api.xero.com/api.xro/2.0/BankTransactions",
+        "alias_endpoint": "/xero/api.xro/2.0/banktransactions",
+        "api_ref": "https://developer.xero.com/documentation/api/accounting/banktransactions"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "xero__api-xro__2-0__items___get": {
+      "provider_intent": "xero__api-xro__2-0__items___get",
+      "provider_alias_intent": "/api.xro/2.0/items",
+      "text": "GET Items",
+      "category": "Items",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "Use this method to retrieve either one or many items",
+        "rate_limit": [],
+        "api_endpoint": "https://api.xero.com/api.xro/2.0/Items",
+        "alias_endpoint": "/xero/api.xro/2.0/items",
+        "api_ref": "https://developer.xero.com/documentation/api/accounting/items#get-items"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

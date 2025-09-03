@@ -1,0 +1,78 @@
+{
+  "routes": {
+    "gorgias__api__account___get": {
+      "provider_intent": "gorgias__api__account___get",
+      "provider_alias_intent": "/api/account",
+      "text": "Retrieve your account",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "subdomain": {
+          "type": "string",
+          "replace_key": "{subdomain}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Retrieve your account",
+        "rate_limit": [],
+        "api_endpoint": "https://{subdomain}.gorgias.com/api/account",
+        "alias_endpoint": "/gorgias/api/account",
+        "api_ref": "https://developers.gorgias.com/reference/get_api-account"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "email",
+          "password": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gorgias__api__customers___get": {
+      "provider_intent": "gorgias__api__customers___get",
+      "provider_alias_intent": "/api/customers",
+      "text": "List customers",
+      "category": "ooo",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "subdomain": {
+          "type": "string",
+          "replace_key": "{subdomain}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "List customers, paginated, and ordered by their name",
+        "rate_limit": [],
+        "api_endpoint": "https://{subdomain}.gorgias.com/api/customers",
+        "alias_endpoint": "/gorgias/api/customers",
+        "api_ref": "https://developers.gorgias.com/reference/get_api-customers"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "email",
+          "password": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

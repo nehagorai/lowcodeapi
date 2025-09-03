@@ -1,0 +1,3405 @@
+{
+  "routes": {
+    "googledrive__drive__v3__about___get": {
+      "provider_intent": "googledrive__drive__v3__about___get",
+      "provider_alias_intent": "/drive/v3/about",
+      "text": "Gets information about the user the user's Drive and system capabilities.",
+      "category": "About",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Gets information about the user the user's Drive and system capabilities.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/about",
+        "alias_endpoint": "/googledrive/drive/v3/about",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/about/get"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__apps__app_id___get": {
+      "provider_intent": "googledrive__drive__v3__apps__app_id___get",
+      "provider_alias_intent": "/drive/v3/apps/app_id",
+      "text": "Gets a specific app.",
+      "category": "Apps",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "app_id": {
+          "type": "string",
+          "text": "The ID of the app",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "app_id": {
+          "type": "string",
+          "text": "The ID of the app",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Gets a specific app.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/apps/{app_id}",
+        "alias_endpoint": "/googledrive/drive/v3/apps/app_id",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/apps/get"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__apps___get": {
+      "provider_intent": "googledrive__drive__v3__apps___get",
+      "provider_alias_intent": "/drive/v3/apps",
+      "text": "Lists a user's installed apps.",
+      "category": "Apps",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "appFilterExtensions": {
+          "type": "string",
+          "text": "A comma-separated list of file extensions to limit returned results. All results within the given app query scope which can open any of the given file extensions are included in the response. If appFilterMimeTypes are provided as well, the result is a union of the two resulting app lists."
+        },
+        "appFilterMimeTypes": {
+          "type": "string",
+          "text": "A comma-separated list of file extensions to limit returned results. All results within the given app query scope which can open any of the given MIME types will be included in the response. If appFilterExtensions are provided as well, the result is a union of the two resulting app lists."
+        },
+        "languageCode": {
+          "type": "string",
+          "text": "A language or locale code, as defined by BCP 47, with some extensions from Unicode's LDML format (http://www.unicode.org/reports/tr35/)."
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Lists a user's installed apps.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/apps",
+        "alias_endpoint": "/googledrive/drive/v3/apps",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/apps/list"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__changes__startpagetoken___get": {
+      "provider_intent": "googledrive__drive__v3__changes__startpagetoken___get",
+      "provider_alias_intent": "/drive/v3/changes/startpagetoken",
+      "text": "Gets the starting pageToken for listing future changes.",
+      "category": "Changes",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "driveId": {
+          "type": "string",
+          "text": "The ID of the shared drive for which the starting pageToken for listing future changes from that shared drive is returned"
+        },
+        "supportsAllDrives": {
+          "type": "boolean",
+          "text": "Whether the requesting application supports both My Drives and shared drives",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Gets the starting pageToken for listing future changes.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/changes/startPageToken",
+        "alias_endpoint": "/googledrive/drive/v3/changes/startpagetoken",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/changes/getStartPageToken"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__changes___get": {
+      "provider_intent": "googledrive__drive__v3__changes___get",
+      "provider_alias_intent": "/drive/v3/changes",
+      "text": "Lists the changes for a user or shared drive.",
+      "category": "Changes",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "driveId": {
+          "type": "string",
+          "text": "The shared drive from which changes are returned"
+        },
+        "includeCorpusRemovals": {
+          "type": "boolean",
+          "text": "Whether changes should include the file resource if the file is still accessible by the user at the time of the request even when a file was removed from the list of changes and there will be no further change entries for this file",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "includeItemsFromAllDrives": {
+          "type": "boolean",
+          "text": "Whether both My Drive and shared drive items should be included in results",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "includeLabels": {
+          "type": "string",
+          "text": "A comma-separated list of IDs of labels to include in the labelInfo part of the response"
+        },
+        "includePermissionsForView": {
+          "type": "string",
+          "text": "Specifies which additional view's permissions to include in the response"
+        },
+        "includeRemoved": {
+          "type": "boolean",
+          "text": "Whether to include changes indicating that items have been removed from the list of changes for example by deletion or loss of access",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "pageSize": {
+          "type": "integer",
+          "text": "The maximum number of changes to return per page"
+        },
+        "pageToken": {
+          "type": "string",
+          "text": "The token for continuing a previous list request on the next page",
+          "required": true
+        },
+        "restrictToMyDrive": {
+          "type": "boolean",
+          "text": "Whether to restrict the results to changes inside the My Drive hierarchy",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "spaces": {
+          "type": "string",
+          "text": "A comma-separated list of spaces to query within the corpora"
+        },
+        "supportsAllDrives": {
+          "type": "boolean",
+          "text": "Whether the requesting application supports both My Drives and shared drives",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Lists the changes for a user or shared drive.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/changes",
+        "alias_endpoint": "/googledrive/drive/v3/changes",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/changes/list"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__changes__watch___post": {
+      "provider_intent": "googledrive__drive__v3__changes__watch___post",
+      "provider_alias_intent": "/drive/v3/changes/watch",
+      "text": "Subscribes to changes for a user.",
+      "category": "Changes",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "driveId": {
+          "type": "string",
+          "text": "The shared drive from which changes are returned"
+        },
+        "includeCorpusRemovals": {
+          "type": "boolean",
+          "text": "Whether changes should include the file resource if the file is still accessible by the user at the time of the request even when a file was removed from the list of changes and there will be no further change entries for this file",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "includeItemsFromAllDrives": {
+          "type": "boolean",
+          "text": "Whether both My Drive and shared drive items should be included in results",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "includeLabels": {
+          "type": "string",
+          "text": "A comma-separated list of IDs of labels to include in the labelInfo part of the response"
+        },
+        "includePermissionsForView": {
+          "type": "string",
+          "text": "Specifies which additional view's permissions to include in the response"
+        },
+        "includeRemoved": {
+          "type": "boolean",
+          "text": "Whether to include changes indicating that items have been removed from the list of changes for example by deletion or loss of access",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "pageSize": {
+          "type": "integer",
+          "text": "The maximum number of changes to return per page"
+        },
+        "pageToken": {
+          "type": "string",
+          "text": "The token for continuing a previous list request on the next page",
+          "required": true
+        },
+        "restrictToMyDrive": {
+          "type": "boolean",
+          "text": "Whether to restrict the results to changes inside the My Drive hierarchy",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "spaces": {
+          "type": "string",
+          "text": "A comma-separated list of spaces to query within the corpora"
+        },
+        "supportsAllDrives": {
+          "type": "boolean",
+          "text": "Whether the requesting application supports both My Drives and shared drives",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "payload": {
+          "type": "boolean",
+          "text": "A Boolean value to indicate whether payload is wanted.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "id": {
+          "type": "string",
+          "text": "A UUID or similar unique string that identifies this channel.",
+          "required": true
+        },
+        "resourceId": {
+          "type": "string",
+          "text": "An opaque ID that identifies the resource being watched on this channel. Stable across different API versions.",
+          "required": true
+        },
+        "resourceUri": {
+          "type": "string",
+          "text": "A version-specific identifier for the watched resource.",
+          "required": true
+        },
+        "token": {
+          "type": "string",
+          "text": "An arbitrary string delivered to the target address with each notification delivered over this channel."
+        },
+        "expiration": {
+          "type": "string",
+          "text": "Date and time of notification channel expiration, expressed as a Unix timestamp, in milliseconds."
+        },
+        "type": {
+          "type": "string",
+          "text": "The type of delivery mechanism used for this channel. Valid values are 'web_hook' or 'webhook'.",
+          "required": true
+        },
+        "address": {
+          "type": "string",
+          "text": "The address where notifications are delivered for this channel.",
+          "required": true
+        },
+        "params": {
+          "type": "object",
+          "text": "Additional parameters controlling delivery channel behavior. An object containing a list of 'key': value pairs. Example: { 'name': 'wrench', 'mass': '1.3kg', 'count': '3' }."
+        },
+        "kind": {
+          "type": "string",
+          "text": "Identifies this as a notification channel used to watch for changes to a resource, which is api#channel.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Subscribes to changes for a user.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/changes/watch",
+        "alias_endpoint": "/googledrive/drive/v3/changes/watch",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/changes/watch"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__channels__stop___post": {
+      "provider_intent": "googledrive__drive__v3__channels__stop___post",
+      "provider_alias_intent": "/drive/v3/channels/stop",
+      "text": "Stop watching resources through this channel.",
+      "category": "Channels",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "payload": {
+          "type": "boolean",
+          "text": "A Boolean value to indicate whether payload is wanted.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "id": {
+          "type": "string",
+          "text": "A UUID or similar unique string that identifies this channel.",
+          "required": true
+        },
+        "resourceId": {
+          "type": "string",
+          "text": "An opaque ID that identifies the resource being watched on this channel. Stable across different API versions.",
+          "required": true
+        },
+        "resourceUri": {
+          "type": "string",
+          "text": "A version-specific identifier for the watched resource.",
+          "required": true
+        },
+        "token": {
+          "type": "string",
+          "text": "An arbitrary string delivered to the target address with each notification delivered over this channel."
+        },
+        "expiration": {
+          "type": "string",
+          "text": "Date and time of notification channel expiration, expressed as a Unix timestamp, in milliseconds."
+        },
+        "type": {
+          "type": "string",
+          "text": "The type of delivery mechanism used for this channel. Valid values are 'web_hook' or 'webhook'.",
+          "required": true
+        },
+        "address": {
+          "type": "string",
+          "text": "The address where notifications are delivered for this channel.",
+          "required": true
+        },
+        "params": {
+          "type": "object",
+          "text": "Additional parameters controlling delivery channel behavior. An object containing a list of 'key': value pairs. Example: { 'name': 'wrench', 'mass': '1.3kg', 'count': '3' }."
+        },
+        "kind": {
+          "type": "string",
+          "text": "Identifies this as a notification channel used to watch for changes to a resource, which is api#channel.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Stop watching resources through this channel.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/channels/stop",
+        "alias_endpoint": "/googledrive/drive/v3/channels/stop",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/channels/stop"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__file_id__comments___post": {
+      "provider_intent": "googledrive__drive__v3__files__file_id__comments___post",
+      "provider_alias_intent": "/drive/v3/files/file_id/comments",
+      "text": "Creates a comment on a file.",
+      "category": "Comments",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "anchor": {
+          "type": "string",
+          "text": "A region of the document represented as a JSON string. For details on defining anchor properties, refer to Manage comments and replies."
+        },
+        "content": {
+          "type": "string",
+          "text": "The plain text content of the comment. This field is used for setting the content, while htmlContent should be displayed.",
+          "required": true
+        },
+        "quotedFileContent": {
+          "type": "object",
+          "text": "The file content to which the comment refers, typically within the anchor region. For a text file, for example, this would be the text at the location of the comment."
+        }
+      },
+      "path": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Creates a comment on a file.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/{file_id}/comments",
+        "alias_endpoint": "/googledrive/drive/v3/files/file_id/comments",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/comments/create"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__file_id__comments__comment_id___delete": {
+      "provider_intent": "googledrive__drive__v3__files__file_id__comments__comment_id___delete",
+      "provider_alias_intent": "/drive/v3/files/file_id/comments/comment_id",
+      "text": "Deletes a comment.",
+      "category": "Comments",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "comment_id": {
+          "type": "string",
+          "text": "The ID of the comment",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "comment_id": {
+          "type": "string",
+          "text": "The ID of the comment",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Deletes a comment.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/{file_id}/comments/{comment_id}",
+        "alias_endpoint": "/googledrive/drive/v3/files/file_id/comments/comment_id",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/comments/delete"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__file_id__comments__comment_id___get": {
+      "provider_intent": "googledrive__drive__v3__files__file_id__comments__comment_id___get",
+      "provider_alias_intent": "/drive/v3/files/file_id/comments/comment_id",
+      "text": "Gets a comment by ID.",
+      "category": "Comments",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "comment_id": {
+          "type": "string",
+          "text": "The ID of the comment",
+          "required": true
+        },
+        "includeDeleted": {
+          "type": "boolean",
+          "text": "Whether to return deleted comments",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "comment_id": {
+          "type": "string",
+          "text": "The ID of the comment",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Gets a comment by ID.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/{file_id}/comments/{comment_id}",
+        "alias_endpoint": "/googledrive/drive/v3/files/file_id/comments/comment_id",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/comments/get"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__file_id__comments___get": {
+      "provider_intent": "googledrive__drive__v3__files__file_id__comments___get",
+      "provider_alias_intent": "/drive/v3/files/file_id/comments",
+      "text": "Lists a file's comments.",
+      "category": "Comments",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "includeDeleted": {
+          "type": "boolean",
+          "text": "Whether to include deleted comments",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "pageSize": {
+          "type": "number",
+          "text": "The maximum number of comments to return per page"
+        },
+        "pageToken": {
+          "type": "string",
+          "text": "The token for continuing a previous list request on the next page"
+        },
+        "startModifiedTime": {
+          "type": "string",
+          "text": "The minimum value of 'modifiedTime' for the result comments (RFC 3339 date-time)"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Lists a file's comments.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/{file_id}/comments",
+        "alias_endpoint": "/googledrive/drive/v3/files/file_id/comments",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/comments/list"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__file_id__comments__comment_id___patch": {
+      "provider_intent": "googledrive__drive__v3__files__file_id__comments__comment_id___patch",
+      "provider_alias_intent": "/drive/v3/files/file_id/comments/comment_id",
+      "text": "Updates a comment with patch semantics.",
+      "category": "Comments",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "comment_id": {
+          "type": "string",
+          "text": "The ID of the comment",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "anchor": {
+          "type": "string",
+          "text": "A region of the document represented as a JSON string. For details on defining anchor properties, refer to Manage comments and replies."
+        },
+        "content": {
+          "type": "string",
+          "text": "The plain text content of the comment. This field is used for setting the content, while htmlContent should be displayed.",
+          "required": true
+        },
+        "quotedFileContent": {
+          "type": "object",
+          "text": "The file content to which the comment refers, typically within the anchor region. For a text file, for example, this would be the text at the location of the comment."
+        }
+      },
+      "path": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "comment_id": {
+          "type": "string",
+          "text": "The ID of the comment",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Updates a comment with patch semantics.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/{file_id}/comments/{comment_id}",
+        "alias_endpoint": "/googledrive/drive/v3/files/file_id/comments/comment_id",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/comments/update"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__drives___post": {
+      "provider_intent": "googledrive__drive__v3__drives___post",
+      "provider_alias_intent": "/drive/v3/drives",
+      "text": "Creates a shared drive.",
+      "category": "Drives",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "requestId": {
+          "type": "string",
+          "text": "An ID such as a random UUID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "The name of this shared drive.",
+          "required": true
+        },
+        "colorRgb": {
+          "type": "string",
+          "text": "The color of this shared drive as an RGB hex string. It can only be set on a drive.drives.update request that does not set themeId."
+        },
+        "themeId": {
+          "type": "string",
+          "text": "The ID of the theme from which the background image and color will be set. The set of possible driveThemes can be retrieved from a drive.about.get response. When not specified on a drive.drives.create request, a random theme is chosen from which the background image and color are set. This is a write-only field; it can only be set on requests that don't set colorRgb or backgroundImageFile."
+        },
+        "backgroundImageFile": {
+          "type": "object",
+          "text": "An image file and cropping parameters from which a background image for this shared drive is set. This is a write only field; it can only be set on drive.drives.update requests that don't set themeId. When specified, all fields of the backgroundImageFile must be set."
+        },
+        "hidden": {
+          "type": "boolean",
+          "text": "Whether the shared drive is hidden from default view.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "restrictions": {
+          "type": "object",
+          "text": "A set of restrictions that apply to this shared drive or items inside this shared drive. Note that restrictions can't be set when creating a shared drive. To add a restriction, first create a shared drive and then use drives.update to add restrictions."
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Creates a shared drive.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/drives",
+        "alias_endpoint": "/googledrive/drive/v3/drives",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/drives/create"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__drives__drive_id___delete": {
+      "provider_intent": "googledrive__drive__v3__drives__drive_id___delete",
+      "provider_alias_intent": "/drive/v3/drives/drive_id",
+      "text": "Permanently deletes a shared drive for which the user is an organizer.",
+      "category": "Drives",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "drive_id": {
+          "type": "string",
+          "text": "The ID of the shared drive",
+          "required": true
+        },
+        "allowItemDeletion": {
+          "type": "boolean",
+          "text": "Whether any items inside the shared drive should also be deleted",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "useDomainAdminAccess": {
+          "type": "boolean",
+          "text": "Issue the request as a domain administrator; if set to true then the requester will be granted access if they are an administrator of the domain to which the shared drive belongs",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "drive_id": {
+          "type": "string",
+          "text": "The ID of the shared drive",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Permanently deletes a shared drive for which the user is an organizer.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/drives/{drive_id}",
+        "alias_endpoint": "/googledrive/drive/v3/drives/drive_id",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/drives/delete"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__drives__drive_id___get": {
+      "provider_intent": "googledrive__drive__v3__drives__drive_id___get",
+      "provider_alias_intent": "/drive/v3/drives/drive_id",
+      "text": "Gets a shared drive's metadata by ID.",
+      "category": "Drives",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "drive_id": {
+          "type": "string",
+          "text": "The ID of the shared drive",
+          "required": true
+        },
+        "useDomainAdminAccess": {
+          "type": "boolean",
+          "text": "Issue the request as a domain administrator; if set to true then the requester will be granted access if they are an administrator of the domain to which the shared drive belongs",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "drive_id": {
+          "type": "string",
+          "text": "The ID of the shared drive",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Gets a shared drive's metadata by ID.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/drives/{drive_id}",
+        "alias_endpoint": "/googledrive/drive/v3/drives/drive_id",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/drives/get"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__drives__drive_id__hide___post": {
+      "provider_intent": "googledrive__drive__v3__drives__drive_id__hide___post",
+      "provider_alias_intent": "/drive/v3/drives/drive_id/hide",
+      "text": "Hides a shared drive from the default view.",
+      "category": "Drives",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "drive_id": {
+          "type": "string",
+          "text": "The ID of the shared drive",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "drive_id": {
+          "type": "string",
+          "text": "The ID of the shared drive",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Hides a shared drive from the default view.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/drives/{drive_id}/hide",
+        "alias_endpoint": "/googledrive/drive/v3/drives/drive_id/hide",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/drives/hide"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__drives___get": {
+      "provider_intent": "googledrive__drive__v3__drives___get",
+      "provider_alias_intent": "/drive/v3/drives",
+      "text": "Lists the user's shared drives.",
+      "category": "Drives",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "pageSize": {
+          "type": "number",
+          "text": "Maximum number of shared drives to return per page"
+        },
+        "pageToken": {
+          "type": "string",
+          "text": "Page token for shared drives"
+        },
+        "q": {
+          "type": "string",
+          "text": "Query string for searching shared drives"
+        },
+        "useDomainAdminAccess": {
+          "type": "boolean",
+          "text": "Issue the request as a domain administrator; if set to true then all shared drives of the domain in which the requester is an administrator are returned",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Lists the user's shared drives.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/drives",
+        "alias_endpoint": "/googledrive/drive/v3/drives",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/drives/list"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__drives__drive_id__unhide___post": {
+      "provider_intent": "googledrive__drive__v3__drives__drive_id__unhide___post",
+      "provider_alias_intent": "/drive/v3/drives/drive_id/unhide",
+      "text": "Restores a shared drive to the default view.",
+      "category": "Drives",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "drive_id": {
+          "type": "string",
+          "text": "The ID of the shared drive",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "drive_id": {
+          "type": "string",
+          "text": "The ID of the shared drive",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Restores a shared drive to the default view.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/drives/{drive_id}/unhide",
+        "alias_endpoint": "/googledrive/drive/v3/drives/drive_id/unhide",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/drives/unhide"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__drives__drive_id___patch": {
+      "provider_intent": "googledrive__drive__v3__drives__drive_id___patch",
+      "provider_alias_intent": "/drive/v3/drives/drive_id",
+      "text": "Updates the metadata for a shared drive.",
+      "category": "Drives",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "drive_id": {
+          "type": "string",
+          "text": "The ID of the shared drive",
+          "required": true
+        },
+        "useDomainAdminAccess": {
+          "type": "boolean",
+          "text": "Issue the request as a domain administrator",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "The name of this shared drive.",
+          "required": true
+        },
+        "colorRgb": {
+          "type": "string",
+          "text": "The color of this shared drive as an RGB hex string. It can only be set on a drive.drives.update request that does not set themeId."
+        },
+        "themeId": {
+          "type": "string",
+          "text": "The ID of the theme from which the background image and color will be set. The set of possible driveThemes can be retrieved from a drive.about.get response. When not specified on a drive.drives.create request, a random theme is chosen from which the background image and color are set. This is a write-only field; it can only be set on requests that don't set colorRgb or backgroundImageFile."
+        },
+        "backgroundImageFile": {
+          "type": "object",
+          "text": "An image file and cropping parameters from which a background image for this shared drive is set. This is a write only field; it can only be set on drive.drives.update requests that don't set themeId. When specified, all fields of the backgroundImageFile must be set."
+        },
+        "hidden": {
+          "type": "boolean",
+          "text": "Whether the shared drive is hidden from default view.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "restrictions": {
+          "type": "object",
+          "text": "A set of restrictions that apply to this shared drive or items inside this shared drive. Note that restrictions can't be set when creating a shared drive. To add a restriction, first create a shared drive and then use drives.update to add restrictions."
+        }
+      },
+      "path": {
+        "drive_id": {
+          "type": "string",
+          "text": "The ID of the shared drive",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Updates the metadata for a shared drive.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/drives/{drive_id}",
+        "alias_endpoint": "/googledrive/drive/v3/drives/drive_id",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/drives/update"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__file_id__copy___post": {
+      "provider_intent": "googledrive__drive__v3__files__file_id__copy___post",
+      "provider_alias_intent": "/drive/v3/files/file_id/copy",
+      "text": "Creates a copy of a file and applies any requested updates with patch semantics.",
+      "category": "Files",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "ignoreDefaultVisibility": {
+          "type": "boolean",
+          "text": "Whether to ignore the domain's default visibility settings for the created file",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "keepRevisionForever": {
+          "type": "boolean",
+          "text": "Whether to set the 'keepForever' field in the new head revision",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "ocrLanguage": {
+          "type": "string",
+          "text": "A language hint for OCR processing during image import (ISO 639-1 code)"
+        },
+        "supportsAllDrives": {
+          "type": "boolean",
+          "text": "Whether the requesting application supports both My Drives and shared drives",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "includePermissionsForView": {
+          "type": "string",
+          "text": "Specifies which additional view's permissions to include in the response",
+          "enum": [
+            "published"
+          ]
+        },
+        "includeLabels": {
+          "type": "string",
+          "text": "A comma-separated list of IDs of labels to include in the labelInfo part of the response"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "copyRequiresWriterPermission": {
+          "type": "boolean",
+          "text": "Whether the options to copy, print, or download this file, should be disabled for readers and commenters.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "contentHints": {
+          "type": "object",
+          "text": "Additional information about the content of the file. These fields are never populated in responses."
+        },
+        "writersCanShare": {
+          "type": "boolean",
+          "text": "Whether users with only writer permission can modify the file's permissions. Not populated for items in shared drives.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "mimeType": {
+          "type": "string",
+          "text": "The MIME type of the file. Google Drive attempts to automatically detect an appropriate value from uploaded content, if no value is provided. The value cannot be changed unless a new revision is uploaded. If a file is created with a Google Doc MIME type, the uploaded content is imported, if possible. The supported import formats are published in the About resource."
+        },
+        "parents": {
+          "type": "array",
+          "text": "The ID of the parent folder containing the file. A file can only have one parent folder; specifying multiple parents isn't supported. If not specified as part of a create request, the file is placed directly in the user's My Drive folder. If not specified as part of a copy request, the file inherits any discoverable parent of the source file. files.update requests must use the addParents and removeParents parameters to modify the parents list."
+        },
+        "folderColorRgb": {
+          "type": "string",
+          "text": "The color for a folder or a shortcut to a folder as an RGB hex string. The supported colors are published in the folderColorPalette field of the About resource. If an unsupported color is specified, the closest color in the palette is used instead."
+        },
+        "id": {
+          "type": "string",
+          "text": "The ID of the file."
+        },
+        "name": {
+          "type": "string",
+          "text": "The name of the file. This is not necessarily unique within a folder. Note that for immutable items such as the top level folders of shared drives, My Drive root folder, and Application Data folder the name is constant."
+        },
+        "description": {
+          "type": "string",
+          "text": "A short description of the file."
+        },
+        "starred": {
+          "type": "boolean",
+          "text": "Whether the user has starred the file.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "trashed": {
+          "type": "boolean",
+          "text": "Whether the file has been trashed, either explicitly or from a trashed parent folder. Only the owner may trash a file, and other users cannot see files in the owner's trash.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "createdTime": {
+          "type": "string",
+          "text": "The time at which the file was created (RFC 3339 date-time)."
+        },
+        "modifiedTime": {
+          "type": "string",
+          "text": "The last time the file was modified by anyone (RFC 3339 date-time). Note that setting modifiedTime also updates modifiedByMeTime for the user."
+        },
+        "viewedByMeTime": {
+          "type": "string",
+          "text": "The last time the file was viewed by the user (RFC 3339 date-time)."
+        },
+        "originalFilename": {
+          "type": "string",
+          "text": "The original filename of the uploaded content if available, or else the original value of the name field. This is only available for files with binary content in Google Drive."
+        },
+        "properties": {
+          "type": "object",
+          "text": "A collection of arbitrary key-value pairs which are visible to all apps. Entries with null values are cleared in update and copy requests. An object containing a list of 'key': value pairs. Example: { 'name': 'wrench', 'mass': '1.3kg', 'count': '3' }."
+        },
+        "appProperties": {
+          "type": "object",
+          "text": "A collection of arbitrary key-value pairs which are private to the requesting app. Entries with null values are cleared in update and copy requests. These properties can only be retrieved using an authenticated request. An authenticated request uses an access token obtained with an OAuth 2 client ID. You cannot use an API key to retrieve private properties. An object containing a list of 'key': value pairs. Example: { 'name': 'wrench', 'mass': '1.3kg', 'count': '3' }."
+        },
+        "contentRestrictions": {
+          "type": "array",
+          "text": "Restrictions for accessing the content of the file. Only populated if such a restriction exists."
+        }
+      },
+      "path": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Creates a copy of a file and applies any requested updates with patch semantics.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/{file_id}/copy",
+        "alias_endpoint": "/googledrive/drive/v3/files/file_id/copy",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/files/copy"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files___post": {
+      "provider_intent": "googledrive__drive__v3__files___post",
+      "provider_alias_intent": "/drive/v3/files",
+      "text": "Creates a file.",
+      "category": "Files",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "uploadType": {
+          "type": "string",
+          "text": "The type of upload request to the /upload URI. If you are uploading data with an /upload URI, this field is required. If you are creating a metadata-only file, this field is not required. Additionally, this field is not shown in the 'Try this method' widget because the widget doesn't support data uploads.",
+          "enum": [
+            "media",
+            "multipart",
+            "resumable"
+          ]
+        },
+        "ignoreDefaultVisibility": {
+          "type": "boolean",
+          "text": "Whether to ignore the domain's default visibility settings for the created file",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "keepRevisionForever": {
+          "type": "boolean",
+          "text": "Whether to set the 'keepForever' field in the new head revision",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "ocrLanguage": {
+          "type": "string",
+          "text": "A language hint for OCR processing during image import (ISO 639-1 code)"
+        },
+        "supportsAllDrives": {
+          "type": "boolean",
+          "text": "Whether the requesting application supports both My Drives and shared drives",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "useContentAsIndexableText": {
+          "type": "boolean",
+          "text": "Whether to use the uploaded content as indexable text",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "includePermissionsForView": {
+          "type": "string",
+          "text": "Specifies which additional view's permissions to include in the response"
+        },
+        "includeLabels": {
+          "type": "string",
+          "text": "A comma-separated list of IDs of labels to include in the labelInfo part of the response"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "copyRequiresWriterPermission": {
+          "type": "boolean",
+          "text": "Whether the options to copy, print, or download this file, should be disabled for readers and commenters.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "contentHints": {
+          "type": "object",
+          "text": "Additional information about the content of the file. These fields are never populated in responses."
+        },
+        "writersCanShare": {
+          "type": "boolean",
+          "text": "Whether users with only writer permission can modify the file's permissions. Not populated for items in shared drives.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "mimeType": {
+          "type": "string",
+          "text": "The MIME type of the file. Google Drive attempts to automatically detect an appropriate value from uploaded content, if no value is provided. The value cannot be changed unless a new revision is uploaded. If a file is created with a Google Doc MIME type, the uploaded content is imported, if possible. The supported import formats are published in the About resource."
+        },
+        "parents": {
+          "type": "array",
+          "text": "The ID of the parent folder containing the file. A file can only have one parent folder; specifying multiple parents isn't supported. If not specified as part of a create request, the file is placed directly in the user's My Drive folder. If not specified as part of a copy request, the file inherits any discoverable parent of the source file. files.update requests must use the addParents and removeParents parameters to modify the parents list."
+        },
+        "folderColorRgb": {
+          "type": "string",
+          "text": "The color for a folder or a shortcut to a folder as an RGB hex string. The supported colors are published in the folderColorPalette field of the About resource. If an unsupported color is specified, the closest color in the palette is used instead."
+        },
+        "id": {
+          "type": "string",
+          "text": "The ID of the file."
+        },
+        "name": {
+          "type": "string",
+          "text": "The name of the file. This is not necessarily unique within a folder. Note that for immutable items such as the top level folders of shared drives, My Drive root folder, and Application Data folder the name is constant."
+        },
+        "description": {
+          "type": "string",
+          "text": "A short description of the file."
+        },
+        "starred": {
+          "type": "boolean",
+          "text": "Whether the user has starred the file.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "trashed": {
+          "type": "boolean",
+          "text": "Whether the file has been trashed, either explicitly or from a trashed parent folder. Only the owner may trash a file, and other users cannot see files in the owner's trash.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "createdTime": {
+          "type": "string",
+          "text": "The time at which the file was created (RFC 3339 date-time)."
+        },
+        "modifiedTime": {
+          "type": "string",
+          "text": "The last time the file was modified by anyone (RFC 3339 date-time). Note that setting modifiedTime also updates modifiedByMeTime for the user."
+        },
+        "viewedByMeTime": {
+          "type": "string",
+          "text": "The last time the file was viewed by the user (RFC 3339 date-time)."
+        },
+        "originalFilename": {
+          "type": "string",
+          "text": "The original filename of the uploaded content if available, or else the original value of the name field. This is only available for files with binary content in Google Drive."
+        },
+        "properties": {
+          "type": "object",
+          "text": "A collection of arbitrary key-value pairs which are visible to all apps. Entries with null values are cleared in update and copy requests. An object containing a list of 'key': value pairs. Example: { 'name': 'wrench', 'mass': '1.3kg', 'count': '3' }."
+        },
+        "appProperties": {
+          "type": "object",
+          "text": "A collection of arbitrary key-value pairs which are private to the requesting app. Entries with null values are cleared in update and copy requests. These properties can only be retrieved using an authenticated request. An authenticated request uses an access token obtained with an OAuth 2 client ID. You cannot use an API key to retrieve private properties. An object containing a list of 'key': value pairs. Example: { 'name': 'wrench', 'mass': '1.3kg', 'count': '3' }."
+        },
+        "contentRestrictions": {
+          "type": "array",
+          "text": "Restrictions for accessing the content of the file. Only populated if such a restriction exists."
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Creates a file.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files",
+        "alias_endpoint": "/googledrive/drive/v3/files",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/files/create"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__file_id___delete": {
+      "provider_intent": "googledrive__drive__v3__files__file_id___delete",
+      "provider_alias_intent": "/drive/v3/files/file_id",
+      "text": "Permanently deletes a file owned by the user without moving it to the trash.",
+      "category": "Files",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "supportsAllDrives": {
+          "type": "boolean",
+          "text": "Whether the requesting application supports both My Drives and shared drives",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Permanently deletes a file owned by the user without moving it to the trash.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/{file_id}",
+        "alias_endpoint": "/googledrive/drive/v3/files/file_id",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/files/delete"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__trash___delete": {
+      "provider_intent": "googledrive__drive__v3__files__trash___delete",
+      "provider_alias_intent": "/drive/v3/files/trash",
+      "text": "Permanently deletes all trashed files of a user or shared drive.",
+      "category": "Files",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "driveId": {
+          "type": "string",
+          "text": "If set empties the trash of the provided shared drive"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Permanently deletes all trashed files of a user or shared drive.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/trash",
+        "alias_endpoint": "/googledrive/drive/v3/files/trash",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/files/emptyTrash"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__file_id__export___get": {
+      "provider_intent": "googledrive__drive__v3__files__file_id__export___get",
+      "provider_alias_intent": "/drive/v3/files/file_id/export",
+      "text": "Exports a Google Workspace document to the requested MIME type and returns exported byte content.",
+      "category": "Files",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "mimeType": {
+          "type": "string",
+          "text": "The MIME type of the format requested for this export",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Exports a Google Workspace document to the requested MIME type and returns exported byte content.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/{file_id}/export",
+        "alias_endpoint": "/googledrive/drive/v3/files/file_id/export",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/files/export"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__generateids___get": {
+      "provider_intent": "googledrive__drive__v3__files__generateids___get",
+      "provider_alias_intent": "/drive/v3/files/generateids",
+      "text": "Generates a set of file IDs which can be provided in create or copy requests.",
+      "category": "Files",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "count": {
+          "type": "number",
+          "text": "The number of IDs to return"
+        },
+        "space": {
+          "type": "string",
+          "text": "The space in which the IDs can be used to create new files. Supported values are 'drive' and 'appDataFolder'. (Default: 'drive')",
+          "enum": [
+            "drive",
+            "appDataFolder"
+          ]
+        },
+        "type": {
+          "type": "string",
+          "text": "The type of items which the IDs can be used for. Supported values are 'files' and 'shortcuts'. Note that 'shortcuts' are only supported in the drive 'space'. (Default: 'files')",
+          "enum": [
+            "files",
+            "shortcuts"
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Generates a set of file IDs which can be provided in create or copy requests.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/generateIds",
+        "alias_endpoint": "/googledrive/drive/v3/files/generateids",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/files/generateIds"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__file_id___get": {
+      "provider_intent": "googledrive__drive__v3__files__file_id___get",
+      "provider_alias_intent": "/drive/v3/files/file_id",
+      "text": "Gets a file's metadata or content by ID.",
+      "category": "Files",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "acknowledgeAbuse": {
+          "type": "boolean",
+          "text": "Whether the user is acknowledging the risk of downloading known malware or other abusive files",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "supportsAllDrives": {
+          "type": "boolean",
+          "text": "Whether the requesting application supports both My Drives and shared drives",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "includePermissionsForView": {
+          "type": "string",
+          "text": "Specifies which additional view's permissions to include in the response. Only 'published' is supported.",
+          "enum": [
+            "published"
+          ]
+        },
+        "includeLabels": {
+          "type": "string",
+          "text": "A comma-separated list of IDs of labels to include in the labelInfo part of the response"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Gets a file's metadata or content by ID.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/{file_id}",
+        "alias_endpoint": "/googledrive/drive/v3/files/file_id",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/files/get"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files___get": {
+      "provider_intent": "googledrive__drive__v3__files___get",
+      "provider_alias_intent": "/drive/v3/files",
+      "text": "Lists or searches files.",
+      "category": "Files",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "corpora": {
+          "type": "string",
+          "text": "Groupings of files to which the query applies"
+        },
+        "driveId": {
+          "type": "string",
+          "text": "ID of the shared drive to search"
+        },
+        "includeItemsFromAllDrives": {
+          "type": "boolean",
+          "text": "Whether both My Drive and shared drive items should be included in results",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "orderBy": {
+          "type": "string",
+          "text": "A comma-separated list of sort keys"
+        },
+        "pageSize": {
+          "type": "number",
+          "text": "The maximum number of files to return per page"
+        },
+        "pageToken": {
+          "type": "string",
+          "text": "The token for continuing a previous list request on the next page"
+        },
+        "q": {
+          "type": "string",
+          "text": "A query for filtering the file results"
+        },
+        "spaces": {
+          "type": "string",
+          "text": "A comma-separated list of spaces to query within the corpora"
+        },
+        "supportsAllDrives": {
+          "type": "boolean",
+          "text": "Whether the requesting application supports both My Drives and shared drives",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "includePermissionsForView": {
+          "type": "string",
+          "text": "Specifies which additional view's permissions to include in the response"
+        },
+        "includeLabels": {
+          "type": "string",
+          "text": "A comma-separated list of IDs of labels to include in the labelInfo part of the response"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Lists or searches files.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files",
+        "alias_endpoint": "/googledrive/drive/v3/files",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/files/list"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__file_id__listlabels___get": {
+      "provider_intent": "googledrive__drive__v3__files__file_id__listlabels___get",
+      "provider_alias_intent": "/drive/v3/files/file_id/listlabels",
+      "text": "Lists the labels on a file.",
+      "category": "Files",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "maxResults": {
+          "type": "number",
+          "text": "The maximum number of labels to return per page"
+        },
+        "pageToken": {
+          "type": "string",
+          "text": "The token for continuing a previous list request on the next page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Lists the labels on a file.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/{file_id}/listLabels",
+        "alias_endpoint": "/googledrive/drive/v3/files/file_id/listlabels",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/files/listLabels"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__file_id__modifylabels___post": {
+      "provider_intent": "googledrive__drive__v3__files__file_id__modifylabels___post",
+      "provider_alias_intent": "/drive/v3/files/file_id/modifylabels",
+      "text": "Modifies the set of labels on a file.",
+      "category": "Files",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file for which the labels are modified",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "labelModifications": {
+          "type": "array",
+          "text": "The list of modifications to apply to the labels on the file."
+        },
+        "kind": {
+          "type": "string",
+          "text": "This is always drive#modifyLabelsRequest."
+        }
+      },
+      "path": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file for which the labels are modified",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Modifies the set of labels on a file.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/{file_id}/modifyLabels",
+        "alias_endpoint": "/googledrive/drive/v3/files/file_id/modifylabels",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/files/modifyLabels"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__file_id___patch": {
+      "provider_intent": "googledrive__drive__v3__files__file_id___patch",
+      "provider_alias_intent": "/drive/v3/files/file_id",
+      "text": "Updates a file's metadata and/or content.",
+      "category": "Files",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "uploadType": {
+          "type": "string",
+          "text": "The type of upload request to the /upload URI. If you are uploading data with an /upload URI, this field is required. If you are creating a metadata-only file, this field is not required. Additionally, this field is not shown in the 'Try this method' widget because the widget doesn't support data uploads.",
+          "enum": [
+            "media",
+            "multipart",
+            "resumable"
+          ]
+        },
+        "addParents": {
+          "type": "string",
+          "text": "A comma-separated list of parent IDs to add"
+        },
+        "keepRevisionForever": {
+          "type": "boolean",
+          "text": "Whether to set the 'keepForever' field in the new head revision",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "ocrLanguage": {
+          "type": "string",
+          "text": "A language hint for OCR processing during image import (ISO 639-1 code)"
+        },
+        "removeParents": {
+          "type": "string",
+          "text": "A comma-separated list of parent IDs to remove"
+        },
+        "supportsAllDrives": {
+          "type": "boolean",
+          "text": "Whether the requesting application supports both My Drives and shared drives",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "useContentAsIndexableText": {
+          "type": "boolean",
+          "text": "Whether to use the uploaded content as indexable text",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "includeLabels": {
+          "type": "string",
+          "text": "A comma-separated list of IDs of labels to include in the labelInfo part of the response"
+        },
+        "includePermissionsForView": {
+          "type": "string",
+          "text": "Specifies which additional view's permissions to include in the response"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "copyRequiresWriterPermission": {
+          "type": "boolean",
+          "text": "Whether the options to copy, print, or download this file, should be disabled for readers and commenters.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "contentHints": {
+          "type": "object",
+          "text": "Additional information about the content of the file. These fields are never populated in responses."
+        },
+        "writersCanShare": {
+          "type": "boolean",
+          "text": "Whether users with only writer permission can modify the file's permissions. Not populated for items in shared drives.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "mimeType": {
+          "type": "string",
+          "text": "The MIME type of the file. Google Drive attempts to automatically detect an appropriate value from uploaded content, if no value is provided. The value cannot be changed unless a new revision is uploaded. If a file is created with a Google Doc MIME type, the uploaded content is imported, if possible. The supported import formats are published in the About resource."
+        },
+        "parents": {
+          "type": "array",
+          "text": "The ID of the parent folder containing the file. A file can only have one parent folder; specifying multiple parents isn't supported. If not specified as part of a create request, the file is placed directly in the user's My Drive folder. If not specified as part of a copy request, the file inherits any discoverable parent of the source file. files.update requests must use the addParents and removeParents parameters to modify the parents list."
+        },
+        "folderColorRgb": {
+          "type": "string",
+          "text": "The color for a folder or a shortcut to a folder as an RGB hex string. The supported colors are published in the folderColorPalette field of the About resource. If an unsupported color is specified, the closest color in the palette is used instead."
+        },
+        "id": {
+          "type": "string",
+          "text": "The ID of the file."
+        },
+        "name": {
+          "type": "string",
+          "text": "The name of the file. This is not necessarily unique within a folder. Note that for immutable items such as the top level folders of shared drives, My Drive root folder, and Application Data folder the name is constant."
+        },
+        "description": {
+          "type": "string",
+          "text": "A short description of the file."
+        },
+        "starred": {
+          "type": "boolean",
+          "text": "Whether the user has starred the file.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "trashed": {
+          "type": "boolean",
+          "text": "Whether the file has been trashed, either explicitly or from a trashed parent folder. Only the owner may trash a file, and other users cannot see files in the owner's trash.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "createdTime": {
+          "type": "string",
+          "text": "The time at which the file was created (RFC 3339 date-time)."
+        },
+        "modifiedTime": {
+          "type": "string",
+          "text": "The last time the file was modified by anyone (RFC 3339 date-time). Note that setting modifiedTime also updates modifiedByMeTime for the user."
+        },
+        "viewedByMeTime": {
+          "type": "string",
+          "text": "The last time the file was viewed by the user (RFC 3339 date-time)."
+        },
+        "originalFilename": {
+          "type": "string",
+          "text": "The original filename of the uploaded content if available, or else the original value of the name field. This is only available for files with binary content in Google Drive."
+        },
+        "properties": {
+          "type": "object",
+          "text": "A collection of arbitrary key-value pairs which are visible to all apps. Entries with null values are cleared in update and copy requests. An object containing a list of 'key': value pairs. Example: { 'name': 'wrench', 'mass': '1.3kg', 'count': '3' }."
+        },
+        "appProperties": {
+          "type": "object",
+          "text": "A collection of arbitrary key-value pairs which are private to the requesting app. Entries with null values are cleared in update and copy requests. These properties can only be retrieved using an authenticated request. An authenticated request uses an access token obtained with an OAuth 2 client ID. You cannot use an API key to retrieve private properties. An object containing a list of 'key': value pairs. Example: { 'name': 'wrench', 'mass': '1.3kg', 'count': '3' }."
+        },
+        "contentRestrictions": {
+          "type": "array",
+          "text": "Restrictions for accessing the content of the file. Only populated if such a restriction exists."
+        }
+      },
+      "path": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Updates a file's metadata and/or content.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/{file_id}",
+        "alias_endpoint": "/googledrive/drive/v3/files/file_id",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/files/update"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__file_id__watch___post": {
+      "provider_intent": "googledrive__drive__v3__files__file_id__watch___post",
+      "provider_alias_intent": "/drive/v3/files/file_id/watch",
+      "text": "Subscribe to changes on a file.",
+      "category": "Files",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "acknowledgeAbuse": {
+          "type": "boolean",
+          "text": "Whether the user is acknowledging the risk of downloading known malware or other abusive files",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "includeLabels": {
+          "type": "string",
+          "text": "A comma-separated list of IDs of labels to include in the labelInfo part of the response. Only 'published' is supported."
+        },
+        "includePermissionsForView": {
+          "type": "string",
+          "text": "Specifies which additional view's permissions to include in the response"
+        },
+        "supportsAllDrives": {
+          "type": "boolean",
+          "text": "Whether the requesting application supports both My Drives and shared drives",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "payload": {
+          "type": "boolean",
+          "text": "A Boolean value to indicate whether payload is wanted.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "id": {
+          "type": "string",
+          "text": "A UUID or similar unique string that identifies this channel.",
+          "required": true
+        },
+        "resourceId": {
+          "type": "string",
+          "text": "An opaque ID that identifies the resource being watched on this channel. Stable across different API versions.",
+          "required": true
+        },
+        "resourceUri": {
+          "type": "string",
+          "text": "A version-specific identifier for the watched resource.",
+          "required": true
+        },
+        "token": {
+          "type": "string",
+          "text": "An arbitrary string delivered to the target address with each notification delivered over this channel."
+        },
+        "expiration": {
+          "type": "string",
+          "text": "Date and time of notification channel expiration, expressed as a Unix timestamp, in milliseconds."
+        },
+        "type": {
+          "type": "string",
+          "text": "The type of delivery mechanism used for this channel. Valid values are 'web_hook' or 'webhook'.",
+          "required": true
+        },
+        "address": {
+          "type": "string",
+          "text": "The address where notifications are delivered for this channel.",
+          "required": true
+        },
+        "params": {
+          "type": "object",
+          "text": "Additional parameters controlling delivery channel behavior. An object containing a list of 'key': value pairs. Example: { 'name': 'wrench', 'mass': '1.3kg', 'count': '3' }."
+        },
+        "kind": {
+          "type": "string",
+          "text": "Identifies this as a notification channel used to watch for changes to a resource, which is api#channel.",
+          "required": true
+        }
+      },
+      "path": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Subscribe to changes on a file.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/{file_id}/watch",
+        "alias_endpoint": "/googledrive/drive/v3/files/file_id/watch",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/files/watch"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__file_id__permissions___post": {
+      "provider_intent": "googledrive__drive__v3__files__file_id__permissions___post",
+      "provider_alias_intent": "/drive/v3/files/file_id/permissions",
+      "text": "Creates a permission for a file or shared drive.",
+      "category": "Permissions",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file or shared drive",
+          "required": true
+        },
+        "emailMessage": {
+          "type": "string",
+          "text": "A plain text custom message to include in the notification email"
+        },
+        "moveToNewOwnersRoot": {
+          "type": "boolean",
+          "text": "This parameter will only take effect if the item is not in a shared drive and the request is attempting to transfer the ownership of the item",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "sendNotificationEmail": {
+          "type": "boolean",
+          "text": "Whether to send a notification email when sharing to users or groups",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "supportsAllDrives": {
+          "type": "boolean",
+          "text": "Whether the requesting application supports both My Drives and shared drives",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "transferOwnership": {
+          "type": "boolean",
+          "text": "Whether to transfer ownership to the specified user and downgrade the current owner to a writer",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "useDomainAdminAccess": {
+          "type": "boolean",
+          "text": "Issue the request as a domain administrator; if set to true then the requester will be granted access if the file ID parameter refers to a shared drive and the requester is an administrator of the domain to which the shared drive belongs",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "type": {
+          "type": "string",
+          "text": "The type of the grantee. Valid values are: user, group, domain, anyone.",
+          "required": true
+        },
+        "role": {
+          "type": "string",
+          "text": "The role granted by this permission. Valid values are: owner, organizer, fileOrganizer, writer, commenter, reader.",
+          "required": true
+        },
+        "emailAddress": {
+          "type": "string",
+          "text": "The email address of the user or group to which this permission refers. Required if type is user or group."
+        },
+        "domain": {
+          "type": "string",
+          "text": "The domain to which this permission refers. Required if type is domain."
+        },
+        "allowFileDiscovery": {
+          "type": "boolean",
+          "text": "Whether the permission allows the file to be discovered through search. Only applicable for type domain or anyone.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "expirationTime": {
+          "type": "string",
+          "text": "The time at which this permission will expire (RFC 3339 date-time). Only settable on user and group permissions. Must be in the future and not more than a year in the future."
+        }
+      },
+      "path": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file or shared drive",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Creates a permission for a file or shared drive.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/{file_id}/permissions",
+        "alias_endpoint": "/googledrive/drive/v3/files/file_id/permissions",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/permissions/create"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__file_id__permissions__permission_id___delete": {
+      "provider_intent": "googledrive__drive__v3__files__file_id__permissions__permission_id___delete",
+      "provider_alias_intent": "/drive/v3/files/file_id/permissions/permission_id",
+      "text": "Deletes a permission.",
+      "category": "Permissions",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file or shared drive",
+          "required": true
+        },
+        "permission_id": {
+          "type": "string",
+          "text": "The ID of the permission",
+          "required": true
+        },
+        "supportsAllDrives": {
+          "type": "boolean",
+          "text": "Whether the requesting application supports both My Drives and shared drives",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "useDomainAdminAccess": {
+          "type": "boolean",
+          "text": "Issue the request as a domain administrator; if set to true then the requester will be granted access if the file ID parameter refers to a shared drive and the requester is an administrator of the domain to which the shared drive belongs",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file or shared drive",
+          "required": true
+        },
+        "permission_id": {
+          "type": "string",
+          "text": "The ID of the permission",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Deletes a permission.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/{file_id}/permissions/{permission_id}",
+        "alias_endpoint": "/googledrive/drive/v3/files/file_id/permissions/permission_id",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/permissions/delete"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__file_id__permissions__permission_id___get": {
+      "provider_intent": "googledrive__drive__v3__files__file_id__permissions__permission_id___get",
+      "provider_alias_intent": "/drive/v3/files/file_id/permissions/permission_id",
+      "text": "Gets a permission by ID.",
+      "category": "Permissions",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "permission_id": {
+          "type": "string",
+          "text": "The ID of the permission",
+          "required": true
+        },
+        "supportsAllDrives": {
+          "type": "boolean",
+          "text": "Whether the requesting application supports both My Drives and shared drives",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "useDomainAdminAccess": {
+          "type": "boolean",
+          "text": "Issue the request as a domain administrator; if set to true then the requester will be granted access if the file ID parameter refers to a shared drive and the requester is an administrator of the domain to which the shared drive belongs",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "permission_id": {
+          "type": "string",
+          "text": "The ID of the permission",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Gets a permission by ID.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/{file_id}/permissions/{permission_id}",
+        "alias_endpoint": "/googledrive/drive/v3/files/file_id/permissions/permission_id",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/permissions/get"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__file_id__permissions___get": {
+      "provider_intent": "googledrive__drive__v3__files__file_id__permissions___get",
+      "provider_alias_intent": "/drive/v3/files/file_id/permissions",
+      "text": "Lists a file's or shared drive's permissions.",
+      "category": "Permissions",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file or shared drive",
+          "required": true
+        },
+        "includePermissionsForView": {
+          "type": "string",
+          "text": "Specifies which additional view's permissions to include in the response"
+        },
+        "pageSize": {
+          "type": "number",
+          "text": "The maximum number of permissions to return per page"
+        },
+        "pageToken": {
+          "type": "string",
+          "text": "The token for continuing a previous list request on the next page"
+        },
+        "supportsAllDrives": {
+          "type": "boolean",
+          "text": "Whether the requesting application supports both My Drives and shared drives",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "useDomainAdminAccess": {
+          "type": "boolean",
+          "text": "Issue the request as a domain administrator; if set to true then the requester will be granted access if the file ID parameter refers to a shared drive and the requester is an administrator of the domain to which the shared drive belongs",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file or shared drive",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Lists a file's or shared drive's permissions.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/{file_id}/permissions",
+        "alias_endpoint": "/googledrive/drive/v3/files/file_id/permissions",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/permissions/list"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__file_id__permissions__permission_id___patch": {
+      "provider_intent": "googledrive__drive__v3__files__file_id__permissions__permission_id___patch",
+      "provider_alias_intent": "/drive/v3/files/file_id/permissions/permission_id",
+      "text": "Updates a permission with patch semantics.",
+      "category": "Permissions",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file or shared drive",
+          "required": true
+        },
+        "permission_id": {
+          "type": "string",
+          "text": "The ID of the permission",
+          "required": true
+        },
+        "removeExpiration": {
+          "type": "boolean",
+          "text": "Whether to remove the expiration date",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "supportsAllDrives": {
+          "type": "boolean",
+          "text": "Whether the requesting application supports both My Drives and shared drives",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "transferOwnership": {
+          "type": "boolean",
+          "text": "Whether to transfer ownership to the specified user and downgrade the current owner to a writer",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "useDomainAdminAccess": {
+          "type": "boolean",
+          "text": "Issue the request as a domain administrator; if set to true then the requester will be granted access if the file ID parameter refers to a shared drive and the requester is an administrator of the domain to which the shared drive belongs",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "type": {
+          "type": "string",
+          "text": "The type of the grantee. Valid values are: user, group, domain, anyone.",
+          "required": true
+        },
+        "role": {
+          "type": "string",
+          "text": "The role granted by this permission. Valid values are: owner, organizer, fileOrganizer, writer, commenter, reader.",
+          "required": true
+        },
+        "emailAddress": {
+          "type": "string",
+          "text": "The email address of the user or group to which this permission refers. Required if type is user or group."
+        },
+        "domain": {
+          "type": "string",
+          "text": "The domain to which this permission refers. Required if type is domain."
+        },
+        "allowFileDiscovery": {
+          "type": "boolean",
+          "text": "Whether the permission allows the file to be discovered through search. Only applicable for type domain or anyone.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "expirationTime": {
+          "type": "string",
+          "text": "The time at which this permission will expire (RFC 3339 date-time). Only settable on user and group permissions. Must be in the future and not more than a year in the future."
+        }
+      },
+      "path": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file or shared drive",
+          "required": true
+        },
+        "permission_id": {
+          "type": "string",
+          "text": "The ID of the permission",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Updates a permission with patch semantics.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/{file_id}/permissions/{permission_id}",
+        "alias_endpoint": "/googledrive/drive/v3/files/file_id/permissions/permission_id",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/permissions/update"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__file_id__comments__comment_id__replies___post": {
+      "provider_intent": "googledrive__drive__v3__files__file_id__comments__comment_id__replies___post",
+      "provider_alias_intent": "/drive/v3/files/file_id/comments/comment_id/replies",
+      "text": "Creates a reply to a comment.",
+      "category": "Replies",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "comment_id": {
+          "type": "string",
+          "text": "The ID of the comment",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "action": {
+          "type": "string",
+          "text": "The action the reply performed to the parent comment. Valid values are: resolve, reopen."
+        },
+        "content": {
+          "type": "string",
+          "text": "The plain text content of the reply. This field is used for setting the content, while htmlContent should be displayed. This is required on creates if no action is specified.",
+          "required": true
+        }
+      },
+      "path": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "comment_id": {
+          "type": "string",
+          "text": "The ID of the comment",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Creates a reply to a comment.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/{file_id}/comments/{comment_id}/replies",
+        "alias_endpoint": "/googledrive/drive/v3/files/file_id/comments/comment_id/replies",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/replies/create"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__file_id__comments__comment_id__replies__reply_id___delete": {
+      "provider_intent": "googledrive__drive__v3__files__file_id__comments__comment_id__replies__reply_id___delete",
+      "provider_alias_intent": "/drive/v3/files/file_id/comments/comment_id/replies/reply_id",
+      "text": "Deletes a reply.",
+      "category": "Replies",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "comment_id": {
+          "type": "string",
+          "text": "The ID of the comment",
+          "required": true
+        },
+        "reply_id": {
+          "type": "string",
+          "text": "The ID of the reply",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "comment_id": {
+          "type": "string",
+          "text": "The ID of the comment",
+          "required": true
+        },
+        "reply_id": {
+          "type": "string",
+          "text": "The ID of the reply",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Deletes a reply.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/{file_id}/comments/{comment_id}/replies/{reply_id}",
+        "alias_endpoint": "/googledrive/drive/v3/files/file_id/comments/comment_id/replies/reply_id",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/replies/delete"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__file_id__comments__comment_id__replies__reply_id___get": {
+      "provider_intent": "googledrive__drive__v3__files__file_id__comments__comment_id__replies__reply_id___get",
+      "provider_alias_intent": "/drive/v3/files/file_id/comments/comment_id/replies/reply_id",
+      "text": "Gets a reply by ID.",
+      "category": "Replies",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "comment_id": {
+          "type": "string",
+          "text": "The ID of the comment",
+          "required": true
+        },
+        "reply_id": {
+          "type": "string",
+          "text": "The ID of the reply",
+          "required": true
+        },
+        "includeDeleted": {
+          "type": "boolean",
+          "text": "Whether to return deleted replies",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "comment_id": {
+          "type": "string",
+          "text": "The ID of the comment",
+          "required": true
+        },
+        "reply_id": {
+          "type": "string",
+          "text": "The ID of the reply",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Gets a reply by ID.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/{file_id}/comments/{comment_id}/replies/{reply_id}",
+        "alias_endpoint": "/googledrive/drive/v3/files/file_id/comments/comment_id/replies/reply_id",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/replies/get"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__file_id__comments__comment_id__replies___get": {
+      "provider_intent": "googledrive__drive__v3__files__file_id__comments__comment_id__replies___get",
+      "provider_alias_intent": "/drive/v3/files/file_id/comments/comment_id/replies",
+      "text": "Lists a comment's replies.",
+      "category": "Replies",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "comment_id": {
+          "type": "string",
+          "text": "The ID of the comment",
+          "required": true
+        },
+        "includeDeleted": {
+          "type": "boolean",
+          "text": "Whether to include deleted replies",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "pageSize": {
+          "type": "number",
+          "text": "The maximum number of replies to return per page"
+        },
+        "pageToken": {
+          "type": "string",
+          "text": "The token for continuing a previous list request on the next page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "comment_id": {
+          "type": "string",
+          "text": "The ID of the comment",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Lists a comment's replies.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/{file_id}/comments/{comment_id}/replies",
+        "alias_endpoint": "/googledrive/drive/v3/files/file_id/comments/comment_id/replies",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/replies/list"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__file_id__comments__comment_id__replies__reply_id___patch": {
+      "provider_intent": "googledrive__drive__v3__files__file_id__comments__comment_id__replies__reply_id___patch",
+      "provider_alias_intent": "/drive/v3/files/file_id/comments/comment_id/replies/reply_id",
+      "text": "Updates a reply with patch semantics.",
+      "category": "Replies",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "comment_id": {
+          "type": "string",
+          "text": "The ID of the comment",
+          "required": true
+        },
+        "reply_id": {
+          "type": "string",
+          "text": "The ID of the reply",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "action": {
+          "type": "string",
+          "text": "The action the reply performed to the parent comment. Valid values are: resolve, reopen."
+        },
+        "content": {
+          "type": "string",
+          "text": "The plain text content of the reply. This field is used for setting the content, while htmlContent should be displayed. This is required on creates if no action is specified.",
+          "required": true
+        }
+      },
+      "path": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "comment_id": {
+          "type": "string",
+          "text": "The ID of the comment",
+          "required": true
+        },
+        "reply_id": {
+          "type": "string",
+          "text": "The ID of the reply",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Updates a reply with patch semantics.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/{file_id}/comments/{comment_id}/replies/{reply_id}",
+        "alias_endpoint": "/googledrive/drive/v3/files/file_id/comments/comment_id/replies/reply_id",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/replies/update"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__file_id__revisions__revision_id___delete": {
+      "provider_intent": "googledrive__drive__v3__files__file_id__revisions__revision_id___delete",
+      "provider_alias_intent": "/drive/v3/files/file_id/revisions/revision_id",
+      "text": "Permanently deletes a file version.",
+      "category": "Revisions",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "revision_id": {
+          "type": "string",
+          "text": "The ID of the revision",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "revision_id": {
+          "type": "string",
+          "text": "The ID of the revision",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Permanently deletes a file version.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/{file_id}/revisions/{revision_id}",
+        "alias_endpoint": "/googledrive/drive/v3/files/file_id/revisions/revision_id",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/revisions/delete"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__file_id__revisions__revision_id___get": {
+      "provider_intent": "googledrive__drive__v3__files__file_id__revisions__revision_id___get",
+      "provider_alias_intent": "/drive/v3/files/file_id/revisions/revision_id",
+      "text": "Gets a revision's metadata or content by ID.",
+      "category": "Revisions",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "revision_id": {
+          "type": "string",
+          "text": "The ID of the revision",
+          "required": true
+        },
+        "acknowledgeAbuse": {
+          "type": "boolean",
+          "text": "Whether the user is acknowledging the risk of downloading known malware or other abusive files",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "revision_id": {
+          "type": "string",
+          "text": "The ID of the revision",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Gets a revision's metadata or content by ID.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/{file_id}/revisions/{revision_id}",
+        "alias_endpoint": "/googledrive/drive/v3/files/file_id/revisions/revision_id",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/revisions/get"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__file_id__revisions___get": {
+      "provider_intent": "googledrive__drive__v3__files__file_id__revisions___get",
+      "provider_alias_intent": "/drive/v3/files/file_id/revisions",
+      "text": "Lists a file's revisions.",
+      "category": "Revisions",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "pageSize": {
+          "type": "number",
+          "text": "The maximum number of revisions to return per page"
+        },
+        "pageToken": {
+          "type": "string",
+          "text": "The token for continuing a previous list request on the next page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Lists a file's revisions.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/{file_id}/revisions",
+        "alias_endpoint": "/googledrive/drive/v3/files/file_id/revisions",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/revisions/list"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googledrive__drive__v3__files__file_id__revisions__revision_id___patch": {
+      "provider_intent": "googledrive__drive__v3__files__file_id__revisions__revision_id___patch",
+      "provider_alias_intent": "/drive/v3/files/file_id/revisions/revision_id",
+      "text": "Updates a revision with patch semantics.",
+      "category": "Revisions",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "revision_id": {
+          "type": "string",
+          "text": "The ID of the revision",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "published": {
+          "type": "boolean",
+          "text": "Whether this revision is published. This is only applicable to Docs Editors files.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "keepForever": {
+          "type": "boolean",
+          "text": "Whether to keep this revision forever, even if it is no longer the head revision. If not set, the revision will be automatically purged 30 days after newer content is uploaded. This can be set on a maximum of 200 revisions for a file. This field is only applicable to files with binary content in Drive.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "publishAuto": {
+          "type": "boolean",
+          "text": "Whether subsequent revisions will be automatically republished. This is only applicable to Docs Editors files.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "publishedOutsideDomain": {
+          "type": "boolean",
+          "text": "Whether this revision is published outside the domain. This is only applicable to Docs Editors files.",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "file_id": {
+          "type": "string",
+          "text": "The ID of the file",
+          "required": true
+        },
+        "revision_id": {
+          "type": "string",
+          "text": "The ID of the revision",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Updates a revision with patch semantics.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/drive/v3/files/{file_id}/revisions/{revision_id}",
+        "alias_endpoint": "/googledrive/drive/v3/files/file_id/revisions/revision_id",
+        "api_ref": "https://developers.google.com/drive/api/reference/rest/v3/revisions/update"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

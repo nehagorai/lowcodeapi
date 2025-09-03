@@ -1,0 +1,106 @@
+{
+  "app": {
+    "title": "Facebook API",
+    "description": "",
+    "api_base": "/facebook",
+    "copyright": "",
+    "copyright_year": "",
+    "contact_email": ""
+  },
+  "category": {
+    "All": ""
+  },
+  "routes": {
+    "post_message": {
+      "provider_intent": "post_message",
+      "provider_alias_intent": "/v16.0/page_id/feed",
+      "text": "Post message 🚧",
+      "category": "API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "page_id": {
+          "type": "string",
+          "text": "Page ID"
+        },
+        "message": {
+          "type": "string",
+          "text": "Message",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "page_id": {
+          "type": "string",
+          "text": "Page ID"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v16",
+        "auth": [],
+        "description": "Post message",
+        "rate_limit": [],
+        "api_endpoint": "https://graph.facebook.com/v16.0/{page_id}/feed",
+        "alias_endpoint": "/facebook/v16.0/page_id/feed",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "access_token": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_page_access_token": {
+      "provider_intent": "get_page_access_token",
+      "provider_alias_intent": "/page_id",
+      "text": "Get Page Access Token 🚧",
+      "category": "API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "page_id": {
+          "type": "string",
+          "text": "Page ID"
+        },
+        "fields": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "page_id": {
+          "type": "string",
+          "text": "Page ID"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "-",
+        "auth": [],
+        "description": "Get Page Access Token",
+        "rate_limit": [],
+        "api_endpoint": "https://graph.facebook.com/PAGE_ID",
+        "alias_endpoint": "/facebook/page_id",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "access_token": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": ""
+    }
+  }
+}

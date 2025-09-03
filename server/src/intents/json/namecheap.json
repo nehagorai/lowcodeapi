@@ -1,0 +1,3679 @@
+{
+  "routes": {
+    "namecheap__users.address.create___get": {
+      "provider_intent": "namecheap__users.address.create___get",
+      "provider_alias_intent": "/users.address.create",
+      "text": "Creates a new address for the user",
+      "category": "Address",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "AddressName": {
+          "type": "string",
+          "text": "Address name to create. MaxLength- 20",
+          "required": true
+        },
+        "DefaultYN": {
+          "type": "number",
+          "text": "Possible values are 0 and 1. If the value of this parameter is set to 1 the address is set as default address for the user. MaxLength- 128"
+        },
+        "EmailAddress": {
+          "type": "string",
+          "text": "Email address of the user. MaxLength- 128",
+          "required": true
+        },
+        "FirstName": {
+          "type": "string",
+          "text": "First name of the user. MaxLength- 60",
+          "required": true
+        },
+        "LastName": {
+          "type": "string",
+          "text": "Last name of the user. MaxLength- 60",
+          "required": true
+        },
+        "JobTitle": {
+          "type": "string",
+          "text": "Job designation of the user. MaxLength- 60"
+        },
+        "Organization": {
+          "type": "string",
+          "text": "Organization of the user. MaxLength- 60"
+        },
+        "Address1": {
+          "type": "string",
+          "text": "StreetAddress1 of the user. MaxLength- 60",
+          "required": true
+        },
+        "Address2": {
+          "type": "string",
+          "text": "StreetAddress2 of the user. MaxLength- 60"
+        },
+        "City": {
+          "type": "string",
+          "text": "City of the user. MaxLength- 60",
+          "required": true
+        },
+        "StateProvince": {
+          "type": "string",
+          "text": "State/Province of the user. MaxLength- 60",
+          "required": true
+        },
+        "StateProvinceChoice": {
+          "type": "string",
+          "text": "State/Province choice of the user. MaxLength- 60",
+          "required": true
+        },
+        "Zip": {
+          "type": "string",
+          "text": "Zip/Postal code of the user. MaxLength- 15",
+          "required": true
+        },
+        "Country": {
+          "type": "string",
+          "text": "Two letter country code of the user. MaxLength- 2",
+          "required": true
+        },
+        "Phone": {
+          "type": "string",
+          "text": "Phone number in the format +NNN.NNNNNNNNNN. MaxLength- 20"
+        },
+        "PhoneExt": {
+          "type": "string",
+          "text": "PhoneExt of the user. MaxLength- 10"
+        },
+        "Fax": {
+          "type": "string",
+          "text": "Fax number in the format +NNN.NNNNNNNNNN. MaxLength- 20"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Creates a new address for the user",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.users.address.create",
+        "alias_endpoint": "/namecheap/users.address.create",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__users.address.delete___get": {
+      "provider_intent": "namecheap__users.address.delete___get",
+      "provider_alias_intent": "/users.address.delete",
+      "text": "Deletes the particular address for the user",
+      "category": "Address",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "AddressId": {
+          "type": "number",
+          "text": "The unique AddressID to delete. MaxLength- 20",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Deletes the particular address for the user",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.users.address.delete",
+        "alias_endpoint": "/namecheap/users.address.delete",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__users.address.getinfo___get": {
+      "provider_intent": "namecheap__users.address.getinfo___get",
+      "provider_alias_intent": "/users.address.getinfo",
+      "text": "Gets information for the requested addressID",
+      "category": "Address",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "AddressId": {
+          "type": "number",
+          "text": "The unique AddressID. MaxLength- 20",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Gets information for the requested addressID",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.users.address.getInfo",
+        "alias_endpoint": "/namecheap/users.address.getinfo",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__users.address.getlist___get": {
+      "provider_intent": "namecheap__users.address.getlist___get",
+      "provider_alias_intent": "/users.address.getlist",
+      "text": "Retrieve user account's addressIDs and names",
+      "category": "Address",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Gets a list of addressIDs and addressnames associated with the user account.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.users.address.getList",
+        "alias_endpoint": "/namecheap/users.address.getlist",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__users.address.setdefault___get": {
+      "provider_intent": "namecheap__users.address.setdefault___get",
+      "provider_alias_intent": "/users.address.setdefault",
+      "text": "Sets default address for the user",
+      "category": "Address",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "AddressId": {
+          "type": "number",
+          "text": "The unique addressID to set default. MaxLength- 20",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Sets default address for the user",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.users.address.setDefault",
+        "alias_endpoint": "/namecheap/users.address.setdefault",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__users.address.update___get": {
+      "provider_intent": "namecheap__users.address.update___get",
+      "provider_alias_intent": "/users.address.update",
+      "text": "Updates the particular address of the user",
+      "category": "Address",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "AddressId": {
+          "type": "number",
+          "text": "The unique address ID to update. MaxLength- 20",
+          "required": true
+        },
+        "AddressName": {
+          "type": "string",
+          "text": "The AddressName to update. MaxLength- 20",
+          "required": true
+        },
+        "DefaultYN": {
+          "type": "number",
+          "text": "Possible values are 0 and 1. If the value of this parameter is set to 1 the updated address is also set as default address for the user. MaxLength- 128"
+        },
+        "EmailAddress": {
+          "type": "string",
+          "text": "Email address of the user. MaxLength- 128",
+          "required": true
+        },
+        "FirstName": {
+          "type": "string",
+          "text": "First name of the user. MaxLength- 60",
+          "required": true
+        },
+        "LastName": {
+          "type": "string",
+          "text": "Last name of the user. MaxLength- 60",
+          "required": true
+        },
+        "JobTitle": {
+          "type": "string",
+          "text": "Job designation of the user. MaxLength- 60"
+        },
+        "Organization": {
+          "type": "string",
+          "text": "Organization of the user. MaxLength- 60"
+        },
+        "Address1": {
+          "type": "string",
+          "text": "StreetAddress1 of the user. MaxLength- 60",
+          "required": true
+        },
+        "Address2": {
+          "type": "string",
+          "text": "StreetAddress2 of the user. MaxLength- 60"
+        },
+        "City": {
+          "type": "string",
+          "text": "City of the user. MaxLength- 60",
+          "required": true
+        },
+        "StateProvince": {
+          "type": "string",
+          "text": "State/Province of the user. MaxLength- 60",
+          "required": true
+        },
+        "StateProvinceChoice": {
+          "type": "string",
+          "text": "State/Province choice of the user. MaxLength- 60",
+          "required": true
+        },
+        "Zip": {
+          "type": "string",
+          "text": "Zip/Postal code of the user. MaxLength- 15",
+          "required": true
+        },
+        "Country": {
+          "type": "string",
+          "text": "Two letter country code of the user. MaxLength- 2",
+          "required": true
+        },
+        "Phone": {
+          "type": "string",
+          "text": "Phone number in the format +NNN.NNNNNNNNNN. MaxLength- 20",
+          "required": true
+        },
+        "PhoneExt": {
+          "type": "string",
+          "text": "PhoneExt of the user. MaxLength- 10"
+        },
+        "Fax": {
+          "type": "string",
+          "text": "Fax number in the format +NNN.NNNNNNNNNN. MaxLength- 20"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Updates the particular address of the user",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.users.address.update",
+        "alias_endpoint": "/namecheap/users.address.update",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__whoisguard.changeemailaddress___get": {
+      "provider_intent": "namecheap__whoisguard.changeemailaddress___get",
+      "provider_alias_intent": "/whoisguard.changeemailaddress",
+      "text": "Changes domain privacy email address",
+      "category": "Domain Privacy",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "WhoisguardID": {
+          "type": "number",
+          "text": "The unique domain privacy ID that you wish to change. MaxLength- 10",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Changes domain privacy email address",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.whoisguard.changeemailaddress",
+        "alias_endpoint": "/namecheap/whoisguard.changeemailaddress",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__whoisguard.enable___get": {
+      "provider_intent": "namecheap__whoisguard.enable___get",
+      "provider_alias_intent": "/whoisguard.enable",
+      "text": "Enables domain privacy protection",
+      "category": "Domain Privacy",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "WhoisguardID": {
+          "type": "number",
+          "text": "The unique domain privacy ID which you get. MaxLength- 10",
+          "required": true
+        },
+        "ForwardedToEmail": {
+          "type": "string",
+          "text": "The email address to which domain privacy emails are to be forwarded. MaxLength- 70",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Enables domain privacy protection.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.whoisguard.enable",
+        "alias_endpoint": "/namecheap/whoisguard.enable",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__whoisguard.disable___get": {
+      "provider_intent": "namecheap__whoisguard.disable___get",
+      "provider_alias_intent": "/whoisguard.disable",
+      "text": "Disables domain privacy protection",
+      "category": "Domain Privacy",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "WhoisguardID": {
+          "type": "number",
+          "text": "The unique domain privacy ID which has to be disabled. MaxLength- 10",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Disables domain privacy protection.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.whoisguard.disable",
+        "alias_endpoint": "/namecheap/whoisguard.disable",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__whoisguard.getlist___get": {
+      "provider_intent": "namecheap__whoisguard.getlist___get",
+      "provider_alias_intent": "/whoisguard.getlist",
+      "text": "Gets the list of domain privacy protection",
+      "category": "Domain Privacy",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "ListType": {
+          "type": "string",
+          "text": "Possible values are ALL/ ALLOTED/ FREE/ DISCARD. Default Value- ALL . MaxLength- 10"
+        },
+        "Page": {
+          "type": "number",
+          "text": "Page to return. Default Value- 1 . MaxLength- 10"
+        },
+        "PageSize": {
+          "type": "number",
+          "text": "Number of domain privacy subscriptions to be listed on a page. Minimum value- 2; Maximum value- 100  MaxLength- 20"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Gets the list of domain privacy protection.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.whoisguard.getList",
+        "alias_endpoint": "/namecheap/whoisguard.getlist",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__whoisguard.renew___get": {
+      "provider_intent": "namecheap__whoisguard.renew___get",
+      "provider_alias_intent": "/whoisguard.renew",
+      "text": "Renews domain privacy protection",
+      "category": "Domain Privacy",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "WhoisguardID": {
+          "type": "string",
+          "text": "Domain privacy ID to renew. MaxLength- 10",
+          "required": true
+        },
+        "Years": {
+          "type": "number",
+          "text": "Number of years to renew. Default Value- 1 MaxLength- 9",
+          "required": true
+        },
+        "PromotionCode": {
+          "type": "number",
+          "text": "Promotional (coupon) code for renewing the domain privacy. MaxLength- 20"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Renews domain privacy protection.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.whoisguard.renew",
+        "alias_endpoint": "/namecheap/whoisguard.renew",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__domains.getlist___get": {
+      "provider_intent": "namecheap__domains.getlist___get",
+      "provider_alias_intent": "/domains.getlist",
+      "text": "Get user's domains as a list",
+      "category": "Domains",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "ListType": {
+          "type": "string",
+          "text": "Possible values- ALL/ EXPIRING/ EXPIRED. Default Value- ALL MaxLength- 10"
+        },
+        "SearchTerm": {
+          "type": "string",
+          "text": "Keyword to look for in the domain list. MaxLength- 70"
+        },
+        "Page": {
+          "type": "number",
+          "text": "Page to return. Default Value- 1 MaxLength- 10"
+        },
+        "PageSize": {
+          "type": "number",
+          "text": "Number of domains to be listed on a page. Minimum value is 10 and maximum value is 100. Default Value- 20 MaxLength- 10"
+        },
+        "SortBy": {
+          "type": "string",
+          "text": "Possible values are NAME/ NAME_DESC/ EXPIREDATE/ EXPIREDATE_DESC/ CREATEDATE/ CREATEDATE_DESC. MaxLength- 50"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Returns a list of domains for the particular user.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.domains.getList",
+        "alias_endpoint": "/namecheap/domains.getlist",
+        "api_ref": "https://www.namecheap.com/support/api/methods/domains/"
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__domains.getcontacts___get": {
+      "provider_intent": "namecheap__domains.getcontacts___get",
+      "provider_alias_intent": "/domains.getcontacts",
+      "text": "Gets contact info for requested domain",
+      "category": "Domains",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "DomainName": {
+          "type": "string",
+          "text": "Domain to get contacts. MaxLength- 70",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Gets contact information of the requested domain.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.domains.getContacts",
+        "alias_endpoint": "/namecheap/domains.getcontacts",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__domains.create___get": {
+      "provider_intent": "namecheap__domains.create___get",
+      "provider_alias_intent": "/domains.create",
+      "text": "Registers a new domain name",
+      "category": "Domains",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "DomainName": {
+          "type": "string",
+          "text": "Domain name to register. MaxLength- 70",
+          "required": true
+        },
+        "Years": {
+          "type": "number",
+          "text": "Number of years to register. MaxLength- 2 Default Value- 2",
+          "required": true
+        },
+        "PromotionCode": {
+          "type": "string",
+          "text": "Promotional (coupon) code for the domain. MaxLength- 20"
+        },
+        "RegistrantOrganizationName": {
+          "type": "string",
+          "text": "Organization of the Registrant user. MaxLength- 255"
+        },
+        "RegistrantJobTitle": {
+          "type": "string",
+          "text": "Job title of the Registrant user. MaxLength- 255"
+        },
+        "RegistrantFirstName": {
+          "type": "string",
+          "text": "First name of the Registrant user. MaxLength- 255",
+          "required": true
+        },
+        "RegistrantLastName": {
+          "type": "string",
+          "text": "Second name of the Registrant user. MaxLength- 255",
+          "required": true
+        },
+        "RegistrantAddress1": {
+          "type": "string",
+          "text": "Address1 of the Registrant user. MaxLength- 255",
+          "required": true
+        },
+        "RegistrantAddress2": {
+          "type": "string",
+          "text": "Address2 of the Registrant user. MaxLength- 255"
+        },
+        "RegistrantCity": {
+          "type": "string",
+          "text": "City of the Registrant user. MaxLength- 50",
+          "required": true
+        },
+        "RegistrantStateProvince": {
+          "type": "string",
+          "text": "State/Province of the Registrant user. MaxLength- 50",
+          "required": true
+        },
+        "RegistrantStateProvinceChoice": {
+          "type": "string",
+          "text": "StateProvinceChoice of the Registrant user. MaxLength- 50"
+        },
+        "RegistrantPostalCode": {
+          "type": "string",
+          "text": "PostalCode of the Registrant user. MaxLength- 50",
+          "required": true
+        },
+        "RegistrantCountry": {
+          "type": "string",
+          "text": "Country of the Registrant user. MaxLength- 50",
+          "required": true
+        },
+        "RegistrantPhone": {
+          "type": "string",
+          "text": "Phone number in the format +NNN.NNNNNNNNNN. MaxLength- 50",
+          "required": true
+        },
+        "RegistrantPhoneExt": {
+          "type": "string",
+          "text": "PhoneExt of the Registrant user. MaxLength- 50"
+        },
+        "RegistrantFax": {
+          "type": "string",
+          "text": "Fax number in the format +NNN.NNNNNNNNNN. MaxLength- 50"
+        },
+        "RegistrantEmailAddress": {
+          "type": "string",
+          "text": "Email address of the Registrant user. MaxLength- 255",
+          "required": true
+        },
+        "TechOrganizationName": {
+          "type": "string",
+          "text": "Organization of the Tech user. MaxLength- 255"
+        },
+        "TechJobTitle": {
+          "type": "string",
+          "text": "Job title of the Tech user. MaxLength- 255"
+        },
+        "TechFirstName": {
+          "type": "string",
+          "text": "First name of the Tech user. MaxLength- 255",
+          "required": true
+        },
+        "TechLastName": {
+          "type": "string",
+          "text": "Second name of the Tech user. MaxLength- 255",
+          "required": true
+        },
+        "TechAddress1": {
+          "type": "string",
+          "text": "Address1 of the Tech user. MaxLength- 255",
+          "required": true
+        },
+        "TechAddress2": {
+          "type": "string",
+          "text": "Address2 of the Tech user. MaxLength- 255"
+        },
+        "TechCity": {
+          "type": "string",
+          "text": "City of the Tech user. MaxLength- 50",
+          "required": true
+        },
+        "TechStateProvince": {
+          "type": "string",
+          "text": "State/Province of the Tech user. MaxLength- 50",
+          "required": true
+        },
+        "TechStateProvinceChoice": {
+          "type": "string",
+          "text": "StateProvinceChoice of the Tech user. MaxLength- 50"
+        },
+        "TechPostalCode": {
+          "type": "string",
+          "text": "PostalCode of the Tech user. MaxLength- 50",
+          "required": true
+        },
+        "TechCountry": {
+          "type": "string",
+          "text": "Country of the Tech user. MaxLength- 50",
+          "required": true
+        },
+        "TechPhone": {
+          "type": "string",
+          "text": "Phone number in the format +NNN.NNNNNNNNNN. MaxLength- 50",
+          "required": true
+        },
+        "TechPhoneExt": {
+          "type": "string",
+          "text": "PhoneExt of the Tech user. MaxLength- 50"
+        },
+        "TechFax": {
+          "type": "string",
+          "text": "Fax number in the format +NNN.NNNNNNNNNN. MaxLength- 50"
+        },
+        "TechEmailAddress": {
+          "type": "string",
+          "text": "Email address of the Tech user. MaxLength- 255",
+          "required": true
+        },
+        "AdminOrganizationName": {
+          "type": "string",
+          "text": "Organization of the Admin user. MaxLength- 255"
+        },
+        "AdminJobTitle": {
+          "type": "string",
+          "text": "Job title of the Admin user. MaxLength- 255"
+        },
+        "AdminFirstName": {
+          "type": "string",
+          "text": "First name of the Admin user. MaxLength- 255",
+          "required": true
+        },
+        "AdminLastName": {
+          "type": "string",
+          "text": "Second name of the Admin user. MaxLength- 255",
+          "required": true
+        },
+        "AdminAddress1": {
+          "type": "string",
+          "text": "Address1 of the Admin user. MaxLength- 255",
+          "required": true
+        },
+        "AdminAddress2": {
+          "type": "string",
+          "text": "Address2 of the Admin user. MaxLength- 255"
+        },
+        "AdminCity": {
+          "type": "string",
+          "text": "City of the Admin user. MaxLength- 50",
+          "required": true
+        },
+        "AdminStateProvince": {
+          "type": "string",
+          "text": "State/Province of the Admin user. MaxLength- 50",
+          "required": true
+        },
+        "AdminStateProvinceChoice": {
+          "type": "string",
+          "text": "StateProvinceChoice of the Admin user. MaxLength- 50"
+        },
+        "AdminPostalCode": {
+          "type": "string",
+          "text": "PostalCode of the Admin user. MaxLength- 50",
+          "required": true
+        },
+        "AdminCountry": {
+          "type": "string",
+          "text": "Country of the Admin user. MaxLength- 50",
+          "required": true
+        },
+        "AdminPhone": {
+          "type": "string",
+          "text": "Phone number in the format +NNN.NNNNNNNNNN. MaxLength- 50",
+          "required": true
+        },
+        "AdminPhoneExt": {
+          "type": "string",
+          "text": "PhoneExt of the Admin user. MaxLength- 50"
+        },
+        "AdminFax": {
+          "type": "string",
+          "text": "Fax number in the format +NNN.NNNNNNNNNN. MaxLength- 50"
+        },
+        "AdminEmailAddress": {
+          "type": "string",
+          "text": "Email address of the Admin user. MaxLength- 255",
+          "required": true
+        },
+        "AuxBillingOrganizationName": {
+          "type": "string",
+          "text": "Organization of the AuxBilling user. MaxLength- 255"
+        },
+        "AuxBillingJobTitle": {
+          "type": "string",
+          "text": "Job title of the AuxBilling user. MaxLength- 255"
+        },
+        "AuxBillingFirstName": {
+          "type": "string",
+          "text": "First name of the AuxBilling user. MaxLength- 255",
+          "required": true
+        },
+        "AuxBillingLastName": {
+          "type": "string",
+          "text": "Second name of the AuxBilling user. MaxLength- 255",
+          "required": true
+        },
+        "AuxBillingAddress1": {
+          "type": "string",
+          "text": "Address1 of the AuxBilling user. MaxLength- 255",
+          "required": true
+        },
+        "AuxBillingAddress2": {
+          "type": "string",
+          "text": "Address2 of the AuxBilling user. MaxLength- 255"
+        },
+        "AuxBillingCity": {
+          "type": "string",
+          "text": "City of the AuxBilling user. MaxLength- 50",
+          "required": true
+        },
+        "AuxBillingStateProvince": {
+          "type": "string",
+          "text": "State/Province of the AuxBilling user. MaxLength- 50",
+          "required": true
+        },
+        "AuxBillingStateProvinceChoice": {
+          "type": "string",
+          "text": "StateProvinceChoice of the AuxBilling user. MaxLength- 50"
+        },
+        "AuxBillingPostalCode": {
+          "type": "string",
+          "text": "PostalCode of the AuxBilling user. MaxLength- 50",
+          "required": true
+        },
+        "AuxBillingCountry": {
+          "type": "string",
+          "text": "Country of the AuxBilling user. MaxLength- 50",
+          "required": true
+        },
+        "AuxBillingPhone": {
+          "type": "string",
+          "text": "Phone number in the format +NNN.NNNNNNNNNN. MaxLength- 50",
+          "required": true
+        },
+        "AuxBillingPhoneExt": {
+          "type": "string",
+          "text": "PhoneExt of the AuxBilling user. MaxLength- 50"
+        },
+        "AuxBillingFax": {
+          "type": "string",
+          "text": "Fax number in the format +NNN.NNNNNNNNNN. MaxLength- 50"
+        },
+        "AuxBillingEmailAddress": {
+          "type": "string",
+          "text": "Email address of the AuxBilling user. MaxLength- 255",
+          "required": true
+        },
+        "BillingFirstName": {
+          "type": "string",
+          "text": "First name of the Billing user. MaxLength- 255"
+        },
+        "BillingLastName": {
+          "type": "string",
+          "text": "Second name of the Billing user. MaxLength- 255"
+        },
+        "BillingAddress1": {
+          "type": "string",
+          "text": "Address1 of the Billing user. MaxLength- 255"
+        },
+        "BillingAddress2": {
+          "type": "string",
+          "text": "Address2 of the Billing user. MaxLength- 255"
+        },
+        "BillingCity": {
+          "type": "string",
+          "text": "City of the Billing user. MaxLength- 50"
+        },
+        "BillingStateProvince": {
+          "type": "string",
+          "text": "State/Province of the Billing user. MaxLength- 50"
+        },
+        "BillingStateProvinceChoice": {
+          "type": "string",
+          "text": "StateProvinceChoice of the Billing user. MaxLength- 50"
+        },
+        "BillingPostalCode": {
+          "type": "string",
+          "text": "PostalCode of the Billing user. MaxLength- 50"
+        },
+        "BillingCountry": {
+          "type": "string",
+          "text": "Country of the Billing user. MaxLength- 50"
+        },
+        "BillingPhone": {
+          "type": "string",
+          "text": "Phone number in the format +NNN.NNNNNNNNNN. MaxLength- 50"
+        },
+        "BillingPhoneExt": {
+          "type": "string",
+          "text": "PhoneExt of the Billing user. MaxLength- 50"
+        },
+        "BillingFax": {
+          "type": "string",
+          "text": "Fax number in the format +NNN.NNNNNNNNNN. MaxLength- 50"
+        },
+        "BillingEmailAddress": {
+          "type": "string",
+          "text": "Email address of the Billing user. MaxLength- 255"
+        },
+        "IdnCode": {
+          "type": "string",
+          "text": "Code of Internationalized Domain Name (please refer to the note below). MaxLength- 100"
+        },
+        "Extended attributes": {
+          "type": "string",
+          "text": "Required for .us/ .eu/ .ca/ .co.uk/ .org.uk/ .me.uk/ .nu / .com.au/ .net.au/ .org.au/ .es/ .nom.es/ .com.es/ .org.es/ .de/ .fr TLDs only",
+          "required": true
+        },
+        "Nameservers": {
+          "type": "string",
+          "text": "Comma-separated list of custom nameservers to be associated with the domain name"
+        },
+        "AddFreeWhoisguard": {
+          "type": "string",
+          "text": "Adds free domain privacy for the domain. MaxLength- 10 Default Value- no"
+        },
+        "WGEnabled": {
+          "type": "string",
+          "text": "Enables free domain privacy for the domain. MaxLength- 10 Default Value- no"
+        },
+        "IsPremiumDomain": {
+          "type": "boolean",
+          "text": "Indication if the domain name is premium. MaxLength- 10",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "PremiumPrice": {
+          "type": "string",
+          "text": "Registration price for the premium domain. MaxLength- 20"
+        },
+        "EapFee": {
+          "type": "string",
+          "text": "Purchase fee for the premium domain during Early Access Program (EAP)*. MaxLength- 20"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Registers a new domain name.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.domains.create",
+        "alias_endpoint": "/namecheap/domains.create",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__domains.gettldlist___get": {
+      "provider_intent": "namecheap__domains.gettldlist___get",
+      "provider_alias_intent": "/domains.gettldlist",
+      "text": "Returns a list of tlds",
+      "category": "Domains",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Returns a list of tlds",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.domains.getTldList",
+        "alias_endpoint": "/namecheap/domains.gettldlist",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__domains.setcontacts___get": {
+      "provider_intent": "namecheap__domains.setcontacts___get",
+      "provider_alias_intent": "/domains.setcontacts",
+      "text": "Sets contact information for the domain",
+      "category": "Domains",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "DomainName": {
+          "type": "string",
+          "text": "The domain name to register. MaxLength- 70",
+          "required": true
+        },
+        "RegistrantOrganizationName": {
+          "type": "string",
+          "text": "Organization of the Registrant user. MaxLength- 255"
+        },
+        "RegistrantJobTitle": {
+          "type": "string",
+          "text": "Job title of the Registrant user. MaxLength- 255"
+        },
+        "RegistrantFirstName": {
+          "type": "string",
+          "text": "First name of the Registrant user. MaxLength- 255",
+          "required": true
+        },
+        "RegistrantLastName": {
+          "type": "string",
+          "text": "Second name of the Registrant user. MaxLength- 255",
+          "required": true
+        },
+        "RegistrantAddress1": {
+          "type": "string",
+          "text": "Address1 of the Registrant user. MaxLength- 255",
+          "required": true
+        },
+        "RegistrantAddress2": {
+          "type": "string",
+          "text": "Address2 of the Registrant user. MaxLength- 255"
+        },
+        "RegistrantCity": {
+          "type": "string",
+          "text": "City of the Registrant user.MaxLength- 50",
+          "required": true
+        },
+        "RegistrantStateProvince": {
+          "type": "string",
+          "text": "State/Province of the Registrant user.MaxLength- 50",
+          "required": true
+        },
+        "RegistrantStateProvinceChoice": {
+          "type": "string",
+          "text": "StateProvinceChoice of the Registrant user.MaxLength- 50"
+        },
+        "RegistrantPostalCode": {
+          "type": "string",
+          "text": "PostalCode of the Registrant user.MaxLength- 50",
+          "required": true
+        },
+        "RegistrantCountry": {
+          "type": "string",
+          "text": "Country of the Registrant user.MaxLength- 50",
+          "required": true
+        },
+        "RegistrantPhone": {
+          "type": "string",
+          "text": "Phone number in the format +NNN.NNNNNNNNNN. MaxLength- 50",
+          "required": true
+        },
+        "RegistrantPhoneExt": {
+          "type": "string",
+          "text": "PhoneExt of the Registrant user.MaxLength- 50"
+        },
+        "RegistrantFax": {
+          "type": "string",
+          "text": "Fax number in the format +NNN.NNNNNNNNNN. MaxLength- 50"
+        },
+        "RegistrantEmailAddress": {
+          "type": "string",
+          "text": "Email address of the Registrant user. MaxLength- 255",
+          "required": true
+        },
+        "TechOrganizationName": {
+          "type": "string",
+          "text": "Organization of the Tech user. MaxLength- 255"
+        },
+        "TechJobTitle": {
+          "type": "string",
+          "text": "Job title of the Tech user. MaxLength- 255"
+        },
+        "TechFirstName": {
+          "type": "string",
+          "text": "First name of the Tech user. MaxLength- 255",
+          "required": true
+        },
+        "TechLastName": {
+          "type": "string",
+          "text": "Second name of the Tech user. MaxLength- 255",
+          "required": true
+        },
+        "TechAddress1": {
+          "type": "string",
+          "text": "Address1 of the Tech user. MaxLength- 255",
+          "required": true
+        },
+        "TechAddress2": {
+          "type": "string",
+          "text": "Address2 of the Tech user. MaxLength- 255"
+        },
+        "TechCity": {
+          "type": "string",
+          "text": "City of the Tech user. MaxLength- 50",
+          "required": true
+        },
+        "TechStateProvince": {
+          "type": "string",
+          "text": "State/Province of the Tech user. MaxLength- 50",
+          "required": true
+        },
+        "TechStateProvinceChoice": {
+          "type": "string",
+          "text": "StateProvinceChoice of the Tech user. MaxLength- 50"
+        },
+        "TechPostalCode": {
+          "type": "string",
+          "text": "PostalCode of the Tech user. MaxLength- 50",
+          "required": true
+        },
+        "TechCountry": {
+          "type": "string",
+          "text": "Country of the Tech user. MaxLength- 50",
+          "required": true
+        },
+        "TechPhone": {
+          "type": "string",
+          "text": "Phone number in the format +NNN.NNNNNNNNNN. MaxLength- 50",
+          "required": true
+        },
+        "TechPhoneExt": {
+          "type": "string",
+          "text": "PhoneExt of the Tech user. MaxLength- 50"
+        },
+        "TechFax": {
+          "type": "string",
+          "text": "Fax number in the format +NNN.NNNNNNNNNN. MaxLength- 50"
+        },
+        "TechEmailAddress": {
+          "type": "string",
+          "text": "Email address of the Tech user. MaxLength- 255",
+          "required": true
+        },
+        "AdminOrganizationName": {
+          "type": "string",
+          "text": "Organization of the Admin user. MaxLength- 255"
+        },
+        "AdminJobTitle": {
+          "type": "string",
+          "text": "Job title of the Admin user. MaxLength- 255"
+        },
+        "AdminFirstName": {
+          "type": "string",
+          "text": "First name of the Admin user. MaxLength- 255",
+          "required": true
+        },
+        "AdminLastName": {
+          "type": "string",
+          "text": "Second name of the Admin user. MaxLength- 255",
+          "required": true
+        },
+        "AdminAddress1": {
+          "type": "string",
+          "text": "Address1 of the Admin user. MaxLength- 255",
+          "required": true
+        },
+        "AdminAddress2": {
+          "type": "string",
+          "text": "Address2 of the Admin user. MaxLength- 255"
+        },
+        "AdminCity": {
+          "type": "string",
+          "text": "City of the Admin . MaxLength- 50",
+          "required": true
+        },
+        "AdminStateProvince": {
+          "type": "string",
+          "text": "State/Province of the Admin . MaxLength- 50",
+          "required": true
+        },
+        "AdminStateProvinceChoice": {
+          "type": "string",
+          "text": "StateProvinceChoice of the Admin . MaxLength- 50"
+        },
+        "AdminPostalCode": {
+          "type": "string",
+          "text": "PostalCode of the Admin . MaxLength- 50",
+          "required": true
+        },
+        "AdminCountry": {
+          "type": "string",
+          "text": "Country of the Admin . MaxLength- 50",
+          "required": true
+        },
+        "AdminPhone": {
+          "type": "string",
+          "text": "Phone number in the format +NNN.NNNNNNNNNN. MaxLength- 50",
+          "required": true
+        },
+        "AdminPhoneExt": {
+          "type": "string",
+          "text": "PhoneExt of the Admin . MaxLength- 50"
+        },
+        "AdminFax": {
+          "type": "string",
+          "text": "Fax number in the format +NNN.NNNNNNNNNN. MaxLength- 50"
+        },
+        "AdminEmailAddress": {
+          "type": "string",
+          "text": "Email address of the Admin user. MaxLength- 255",
+          "required": true
+        },
+        "AuxBillingOrganizationName": {
+          "type": "string",
+          "text": "Organization of the AuxBilling user. MaxLength- 255"
+        },
+        "AuxBillingJobTitle": {
+          "type": "string",
+          "text": "Job title of the AuxBilling user. MaxLength- 255"
+        },
+        "AuxBillingFirstName": {
+          "type": "string",
+          "text": "First name of the AuxBilling user. MaxLength- 255",
+          "required": true
+        },
+        "AuxBillingLastName": {
+          "type": "string",
+          "text": "Second name of the AuxBilling user. MaxLength- 255",
+          "required": true
+        },
+        "AuxBillingAddress1": {
+          "type": "string",
+          "text": "Address1 of the AuxBilling user. MaxLength- 255",
+          "required": true
+        },
+        "AuxBillingAddress2": {
+          "type": "string",
+          "text": "Address2 of the AuxBilling user. MaxLength- 255"
+        },
+        "AuxBillingCity": {
+          "type": "string",
+          "text": "City of the AuxBilling user. MaxLength- 50",
+          "required": true
+        },
+        "AuxBillingStateProvince": {
+          "type": "string",
+          "text": "State/Province of the AuxBilling user. MaxLength- 50",
+          "required": true
+        },
+        "AuxBillingStateProvinceChoice": {
+          "type": "string",
+          "text": "StateProvinceChoice of the AuxBilling user. MaxLength- 50"
+        },
+        "AuxBillingPostalCode": {
+          "type": "string",
+          "text": "PostalCode of the AuxBilling user. MaxLength- 50",
+          "required": true
+        },
+        "AuxBillingCountry": {
+          "type": "string",
+          "text": "Country of the AuxBilling user. MaxLength- 50",
+          "required": true
+        },
+        "AuxBillingPhone": {
+          "type": "string",
+          "text": "Phone number in the format +NNN.NNNNNNNNNN. MaxLength- 50",
+          "required": true
+        },
+        "AuxBillingPhoneExt": {
+          "type": "string",
+          "text": "PhoneExt of the AuxBilling user. MaxLength- 50"
+        },
+        "AuxBillingFax": {
+          "type": "string",
+          "text": "Fax number in the format +NNN.NNNNNNNNNN. MaxLength- 50"
+        },
+        "AuxBillingEmailAddress": {
+          "type": "string",
+          "text": "Email address of the AuxBilling user. MaxLength- 255",
+          "required": true
+        },
+        "Extended attributes": {
+          "type": "string",
+          "text": "Required for .us/ .eu/ .ca/ .co.uk/ .org.uk/ .me.uk/ .nu / .asia/ .com.au/ .net.au/ .org.au/ .es/ .nom.es/ .com.es/ .org.es/ .de/ .fr TLDs only",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Sets contact information for the domain.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.domains.setContacts",
+        "alias_endpoint": "/namecheap/domains.setcontacts",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__domains.check___get": {
+      "provider_intent": "namecheap__domains.check___get",
+      "provider_alias_intent": "/domains.check",
+      "text": "Checks the availability of domains",
+      "category": "Domains",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "DomainList": {
+          "type": "string",
+          "text": "Comma-separated list of domains to check",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Checks the availability of domains.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.domains.check",
+        "alias_endpoint": "/namecheap/domains.check",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__domains.reactivate___get": {
+      "provider_intent": "namecheap__domains.reactivate___get",
+      "provider_alias_intent": "/domains.reactivate",
+      "text": "Reactivates an expired domain",
+      "category": "Domains",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "DomainName": {
+          "type": "string",
+          "text": "Domain name to reactivate. MaxLength- 70",
+          "required": true
+        },
+        "PromotionCode": {
+          "type": "string",
+          "text": "Promotional (coupon) code for reactivating the domain. MaxLength- 70"
+        },
+        "YearsToAdd": {
+          "type": "number",
+          "text": "Number of years after expiry. MaxLength- 2"
+        },
+        "IsPremiumDomain": {
+          "type": "boolean",
+          "text": "Indication if the domain name is premium. MaxLength- 10",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "PremiumPrice": {
+          "type": "string",
+          "text": "Reactivation price for the premium domain. MaxLength- 20"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Reactivates an expired domain.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.domains.reactivate",
+        "alias_endpoint": "/namecheap/domains.reactivate",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__domains.renew___get": {
+      "provider_intent": "namecheap__domains.renew___get",
+      "provider_alias_intent": "/domains.renew",
+      "text": "Renews an expiring domain",
+      "category": "Domains",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "DomainName": {
+          "type": "string",
+          "text": "Domain name to renew. MaxLength- 70",
+          "required": true
+        },
+        "Years": {
+          "type": "number",
+          "text": "Number of years to renew. MaxLength- 2",
+          "required": true
+        },
+        "PromotionCode": {
+          "type": "string",
+          "text": "Promotional (coupon) code for renewing the domain. MaxLength- 20"
+        },
+        "IsPremiumDomain": {
+          "type": "boolean",
+          "text": "Indication if the domain name is premium. MaxLength- 10",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "PremiumPrice": {
+          "type": "string",
+          "text": "Renewal price for the premium domain. MaxLength- 20"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Renews an expiring domain.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.domains.renew",
+        "alias_endpoint": "/namecheap/domains.renew",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__domains.getregistrarlock___get": {
+      "provider_intent": "namecheap__domains.getregistrarlock___get",
+      "provider_alias_intent": "/domains.getregistrarlock",
+      "text": "Check domain lock status with RegistrarLock API",
+      "category": "Domains",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "DomainName": {
+          "type": "string",
+          "text": "Domain name to get status for. MaxLength- 70",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Gets the RegistrarLock status of the requested domain.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.domains.getRegistrarLock",
+        "alias_endpoint": "/namecheap/domains.getregistrarlock",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__domains.setregistrarlock___get": {
+      "provider_intent": "namecheap__domains.setregistrarlock___get",
+      "provider_alias_intent": "/domains.setregistrarlock",
+      "text": "Sets the RegistrarLock status for a domain",
+      "category": "Domains",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "DomainName": {
+          "type": "string",
+          "text": "Domain name to set status for. MaxLength- 70",
+          "required": true
+        },
+        "LockAction": {
+          "type": "string",
+          "text": "Possible values- LOCK/ UNLOCK. Default Value- LOCK. MaxLength- 70"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Sets the RegistrarLock status for a domain.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.domains.setRegistrarLock",
+        "alias_endpoint": "/namecheap/domains.setregistrarlock",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__domains.getinfo___get": {
+      "provider_intent": "namecheap__domains.getinfo___get",
+      "provider_alias_intent": "/domains.getinfo",
+      "text": "Returns information about the requested domain",
+      "category": "Domains",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "DomainName": {
+          "type": "string",
+          "text": "Domain name for which domain information needs to be requested. MaxLength- 70",
+          "required": true
+        },
+        "HostName": {
+          "type": "string",
+          "text": "Hosted domain name for which domain information needs to be requested. MaxLength- 255"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Returns information about the requested domain.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.domains.getInfo",
+        "alias_endpoint": "/namecheap/domains.getinfo",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__domains.dns.setdefault___get": {
+      "provider_intent": "namecheap__domains.dns.setdefault___get",
+      "provider_alias_intent": "/domains.dns.setdefault",
+      "text": "Set default DNS for free services: host management, URL forwarding, email forwarding, dynamic DNS",
+      "category": "Domains DNS",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "SLD": {
+          "type": "string",
+          "text": "SLD of the DomainName. MaxLength- 70",
+          "required": true
+        },
+        "TLD": {
+          "type": "string",
+          "text": "TLD of the DomainName. MaxLength- 10",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Sets domain to use our default DNS servers. Required for free services like Host record management, URL forwarding, email forwarding, dynamic dns and other value added services.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.domains.dns.setDefault",
+        "alias_endpoint": "/namecheap/domains.dns.setdefault",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__domains.dns.setcustom___get": {
+      "provider_intent": "namecheap__domains.dns.setcustom___get",
+      "provider_alias_intent": "/domains.dns.setcustom",
+      "text": "Use custom DNS servers for domain; disable URL/email forwarding, Dynamic DNS won't work",
+      "category": "Domains DNS",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "SLD": {
+          "type": "string",
+          "text": "SLD of the DomainName. MaxLength- 70",
+          "required": true
+        },
+        "TLD": {
+          "type": "string",
+          "text": "TLD of the DomainName. MaxLength- 10",
+          "required": true
+        },
+        "Nameservers": {
+          "type": "string",
+          "text": "A comma-separated list of name servers to be associated with this domain. MaxLength- 1200",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Sets domain to use custom DNS servers. NOTE: Services like URL forwarding, Email forwarding, Dynamic DNS will not work for domains using custom nameservers.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.domains.dns.setCustom",
+        "alias_endpoint": "/namecheap/domains.dns.setcustom",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__domains.dns.getlist___get": {
+      "provider_intent": "namecheap__domains.dns.getlist___get",
+      "provider_alias_intent": "/domains.dns.getlist",
+      "text": "Retrieve DNS servers for requested domain",
+      "category": "Domains DNS",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "SLD": {
+          "type": "string",
+          "text": "SLD of the DomainName. MaxLength- 70",
+          "required": true
+        },
+        "TLD": {
+          "type": "string",
+          "text": "TLD of the DomainName. MaxLength- 10",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Gets a list of DNS servers associated with the requested domain.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.domains.dns.getList",
+        "alias_endpoint": "/namecheap/domains.dns.getlist",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__domains.dns.gethosts___get": {
+      "provider_intent": "namecheap__domains.dns.gethosts___get",
+      "provider_alias_intent": "/domains.dns.gethosts",
+      "text": "Get DNS host records for domain",
+      "category": "Domains DNS",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "SLD": {
+          "type": "string",
+          "text": "SLD of the domain to getHosts. MaxLength- 70",
+          "required": true
+        },
+        "TLD": {
+          "type": "string",
+          "text": "TLD of the domain to getHosts. MaxLength- 10",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Retrieves DNS host record settings for the requested domain.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.domains.dns.getHosts",
+        "alias_endpoint": "/namecheap/domains.dns.gethosts",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__domains.dns.getemailforwarding___get": {
+      "provider_intent": "namecheap__domains.dns.getemailforwarding___get",
+      "provider_alias_intent": "/domains.dns.getemailforwarding",
+      "text": "Retrieve domain's email forwarding settings",
+      "category": "Domains DNS",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "DomainName": {
+          "type": "string",
+          "text": "Domain name to get settings. MaxLength- 70",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Gets email forwarding settings for the requested domain",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.domains.dns.getEmailForwarding",
+        "alias_endpoint": "/namecheap/domains.dns.getemailforwarding",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__domains.dns.setemailforwarding___get": {
+      "provider_intent": "namecheap__domains.dns.setemailforwarding___get",
+      "provider_alias_intent": "/domains.dns.setemailforwarding",
+      "text": "Enable email forwarding for a domain",
+      "category": "Domains DNS",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "DomainName": {
+          "type": "string",
+          "text": "Domain name to set settings. MaxLength- 70",
+          "required": true
+        },
+        "MailBox[1..n]": {
+          "type": "string",
+          "text": "required",
+          "enum": [
+            "MailBox for which you wish to set email forwarding. For example- example@namecheap.com"
+          ]
+        },
+        "ForwardTo[1..n]": {
+          "type": "string",
+          "text": "Email address to forwardto.For example- example@gmail.com",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Sets email forwarding for a domain name.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.domains.dns.setEmailForwarding",
+        "alias_endpoint": "/namecheap/domains.dns.setemailforwarding",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__domains.dns.sethosts___get": {
+      "provider_intent": "namecheap__domains.dns.sethosts___get",
+      "provider_alias_intent": "/domains.dns.sethosts",
+      "text": "Sets DNS host records settings for the requested domain",
+      "category": "Domains DNS",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "SLD": {
+          "type": "string",
+          "text": "SLD of the domain to setHosts. MaxLength- 70",
+          "required": true
+        },
+        "TLD": {
+          "type": "string",
+          "text": "TLD of the domain to setHosts. MaxLength- 10",
+          "required": true
+        },
+        "HostName[1..n]": {
+          "type": "string",
+          "text": "Sub-domain/hostname to create the record for",
+          "required": true
+        },
+        "RecordType[1..n]": {
+          "type": "string",
+          "text": "Possible values- A/ AAAA/ ALIAS/ CAA/ CNAME/ MX/ MXE/ NS/ TXT/ URL/ URL301/ FRAME",
+          "required": true
+        },
+        "Address[1..n]": {
+          "type": "string",
+          "text": "Possible values are URL or IP address. The value for this parameter is based on RecordType.",
+          "required": true
+        },
+        "MXPref[1..n]": {
+          "type": "string",
+          "text": "MX preference for host. Applicable for MX records only.",
+          "required": true
+        },
+        "EmailType": {
+          "type": "string",
+          "text": "Possible values are-\r\nMXE - to set up your custom MXE record.\r\nMX - to set up custom MX records of your mail provider.\r\nFWD - to set up MX records for our Free Email Forwarding service.\r\nOX - to set up MX records for our Private Email service.",
+          "required": true
+        },
+        "TTL[1..n]": {
+          "type": "string",
+          "text": "Time to live for all record types.Possible values- any value between 60 to 60000\r\nDefault Value- 1800"
+        },
+        "Flag": {
+          "type": "string",
+          "text": "Is an unsigned integer between 0 and 255. The flag value is an 8-bit number the most significant bit of which indicates the criticality of understanding of a record by a CA. It's recommended to use '0'"
+        },
+        "Tag": {
+          "type": "string",
+          "text": "A non-zero sequence of US-ASCII letters and numbers in lower case. The tag value can be one of the following values-\r\nissue — specifies the certification authority that is authorized to issue a certificate for the domain name or subdomain record used in the title.\r\nissuewild — specifies the certification authority that is allowed to issue a wildcard certificate for the domain name or subdomain record used in the title. The certificate applies to the domain name or subdomain directly and to all its subdomains.\r\niodef — specifies the e-mail address or URL (compliant with RFC 5070) a CA should use to notify a client if any issuance policy violation spotted by this CA."
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Sets DNS host records settings for the requested domain.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.domains.dns.setHosts",
+        "alias_endpoint": "/namecheap/domains.dns.sethosts",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__domains.ns.create___get": {
+      "provider_intent": "namecheap__domains.ns.create___get",
+      "provider_alias_intent": "/domains.ns.create",
+      "text": "Creates a new nameserver",
+      "category": "Domains NS",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "SLD": {
+          "type": "string",
+          "text": "SLD of the DomainName. MaxLength- 70",
+          "required": true
+        },
+        "TLD": {
+          "type": "string",
+          "text": "TLD of the DomainName. MaxLength- 10",
+          "required": true
+        },
+        "Nameserver": {
+          "type": "string",
+          "text": "Nameserver to create. MaxLength- 150",
+          "required": true
+        },
+        "IP": {
+          "type": "string",
+          "text": "Nameserver IP address. MaxLength- 15",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Creates a new nameserver.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.domains.ns.create",
+        "alias_endpoint": "/namecheap/domains.ns.create",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__domains.ns.delete___get": {
+      "provider_intent": "namecheap__domains.ns.delete___get",
+      "provider_alias_intent": "/domains.ns.delete",
+      "text": "Deletes a nameserver associated with the requested domain",
+      "category": "Domains NS",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "SLD": {
+          "type": "string",
+          "text": "SLD of the DomainName. MaxLength- 70",
+          "required": true
+        },
+        "TLD": {
+          "type": "string",
+          "text": "TLD of the DomainName. MaxLength- 10",
+          "required": true
+        },
+        "Nameserver": {
+          "type": "string",
+          "text": "Nameserver to delete. MaxLength- 150",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Deletes a nameserver associated with the requested domain.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.domains.ns.delete",
+        "alias_endpoint": "/namecheap/domains.ns.delete",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__domains.ns.getinfo___get": {
+      "provider_intent": "namecheap__domains.ns.getinfo___get",
+      "provider_alias_intent": "/domains.ns.getinfo",
+      "text": "Retrieves information about a registered nameserver",
+      "category": "Domains NS",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "SLD": {
+          "type": "string",
+          "text": "SLD of the DomainName. MaxLength- 70",
+          "required": true
+        },
+        "TLD": {
+          "type": "string",
+          "text": "TLD of the DomainName. MaxLength- 10",
+          "required": true
+        },
+        "Nameserver": {
+          "type": "string",
+          "text": "Nameserver. MaxLength- 150",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Retrieves information about a registered nameserver.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.domains.ns.getInfo",
+        "alias_endpoint": "/namecheap/domains.ns.getinfo",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__domains.ns.update___get": {
+      "provider_intent": "namecheap__domains.ns.update___get",
+      "provider_alias_intent": "/domains.ns.update",
+      "text": "Updates the IP address of a registered nameserver",
+      "category": "Domains NS",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "SLD": {
+          "type": "string",
+          "text": "SLD of the DomainName. MaxLength- 70",
+          "required": true
+        },
+        "TLD": {
+          "type": "string",
+          "text": "TLD of the DomainName. MaxLength- 10",
+          "required": true
+        },
+        "Nameserver": {
+          "type": "string",
+          "text": "Nameserver. MaxLength- 150",
+          "required": true
+        },
+        "OldIP": {
+          "type": "string",
+          "text": "Existing IP address. MaxLength- 15",
+          "required": true
+        },
+        "IP": {
+          "type": "string",
+          "text": "New IP address. MaxLength- 15",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Updates the IP address of a registered nameserver.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.domains.ns.update",
+        "alias_endpoint": "/namecheap/domains.ns.update",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__domains.transfer.create___get": {
+      "provider_intent": "namecheap__domains.transfer.create___get",
+      "provider_alias_intent": "/domains.transfer.create",
+      "text": "Transfers a domain to Namecheap",
+      "category": "Domains Transfer",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "DomainName": {
+          "type": "string",
+          "text": "Domain name to transfer. MaxLength- 70",
+          "required": true
+        },
+        "Years": {
+          "type": "string",
+          "text": "Though it is possible to configure a transfer price up to 10 years the duration should be set to 1 year only. MaxLength- 1",
+          "required": true
+        },
+        "EPPCode": {
+          "type": "string",
+          "text": "The EPPCode is required for transferring .biz; .ca; .cc; .co; .com; .com.pe; .in; .info; .me; .mobi; .net; net.pe; .org; .org.pe; .pe; .tv; .us domains only. MaxLength- 20",
+          "required": true
+        },
+        "PromotionCode": {
+          "type": "string",
+          "text": "Promotional (coupon) code for transfer. MaxLength- 20"
+        },
+        "AddFreeWhoisguard": {
+          "type": "string",
+          "text": "Adds free domain privacy for the domain. MaxLength- 3 Default Value- Yes"
+        },
+        "WGenable": {
+          "type": "string",
+          "text": "Enables free domain privacy for the domain. MaxLength- 3 Default Value- No"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Transfers a domain to Namecheap. You can only transfer .biz, .ca, .cc, .co, .co.uk, .com, .com.es, .com.pe, .es, .in, .info, .me, .me.uk, .mobi, .net, .net.pe, .nom.es, .org, .org.es, .org.pe, .org.uk, .pe, .tv, .us domains through API at this time.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.domains.transfer.create",
+        "alias_endpoint": "/namecheap/domains.transfer.create",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__domains.transfer.getstatus___get": {
+      "provider_intent": "namecheap__domains.transfer.getstatus___get",
+      "provider_alias_intent": "/domains.transfer.getstatus",
+      "text": "Gets the status of a particular transfer",
+      "category": "Domains Transfer",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "TransferID": {
+          "type": "number",
+          "text": "The unique Transfer ID which you get after placing a transfer request. MaxLength- 10",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Gets the status of a particular transfer.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.domains.transfer.getStatus",
+        "alias_endpoint": "/namecheap/domains.transfer.getstatus",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__domains.transfer.updatestatus___get": {
+      "provider_intent": "namecheap__domains.transfer.updatestatus___get",
+      "provider_alias_intent": "/domains.transfer.updatestatus",
+      "text": "Updates the status of a particular transfer",
+      "category": "Domains Transfer",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "TransferID": {
+          "type": "number",
+          "text": "The unique Transfer ID which you get after placing a transfer request. MaxLength- 10",
+          "required": true
+        },
+        "Resubmit": {
+          "type": "string",
+          "text": "The value 'true' resubmits the transfer. MaxLength- 5",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Updates the status of a particular transfer. Allows you to re-submit the transfer after releasing the registry lock.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.domains.transfer.updateStatus",
+        "alias_endpoint": "/namecheap/domains.transfer.updatestatus",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__domains.transfer.getlist___get": {
+      "provider_intent": "namecheap__domains.transfer.getlist___get",
+      "provider_alias_intent": "/domains.transfer.getlist",
+      "text": "Gets the list of domain transfers",
+      "category": "Domains Transfer",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "ListType": {
+          "type": "string",
+          "text": "Possible values are ALL/INPROGRESS/ CANCELLED/COMPLETED. Default Value- ALL MaxLength- 10"
+        },
+        "SearchTerm": {
+          "type": "string",
+          "text": "The keyword should be a domain name. MaxLength- 70"
+        },
+        "Page": {
+          "type": "number",
+          "text": "Page to return. Default Value- 1 MaxLength- 10"
+        },
+        "PageSize": {
+          "type": "number",
+          "text": "Number of transfer to be listed on a page. Minimum value- 10; Maximum value- 100\r\nDefault Value- 10 MaxLength- 10"
+        },
+        "SortBy": {
+          "type": "string",
+          "text": "Possible values are DOMAINNAME/ DOMAINNAME_DESC/TRANSFERDATE/ TRANSFERDATE_DESC/STATUSDATE/ STATUSDATE_DESC. Default Value- DOMAINNAME MaxLength- 50"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Gets the list of domain transfers.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.domains.transfer.getList",
+        "alias_endpoint": "/namecheap/domains.transfer.getlist",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__ssl.create___get": {
+      "provider_intent": "namecheap__ssl.create___get",
+      "provider_alias_intent": "/ssl.create",
+      "text": "Creates a new SSL certificate",
+      "category": "SSL",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "Years": {
+          "type": "number",
+          "text": "Number of years SSL will be issued for. Allowed values- 1/2/3/4/5. MaxLength- 1",
+          "required": true
+        },
+        "Type": {
+          "type": "string",
+          "text": "SSL product name. See \"Possible values for Type parameter\" below this table. MaxLength- 50",
+          "required": true
+        },
+        "SANStoADD": {
+          "type": "number",
+          "text": "Defines number of add-on domains to be purchased in addition to the default number of domains included into a multi-domain certificate. MaxLength- 2"
+        },
+        "PromotionCode": {
+          "type": "string",
+          "text": "Promotional (coupon) code for the certificate. MaxLength- 20"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Creates a new SSL certificate",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.ssl.create",
+        "alias_endpoint": "/namecheap/ssl.create",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__ssl.getlist___get": {
+      "provider_intent": "namecheap__ssl.getlist___get",
+      "provider_alias_intent": "/ssl.getlist",
+      "text": "Returns a list of SSL certificates for the particular user",
+      "category": "SSL",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "ListType": {
+          "type": "string",
+          "text": "Possible values are ALL/Processing/EmailSent/TechnicalProblem/InProgress/ Completed/Deactivated/Active/Cancelled/NewPurchase/ NewRenewal. Default Value- All. MaxLength- 50"
+        },
+        "SearchTerm": {
+          "type": "string",
+          "text": "Keyword to look for on the SSL list. MaxLength- 70"
+        },
+        "Page": {
+          "type": "number",
+          "text": "Page to return. Default Value- 1. MaxLength- 10"
+        },
+        "PageSize": {
+          "type": "number",
+          "text": "Total number of SSL certificates to display in a page. Minimum value is 10 and maximum value is 100. Default Value- 20. MaxLength- 100"
+        },
+        "SortBy": {
+          "type": "string",
+          "text": "Possible values are PURCHASEDATE/ PURCHASEDATE_DESC/ SSLTYPE/ SSLTYPE_DESC/ EXPIREDATETIME/ EXPIREDATETIME_DESC/Host_Name/ Host_Name_DESC. MaxLength- 20"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Returns a list of SSL certificates for the particular user",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.ssl.getList",
+        "alias_endpoint": "/namecheap/ssl.getlist",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__ssl.parsecsr___get": {
+      "provider_intent": "namecheap__ssl.parsecsr___get",
+      "provider_alias_intent": "/ssl.parsecsr",
+      "text": "Parsers the CSR",
+      "category": "SSL",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "csr": {
+          "type": "string",
+          "text": "Certificate Signing Request. MaxLength- 2000",
+          "required": true
+        },
+        "CertificateType": {
+          "type": "string",
+          "text": "Type of SSL Certificate. MaxLength- 50"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Parsers the CSR",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.ssl.parseCSR",
+        "alias_endpoint": "/namecheap/ssl.parsecsr",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__ssl.getapproveremaillist___get": {
+      "provider_intent": "namecheap__ssl.getapproveremaillist___get",
+      "provider_alias_intent": "/ssl.getapproveremaillist",
+      "text": "Gets approver email list for the requested certificate",
+      "category": "SSL",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "DomainName": {
+          "type": "string",
+          "text": "Domain name to get the list. MaxLength- 70",
+          "required": true
+        },
+        "CertificateType": {
+          "type": "string",
+          "text": "Type of SSL certificate. MaxLength- 50",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Gets approver email list for the requested certificate",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.ssl.getApproverEmailList",
+        "alias_endpoint": "/namecheap/ssl.getapproveremaillist",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__ssl.activate___get": {
+      "provider_intent": "namecheap__ssl.activate___get",
+      "provider_alias_intent": "/ssl.activate",
+      "text": "Activates a newly purchased SSL certificate",
+      "category": "SSL",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Activates a newly purchased SSL certificate",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.ssl.activate",
+        "alias_endpoint": "/namecheap/ssl.activate",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__ssl.resendapproveremail___get": {
+      "provider_intent": "namecheap__ssl.resendapproveremail___get",
+      "provider_alias_intent": "/ssl.resendapproveremail",
+      "text": "Resends the approver email",
+      "category": "SSL",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "CertificateID": {
+          "type": "string",
+          "text": "The unique certificate ID that you get after calling ssl.create command. MaxLength- 10",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Resends the approver email",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.ssl.resendApproverEmail",
+        "alias_endpoint": "/namecheap/ssl.resendapproveremail",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__ssl.getinfo___get": {
+      "provider_intent": "namecheap__ssl.getinfo___get",
+      "provider_alias_intent": "/ssl.getinfo",
+      "text": "Retrieves information about the requested SSL certificate",
+      "category": "SSL",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "CertificateID": {
+          "type": "number",
+          "text": "Unique ID of the SSL certificate. MaxLength- 10",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Retrieves information about the requested SSL certificate",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.ssl.getInfo",
+        "alias_endpoint": "/namecheap/ssl.getinfo",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__ssl.renew___get": {
+      "provider_intent": "namecheap__ssl.renew___get",
+      "provider_alias_intent": "/ssl.renew",
+      "text": "Renews an SSL certificate",
+      "category": "SSL",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "CertificateID": {
+          "type": "number",
+          "text": "Unique ID of the SSL certificate you wish to renew. MaxLength- 9",
+          "required": true
+        },
+        "Years": {
+          "type": "number",
+          "text": "Number of years renewal SSL will be issued for. Allowed values- 1/2/3/4/5. MaxLength- 1",
+          "required": true
+        },
+        "SSLType": {
+          "type": "string",
+          "text": "SSL product name. See \"Possible values for SSLType parameter\" below this table. MaxLength- 50",
+          "required": true
+        },
+        "PromotionCode": {
+          "type": "string",
+          "text": "Promotional (coupon) code for the certificate. MaxLength- 20"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Renews an SSL certificate",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.ssl.renew",
+        "alias_endpoint": "/namecheap/ssl.renew",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__ssl.reissue___get": {
+      "provider_intent": "namecheap__ssl.reissue___get",
+      "provider_alias_intent": "/ssl.reissue",
+      "text": "Reissues an SSL certificate",
+      "category": "SSL",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Reissues an SSL certificate",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.ssl.reissue",
+        "alias_endpoint": "/namecheap/ssl.reissue",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__ssl.resendfulfillmentemail___get": {
+      "provider_intent": "namecheap__ssl.resendfulfillmentemail___get",
+      "provider_alias_intent": "/ssl.resendfulfillmentemail",
+      "text": "Resends the fulfilment email containing the certificate",
+      "category": "SSL",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "CertificateID": {
+          "type": "string",
+          "text": "The unique certificate ID that you get after calling ssl.create command. MaxLength- 10",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Resends the fulfilment email containing the certificate",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.ssl.resendfulfillmentemail",
+        "alias_endpoint": "/namecheap/ssl.resendfulfillmentemail",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__ssl.purchasemoresans___get": {
+      "provider_intent": "namecheap__ssl.purchasemoresans___get",
+      "provider_alias_intent": "/ssl.purchasemoresans",
+      "text": "Buy additional domains for existing certificate",
+      "category": "SSL",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "CertificateID": {
+          "type": "number",
+          "text": "ID of the certificate for which you wish to purchase more add-on domains. MaxLength-10",
+          "required": true
+        },
+        "NumberOfSANSToAdd": {
+          "type": "number",
+          "text": "Number of add-on domains to be ordered. MaxLength- 2",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Purchases more add-on domains for already purchased certificate.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.ssl.purchasemoresans",
+        "alias_endpoint": "/namecheap/ssl.purchasemoresans",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__ssl.revokecertificate___get": {
+      "provider_intent": "namecheap__ssl.revokecertificate___get",
+      "provider_alias_intent": "/ssl.revokecertificate",
+      "text": "Revokes a re-issued SSL certificate",
+      "category": "SSL",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "CertificateID": {
+          "type": "number",
+          "text": "ID of the certificate for you wish to revoke. Default Value- 1. MaxLength- 10",
+          "required": true
+        },
+        "CertificateType": {
+          "type": "string",
+          "text": "Type of SSL Certificate. MaxLength- 50",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Revokes a re-issued SSL certificate",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.ssl.revokecertificate",
+        "alias_endpoint": "/namecheap/ssl.revokecertificate",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__ssl.editdcvmethod___get": {
+      "provider_intent": "namecheap__ssl.editdcvmethod___get",
+      "provider_alias_intent": "/ssl.editdcvmethod",
+      "text": "Update certificate validation method or retry mechanism",
+      "category": "SSL",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "CertificateID": {
+          "type": "number",
+          "text": "Unique ID of the SSL certificate to set new DCV method for. MaxLength- 10",
+          "required": true
+        },
+        "DCVMethod*": {
+          "type": "string",
+          "text": "DCV method to validate domain control with. MaxLength- 255",
+          "required": true
+        },
+        "DNSNames**": {
+          "type": "string",
+          "text": "Comma-separated list of domain names to set new DCV method for. MaxLength- 3500",
+          "required": true
+        },
+        "DCVMethods**": {
+          "type": "string",
+          "text": "Comma-separated list of DCV methods to validate domain control with. MaxLength- 3500",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Sets new domain control validation (DCV) method for a certificate or serves as 'retry' mechanism",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.ssl.editDCVMethod",
+        "alias_endpoint": "/namecheap/ssl.editdcvmethod",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__users.getpricing___get": {
+      "provider_intent": "namecheap__users.getpricing___get",
+      "provider_alias_intent": "/users.getpricing",
+      "text": "Returns pricing information for a requested product type",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "ProductType": {
+          "type": "string",
+          "text": "Product Type to get pricing information. MaxLength- 20",
+          "required": true
+        },
+        "ProductCategory": {
+          "type": "string",
+          "text": "Specific category within a product type. MaxLength- 20"
+        },
+        "PromotionCode": {
+          "type": "string",
+          "text": "Promotional (coupon) code for the user. MaxLength- 20"
+        },
+        "ActionName": {
+          "type": "string",
+          "text": "Specific action within a product type. MaxLength- 20"
+        },
+        "ProductName": {
+          "type": "string",
+          "text": "The name of the product within a product type. MaxLength- 20"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Returns pricing information for a requested product type.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.users.getPricing",
+        "alias_endpoint": "/namecheap/users.getpricing",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__users.getbalances___get": {
+      "provider_intent": "namecheap__users.getbalances___get",
+      "provider_alias_intent": "/users.getbalances",
+      "text": "Get account fund details: balances, earnings, withdrawals",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Gets information about fund in the user's account.This method returns the following information: Available Balance, Account Balance, Earned Amount, Withdrawable Amount and Funds Required for AutoRenew.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.users.getBalances",
+        "alias_endpoint": "/namecheap/users.getbalances",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__users.changepassword___get": {
+      "provider_intent": "namecheap__users.changepassword___get",
+      "provider_alias_intent": "/users.changepassword",
+      "text": "Changes password of the particular user's account",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "OldPassword": {
+          "type": "string",
+          "text": "Old password of the user. MaxLength- 20",
+          "required": true
+        },
+        "NewPassword": {
+          "type": "string",
+          "text": "New password of the user. MaxLength- 20",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Changes password of the particular user's account",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.users.changePassword",
+        "alias_endpoint": "/namecheap/users.changepassword",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__users.update___get": {
+      "provider_intent": "namecheap__users.update___get",
+      "provider_alias_intent": "/users.update",
+      "text": "Updates user account information for the particular user",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "FirstName": {
+          "type": "string",
+          "text": "First name of the user. MaxLength- 70",
+          "required": true
+        },
+        "LastName": {
+          "type": "string",
+          "text": "Last name of the user. MaxLength- 70",
+          "required": true
+        },
+        "JobTitle": {
+          "type": "string",
+          "text": "Job designation of the user. MaxLength- 60"
+        },
+        "Organization": {
+          "type": "string",
+          "text": "Organization of the user. MaxLength- 60"
+        },
+        "Address1": {
+          "type": "string",
+          "text": "StreetAddress1 of the user. MaxLength- 60",
+          "required": true
+        },
+        "Address2": {
+          "type": "string",
+          "text": "StreetAddress2 of the user. MaxLength- 60"
+        },
+        "City": {
+          "type": "string",
+          "text": "City of the user. MaxLength- 60",
+          "required": true
+        },
+        "StateProvince": {
+          "type": "string",
+          "text": "State/Province of the user. MaxLength- 60",
+          "required": true
+        },
+        "Zip": {
+          "type": "string",
+          "text": "Zip/Postal code of the user. MaxLength- 15",
+          "required": true
+        },
+        "Country": {
+          "type": "string",
+          "text": "Two letter country code of the user. MaxLength- 2",
+          "required": true
+        },
+        "EmailAddress": {
+          "type": "string",
+          "text": "Email address of the user. MaxLength- 255",
+          "required": true
+        },
+        "Phone": {
+          "type": "string",
+          "text": "Phone number in the format +NNN.NNNNNNNNNN. MaxLength- 20",
+          "required": true
+        },
+        "PhoneExt": {
+          "type": "string",
+          "text": "PhoneExt of the user. MaxLength- 10"
+        },
+        "Fax": {
+          "type": "string",
+          "text": "Fax number in the format +NNN.NNNNNNNNNN. MaxLength- 20"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Updates user account information for the particular user",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.users.update",
+        "alias_endpoint": "/namecheap/users.update",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__users.createaddfundsrequest___get": {
+      "provider_intent": "namecheap__users.createaddfundsrequest___get",
+      "provider_alias_intent": "/users.createaddfundsrequest",
+      "text": "Creates a request to add funds through a credit card",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "Username": {
+          "type": "string",
+          "text": "Username to add funds to. MaxLength- 20",
+          "required": true
+        },
+        "PaymentType": {
+          "type": "string",
+          "text": "Allowed payment value- Creditcard. MaxLength- 30",
+          "required": true
+        },
+        "Amount": {
+          "type": "number",
+          "text": "Amount to add. MaxLength- 10",
+          "required": true
+        },
+        "ReturnUrl": {
+          "type": "string",
+          "text": "A valid URL to which the user should be redirected once payment is complete. MaxLength- 300",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Creates a request to add funds through a credit card",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.users.createaddfundsrequest",
+        "alias_endpoint": "/namecheap/users.createaddfundsrequest",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__users.getaddfundsstatus___get": {
+      "provider_intent": "namecheap__users.getaddfundsstatus___get",
+      "provider_alias_intent": "/users.getaddfundsstatus",
+      "text": "Gets the status of add funds request",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "TokenId": {
+          "type": "string",
+          "text": "The Unique ID that you received after calling namecheap.users.createaddfundsrequest method. MaxLength- 100",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Gets the status of add funds request",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.users.getAddFundsStatus",
+        "alias_endpoint": "/namecheap/users.getaddfundsstatus",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__users.create___get": {
+      "provider_intent": "namecheap__users.create___get",
+      "provider_alias_intent": "/users.create",
+      "text": "Creates a new account at NameCheap under this ApiUser",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "NewUserName": {
+          "type": "string",
+          "text": "Username for the new user account. MaxLength- 20",
+          "required": true
+        },
+        "NewUserPassword": {
+          "type": "string",
+          "text": "Password for the new user account. MaxLength- 20",
+          "required": true
+        },
+        "EmailAddress": {
+          "type": "string",
+          "text": "Email address of the user. MaxLength- 128",
+          "required": true
+        },
+        "IgnoreDuplicateEmailAddress": {
+          "type": "string",
+          "text": "By default it ignores to check if the email address is already in use. Default Value- Yes. MaxLength- 10"
+        },
+        "FirstName": {
+          "type": "string",
+          "text": "First name of the user. MaxLength- 60",
+          "required": true
+        },
+        "LastName": {
+          "type": "string",
+          "text": "Last name of the user. MaxLength- 60",
+          "required": true
+        },
+        "AcceptTerms": {
+          "type": "number",
+          "text": "Terms of agreement. The Value should be 1 for user account creation.\r\nDefault Value- 1. MaxLength- 1",
+          "required": true
+        },
+        "AcceptNews": {
+          "type": "number",
+          "text": "Possible values are 0 and 1. Value should be 1 if the user wants to recieve newsletters else it should be 0. MaxLength- 1"
+        },
+        "JobTitle": {
+          "type": "string",
+          "text": "Job designation of the user. MaxLength- 60"
+        },
+        "Organization": {
+          "type": "string",
+          "text": "Organization of the user. MaxLength- 60"
+        },
+        "Address1": {
+          "type": "string",
+          "text": "StreetAddress1 of the user. MaxLength- 60",
+          "required": true
+        },
+        "Address2": {
+          "type": "string",
+          "text": "StreetAddress2 of the user. MaxLength- 60"
+        },
+        "City": {
+          "type": "string",
+          "text": "City of the user. MaxLength- 60",
+          "required": true
+        },
+        "StateProvince": {
+          "type": "string",
+          "text": "State/Province of the user. MaxLength- 60",
+          "required": true
+        },
+        "Zip": {
+          "type": "string",
+          "text": "Zip/Postal code of the user. MaxLength- 15",
+          "required": true
+        },
+        "Country": {
+          "type": "string",
+          "text": "Two letter country code of the user. MaxLength- 2",
+          "required": true
+        },
+        "Phone": {
+          "type": "string",
+          "text": "Phone number in the format +NNN.NNNNNNNNNN. MaxLength- 20",
+          "required": true
+        },
+        "PhoneExt": {
+          "type": "string",
+          "text": "PhoneExt of the user. MaxLength- 10"
+        },
+        "Fax": {
+          "type": "string",
+          "text": "Fax number in the format +NNN.NNNNNNNNNN. MaxLength- 20"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Creates a new account at NameCheap under this ApiUser",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.users.create",
+        "alias_endpoint": "/namecheap/users.create",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__users.login___get": {
+      "provider_intent": "namecheap__users.login___get",
+      "provider_alias_intent": "/users.login",
+      "text": "Verify user account credentials with namecheap.users.create API",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "Password": {
+          "type": "string",
+          "text": "Password of the user account. MaxLength- 20",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Validates the username and password of user accounts you have created using the API command namecheap.users.create.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.users.login",
+        "alias_endpoint": "/namecheap/users.login",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "namecheap__users.resetpassword___get": {
+      "provider_intent": "namecheap__users.resetpassword___get",
+      "provider_alias_intent": "/users.resetpassword",
+      "text": "API sends password reset link via email",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "FindBy": {
+          "type": "string",
+          "text": "Possible values-EMAILADDRESS/ DOMAINNAME/USERNAME. MaxLength- 20",
+          "required": true
+        },
+        "FindByValue": {
+          "type": "string",
+          "text": "The username/email address/domain of the user. MaxLength- 20",
+          "required": true
+        },
+        "EmailFromName": {
+          "type": "string",
+          "text": "Enter a different value to overwrite the default value. Default Value- namecheap.com MaxLength- 20"
+        },
+        "EmailFrom": {
+          "type": "string",
+          "text": "Enter a different value to overwrite the default value. Default Value- support@namecheap.com MaxLength- 20"
+        },
+        "URLPattern": {
+          "type": "string",
+          "text": "Enter a different URL to overwrite namecheap.com. Refer Example Request#2\nMaxLength- 20 Default Value- http",
+          "enum": [
+            "",
+            "",
+            "namecheap.com [RESETCODE]"
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "When you call this API, a link to reset password will be emailed to the end user's profile email id.The end user needs to click on the link to reset password.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.namecheap.com/xml.response?Command=namecheap.users.resetPassword",
+        "alias_endpoint": "/namecheap/users.resetpassword",
+        "api_ref": ""
+      },
+      "auth": {
+        "queryMap": {
+          "APIUser": "APIUser",
+          "UserName": "UserName",
+          "ApiKey": "ApiKey",
+          "ClientIP": "ClientIP"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

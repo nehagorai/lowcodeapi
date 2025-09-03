@@ -1,0 +1,1940 @@
+{
+  "routes": {
+    "zohotables__api__v1__bases___get": {
+      "provider_intent": "zohotables__api__v1__bases___get",
+      "provider_alias_intent": "/api/v1/bases",
+      "text": "List Base",
+      "category": "Base",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "portal_id": {
+          "type": "number",
+          "text": "Portal ID",
+          "required": true
+        },
+        "workspace_id": {
+          "type": "string",
+          "text": "Workspace ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all the Bases of a Workspace",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/bases",
+        "alias_endpoint": "/zohotables/api/v1/bases",
+        "api_ref": "https://tables.zoho.com/help/api/v1#BASES-List-Bases"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.bases.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__bases___post": {
+      "provider_intent": "zohotables__api__v1__bases___post",
+      "provider_alias_intent": "/api/v1/bases",
+      "text": "Duplicate Base",
+      "category": "Base",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "portal_id": {
+          "type": "number",
+          "text": "Portal ID",
+          "required": true
+        },
+        "workspace_id": {
+          "type": "string",
+          "text": "Workspace ID",
+          "required": true
+        },
+        "base_id": {
+          "type": "string",
+          "text": "Source Base Id",
+          "required": true
+        },
+        "base_name": {
+          "type": "string",
+          "text": "Base Name",
+          "required": true
+        },
+        "base_color": {
+          "type": "string",
+          "text": "Base Color",
+          "required": true
+        },
+        "base_icon": {
+          "type": "number",
+          "text": "Base Icon",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Duplicate a new Base in a Workspace",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/bases",
+        "alias_endpoint": "/zohotables/api/v1/bases",
+        "api_ref": "https://tables.zoho.com/help/api/v1#BASES-Duplicate-Base"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.bases.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__bases___put": {
+      "provider_intent": "zohotables__api__v1__bases___put",
+      "provider_alias_intent": "/api/v1/bases",
+      "text": "Update Base",
+      "category": "Base",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "portal_id": {
+          "type": "number",
+          "text": "Portal ID",
+          "required": true
+        },
+        "base_id": {
+          "type": "string",
+          "text": "Source Base Id",
+          "required": true
+        },
+        "base_name": {
+          "type": "string",
+          "text": "Base Name",
+          "required": true
+        },
+        "base_color": {
+          "type": "string",
+          "text": "Base Color",
+          "required": true
+        },
+        "base_icon": {
+          "type": "number",
+          "text": "Base Icon",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update name, icon and color of a Base in the Workspace",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/bases",
+        "alias_endpoint": "/zohotables/api/v1/bases",
+        "api_ref": "https://tables.zoho.com/help/api/v1#BASES-Update-Base"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.bases.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__searchbases___get": {
+      "provider_intent": "zohotables__api__v1__searchbases___get",
+      "provider_alias_intent": "/api/v1/searchbases",
+      "text": "Search Base",
+      "category": "Base",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "search_string": {
+          "type": "string",
+          "text": "String to Search",
+          "required": true
+        },
+        "workspace_id": {
+          "type": "string",
+          "text": "WorkspaceID to search inside a particular workspace"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get all the Bases whose names are matched with the search_string",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/searchBases",
+        "alias_endpoint": "/zohotables/api/v1/searchbases",
+        "api_ref": "https://tables.zoho.com/help/api/v1#BASES-Search-Bases"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.bases.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__records___get": {
+      "provider_intent": "zohotables__api__v1__records___get",
+      "provider_alias_intent": "/api/v1/records",
+      "text": "List Data",
+      "category": "Data",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "base_id": {
+          "type": "string",
+          "text": "Base Id",
+          "required": true
+        },
+        "table_id": {
+          "type": "string",
+          "text": "Table Id",
+          "required": true
+        },
+        "view_id": {
+          "type": "string",
+          "text": "View Id"
+        },
+        "record_id": {
+          "type": "string",
+          "text": "Reference record id"
+        },
+        "count": {
+          "type": "number",
+          "text": "Selection Option Name"
+        },
+        "selection_option_color": {
+          "type": "string",
+          "text": "No of records to fetch"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the list of all records and its data for a specific Table in a Base",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/records",
+        "alias_endpoint": "/zohotables/api/v1/records",
+        "api_ref": "https://tables.zoho.com/help/api/v1#DATA-List-Data"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.records.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__data___put": {
+      "provider_intent": "zohotables__api__v1__data___put",
+      "provider_alias_intent": "/api/v1/data",
+      "text": "Update Data",
+      "category": "Data",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "base_id": {
+          "type": "string",
+          "text": "Base Id",
+          "required": true
+        },
+        "table_id": {
+          "type": "string",
+          "text": "Table Id",
+          "required": true
+        },
+        "record_id": {
+          "type": "string",
+          "text": "Record Id",
+          "required": true
+        },
+        "field_id": {
+          "type": "number",
+          "text": "Field Id",
+          "required": true
+        },
+        "data": {
+          "type": "string",
+          "text": "data"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update a field's value of a Record in a Table in a Base",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/data",
+        "alias_endpoint": "/zohotables/api/v1/data",
+        "api_ref": "https://tables.zoho.com/help/api/v1#DATA-Update-Data"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.data.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__exports___get": {
+      "provider_intent": "zohotables__api__v1__exports___get",
+      "provider_alias_intent": "/api/v1/exports",
+      "text": "Export",
+      "category": "Export",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "base_id": {
+          "type": "string",
+          "text": "Base Id",
+          "required": true
+        },
+        "table_id": {
+          "type": "string",
+          "text": "Table Id"
+        },
+        "view_id": {
+          "type": "string",
+          "text": "View Id"
+        },
+        "scope": {
+          "type": "string",
+          "text": "base|table|view",
+          "required": true
+        },
+        "file_type": {
+          "type": "string",
+          "text": "csv|xls|xlsx|tsv|ics",
+          "required": true
+        },
+        "password": {
+          "type": "string",
+          "text": "To get Password protected file",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Use this API to export the base/table/view",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/exports",
+        "alias_endpoint": "/zohotables/api/v1/exports",
+        "api_ref": "https://tables.zoho.com/help/api/v1#Export-Export"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.bases.READ,\nZohoTables.tables.READ,\nZohoTables.views.READ,\nWorkDrive.files.ALL",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__fields___get": {
+      "provider_intent": "zohotables__api__v1__fields___get",
+      "provider_alias_intent": "/api/v1/fields",
+      "text": "List Fields",
+      "category": "Fields",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "base_id": {
+          "type": "string",
+          "text": "Base Id",
+          "required": true
+        },
+        "table_id": {
+          "type": "string",
+          "text": "Table Id",
+          "required": true
+        },
+        "view_id": {
+          "type": "string",
+          "text": "When a view ID is provided, additional information, such as height and visibility, is included in the response"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get all the fields and its details for a specific Table in a Base",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/fields",
+        "alias_endpoint": "/zohotables/api/v1/fields",
+        "api_ref": "https://tables.zoho.com/help/api/v1#FIELDS-List-Fields"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.fields.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__fields___post": {
+      "provider_intent": "zohotables__api__v1__fields___post",
+      "provider_alias_intent": "/api/v1/fields",
+      "text": "Create Field",
+      "category": "Fields",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "base_id": {
+          "type": "string",
+          "text": "Base Id",
+          "required": true
+        },
+        "table_id": {
+          "type": "string",
+          "text": "Table Id",
+          "required": true
+        },
+        "type": {
+          "type": "string",
+          "text": "Field type"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Add a new field to a Table in a Base",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/fields",
+        "alias_endpoint": "/zohotables/api/v1/fields",
+        "api_ref": "https://tables.zoho.com/help/api/v1#FIELDS-Create-Field"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.fields.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__fields___put": {
+      "provider_intent": "zohotables__api__v1__fields___put",
+      "provider_alias_intent": "/api/v1/fields",
+      "text": "Update Field",
+      "category": "Fields",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "base_id": {
+          "type": "string",
+          "text": "Base Id",
+          "required": true
+        },
+        "table_id": {
+          "type": "string",
+          "text": "Table Id",
+          "required": true
+        },
+        "field_id": {
+          "type": "string",
+          "text": "Field Id"
+        },
+        "field_name": {
+          "type": "string",
+          "text": "Field name"
+        },
+        "type": {
+          "type": "number",
+          "text": "Field type"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Change name, type and/or type components of the field in a Table",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/fields",
+        "alias_endpoint": "/zohotables/api/v1/fields",
+        "api_ref": "https://tables.zoho.com/help/api/v1#FIELDS-Update-Field"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.fields.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__fields___delete": {
+      "provider_intent": "zohotables__api__v1__fields___delete",
+      "provider_alias_intent": "/api/v1/fields",
+      "text": "Delete Field",
+      "category": "Fields",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "base_id": {
+          "type": "string",
+          "text": "Base Id",
+          "required": true
+        },
+        "table_id ": {
+          "type": "string",
+          "text": "Table Id",
+          "required": true
+        },
+        "field_id": {
+          "type": "string",
+          "text": "Field Id"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Remove a field from a Table in a Base",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/fields",
+        "alias_endpoint": "/zohotables/api/v1/fields",
+        "api_ref": "https://tables.zoho.com/help/api/v1#FIELDS-Delete-Field"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.fields.DELETE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__selectionoptions___post": {
+      "provider_intent": "zohotables__api__v1__selectionoptions___post",
+      "provider_alias_intent": "/api/v1/selectionoptions",
+      "text": "Create Selection Options",
+      "category": "Fields",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "base_id": {
+          "type": "string",
+          "text": "Base Id",
+          "required": true
+        },
+        "table_id ": {
+          "type": "string",
+          "text": "Table Id",
+          "required": true
+        },
+        "field_id": {
+          "type": "string",
+          "text": "Field Id"
+        },
+        "selection_option_name": {
+          "type": "string",
+          "text": "Selection Option Name"
+        },
+        "selection_option_color": {
+          "type": "number",
+          "text": "Selection Option Color"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Add a new selection option in a Field",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/selectionOptions",
+        "alias_endpoint": "/zohotables/api/v1/selectionoptions",
+        "api_ref": "https://tables.zoho.com/help/api/v1#FIELDS-Create-Selection-Options"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.fields.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__selectionoptions___delete": {
+      "provider_intent": "zohotables__api__v1__selectionoptions___delete",
+      "provider_alias_intent": "/api/v1/selectionoptions",
+      "text": "Delete Selection Options",
+      "category": "Fields",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "base_id": {
+          "type": "string",
+          "text": "Base Id",
+          "required": true
+        },
+        "table_id": {
+          "type": "string",
+          "text": "Table Id",
+          "required": true
+        },
+        "field_id": {
+          "type": "string",
+          "text": "Field Id"
+        },
+        "selection_option_id": {
+          "type": "string",
+          "text": "Selection Option Id"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete the selection option in a Field",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/selectionOptions",
+        "alias_endpoint": "/zohotables/api/v1/selectionoptions",
+        "api_ref": "https://tables.zoho.com/help/api/v1#FIELDS-Delete-Selection-Options"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.fields.DELETE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__selectionoptions___put": {
+      "provider_intent": "zohotables__api__v1__selectionoptions___put",
+      "provider_alias_intent": "/api/v1/selectionoptions",
+      "text": "Update Selection Options",
+      "category": "Fields",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "base_id": {
+          "type": "string",
+          "text": "Base Id",
+          "required": true
+        },
+        "table_id": {
+          "type": "string",
+          "text": "Table Id",
+          "required": true
+        },
+        "field_id": {
+          "type": "string",
+          "text": "Field Id"
+        },
+        "selection_option_id": {
+          "type": "string",
+          "text": "Selection Option Id"
+        },
+        "selection_option_name": {
+          "type": "string",
+          "text": "Selection Option Name"
+        },
+        "selection_option_color": {
+          "type": "string",
+          "text": "Selection Option Color"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update the name and color of a selection option in a Field",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/selectionOptions",
+        "alias_endpoint": "/zohotables/api/v1/selectionoptions",
+        "api_ref": "https://tables.zoho.com/help/api/v1#FIELDS-Update-Selection-Options"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.fields.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__import___post": {
+      "provider_intent": "zohotables__api__v1__import___post",
+      "provider_alias_intent": "/api/v1/import",
+      "text": "Import",
+      "category": "Import",
+      "method": "POST",
+      "type": "UPLOAD",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "import_scope": {
+          "type": "string",
+          "text": "base|table",
+          "required": true
+        },
+        "portal_id ": {
+          "type": "string",
+          "text": "Portal ID - Mandatory if, import_scope == base",
+          "required": true
+        },
+        "workspace_id": {
+          "type": "string",
+          "text": "Workspace ID -Mandatory if, import_scope == base",
+          "required": true
+        },
+        "base_id": {
+          "type": "string",
+          "text": "Base ID - Mandatory if, import_scope == table",
+          "required": true
+        },
+        "import_file": {
+          "type": "file",
+          "text": "xls|xlsx|xlsm|ods|csv|tsv|accdb|mdb",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Use this API to import the base/table from the files",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/import",
+        "alias_endpoint": "/zohotables/api/v1/import",
+        "api_ref": "https://tables.zoho.com/help/api/v1#Import-Import"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.import.CREATE,\nWorkDrive.teamfolders.ALL,\nWorkDrive.files.ALL",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__portals___get": {
+      "provider_intent": "zohotables__api__v1__portals___get",
+      "provider_alias_intent": "/api/v1/portals",
+      "text": "List Portal",
+      "category": "Portal",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List Portals",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/portals",
+        "alias_endpoint": "/zohotables/api/v1/portals",
+        "api_ref": "https://tables.zoho.com/help/api/v1#PORTALS-List-Portals"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.portals.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__records___post": {
+      "provider_intent": "zohotables__api__v1__records___post",
+      "provider_alias_intent": "/api/v1/records",
+      "text": "Create Record With Data",
+      "category": "Record",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "base_id": {
+          "type": "string",
+          "text": "Base Id",
+          "required": true
+        },
+        "table_id": {
+          "type": "string",
+          "text": "Table Id",
+          "required": true
+        },
+        "field_ids_with_values": {
+          "type": "object",
+          "text": "The data that needs to be updated."
+        },
+        "field_ids": {
+          "type": "array",
+          "text": "Field Ids As Array"
+        },
+        "values": {
+          "type": "array",
+          "text": "Corresponding Values for fields As Array"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Add a new record to a Table in a Base\n",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/records",
+        "alias_endpoint": "/zohotables/api/v1/records",
+        "api_ref": "https://tables.zoho.com/help/api/v1#RECORDS-Create-Record-with-Data"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.records.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__records___delete": {
+      "provider_intent": "zohotables__api__v1__records___delete",
+      "provider_alias_intent": "/api/v1/records",
+      "text": "Delete Record",
+      "category": "Record",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "base_id": {
+          "type": "string",
+          "text": "Base Id",
+          "required": true
+        },
+        "table_id": {
+          "type": "string",
+          "text": "Table Id",
+          "required": true
+        },
+        "record_id": {
+          "type": "string",
+          "text": "Record Id"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Remove a record from a Table in a Base",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/records",
+        "alias_endpoint": "/zohotables/api/v1/records",
+        "api_ref": "https://tables.zoho.com/help/api/v1#RECORDS-Delete-Record"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.records.DELETE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__records___put": {
+      "provider_intent": "zohotables__api__v1__records___put",
+      "provider_alias_intent": "/api/v1/records",
+      "text": "Update Records with Criteria",
+      "category": "Record",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "base_id": {
+          "type": "string",
+          "text": "Base Id",
+          "required": true
+        },
+        "table_id": {
+          "type": "string",
+          "text": "Table Id",
+          "required": true
+        },
+        "data": {
+          "type": "string",
+          "text": "The data that needs to be updated",
+          "required": true
+        },
+        "is_ids_used_in_data": {
+          "type": "boolean",
+          "text": "By default it is false. Can be set as true if the field is specified by ID in data",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "criteria ": {
+          "type": "boolean",
+          "text": "If criteria is not set, all available records will get updated",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "is_ids_used_in_params ": {
+          "type": "boolean",
+          "text": "Can be set as true if the field is specified by ID in criteria",
+          "default": true,
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "first_match_only ": {
+          "type": "boolean",
+          "text": "If true and if there are multiple records on the specified criteria, records will be updated for first match alone",
+          "default": false,
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "is_case_sensitive ": {
+          "type": "boolean",
+          "text": "Can be set as false for case-insensitive search",
+          "default": true,
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "is_upsert_needed ": {
+          "type": "boolean",
+          "text": "Can be set us true if needed",
+          "default": false,
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "record_ids ": {
+          "type": "array",
+          "text": "record IDs as array for updating records with given data"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update the records of a Table in the Base, that matches the given criteria or record IDs",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/records",
+        "alias_endpoint": "/zohotables/api/v1/records",
+        "api_ref": "https://tables.zoho.com/help/api/v1#RECORDS-Update-Record-with-Criteria"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.records.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__fetchrecordswithcriteria___post": {
+      "provider_intent": "zohotables__api__v1__fetchrecordswithcriteria___post",
+      "provider_alias_intent": "/api/v1/fetchrecordswithcriteria",
+      "text": "Fetch Records with Criteria",
+      "category": "Record",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "base_id": {
+          "type": "string",
+          "text": "Base Id",
+          "required": true
+        },
+        "table_id": {
+          "type": "string",
+          "text": "Table Id",
+          "required": true
+        },
+        "view_id": {
+          "type": "string",
+          "text": "When a view ID is provided, additional information, such as height and visibility, is included in the response",
+          "required": true
+        },
+        "criteria": {
+          "type": "string",
+          "text": "If criteria is not set, all available records will get fetched"
+        },
+        "first_match_only": {
+          "type": "boolean",
+          "text": "Can be set as false for case-insensitive search",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "is_case_sensitive": {
+          "type": "boolean",
+          "text": "Can be set as true if the field is specified by ID in criteria",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "is_ids_used_in_params": {
+          "type": "boolean",
+          "text": "Can be set as true if the field is specified by ID in criteria.",
+          "default": false,
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "reference_record_id": {
+          "type": "boolean",
+          "text": "Can be set as false for case-insensitive search",
+          "default": true,
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "count": {
+          "type": "number",
+          "text": "No of records to fetch",
+          "default": 500
+        },
+        "record_ids": {
+          "type": "array",
+          "text": "record IDs as array for fetching records"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Fetch the records of a Table in the Base, that matches the given criteria or record IDs",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/fetchRecordsWithCriteria",
+        "alias_endpoint": "/zohotables/api/v1/fetchrecordswithcriteria",
+        "api_ref": "https://tables.zoho.com/help/api/v1#RECORDS-Fetch-Record-with-Criteria"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.records.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__tables___get": {
+      "provider_intent": "zohotables__api__v1__tables___get",
+      "provider_alias_intent": "/api/v1/tables",
+      "text": "List Tables",
+      "category": "Tables",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "base_id": {
+          "type": "string",
+          "text": "Base Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get all the tables of a Base",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/tables",
+        "alias_endpoint": "/zohotables/api/v1/tables",
+        "api_ref": "https://tables.zoho.com/help/api/v1#TABLES-List-Tables"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.tables.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__tables___post": {
+      "provider_intent": "zohotables__api__v1__tables___post",
+      "provider_alias_intent": "/api/v1/tables",
+      "text": "Duplicate Table",
+      "category": "Tables",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "base_id": {
+          "type": "string",
+          "text": "Base Id",
+          "required": true
+        },
+        "table_id": {
+          "type": "string",
+          "text": "Table Id",
+          "required": true
+        },
+        "table_name": {
+          "type": "string",
+          "text": "Table Name",
+          "required": true
+        },
+        "is_duplicate_with_records": {
+          "type": "boolean",
+          "text": "By default it is true. Can be set as false if you want to duplicate the table without its records",
+          "required": true,
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Duplicate a Table in a Base",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/tables",
+        "alias_endpoint": "/zohotables/api/v1/tables",
+        "api_ref": "https://tables.zoho.com/help/api/v1#TABLES-Duplicate-Table"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.tables.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__tables___put": {
+      "provider_intent": "zohotables__api__v1__tables___put",
+      "provider_alias_intent": "/api/v1/tables",
+      "text": "Update Table",
+      "category": "Tables",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "base_id": {
+          "type": "string",
+          "text": "Base Id",
+          "required": true
+        },
+        "table_id": {
+          "type": "string",
+          "text": "Table Id",
+          "required": true
+        },
+        "table_name": {
+          "type": "string",
+          "text": "Table Name",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update the name of a Table in the Base",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/tables",
+        "alias_endpoint": "/zohotables/api/v1/tables",
+        "api_ref": "https://tables.zoho.com/help/api/v1#TABLES-Update-Table"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.tables.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__tables___delete": {
+      "provider_intent": "zohotables__api__v1__tables___delete",
+      "provider_alias_intent": "/api/v1/tables",
+      "text": "Delete Table",
+      "category": "Tables",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "base_id": {
+          "type": "string",
+          "text": "Base Id",
+          "required": true
+        },
+        "table_id": {
+          "type": "string",
+          "text": "Table Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Remove a specific Table in a Base",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/tables",
+        "alias_endpoint": "/zohotables/api/v1/tables",
+        "api_ref": "https://tables.zoho.com/help/api/v1#TABLES-Delete-Table"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.tables.DELETE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__views___get": {
+      "provider_intent": "zohotables__api__v1__views___get",
+      "provider_alias_intent": "/api/v1/views",
+      "text": "List Views",
+      "category": "Views",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "base_id": {
+          "type": "string",
+          "text": "Base Id",
+          "required": true
+        },
+        "table_id": {
+          "type": "string",
+          "text": "Table Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the details of all views for a specific Table in a Base",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/views",
+        "alias_endpoint": "/zohotables/api/v1/views",
+        "api_ref": "https://tables.zoho.com/help/api/v1#VIEWS-List-Views"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.views.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__workspaces___get": {
+      "provider_intent": "zohotables__api__v1__workspaces___get",
+      "provider_alias_intent": "/api/v1/workspaces",
+      "text": "List Workspaces",
+      "category": "Workspaces",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "portal_id": {
+          "type": "number",
+          "text": "Portal ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get all the Workspaces of a Portal",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/workspaces",
+        "alias_endpoint": "/zohotables/api/v1/workspaces",
+        "api_ref": "https://tables.zoho.com/help/api/v1#WORKSPACES-List-Workspaces"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.workspaces.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__workspaces___post": {
+      "provider_intent": "zohotables__api__v1__workspaces___post",
+      "provider_alias_intent": "/api/v1/workspaces",
+      "text": "Create Workspace",
+      "category": "Workspaces",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "portal_id": {
+          "type": "number",
+          "text": "Portal ID",
+          "required": true
+        },
+        "Workspace_name": {
+          "type": "string",
+          "text": "Workspace Name",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Add a new Workspace in a Portal",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/workspaces",
+        "alias_endpoint": "/zohotables/api/v1/workspaces",
+        "api_ref": "https://tables.zoho.com/help/api/v1#WORKSPACES-Create-Workspace"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.workspaces.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__workspaces___put": {
+      "provider_intent": "zohotables__api__v1__workspaces___put",
+      "provider_alias_intent": "/api/v1/workspaces",
+      "text": "Update Workspace",
+      "category": "Workspaces",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "portal_id": {
+          "type": "number",
+          "text": "Portal ID",
+          "required": true
+        },
+        "Workspace_name": {
+          "type": "string",
+          "text": "Workspace Name",
+          "required": true
+        },
+        "workspace_id": {
+          "type": "string",
+          "text": "Workspace ID",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update the name of a Workspace in the Portal",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/workspaces",
+        "alias_endpoint": "/zohotables/api/v1/workspaces",
+        "api_ref": "https://tables.zoho.com/help/api/v1#WORKSPACES-Update-Workspace"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.workspaces.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__workspaces___delete": {
+      "provider_intent": "zohotables__api__v1__workspaces___delete",
+      "provider_alias_intent": "/api/v1/workspaces",
+      "text": "Delete Workspace",
+      "category": "Workspaces",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "portal_id": {
+          "type": "number",
+          "text": "Portal ID",
+          "required": true
+        },
+        "workspace_id": {
+          "type": "string",
+          "text": "Workspace ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Remove a specific Workspace in a Portal",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/workspaces",
+        "alias_endpoint": "/zohotables/api/v1/workspaces",
+        "api_ref": "https://tables.zoho.com/help/api/v1#WORKSPACES-Delete-Workspace"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.workspaces.DELETE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__workspacemembers___get": {
+      "provider_intent": "zohotables__api__v1__workspacemembers___get",
+      "provider_alias_intent": "/api/v1/workspacemembers",
+      "text": "List Workspace Members",
+      "category": "Workspaces",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "portal_id": {
+          "type": "number",
+          "text": "Portal ID",
+          "required": true
+        },
+        "workspace_id": {
+          "type": "string",
+          "text": "Workspace ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Use this API to list down all the members of a Workspace",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/workspaceMembers",
+        "alias_endpoint": "/zohotables/api/v1/workspacemembers",
+        "api_ref": "https://tables.zoho.com/help/api/v1#WORKSPACES-List-Workspace-Members"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.workspaces.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__workspacemembers___post": {
+      "provider_intent": "zohotables__api__v1__workspacemembers___post",
+      "provider_alias_intent": "/api/v1/workspacemembers",
+      "text": "Add Workspace Member",
+      "category": "Workspaces",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "portal_id": {
+          "type": "number",
+          "text": "Portal ID",
+          "required": true
+        },
+        "workspace_id": {
+          "type": "string",
+          "text": "Workspace ID",
+          "required": true
+        },
+        "email_id": {
+          "type": "string",
+          "text": "Email ID",
+          "required": true
+        },
+        "role": {
+          "type": "string",
+          "text": "role constant",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Add a member in the Workspace",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/workspaceMembers",
+        "alias_endpoint": "/zohotables/api/v1/workspacemembers",
+        "api_ref": "https://tables.zoho.com/help/api/v1#WORKSPACES-Add-Workspace-Member"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.workspaces.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohotables__api__v1__workspacemembers___delete": {
+      "provider_intent": "zohotables__api__v1__workspacemembers___delete",
+      "provider_alias_intent": "/api/v1/workspacemembers",
+      "text": "Delete Workspace Members",
+      "category": "Workspaces",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "portal_id": {
+          "type": "number",
+          "text": "Portal ID",
+          "required": true
+        },
+        "workspace_id": {
+          "type": "string",
+          "text": "Workspace ID",
+          "required": true
+        },
+        "email_id": {
+          "type": "string",
+          "text": "Email ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Remove members from a specific Workspace",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/workspaceMembers",
+        "alias_endpoint": "/zohotables/api/v1/workspacemembers",
+        "api_ref": "https://tables.zoho.com/help/api/v1#WORKSPACES-Delete-Workspace-Member"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoTables.workspaces.DELETE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

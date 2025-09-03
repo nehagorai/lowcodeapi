@@ -1,0 +1,411 @@
+{
+  "routes": {
+    "hive__v2__task__sync___post": {
+      "provider_intent": "hive__v2__task__sync___post",
+      "provider_alias_intent": "/v2/task/sync",
+      "text": "Submit a Task Synchronously",
+      "category": "Tasks",
+      "method": "POST",
+      "type": "UPLOAD",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "media": {
+          "type": "file",
+          "text": "Use this key to send a binary file through a post request"
+        },
+        "url": {
+          "type": "stirng",
+          "text": "Use this key to send your file using a publicly accessible url to a hosted media file"
+        },
+        "text_data": {
+          "type": "string",
+          "text": "Use text_data to submit raw text for text moderation projects"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "A synchronous endpoint is preferred for users who have real-time needs, low latency requirements, and are submitting continuous / cyclical requests",
+        "rate_limit": [],
+        "api_endpoint": "https://api.thehive.ai/api/v2/task/sync",
+        "alias_endpoint": "/hive/v2/task/sync",
+        "api_ref": "https://docs.thehive.ai/reference/submit-a-task-synchronously"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "hive__v1__task__async___post": {
+      "provider_intent": "hive__v1__task__async___post",
+      "provider_alias_intent": "/v1/task/async",
+      "text": "Submit a Task Asynchronously",
+      "category": "Tasks",
+      "method": "POST",
+      "type": "UPLOAD",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "media": {
+          "type": "file",
+          "text": "Use this key to send a binary file through a post request"
+        },
+        "url": {
+          "type": "stirng",
+          "text": "Use this key to send your file using a publicly accessible url to a hosted media file"
+        },
+        "text_data": {
+          "type": "string",
+          "text": "Use text_data to submit raw text for text moderation projects"
+        },
+        "callback_url": {
+          "type": "stirng",
+          "text": "Callback URL where Hive will post the response to"
+        },
+        "metadata": {
+          "type": "string",
+          "text": "User specified metadata the will be included in the callback response"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "The asynchronous endpoint is preferred for users who are submitting their volume in large batches",
+        "rate_limit": [],
+        "api_endpoint": "https://api.thehive.ai/api/v1/task/async",
+        "alias_endpoint": "/hive/v1/task/async",
+        "api_ref": "https://docs.thehive.ai/reference/submit-a-task-asynchronously"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "hive__v1__task___get": {
+      "provider_intent": "hive__v1__task___get",
+      "provider_alias_intent": "/v1/task",
+      "text": "Get Task Summary",
+      "category": "Tasks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "task_id": {
+          "type": "string",
+          "text": "Unique ID of the task",
+          "required": true
+        },
+        "feame_offset": {
+          "type": "number",
+          "text": "Only applicable for long video/audio projects"
+        },
+        "frame_limit": {
+          "type": "number",
+          "text": "Only applicable for long video/audio projects. Specifies the maximum number of frames to return. By default, we only return results for 1000 frames from the video starting at frame_offset."
+        },
+        "frame_offset": {
+          "type": "number",
+          "text": "Only applicable for long video/audio projects. By default we return frames starting from the first (0) frame up to frame_limit"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "task_id": {
+          "type": "string",
+          "text": "Unique ID of the task",
+          "required": true
+        },
+        "feame_offset": {
+          "type": "number",
+          "text": "Only applicable for long video/audio projects"
+        },
+        "frame_limit": {
+          "type": "number",
+          "text": "Only applicable for long video/audio projects"
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Calling this synchronous endpoint with a specified task_id returns the API response object for completed tasks",
+        "rate_limit": [],
+        "api_endpoint": "https://api.thehive.ai/api/v1/task",
+        "alias_endpoint": "/hive/v1/task",
+        "api_ref": "https://docs.thehive.ai/reference/get-task-summary"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "hive__v1__task__callback___post": {
+      "provider_intent": "hive__v1__task__callback___post",
+      "provider_alias_intent": "/v1/task/callback",
+      "text": "Trigger a Callback for a Completed Task",
+      "category": "Tasks",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "task_id": {
+          "type": "string",
+          "text": "Unique ID of the task",
+          "required": true
+        },
+        "url_override": {
+          "type": "string",
+          "text": "Callback URL where Hive will post the response to"
+        },
+        "metadata_override": {
+          "type": "string",
+          "text": "Metadata to be posted with the response"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Hitting this endpoint will send a callback from our servers to the callback url if the task is completed",
+        "rate_limit": [],
+        "api_endpoint": "https://api.thehive.ai/api/v1/task/callback",
+        "alias_endpoint": "/hive/v1/task/callback",
+        "api_ref": "https://docs.thehive.ai/reference/trigger-a-callback-for-a-completed-task"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "hive__v2__stream__frame___post": {
+      "provider_intent": "hive__v2__stream__frame___post",
+      "provider_alias_intent": "/v2/stream/frame",
+      "text": "Submit a Stream (Video Frames)",
+      "category": "Tasks",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "url": {
+          "type": "stirng",
+          "text": "Use this key to send your file using a publicly accessible url to a hosted media file"
+        },
+        "callback_url": {
+          "type": "stirng",
+          "text": "Callback URL where Hive will post the response to"
+        },
+        "metadata": {
+          "type": "string",
+          "text": "User specified metadata the will be included in the callback response"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint supports generating image frames out of a video stream",
+        "rate_limit": [],
+        "api_endpoint": "https://api.thehive.ai/api/v2/stream/frame",
+        "alias_endpoint": "/hive/v2/stream/frame",
+        "api_ref": "https://docs.thehive.ai/reference/submit-a-stream-video-frames"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "hive__v2__stream__audio___post": {
+      "provider_intent": "hive__v2__stream__audio___post",
+      "provider_alias_intent": "/v2/stream/audio",
+      "text": "Submit a Stream (Audio Segments)",
+      "category": "Tasks",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "url": {
+          "type": "stirng",
+          "text": "Use this key to send your file using a publicly accessible url to a hosted media file"
+        },
+        "callback_url": {
+          "type": "stirng",
+          "text": "Callback URL where Hive will post the response to"
+        },
+        "segment_time": {
+          "type": "number",
+          "text": "The length of audio chunks to create out of the stream"
+        },
+        "metadata": {
+          "type": "string",
+          "text": "User specified metadata the will be included in the callback response"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint supports generating audio segments out of a video or audio stream",
+        "rate_limit": [],
+        "api_endpoint": "https://api.thehive.ai/api/v2/stream/audio",
+        "alias_endpoint": "/hive/v2/stream/audio",
+        "api_ref": "https://docs.thehive.ai/reference/submit-a-stream-audio-segments"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "hive__v2__stream__cancel___post": {
+      "provider_intent": "hive__v2__stream__cancel___post",
+      "provider_alias_intent": "/v2/stream/cancel",
+      "text": "Stop a Stream",
+      "category": "Tasks",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "stream_id": {
+          "type": "string",
+          "text": "The ID of the stream you want to cancel"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint will stop a stream that is currently in process",
+        "rate_limit": [],
+        "api_endpoint": "https://api.thehive.ai/api/v2/stream/cancel",
+        "alias_endpoint": "/hive/v2/stream/cancel",
+        "api_ref": "https://docs.thehive.ai/reference/stop-a-stream"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "hive__v2__stream__active___get": {
+      "provider_intent": "hive__v2__stream__active___get",
+      "provider_alias_intent": "/v2/stream/active",
+      "text": "Get All Streams",
+      "category": "Tasks",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint will return the number of active streams as well as their stream IDs",
+        "rate_limit": [],
+        "api_endpoint": "https://api.thehive.ai/api/v2/stream/active",
+        "alias_endpoint": "/hive/v2/stream/active",
+        "api_ref": "https://docs.thehive.ai/reference/get-all-streams"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "hive__v1__feedback_data___post": {
+      "provider_intent": "hive__v1__feedback_data___post",
+      "provider_alias_intent": "/v1/feedback_data",
+      "text": "Send Feedback",
+      "category": "Tasks",
+      "method": "POST",
+      "type": "UPLOAD",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "feedback": {
+          "type": "string",
+          "text": "ext feedback about the task, for example 'False positive'"
+        },
+        "url": {
+          "type": "stirng",
+          "text": "Upload URL for the media file"
+        },
+        "media": {
+          "type": "file",
+          "text": "The raw image/video/audio file. (Optional)"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Send Hive feedback to help us improve our models",
+        "rate_limit": [],
+        "api_endpoint": "https://api.thehive.ai/api/v1/feedback_data",
+        "alias_endpoint": "/hive/v1/feedback_data",
+        "api_ref": "https://docs.thehive.ai/reference/send-feedback"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

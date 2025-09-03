@@ -1,0 +1,819 @@
+{
+  "routes": {
+    "zohoassist__api__v2__devices__resource_id___get": {
+      "provider_intent": "zohoassist__api__v2__devices__resource_id___get",
+      "provider_alias_intent": "/api/v2/devices/resource_id",
+      "text": "Get Device Details",
+      "category": "Computers",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This API returns the device details",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/devices/{resource_id}",
+        "alias_endpoint": "/zohoassist/api/v2/devices/resource_id",
+        "api_ref": "https://www.zoho.com/assist/api/getDeviceDetails.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoAssist.unattended.computer.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoassist__api__v2__devices___get": {
+      "provider_intent": "zohoassist__api__v2__devices___get",
+      "provider_alias_intent": "/api/v2/devices",
+      "text": "Get Unattended Computer",
+      "category": "Computers",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "index": {
+          "type": "number",
+          "text": "Position of computer in the list"
+        },
+        "count": {
+          "type": "number",
+          "text": "Number of records to be given in the response"
+        },
+        "include": {
+          "type": "string",
+          "text": "The details to be included in response"
+        },
+        "recent": {
+          "type": "Boolean",
+          "text": "Returns only recently connected devices"
+        },
+        "favorites": {
+          "type": "Boolean",
+          "text": "Returns only favorite devices"
+        },
+        "sort_by": {
+          "type": "string",
+          "text": "The column by which the data must be sorted"
+        },
+        "is_ascending": {
+          "type": "Boolean",
+          "text": "Sort direction"
+        },
+        "resource_type": {
+          "type": "number",
+          "text": "Only computers"
+        },
+        "group_ids": {
+          "type": "string",
+          "text": "Groups Ids for filtering devices"
+        },
+        "device_status": {
+          "type": "string",
+          "text": "Device status"
+        },
+        "installation_status": {
+          "type": "string",
+          "text": "Installation status"
+        },
+        "os_platforms": {
+          "type": "string",
+          "text": "Os platforms"
+        },
+        "os_names": {
+          "type": "string",
+          "text": "Os names"
+        },
+        "os_versions": {
+          "type": "string",
+          "text": "Os versions"
+        },
+        "domain_ids": {
+          "type": "string",
+          "text": "Domain ids"
+        },
+        "display_name": {
+          "type": "string",
+          "text": "Display name"
+        },
+        "device_name": {
+          "type": "string",
+          "text": "Device name"
+        },
+        "public_ip": {
+          "type": "string",
+          "text": "Public ip"
+        },
+        "private_ip": {
+          "type": "string",
+          "text": "Private ip"
+        },
+        "agent_version": {
+          "type": "string",
+          "text": "Agent version"
+        },
+        "computer_full_name": {
+          "type": "string",
+          "text": "Computer full name"
+        },
+        "os_platform": {
+          "type": "string",
+          "text": "Os platform"
+        },
+        "os_name": {
+          "type": "string",
+          "text": "Os name"
+        },
+        "os_version": {
+          "type": "string",
+          "text": "Os version"
+        },
+        "domain_name": {
+          "type": "string",
+          "text": "Domain name"
+        },
+        "manufacturer": {
+          "type": "string",
+          "text": "Manufacturer"
+        },
+        "product": {
+          "type": "string",
+          "text": "Manufacturer"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This API returns the list of devices in the given department",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/devices",
+        "alias_endpoint": "/zohoassist/api/v2/devices",
+        "api_ref": "https://www.zoho.com/assist/api/getunattendedcomputer.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoAssist.unattended.computer.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoassist__api__v2__devices__resource_id___put": {
+      "provider_intent": "zohoassist__api__v2__devices__resource_id___put",
+      "provider_alias_intent": "/api/v2/devices/resource_id",
+      "text": "Update Unattended Computer",
+      "category": "Computers",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "display_name": {
+          "type": "string",
+          "text": "New display name",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This API is used to update the display name of the device",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/devices/{resource_id}",
+        "alias_endpoint": "/zohoassist/api/v2/devices/resource_id",
+        "api_ref": "https://www.zoho.com/assist/api/updateunattendedcomputer.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoAssist.unattended.computer.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoassist__api__v2__devices__resource_id___delete": {
+      "provider_intent": "zohoassist__api__v2__devices__resource_id___delete",
+      "provider_alias_intent": "/api/v2/devices/resource_id",
+      "text": "Delete Unattended Computer",
+      "category": "Computers",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This API is used to delete the device",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/devices/{resource_id}",
+        "alias_endpoint": "/zohoassist/api/v2/devices/resource_id",
+        "api_ref": "https://www.zoho.com/assist/api/deleteunattendedcomputer.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoAssist.unattended.computer.DELETE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoassist__api__v2__unattended_computer__group___get": {
+      "provider_intent": "zohoassist__api__v2__unattended_computer__group___get",
+      "provider_alias_intent": "/api/v2/unattended_computer/group",
+      "text": "Get Unattended Groups",
+      "category": "Groups",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "q": {
+          "type": "string",
+          "text": "The Name of the Unattended Group"
+        },
+        "department_id": {
+          "type": "number",
+          "text": "Department in which the group is created",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This API fetches the details of existing groups in Zoho Assist",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/unattended_computer/group",
+        "alias_endpoint": "/zohoassist/api/v2/unattended_computer/group",
+        "api_ref": "https://www.zoho.com/assist/api/getunattendedgroup.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoAssist.unattended.group.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoassist__api__v2__unattended_computer__group___post": {
+      "provider_intent": "zohoassist__api__v2__unattended_computer__group___post",
+      "provider_alias_intent": "/api/v2/unattended_computer/group",
+      "text": "Create Unattended Groups",
+      "category": "Groups",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "department_id": {
+          "type": "number",
+          "text": "Department in which the group is to be created",
+          "required": true
+        },
+        "group_name": {
+          "type": "string",
+          "text": "Name of the new Unattended Group",
+          "required": true
+        },
+        "description": {
+          "type": "string",
+          "text": "Description of the new Unattended Group",
+          "required": true
+        },
+        "computer_list": {
+          "type": "array",
+          "text": "List of devices to be added in the new Group"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This API allows you to create a new group in Zoho Assist",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/unattended_computer/group",
+        "alias_endpoint": "/zohoassist/api/v2/unattended_computer/group",
+        "api_ref": "https://www.zoho.com/assist/api/createunattendedgroup.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoAssist.unattended.group.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoassist__api__v2__unattended_computer__group___put": {
+      "provider_intent": "zohoassist__api__v2__unattended_computer__group___put",
+      "provider_alias_intent": "/api/v2/unattended_computer/group",
+      "text": "Update Unattended Groups",
+      "category": "Groups",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "id": {
+          "type": "string",
+          "text": "The group id of the group to be updated",
+          "required": true
+        },
+        "department_id ": {
+          "type": "string",
+          "text": "Department in which the group is present",
+          "required": true
+        },
+        "name": {
+          "type": "string",
+          "text": "Name of the group to be updated"
+        },
+        "description": {
+          "type": "string",
+          "text": "Description of the group to be updated"
+        },
+        "addedlist": {
+          "type": "array",
+          "text": "List of devices to be added in the group"
+        },
+        "removedlist": {
+          "type": "string",
+          "text": "List of devices to be removed from the group"
+        },
+        "time_zone": {
+          "type": "string",
+          "text": "The time zone in which the session is scheduled"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Using this API, you can update the existing group details",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/unattended_computer/group",
+        "alias_endpoint": "/zohoassist/api/v2/unattended_computer/group",
+        "api_ref": "https://www.zoho.com/assist/api/updateunattendedgroup.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoAssist.unattended.group.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoassist__api__v2__unattended_computer__group___delete": {
+      "provider_intent": "zohoassist__api__v2__unattended_computer__group___delete",
+      "provider_alias_intent": "/api/v2/unattended_computer/group",
+      "text": "Delete Unattended Groups",
+      "category": "Groups",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "group_list ": {
+          "type": "array",
+          "text": "List of group Ids to be removed",
+          "required": true
+        },
+        "department_id ": {
+          "type": "number",
+          "text": "Department in which the list of groups to be deleted",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Delete the existing unattended computer groups using this API",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/unattended_computer/group",
+        "alias_endpoint": "/zohoassist/api/v2/unattended_computer/group",
+        "api_ref": "https://www.zoho.com/assist/api/deleteunattendedgroup.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoAssist.unattended.group.DELETE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoassist__api__v2__reports___get": {
+      "provider_intent": "zohoassist__api__v2__reports___get",
+      "provider_alias_intent": "/api/v2/reports",
+      "text": "Get Session Reports",
+      "category": "Reports",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "type": {
+          "type": "string",
+          "text": "Session type",
+          "required": true
+        },
+        "fromdate": {
+          "type": "number",
+          "text": "Fromdate",
+          "required": true
+        },
+        "todate": {
+          "type": "number",
+          "text": "Todate",
+          "required": true
+        },
+        "email": {
+          "type": "string",
+          "text": "To fetch reports conducted by specific technician"
+        },
+        "index": {
+          "type": "string",
+          "text": "Index of the record"
+        },
+        "count": {
+          "type": "string",
+          "text": "Number of rows per page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This API fetches you the reports of previously conducted sessions",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/reports",
+        "alias_endpoint": "/zohoassist/api/v2/reports",
+        "api_ref": "https://www.zoho.com/assist/api/getsessionreports.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoAssist.reportapi.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoassist__api__v2__session___post": {
+      "provider_intent": "zohoassist__api__v2__session___post",
+      "provider_alias_intent": "/api/v2/session",
+      "text": "Create a session",
+      "category": "Session",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "customer_email": {
+          "type": "string",
+          "text": "Customer Email to whom the join invitation is to be sent"
+        },
+        "type": {
+          "type": "string",
+          "text": "Default value will be rs"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This API allows you to create a remote support or screen sharing session",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/session",
+        "alias_endpoint": "/zohoassist/api/v2/session",
+        "api_ref": "https://www.zoho.com/assist/api/createasession.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoAssist.sessionapi.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoassist__api__v2__session__schedule___post": {
+      "provider_intent": "zohoassist__api__v2__session__schedule___post",
+      "provider_alias_intent": "/api/v2/session/schedule",
+      "text": "Schedule Session",
+      "category": "Session",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "mode": {
+          "type": "string",
+          "text": "Session type",
+          "required": true
+        },
+        "title": {
+          "type": "string",
+          "text": "Title of the scheduled session",
+          "required": true
+        },
+        "notes": {
+          "type": "string",
+          "text": "Schedule session description"
+        },
+        "customer_email": {
+          "type": "string",
+          "text": "The customer's email address to whom the session will be scheduled",
+          "required": true
+        },
+        "schedule_time": {
+          "type": "string",
+          "text": "Time when the session is scheduled",
+          "required": true
+        },
+        "utc_offset": {
+          "type": "string",
+          "text": "Coordinated Universal Time in the respective time zone",
+          "required": true
+        },
+        "time_zone": {
+          "type": "string",
+          "text": "The time zone in which the session is scheduled",
+          "required": true
+        },
+        "reminder": {
+          "type": "string",
+          "text": "A reminder time for joining the session",
+          "required": true
+        },
+        "department_id": {
+          "type": "string",
+          "text": "Department in which the session is to be scheduled",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Using this API, you can schedule a remote support sessions",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/session/schedule",
+        "alias_endpoint": "/zohoassist/api/v2/session/schedule",
+        "api_ref": "https://www.zoho.com/assist/api/schedulesession.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoAssist.sessionapi.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoassist__api__v2__unattended__resource_id__connect___post": {
+      "provider_intent": "zohoassist__api__v2__unattended__resource_id__connect___post",
+      "provider_alias_intent": "/api/v2/unattended/resource_id/connect",
+      "text": "Unattended Session",
+      "category": "Session",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "resource_id": {
+          "type": "number",
+          "text": "The resource id of the device with which the session is to be created",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "department_id": {
+          "type": "number",
+          "text": "The department id in which the device is present",
+          "required": true
+        },
+        "osName": {
+          "type": "string",
+          "text": "The OS name of the device"
+        },
+        "user_id": {
+          "type": "number",
+          "text": "The user ID of logged on user"
+        }
+      },
+      "path": {
+        "resource_id": {
+          "type": "number",
+          "text": "The resource id of the device with which the session is to be created",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This API allows you to create an unattended remote session",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/unattended/{resource_id}/connect",
+        "alias_endpoint": "/zohoassist/api/v2/unattended/resource_id/connect",
+        "api_ref": "https://www.zoho.com/assist/api/unattendedsession.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoAssist.unattended.device.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoassist__api__v2__user___get": {
+      "provider_intent": "zohoassist__api__v2__user___get",
+      "provider_alias_intent": "/api/v2/user",
+      "text": "Get User Info",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This API fetches the details of an existing user in Zoho Assist",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/user",
+        "alias_endpoint": "/zohoassist/api/v2/user",
+        "api_ref": "https://www.zoho.com/assist/api/getuserinfo.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoAssist.userapi.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

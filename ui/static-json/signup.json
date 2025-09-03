@@ -1,0 +1,26 @@
+{
+  "email": {
+    "meta": {
+        "submit_text": "Sending link",
+        "submit_text_disable": "Send signup link",
+        "divider_text": "Signup using a email",
+        "form": {}
+    },
+    "fields": [
+      {
+        "label": "",
+        "hide_label": "Yes",
+        "name": "email",
+        "field": "input",
+        "type": "input",
+        "placeholder": "dev@example.com",
+        "required": true,
+        "className": "",
+        "message": ""
+      }
+    ]
+  },
+  "otp": {},
+
+  "extra_fields": []
+}

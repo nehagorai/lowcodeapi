@@ -1,0 +1,3311 @@
+{
+  "routes": {
+    "cal__v1__attendees___get": {
+      "provider_intent": "cal__v1__attendees___get",
+      "provider_alias_intent": "/v1/attendees",
+      "text": "Find all attendees",
+      "category": "Attendees",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Find all attendees",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/attendees",
+        "alias_endpoint": "/cal/v1/attendees",
+        "api_ref": "https://developer.cal.com/api/api-reference/attendees#find-all-attendees"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__attendees___post": {
+      "provider_intent": "cal__v1__attendees___post",
+      "provider_alias_intent": "/v1/attendees",
+      "text": "Create a new attendee",
+      "category": "Attendees",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "bookingId": {
+          "type": "number",
+          "text": "The ID of the booking to add the attendee to",
+          "required": true
+        },
+        "email": {
+          "type": "email",
+          "text": "The attendee email ID",
+          "required": true
+        },
+        "timeZone": {
+          "type": "string",
+          "text": "Time zone of the attendee",
+          "required": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new attendee",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/attendees",
+        "alias_endpoint": "/cal/v1/attendees",
+        "api_ref": "https://developer.cal.com/api/api-reference/attendees#create-a-new-attendee"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__attendees__id___get": {
+      "provider_intent": "cal__v1__attendees__id___get",
+      "provider_alias_intent": "/v1/attendees/id",
+      "text": "Find an attendee",
+      "category": "Attendees",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "ID of the attendee to get",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "ID of the attendee to get",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Find an attendee",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/attendees/{id}",
+        "alias_endpoint": "/cal/v1/attendees/id",
+        "api_ref": "https://developer.cal.com/api/api-reference/attendees#find-an-attendee"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__attendees__id___patch": {
+      "provider_intent": "cal__v1__attendees__id___patch",
+      "provider_alias_intent": "/v1/attendees/id",
+      "text": "Edit an existing attendee",
+      "category": "Attendees",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "ID of the attendee to edit",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "email": {
+          "type": "email",
+          "text": "Email ID of the attendee",
+          "examples": ""
+        },
+        "name": {
+          "type": "string",
+          "text": "Name of the attendee",
+          "examples": ""
+        },
+        "timeZone": {
+          "type": "string",
+          "text": "Time Zone of the attendee",
+          "examples": ""
+        }
+      },
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "ID of the attendee to edit",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Edit an existing attendee",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/attendees/{id}",
+        "alias_endpoint": "/cal/v1/attendees/id",
+        "api_ref": "https://developer.cal.com/api/api-reference/attendees#edit-an-existing-attendee"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__attendees__id___delete": {
+      "provider_intent": "cal__v1__attendees__id___delete",
+      "provider_alias_intent": "/v1/attendees/id",
+      "text": "Remove an existing attendee",
+      "category": "Attendees",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "ID of the attendee to delete",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "ID of the attendee to delete",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Remove an existing attendee",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/attendees/{id}",
+        "alias_endpoint": "/cal/v1/attendees/id",
+        "api_ref": "https://developer.cal.com/api/api-reference/attendees#remove-an-existing-attendee"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__availabilities___post": {
+      "provider_intent": "cal__v1__availabilities___post",
+      "provider_alias_intent": "/v1/availabilities",
+      "text": "Create a new availability",
+      "category": "Availabilities",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "days": {
+          "type": "array",
+          "text": "Array of integers depicting weekdays"
+        },
+        "scheduleId": {
+          "type": "number",
+          "text": "ID of schedule this availability is associated with",
+          "required": true
+        },
+        "startTime": {
+          "type": "string",
+          "text": "Start time of the availability",
+          "required": true
+        },
+        "endTime": {
+          "type": "string",
+          "text": "End time of the availability",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new availability",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/availabilities",
+        "alias_endpoint": "/cal/v1/availabilities",
+        "api_ref": "https://developer.cal.com/api/api-reference/availabilities#create-a-new-availability"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__availabilities__id___get": {
+      "provider_intent": "cal__v1__availabilities__id___get",
+      "provider_alias_intent": "/v1/availabilities/id",
+      "text": "Find an availability",
+      "category": "Availabilities",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "ID of the availability to get",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "ID of the availability to get",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Find an availability",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/availabilities/{id}",
+        "alias_endpoint": "/cal/v1/availabilities/id",
+        "api_ref": "https://developer.cal.com/api/api-reference/availabilities#find-an-availability"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__availabilities__id___patch": {
+      "provider_intent": "cal__v1__availabilities__id___patch",
+      "provider_alias_intent": "/v1/availabilities/id",
+      "text": "Edit an existing availability",
+      "category": "Availabilities",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "ID of the availability to edit",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "days": {
+          "type": "number",
+          "text": "Array of days to have the availability on",
+          "examples": []
+        },
+        "startTime": {
+          "type": "string",
+          "text": "Start time of the availability",
+          "examples": ""
+        },
+        "endTime": {
+          "type": "string",
+          "text": "End time of the availability",
+          "examples": ""
+        },
+        "scheduleId": {
+          "type": "number",
+          "text": "ID of schedule this availability is associated with"
+        }
+      },
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "ID of the availability to edit",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Edit an existing availability",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/availabilities/{id}",
+        "alias_endpoint": "/cal/v1/availabilities/id",
+        "api_ref": "https://developer.cal.com/api/api-reference/availabilities#edit-an-existing-availability"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__availabilities__id___delete": {
+      "provider_intent": "cal__v1__availabilities__id___delete",
+      "provider_alias_intent": "/v1/availabilities/id",
+      "text": "Remove an existing availability",
+      "category": "Availabilities",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "ID of the availability to remove",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "ID of the availability to remove",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Remove an existing availability",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/availabilities/{id}",
+        "alias_endpoint": "/cal/v1/availabilities/id",
+        "api_ref": "https://developer.cal.com/api/api-reference/availabilities#remove-an-existing-availability"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__booking-references___get": {
+      "provider_intent": "cal__v1__booking-references___get",
+      "provider_alias_intent": "/v1/booking-references",
+      "text": "Find all booking references",
+      "category": "Booking References",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Find all booking references",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/booking-references",
+        "alias_endpoint": "/cal/v1/booking-references",
+        "api_ref": "https://developer.cal.com/api/api-reference/booking-references#find-all-booking-references"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__booking-references___post": {
+      "provider_intent": "cal__v1__booking-references___post",
+      "provider_alias_intent": "/v1/booking-references",
+      "text": "Create a new booking reference",
+      "category": "Booking References",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "type": {
+          "type": "string"
+        },
+        "uid": {
+          "type": "string"
+        },
+        "meetingId": {
+          "type": "string"
+        },
+        "meetingPassword": {
+          "type": "string"
+        },
+        "meetingUrl": {
+          "type": "string"
+        },
+        "bookingId": {
+          "type": "boolean",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "externalCalendarId": {
+          "type": "string",
+          "text": "deleted",
+          "enum": [
+            "boolean"
+          ]
+        },
+        "credentialId": {
+          "type": "number"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new booking reference",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/booking-references",
+        "alias_endpoint": "/cal/v1/booking-references",
+        "api_ref": "https://developer.cal.com/api/api-reference/booking-references#create-a-new-booking-reference"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__booking-references__id___get": {
+      "provider_intent": "cal__v1__booking-references__id___get",
+      "provider_alias_intent": "/v1/booking-references/id",
+      "text": "Find a booking reference",
+      "category": "Booking References",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "ID of the booking reference to get",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "ID of the booking reference to get",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Find a booking reference",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/booking-references/{id}",
+        "alias_endpoint": "/cal/v1/booking-references/id",
+        "api_ref": "https://developer.cal.com/api/api-reference/booking-references#find-a-booking-reference"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__booking-references__id___patch": {
+      "provider_intent": "cal__v1__booking-references__id___patch",
+      "provider_alias_intent": "/v1/booking-references/id",
+      "text": "Edit an existing booking reference",
+      "category": "Booking References",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "ID of the booking reference to edit",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "type": {
+          "type": "string",
+          "examples": ""
+        },
+        "meetingId": {
+          "type": "string"
+        },
+        "meetingPassword": {
+          "type": "string"
+        },
+        "externalCalendarId": {
+          "type": "string"
+        },
+        "deleted": {
+          "type": "boolean",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "credentialId": {
+          "type": "number"
+        }
+      },
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "ID of the booking reference to edit",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Edit an existing booking reference",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/booking-references/{id}",
+        "alias_endpoint": "/cal/v1/booking-references/id",
+        "api_ref": "https://developer.cal.com/api/api-reference/booking-references#edit-an-existing-booking-reference"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__booking-references__id___delete": {
+      "provider_intent": "cal__v1__booking-references__id___delete",
+      "provider_alias_intent": "/v1/booking-references/id",
+      "text": "Remove an existing booking reference",
+      "category": "Booking References",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "ID of the booking reference to remove",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "ID of the booking reference to remove",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Remove an existing booking reference",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/booking-references/{id}",
+        "alias_endpoint": "/cal/v1/booking-references/id",
+        "api_ref": "https://developer.cal.com/api/api-reference/booking-references#remove-an-existing-booking-reference"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__bookings___get": {
+      "provider_intent": "cal__v1__bookings___get",
+      "provider_alias_intent": "/v1/bookings",
+      "text": "Find all bookings",
+      "category": "Bookings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "string"
+        },
+        "attendeeEmail": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Find all bookings",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/bookings",
+        "alias_endpoint": "/cal/v1/bookings",
+        "api_ref": "https://developer.cal.com/api/api-reference/bookings#find-all-bookings"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__bookings___post": {
+      "provider_intent": "cal__v1__bookings___post",
+      "provider_alias_intent": "/v1/bookings",
+      "text": "Create a new booking",
+      "category": "Bookings",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "eventTypeId": {
+          "type": "number",
+          "text": "ID of the event type to book",
+          "required": true
+        },
+        "start": {
+          "type": "string",
+          "text": "Start time of the Event",
+          "required": true
+        },
+        "end": {
+          "type": "string",
+          "text": "End time of the Event"
+        },
+        "responses": {
+          "type": "object",
+          "required": true
+        },
+        "metadata": {
+          "type": "object",
+          "text": "Any metadata associated with the booking",
+          "required": true
+        },
+        "timeZone": {
+          "type": "string",
+          "text": "TimeZone of the Attendee",
+          "required": true
+        },
+        "language": {
+          "type": "string",
+          "text": "Language of the Attendee",
+          "required": true
+        },
+        "title": {
+          "type": "string",
+          "text": "Booking event title"
+        },
+        "recurringEventId": {
+          "type": "number",
+          "text": "Recurring event ID if the event is recurring"
+        },
+        "description": {
+          "type": "string",
+          "text": "Event description"
+        },
+        "status": {
+          "type": "string",
+          "text": "Acceptable values one of [\"ACCEPTED\" \"PENDING\" \"CANCELLED\" \"REJECTED\"]"
+        },
+        "seatsPerTimeSlot": {
+          "type": "number"
+        },
+        "seatsShowAttendees": {
+          "type": "boolean",
+          "text": "Share Attendee information in seats",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "smsReminderNumber": {
+          "type": "number",
+          "text": "SMS reminder number"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new booking",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/bookings",
+        "alias_endpoint": "/cal/v1/bookings",
+        "api_ref": "https://developer.cal.com/api/api-reference/bookings#create-a-new-booking"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__bookings__id___get": {
+      "provider_intent": "cal__v1__bookings__id___get",
+      "provider_alias_intent": "/v1/bookings/id",
+      "text": "Find a booking",
+      "category": "Bookings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Find a booking",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/bookings/{id}",
+        "alias_endpoint": "/cal/v1/bookings/id",
+        "api_ref": "https://developer.cal.com/api/api-reference/bookings#find-a-booking"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__bookings__id___patch": {
+      "provider_intent": "cal__v1__bookings__id___patch",
+      "provider_alias_intent": "/v1/bookings/id",
+      "text": "Edit an existing booking",
+      "category": "Bookings",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "title": {
+          "type": "string",
+          "text": "Booking event title"
+        },
+        "start": {
+          "type": "string",
+          "text": "Start time of the Event"
+        },
+        "end": {
+          "type": "string",
+          "text": "End time of the Event"
+        },
+        "description": {
+          "type": "string",
+          "text": "Description of the meeting",
+          "examples": ""
+        },
+        "status": {
+          "type": "string",
+          "text": "\"ACCEPTED\" \"PENDING\" \"CANCELLED\" \"REJECTED\""
+        }
+      },
+      "path": {
+        "id": {
+          "type": "number"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Edit an existing booking",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/bookings/{id}",
+        "alias_endpoint": "/cal/v1/bookings/id",
+        "api_ref": "https://developer.cal.com/api/api-reference/bookings#edit-an-existing-booking"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__bookings__id__cancel___delete": {
+      "provider_intent": "cal__v1__bookings__id__cancel___delete",
+      "provider_alias_intent": "/v1/bookings/id/cancel",
+      "text": "Remove an existing booking",
+      "category": "Bookings",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "allRemainingBookings": {
+          "type": "boolean",
+          "text": "Cancel all remaining bookings (in case of recurring)",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "text": "Cancellation Reason"
+        }
+      },
+      "path": {
+        "id": {
+          "type": "number"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Remove an existing booking",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/bookings/{id}/cancel",
+        "alias_endpoint": "/cal/v1/bookings/id/cancel",
+        "api_ref": "https://developer.cal.com/api/api-reference/bookings#remove-an-existing-booking"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__custom-inputs___get": {
+      "provider_intent": "cal__v1__custom-inputs___get",
+      "provider_alias_intent": "/v1/custom-inputs",
+      "text": "Find all custom inputs",
+      "category": "Custom Inputs",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Find all custom inputs",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/custom-inputs",
+        "alias_endpoint": "/cal/v1/custom-inputs",
+        "api_ref": "https://developer.cal.com/api/api-reference/custom-inputs#find-all-custom-inputs"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__custom-inputs___post": {
+      "provider_intent": "cal__v1__custom-inputs___post",
+      "provider_alias_intent": "/v1/custom-inputs",
+      "text": "Create a new custom input",
+      "category": "Custom Inputs",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "eventTypeId": {
+          "type": "number",
+          "text": "ID of the event type to which the custom input is being added"
+        },
+        "label": {
+          "type": "string",
+          "text": "Label of the custom input"
+        },
+        "type": {
+          "type": "string",
+          "text": "Type of the custom input"
+        },
+        "options": {
+          "type": "object",
+          "text": "Options for the custom input"
+        },
+        "required": {
+          "type": "boolean",
+          "text": "If the custom input is required before booking",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "placeholder": {
+          "type": "string",
+          "text": "Placeholder text for the custom input"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new custom input",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/custom-inputs",
+        "alias_endpoint": "/cal/v1/custom-inputs",
+        "api_ref": "https://developer.cal.com/api/api-reference/custom-inputs#create-a-new-custom-input"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__custom-inputs__id___get": {
+      "provider_intent": "cal__v1__custom-inputs__id___get",
+      "provider_alias_intent": "/v1/custom-inputs/id",
+      "text": "Find a custom input",
+      "category": "Custom Inputs",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "ID of eventTypeCustomInput to get",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "ID of eventTypeCustomInput to get",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Find a custom input",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/custom-inputs/{id}",
+        "alias_endpoint": "/cal/v1/custom-inputs/id",
+        "api_ref": "https://developer.cal.com/api/api-reference/custom-inputs#find-a-custom-input"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__custom-inputs__id___patch": {
+      "provider_intent": "cal__v1__custom-inputs__id___patch",
+      "provider_alias_intent": "/v1/custom-inputs/id",
+      "text": "Edit an existing custom input",
+      "category": "Custom Inputs",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "ID of eventTypeCustomInput to edit",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "eventTypeId": {
+          "type": "number",
+          "text": "ID of the event type to which the custom input is being added"
+        },
+        "label": {
+          "type": "string",
+          "text": "Label of the custom input",
+          "examples": ""
+        },
+        "type": {
+          "type": "string",
+          "text": "Type of the custom input",
+          "examples": ""
+        },
+        "options": {
+          "type": "object",
+          "text": "Options for the custom input"
+        },
+        "required": {
+          "type": "boolean",
+          "text": "If the custom input is required before booking",
+          "enum": [
+            true,
+            false
+          ],
+          "examples": ""
+        },
+        "placeholder": {
+          "type": "string",
+          "text": "Placeholder text for the custom input",
+          "examples": ""
+        }
+      },
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "ID of eventTypeCustomInput to edit",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Edit an existing custom input",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/custom-inputs/{id}",
+        "alias_endpoint": "/cal/v1/custom-inputs/id",
+        "api_ref": "https://developer.cal.com/api/api-reference/custom-inputs#edit-an-existing-custom-input"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__custom-inputs__id___delete": {
+      "provider_intent": "cal__v1__custom-inputs__id___delete",
+      "provider_alias_intent": "/v1/custom-inputs/id",
+      "text": "Remove an existing custom input",
+      "category": "Custom Inputs",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "ID of eventTypeCustomInput to delete",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "ID of eventTypeCustomInput to delete",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Remove an existing custom input",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/custom-inputs/{id}",
+        "alias_endpoint": "/cal/v1/custom-inputs/id",
+        "api_ref": "https://developer.cal.com/api/api-reference/custom-inputs#remove-an-existing-custom-input"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__destination-calendars\r\n___get": {
+      "provider_intent": "cal__v1__destination-calendars\r\n___get",
+      "provider_alias_intent": "/v1/destination-calendars\r\n",
+      "text": "Find all destination calendars",
+      "category": "Destination Calendars",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Find all destination calendars",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/destination-calendars",
+        "alias_endpoint": "/cal/v1/destination-calendars\r\n",
+        "api_ref": "https://developer.cal.com/api/api-reference/destination-calendars#find-all-destination-calendars"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__destination-calendars___post": {
+      "provider_intent": "cal__v1__destination-calendars___post",
+      "provider_alias_intent": "/v1/destination-calendars",
+      "text": "Create a new destination calendar",
+      "category": "Destination Calendars",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "integration": {
+          "type": "string",
+          "text": "The integration",
+          "required": true
+        },
+        "externalId": {
+          "type": "string",
+          "text": "The external ID of the integration",
+          "required": true
+        },
+        "eventTypeId": {
+          "type": "number",
+          "text": "The ID of the eventType it is associated with"
+        },
+        "bookingId": {
+          "type": "number",
+          "text": "The booking ID it is associated with"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new destination calendar",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/destination-calendars",
+        "alias_endpoint": "/cal/v1/destination-calendars",
+        "api_ref": "https://developer.cal.com/api/api-reference/destination-calendars#create-a-new-destination-calendar"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__destination-calendars__id___get": {
+      "provider_intent": "cal__v1__destination-calendars__id___get",
+      "provider_alias_intent": "/v1/destination-calendars/id",
+      "text": "Find a destination calendar",
+      "category": "Destination Calendars",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "ID of destination calender to get",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "ID of destination calender to get",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Find a destination calendar",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/destination-calendars/{id}",
+        "alias_endpoint": "/cal/v1/destination-calendars/id",
+        "api_ref": "https://developer.cal.com/api/api-reference/destination-calendars#find-a-destination-calendar"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__destination-calendars__id___patch": {
+      "provider_intent": "cal__v1__destination-calendars__id___patch",
+      "provider_alias_intent": "/v1/destination-calendars/id",
+      "text": "Edit an existing destination calendar",
+      "category": "Destination Calendars",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "ID of destination calender to edit",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "ID of destination calender to edit",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Edit an existing destination calendar",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/destination-calendars/{id}",
+        "alias_endpoint": "/cal/v1/destination-calendars/id",
+        "api_ref": "https://developer.cal.com/api/api-reference/destination-calendars#edit-an-existing-destination-calendar"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__destination-calendars__id___delete": {
+      "provider_intent": "cal__v1__destination-calendars__id___delete",
+      "provider_alias_intent": "/v1/destination-calendars/id",
+      "text": "Remove an existing destination calendar",
+      "category": "Destination Calendars",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "ID of destination calender to delete",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "ID of destination calender to delete",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Remove an existing destination calendar",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/destination-calendars/{id}",
+        "alias_endpoint": "/cal/v1/destination-calendars/id",
+        "api_ref": "https://developer.cal.com/api/api-reference/destination-calendars#remove-an-existing-destination-calendar"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__event-types___get": {
+      "provider_intent": "cal__v1__event-types___get",
+      "provider_alias_intent": "/v1/event-types",
+      "text": "Find all event types",
+      "category": "Event Types",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Find all event types",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/event-types",
+        "alias_endpoint": "/cal/v1/event-types",
+        "api_ref": "https://developer.cal.com/api/api-reference/event-types#find-all-event-types"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__event-types___post": {
+      "provider_intent": "cal__v1__event-types___post",
+      "provider_alias_intent": "/v1/event-types",
+      "text": "Create a new event type",
+      "category": "Event Types",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "length": {
+          "type": "number",
+          "text": "Duration of the event type in minutes",
+          "required": true
+        },
+        "metadata": {
+          "type": "JSON",
+          "text": "Pass {} if empty",
+          "required": true
+        },
+        "title": {
+          "type": "string",
+          "text": "Title of the event type",
+          "required": true
+        },
+        "slug": {
+          "type": "string",
+          "text": "Unique slug for the event type",
+          "required": true
+        },
+        "hidden": {
+          "type": "Boolean"
+        },
+        "position": {
+          "type": "integer",
+          "text": "The position of the event type on the public booking page"
+        },
+        "teamId": {
+          "type": "integer"
+        },
+        "periodType": {
+          "type": "ENUM"
+        },
+        "periodStartDate": {
+          "type": "DateTime",
+          "text": "Start Date of bookable period"
+        },
+        "periodEndDate": {
+          "type": "DateTime",
+          "text": "End Date of bookable period"
+        },
+        "periodDays": {
+          "type": "integer",
+          "text": "Number of bookable days"
+        },
+        "periodCountCalendarDays": {
+          "type": "Boolean",
+          "text": "If calendar days should be counted for period days"
+        },
+        "requiresConfirmation": {
+          "type": "boolean",
+          "text": "If the event type should be opt-in",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "recurringEvent": {
+          "type": "JSON",
+          "text": "The object should be of the format"
+        },
+        "disableGuests": {
+          "type": "Boolean",
+          "text": "If the event type should disable adding guests to the booking"
+        },
+        "hideCalendarNotes": {
+          "type": "Boolean",
+          "text": "Minimum time in minutes before the event is bookable"
+        },
+        "beforeEventBuffer": {
+          "type": "Integer",
+          "text": "Number of minutes of buffer time before a Cal Event"
+        },
+        "afterEventBuffer": {
+          "type": "integer",
+          "text": "Number of minutes of buffer time after a Cal Event"
+        },
+        "schedulingType": {
+          "type": "ENUM"
+        },
+        "price": {
+          "type": "Integer",
+          "text": "Price of the event type booking"
+        },
+        "currency": {
+          "type": "String",
+          "text": "Currency acronym"
+        },
+        "slotInterval": {
+          "type": "Integer",
+          "text": "The intervals of available bookable slots in minutes"
+        },
+        "successRedirectUrl": {
+          "type": "URL",
+          "text": "A valid URL where the booker will redirect to once the booking is completed successfully"
+        },
+        "description": {
+          "type": "String",
+          "text": "Description of the event type"
+        },
+        "locations": {
+          "type": "JSON",
+          "text": "A list of all locations for the event type"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new event type",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/event-types",
+        "alias_endpoint": "/cal/v1/event-types",
+        "api_ref": "https://developer.cal.com/api/api-reference/event-types#create-a-new-event-type"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__event-types__id___get": {
+      "provider_intent": "cal__v1__event-types__id___get",
+      "provider_alias_intent": "/v1/event-types/id",
+      "text": "Find an event type",
+      "category": "Event Types",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "ID of the eventType to get",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "ID of the eventType to get",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Find an event type",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/event-types/{id}",
+        "alias_endpoint": "/cal/v1/event-types/id",
+        "api_ref": "https://developer.cal.com/api/api-reference/event-types#find-an-event-type"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__event-types__id___patch": {
+      "provider_intent": "cal__v1__event-types__id___patch",
+      "provider_alias_intent": "/v1/event-types/id",
+      "text": "Edit an existing event type",
+      "category": "Event Types",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "ID of the eventType to edit",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "ID of the eventType to edit",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Edit an existing event type",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/event-types/{id}",
+        "alias_endpoint": "/cal/v1/event-types/id",
+        "api_ref": "https://developer.cal.com/api/api-reference/event-types#edit-an-existing-event-type"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__event-types__id___delete": {
+      "provider_intent": "cal__v1__event-types__id___delete",
+      "provider_alias_intent": "/v1/event-types/id",
+      "text": "Remove an existing event type",
+      "category": "Event Types",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "ID of the eventType to remove",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "ID of the eventType to remove",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Remove an existing event type",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/event-types/{id}",
+        "alias_endpoint": "/cal/v1/event-types/id",
+        "api_ref": "https://developer.cal.com/api/api-reference/event-types#remove-an-existing-event-type"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__memberships___get": {
+      "provider_intent": "cal__v1__memberships___get",
+      "provider_alias_intent": "/v1/memberships",
+      "text": "Find all memberships",
+      "category": "Memberships",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Find all memberships",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/memberships",
+        "alias_endpoint": "/cal/v1/memberships",
+        "api_ref": "https://developer.cal.com/api/api-reference/memberships#find-all-memberships"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__memberships___post": {
+      "provider_intent": "cal__v1__memberships___post",
+      "provider_alias_intent": "/v1/memberships",
+      "text": "Create a new membership",
+      "category": "Memberships",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new membership",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/memberships",
+        "alias_endpoint": "/cal/v1/memberships",
+        "api_ref": "https://developer.cal.com/api/api-reference/memberships#create-a-new-membership"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__memberships__userid_teamid___get": {
+      "provider_intent": "cal__v1__memberships__userid_teamid___get",
+      "provider_alias_intent": "/v1/memberships/userId_teamId",
+      "text": "Find a membership",
+      "category": "Memberships",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "teamId": {
+          "type": "number",
+          "text": "Numeric teamld of the membership to get",
+          "required": true
+        },
+        "userId": {
+          "type": "number",
+          "text": "Numeric userId of the membership to get",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "teamId": {
+          "type": "number",
+          "text": "Numeric teamld of the membership to get",
+          "required": true
+        },
+        "userId": {
+          "type": "number",
+          "text": "Numeric userId of the membership to get",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Find a membership",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/memberships/{userId}_{teamId}",
+        "alias_endpoint": "/cal/v1/memberships/userId_teamId",
+        "api_ref": "https://developer.cal.com/api/api-reference/memberships#find-a-membership"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__memberships__userid_teamid___patch": {
+      "provider_intent": "cal__v1__memberships__userid_teamid___patch",
+      "provider_alias_intent": "/v1/memberships/userId_teamId",
+      "text": "Edit an existing membership",
+      "category": "Memberships",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "teamId": {
+          "type": "number",
+          "text": "Numeric teamld of the membership to get",
+          "required": true
+        },
+        "userId": {
+          "type": "number",
+          "text": "Numeric userId of the membership to get",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "teamId": {
+          "type": "number",
+          "text": "Numeric teamld of the membership to get",
+          "required": true
+        },
+        "userId": {
+          "type": "number",
+          "text": "Numeric userId of the membership to get",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Edit an existing membership",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/memberships/{userId}_{teamId}",
+        "alias_endpoint": "/cal/v1/memberships/userId_teamId",
+        "api_ref": "https://developer.cal.com/api/api-reference/memberships#edit-an-existing-membership"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__memberships__userid_teamid___delete": {
+      "provider_intent": "cal__v1__memberships__userid_teamid___delete",
+      "provider_alias_intent": "/v1/memberships/userId_teamId",
+      "text": "Remove an existing membership",
+      "category": "Memberships",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "teamId": {
+          "type": "number",
+          "text": "Numeric teamld of the membership to get",
+          "required": true
+        },
+        "userId": {
+          "type": "number",
+          "text": "Numeric userId of the membership to get",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "teamId": {
+          "type": "number",
+          "text": "Numeric teamld of the membership to get",
+          "required": true
+        },
+        "userId": {
+          "type": "number",
+          "text": "Numeric userId of the membership to get",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Remove an existing membership",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/memberships/{userId}_{teamId}",
+        "alias_endpoint": "/cal/v1/memberships/userId_teamId",
+        "api_ref": "https://developer.cal.com/api/api-reference/memberships#remove-an-existing-membership"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__payments___get": {
+      "provider_intent": "cal__v1__payments___get",
+      "provider_alias_intent": "/v1/payments",
+      "text": "Find all payments",
+      "category": "Payments",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Find all payments",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/payments",
+        "alias_endpoint": "/cal/v1/payments",
+        "api_ref": "https://developer.cal.com/api/api-reference/payments#find-all-payments"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__payments__id___get": {
+      "provider_intent": "cal__v1__payments__id___get",
+      "provider_alias_intent": "/v1/payments/id",
+      "text": "Find a payment",
+      "category": "Payments",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "ID of payment to get",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "ID of payment to get",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Find a payment",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/payments/{id}",
+        "alias_endpoint": "/cal/v1/payments/id",
+        "api_ref": "https://developer.cal.com/api/api-reference/payments#find-a-payment"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__schedules___get": {
+      "provider_intent": "cal__v1__schedules___get",
+      "provider_alias_intent": "/v1/schedules",
+      "text": "Find all schedules",
+      "category": "Schedules",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Find all schedules",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/schedules",
+        "alias_endpoint": "/cal/v1/schedules",
+        "api_ref": "https://developer.cal.com/api/api-reference/schedules#find-all-schedules"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__schedules___post": {
+      "provider_intent": "cal__v1__schedules___post",
+      "provider_alias_intent": "/v1/schedules",
+      "text": "Create a new schedule",
+      "category": "Schedules",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "integration": {
+          "type": "string",
+          "text": "The integration name",
+          "required": true
+        },
+        "externalId": {
+          "type": "string",
+          "text": "The external ID of the integration",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new schedule",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/schedules",
+        "alias_endpoint": "/cal/v1/schedules",
+        "api_ref": "https://developer.cal.com/api/api-reference/schedules#create-a-new-schedule"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__schedules__id___get": {
+      "provider_intent": "cal__v1__schedules__id___get",
+      "provider_alias_intent": "/v1/schedules/id",
+      "text": "Find a schedule",
+      "category": "Schedules",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "ID of schedules to get",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "ID of schedules to get",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Find a schedule",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/schedules/{id}",
+        "alias_endpoint": "/cal/v1/schedules/id",
+        "api_ref": "https://developer.cal.com/api/api-reference/schedules#find-a-schedule"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__schedules__id___patch": {
+      "provider_intent": "cal__v1__schedules__id___patch",
+      "provider_alias_intent": "/v1/schedules/id",
+      "text": "Edit an existing schedule",
+      "category": "Schedules",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "ID of schedules to edit",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Name of the schedule",
+          "examples": ""
+        },
+        "timeZone": {
+          "type": "string",
+          "text": "The timezone for this schedule",
+          "examples": ""
+        }
+      },
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "ID of schedules to edit",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Edit an existing schedule",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/schedules/{id}",
+        "alias_endpoint": "/cal/v1/schedules/id",
+        "api_ref": "https://developer.cal.com/api/api-reference/schedules#edit-an-existing-schedule"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__schedules__id___delete": {
+      "provider_intent": "cal__v1__schedules__id___delete",
+      "provider_alias_intent": "/v1/schedules/id",
+      "text": "Remove an existing schedule",
+      "category": "Schedules",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "ID of schedules to delete",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "ID of schedules to delete",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Remove an existing schedule",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/schedules/{id}",
+        "alias_endpoint": "/cal/v1/schedules/id",
+        "api_ref": "https://developer.cal.com/api/api-reference/schedules#remove-an-existing-schedule"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__selected-calendars___get": {
+      "provider_intent": "cal__v1__selected-calendars___get",
+      "provider_alias_intent": "/v1/selected-calendars",
+      "text": "Find all selected calendars",
+      "category": "Selected Calendars",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Find all selected calendars",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/selected-calendars",
+        "alias_endpoint": "/cal/v1/selected-calendars",
+        "api_ref": "https://developer.cal.com/api/api-reference/selected-calendars#find-all-selected-calendars"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__selected-calendars___post": {
+      "provider_intent": "cal__v1__selected-calendars___post",
+      "provider_alias_intent": "/v1/selected-calendars",
+      "text": "Create a new selected calendar",
+      "category": "Selected Calendars",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "integration": {
+          "type": "string",
+          "text": "The integration name",
+          "required": true,
+          "examples": ""
+        },
+        "externalId": {
+          "type": "string",
+          "text": "The external ID of the integration",
+          "required": true,
+          "examples": ""
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new selected calendar",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/selected-calendars",
+        "alias_endpoint": "/cal/v1/selected-calendars",
+        "api_ref": "https://developer.cal.com/api/api-reference/selected-calendars#create-a-new-selected-calendar"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__selected-calendars__userid_integration_externalid___get": {
+      "provider_intent": "cal__v1__selected-calendars__userid_integration_externalid___get",
+      "provider_alias_intent": "/v1/selected-calendars/userId_integration_externalId",
+      "text": "Find a selected calendar",
+      "category": "Selected Calendars",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "integration": {
+          "type": "string",
+          "text": "integration of the selected calendar to get",
+          "required": true
+        },
+        "externalId": {
+          "type": "string",
+          "text": "externalId of the selected calendar to get",
+          "required": true
+        },
+        "userID": {
+          "type": "number",
+          "text": "userID odf the selected calendar to get",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "integration": {
+          "type": "string",
+          "text": "integration of the selected calendar to get",
+          "required": true
+        },
+        "externalId": {
+          "type": "string",
+          "text": "externalId of the selected calendar to get",
+          "required": true
+        },
+        "userID": {
+          "type": "number",
+          "text": "userID odf the selected calendar to get",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Find a selected calendar",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/selected-calendars/{userId}_{integration}_{externalId}",
+        "alias_endpoint": "/cal/v1/selected-calendars/userId_integration_externalId",
+        "api_ref": "https://developer.cal.com/api/api-reference/selected-calendars#find-a-selected-calendar"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__selected-calendars__userid_integration_externalid___patch": {
+      "provider_intent": "cal__v1__selected-calendars__userid_integration_externalid___patch",
+      "provider_alias_intent": "/v1/selected-calendars/userId_integration_externalId",
+      "text": "Edit an existing selected calendar",
+      "category": "Selected Calendars",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "integration": {
+          "type": "string",
+          "text": "integration of the selected calendar to get",
+          "required": true
+        },
+        "externalId": {
+          "type": "string",
+          "text": "externalId of the selected calendar to get",
+          "required": true
+        },
+        "userID": {
+          "type": "number",
+          "text": "userID odf the selected calendar to get",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "integration": {
+          "type": "string",
+          "text": "integration of the selected calendar to get",
+          "required": true
+        },
+        "externalId": {
+          "type": "string",
+          "text": "externalId of the selected calendar to get",
+          "required": true
+        },
+        "userID": {
+          "type": "number",
+          "text": "userID odf the selected calendar to get",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Edit an existing selected calendar",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/selected-calendars/{userId}_{integration}_{externalId}",
+        "alias_endpoint": "/cal/v1/selected-calendars/userId_integration_externalId",
+        "api_ref": "https://developer.cal.com/api/api-reference/selected-calendars#edit-an-existing-selected-calendar"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__selected-calendars__userid_integration_externalid___delete": {
+      "provider_intent": "cal__v1__selected-calendars__userid_integration_externalid___delete",
+      "provider_alias_intent": "/v1/selected-calendars/userId_integration_externalId",
+      "text": "Remove an existing selected calendar",
+      "category": "Selected Calendars",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "integration": {
+          "type": "string",
+          "text": "integration of the selected calendar to get",
+          "required": true
+        },
+        "externalId": {
+          "type": "string",
+          "text": "externalId of the selected calendar to get",
+          "required": true
+        },
+        "userID": {
+          "type": "number",
+          "text": "userID odf the selected calendar to get",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "integration": {
+          "type": "string",
+          "text": "integration of the selected calendar to get",
+          "required": true
+        },
+        "externalId": {
+          "type": "string",
+          "text": "externalId of the selected calendar to get",
+          "required": true
+        },
+        "userID": {
+          "type": "number",
+          "text": "userID odf the selected calendar to get",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Remove an existing selected calendar",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/selected-calendars/{userId}_{integration}_{externalId}",
+        "alias_endpoint": "/cal/v1/selected-calendars/userId_integration_externalId",
+        "api_ref": "https://developer.cal.com/api/api-reference/selected-calendars#remove-an-existing-selected-calendar"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__teams___get": {
+      "provider_intent": "cal__v1__teams___get",
+      "provider_alias_intent": "/v1/teams",
+      "text": "Find all teams",
+      "category": "Teams",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Find all teams",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/teams",
+        "alias_endpoint": "/cal/v1/teams",
+        "api_ref": "https://developer.cal.com/api/api-reference/teams#find-all-teams"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__teams___post": {
+      "provider_intent": "cal__v1__teams___post",
+      "provider_alias_intent": "/v1/teams",
+      "text": "Create a new team",
+      "category": "Teams",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Name of the team",
+          "required": true,
+          "examples": ""
+        },
+        "slug": {
+          "type": "string",
+          "text": "A unique slug that works as path for the team public page",
+          "required": true,
+          "examples": ""
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new team",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/teams",
+        "alias_endpoint": "/cal/v1/teams",
+        "api_ref": "https://developer.cal.com/api/api-reference/teams#create-a-new-team"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__teams__teamid___get": {
+      "provider_intent": "cal__v1__teams__teamid___get",
+      "provider_alias_intent": "/v1/teams/teamId",
+      "text": "Find a team",
+      "category": "Teams",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "teamId": {
+          "type": "number",
+          "text": "ID of the team to get",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "teamId": {
+          "type": "number",
+          "text": "ID of the team to get",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Find a team",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/teams/{teamId}",
+        "alias_endpoint": "/cal/v1/teams/teamId",
+        "api_ref": "https://developer.cal.com/api/api-reference/teams#find-a-team"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__teams__teamid___patch": {
+      "provider_intent": "cal__v1__teams__teamid___patch",
+      "provider_alias_intent": "/v1/teams/teamId",
+      "text": "Edit an existing team",
+      "category": "Teams",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "teamId": {
+          "type": "number",
+          "text": "ID of the team to edit",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Name of the team"
+        },
+        "slug": {
+          "type": "string",
+          "text": "A unique slug that works as path for the team public page"
+        }
+      },
+      "path": {
+        "teamId": {
+          "type": "number",
+          "text": "ID of the team to edit",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Edit an existing team",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/teams/{teamId}",
+        "alias_endpoint": "/cal/v1/teams/teamId",
+        "api_ref": "https://developer.cal.com/api/api-reference/teams#edit-an-existing-team"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__teams__teamid___delete": {
+      "provider_intent": "cal__v1__teams__teamid___delete",
+      "provider_alias_intent": "/v1/teams/teamId",
+      "text": "Remove an existing team",
+      "category": "Teams",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "teamId": {
+          "type": "number",
+          "text": "ID of the team to delete",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "teamId": {
+          "type": "number",
+          "text": "ID of the team to delete",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Remove an existing team",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/teams/{teamId}",
+        "alias_endpoint": "/cal/v1/teams/teamId",
+        "api_ref": "https://cal.com/docs/enterprise-features/api/api-reference/teams#remove-an-existing-team"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__teams__teamid__availability___get": {
+      "provider_intent": "cal__v1__teams__teamid__availability___get",
+      "provider_alias_intent": "/v1/teams/teamId/availability",
+      "text": "Get team availability",
+      "category": "Teams",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "teamId": {
+          "type": "number",
+          "text": "ID of the team to delete",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "teamId": {
+          "type": "number",
+          "text": "ID of the team to delete",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get team availability",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/teams/{teamId}/availability",
+        "alias_endpoint": "/cal/v1/teams/teamId/availability",
+        "api_ref": "https://cal.com/docs/enterprise-features/api/api-reference/teams#get-team-availability"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__users___get": {
+      "provider_intent": "cal__v1__users___get",
+      "provider_alias_intent": "/v1/users",
+      "text": "Find all users",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Find all users",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/users",
+        "alias_endpoint": "/cal/v1/users",
+        "api_ref": "https://developer.cal.com/api/api-reference/users#find-all-users"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__users__userid___get": {
+      "provider_intent": "cal__v1__users__userid___get",
+      "provider_alias_intent": "/v1/users/userId",
+      "text": "Find a user",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "number",
+          "text": "ID of the user to get",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "number",
+          "text": "ID of the user to get",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Find a user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/users/{userId}",
+        "alias_endpoint": "/cal/v1/users/userId",
+        "api_ref": "https://developer.cal.com/api/api-reference/users#find-a-user"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__users__userid___patch": {
+      "provider_intent": "cal__v1__users__userid___patch",
+      "provider_alias_intent": "/v1/users/userId",
+      "text": "Edit an existing user",
+      "category": "Users",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "number",
+          "text": "ID of the user to edit",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "email": {
+          "type": "string",
+          "text": "Emailthat belongs to the user being edited"
+        },
+        "username": {
+          "type": "string",
+          "text": "Username for the user being edited",
+          "examples": ""
+        },
+        "brandColor": {
+          "type": "string",
+          "text": "The user's brand color"
+        },
+        "darkBrandColor": {
+          "type": "string",
+          "text": "The user's brand color for dark mode"
+        },
+        "weekStart": {
+          "type": "string",
+          "text": "Start of the week"
+        },
+        "timeZone": {
+          "type": "string",
+          "text": "The user's time zone"
+        },
+        "theme": {
+          "type": "string",
+          "text": "Default theme for the user"
+        },
+        "timeFormat": {
+          "type": "string",
+          "text": "The user's time format"
+        },
+        "locale": {
+          "type": "string",
+          "text": "The user's locale."
+        }
+      },
+      "path": {
+        "userId": {
+          "type": "number",
+          "text": "ID of the user to edit",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Edit an existing user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/users/{userId}",
+        "alias_endpoint": "/cal/v1/users/userId",
+        "api_ref": "https://developer.cal.com/api/api-reference/users#edit-an-existing-user"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__users__userid___delete": {
+      "provider_intent": "cal__v1__users__userid___delete",
+      "provider_alias_intent": "/v1/users/userId",
+      "text": "Remove an existing user",
+      "category": "Users",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "userId": {
+          "type": "number",
+          "text": "ID of the user to edit",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "userId": {
+          "type": "number",
+          "text": "ID of the user to edit",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Remove an existing user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/users/{userId}",
+        "alias_endpoint": "/cal/v1/users/userId",
+        "api_ref": "https://developer.cal.com/api/api-reference/users#remove-an-existing-user"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__users___post": {
+      "provider_intent": "cal__v1__users___post",
+      "provider_alias_intent": "/v1/users",
+      "text": "Create a new user",
+      "category": "Users",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "email": {
+          "type": "string",
+          "text": "Email that belongs to the user being edited",
+          "required": true,
+          "examples": ""
+        },
+        "username": {
+          "type": "string",
+          "text": "Username for the user being created",
+          "required": true,
+          "examples": ""
+        },
+        "brandColor": {
+          "type": "string",
+          "text": "The new user's brand color"
+        },
+        "darkBrandColor": {
+          "type": "string",
+          "text": "The new user's brand color for dark mode"
+        },
+        "weekStart": {
+          "type": "string",
+          "text": "Start of the week"
+        },
+        "timeZone": {
+          "type": "string",
+          "text": "The new user's time zone"
+        },
+        "theme": {
+          "type": "string",
+          "text": "Default theme for the new user"
+        },
+        "timeFormat": {
+          "type": "string",
+          "text": "The new user's time format"
+        },
+        "locale": {
+          "type": "string",
+          "text": "The new user's locale"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/users",
+        "alias_endpoint": "/cal/v1/users",
+        "api_ref": "https://developer.cal.com/api/api-reference/users#create-a-new-user"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__hooks___get": {
+      "provider_intent": "cal__v1__hooks___get",
+      "provider_alias_intent": "/v1/hooks",
+      "text": "Find all webhooks",
+      "category": "Webhooks",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Find all webhooks",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/hooks",
+        "alias_endpoint": "/cal/v1/hooks",
+        "api_ref": "https://developer.cal.com/api/api-reference/webhooks#find-all-webhooks"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__hooks___post": {
+      "provider_intent": "cal__v1__hooks___post",
+      "provider_alias_intent": "/v1/hooks",
+      "text": "Create a new webhook",
+      "category": "Webhooks",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "subscriberUrl": {
+          "type": "string",
+          "text": "The URL to subscribe to this webhook"
+        },
+        "eventTriggers": {
+          "type": "string",
+          "text": "The events which should trigger this webhook call"
+        },
+        "active": {
+          "type": "boolean",
+          "text": "Whether the webhook is active and should trigger on associated trigger events",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "payloadTemplate": {
+          "type": "string",
+          "text": "The template of the webhook's payload"
+        },
+        "eventTypeId": {
+          "type": "number",
+          "text": "The event type ID if this webhook should be associated with only that event type"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "subscriberUrl": {
+          "type": "string",
+          "text": "The URL to subscribe to this webhook"
+        },
+        "eventTriggers": {
+          "type": "string",
+          "text": "The events which should trigger this webhook call"
+        },
+        "active": {
+          "type": "boolean",
+          "text": "Whether the webhook is active and should trigger on associated trigger events",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "payloadTemplate": {
+          "type": "string",
+          "text": "The template of the webhook's payload"
+        },
+        "eventTypeId": {
+          "type": "number",
+          "text": "The event type ID if this webhook should be associated with only that event type"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new webhook",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/hooks",
+        "alias_endpoint": "/cal/v1/hooks",
+        "api_ref": "https://developer.cal.com/api/api-reference/webhooks#create-a-new-webhook"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__hooks__id___get": {
+      "provider_intent": "cal__v1__hooks__id___get",
+      "provider_alias_intent": "/v1/hooks/id",
+      "text": "Find a webhook",
+      "category": "Webhooks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "ID of the webhook to find",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "ID of the webhook to find",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Find a webhook",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/hooks/{id}",
+        "alias_endpoint": "/cal/v1/hooks/id",
+        "api_ref": "https://developer.cal.com/api/api-reference/webhooks#find-a-webhook"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__hooks__id___patch": {
+      "provider_intent": "cal__v1__hooks__id___patch",
+      "provider_alias_intent": "/v1/hooks/id",
+      "text": "Edit an existing webhook",
+      "category": "Webhooks",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "ID of the webhook to edit",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "eventTrigger": {
+          "type": "ENUM"
+        },
+        "payloadTemplate": {
+          "type": "string",
+          "text": "A template to customize the webhook payload"
+        },
+        "subscriberUrl": {
+          "type": "String",
+          "text": "A valid webhook subscriber URL"
+        },
+        "active": {
+          "type": "boolean",
+          "text": "Whether the webhook is active and should trigger on associated trigger events",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "eventTypeId": {
+          "type": "number",
+          "text": "The event type ID if this webhook should be associated with only that event type"
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "ID of the webhook to edit",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Edit an existing webhook",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/hooks/{id}",
+        "alias_endpoint": "/cal/v1/hooks/id",
+        "api_ref": "https://developer.cal.com/api/api-reference/webhooks#edit-an-existing-webhook"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "cal__v1__hooks__id___delete": {
+      "provider_intent": "cal__v1__hooks__id___delete",
+      "provider_alias_intent": "/v1/hooks/id",
+      "text": "Delete a webhook",
+      "category": "Webhooks",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Id of the webhook to delete",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Id of the webhook to delete",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a webhook",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/hooks/{id}",
+        "alias_endpoint": "/cal/v1/hooks/id",
+        "api_ref": "https://developer.cal.com/api/api-reference/webhooks#delete-a-webhook"
+      },
+      "auth": {
+        "query": [
+          "apiKey"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

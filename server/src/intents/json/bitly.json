@@ -1,0 +1,3232 @@
+{
+  "app": {
+    "title": "Bitly API",
+    "description": "",
+    "api_base": "/bitly",
+    "copyright": "",
+    "copyright_year": "",
+    "contact_email": ""
+  },
+  "category": {
+    "All": ""
+  },
+  "routes": {
+    "getoauthapp": {
+      "provider_intent": "getoauthapp",
+      "provider_alias_intent": "/v4/apps/client_id",
+      "text": "Retrieve OAuth App",
+      "category": "App",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "client_id": {
+          "type": "string",
+          "text": "The client ID of an OAuth app",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "client_id": {
+          "type": "string",
+          "text": "The client ID of an OAuth app",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Retrieve the details for the provided OAuth App client ID.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/apps/{client_id}",
+        "alias_endpoint": "/bitly/v4/apps/client_id",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getoverridesforgroups": {
+      "provider_intent": "getoverridesforgroups",
+      "provider_alias_intent": "/v4/groups/group_guid/overrides",
+      "text": "Group Overrides",
+      "category": "BSDs",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "group_guid": {
+          "type": "array",
+          "text": "GUIDs for a Bitly group"
+        },
+        "created_after": {
+          "type": "integer",
+          "text": "Timestamp as an integer unix epoch"
+        },
+        "limit": {
+          "type": "integer",
+          "text": "limit the amount of results returned"
+        },
+        "offset": {
+          "type": "integer",
+          "text": "set the starting index of the result set"
+        },
+        "bsd": {
+          "type": "array",
+          "text": "a branded short domains to filter results"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "retrieves all account overrides matching specified group_guid and bsd query filters.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/groups/{group_guid}/overrides",
+        "alias_endpoint": "/bitly/v4/groups/group_guid/overrides",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getbsds": {
+      "provider_intent": "getbsds",
+      "provider_alias_intent": "/v4/bsds",
+      "text": "Get BSDs",
+      "category": "BSDs",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Fetch all Branded Short Domains.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/bsds",
+        "alias_endpoint": "/bitly/v4/bsds",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getmetricsforbitlinkbycountries": {
+      "provider_intent": "getmetricsforbitlinkbycountries",
+      "provider_alias_intent": "/v4/bitlinks/bitlink/countries",
+      "text": "Get Metrics for a Bitlink by Country",
+      "category": "Bitlinks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "bitlink": {
+          "type": "string",
+          "text": "A Bitlink made of the domain and hash",
+          "required": true
+        },
+        "unit": {
+          "type": "string",
+          "text": "A unit of time",
+          "required": true
+        },
+        "units": {
+          "type": "integer",
+          "text": "An integer representing the time units to query data for",
+          "required": true
+        },
+        "size": {
+          "type": "integer",
+          "text": "The quantity of items to be be returned"
+        },
+        "unit_reference": {
+          "type": "string",
+          "text": "An ISO-8601 timestamp indicating the most recent time for which to pull metrics"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "bitlink": {
+          "type": "string",
+          "text": "A Bitlink made of the domain and hash",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns the country origins of click traffic for the specified link.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/bitlinks/{bitlink}/countries",
+        "alias_endpoint": "/bitly/v4/bitlinks/bitlink/countries",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getclickssummaryforbitlink": {
+      "provider_intent": "getclickssummaryforbitlink",
+      "provider_alias_intent": "/v4/bitlinks/bitlink/clicks/summary",
+      "text": "Get a Clicks Summary for a Bitlink",
+      "category": "Bitlinks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "bitlink": {
+          "type": "string",
+          "text": "A Bitlink made of the domain and hash",
+          "required": true
+        },
+        "unit": {
+          "type": "string",
+          "text": "A unit of time",
+          "required": true
+        },
+        "units": {
+          "type": "integer",
+          "text": "An integer representing the time units to query data for",
+          "required": true
+        },
+        "unit_reference": {
+          "type": "string",
+          "text": "An ISO-8601 timestamp indicating the most recent time for which to pull metrics"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "bitlink": {
+          "type": "string",
+          "text": "A Bitlink made of the domain and hash",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns the click counts for the specified link rolled up into a single field.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/bitlinks/{bitlink}/clicks/summary",
+        "alias_endpoint": "/bitly/v4/bitlinks/bitlink/clicks/summary",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "expandbitlink": {
+      "provider_intent": "expandbitlink",
+      "provider_alias_intent": "/v4/expand",
+      "text": "Expand a Bitlink",
+      "category": "Bitlinks",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "bitlink_id": {
+          "type": "string"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns the short link and long URL for the specified link.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/expand",
+        "alias_endpoint": "/bitly/v4/expand",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "deletebitlink": {
+      "provider_intent": "deletebitlink",
+      "provider_alias_intent": "/v4/bitlinks/bitlink",
+      "text": "Delete a Bitlink",
+      "category": "Bitlinks",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "bitlink": {
+          "type": "string",
+          "text": "A Bitlink made of the domain and hash",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "bitlink": {
+          "type": "string",
+          "text": "A Bitlink made of the domain and hash",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Delete an unedited hash Bitlink.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/bitlinks/{bitlink}",
+        "alias_endpoint": "/bitly/v4/bitlinks/bitlink",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "updatebitlink": {
+      "provider_intent": "updatebitlink",
+      "provider_alias_intent": "/v4/bitlinks/bitlink",
+      "text": "Update a Bitlink",
+      "category": "Bitlinks",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "bitlink": {
+          "type": "string",
+          "text": "A Bitlink made of the domain and hash",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "archived": {
+          "type": "boolean",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "tags": {
+          "type": "array"
+        },
+        "deeplinks": {
+          "type": "array"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "path": {
+        "bitlink": {
+          "type": "string",
+          "text": "A Bitlink made of the domain and hash",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Updates fields in the specified link.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/bitlinks/{bitlink}",
+        "alias_endpoint": "/bitly/v4/bitlinks/bitlink",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getbitlink": {
+      "provider_intent": "getbitlink",
+      "provider_alias_intent": "/v4/bitlinks/bitlink",
+      "text": "Retrieve a Bitlink",
+      "category": "Bitlinks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "bitlink": {
+          "type": "string",
+          "text": "A Bitlink made of the domain and hash",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "bitlink": {
+          "type": "string",
+          "text": "A Bitlink made of the domain and hash",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns information for the specified link.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/bitlinks/{bitlink}",
+        "alias_endpoint": "/bitly/v4/bitlinks/bitlink",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "createbitlinkqrcode": {
+      "provider_intent": "createbitlinkqrcode",
+      "provider_alias_intent": "/v4/bitlinks/bitlink/qr",
+      "text": "Create a QR Code",
+      "category": "Bitlinks",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "bitlink": {
+          "type": "string",
+          "text": "A Bitlink made of the domain and hash",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "color": {
+          "type": "string",
+          "text": "A color denoted in hexadecimal format ei"
+        },
+        "logo_image_guid": {
+          "type": "string",
+          "text": "Logo must first be uploaded through Bitly's QR Code Modal located on the \"All links\" page"
+        },
+        "image_format": {
+          "type": "string",
+          "text": "Determines the image format of the returned QR code"
+        },
+        "exclude_bitly_logo": {
+          "type": "boolean",
+          "text": "Removes the Bitly logo from the center of the generated QR image",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "is_hidden": {
+          "type": "boolean",
+          "text": "Determine whether to hide the QR code",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "bitlink": {
+          "type": "string",
+          "text": "A Bitlink made of the domain and hash",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Creates a QR code for existing Bitlink.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/bitlinks/{bitlink}/qr",
+        "alias_endpoint": "/bitly/v4/bitlinks/bitlink/qr",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getbitlinkqrcode": {
+      "provider_intent": "getbitlinkqrcode",
+      "provider_alias_intent": "/v4/bitlinks/bitlink/qr",
+      "text": "Retrieve a QR Code",
+      "category": "Bitlinks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "bitlink": {
+          "type": "string",
+          "text": "A Bitlink made of the domain and hash",
+          "required": true
+        },
+        "image_format": {
+          "type": "string",
+          "text": "Determines the image format of the returned QR code"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "bitlink": {
+          "type": "string",
+          "text": "A Bitlink made of the domain and hash",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Retrieves a QR code for a Bitlink.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/bitlinks/{bitlink}/qr",
+        "alias_endpoint": "/bitly/v4/bitlinks/bitlink/qr",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "updatebitlinkqrcode": {
+      "provider_intent": "updatebitlinkqrcode",
+      "provider_alias_intent": "/v4/bitlinks/bitlink/qr",
+      "text": "Update a QR Code",
+      "category": "Bitlinks",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "bitlink": {
+          "type": "string",
+          "text": "A Bitlink made of the domain and hash",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "color": {
+          "type": "string",
+          "text": "A color denoted in hexadecimal format ei"
+        },
+        "logo_image_guid": {
+          "type": "string",
+          "text": "Logo must first be uploaded through Bitly's QR Code Modal located on the \"All links\" page"
+        },
+        "image_format": {
+          "type": "string",
+          "text": "Determines the image format of the returned QR code"
+        },
+        "exclude_bitly_logo": {
+          "type": "boolean",
+          "text": "Removes the Bitly logo from the center of the generated QR image",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "is_hidden": {
+          "type": "boolean",
+          "text": "Determine whether to hide the QR code",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "bitlink": {
+          "type": "string",
+          "text": "A Bitlink made of the domain and hash",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Updates an existing QR Code.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/bitlinks/{bitlink}/qr",
+        "alias_endpoint": "/bitly/v4/bitlinks/bitlink/qr",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getmetricsforbitlinkbycities": {
+      "provider_intent": "getmetricsforbitlinkbycities",
+      "provider_alias_intent": "/v4/bitlinks/bitlink/cities",
+      "text": "Get Metrics for a Bitlink by City",
+      "category": "Bitlinks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "bitlink": {
+          "type": "string",
+          "text": "A Bitlink made of the domain and hash",
+          "required": true
+        },
+        "unit": {
+          "type": "string",
+          "text": "A unit of time",
+          "required": true
+        },
+        "units": {
+          "type": "integer",
+          "text": "An integer representing the time units to query data for",
+          "required": true
+        },
+        "size": {
+          "type": "integer",
+          "text": "The quantity of items to be be returned"
+        },
+        "unit_reference": {
+          "type": "string",
+          "text": "An ISO-8601 timestamp indicating the most recent time for which to pull metrics"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "bitlink": {
+          "type": "string",
+          "text": "A Bitlink made of the domain and hash",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns the city origins of click traffic for the specified link.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/bitlinks/{bitlink}/cities",
+        "alias_endpoint": "/bitly/v4/bitlinks/bitlink/cities",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getmetricsforbitlinkbydevices": {
+      "provider_intent": "getmetricsforbitlinkbydevices",
+      "provider_alias_intent": "/v4/bitlinks/bitlink/devices",
+      "text": "Get Metrics for a Bitlink by Device Type",
+      "category": "Bitlinks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "bitlink": {
+          "type": "string",
+          "text": "A Bitlink made of the domain and hash",
+          "required": true
+        },
+        "unit": {
+          "type": "string",
+          "text": "A unit of time",
+          "required": true
+        },
+        "units": {
+          "type": "integer",
+          "text": "An integer representing the time units to query data for",
+          "required": true
+        },
+        "size": {
+          "type": "integer",
+          "text": "The quantity of items to be be returned"
+        },
+        "unit_reference": {
+          "type": "string",
+          "text": "An ISO-8601 timestamp indicating the most recent time for which to pull metrics"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "bitlink": {
+          "type": "string",
+          "text": "A Bitlink made of the domain and hash",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns the device types generating click traffic to the specified link.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/bitlinks/{bitlink}/devices",
+        "alias_endpoint": "/bitly/v4/bitlinks/bitlink/devices",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getmetricsforbitlinkbyreferrersbydomains": {
+      "provider_intent": "getmetricsforbitlinkbyreferrersbydomains",
+      "provider_alias_intent": "/v4/bitlinks/bitlink/referrers_by_domains",
+      "text": "Get Metrics for a Bitlink by Referrers by Domain",
+      "category": "Bitlinks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "bitlink": {
+          "type": "string",
+          "text": "A Bitlink made of the domain and hash",
+          "required": true
+        },
+        "unit": {
+          "type": "string",
+          "text": "A unit of time",
+          "required": true
+        },
+        "units": {
+          "type": "integer",
+          "text": "An integer representing the time units to query data for",
+          "required": true
+        },
+        "size": {
+          "type": "integer",
+          "text": "The quantity of items to be be returned"
+        },
+        "unit_reference": {
+          "type": "string",
+          "text": "An ISO-8601 timestamp indicating the most recent time for which to pull metrics"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "bitlink": {
+          "type": "string",
+          "text": "A Bitlink made of the domain and hash",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns click metrics grouped by referrers for the specified link.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/bitlinks/{bitlink}/referrers_by_domains",
+        "alias_endpoint": "/bitly/v4/bitlinks/bitlink/referrers_by_domains",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getsortedbitlinks": {
+      "provider_intent": "getsortedbitlinks",
+      "provider_alias_intent": "/v4/groups/group_guid/bitlinks/sort",
+      "text": "Retrieve Sorted Bitlinks for Group",
+      "category": "Bitlinks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        },
+        "sort": {
+          "type": "string",
+          "text": "The type of sorting that you would like to do",
+          "required": true
+        },
+        "unit": {
+          "type": "string",
+          "text": "A unit of time"
+        },
+        "units": {
+          "type": "integer",
+          "text": "An integer representing the time units to query data for"
+        },
+        "unit_reference": {
+          "type": "string",
+          "text": "An ISO-8601 timestamp indicating the most recent time for which to pull metrics"
+        },
+        "size": {
+          "type": "integer",
+          "text": "The quantity of items to be be returned"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        },
+        "sort": {
+          "type": "string",
+          "text": "The type of sorting that you would like to do",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns a list of Bitlinks sorted by group.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/groups/{group_guid}/bitlinks/{sort}",
+        "alias_endpoint": "/bitly/v4/groups/group_guid/bitlinks/sort",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "createfullbitlink": {
+      "provider_intent": "createfullbitlink",
+      "provider_alias_intent": "/v4/bitlinks",
+      "text": "Create a Bitlink",
+      "category": "Bitlinks",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "domain": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "group_guid": {
+          "type": "string",
+          "text": "Always include a specific group and custom domain in your shorten calls"
+        },
+        "tags": {
+          "type": "array"
+        },
+        "deeplinks": {
+          "type": "array"
+        },
+        "long_url": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Converts a long url to a Bitlink and sets additional parameters.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/bitlinks",
+        "alias_endpoint": "/bitly/v4/bitlinks",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getclicksforbitlink": {
+      "provider_intent": "getclicksforbitlink",
+      "provider_alias_intent": "/v4/bitlinks/bitlink/clicks",
+      "text": "Get Clicks for a Bitlink",
+      "category": "Bitlinks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "bitlink": {
+          "type": "string",
+          "text": "A Bitlink made of the domain and hash",
+          "required": true
+        },
+        "unit": {
+          "type": "string",
+          "text": "A unit of time",
+          "required": true
+        },
+        "units": {
+          "type": "integer",
+          "text": "An integer representing the time units to query data for",
+          "required": true
+        },
+        "unit_reference": {
+          "type": "string",
+          "text": "An ISO-8601 timestamp indicating the most recent time for which to pull metrics"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "bitlink": {
+          "type": "string",
+          "text": "A Bitlink made of the domain and hash",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns the click counts for the specified link in an array based on a date.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/bitlinks/{bitlink}/clicks",
+        "alias_endpoint": "/bitly/v4/bitlinks/bitlink/clicks",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getbitlinksbygroup": {
+      "provider_intent": "getbitlinksbygroup",
+      "provider_alias_intent": "/v4/groups/group_guid/bitlinks",
+      "text": "Retrieve Bitlinks by Group",
+      "category": "Bitlinks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        },
+        "size": {
+          "type": "integer",
+          "text": "The quantity of items to be be returned"
+        },
+        "search_after": {
+          "type": "string",
+          "text": "Token used to search next page of links"
+        },
+        "keyword": {
+          "type": "string",
+          "text": "Custom keyword to filter on history entries"
+        },
+        "query": {
+          "type": "string",
+          "text": "The value that you would like to search"
+        },
+        "created_before": {
+          "type": "integer",
+          "text": "Timestamp as an integer unix epoch"
+        },
+        "created_after": {
+          "type": "integer",
+          "text": "Timestamp as an integer unix epoch"
+        },
+        "archived": {
+          "type": "string",
+          "text": "Whether or not to include archived bitlinks"
+        },
+        "deeplinks": {
+          "type": "string",
+          "text": "Filter to only Bitlinks that contain deeplinks"
+        },
+        "domain_deeplinks": {
+          "type": "string",
+          "text": "Filter to only Bitlinks that contain deeplinks configured with a custom domain"
+        },
+        "campaign_guid": {
+          "type": "string",
+          "text": "Filter to return only links for the given campaign GUID can be provided"
+        },
+        "channel_guid": {
+          "type": "string",
+          "text": "Filter to return only links for the given channel GUID can be provided overrides all other parameters"
+        },
+        "custom_bitlink": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "text": "Filter by given tags"
+        },
+        "launchpad_ids": {
+          "type": "array",
+          "text": "Filter by launchpad id"
+        },
+        "encoding_login": {
+          "type": "array",
+          "text": "Filter by the login of the authenticated user that created the Bitlink"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns a paginated collection of Bitlinks for a group.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/groups/{group_guid}/bitlinks",
+        "alias_endpoint": "/bitly/v4/groups/group_guid/bitlinks",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "updatebitlinksbygroup": {
+      "provider_intent": "updatebitlinksbygroup",
+      "provider_alias_intent": "/v4/groups/group_guid/bitlinks",
+      "text": "Bulk update bitlinks",
+      "category": "Bitlinks",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "action": {
+          "type": "string",
+          "text": "archive or edit_tags",
+          "required": true
+        },
+        "remove_tags": {
+          "type": "array"
+        },
+        "archive": {
+          "type": "boolean",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "links": {
+          "type": "array",
+          "text": "this is limited to 100 bitlink ids"
+        },
+        "add_tags": {
+          "type": "array"
+        }
+      },
+      "path": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Bulk update can add or remove tags or archive up to 100 links at a time; The response includes a list of bitlink ids that were updated.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/groups/{group_guid}/bitlinks",
+        "alias_endpoint": "/bitly/v4/groups/group_guid/bitlinks",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getmetricsforbitlinkbyreferrers": {
+      "provider_intent": "getmetricsforbitlinkbyreferrers",
+      "provider_alias_intent": "/v4/bitlinks/bitlink/referrers",
+      "text": "Get Metrics for a Bitlink by Referrers",
+      "category": "Bitlinks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "bitlink": {
+          "type": "string",
+          "text": "A Bitlink made of the domain and hash",
+          "required": true
+        },
+        "unit": {
+          "type": "string",
+          "text": "A unit of time",
+          "required": true
+        },
+        "units": {
+          "type": "integer",
+          "text": "An integer representing the time units to query data for",
+          "required": true
+        },
+        "size": {
+          "type": "integer",
+          "text": "The quantity of items to be be returned"
+        },
+        "unit_reference": {
+          "type": "string",
+          "text": "An ISO-8601 timestamp indicating the most recent time for which to pull metrics"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "bitlink": {
+          "type": "string",
+          "text": "A Bitlink made of the domain and hash",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns referrer click counts for the specified link.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/bitlinks/{bitlink}/referrers",
+        "alias_endpoint": "/bitly/v4/bitlinks/bitlink/referrers",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getmetricsforbitlinkbyreferringdomains": {
+      "provider_intent": "getmetricsforbitlinkbyreferringdomains",
+      "provider_alias_intent": "/v4/bitlinks/bitlink/referring_domains",
+      "text": "Get Metrics for a Bitlink by Referring Domains",
+      "category": "Bitlinks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "bitlink": {
+          "type": "string",
+          "text": "A Bitlink made of the domain and hash",
+          "required": true
+        },
+        "unit": {
+          "type": "string",
+          "text": "A unit of time",
+          "required": true
+        },
+        "units": {
+          "type": "integer",
+          "text": "An integer representing the time units to query data for",
+          "required": true
+        },
+        "size": {
+          "type": "integer",
+          "text": "The quantity of items to be be returned"
+        },
+        "unit_reference": {
+          "type": "string",
+          "text": "An ISO-8601 timestamp indicating the most recent time for which to pull metrics"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "bitlink": {
+          "type": "string",
+          "text": "A Bitlink made of the domain and hash",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns the referring domain click counts for the specified link.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/bitlinks/{bitlink}/referring_domains",
+        "alias_endpoint": "/bitly/v4/bitlinks/bitlink/referring_domains",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "createbitlink": {
+      "provider_intent": "createbitlink",
+      "provider_alias_intent": "/v4/shorten",
+      "text": "Shorten a Link",
+      "category": "Bitlinks",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "group_guid": {
+          "type": "string"
+        },
+        "domain": {
+          "type": "string"
+        },
+        "long_url": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Converts a long url to a Bitlink.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/shorten",
+        "alias_endpoint": "/bitly/v4/shorten",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "createchannel": {
+      "provider_intent": "createchannel",
+      "provider_alias_intent": "/v4/channels",
+      "text": "Create Channel",
+      "category": "Campaigns",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Creates a new channel.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/channels",
+        "alias_endpoint": "/bitly/v4/channels",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getchannels": {
+      "provider_intent": "getchannels",
+      "provider_alias_intent": "/v4/channels",
+      "text": "Retrieve Channels",
+      "category": "Campaigns",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group"
+        },
+        "campaign_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly campaign"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns the channels available to a user.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/channels",
+        "alias_endpoint": "/bitly/v4/channels",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getcampaign": {
+      "provider_intent": "getcampaign",
+      "provider_alias_intent": "/v4/campaigns/campaign_guid",
+      "text": "Retrieve a Campaign",
+      "category": "Campaigns",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "campaign_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly campaign",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "campaign_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly campaign",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns details for a campaign.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/campaigns/{campaign_guid}",
+        "alias_endpoint": "/bitly/v4/campaigns/campaign_guid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "updatecampaign": {
+      "provider_intent": "updatecampaign",
+      "provider_alias_intent": "/v4/campaigns/campaign_guid",
+      "text": "Update Campaign",
+      "category": "Campaigns",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "campaign_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly campaign",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "group_guid": {
+          "type": "string"
+        },
+        "channel_guids": {
+          "type": "array"
+        },
+        "description": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "path": {
+        "campaign_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly campaign",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Updates a campaign's details.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/campaigns/{campaign_guid}",
+        "alias_endpoint": "/bitly/v4/campaigns/campaign_guid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "createcampaign": {
+      "provider_intent": "createcampaign",
+      "provider_alias_intent": "/v4/campaigns",
+      "text": "Create Campaign",
+      "category": "Campaigns",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "group_guid": {
+          "type": "string"
+        },
+        "channel_guids": {
+          "type": "array"
+        },
+        "description": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Creates a new campaign.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/campaigns",
+        "alias_endpoint": "/bitly/v4/campaigns",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getcampaigns": {
+      "provider_intent": "getcampaigns",
+      "provider_alias_intent": "/v4/campaigns",
+      "text": "Retrieve Campaigns",
+      "category": "Campaigns",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns the campaigns for the current authenticated user.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/campaigns",
+        "alias_endpoint": "/bitly/v4/campaigns",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getchannel": {
+      "provider_intent": "getchannel",
+      "provider_alias_intent": "/v4/channels/channel_guid",
+      "text": "Get a Channel",
+      "category": "Campaigns",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "channel_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly Channel",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "channel_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly Channel",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns a channel's details.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/channels/{channel_guid}",
+        "alias_endpoint": "/bitly/v4/channels/channel_guid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "updatechannel": {
+      "provider_intent": "updatechannel",
+      "provider_alias_intent": "/v4/channels/channel_guid",
+      "text": "Update a Channel",
+      "category": "Campaigns",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "channel_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly Channel",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "channel_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly Channel",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Updates an existing channel.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/channels/{channel_guid}",
+        "alias_endpoint": "/bitly/v4/channels/channel_guid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "addcustombitlink": {
+      "provider_intent": "addcustombitlink",
+      "provider_alias_intent": "/v4/custom_bitlinks",
+      "text": "Add Custom Bitlink",
+      "category": "Custom Bitlinks",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "bitlink_id": {
+          "type": "string"
+        },
+        "custom_bitlink": {
+          "type": "string"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Add a keyword (or \"custom back-half\") to a Bitlink with a Custom Domain (domains must match).",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/custom_bitlinks",
+        "alias_endpoint": "/bitly/v4/custom_bitlinks",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getcustombitlinkmetricsbydestination": {
+      "provider_intent": "getcustombitlinkmetricsbydestination",
+      "provider_alias_intent": "/v4/custom_bitlinks/custom_bitlink/clicks_by_destination",
+      "text": "Get Metrics for a Custom Bitlink by Destination",
+      "category": "Custom Bitlinks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "custom_bitlink": {
+          "type": "string",
+          "text": "A Custom Bitlink made of the domain and keyword",
+          "required": true
+        },
+        "unit": {
+          "type": "string",
+          "text": "A unit of time",
+          "required": true
+        },
+        "units": {
+          "type": "integer",
+          "text": "An integer representing the time units to query data for",
+          "required": true
+        },
+        "unit_reference": {
+          "type": "string",
+          "text": "An ISO-8601 timestamp indicating the most recent time for which to pull metrics"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "custom_bitlink": {
+          "type": "string",
+          "text": "A Custom Bitlink made of the domain and keyword",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns click metrics for the specified link by its historical destinations.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/custom_bitlinks/{custom_bitlink}/clicks_by_destination",
+        "alias_endpoint": "/bitly/v4/custom_bitlinks/custom_bitlink/clicks_by_destination",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getclicksforcustombitlink": {
+      "provider_intent": "getclicksforcustombitlink",
+      "provider_alias_intent": "/v4/custom_bitlinks/custom_bitlink/clicks",
+      "text": "Get Clicks for a Custom Bitlink's Entire History",
+      "category": "Custom Bitlinks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "custom_bitlink": {
+          "type": "string",
+          "text": "A Custom Bitlink made of the domain and keyword",
+          "required": true
+        },
+        "unit": {
+          "type": "string",
+          "text": "A unit of time",
+          "required": true
+        },
+        "units": {
+          "type": "integer",
+          "text": "An integer representing the time units to query data for",
+          "required": true
+        },
+        "unit_reference": {
+          "type": "string",
+          "text": "An ISO-8601 timestamp indicating the most recent time for which to pull metrics"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "custom_bitlink": {
+          "type": "string",
+          "text": "A Custom Bitlink made of the domain and keyword",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns the click counts for the specified link.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/custom_bitlinks/{custom_bitlink}/clicks",
+        "alias_endpoint": "/bitly/v4/custom_bitlinks/custom_bitlink/clicks",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "updatecustombitlink": {
+      "provider_intent": "updatecustombitlink",
+      "provider_alias_intent": "/v4/custom_bitlinks/custom_bitlink",
+      "text": "Update Custom Bitlink",
+      "category": "Custom Bitlinks",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "custom_bitlink": {
+          "type": "string",
+          "text": "A Custom Bitlink made of the domain and keyword",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "bitlink_id": {
+          "type": "string"
+        }
+      },
+      "path": {
+        "custom_bitlink": {
+          "type": "string",
+          "text": "A Custom Bitlink made of the domain and keyword",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Move a keyword (or custom back-half) to a different Bitlink (domains must match).",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/custom_bitlinks/{custom_bitlink}",
+        "alias_endpoint": "/bitly/v4/custom_bitlinks/custom_bitlink",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getcustombitlink": {
+      "provider_intent": "getcustombitlink",
+      "provider_alias_intent": "/v4/custom_bitlinks/custom_bitlink",
+      "text": "Retrieve Custom Bitlink",
+      "category": "Custom Bitlinks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "custom_bitlink": {
+          "type": "string",
+          "text": "A Custom Bitlink made of the domain and keyword",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "custom_bitlink": {
+          "type": "string",
+          "text": "A Custom Bitlink made of the domain and keyword",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns the details and history of the specified link.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/custom_bitlinks/{custom_bitlink}",
+        "alias_endpoint": "/bitly/v4/custom_bitlinks/custom_bitlink",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getgroupmetricsbyreferringnetworks": {
+      "provider_intent": "getgroupmetricsbyreferringnetworks",
+      "provider_alias_intent": "/v4/groups/group_guid/referring_networks",
+      "text": "Get Click Metrics for a Group by Referring Networks",
+      "category": "Groups",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns metrics by referring networks for the specified group's links.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/groups/{group_guid}/referring_networks",
+        "alias_endpoint": "/bitly/v4/groups/group_guid/referring_networks",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getgroupclicks": {
+      "provider_intent": "getgroupclicks",
+      "provider_alias_intent": "/v4/groups/group_guid/clicks",
+      "text": "Get clicks by group",
+      "category": "Groups",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        },
+        "unit": {
+          "type": "string",
+          "text": "A unit of time",
+          "required": true
+        },
+        "units": {
+          "type": "integer",
+          "text": "An integer representing the time units to query data for",
+          "required": true
+        },
+        "unit_reference": {
+          "type": "string",
+          "text": "An ISO-8601 timestamp indicating the most recent time for which to pull metrics"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "get number of clicks on bitlinks in a group.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/groups/{group_guid}/clicks",
+        "alias_endpoint": "/bitly/v4/groups/group_guid/clicks",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getgroupmetricsbydevices": {
+      "provider_intent": "getgroupmetricsbydevices",
+      "provider_alias_intent": "/v4/groups/group_guid/devices",
+      "text": "Get Click Metrics for a Group by Device Type",
+      "category": "Groups",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        },
+        "unit": {
+          "type": "string",
+          "text": "A unit of time",
+          "required": true
+        },
+        "units": {
+          "type": "integer",
+          "text": "An integer representing the time units to query data for",
+          "required": true
+        },
+        "size": {
+          "type": "integer",
+          "text": "The quantity of items to be be returned"
+        },
+        "unit_reference": {
+          "type": "string",
+          "text": "An ISO-8601 timestamp indicating the most recent time for which to pull metrics"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns the device types generating click traffic to the specified group's links.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/groups/{group_guid}/devices",
+        "alias_endpoint": "/bitly/v4/groups/group_guid/devices",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getgroupmetricsbycountries": {
+      "provider_intent": "getgroupmetricsbycountries",
+      "provider_alias_intent": "/v4/groups/group_guid/countries",
+      "text": "Get Click Metrics for a Group by Country",
+      "category": "Groups",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        },
+        "unit": {
+          "type": "string",
+          "text": "A unit of time",
+          "required": true
+        },
+        "units": {
+          "type": "integer",
+          "text": "An integer representing the time units to query data for",
+          "required": true
+        },
+        "size": {
+          "type": "integer",
+          "text": "The quantity of items to be be returned"
+        },
+        "unit_reference": {
+          "type": "string",
+          "text": "An ISO-8601 timestamp indicating the most recent time for which to pull metrics"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns the geographic origins of click traffic by country for the specified group.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/groups/{group_guid}/countries",
+        "alias_endpoint": "/bitly/v4/groups/group_guid/countries",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getqrlogoimagesbygroup": {
+      "provider_intent": "getqrlogoimagesbygroup",
+      "provider_alias_intent": "/v4/groups/group_guid/qr/images",
+      "text": "Retrieve QR Code Logo Images",
+      "category": "Groups",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Retrieves logo images associated with QR codes by group.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/groups/{group_guid}/qr/images",
+        "alias_endpoint": "/bitly/v4/groups/group_guid/qr/images",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "updategroup": {
+      "provider_intent": "updategroup",
+      "provider_alias_intent": "/v4/groups/group_guid",
+      "text": "Update a Group",
+      "category": "Groups",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "bsds": {
+          "type": "array"
+        },
+        "name": {
+          "type": "string"
+        },
+        "organization_guid": {
+          "type": "string"
+        }
+      },
+      "path": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Updates the details of a group.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/groups/{group_guid}",
+        "alias_endpoint": "/bitly/v4/groups/group_guid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getgroup": {
+      "provider_intent": "getgroup",
+      "provider_alias_intent": "/v4/groups/group_guid",
+      "text": "Retrieve a Group",
+      "category": "Groups",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns details for a group.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/groups/{group_guid}",
+        "alias_endpoint": "/bitly/v4/groups/group_guid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getgroupmetricsbycities": {
+      "provider_intent": "getgroupmetricsbycities",
+      "provider_alias_intent": "/v4/groups/group_guid/cities",
+      "text": "Get Click Metrics for a Group by City",
+      "category": "Groups",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        },
+        "unit": {
+          "type": "string",
+          "text": "A unit of time",
+          "required": true
+        },
+        "units": {
+          "type": "integer",
+          "text": "An integer representing the time units to query data for",
+          "required": true
+        },
+        "size": {
+          "type": "integer",
+          "text": "The quantity of items to be be returned"
+        },
+        "unit_reference": {
+          "type": "string",
+          "text": "An ISO-8601 timestamp indicating the most recent time for which to pull metrics"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns the geographic origins of click traffic by city for the specified group.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/groups/{group_guid}/cities",
+        "alias_endpoint": "/bitly/v4/groups/group_guid/cities",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getgroupshortencounts": {
+      "provider_intent": "getgroupshortencounts",
+      "provider_alias_intent": "/v4/groups/group_guid/shorten_counts",
+      "text": "Retrieve Group Shorten Counts",
+      "category": "Groups",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        },
+        "unit": {
+          "type": "string",
+          "text": "A unit of time",
+          "required": true
+        },
+        "units": {
+          "type": "integer",
+          "text": "An integer representing the time units to query data for",
+          "required": true
+        },
+        "unit_reference": {
+          "type": "string",
+          "text": "An ISO-8601 timestamp indicating the most recent time for which to pull metrics"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns all the shorten counts for a group.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/groups/{group_guid}/shorten_counts",
+        "alias_endpoint": "/bitly/v4/groups/group_guid/shorten_counts",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getgroups": {
+      "provider_intent": "getgroups",
+      "provider_alias_intent": "/v4/groups",
+      "text": "Retrieve Groups",
+      "category": "Groups",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "organization_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly organization"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns a list of groups in the organization.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/groups",
+        "alias_endpoint": "/bitly/v4/groups",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getgrouppreferences": {
+      "provider_intent": "getgrouppreferences",
+      "provider_alias_intent": "/v4/groups/group_guid/preferences",
+      "text": "Retrieve Group Preferences",
+      "category": "Groups",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns preferences for the specified group.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/groups/{group_guid}/preferences",
+        "alias_endpoint": "/bitly/v4/groups/group_guid/preferences",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "updategrouppreferences": {
+      "provider_intent": "updategrouppreferences",
+      "provider_alias_intent": "/v4/groups/group_guid/preferences",
+      "text": "Update Group Preferences",
+      "category": "Groups",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "group_guid": {
+          "type": "string"
+        },
+        "domain_preference": {
+          "type": "string"
+        }
+      },
+      "path": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Updates preferences for a group.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/groups/{group_guid}/preferences",
+        "alias_endpoint": "/bitly/v4/groups/group_guid/preferences",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getgrouptags": {
+      "provider_intent": "getgrouptags",
+      "provider_alias_intent": "/v4/groups/group_guid/tags",
+      "text": "Retrieve Tags by Group",
+      "category": "Groups",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "group_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly group",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns the tags currently used in the specified group.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/groups/{group_guid}/tags",
+        "alias_endpoint": "/bitly/v4/groups/group_guid/tags",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getorganizationshortencounts": {
+      "provider_intent": "getorganizationshortencounts",
+      "provider_alias_intent": "/v4/organizations/organization_guid/shorten_counts",
+      "text": "Get Shorten Counts for an Organization",
+      "category": "Organizations",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "organization_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly organization",
+          "required": true
+        },
+        "unit": {
+          "type": "string",
+          "text": "A unit of time",
+          "required": true
+        },
+        "units": {
+          "type": "integer",
+          "text": "An integer representing the time units to query data for",
+          "required": true
+        },
+        "unit_reference": {
+          "type": "string",
+          "text": "An ISO-8601 timestamp indicating the most recent time for which to pull metrics"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "organization_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly organization",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns the shorten counts for a specific organization over a specified time period.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/organizations/{organization_guid}/shorten_counts",
+        "alias_endpoint": "/bitly/v4/organizations/organization_guid/shorten_counts",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getorganization": {
+      "provider_intent": "getorganization",
+      "provider_alias_intent": "/v4/organizations/organization_guid",
+      "text": "Retrieve an Organization",
+      "category": "Organizations",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "organization_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly organization",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "organization_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly organization",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Retrive details for the specified organization.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/organizations/{organization_guid}",
+        "alias_endpoint": "/bitly/v4/organizations/organization_guid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getplanlimits": {
+      "provider_intent": "getplanlimits",
+      "provider_alias_intent": "/v4/organizations/organization_guid/plan_limits",
+      "text": "Get Plan Limits",
+      "category": "Organizations",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "organization_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly organization",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "organization_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly organization",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns all plan limits and counts available for an organization.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/organizations/{organization_guid}/plan_limits",
+        "alias_endpoint": "/bitly/v4/organizations/organization_guid/plan_limits",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getorganizations": {
+      "provider_intent": "getorganizations",
+      "provider_alias_intent": "/v4/organizations",
+      "text": "Retrieve Organizations",
+      "category": "Organizations",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Retrieve a list of organizations.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/organizations",
+        "alias_endpoint": "/bitly/v4/organizations",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "updateuser": {
+      "provider_intent": "updateuser",
+      "provider_alias_intent": "/v4/user",
+      "text": "Update a User",
+      "category": "User",
+      "method": "PATCH",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "default_group_guid": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Update fields in the user.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/user",
+        "alias_endpoint": "/bitly/v4/user",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getuser": {
+      "provider_intent": "getuser",
+      "provider_alias_intent": "/v4/user",
+      "text": "Retrieve a User",
+      "category": "User",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns information for the current authenticated user.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/user",
+        "alias_endpoint": "/bitly/v4/user",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getplatformlimits": {
+      "provider_intent": "getplatformlimits",
+      "provider_alias_intent": "/v4/user/platform_limits",
+      "text": "Get Platform Limits",
+      "category": "User",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "path": {
+          "type": "string",
+          "text": "The specific path for which information is requested"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Fetch all platform limits and counts available for an organization.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/user/platform_limits",
+        "alias_endpoint": "/bitly/v4/user/platform_limits",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "verifywebhook": {
+      "provider_intent": "verifywebhook",
+      "provider_alias_intent": "/v4/webhooks/webhook_guid/verify",
+      "text": "Verify Webhook",
+      "category": "Webhooks",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "webhook_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly webhook",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "webhook_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly webhook",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Sends ping event to test webhook configuration.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/webhooks/{webhook_guid}/verify",
+        "alias_endpoint": "/bitly/v4/webhooks/webhook_guid/verify",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getwebhook": {
+      "provider_intent": "getwebhook",
+      "provider_alias_intent": "/v4/webhooks/webhook_guid",
+      "text": "Retrieve Webhook",
+      "category": "Webhooks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "webhook_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly webhook",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "webhook_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly webhook",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Returns a webhook.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/webhooks/{webhook_guid}",
+        "alias_endpoint": "/bitly/v4/webhooks/webhook_guid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "updatewebhook": {
+      "provider_intent": "updatewebhook",
+      "provider_alias_intent": "/v4/webhooks/webhook_guid",
+      "text": "Update Webhook",
+      "category": "Webhooks",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "webhook_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly webhook",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "group_guid": {
+          "type": "string"
+        },
+        "fetch_tags": {
+          "type": "boolean",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "is_active": {
+          "type": "boolean",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "organization_guid": {
+          "type": "string"
+        },
+        "client_id": {
+          "type": "string"
+        },
+        "client_secret": {
+          "type": "string"
+        },
+        "oauth_url": {
+          "type": "string"
+        },
+        "guid": {
+          "type": "string",
+          "required": true
+        },
+        "event": {
+          "type": "string"
+        }
+      },
+      "path": {
+        "webhook_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly webhook",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Update a webhook.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/webhooks/{webhook_guid}",
+        "alias_endpoint": "/bitly/v4/webhooks/webhook_guid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "deletewebhook": {
+      "provider_intent": "deletewebhook",
+      "provider_alias_intent": "/v4/webhooks/webhook_guid",
+      "text": "Delete Webhook",
+      "category": "Webhooks",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "webhook_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly webhook",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "webhook_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly webhook",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Deletes a webhook.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/webhooks/{webhook_guid}",
+        "alias_endpoint": "/bitly/v4/webhooks/webhook_guid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "createwebhook": {
+      "provider_intent": "createwebhook",
+      "provider_alias_intent": "/v4/webhooks",
+      "text": "Create Webhook",
+      "category": "Webhooks",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "url": {
+          "type": "string",
+          "required": true
+        },
+        "group_guid": {
+          "type": "string"
+        },
+        "fetch_tags": {
+          "type": "boolean",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "is_active": {
+          "type": "boolean",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "organization_guid": {
+          "type": "string",
+          "required": true
+        },
+        "client_id": {
+          "type": "string"
+        },
+        "client_secret": {
+          "type": "string"
+        },
+        "oauth_url": {
+          "type": "string"
+        },
+        "event": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Creates a webhook.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/webhooks",
+        "alias_endpoint": "/bitly/v4/webhooks",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "getwebhooks": {
+      "provider_intent": "getwebhooks",
+      "provider_alias_intent": "/v4/organizations/organization_guid/webhooks",
+      "text": "Get Webhooks",
+      "category": "Webhooks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "organization_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly organization",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "organization_guid": {
+          "type": "string",
+          "text": "A GUID for a Bitly organization",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "4.0.0",
+        "auth": [],
+        "description": "Fetch all webhooks available for an Organization.",
+        "rate_limit": [],
+        "api_endpoint": "https://api-ssl.bitly.com/v4/organizations/{organization_guid}/webhooks",
+        "alias_endpoint": "/bitly/v4/organizations/organization_guid/webhooks",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    }
+  }
+}

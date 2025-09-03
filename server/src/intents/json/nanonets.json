@@ -1,0 +1,865 @@
+{
+  "routes": {
+    "nanonets__api__v2__ocr__fulltext___get": {
+      "provider_intent": "nanonets__api__v2__ocr__fulltext___get",
+      "provider_alias_intent": "/api/v2/ocr/fulltext",
+      "provider_proxy_intent": "https://app.nanonets.com/api/v2/OCR/FullText",
+      "text": "Get Full Text",
+      "category": "Get Full Text",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "file": {
+          "text": "Comma separated page numbers which needs to be processed from the list of Files uploaded. ex: '1,2'",
+          "type": "file",
+          "required": true
+        },
+        "urls": {
+          "text": "language hints eg: en, vi (not specifying generally gives best results)",
+          "type": "string"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://nanonets.com/documentation/#tag/Get-Full-Text",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Get Full Text",
+        "api_endpoint": "https://app.nanonets.com/api/v2/OCR/FullText",
+        "alias_endpoint": "/nanonets/api/v2/ocr/fulltext"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "nanonets__api__v2__imagecategorization__model___get": {
+      "provider_intent": "nanonets__api__v2__imagecategorization__model___get",
+      "provider_alias_intent": "/api/v2/imagecategorization/model",
+      "provider_proxy_intent": "https://app.nanonets.com/api/v2/ImageCategorization/Model",
+      "text": "Get Model by Id",
+      "category": "Image Classification Model",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "id": {
+          "text": "ID",
+          "type": "string",
+          "required": true
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://nanonets.com/documentation/#operation/ImageCategorizationModelGet",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Get Model by Id",
+        "api_endpoint": "https://app.nanonets.com/api/v2/ImageCategorization/Model",
+        "alias_endpoint": "/nanonets/api/v2/imagecategorization/model"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "nanonets__api__v2__imagecategorization__model___post": {
+      "provider_intent": "nanonets__api__v2__imagecategorization__model___post",
+      "provider_alias_intent": "/api/v2/imagecategorization/model",
+      "provider_proxy_intent": "https://app.nanonets.com/api/v2/ImageCategorization/Model",
+      "text": "Create New Model",
+      "category": "Image Classification Model",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "categories": {
+          "text": "Categories",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://nanonets.com/documentation/#operation/ImageCategorizationModelPost",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Create New Model",
+        "api_endpoint": "https://app.nanonets.com/api/v2/ImageCategorization/Model",
+        "alias_endpoint": "/nanonets/api/v2/imagecategorization/model"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "nanonets__api__v2__imagecategorization__models___get": {
+      "provider_intent": "nanonets__api__v2__imagecategorization__models___get",
+      "provider_alias_intent": "/api/v2/imagecategorization/models",
+      "provider_proxy_intent": "https://app.nanonets.com/api/v2/ImageCategorization/Models",
+      "text": "Get All Models",
+      "category": "Image Classification Model",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://nanonets.com/documentation/#operation/ImageCategorizationModelsGet",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Get All Models",
+        "api_endpoint": "https://app.nanonets.com/api/v2/ImageCategorization/Models",
+        "alias_endpoint": "/nanonets/api/v2/imagecategorization/models"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "nanonets__api__v2__imagecategorization__labelurls___post": {
+      "provider_intent": "nanonets__api__v2__imagecategorization__labelurls___post",
+      "provider_alias_intent": "/api/v2/imagecategorization/labelurls",
+      "provider_proxy_intent": "https://app.nanonets.com/api/v2/ImageCategorization/LabelUrls",
+      "text": "Prediction for image URLs",
+      "category": "Image Classification Model Predict",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "url": {
+          "text": "URLs",
+          "type": "string",
+          "required": true
+        },
+        "modelId": {
+          "text": "Model Id",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://nanonets.com/documentation/#operation/ImageCategorizationLabelUrlsPost2",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Prediction for image URLs",
+        "api_endpoint": "https://app.nanonets.com/api/v2/ImageCategorization/LabelUrls",
+        "alias_endpoint": "/nanonets/api/v2/imagecategorization/labelurls"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "nanonets__api__v2__imagecategorization__train___post": {
+      "provider_intent": "nanonets__api__v2__imagecategorization__train___post",
+      "provider_alias_intent": "/api/v2/imagecategorization/train",
+      "provider_proxy_intent": "https://app.nanonets.com/api/v2/ImageCategorization/Train",
+      "text": "Train Model",
+      "category": "Image Classification Model Train",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "modelId": {
+          "text": "Model Id",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://nanonets.com/documentation/#operation/ImageCategorizationTrainPost",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Train Model",
+        "api_endpoint": "https://app.nanonets.com/api/v2/ImageCategorization/Train",
+        "alias_endpoint": "/nanonets/api/v2/imagecategorization/train"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "nanonets__api__v2__imagecategorization__uploadfile___post": {
+      "provider_intent": "nanonets__api__v2__imagecategorization__uploadfile___post",
+      "provider_alias_intent": "/api/v2/imagecategorization/uploadfile",
+      "provider_proxy_intent": "https://app.nanonets.com/api/v2/ImageCategorization/UploadFile",
+      "text": "Upload training images by File",
+      "category": "Image Classification Model Upload",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "file": {
+          "text": "File",
+          "type": "file",
+          "required": true
+        },
+        "modelId": {
+          "text": "Model Id",
+          "type": "string",
+          "required": true
+        },
+        "categories": {
+          "text": "Categories",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://nanonets.com/documentation/#operation/ImageCategorizationUploadFilePost",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Upload training images by File",
+        "api_endpoint": "https://app.nanonets.com/api/v2/ImageCategorization/UploadFile",
+        "alias_endpoint": "/nanonets/api/v2/imagecategorization/uploadfile"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "nanonets__api__v2__imagecategorization__labelfile___post": {
+      "provider_intent": "nanonets__api__v2__imagecategorization__labelfile___post",
+      "provider_alias_intent": "/api/v2/imagecategorization/labelfile",
+      "provider_proxy_intent": "https://app.nanonets.com/api/v2/ImageCategorization/LabelFile",
+      "text": "Prediction for image File",
+      "category": "Image Classification Model Predict",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "file": {
+          "text": "File",
+          "type": "file",
+          "required": true
+        },
+        "modelId": {
+          "text": "Model Id",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://nanonets.com/documentation/#operation/ImageCategorizationLabelFilePost",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Prediction for image File",
+        "api_endpoint": "https://app.nanonets.com/api/v2/ImageCategorization/LabelFile",
+        "alias_endpoint": "/nanonets/api/v2/imagecategorization/labelfile"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "nanonets__api__v2__imagecategorization__uploadurls___post": {
+      "provider_intent": "nanonets__api__v2__imagecategorization__uploadurls___post",
+      "provider_alias_intent": "/api/v2/imagecategorization/uploadurls",
+      "provider_proxy_intent": "https://app.nanonets.com/api/v2/ImageCategorization/UploadUrls",
+      "text": "Upload training images by Url",
+      "category": "Image Classification Model Upload",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "url": {
+          "text": "Url",
+          "type": "string",
+          "required": true
+        },
+        "modelId": {
+          "text": "Model Id",
+          "type": "string",
+          "required": true
+        },
+        "categories": {
+          "text": "Categories",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://nanonets.com/documentation/#operation/ImageCategorizationUploadUrlsPost",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Upload training images by Url",
+        "api_endpoint": "https://app.nanonets.com/api/v2/ImageCategorization/UploadUrls",
+        "alias_endpoint": "/nanonets/api/v2/imagecategorization/uploadurls"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "nanonets__api__v2__ocr__model___post": {
+      "provider_intent": "nanonets__api__v2__ocr__model___post",
+      "provider_alias_intent": "/api/v2/ocr/model",
+      "provider_proxy_intent": "https://app.nanonets.com/api/v2/OCR/Model",
+      "text": "Create New Model",
+      "category": "OCR Model",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "model_type": {
+          "text": "Type of model, 'ocr' for OCR model",
+          "type": "string"
+        },
+        " categories": {
+          "text": "Categories",
+          "type": "array",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://nanonets.com/documentation/#operation/OCRModelPost",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Create New Model",
+        "api_endpoint": "https://app.nanonets.com/api/v2/OCR/Model",
+        "alias_endpoint": "/nanonets/api/v2/ocr/model"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "nanonets__api__v2__ocr__model__model_id___get": {
+      "provider_intent": "nanonets__api__v2__ocr__model__model_id___get",
+      "provider_alias_intent": "/api/v2/ocr/model/model_id",
+      "provider_proxy_intent": "https://app.nanonets.com/api/v2/OCR/Model/{model_id}",
+      "text": "Get Model by Id",
+      "category": "OCR Model",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        " model_id": {
+          "text": "Model ID",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://nanonets.com/documentation/#operation/OCRModelGetAllPredictionFiles",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Get Model by Id",
+        "api_endpoint": "https://app.nanonets.com/api/v2/OCR/Model/{model_id}",
+        "alias_endpoint": "/nanonets/api/v2/ocr/model/model_id"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:43:44.000Z"
+    },
+    "nanonets__api__v2__ocr__model__model_id__labelurls___post": {
+      "provider_intent": "nanonets__api__v2__ocr__model__model_id__labelurls___post",
+      "provider_alias_intent": "/api/v2/ocr/model/model_id/labelurls",
+      "provider_proxy_intent": "https://app.nanonets.com/api/v2/OCR/Model/{model_id}/LabelUrls",
+      "text": "Async Prediction for image url",
+      "category": "OCR Predict",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "async": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "This parameter specifies whether you'd like to upload the file for processing and then query the results with a unique id at a later point in time",
+          "type": "boolean",
+          "required": true
+        },
+        "model_id": {
+          "text": "Model ID",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "urls": {
+          "text": "URLs",
+          "type": "string",
+          "required": true
+        },
+        "base64_data": {
+          "text": "base64 data",
+          "type": "string"
+        },
+        "request_metadata": {
+          "text": "metadata to save with the document",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://nanonets.com/documentation/#operation/OCRModelLabelUrlsAsyncByModelIdPost",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Async Prediction for image url",
+        "api_endpoint": "https://app.nanonets.com/api/v2/OCR/Model/{model_id}/LabelUrls",
+        "alias_endpoint": "/nanonets/api/v2/ocr/model/model_id/labelurls"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:44:37.000Z"
+    },
+    "nanonets__api__v2__inferences__model__model_id__imagelevelinferences__id___get": {
+      "provider_intent": "nanonets__api__v2__inferences__model__model_id__imagelevelinferences__id___get",
+      "provider_alias_intent": "/api/v2/inferences/model/model_id/imagelevelinferences/id",
+      "provider_proxy_intent": "https://app.nanonets.com/api/v2/Inferences/Model/{model_id}/ImageLevelInferences/{id}",
+      "text": "Get Prediction File By Page ID",
+      "category": "OCR Predict",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "id": {
+          "text": "The ID of the page that was received from the async prediction endpoin",
+          "type": "string",
+          "required": true
+        },
+        "model_id": {
+          "text": "Model ID",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://nanonets.com/documentation/#operation/OCRModelGetPredictionFileByPageId",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Get Prediction File By Page ID",
+        "api_endpoint": "https://app.nanonets.com/api/v2/Inferences/Model/{model_id}/ImageLevelInferences/{id}",
+        "alias_endpoint": "/nanonets/api/v2/inferences/model/model_id/imagelevelinferences/id"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:45:12.000Z"
+    },
+    "nanonets__api__v2__inferences__model__model_id__inferencerequestfiles__getpredictions__request_file_id___get": {
+      "provider_intent": "nanonets__api__v2__inferences__model__model_id__inferencerequestfiles__getpredictions__request_file_id___get",
+      "provider_alias_intent": "/api/v2/inferences/model/model_id/inferencerequestfiles/getpredictions/request_file_id",
+      "provider_proxy_intent": "https://app.nanonets.com/api/v2/Inferences/Model/{model_id}/InferenceRequestFiles/GetPredictions/{request_file_id}",
+      "text": "Get Prediction File By File ID",
+      "category": "OCR Predict",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "request_file_id": {
+          "text": "The ID of the file that was received from the async prediction endpoint",
+          "type": "string",
+          "required": true
+        },
+        "start_day_interval": {
+          "text": "The number of days since 1st Jan 1970 GMT which represents the start of the period",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://nanonets.com/documentation/#operation/OCRModelGetPredictionFileByFileId",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Get Prediction File By File ID",
+        "api_endpoint": "https://app.nanonets.com/api/v2/Inferences/Model/{model_id}/InferenceRequestFiles/GetPredictions/{request_file_id}",
+        "alias_endpoint": "/nanonets/api/v2/inferences/model/model_id/inferencerequestfiles/getpredictions/request_file_id"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:45:36.000Z"
+    },
+    "nanonets__api__v2__ocr__model__model_id__labelfile___post": {
+      "provider_intent": "nanonets__api__v2__ocr__model__model_id__labelfile___post",
+      "provider_alias_intent": "/api/v2/ocr/model/model_id/labelfile",
+      "provider_proxy_intent": "https://app.nanonets.com/api/v2/OCR/Model/{model_id}/LabelFile",
+      "text": "Async Prediction for image file",
+      "category": "OCR Predict",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        " async": {
+          "text": "This parameter specifies whether you'd like to upload the file for processing and then query the results with a unique id at a later point in time",
+          "type": "file",
+          "required": true
+        }
+      },
+      "path": {
+        " model_id": {
+          "text": "Model ID",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "file": {
+          "text": "The number of days since 1st Jan 1970 GMT which represents the start of the period",
+          "type": "file",
+          "required": true
+        },
+        "base64_data": {
+          "text": "base64 data",
+          "type": "string",
+          "required": true
+        },
+        "request_metadata": {
+          "text": "metadata to save with the document",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://nanonets.com/documentation/#operation/OCRModelLabelFileAsyncByModelIdPost",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Async Prediction for image file",
+        "api_endpoint": "https://app.nanonets.com/api/v2/OCR/Model/{model_id}/LabelFile",
+        "alias_endpoint": "/nanonets/api/v2/ocr/model/model_id/labelfile"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:48:53.000Z"
+    },
+    "nanonets__api__v2__inferences__model__model_id__imagelevelinferences___get": {
+      "provider_intent": "nanonets__api__v2__inferences__model__model_id__imagelevelinferences___get",
+      "provider_alias_intent": "/api/v2/inferences/model/model_id/imagelevelinferences",
+      "provider_proxy_intent": "https://app.nanonets.com/api/v2/Inferences/Model/{model_id}/ImageLevelInferences",
+      "text": "Get All Prediction Files",
+      "category": "OCR Predict",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "current_batch_day": {
+          "text": "The number of days since 1st Jan 1970 GMT which represents the end of the period",
+          "type": "number",
+          "required": true
+        },
+        "start_day_interval": {
+          "text": "The number of days since 1st Jan 1970 GMT which represents the start of the period",
+          "type": "number",
+          "required": true
+        }
+      },
+      "path": {
+        "model_id": {
+          "text": "Model ID",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://nanonets.com/documentation/#operation/OCRModelListPredictionFiles",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Get All Prediction Files",
+        "api_endpoint": "https://app.nanonets.com/api/v2/Inferences/Model/{model_id}/ImageLevelInferences",
+        "alias_endpoint": "/nanonets/api/v2/inferences/model/model_id/imagelevelinferences"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:50:15.000Z"
+    },
+    "nanonets__api__v2__ocr__model__model_id__train___post": {
+      "provider_intent": "nanonets__api__v2__ocr__model__model_id__train___post",
+      "provider_alias_intent": "/api/v2/ocr/model/model_id/train",
+      "provider_proxy_intent": "https://app.nanonets.com/api/v2/OCR/Model/{model_id}/Train",
+      "text": "Train Model",
+      "category": "OCR Train",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        " model_id": {
+          "text": "Model ID",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://nanonets.com/documentation/#operation/OCRModelTrainByModelIdPost",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Train Model",
+        "api_endpoint": "https://app.nanonets.com/api/v2/OCR/Model/{model_id}/Train",
+        "alias_endpoint": "/nanonets/api/v2/ocr/model/model_id/train"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:50:46.000Z"
+    },
+    "nanonets__api__v2__ocr__model__model_id__uploadurls___post": {
+      "provider_intent": "nanonets__api__v2__ocr__model__model_id__uploadurls___post",
+      "provider_alias_intent": "/api/v2/ocr/model/model_id/uploadurls",
+      "provider_proxy_intent": "https://app.nanonets.com/api/v2/OCR/Model/{model_id}/UploadUrls",
+      "text": "Upload Training Images by Urls",
+      "category": "OCR Upload",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        " model_id": {
+          "text": "Model ID",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "data": {
+          "text": "Data",
+          "type": "array",
+          "required": true
+        },
+        "urls": {
+          "text": "URLs",
+          "type": "array",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://nanonets.com/documentation/#operation/OCRModelUploadUrlsByModelIdPost",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Upload Training Images by Urls",
+        "api_endpoint": "https://app.nanonets.com/api/v2/OCR/Model/{model_id}/UploadUrls",
+        "alias_endpoint": "/nanonets/api/v2/ocr/model/model_id/uploadurls"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:51:03.000Z"
+    },
+    "nanonets__api__v2__ocr__model__model_id__uploadfile___post": {
+      "provider_intent": "nanonets__api__v2__ocr__model__model_id__uploadfile___post",
+      "provider_alias_intent": "/api/v2/ocr/model/model_id/uploadfile",
+      "provider_proxy_intent": "https://app.nanonets.com/api/v2/OCR/Model/{model_id}/UploadFile",
+      "text": "Upload Training Images by File",
+      "category": "OCR Upload",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        " model_id": {
+          "text": "Model ID",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "data": {
+          "text": "Data",
+          "type": "string",
+          "required": true
+        },
+        "file": {
+          "text": "File",
+          "type": "file",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://nanonets.com/documentation/#operation/OCRModelUploadFileByModelIdPost",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Upload Training Images by File",
+        "api_endpoint": "https://app.nanonets.com/api/v2/OCR/Model/{model_id}/UploadFile",
+        "alias_endpoint": "/nanonets/api/v2/ocr/model/model_id/uploadfile"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:51:15.000Z"
+    }
+  }
+}

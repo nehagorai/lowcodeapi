@@ -1,0 +1,584 @@
+{
+  "routes": {
+    "zohobookings__bookings__v1__json__appointment___post": {
+      "provider_intent": "zohobookings__bookings__v1__json__appointment___post",
+      "provider_alias_intent": "/bookings/v1/json/appointment",
+      "text": "Book Appointment",
+      "category": "Bookings",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "service_id": {
+          "type": "number",
+          "text": "The unique id of the service for which the appointment is booked",
+          "required": true
+        },
+        "group_id": {
+          "type": "number",
+          "text": "The unique id of the staff group associated with the collective booking service",
+          "required": true
+        },
+        "resource_id": {
+          "type": "number",
+          "text": "The unique id of the resource associated with the service",
+          "required": true
+        },
+        "staff_id": {
+          "type": "number",
+          "text": "The unique id of the staff associated with the service",
+          "required": true
+        },
+        "from_time": {
+          "type": "string",
+          "text": "The starting time from which the appointment needs to be booked",
+          "required": true
+        },
+        "time_zone": {
+          "type": "string",
+          "text": "The timezone under which the appointment needs to be booked"
+        },
+        "customer_details": {
+          "type": "string",
+          "text": "The details of the customer which needs to be recorded for booking the appointment",
+          "required": true
+        },
+        "additional_fields": {
+          "type": "object",
+          "text": "Additional details of the customer to be captured through custom fields can be recorded while booking the appointment",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Book an appointment for a customer for a desired service",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/bookings/v1/json/appointment",
+        "alias_endpoint": "/zohobookings/bookings/v1/json/appointment",
+        "api_ref": "https://www.zoho.com/bookings/help/api/v1/book-appointment.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohobookings.data.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohobookings__bookings__v1__json__getappointment___get": {
+      "provider_intent": "zohobookings__bookings__v1__json__getappointment___get",
+      "provider_alias_intent": "/bookings/v1/json/getappointment",
+      "text": "Get Appointment",
+      "category": "Bookings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "booking_id": {
+          "type": "string",
+          "text": "The unique id of the previously booked appointment",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get details of an appointment.",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/bookings/v1/json/getappointment",
+        "alias_endpoint": "/zohobookings/bookings/v1/json/getappointment",
+        "api_ref": "https://www.zoho.com/bookings/help/api/v1/get-appointment.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohobookings.data.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohobookings__bookings__v1__json__updateappointment___post": {
+      "provider_intent": "zohobookings__bookings__v1__json__updateappointment___post",
+      "provider_alias_intent": "/bookings/v1/json/updateappointment",
+      "text": "Update Appointment",
+      "category": "Bookings",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "booking_id": {
+          "type": "string",
+          "text": "The unique id of the previously booked appointment",
+          "required": true
+        },
+        "action": {
+          "type": "string",
+          "text": "The status of the booking that needs to be updated",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update the status of a booking",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/bookings/v1/json/updateappointment",
+        "alias_endpoint": "/zohobookings/bookings/v1/json/updateappointment",
+        "api_ref": "https://www.zoho.com/bookings/help/api/v1/update-appointment.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohobookings.data.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohobookings__bookings__v1__json__rescheduleappointment___post": {
+      "provider_intent": "zohobookings__bookings__v1__json__rescheduleappointment___post",
+      "provider_alias_intent": "/bookings/v1/json/rescheduleappointment",
+      "text": "Reschedule Appointment",
+      "category": "Bookings",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "booking_id": {
+          "type": "string",
+          "text": "The unique id of the previously booked appointment",
+          "required": true
+        },
+        "staff_id": {
+          "type": "string",
+          "text": "The unique id of the staff which must be rescheduled",
+          "required": true
+        },
+        "group_id": {
+          "type": "string",
+          "text": "The unique id of the staff group which must be rescheduled",
+          "required": true
+        },
+        "start_time": {
+          "type": "string",
+          "text": "The new time to which the appointment must be rescheduled",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Reschedule an appointment to a different time or to a different staff",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/bookings/v1/json/rescheduleappointment",
+        "alias_endpoint": "/zohobookings/bookings/v1/json/rescheduleappointment",
+        "api_ref": "https://www.zoho.com/bookings/help/api/v1/reschedule-appointment.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohobookings.data.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohobookings__bookings__v1__json__availableslots___get": {
+      "provider_intent": "zohobookings__bookings__v1__json__availableslots___get",
+      "provider_alias_intent": "/bookings/v1/json/availableslots",
+      "text": "Fetch Availability",
+      "category": "Bookings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "service_id": {
+          "type": "string",
+          "text": "The unique id of the service for which availability is to be fetched",
+          "required": true
+        },
+        "staff_id": {
+          "type": "string",
+          "text": "The unique id of the staff associated with the service for which availability is to be fetched",
+          "required": true
+        },
+        "group_id": {
+          "type": "string",
+          "text": "The unique id of the staff group associated with the service for which availability is to be fetched",
+          "required": true
+        },
+        "selected_date": {
+          "type": "string",
+          "text": "The date on which services are checked for availability",
+          "required": true
+        },
+        "from_time": {
+          "type": "string",
+          "text": "The starting time from which the appointment needs to be booked",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Fetch availability of appointments across services",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/bookings/v1/json/availableslots",
+        "alias_endpoint": "/zohobookings/bookings/v1/json/availableslots",
+        "api_ref": "https://www.zoho.com/bookings/help/api/v1/fetch-availability.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohobookings.data.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohobookings__bookings__v1__json__addstaff___post": {
+      "provider_intent": "zohobookings__bookings__v1__json__addstaff___post",
+      "provider_alias_intent": "/bookings/v1/json/addstaff",
+      "text": "Add Staff",
+      "category": "Bookings",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "The name of the staff",
+          "required": true
+        },
+        "email": {
+          "type": "string",
+          "text": "The email id of the staff",
+          "required": true
+        },
+        "gender": {
+          "type": "string",
+          "text": "The gender of the staff"
+        },
+        "role": {
+          "type": "string",
+          "text": "The role of the staff"
+        },
+        "dob": {
+          "type": "string",
+          "text": "DOB"
+        },
+        "additional_info": {
+          "type": "string",
+          "text": "The additional information about the staff"
+        },
+        "phone": {
+          "type": "string",
+          "text": "The phone number of the staff"
+        },
+        "designation": {
+          "type": "string",
+          "text": "The designation of the staff"
+        },
+        "assigned_services": {
+          "type": "string",
+          "text": "The services that the staff has been assigned to"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Add staff to your Zoho Bookings account",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/bookings/v1/json/addstaff",
+        "alias_endpoint": "/zohobookings/bookings/v1/json/addstaff",
+        "api_ref": "https://www.zoho.com/bookings/help/api/v1/add-staff.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohobookings.data.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohobookings__bookings__v1__json__services___get": {
+      "provider_intent": "zohobookings__bookings__v1__json__services___get",
+      "provider_alias_intent": "/bookings/v1/json/services",
+      "text": "Fetch Services",
+      "category": "Bookings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "workspace_id": {
+          "type": "string",
+          "text": "The unique id of the workspace whose services need to be fetched",
+          "required": true
+        },
+        "service_id": {
+          "type": "string",
+          "text": "The unique id of the service under a specified workspace which needs to be fetched"
+        },
+        "staff_id": {
+          "type": "string",
+          "text": "The unique id of the staff under a specified service which needs to be fetched"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Fetch all services under a workspace",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/bookings/v1/json/services",
+        "alias_endpoint": "/zohobookings/bookings/v1/json/services",
+        "api_ref": "https://www.zoho.com/bookings/help/api/v1/fetch-services.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohobookings.data.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohobookings__bookings__v1__json__staffs___get": {
+      "provider_intent": "zohobookings__bookings__v1__json__staffs___get",
+      "provider_alias_intent": "/bookings/v1/json/staffs",
+      "text": "Fetch Staff",
+      "category": "Bookings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "staff_id": {
+          "type": "string",
+          "text": "The unique id of the staff which must be fetched"
+        },
+        "service_id": {
+          "type": "string",
+          "text": "The unique id of the staff which must be fetched"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Fetch all the staff",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/bookings/v1/json/staffs",
+        "alias_endpoint": "/zohobookings/bookings/v1/json/staffs",
+        "api_ref": "https://www.zoho.com/bookings/help/api/v1/fetch-staff.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohobookings.data.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohobookings__bookings__v1__json__workspaces___get": {
+      "provider_intent": "zohobookings__bookings__v1__json__workspaces___get",
+      "provider_alias_intent": "/bookings/v1/json/workspaces",
+      "text": "Fetch Workspaces",
+      "category": "Bookings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "workspace_id": {
+          "type": "string",
+          "text": "The unique id of the workspace which needs to be fetched"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Fetch details of a workspace\n\n",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/bookings/v1/json/workspaces",
+        "alias_endpoint": "/zohobookings/bookings/v1/json/workspaces",
+        "api_ref": "https://www.zoho.com/bookings/help/api/v1/fetch-workspaces.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohobookings.data.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohobookings__bookings__v1__json__resources___get": {
+      "provider_intent": "zohobookings__bookings__v1__json__resources___get",
+      "provider_alias_intent": "/bookings/v1/json/resources",
+      "text": "Fetch Resources",
+      "category": "Bookings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "resource_id": {
+          "type": "string",
+          "text": "The unique id of the workspace which needs to be fetched"
+        },
+        "service_id": {
+          "type": "string",
+          "text": "The unique id of the service under which resources needs to be fetched"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Fetch all the resources",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/bookings/v1/json/resources",
+        "alias_endpoint": "/zohobookings/bookings/v1/json/resources",
+        "api_ref": "https://www.zoho.com/bookings/help/api/v1/fetch-resources.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohobookings.data.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

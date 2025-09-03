@@ -1,0 +1,458 @@
+{
+  "routes": {
+    "rows__v1__beta1__spreadsheets__spreadsheet_id___get": {
+      "provider_intent": "rows__v1__beta1__spreadsheets__spreadsheet_id___get",
+      "provider_alias_intent": "/v1/beta1/spreadsheets/spreadsheet_id",
+      "text": "Get spreadsheet information",
+      "category": "Spreadsheet",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "spreadsheet_id": {
+          "type": "string",
+          "text": "Spreadsheet unique identifier. Example- 5HGcWJFcQVVAv4mNTYb2RS",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "spreadsheet_id": {
+          "type": "string",
+          "text": "Spreadsheet unique identifier. Example- 5HGcWJFcQVVAv4mNTYb2RS",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1beta1",
+        "auth": [],
+        "description": "Get spreadsheet information",
+        "rate_limit": [],
+        "api_endpoint": "https://api.rows.com/v1beta1/spreadsheets/{spreadsheet_id}",
+        "alias_endpoint": "/rows/v1beta1/spreadsheets/spreadsheet_id",
+        "api_ref": "https://developers.rows.com/#tag/Spreadsheet/operation/getSpreadsheetBySpreadsheetId"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rows__v1__beta1__spreadsheets__spreadsheet_id__tables__table_id__values__range___get": {
+      "provider_intent": "rows__v1__beta1__spreadsheets__spreadsheet_id__tables__table_id__values__range___get",
+      "provider_alias_intent": "/v1/beta1/spreadsheets/spreadsheet_id/tables/table_id/values/range",
+      "text": "Get values from range",
+      "category": "Spreadsheet",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "spreadsheet_id": {
+          "type": "string",
+          "text": "Spreadsheet unique identifier. Example- 5HGcWJFcQVVAv4mNTYb2RS",
+          "required": true
+        },
+        "table_id": {
+          "type": "string",
+          "text": "Table unique identifier. Example- 1cfc2010-1142-13eg-a1eb-0242ac120002",
+          "required": true
+        },
+        "range": {
+          "type": "string",
+          "text": "A1 notation of the range to retrieve values from. Example- A1-D4",
+          "required": true
+        },
+        "value_render_option": {
+          "type": "string",
+          "text": "Choose between receiving the formatted or raw display values. Enum- \"FORMATTED\" \"RAW\". Default- \"FORMATTED\""
+        },
+        "major_dimension": {
+          "type": "string",
+          "text": "Choose between receiving display values grouped by row or column. Enum- \"ROW\" \"COLUMN\". Default- \"ROW\""
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "spreadsheet_id": {
+          "type": "string",
+          "text": "Spreadsheet unique identifier. Example- 5HGcWJFcQVVAv4mNTYb2RS",
+          "required": true
+        },
+        "table_id": {
+          "type": "string",
+          "text": "Table unique identifier. Example- 1cfc2010-1142-13eg-a1eb-0242ac120002",
+          "required": true
+        },
+        "range": {
+          "type": "string",
+          "text": "A1 notation of the range to retrieve values from. Example- A1-D4",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1beta1",
+        "auth": [],
+        "description": "Get values from range",
+        "rate_limit": [],
+        "api_endpoint": "https://api.rows.com/v1beta1/spreadsheets/{spreadsheet_id}/tables/{table_id}/values/{range}",
+        "alias_endpoint": "/rows/v1beta1/spreadsheets/spreadsheet_id/tables/table_id/values/range",
+        "api_ref": "https://developers.rows.com/#tag/Spreadsheet/operation/getRangeValuesBySpreadsheetId"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rows__v1__beta1__spreadsheets__spreadsheet_id__tables__table_id__cells__range___get": {
+      "provider_intent": "rows__v1__beta1__spreadsheets__spreadsheet_id__tables__table_id__cells__range___get",
+      "provider_alias_intent": "/v1/beta1/spreadsheets/spreadsheet_id/tables/table_id/cells/range",
+      "text": "Get cells from range",
+      "category": "Spreadsheet",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "spreadsheet_id": {
+          "type": "string",
+          "text": "Spreadsheet unique identifier. Example- 5HGcWJFcQVVAv4mNTYb2RS",
+          "required": true
+        },
+        "table_id": {
+          "type": "string",
+          "text": "Table unique identifier. Example- 1cfc2010-1142-13eg-a1eb-0242ac120002",
+          "required": true
+        },
+        "range": {
+          "type": "string",
+          "text": "A1 notation of the range to retrieve values from. Example- A1-D4",
+          "required": true
+        },
+        "value_render_option": {
+          "type": "string",
+          "text": "Choose between receiving the formatted or raw display values. Enum- \"FORMATTED\" \"RAW\". Default- \"FORMATTED\""
+        },
+        "major_dimension": {
+          "type": "string",
+          "text": "Choose between receiving display values grouped by row or column. Enum- \"ROW\" \"COLUMN\". Default- \"ROW\""
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "spreadsheet_id": {
+          "type": "string",
+          "text": "Spreadsheet unique identifier. Example- 5HGcWJFcQVVAv4mNTYb2RS",
+          "required": true
+        },
+        "table_id": {
+          "type": "string",
+          "text": "Table unique identifier. Example- 1cfc2010-1142-13eg-a1eb-0242ac120002",
+          "required": true
+        },
+        "range": {
+          "type": "string",
+          "text": "A1 notation of the range to retrieve values from. Example- A1-D4",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1beta1",
+        "auth": [],
+        "description": "Get cells from range",
+        "rate_limit": [],
+        "api_endpoint": "https://api.rows.com/v1beta1/spreadsheets/{spreadsheet_id}/tables/{table_id}/cells/{range}",
+        "alias_endpoint": "/rows/v1beta1/spreadsheets/spreadsheet_id/tables/table_id/cells/range",
+        "api_ref": "https://developers.rows.com/#tag/Spreadsheet/operation/getRangeCellsBySpreadsheetId"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rows__v1__beta1__spreadsheets__spreadsheet_id__tables__table_id__cells__range___post": {
+      "provider_intent": "rows__v1__beta1__spreadsheets__spreadsheet_id__tables__table_id__cells__range___post",
+      "provider_alias_intent": "/v1/beta1/spreadsheets/spreadsheet_id/tables/table_id/cells/range",
+      "text": "Overwrite cells in range",
+      "category": "Spreadsheet",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "spreadsheet_id": {
+          "type": "string",
+          "text": "Spreadsheet unique identifier. Example- 5HGcWJFcQVVAv4mNTYb2RS",
+          "required": true
+        },
+        "table_id": {
+          "type": "string",
+          "text": "Table unique identifier. Example- 1cfc2010-1142-13eg-a1eb-0242ac120002",
+          "required": true
+        },
+        "range": {
+          "type": "string",
+          "text": "A1 notation of the range to retrieve values from. Example- A1-D4",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "cells": {
+          "type": "array",
+          "text": "Data inside a table range as a list of cells grouped by row. (OverwriteCellsList) [ items ]",
+          "required": true
+        }
+      },
+      "path": {
+        "spreadsheet_id": {
+          "type": "string",
+          "text": "Spreadsheet unique identifier. Example- 5HGcWJFcQVVAv4mNTYb2RS",
+          "required": true
+        },
+        "table_id": {
+          "type": "string",
+          "text": "Table unique identifier. Example- 1cfc2010-1142-13eg-a1eb-0242ac120002",
+          "required": true
+        },
+        "range": {
+          "type": "string",
+          "text": "A1 notation of the range to retrieve values from. Example- A1-D4",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1beta1",
+        "auth": [],
+        "description": "Overwrite cells in range",
+        "rate_limit": [],
+        "api_endpoint": "https://api.rows.com/v1beta1/spreadsheets/{spreadsheet_id}/tables/{table_id}/cells/{range}",
+        "alias_endpoint": "/rows/v1beta1/spreadsheets/spreadsheet_id/tables/table_id/cells/range",
+        "api_ref": "https://developers.rows.com/#tag/Spreadsheet/operation/writeRangeValuesBySpreadsheetId"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rows__v1__beta1__spreadsheets__spreadsheet_id__tables__table_id__values__range-append___post": {
+      "provider_intent": "rows__v1__beta1__spreadsheets__spreadsheet_id__tables__table_id__values__range-append___post",
+      "provider_alias_intent": "/v1/beta1/spreadsheets/spreadsheet_id/tables/table_id/values/range-append",
+      "text": "Append values to range",
+      "category": "Spreadsheet",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "spreadsheet_id": {
+          "type": "string",
+          "text": "Spreadsheet unique identifier. Example- 5HGcWJFcQVVAv4mNTYb2RS",
+          "required": true
+        },
+        "table_id": {
+          "type": "string",
+          "text": "Table unique identifier. Example- 1cfc2010-1142-13eg-a1eb-0242ac120002",
+          "required": true
+        },
+        "range": {
+          "type": "string",
+          "text": "A1 notation of the range to retrieve values from. Example- A1-D4",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "values": {
+          "type": "array",
+          "text": "Data inside a table range as a list of cell values grouped by row.",
+          "required": true
+        }
+      },
+      "path": {
+        "spreadsheet_id": {
+          "type": "string",
+          "text": "Spreadsheet unique identifier. Example- 5HGcWJFcQVVAv4mNTYb2RS",
+          "required": true
+        },
+        "table_id": {
+          "type": "string",
+          "text": "Table unique identifier. Example- 1cfc2010-1142-13eg-a1eb-0242ac120002",
+          "required": true
+        },
+        "range": {
+          "type": "string",
+          "text": "A1 notation of the range to retrieve values from. Example- A1-D4",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1beta1",
+        "auth": [],
+        "description": "Append values to range",
+        "rate_limit": [],
+        "api_endpoint": "https://api.rows.com/v1beta1/spreadsheets/{spreadsheet_id}/tables/{table_id}/values/{range}:append",
+        "alias_endpoint": "/rows/v1beta1/spreadsheets/spreadsheet_id/tables/table_id/values/range-append",
+        "api_ref": "https://developers.rows.com/#tag/Spreadsheet/operation/appendRangeCellsBySpreadsheetId"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rows__v1__beta1__workspaces___get": {
+      "provider_intent": "rows__v1__beta1__workspaces___get",
+      "provider_alias_intent": "/v1/beta1/workspaces",
+      "text": "Get workspace information",
+      "category": "Workspace",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1beta1",
+        "auth": [],
+        "description": "Get workspace information",
+        "rate_limit": [],
+        "api_endpoint": "https://api.rows.com/v1beta1/workspaces",
+        "alias_endpoint": "/rows/v1beta1/workspaces",
+        "api_ref": "https://developers.rows.com/#tag/Workspace/operation/getWorkspaceInformation"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rows__v1__beta1__folders___get": {
+      "provider_intent": "rows__v1__beta1__folders___get",
+      "provider_alias_intent": "/v1/beta1/folders",
+      "text": "List folders",
+      "category": "Workspace",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "offset": {
+          "type": "number",
+          "text": "Skip a specific number of items before returning the items set. Default- 0"
+        },
+        "limit": {
+          "type": "number",
+          "text": "Maximum number of cells returned. Possible Values-  [ 0 .. 1000 ]. Default- 100"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1beta1",
+        "auth": [],
+        "description": "List folders",
+        "rate_limit": [],
+        "api_endpoint": "https://api.rows.com/v1beta1/folders",
+        "alias_endpoint": "/rows/v1beta1/folders",
+        "api_ref": "https://developers.rows.com/#tag/Workspace/operation/getWorkspaceFolders"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rows__v1__beta1__spreadsheets___get": {
+      "provider_intent": "rows__v1__beta1__spreadsheets___get",
+      "provider_alias_intent": "/v1/beta1/spreadsheets",
+      "text": "List spreadsheets",
+      "category": "Workspace",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "folder_id": {
+          "type": "string",
+          "text": "Folder unique identifier. Example- folder_id=ba30972c-8140-11ed-a1eb-0242ac120002"
+        },
+        "offset": {
+          "type": "number",
+          "text": "Skip a specific number of items before returning the items set. Default- 0"
+        },
+        "limit": {
+          "type": "number",
+          "text": "Maximum number of cells returned. Possible Values- [ 0 .. 1000 ]. Default- 100"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1beta1",
+        "auth": [],
+        "description": "List spreadsheets",
+        "rate_limit": [],
+        "api_endpoint": "https://api.rows.com/v1beta1/spreadsheets",
+        "alias_endpoint": "/rows/v1beta1/spreadsheets",
+        "api_ref": "https://developers.rows.com/#tag/Workspace/operation/getWorkspaceSpreadsheets"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

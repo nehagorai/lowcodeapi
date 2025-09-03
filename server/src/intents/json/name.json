@@ -1,0 +1,2427 @@
+{
+  "routes": {
+    "name__v4__domains__domainname__records___get": {
+      "provider_intent": "name__v4__domains__domainname__records___get",
+      "provider_alias_intent": "/v4/domains/domainname/records",
+      "text": "List all the domain records",
+      "category": "DNS",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the zone to list the records for;"
+        },
+        "page": {
+          "type": "number",
+          "text": "Get specific page"
+        },
+        "perPage": {
+          "type": "number",
+          "text": "Number of items per page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the zone to list the records for;"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "List all the records of a domain",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}/records",
+        "alias_endpoint": "/name/v4/domains/domainname/records",
+        "api_ref": "https://www.name.com/api-docs/dns#ListRecords"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname__records__id___get": {
+      "provider_intent": "name__v4__domains__domainname__records__id___get",
+      "provider_alias_intent": "/v4/domains/domainname/records/id",
+      "text": "Get Individual record details",
+      "category": "DNS",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the zone the record exists in"
+        },
+        "id": {
+          "type": "number",
+          "text": "ID is the server-assigned unique identifier for this record"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the zone the record exists in"
+        },
+        "id": {
+          "type": "number",
+          "text": "ID is the server-assigned unique identifier for this record"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "Get details if an individual record",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}/records/{id}",
+        "alias_endpoint": "/name/v4/domains/domainname/records/id",
+        "api_ref": "https://www.name.com/api-docs/dns#GetRecord"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname__records___post": {
+      "provider_intent": "name__v4__domains__domainname__records___post",
+      "provider_alias_intent": "/v4/domains/domainname/records",
+      "text": "Creates new record of the domain",
+      "category": "DNS",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the zone that the record belongs to"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "host": {
+          "type": "string",
+          "text": "Host is the hostname relative to the zone"
+        },
+        "type": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "Type is one of the following- A"
+          ]
+        },
+        "answer": {
+          "type": "string",
+          "text": "Answer is either the IP address for A or AAAA records",
+          "required": true
+        },
+        "ttl": {
+          "type": "number",
+          "text": "TTL is the time this record can be cached for in seconds"
+        },
+        "priority": {
+          "type": "number",
+          "text": "Priority is only required for MX and SRV records"
+        }
+      },
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the zone that the record belongs to"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "creates a new record of the domain",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}/records",
+        "alias_endpoint": "/name/v4/domains/domainname/records",
+        "api_ref": "https://www.name.com/api-docs/dns#CreateRecord"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname__records__id___put": {
+      "provider_intent": "name__v4__domains__domainname__records__id___put",
+      "provider_alias_intent": "/v4/domains/domainname/records/id",
+      "text": "Replace old record with new",
+      "category": "DNS",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "Unique record id. Value is ignored on Create; and must match the URI on Update"
+        },
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the zone that the record belongs to"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "host": {
+          "type": "string",
+          "text": "Host is the hostname relative to the zone"
+        },
+        "fqdn": {
+          "type": "string",
+          "text": "FQDN is the Fully Qualified Domain Name"
+        },
+        "type": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "Type is one of the following- A"
+          ]
+        },
+        "answer": {
+          "type": "string",
+          "text": "Answer is either the IP address for A or AAAA records",
+          "required": true
+        },
+        "ttl": {
+          "type": "number",
+          "text": "TTL is the time this record can be cached for in seconds"
+        },
+        "priority": {
+          "type": "number",
+          "text": "Priority is only required for MX and SRV records"
+        }
+      },
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "Unique record id. Value is ignored on Create; and must match the URI on Update"
+        },
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the zone that the record belongs to"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "replaces the record of the with the new record that is passed",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}/records/{id}",
+        "alias_endpoint": "/name/v4/domains/domainname/records/id",
+        "api_ref": "https://www.name.com/api-docs/dns#UpdateRecord"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname__records__id___delete": {
+      "provider_intent": "name__v4__domains__domainname__records__id___delete",
+      "provider_alias_intent": "/v4/domains/domainname/records/id",
+      "text": "Delete domain record from zone",
+      "category": "DNS",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the zone that the record to be deleted exists in"
+        },
+        "id": {
+          "type": "number",
+          "text": "ID is the server-assigned unique identifier for the Record to be deleted"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the zone that the record to be deleted exists in"
+        },
+        "id": {
+          "type": "number",
+          "text": "ID is the server-assigned unique identifier for the Record to be deleted"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "deletes a record of the domain from the zone.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}/records/{id}",
+        "alias_endpoint": "/name/v4/domains/domainname/records/id",
+        "api_ref": "https://www.name.com/api-docs/dns#DeleteRecord"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname__dnssec___get": {
+      "provider_intent": "name__v4__domains__domainname__dnssec___get",
+      "provider_alias_intent": "/v4/domains/domainname/dnssec",
+      "text": "DNSSEC keys listed by registry",
+      "category": "DNSSEC ",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain name to list keys for"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain name to list keys for"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "lists all of the DNSSEC keys registered with the registry",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}/dnssec",
+        "alias_endpoint": "/name/v4/domains/domainname/dnssec",
+        "api_ref": "https://www.name.com/api-docs/dnssecs#ListDNSSECs"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__dnssec__digest___get": {
+      "provider_intent": "name__v4__domains__dnssec__digest___get",
+      "provider_alias_intent": "/v4/domains/dnssec/digest",
+      "text": "Retrieve registered key details from registry",
+      "category": "DNSSEC ",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain name"
+        },
+        "digest": {
+          "type": "string",
+          "text": "Digest is the digest for the DNSKEY RR to retrieve"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain name"
+        },
+        "digest": {
+          "type": "string",
+          "text": "Digest is the digest for the DNSKEY RR to retrieve"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "get the details for a key registered with the registry.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/dnssec/{digest}",
+        "alias_endpoint": "/name/v4/domains//dnssec/digest",
+        "api_ref": "https://www.name.com/api-docs/dnssecs#GetDNSSEC"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__dnssec___post": {
+      "provider_intent": "name__v4__domains__dnssec___post",
+      "provider_alias_intent": "/v4/domains/dnssec",
+      "text": "DNSSEC key registration with registry",
+      "category": "DNSSEC ",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain name;"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "keyTag": {
+          "type": "number",
+          "text": "KeyTag contains the key tag value of the DNSKEY RR that validates this signature"
+        },
+        "algorithm": {
+          "type": "number",
+          "text": "Algorithm is an integer identifying the algorithm used for signing"
+        },
+        "digestType": {
+          "type": "number",
+          "text": "DigestType is an integer identifying the algorithm used to create the digest"
+        },
+        "digest": {
+          "type": "string",
+          "text": "Digest is a digest of the DNSKEY RR that is registered with the registry."
+        }
+      },
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain name;"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "registers a DNSSEC key with the registry.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/dnssec",
+        "alias_endpoint": "/name/v4/domains/dnssec",
+        "api_ref": "https://www.name.com/api-docs/dnssecs#CreateDNSSEC"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__dnssec__digest___delete": {
+      "provider_intent": "name__v4__domains__dnssec__digest___delete",
+      "provider_alias_intent": "/v4/domains/dnssec/digest",
+      "text": "DNSSEC key removal from registry",
+      "category": "DNSSEC ",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain name the key is registered for"
+        },
+        "digest": {
+          "type": "string",
+          "text": "Digest is the digest for the DNSKEY RR to remove from the registry"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain name the key is registered for"
+        },
+        "digest": {
+          "type": "string",
+          "text": "Digest is the digest for the DNSKEY RR to remove from the registry"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "removes a DNSSEC key from the registry.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/dnssec/{digest}",
+        "alias_endpoint": "/name/v4/domains//dnssec/digest",
+        "api_ref": "https://www.name.com/api-docs/dnssecs#DeleteDNSSEC"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains___post": {
+      "provider_intent": "name__v4__domains___post",
+      "provider_alias_intent": "/v4/domains",
+      "text": "Buy a new domain",
+      "category": "Domain",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "domain": {
+          "type": "object",
+          "required": true,
+          "examples": {
+            "domainName": "example.org"
+          }
+        },
+        "purchasePrice": {
+          "type": "number",
+          "required": true
+        },
+        "purchaseType": {
+          "type": "string"
+        },
+        "years": {
+          "type": "number",
+          "text": "Defaults to 1 and maximum 10 years"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "Buy a new domain",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains",
+        "alias_endpoint": "/name/v4/domains",
+        "api_ref": "https://www.name.com/api-docs/domains#CreateDomain"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains-checkavailability___post": {
+      "provider_intent": "name__v4__domains-checkavailability___post",
+      "provider_alias_intent": "/v4/domains-checkavailability",
+      "text": "Domain availability check for purchase",
+      "category": "Domain",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "domainNames": {
+          "type": "array",
+          "required": true,
+          "examples": [
+            "example.org",
+            "examplexyz.com"
+          ]
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "Check if domain is available for purchase",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains:checkAvailability",
+        "alias_endpoint": "/name/v4/domains-checkavailability",
+        "api_ref": "https://www.name.com/api-docs/domains#CheckAvailability"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains-search___post": {
+      "provider_intent": "name__v4__domains-search___post",
+      "provider_alias_intent": "/v4/domains-search",
+      "text": "Search domain name",
+      "category": "Domain",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "keyword": {
+          "type": "string",
+          "required": true,
+          "examples": "example"
+        },
+        "tldFilter": {
+          "type": "array",
+          "text": "search only specified TLDs"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "Search domain name",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains:search",
+        "alias_endpoint": "/name/v4/domains-search",
+        "api_ref": "https://www.name.com/api-docs/domains#Search"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname-getpricing___get": {
+      "provider_intent": "name__v4__domains__domainname-getpricing___get",
+      "provider_alias_intent": "/v4/domains/domainname-getpricing",
+      "text": "Get price of the domain",
+      "category": "Domain",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "Domain name",
+          "required": true
+        },
+        "years": {
+          "type": "number",
+          "text": "Years"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "Domain name",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "Get price of the domain",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}:getPricing",
+        "alias_endpoint": "/name/v4/domains/domainname-getpricing",
+        "api_ref": "https://www.name.com/api-docs/domains#GetPricingForDomain"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains___get": {
+      "provider_intent": "name__v4__domains___get",
+      "provider_alias_intent": "/v4/domains",
+      "text": "User-owned domain list API",
+      "category": "Domain",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "number",
+          "text": "Get specific page"
+        },
+        "perPage": {
+          "type": "number",
+          "text": "Number of items per page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "List all the domain own by the user",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains",
+        "alias_endpoint": "/name/v4/domains",
+        "api_ref": "https://www.name.com/api-docs/domains#ListDomains"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname___get": {
+      "provider_intent": "name__v4__domains__domainname___get",
+      "provider_alias_intent": "/v4/domains/domainname",
+      "text": "Get details about a specific domain",
+      "category": "Domain",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "Domain name",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "Domain name",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "Get details about a specific domain",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}",
+        "alias_endpoint": "/name/v4/domains/domainname",
+        "api_ref": "https://www.name.com/api-docs/domains#GetDomain"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname-enablewhoisprivacy___post": {
+      "provider_intent": "name__v4__domains__domainname-enablewhoisprivacy___post",
+      "provider_alias_intent": "/v4/domains/domainname-enablewhoisprivacy",
+      "text": "Enables the domain to be private",
+      "category": "Domain",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain name to enable whoisprivacy for",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain name to enable whoisprivacy for",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "Enables the domain to be private",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}:enableWhoisPrivacy",
+        "alias_endpoint": "/name/v4/domains/domainname-enablewhoisprivacy",
+        "api_ref": "https://www.name.com/api-docs/domains#EnableWhoisPrivacy"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname-disablewhoisprivacy___post": {
+      "provider_intent": "name__v4__domains__domainname-disablewhoisprivacy___post",
+      "provider_alias_intent": "/v4/domains/domainname-disablewhoisprivacy",
+      "text": "Disables domain privacy",
+      "category": "Domain",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain name to disable whoisprivacy for.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain name to disable whoisprivacy for.",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "Disables domain privacy",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}:disableWhoisPrivacy",
+        "alias_endpoint": "/name/v4/domains/domainname-disablewhoisprivacy",
+        "api_ref": "https://www.name.com/api-docs/domains#DisableWhoisPrivacy"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname-enableautorenew___post": {
+      "provider_intent": "name__v4__domains__domainname-enableautorenew___post",
+      "provider_alias_intent": "/v4/domains/domainname-enableautorenew",
+      "text": "Automated domain renewal enabled",
+      "category": "Domain",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain name to enable autorenew for",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain name to enable autorenew for",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "Enables the domain to be automatically renewed",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}:enableAutorenew",
+        "alias_endpoint": "/name/v4/domains/domainname-enableautorenew",
+        "api_ref": "https://www.name.com/api-docs/domains#EnableAutorenew"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname-disableautorenew___post": {
+      "provider_intent": "name__v4__domains__domainname-disableautorenew___post",
+      "provider_alias_intent": "/v4/domains/domainname-disableautorenew",
+      "text": "Disables automatic renewals",
+      "category": "Domain",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "domain name to disable autorenew for",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "domain name to disable autorenew for",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "Disables automatic renewals",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}:disableAutorenew",
+        "alias_endpoint": "/name/v4/domains/domainname-disableautorenew",
+        "api_ref": "https://www.name.com/api-docs/domains#DisableAutorenew"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname-renew___post": {
+      "provider_intent": "name__v4__domains__domainname-renew___post",
+      "provider_alias_intent": "/v4/domains/domainname-renew",
+      "text": "Renew a domain",
+      "category": "Domain",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "domain to renew",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "purchasePrice": {
+          "type": "float",
+          "text": "PurchasePrice is the amount to pay for the domain renewal",
+          "required": true
+        },
+        "years": {
+          "type": "number",
+          "text": "Years is for how many years to renew the domain for Defaults to 1 and maximum 10 year"
+        },
+        "promoCode": {
+          "type": "string",
+          "text": "PromoCode is not yet implemented"
+        }
+      },
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "domain to renew",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "Renew a domain",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}:renew",
+        "alias_endpoint": "/name/v4/domains/domainname-renew",
+        "api_ref": "https://www.name.com/api-docs/domains#RenewDomain"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname-getauthcode___get": {
+      "provider_intent": "name__v4__domains__domainname-getauthcode___get",
+      "provider_alias_intent": "/v4/domains/domainname-getauthcode",
+      "text": "Domain Transfer Authorization Code Retrieval",
+      "category": "Domain",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain name to retrieve the authorization code for"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain name to retrieve the authorization code for"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "Returns the Transfer Authorization Code for the domain",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}:getAuthCode",
+        "alias_endpoint": "/name/v4/domains/domainname-getauthcode",
+        "api_ref": "https://www.name.com/api-docs/domains#GetAuthCodeForDomain"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname-purchaseprivacy___post": {
+      "provider_intent": "name__v4__domains__domainname-purchaseprivacy___post",
+      "provider_alias_intent": "/v4/domains/domainname-purchaseprivacy",
+      "text": "Add Privacy protection to a domain",
+      "category": "Domain",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "domain to purchase Whois Privacy for"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "purchasePrice": {
+          "type": "float",
+          "text": "PurchasePrice is the amount you expect to pay",
+          "required": true
+        },
+        "years": {
+          "type": "number",
+          "text": "Years is the number of years you wish to purchase Whois Privacy for Defaults to 1"
+        },
+        "promoCode": {
+          "type": "string",
+          "text": "PromoCode is not yet implemented"
+        }
+      },
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "domain to purchase Whois Privacy for"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "Add Privacy protection to a domain",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}:purchasePrivacy",
+        "alias_endpoint": "/name/v4/domains/domainname-purchaseprivacy",
+        "api_ref": "https://www.name.com/api-docs/domains#PurchasePrivacy"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname-setnameservers___post": {
+      "provider_intent": "name__v4__domains__domainname-setnameservers___post",
+      "provider_alias_intent": "/v4/domains/domainname-setnameservers",
+      "text": "Set the nameservers for the Domain",
+      "category": "Domain",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "domain name to set the nameservers"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "nameservers": {
+          "type": "string",
+          "text": "Namesevers is a list of the nameservers to set"
+        }
+      },
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "domain name to set the nameservers"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "Set the nameservers for the Domain",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}:setNameservers",
+        "alias_endpoint": "/name/v4/domains/domainname-setnameservers",
+        "api_ref": "https://www.name.com/api-docs/domains#SetNameservers"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname-setcontacts___post": {
+      "provider_intent": "name__v4__domains__domainname-setcontacts___post",
+      "provider_alias_intent": "/v4/domains/domainname-setcontacts",
+      "text": "Set the contacts for the Domain",
+      "category": "Domain",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain name to set the contacts for"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "contacts": {
+          "type": "string",
+          "text": "Contacts is the list of contacts to set",
+          "required": true
+        }
+      },
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain name to set the contacts for"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "Set the contacts for the Domain",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}:setContacts",
+        "alias_endpoint": "/name/v4/domains/domainname-setcontacts",
+        "api_ref": "https://www.name.com/api-docs/domains#SetContacts"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname-lock___post": {
+      "provider_intent": "name__v4__domains__domainname-lock___post",
+      "provider_alias_intent": "/v4/domains/domainname-lock",
+      "text": "Lock a domain",
+      "category": "Domain",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain name to lock"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain name to lock"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "Lock a domain",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}:lock",
+        "alias_endpoint": "/name/v4/domains/domainname-lock",
+        "api_ref": "https://www.name.com/api-docs/domains#LockDomain"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname-unlock___post": {
+      "provider_intent": "name__v4__domains__domainname-unlock___post",
+      "provider_alias_intent": "/v4/domains/domainname-unlock",
+      "text": "Unlock a domain",
+      "category": "Domain",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain name to unlock"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain name to unlock"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "Unlock a domain",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}:unlock",
+        "alias_endpoint": "/name/v4/domains/domainname-unlock",
+        "api_ref": "https://www.name.com/api-docs/domains#UnlockDomain"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains-searchstream___post": {
+      "provider_intent": "name__v4__domains-searchstream___post",
+      "provider_alias_intent": "/v4/domains-searchstream",
+      "text": "Return JSON-encoded SearchResults from registry",
+      "category": "Domain",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "timeout": {
+          "type": "number",
+          "text": "Timeout is a value in milliseconds on how long to perform the search for.defaults to 1000ms Valid timeouts are between 500ms to 5"
+        },
+        "000ms": {
+          "type": ""
+        },
+        "keyword": {
+          "type": "string",
+          "text": "Keyword is the search term to search for"
+        },
+        "tldFilter": {
+          "type": "string",
+          "text": "TLDFilter will limit results to only contain the specified TLDs"
+        },
+        "promoCode": {
+          "type": "string",
+          "text": "PromoCode is not implemented yet"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "Return JSON encoded SearchResults as they are received from the registry.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains:searchStream",
+        "alias_endpoint": "/name/v4/domains-searchstream",
+        "api_ref": "https://www.name.com/api-docs/domains#SearchStream"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__email__forwarding___get": {
+      "provider_intent": "name__v4__domains__email__forwarding___get",
+      "provider_alias_intent": "/v4/domains/email/forwarding",
+      "text": "List paginated email forwarding entries",
+      "category": "EmailForwarding ",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain to list email forwarded boxes for"
+        },
+        "perPage": {
+          "type": "number",
+          "text": "Per Page is the number of records to return per request.defaults to 1000"
+        },
+        "page": {
+          "type": "number",
+          "text": "Page is which page to return"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain to list email forwarded boxes for"
+        },
+        "perPage": {
+          "type": "number",
+          "text": "Per Page is the number of records to return per request.defaults to 1000"
+        },
+        "page": {
+          "type": "number",
+          "text": "Page is which page to return"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "ListEmailForwardings returns a paginated list of email forwarding entries for a domain.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/email/forwarding",
+        "alias_endpoint": "/name/v4/domains/email/forwarding",
+        "api_ref": "https://www.name.com/api-docs/emailforwardings#ListEmailForwardings"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__email__forwarding__emailbox___get": {
+      "provider_intent": "name__v4__domains__email__forwarding__emailbox___get",
+      "provider_alias_intent": "/v4/domains/email/forwarding/emailbox",
+      "text": "Email forwarding entry returned by GetEmailForwarding",
+      "category": "EmailForwarding ",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain to list email forwarded box for"
+        },
+        "emailBox": {
+          "type": "string",
+          "text": "EmailBox is which email box to retrieve"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain to list email forwarded box for"
+        },
+        "emailBox": {
+          "type": "string",
+          "text": "EmailBox is which email box to retrieve"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "GetEmailForwarding returns an email forwarding entry.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/email/forwarding/{emailBox}",
+        "alias_endpoint": "/name/v4/domains/email/forwarding/emailbox",
+        "api_ref": "https://www.name.com/api-docs/emailforwardings#GetEmailForwarding"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname__email__forwarding___post": {
+      "provider_intent": "name__v4__domains__domainname__email__forwarding___post",
+      "provider_alias_intent": "/v4/domains/domainname/email/forwarding",
+      "text": "Creates an email forwarding entry",
+      "category": "EmailForwarding ",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain part of the email address to forward"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "emailBox": {
+          "type": "string",
+          "text": "EmailBox is the user portion of the email address to forward"
+        },
+        "emailTo": {
+          "type": "string",
+          "text": "EmailTo is the entire email address to forward email to"
+        }
+      },
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain part of the email address to forward"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "CreateEmailForwarding creates an email forwarding entry",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}/email/forwarding",
+        "alias_endpoint": "/name/v4/domains/domainname/email/forwarding",
+        "api_ref": "https://www.name.com/api-docs/emailforwardings#CreateEmailForwarding"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname__email__forwarding__emailbox___put": {
+      "provider_intent": "name__v4__domains__domainname__email__forwarding__emailbox___put",
+      "provider_alias_intent": "/v4/domains/domainname/email/forwarding/emailbox",
+      "text": "UpdateEmailForwarding changes forwarded email address",
+      "category": "EmailForwarding ",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain part of the email address to forward"
+        },
+        "emailBox": {
+          "type": "string",
+          "text": "EmailBox is the user portion of the email address to forward."
+        },
+        "emailTo": {
+          "type": "string",
+          "text": "EmailTo is the entire email address to forward email to"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain part of the email address to forward"
+        },
+        "emailBox": {
+          "type": "string",
+          "text": "EmailBox is the user portion of the email address to forward."
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "UpdateEmailForwarding updates which email address the email is being forwarded to.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}/email/forwarding/{emailBox}",
+        "alias_endpoint": "/name/v4/domains/domainname/email/forwarding/emailbox",
+        "api_ref": "https://www.name.com/api-docs/emailforwardings#UpdateEmailForwarding"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname__email__forwarding__emailbox___delete": {
+      "provider_intent": "name__v4__domains__domainname__email__forwarding__emailbox___delete",
+      "provider_alias_intent": "/v4/domains/domainname/email/forwarding/emailbox",
+      "text": "Deletes email forwarding entry",
+      "category": "EmailForwarding ",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain to delete the email forwarded box from"
+        },
+        "emailBox": {
+          "type": "string",
+          "text": "EmailBox is which email box to delete"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain to delete the email forwarded box from"
+        },
+        "emailBox": {
+          "type": "string",
+          "text": "EmailBox is which email box to delete"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "DeleteEmailForwarding deletes the email forwarding entry",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}/email/forwarding/{emailBox}",
+        "alias_endpoint": "/name/v4/domains/domainname/email/forwarding/emailbox",
+        "api_ref": "https://www.name.com/api-docs/emailforwardings#DeleteEmailForwarding"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__hello___get": {
+      "provider_intent": "name__v4__hello___get",
+      "provider_alias_intent": "/v4/hello",
+      "text": "Returns some information about the API server",
+      "category": "Hello",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "HelloFunc returns some information about the API server.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/hello",
+        "alias_endpoint": "/name/v4/hello",
+        "api_ref": "https://www.name.com/api-docs/hello#HelloFunc"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__orders___get": {
+      "provider_intent": "name__v4__orders___get",
+      "provider_alias_intent": "/v4/orders",
+      "text": "Retrieve account's orders with ListOrders",
+      "category": "Order",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "perPage": {
+          "type": "number",
+          "text": "Per Page is the number of records to return per request defaults to 1000"
+        },
+        "page": {
+          "type": "number",
+          "text": "Page is which page to return"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "ListOrders returns all orders in the account.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/orders",
+        "alias_endpoint": "/name/v4/orders",
+        "api_ref": "https://www.name.com/api-docs/orders#ListOrders"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__ordersorderid___get": {
+      "provider_intent": "name__v4__ordersorderid___get",
+      "provider_alias_intent": "/v4/ordersorderid",
+      "text": "Order details retrieval using GetOrder",
+      "category": "Order",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "orderId": {
+          "type": "number",
+          "text": "OrderId is the unique identifier of the requested order;"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "orderId": {
+          "type": "number",
+          "text": "OrderId is the unique identifier of the requested order;"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "GetOrder returns details about a specific order",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/orders{orderId}",
+        "alias_endpoint": "/name/v4/ordersorderid",
+        "api_ref": "https://www.name.com/api-docs/orders#GetOrder"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__transfers___get": {
+      "provider_intent": "name__v4__transfers___get",
+      "provider_alias_intent": "/v4/transfers",
+      "text": "Pending transfer requests listed by ListTransfers",
+      "category": "Transfer",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "perPage": {
+          "type": "number",
+          "text": "Per Page is the number of records to return per request defaults to 1000"
+        },
+        "page": {
+          "type": "number",
+          "text": "Page is which page to return"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "ListTransfers lists all pending transfer in requests",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/transfers",
+        "alias_endpoint": "/name/v4/transfers",
+        "api_ref": "https://www.name.com/api-docs/transfers#ListTransfers"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__transfers__domainname___get": {
+      "provider_intent": "name__v4__transfers__domainname___get",
+      "provider_alias_intent": "/v4/transfers/domainname",
+      "text": "GetTransfer gets details for a transfer request",
+      "category": "Transfer",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain you want to get the transfer information for"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain you want to get the transfer information for"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "GetTransfer gets details for a transfer request.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/transfers/{domainName}",
+        "alias_endpoint": "/name/v4/transfers/domainname",
+        "api_ref": "https://www.name.com/api-docs/transfers#GetTransfer"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__transfers___post": {
+      "provider_intent": "name__v4__transfers___post",
+      "provider_alias_intent": "/v4/transfers",
+      "text": "Purchases a new domain transfer request",
+      "category": "Transfer",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain you want to transfer to Name.com"
+        },
+        "authCode": {
+          "type": "string",
+          "text": "AuthCode is the authorization code for the transfer"
+        },
+        "privacyEnabled": {
+          "type": "boolean",
+          "text": "PrivacyEnabled is a flag on whether to purchase Whois Privacy with the transfer",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "purchasePrice": {
+          "type": "number",
+          "text": "PurchasePrice is the amount to pay for the transfer of the domain"
+        },
+        "promoCode": {
+          "type": "string",
+          "text": "PromoCode is not implemented yet"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "CreateTransfer purchases a new domain transfer request",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/transfers",
+        "alias_endpoint": "/name/v4/transfers",
+        "api_ref": "https://www.name.com/api-docs/transfers#CreateTransfer"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__transfers__domainname-cancel___post": {
+      "provider_intent": "name__v4__transfers__domainname-cancel___post",
+      "provider_alias_intent": "/v4/transfers/domainname-cancel",
+      "text": "Refunds and cancels pending transfer",
+      "category": "Transfer",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain to cancel the transfer for."
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain to cancel the transfer for."
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "CancelTransfer cancels a pending transfer request and refunds the amount to account credit",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/transfers/{domainName}:cancel",
+        "alias_endpoint": "/name/v4/transfers/domainname-cancel",
+        "api_ref": "https://www.name.com/api-docs/transfers#CancelTransfer"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname__url__forwarding___get": {
+      "provider_intent": "name__v4__domains__domainname__url__forwarding___get",
+      "provider_alias_intent": "/v4/domains/domainname/url/forwarding",
+      "text": "Paginated URL forwarding entries for domain",
+      "category": "URLForwarding",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain to list URL forwarding entries for"
+        },
+        "perPage": {
+          "type": "number",
+          "text": "Per Page is the number of records to return per request defaults to 1000"
+        },
+        "page": {
+          "type": "number",
+          "text": "Page is which page to return"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain to list URL forwarding entries for"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "ListURLForwardings returns a pagenated list of URL forwarding entries for a domain.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}/url/forwarding",
+        "alias_endpoint": "/name/v4/domains/domainname/url/forwarding",
+        "api_ref": "https://www.name.com/api-docs/urlforwardings#ListURLForwardings"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname__url__forwarding__host___get": {
+      "provider_intent": "name__v4__domains__domainname__url__forwarding__host___get",
+      "provider_alias_intent": "/v4/domains/domainname/url/forwarding/host",
+      "text": "Returns an URL forwarding entry",
+      "category": "URLForwarding",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain to list URL forwarding entry for"
+        },
+        "host": {
+          "type": "string",
+          "text": "Host is the part of the domain name before the domain"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain to list URL forwarding entry for"
+        },
+        "host": {
+          "type": "string",
+          "text": "Host is the part of the domain name before the domain"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "GetURLForwarding returns an URL forwarding entry.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}/url/forwarding/{host}",
+        "alias_endpoint": "/name/v4/domains/domainname/url/forwarding/host",
+        "api_ref": "https://www.name.com/api-docs/urlforwardings#GetURLForwarding"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname__url__forwarding___post": {
+      "provider_intent": "name__v4__domains__domainname__url__forwarding___post",
+      "provider_alias_intent": "/v4/domains/domainname/url/forwarding",
+      "text": "Create URL Forwarding Entry",
+      "category": "URLForwarding",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain part of the hostname to forward;"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "host": {
+          "type": "string",
+          "text": "Host is the entirety of the hostname",
+          "required": true
+        },
+        "forwardsTo": {
+          "type": "string",
+          "text": "ForwardsTo is the URL this host will be forwarded to",
+          "required": true
+        },
+        "type": {
+          "type": "string",
+          "text": "Type is the type of forwarding Valid types are",
+          "enum": [
+            "Masked - This retains the original domain in the address bar and will not reveal or display the actual destination URL"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "text": "Title is the title for the html page to use if the type is masked"
+        },
+        "meta": {
+          "type": "string",
+          "text": "Meta is the meta tags to add to the html page if the type is masked"
+        }
+      },
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain part of the hostname to forward;"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "CreateURLForwarding creates an URL forwarding entry",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}/url/forwarding",
+        "alias_endpoint": "/name/v4/domains/domainname/url/forwarding",
+        "api_ref": "https://www.name.com/api-docs/emailforwardings#CreateEmailForwarding"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname__url__forwarding__host___put": {
+      "provider_intent": "name__v4__domains__domainname__url__forwarding__host___put",
+      "provider_alias_intent": "/v4/domains/domainname/url/forwarding/host",
+      "text": "Update URL Forwarding for Host",
+      "category": "URLForwarding",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string"
+        },
+        "host": {
+          "type": "string",
+          "text": "Host is the entirety of the hostname"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "forwardsTo": {
+          "type": "string",
+          "text": "ForwardsTo is the URL this host will be forwarded to",
+          "required": true
+        },
+        "type": {
+          "type": "string",
+          "text": "Type is the type of forwarding Valid types are",
+          "enum": [
+            "Masked"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "text": "Title is the title for the html page to use if the type is masked"
+        },
+        "meta": {
+          "type": "string",
+          "text": "Meta is the meta tags to add to the html page if the type is masked"
+        }
+      },
+      "path": {
+        "domainName": {
+          "type": "string"
+        },
+        "host": {
+          "type": "string",
+          "text": "Host is the entirety of the hostname"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "UpdateURLForwarding updates which URL the host is being forwarded to.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}/url/forwarding/{host}",
+        "alias_endpoint": "/name/v4/domains/domainname/url/forwarding/host",
+        "api_ref": "https://www.name.com/api-docs/urlforwardings#UpdateURLForwarding"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname__url__forwarding__host___delete": {
+      "provider_intent": "name__v4__domains__domainname__url__forwarding__host___delete",
+      "provider_alias_intent": "/v4/domains/domainname/url/forwarding/host",
+      "text": "Deletes the URL forwarding entry",
+      "category": "URLForwarding",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain to delete the URL forwardind entry from"
+        },
+        "host": {
+          "type": "string",
+          "text": "Host is the part of the domain name before the domain"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain to delete the URL forwardind entry from"
+        },
+        "host": {
+          "type": "string",
+          "text": "Host is the part of the domain name before the domain"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "DeleteURLForwarding deletes the URL forwarding entry.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}/url/forwarding/{host}",
+        "alias_endpoint": "/name/v4/domains/domainname/url/forwarding/host",
+        "api_ref": "https://www.name.com/api-docs/urlforwardings#DeleteURLForwarding"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname__vanity_nameservers___get": {
+      "provider_intent": "name__v4__domains__domainname__vanity_nameservers___get",
+      "provider_alias_intent": "/v4/domains/domainname/vanity_nameservers",
+      "text": "List registered nameservers with the registry",
+      "category": "VanityNameserver",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain to list the vanity nameservers for"
+        },
+        "perPage": {
+          "type": "number",
+          "text": "Per Page is the number of records to return per request defaults to 1000"
+        },
+        "page": {
+          "type": "number",
+          "text": "Page is which page to return."
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain to list the vanity nameservers for"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "ListVanityNameservers lists all nameservers registered with the registry.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}/vanity_nameservers",
+        "alias_endpoint": "/name/v4/domains/domainname/vanity_nameservers",
+        "api_ref": "https://www.name.com/api-docs/vanitynameservers#ListVanityNameservers"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname__vanity_nameservers__hostname___get": {
+      "provider_intent": "name__v4__domains__domainname__vanity_nameservers__hostname___get",
+      "provider_alias_intent": "/v4/domains/domainname/vanity_nameservers/hostname",
+      "text": "Retrieve details of registered vanity nameserver",
+      "category": "VanityNameserver",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain to for the vanity nameserver"
+        },
+        "hostname": {
+          "type": "string",
+          "text": "Hostname is the hostname for the vanity nameserver"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain to for the vanity nameserver"
+        },
+        "hostname": {
+          "type": "string",
+          "text": "Hostname is the hostname for the vanity nameserver"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "GetVanityNameserver gets the details for a vanity nameserver registered with the registry",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}/vanity_nameservers/{hostname}",
+        "alias_endpoint": "/name/v4/domains/domainname/vanity_nameservers/hostname",
+        "api_ref": "https://www.name.com/api-docs/vanitynameservers#GetVanityNameserver"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname__vanity_nameservers___post": {
+      "provider_intent": "name__v4__domains__domainname__vanity_nameservers___post",
+      "provider_alias_intent": "/v4/domains/domainname/vanity_nameservers",
+      "text": "Register nameserver with the registry",
+      "category": "VanityNameserver",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain the nameserver is a subdomain of;"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "hostname": {
+          "type": "string",
+          "text": "Hostname is the hostname of the nameserver",
+          "required": true
+        },
+        "ips": {
+          "type": "string"
+        }
+      },
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain the nameserver is a subdomain of;"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "CreateVanityNameserver registers a nameserver with the registry.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}/vanity_nameservers",
+        "alias_endpoint": "/name/v4/domains/domainname/vanity_nameservers",
+        "api_ref": "https://www.name.com/api-docs/vanitynameservers#CreateVanityNameserver"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "username",
+          "password": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname__vanity_nameservers__hostname___put": {
+      "provider_intent": "name__v4__domains__domainname__vanity_nameservers__hostname___put",
+      "provider_alias_intent": "/v4/domains/domainname/vanity_nameservers/hostname",
+      "text": "Update glue record IP addresses at the registry",
+      "category": "VanityNameserver",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain the nameserver is a subdomain of"
+        },
+        "hostname": {
+          "type": "string",
+          "text": "Hostname is the hostname of the nameserver.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "ips": {
+          "type": "string",
+          "text": "Ps is a list of IP addresses that are used for glue records for this nameserver"
+        }
+      },
+      "path": {
+        "domainName": {
+          "type": "string",
+          "text": "DomainName is the domain the nameserver is a subdomain of"
+        },
+        "hostname": {
+          "type": "string",
+          "text": "Hostname is the hostname of the nameserver.",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "UpdateVanityNameserver allows you to update the glue record IP addresses at the registry",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}/vanity_nameservers/{hostname}",
+        "alias_endpoint": "/name/v4/domains/domainname/vanity_nameservers/hostname",
+        "api_ref": "https://www.name.com/api-docs/vanitynameservers#UpdateVanityNameserver"
+      },
+      "auth": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "name__v4__domains__domainname__vanity_nameservers__hostname___delete": {
+      "provider_intent": "name__v4__domains__domainname__vanity_nameservers__hostname___delete",
+      "provider_alias_intent": "/v4/domains/domainname/vanity_nameservers/hostname",
+      "text": "Unregister nameserver from registry",
+      "category": "VanityNameserver",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "domainName": {
+          "type": "string"
+        },
+        "hostname": {
+          "type": "string",
+          "text": "Hostname is the hostname of the vanity nameserver to delete"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domainName": {
+          "type": "string"
+        },
+        "hostname": {
+          "type": "string",
+          "text": "Hostname is the hostname of the vanity nameserver to delete"
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v4",
+        "auth": [],
+        "description": "DeleteVanityNameserver unregisteres the nameserver at the registry.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.name.com/v4/domains/{domainName}/vanity_nameservers/{hostname}",
+        "alias_endpoint": "/name/v4/domains/domainname/vanity_nameservers/hostname",
+        "api_ref": "https://www.name.com/api-docs/vanitynameservers#DeleteVanityNameserver"
+      },
+      "auth": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

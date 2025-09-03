@@ -1,0 +1,186 @@
+{
+  "routes": {
+    "voicemaker__voice__api___post": {
+      "provider_intent": "voicemaker__voice__api___post",
+      "provider_alias_intent": "/voice/api",
+      "text": "Generate Audio",
+      "category": "Audio",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "Engine": {
+          "type": "string",
+          "text": "standard, neural",
+          "required": true
+        },
+        "VoiceId": {
+          "type": "enum",
+          "text": "Please see the list below for all Available Voice Ids",
+          "required": true,
+          "enum": [
+            "ai2-Katie",
+            "ai2-Kathy",
+            "ai2-Isabella",
+            "ai2-Robert",
+            "ai2-Jerry"
+          ]
+        },
+        "LanguageCode": {
+          "type": "enum",
+          "text": "en-US, en-GB, en-AU (Please refer below to Available Voices) multi-lang - For Pro Voices.",
+          "required": true,
+          "enum": [
+            "en-US",
+            "en-GB",
+            "en-AU"
+          ]
+        },
+        "AccentCode": {
+          "type": "enum",
+          "text": " Please refer below to Available Voices ",
+          "enum": [
+            "en-US",
+            "en-GB",
+            "en-AU",
+            "da-DK",
+            "de-DE",
+            "nl-NL",
+            "en-IN",
+            "en-GB-WLS",
+            " fr-FR",
+            "fr-CA",
+            "es-US"
+          ]
+        },
+        "Text": {
+          "type": "string",
+          "text": "The audio request text. The length of this string is limited to 10,000 characters per request, the requests above 3,000 characters may take a little longer to generate a speech. If SSML tags support required then please let us know.",
+          "required": true
+        },
+        "OutputFormat": {
+          "type": "enum",
+          "text": "We suggest to use mp3 in real-time applications. Wav files could take longer time to convert the audio",
+          "enum": [
+            "mp3",
+            "wav"
+          ]
+        },
+        "ResponseType": {
+          "type": "enum",
+          "text": "By default, we choose file, which results audio in a downlodable url file. stream will results audio in AudioBuffer format, which can be saved to a buffer, or saved to a file. stream will save your addional HTTP request for downloading audio file via URL.",
+          "enum": [
+            "file",
+            "stream"
+          ]
+        },
+        "FileStore": {
+          "type": "number",
+          "text": "You can specify the duration for retaining your converted output audio file in hours. The maximum limit allowed is up to 240 hours, which is equivalent to 10 days. This parameter is not supported on ResponseType: stream."
+        },
+        "CustomFileName": {
+          "type": "string",
+          "text": "You can able to custom-named Output audio file as specified. This parameter is not supported on ResponseType: stream."
+        },
+        "SampleRate": {
+          "type": "enum",
+          "text": "Always use 48000, we automatically choose for the best audio output on all voices",
+          "enum": [
+            48000,
+            44100,
+            24000,
+            22050,
+            16000,
+            8000
+          ]
+        },
+        "Effect": {
+          "type": "string",
+          "text": "breathing, soft, whispered - Only supports standard Engine ai1 voices. conversational - Only support on neural Engine en-US - ai1-Joanna, ai1-Matthew, ai3-Aria, ai3-Jenny, cmn-CN - ai3-cmn-CN-Xiaoxiao. news - Only support on neural Engine en-GB - ai1-Amy, en-US - ai3-Jony, ai3-Aria, ai3-Jenny, es-US - ai1-es-US-Lupe customersupport - Only support on neural Engine en-US - ai3-Aria, ai3-Jenny, cmn-CN - ai3-cmn-CN-Yunyang. assistant - Only support on neural Engine en-US - ai3-Aria, ai3-Jenny. happy - Only support on neural Engine en-US - ai3-Aria, cmn-CN - ai3-cmn-CN-Yunye, ai3-cmn-CN-Xariyah, ai3-cmn-CN-Xiomara, ai3-cmn-CN-Carissa, ai3-cmn-CN-Xylia, ai3-cmn-CN-Xander. empathic - Only support on neural Engine en-US - ai3-Aria. clam - Only support on neural Engine cmn-CN - ai3-cmn-CN-Yunye. whispered, happy, sad, angry, excited, friendly, hopeful, shouting, terrified, unfriendly: ai3-Aria, ai3-Jenny, ai3-Jony, ai3-en-US-Alexander, ai3-en-US-Madison, ai3-en-US-Jayden, ai3-en-US-Ashley, ai3-en-US-Joshua"
+        },
+        "MasterSettings": {
+          "type": "enum",
+          "text": "advanced_v1 - It directly connects to AI Engines, and characters are counted with each convert. advanced_v2 - If you only adjust MasterVolume, MasterSpeed, or MasterPitch without updating the VoiceId or Text, characters will not be counted. Please note, this will add an additional 200ms time delay to the initial request.",
+          "enum": [
+            "advanced_v1",
+            "advanced_v2"
+          ]
+        },
+        "MasterVolume": {
+          "type": "number",
+          "text": "0 is the default (-20 to 20)"
+        },
+        "MasterSpeed": {
+          "type": "number",
+          "text": "0 is the default (-100 to 100)"
+        },
+        "MasterPitch": {
+          "type": "number",
+          "text": "0 is the default (-100 to 100)"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "To generate audio, make a POST request to the main API endpoint",
+        "rate_limit": [],
+        "api_endpoint": "https://developer.voicemaker.in/voice/api",
+        "alias_endpoint": "/voicemaker/voice/api",
+        "api_ref": "https://developer.voicemaker.in/apidocs"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "voicemaker__voice__list___post": {
+      "provider_intent": "voicemaker__voice__list___post",
+      "provider_alias_intent": "/voice/list",
+      "text": "Get List of All Voices",
+      "category": "Audio",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "language": {
+          "type": "string",
+          "text": "Make the voice speak in specific language",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "To get list of all voices, make a POST request to voice list API endpoint.",
+        "rate_limit": [],
+        "api_endpoint": "https://developer.voicemaker.in/voice/list",
+        "alias_endpoint": "/voicemaker/voice/list",
+        "api_ref": "https://developer.voicemaker.in/apidocs"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

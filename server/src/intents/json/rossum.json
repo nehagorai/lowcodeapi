@@ -1,0 +1,4272 @@
+{
+  "app": {
+    "title": "Rossum API",
+    "description": "",
+    "api_base": "/rossum",
+    "copyright": "",
+    "copyright_year": "",
+    "contact_email": ""
+  },
+  "category": {
+    "All": ""
+  },
+  "routes": {
+    "rossum__v1__annotations__id__start_embedded___post": {
+      "provider_intent": "rossum__v1__annotations__id__start_embedded___post",
+      "provider_alias_intent": "/v1/annotations/id/start_embedded",
+      "text": "Start embedded annotation",
+      "category": "Annotation",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Start embedded annotation",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/annotations/{id}/start_embedded",
+        "alias_endpoint": "/rossum/v1/annotations/id/start_embedded",
+        "api_ref": "https://elis.rossum.ai/api/docs/#start-embedded-annotation"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__annotations__id__create_embedded_url___post": {
+      "provider_intent": "rossum__v1__annotations__id__create_embedded_url___post",
+      "provider_alias_intent": "/v1/annotations/id/create_embedded_url",
+      "text": "Create embedded URL for annotation",
+      "category": "Annotation",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create embedded URL for annotation",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/annotations/{id}/create_embedded_url",
+        "alias_endpoint": "/rossum/v1/annotations/id/create_embedded_url",
+        "api_ref": "https://elis.rossum.ai/api/docs/#create-embedded-url-for-annotation"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__annotations__id__cancel___post": {
+      "provider_intent": "rossum__v1__annotations__id__cancel___post",
+      "provider_alias_intent": "/v1/annotations/id/cancel",
+      "text": "Cancel annotation",
+      "category": "Annotation",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Cancel annotation",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/annotations/{id}/cancel",
+        "alias_endpoint": "/rossum/v1/annotations/id/cancel",
+        "api_ref": "https://elis.rossum.ai/api/docs/#cancel-annotation"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__annotations__id__approve___post": {
+      "provider_intent": "rossum__v1__annotations__id__approve___post",
+      "provider_alias_intent": "/v1/annotations/id/approve",
+      "text": "Approve annotation",
+      "category": "Annotation",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Approve annotation",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/annotations/{id}/approve",
+        "alias_endpoint": "/rossum/v1/annotations/id/approve",
+        "api_ref": "https://elis.rossum.ai/api/docs/#approve-annotation"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__annotations__id__reject___post": {
+      "provider_intent": "rossum__v1__annotations__id__reject___post",
+      "provider_alias_intent": "/v1/annotations/id/reject",
+      "text": "Reject annotation",
+      "category": "Annotation",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Reject annotation",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/annotations/{id}/reject",
+        "alias_endpoint": "/rossum/v1/annotations/id/reject",
+        "api_ref": "https://elis.rossum.ai/api/docs/#reject-annotation"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__annotations__id__postpone___post": {
+      "provider_intent": "rossum__v1__annotations__id__postpone___post",
+      "provider_alias_intent": "/v1/annotations/id/postpone",
+      "text": "Switch to postponed",
+      "category": "Annotation",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Switch to postponed",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/annotations/{id}/postpone",
+        "alias_endpoint": "/rossum/v1/annotations/id/postpone",
+        "api_ref": "https://elis.rossum.ai/api/docs/#switch-to-postponed"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__annotations__id__delete___post": {
+      "provider_intent": "rossum__v1__annotations__id__delete___post",
+      "provider_alias_intent": "/v1/annotations/id/delete",
+      "text": "Switch to deleted",
+      "category": "Annotation",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Switch to deleted",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/annotations/{id}/delete",
+        "alias_endpoint": "/rossum/v1/annotations/id/delete",
+        "api_ref": "https://elis.rossum.ai/api/docs/#switch-to-deleted"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__annotations__id__rotate___post": {
+      "provider_intent": "rossum__v1__annotations__id__rotate___post",
+      "provider_alias_intent": "/v1/annotations/id/rotate",
+      "text": "Rotate the annotation",
+      "category": "Annotation",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Rotate the annotation",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/annotations/{id}/rotate",
+        "alias_endpoint": "/rossum/v1/annotations/id/rotate",
+        "api_ref": "https://elis.rossum.ai/api/docs/#rotate-the-annotation"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__annotations__id__split___post": {
+      "provider_intent": "rossum__v1__annotations__id__split___post",
+      "provider_alias_intent": "/v1/annotations/id/split",
+      "text": "Split the annotation",
+      "category": "Annotation",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Split the annotation",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/annotations/{id}/split",
+        "alias_endpoint": "/rossum/v1/annotations/id/split",
+        "api_ref": "https://elis.rossum.ai/api/docs/#split-the-annotation"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__annotations__id__edit_pages__start___post": {
+      "provider_intent": "rossum__v1__annotations__id__edit_pages__start___post",
+      "provider_alias_intent": "/v1/annotations/id/edit_pages/start",
+      "text": "Edit pages Start",
+      "category": "Annotation",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Edit pages Start",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/annotations/{id}/edit_pages/start",
+        "alias_endpoint": "/rossum/v1/annotations/id/edit_pages/start",
+        "api_ref": "https://elis.rossum.ai/api/docs/#edit-pages-start"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__annotations__id__edit_pages__cancel___post": {
+      "provider_intent": "rossum__v1__annotations__id__edit_pages__cancel___post",
+      "provider_alias_intent": "/v1/annotations/id/edit_pages/cancel",
+      "text": "Edit pages Cancel",
+      "category": "Annotation",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Edit pages Cancel",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/annotations/{id}/edit_pages/cancel",
+        "alias_endpoint": "/rossum/v1/annotations/id/edit_pages/cancel",
+        "api_ref": "https://elis.rossum.ai/api/docs/#edit-pages-cancel"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__annotations__parent_id__edit_pages___post": {
+      "provider_intent": "rossum__v1__annotations__parent_id__edit_pages___post",
+      "provider_alias_intent": "/v1/annotations/parent_id/edit_pages",
+      "text": "Edit pages",
+      "category": "Annotation",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Edit pages",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/annotations/{parent_id}/edit_pages",
+        "alias_endpoint": "/rossum/v1/annotations/parent_id/edit_pages",
+        "api_ref": "https://elis.rossum.ai/api/docs/#edit-pages"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__annotations__parent_id__edit_pages__in_place___post": {
+      "provider_intent": "rossum__v1__annotations__parent_id__edit_pages__in_place___post",
+      "provider_alias_intent": "/v1/annotations/parent_id/edit_pages/in_place",
+      "text": "Edit pages in-place",
+      "category": "Annotation",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Edit pages in-place",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/annotations/{parent_id}/edit_pages/in_place",
+        "alias_endpoint": "/rossum/v1/annotations/parent_id/edit_pages/in_place",
+        "api_ref": "https://elis.rossum.ai/api/docs/#edit-pages-in-place"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__annotations__id__search___post": {
+      "provider_intent": "rossum__v1__annotations__id__search___post",
+      "provider_alias_intent": "/v1/annotations/id/search",
+      "text": "Search for text",
+      "category": "Annotation",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Search for text",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/annotations/{id}/search",
+        "alias_endpoint": "/rossum/v1/annotations/id/search",
+        "api_ref": "https://elis.rossum.ai/api/docs/#search-for-text"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__annotations__id__content__id_of_the_child_node__add_empty___post": {
+      "provider_intent": "rossum__v1__annotations__id__content__id_of_the_child_node__add_empty___post",
+      "provider_alias_intent": "/v1/annotations/id/content/id of the child node/add_empty",
+      "text": "Add new row to multivalue datapoint",
+      "category": "Annotation",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Add new row to multivalue datapoint",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/annotations/{id}/content/{id of the child node}/add_empty",
+        "alias_endpoint": "/rossum/v1/annotations/id/content/id of the child node/add_empty",
+        "api_ref": "https://elis.rossum.ai/api/docs/#add-new-row-to-multivalue-datapoint"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__annotations__id__content__validate___post": {
+      "provider_intent": "rossum__v1__annotations__id__content__validate___post",
+      "provider_alias_intent": "/v1/annotations/id/content/validate",
+      "text": "Validate annotation content",
+      "category": "Annotation",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Validate annotation content",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/annotations/{id}/content/validate",
+        "alias_endpoint": "/rossum/v1/annotations/id/content/validate",
+        "api_ref": "https://elis.rossum.ai/api/docs/#validate-annotation-content"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__annotations___post": {
+      "provider_intent": "rossum__v1__annotations___post",
+      "provider_alias_intent": "/v1/annotations",
+      "text": "Create an annotation",
+      "category": "Annotation",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create an annotation",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/annotations",
+        "alias_endpoint": "/rossum/v1/annotations",
+        "api_ref": "https://elis.rossum.ai/api/docs/#create-an-annotation"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__annotations__id___post": {
+      "provider_intent": "rossum__v1__annotations__id___post",
+      "provider_alias_intent": "/v1/annotations/id",
+      "text": "Retrieve an annotation",
+      "category": "Annotation",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve an annotation",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/annotations/{id}",
+        "alias_endpoint": "/rossum/v1/annotations/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#retrieve-an-annotation"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__annotations__suggested_recipients___post": {
+      "provider_intent": "rossum__v1__annotations__suggested_recipients___post",
+      "provider_alias_intent": "/v1/annotations/suggested_recipients",
+      "text": "Retrieves annotations suggested email recipients depending on Queues",
+      "category": "Annotation",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieves annotations suggested email recipients depending on Queues",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/annotations/suggested_recipients",
+        "alias_endpoint": "/rossum/v1/annotations/suggested_recipients",
+        "api_ref": "https://elis.rossum.ai/api/docs/#get-suggested-email-recipients"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__annotations__purge_deleted___post": {
+      "provider_intent": "rossum__v1__annotations__purge_deleted___post",
+      "provider_alias_intent": "/v1/annotations/purge_deleted",
+      "text": "Purge deleted annotations",
+      "category": "Annotation",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Purge deleted annotations",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/annotations/purge_deleted",
+        "alias_endpoint": "/rossum/v1/annotations/purge_deleted",
+        "api_ref": "https://elis.rossum.ai/api/docs/#purge-deleted-annotations"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__annotations__id__content___post": {
+      "provider_intent": "rossum__v1__annotations__id__content___post",
+      "provider_alias_intent": "/v1/annotations/id/content",
+      "text": "Get the annotation data",
+      "category": "Annotation Data",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the annotation data",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/annotations/{id}/content",
+        "alias_endpoint": "/rossum/v1/annotations/id/content",
+        "api_ref": "https://elis.rossum.ai/api/docs/#get-the-annotation-data"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__annotations__id__content__operations___post": {
+      "provider_intent": "rossum__v1__annotations__id__content__operations___post",
+      "provider_alias_intent": "/v1/annotations/id/content/operations",
+      "text": "Bulk update annotation data",
+      "category": "Annotation Data",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Bulk update annotation data",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/annotations/{id}/content/operations",
+        "alias_endpoint": "/rossum/v1/annotations/id/content/operations",
+        "api_ref": "https://elis.rossum.ai/api/docs/#bulk-update-annotation-data"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__annotations__id__content__id_of_child_node__select___post": {
+      "provider_intent": "rossum__v1__annotations__id__content__id_of_child_node__select___post",
+      "provider_alias_intent": "/v1/annotations/id/content/id of child node/select",
+      "text": "Replace annotation data by OCR",
+      "category": "Annotation Data",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Replace annotation data by OCR",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/annotations/{id}/content/{id of child node}/select",
+        "alias_endpoint": "/rossum/v1/annotations/id/content/id of child node/select",
+        "api_ref": "https://elis.rossum.ai/api/docs/#replace-annotation-data-by-ocr"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__annotations__id__content__id_of_the_multivalue__grid_operations___post": {
+      "provider_intent": "rossum__v1__annotations__id__content__id_of_the_multivalue__grid_operations___post",
+      "provider_alias_intent": "/v1/annotations/id/content/id of the multivalue/grid_operations",
+      "text": "Grid operations",
+      "category": "Annotation Data",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Grid operations",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/annotations/{id}/content/{id of the multivalue}/grid_operations",
+        "alias_endpoint": "/rossum/v1/annotations/id/content/id of the multivalue/grid_operations",
+        "api_ref": "https://elis.rossum.ai/api/docs/#grid-operations"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__annotations__id__content__id_of_the_multivalue__grid_parts_operations___post": {
+      "provider_intent": "rossum__v1__annotations__id__content__id_of_the_multivalue__grid_parts_operations___post",
+      "provider_alias_intent": "/v1/annotations/id/content/id of the multivalue/grid_parts_operations",
+      "text": "Partial grid updates",
+      "category": "Annotation Data",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Partial grid updates",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/annotations/{id}/content/{id of the multivalue}/grid_parts_operations",
+        "alias_endpoint": "/rossum/v1/annotations/id/content/id of the multivalue/grid_parts_operations",
+        "api_ref": "https://elis.rossum.ai/api/docs/#partial-grid-updates"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__connectors___post": {
+      "provider_intent": "rossum__v1__connectors___post",
+      "provider_alias_intent": "/v1/connectors",
+      "text": "Create a new connector",
+      "category": "Connector",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new connector",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/connectors",
+        "alias_endpoint": "/rossum/v1/connectors",
+        "api_ref": "https://elis.rossum.ai/api/docs/#create-a-new-connector"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__connectors__id___post": {
+      "provider_intent": "rossum__v1__connectors__id___post",
+      "provider_alias_intent": "/v1/connectors/id",
+      "text": "Delete a connector",
+      "category": "Connector",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a connector",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/connectors/{id}",
+        "alias_endpoint": "/rossum/v1/connectors/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#delete-a-connector"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__dedicated_engines__request___post": {
+      "provider_intent": "rossum__v1__dedicated_engines__request___post",
+      "provider_alias_intent": "/v1/dedicated_engines/request",
+      "text": "Request a new Dedicated Engine",
+      "category": "Dedicated Engine",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Request a new Dedicated Engine",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/dedicated_engines/request",
+        "alias_endpoint": "/rossum/v1/dedicated_engines/request",
+        "api_ref": "https://elis.rossum.ai/api/docs/#request-a-new-dedicated-engine"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__dedicated_engines___post": {
+      "provider_intent": "rossum__v1__dedicated_engines___post",
+      "provider_alias_intent": "/v1/dedicated_engines",
+      "text": "Create a new dedicated engine",
+      "category": "Dedicated Engine",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new dedicated engine",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/dedicated_engines",
+        "alias_endpoint": "/rossum/v1/dedicated_engines",
+        "api_ref": "https://elis.rossum.ai/api/docs/#create-a-new-dedicated-engine"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__dedicated_engines__id___post": {
+      "provider_intent": "rossum__v1__dedicated_engines__id___post",
+      "provider_alias_intent": "/v1/dedicated_engines/id",
+      "text": "Update part of a dedicated engine",
+      "category": "Dedicated Engine",
+      "method": "PATCH",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update part of a dedicated engine",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/dedicated_engines/{id}",
+        "alias_endpoint": "/rossum/v1/dedicated_engines/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#update-part-of-a-dedicated-engine"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__dedicated_engines__id\n\n___post": {
+      "provider_intent": "rossum__v1__dedicated_engines__id\n\n___post",
+      "provider_alias_intent": "/v1/dedicated_engines/id\n\n",
+      "text": "Delete a dedicated engine",
+      "category": "Dedicated Engine",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a dedicated engine",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/dedicated_engines/{id}\n\n",
+        "alias_endpoint": "/rossum/v1/dedicated_engines/id\n\n",
+        "api_ref": "https://elis.rossum.ai/api/docs/#delete-a-dedicated-engine"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__dedicated_engine_schemas__validate___post": {
+      "provider_intent": "rossum__v1__dedicated_engine_schemas__validate___post",
+      "provider_alias_intent": "/v1/dedicated_engine_schemas/validate",
+      "text": "Validate a dedicated engine schema",
+      "category": "Dedicated Engine Schema",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Validate a dedicated engine schema",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/dedicated_engine_schemas/validate",
+        "alias_endpoint": "/rossum/v1/dedicated_engine_schemas/validate",
+        "api_ref": "https://elis.rossum.ai/api/docs/#validate-a-dedicated-engine-schema"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__dedicated_engine_schemas__predict___post": {
+      "provider_intent": "rossum__v1__dedicated_engine_schemas__predict___post",
+      "provider_alias_intent": "/v1/dedicated_engine_schemas/predict",
+      "text": "Predict a dedicated engine schema",
+      "category": "Dedicated Engine Schema",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Predict a dedicated engine schema",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/dedicated_engine_schemas/predict",
+        "alias_endpoint": "/rossum/v1/dedicated_engine_schemas/predict",
+        "api_ref": "https://elis.rossum.ai/api/docs/#predict-a-dedicated-engine-schema"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__dedicated_engine_schemas___post": {
+      "provider_intent": "rossum__v1__dedicated_engine_schemas___post",
+      "provider_alias_intent": "/v1/dedicated_engine_schemas",
+      "text": "Create a new dedicated engine schema",
+      "category": "Dedicated Engine Schema",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new dedicated engine schema",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/dedicated_engine_schemas",
+        "alias_endpoint": "/rossum/v1/dedicated_engine_schemas",
+        "api_ref": "https://elis.rossum.ai/api/docs/#create-a-new-dedicated-engine-schema"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__dedicated_engine_schemas__id___post": {
+      "provider_intent": "rossum__v1__dedicated_engine_schemas__id___post",
+      "provider_alias_intent": "/v1/dedicated_engine_schemas/id",
+      "text": "Delete a dedicated engine schema",
+      "category": "Dedicated Engine Schema",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a dedicated engine schema",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/dedicated_engine_schemas/{id}",
+        "alias_endpoint": "/rossum/v1/dedicated_engine_schemas/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#delete-a-dedicated-engine-schema"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__delete_recommendations___post": {
+      "provider_intent": "rossum__v1__delete_recommendations___post",
+      "provider_alias_intent": "/v1/delete_recommendations",
+      "text": "List all delete recommendations",
+      "category": "Delete Recommendation",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all delete recommendations",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/delete_recommendations",
+        "alias_endpoint": "/rossum/v1/delete_recommendations",
+        "api_ref": "https://elis.rossum.ai/api/docs/#list-all-delete-recommendations"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossumv1__delete_recommendations__id___post": {
+      "provider_intent": "rossumv1__delete_recommendations__id___post",
+      "provider_alias_intent": "v1/delete_recommendations/id",
+      "text": "Retrieve a delete recommendation",
+      "category": "Delete Recommendation",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve a delete recommendation",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/apiv1/delete_recommendations/{id}",
+        "alias_endpoint": "/rossumv1/delete_recommendations/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#retrieve-a-delete-recommendation"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__delete_recommendations_____post": {
+      "provider_intent": "rossum__v1__delete_recommendations_____post",
+      "provider_alias_intent": "/v1/delete_recommendations/",
+      "text": "Create a delete recommendation",
+      "category": "Delete Recommendation",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a delete recommendation",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/delete_recommendations/",
+        "alias_endpoint": "/rossum/v1/delete_recommendations/",
+        "api_ref": "https://elis.rossum.ai/api/docs/#create-a-delete-recommendation"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__delete_recommendations__id___post": {
+      "provider_intent": "rossum__v1__delete_recommendations__id___post",
+      "provider_alias_intent": "/v1/delete_recommendations/id",
+      "text": "Remove a delete recommendation",
+      "category": "Delete Recommendation",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Remove a delete recommendation",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/delete_recommendations/{id}",
+        "alias_endpoint": "/rossum/v1/delete_recommendations/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#remove-a-delete-recommendation"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__documents___post": {
+      "provider_intent": "rossum__v1__documents___post",
+      "provider_alias_intent": "/v1/documents",
+      "text": "Create document",
+      "category": "Document",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create document",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/documents",
+        "alias_endpoint": "/rossum/v1/documents",
+        "api_ref": "https://elis.rossum.ai/api/docs/#create-document"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__documents__id___post": {
+      "provider_intent": "rossum__v1__documents__id___post",
+      "provider_alias_intent": "/v1/documents/id",
+      "text": "Delete a document",
+      "category": "Document",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a document",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/documents/{id}",
+        "alias_endpoint": "/rossum/v1/documents/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#delete-a-document"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__documents__id__content___post": {
+      "provider_intent": "rossum__v1__documents__id__content___post",
+      "provider_alias_intent": "/v1/documents/id/content",
+      "text": "Document content",
+      "category": "Document",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Document content",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/documents/{id}/content",
+        "alias_endpoint": "/rossum/v1/documents/id/content",
+        "api_ref": "https://elis.rossum.ai/api/docs/#document-content"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__original__id\n___post": {
+      "provider_intent": "rossum__v1__original__id\n___post",
+      "provider_alias_intent": "/v1/original/id\n",
+      "text": "Permanent URL",
+      "category": "Document",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Permanent URL",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/original/{id}\n",
+        "alias_endpoint": "/rossum/v1/original/id\n",
+        "api_ref": "https://elis.rossum.ai/api/docs/#permanent-url"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__emails___post": {
+      "provider_intent": "rossum__v1__emails___post",
+      "provider_alias_intent": "/v1/emails",
+      "text": "List all emails",
+      "category": "Email",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all emails",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/emails",
+        "alias_endpoint": "/rossum/v1/emails",
+        "api_ref": "https://elis.rossum.ai/api/docs/#list-all-emails"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__emails__id___post": {
+      "provider_intent": "rossum__v1__emails__id___post",
+      "provider_alias_intent": "/v1/emails/id",
+      "text": "Update part of an email",
+      "category": "Email",
+      "method": "PATCH",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update part of an email",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/emails/{id}",
+        "alias_endpoint": "/rossum/v1/emails/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#update-part-of-an-email"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__email_templates___post": {
+      "provider_intent": "rossum__v1__email_templates___post",
+      "provider_alias_intent": "/v1/email_templates",
+      "text": "Create new email template object",
+      "category": "Email Template",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create new email template object",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/email_templates",
+        "alias_endpoint": "/rossum/v1/email_templates",
+        "api_ref": "https://elis.rossum.ai/api/docs/#create-new-email-template-object"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__email_templates__id___post": {
+      "provider_intent": "rossum__v1__email_templates__id___post",
+      "provider_alias_intent": "/v1/email_templates/id",
+      "text": "Delete an email template",
+      "category": "Email Template",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete an email template",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/email_templates/{id}",
+        "alias_endpoint": "/rossum/v1/email_templates/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#delete-an-email-template"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__email_templates__id__render___post": {
+      "provider_intent": "rossum__v1__email_templates__id__render___post",
+      "provider_alias_intent": "/v1/email_templates/id/render",
+      "text": "Render email template",
+      "category": "Email Template",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Render email template",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/email_templates/{id}/render",
+        "alias_endpoint": "/rossum/v1/email_templates/id/render",
+        "api_ref": "https://elis.rossum.ai/api/docs/#render-email-template"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__email_threads___post": {
+      "provider_intent": "rossum__v1__email_threads___post",
+      "provider_alias_intent": "/v1/email_threads",
+      "text": "List all email threads",
+      "category": "Email Thread",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all email threads",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/email_threads",
+        "alias_endpoint": "/rossum/v1/email_threads",
+        "api_ref": "https://elis.rossum.ai/api/docs/#list-all-email-threads"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__email_threads__id___post": {
+      "provider_intent": "rossum__v1__email_threads__id___post",
+      "provider_alias_intent": "/v1/email_threads/id",
+      "text": "Update part of an email thread",
+      "category": "Email Thread",
+      "method": "PATCH",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update part of an email thread",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/email_threads/{id}",
+        "alias_endpoint": "/rossum/v1/email_threads/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#update-part-of-an-email-thread"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__generic_engines___post": {
+      "provider_intent": "rossum__v1__generic_engines___post",
+      "provider_alias_intent": "/v1/generic_engines",
+      "text": "List all generic engines",
+      "category": "Generic Engine",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all generic engines",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/generic_engines",
+        "alias_endpoint": "/rossum/v1/generic_engines",
+        "api_ref": "https://elis.rossum.ai/api/docs/#list-all-generic-engines"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__generic_engines__id___post": {
+      "provider_intent": "rossum__v1__generic_engines__id___post",
+      "provider_alias_intent": "/v1/generic_engines/id",
+      "text": "Retrieve a generic engine",
+      "category": "Generic Engine",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve a generic engine",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/generic_engines/{id}",
+        "alias_endpoint": "/rossum/v1/generic_engines/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#retrieve-a-generic-engine"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__generic_engine_schemas___post": {
+      "provider_intent": "rossum__v1__generic_engine_schemas___post",
+      "provider_alias_intent": "/v1/generic_engine_schemas",
+      "text": "List all generic engine schemas",
+      "category": "Generic Engine Schema",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all generic engine schemas",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/generic_engine_schemas",
+        "alias_endpoint": "/rossum/v1/generic_engine_schemas",
+        "api_ref": "https://elis.rossum.ai/api/docs/#list-all-generic-engine-schemas"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__generic_engine_schemas__id___post": {
+      "provider_intent": "rossum__v1__generic_engine_schemas__id___post",
+      "provider_alias_intent": "/v1/generic_engine_schemas/id",
+      "text": "Retrieve a generic engine schema",
+      "category": "Generic Engine Schema",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve a generic engine schema",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/generic_engine_schemas/{id}",
+        "alias_endpoint": "/rossum/v1/generic_engine_schemas/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#retrieve-a-generic-engine-schema"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__hooks___post": {
+      "provider_intent": "rossum__v1__hooks___post",
+      "provider_alias_intent": "/v1/hooks",
+      "text": "Create a new hook",
+      "category": "Hook",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new hook",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/hooks",
+        "alias_endpoint": "/rossum/v1/hooks",
+        "api_ref": "https://elis.rossum.ai/api/docs/#create-a-new-hook"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__hooks__logs___post": {
+      "provider_intent": "rossum__v1__hooks__logs___post",
+      "provider_alias_intent": "/v1/hooks/logs",
+      "text": "List Hook Call Logs",
+      "category": "Hook",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List Hook Call Logs",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/hooks/logs",
+        "alias_endpoint": "/rossum/v1/hooks/logs",
+        "api_ref": "https://elis.rossum.ai/api/docs/#list-hook-call-logs"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__hooks__create___post": {
+      "provider_intent": "rossum__v1__hooks__create___post",
+      "provider_alias_intent": "/v1/hooks/create",
+      "text": "Create a new hook from hook template",
+      "category": "Hook",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new hook from hook template",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/hooks/create",
+        "alias_endpoint": "/rossum/v1/hooks/create",
+        "api_ref": "https://elis.rossum.ai/api/docs/#create-a-new-hook-from-hook-template"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__hooks__id___post": {
+      "provider_intent": "rossum__v1__hooks__id___post",
+      "provider_alias_intent": "/v1/hooks/id",
+      "text": "Update part of a hook",
+      "category": "Hook",
+      "method": "PATCH",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update part of a hook",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/hooks/{id}",
+        "alias_endpoint": "/rossum/v1/hooks/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#update-part-of-a-hook"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum___v1__hooks__id___post": {
+      "provider_intent": "rossum___v1__hooks__id___post",
+      "provider_alias_intent": " /v1/hooks/id",
+      "text": "Delete a hook",
+      "category": "Hook",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a hook",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api /v1/hooks/{id}",
+        "alias_endpoint": "/rossum /v1/hooks/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#delete-a-hook"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__hooks__id__test___post": {
+      "provider_intent": "rossum__v1__hooks__id__test___post",
+      "provider_alias_intent": "/v1/hooks/id/test",
+      "text": "Test a hook",
+      "category": "Hook",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Test a hook",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/hooks/{id}/test",
+        "alias_endpoint": "/rossum/v1/hooks/id/test",
+        "api_ref": "https://elis.rossum.ai/api/docs/#test-a-hook"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__hooks__id__secrets_keys___post": {
+      "provider_intent": "rossum__v1__hooks__id__secrets_keys___post",
+      "provider_alias_intent": "/v1/hooks/id/secrets_keys",
+      "text": "Manual hook trigger",
+      "category": "Hook",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Manual hook trigger",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/hooks/{id}/secrets_keys",
+        "alias_endpoint": "/rossum/v1/hooks/id/secrets_keys",
+        "api_ref": "https://elis.rossum.ai/api/docs/#manual-hook-trigger"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__hooks__id__generate_payload___post": {
+      "provider_intent": "rossum__v1__hooks__id__generate_payload___post",
+      "provider_alias_intent": "/v1/hooks/id/generate_payload",
+      "text": "Retrieve list of secrets keys",
+      "category": "Hook",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve list of secrets keys",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/hooks/{id}/generate_payload",
+        "alias_endpoint": "/rossum/v1/hooks/id/generate_payload",
+        "api_ref": "https://elis.rossum.ai/api/docs/#manual-hook-trigger"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__hook_templates___post": {
+      "provider_intent": "rossum__v1__hook_templates___post",
+      "provider_alias_intent": "/v1/hook_templates",
+      "text": "List all hook templates",
+      "category": "Hook Template",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all hook templates",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/hook_templates",
+        "alias_endpoint": "/rossum/v1/hook_templates",
+        "api_ref": "https://elis.rossum.ai/api/docs/#list-all-hook-templates"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__hook_templates__id___post": {
+      "provider_intent": "rossum__v1__hook_templates__id___post",
+      "provider_alias_intent": "/v1/hook_templates/id",
+      "text": "Retrieve a hook template",
+      "category": "Hook Template",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve a hook template",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/hook_templates/{id}",
+        "alias_endpoint": "/rossum/v1/hook_templates/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#retrieve-a-hook-template"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__labels___post": {
+      "provider_intent": "rossum__v1__labels___post",
+      "provider_alias_intent": "/v1/labels",
+      "text": "Create a new label",
+      "category": "Label",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new label",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/labels",
+        "alias_endpoint": "/rossum/v1/labels",
+        "api_ref": "https://elis.rossum.ai/api/docs/#create-a-new-label"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__inboxes___post": {
+      "provider_intent": "rossum__v1__inboxes___post",
+      "provider_alias_intent": "/v1/inboxes",
+      "text": "Create a new inbox",
+      "category": "Inbox",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new inbox",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/inboxes",
+        "alias_endpoint": "/rossum/v1/inboxes",
+        "api_ref": "https://elis.rossum.ai/api/docs/#create-a-new-inbox"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__inboxes__id___post": {
+      "provider_intent": "rossum__v1__inboxes__id___post",
+      "provider_alias_intent": "/v1/inboxes/id",
+      "text": "Delete an inbox",
+      "category": "Inbox",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete an inbox",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/inboxes/{id}",
+        "alias_endpoint": "/rossum/v1/inboxes/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#delete-an-inbox"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__labels__id___post": {
+      "provider_intent": "rossum__v1__labels__id___post",
+      "provider_alias_intent": "/v1/labels/id",
+      "text": "Delete a label",
+      "category": "Label",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a label",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/labels/{id}",
+        "alias_endpoint": "/rossum/v1/labels/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#delete-a-label"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__labels__apply___post": {
+      "provider_intent": "rossum__v1__labels__apply___post",
+      "provider_alias_intent": "/v1/labels/apply",
+      "text": "Add/Remove labels on annotations",
+      "category": "Label",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Add/Remove labels on annotations",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/labels/apply",
+        "alias_endpoint": "/rossum/v1/labels/apply",
+        "api_ref": "https://elis.rossum.ai/api/docs/#add-remove-labels-on-annotations"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__organization_groups__organization_group_id__users__user_id___post": {
+      "provider_intent": "rossum__v1__organization_groups__organization_group_id__users__user_id___post",
+      "provider_alias_intent": "/v1/organization_groups/organization_group_id/users/user_id",
+      "text": "Retrieve a User",
+      "category": "Managing memberships",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve a User",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/organization_groups/{organization_group_id}/users/{user_id}",
+        "alias_endpoint": "/rossum/v1/organization_groups/organization_group_id/users/user_id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#managing-memberships"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__organization_groups__id__organizations___post": {
+      "provider_intent": "rossum__v1__organization_groups__id__organizations___post",
+      "provider_alias_intent": "/v1/organization_groups/id/organizations",
+      "text": "List all Users in an Organization group",
+      "category": "Managing memberships",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all Users in an Organization group",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/organization_groups/{id}/organizations",
+        "alias_endpoint": "/rossum/v1/organization_groups/id/organizations",
+        "api_ref": "https://elis.rossum.ai/api/docs/#managing-memberships"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__organization_groups__organization_group_id__workspaces__workspace_id___post": {
+      "provider_intent": "rossum__v1__organization_groups__organization_group_id__workspaces__workspace_id___post",
+      "provider_alias_intent": "/v1/organization_groups/organization_group_id/workspaces/workspace_id",
+      "text": "Retrieve a Workspace",
+      "category": "Managing memberships",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve a Workspace",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/organization_groups/{organization_group_id}/workspaces/{workspace_id}",
+        "alias_endpoint": "/rossum/v1/organization_groups/organization_group_id/workspaces/workspace_id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#managing-memberships"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__organization_groups__id__workspaces___post": {
+      "provider_intent": "rossum__v1__organization_groups__id__workspaces___post",
+      "provider_alias_intent": "/v1/organization_groups/id/workspaces",
+      "text": "List all Workspaces in an Organization group",
+      "category": "Managing memberships",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all Workspaces in an Organization group",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/organization_groups/{id}/workspaces",
+        "alias_endpoint": "/rossum/v1/organization_groups/id/workspaces",
+        "api_ref": "https://elis.rossum.ai/api/docs/#managing-memberships"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__organization_groups__id__queues___post": {
+      "provider_intent": "rossum__v1__organization_groups__id__queues___post",
+      "provider_alias_intent": "/v1/organization_groups/id/queues",
+      "text": "List all Queues in an Organization group",
+      "category": "Managing memberships",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all Queues in an Organization group",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/organization_groups/{id}/queues",
+        "alias_endpoint": "/rossum/v1/organization_groups/id/queues",
+        "api_ref": "https://elis.rossum.ai/api/docs/#managing-memberships"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__organization_groups__id__memberships___post": {
+      "provider_intent": "rossum__v1__organization_groups__id__memberships___post",
+      "provider_alias_intent": "/v1/organization_groups/id/memberships",
+      "text": "Create new membership",
+      "category": "Membership",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create new membership",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/organization_groups/{id}/memberships",
+        "alias_endpoint": "/rossum/v1/organization_groups/id/memberships",
+        "api_ref": "https://elis.rossum.ai/api/docs/#create-new-membership"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__organization_groups__id__memberships__id___post": {
+      "provider_intent": "rossum__v1__organization_groups__id__memberships__id___post",
+      "provider_alias_intent": "/v1/organization_groups/id/memberships/id",
+      "text": "Delete membership",
+      "category": "Membership",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete membership",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/organization_groups/{id}/memberships/{id}",
+        "alias_endpoint": "/rossum/v1/organization_groups/id/memberships/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#delete-membership"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__notes___post": {
+      "provider_intent": "rossum__v1__notes___post",
+      "provider_alias_intent": "/v1/notes",
+      "text": "Create a new note",
+      "category": "Note",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new note",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/notes",
+        "alias_endpoint": "/rossum/v1/notes",
+        "api_ref": "https://elis.rossum.ai/api/docs/#create-a-new-note"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__notes__id___post": {
+      "provider_intent": "rossum__v1__notes__id___post",
+      "provider_alias_intent": "/v1/notes/id",
+      "text": "Delete a note",
+      "category": "Note",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a note",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/notes/{id}",
+        "alias_endpoint": "/rossum/v1/notes/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#delete-a-note"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__organizations__create___post": {
+      "provider_intent": "rossum__v1__organizations__create___post",
+      "provider_alias_intent": "/v1/organizations/create",
+      "text": "Create new organization",
+      "category": "Organization",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create new organization",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/organizations/create",
+        "alias_endpoint": "/rossum/v1/organizations/create",
+        "api_ref": "https://elis.rossum.ai/api/docs/#delete-a-note"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__organizations__id__limits___post": {
+      "provider_intent": "rossum__v1__organizations__id__limits___post",
+      "provider_alias_intent": "/v1/organizations/id/limits",
+      "text": "Organization limits",
+      "category": "Organization",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Organization limits",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/organizations/{id}/limits",
+        "alias_endpoint": "/rossum/v1/organizations/id/limits",
+        "api_ref": "https://elis.rossum.ai/api/docs/#organization-limits"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__organizations___post": {
+      "provider_intent": "rossum__v1__organizations___post",
+      "provider_alias_intent": "/v1/organizations",
+      "text": "Retrieve all membership organizations",
+      "category": "Organization",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve all membership organizations",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/organizations",
+        "alias_endpoint": "/rossum/v1/organizations",
+        "api_ref": "https://elis.rossum.ai/api/docs/#retrieve-all-membership-organizations"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__organizations__id___post": {
+      "provider_intent": "rossum__v1__organizations__id___post",
+      "provider_alias_intent": "/v1/organizations/id",
+      "text": "Retrieve an organization",
+      "category": "Organization",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve an organization",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/organizations/{id}",
+        "alias_endpoint": "/rossum/v1/organizations/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#retrieve-an-organization"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__auth__membership_token___post": {
+      "provider_intent": "rossum__v1__auth__membership_token___post",
+      "provider_alias_intent": "/v1/auth/membership_token",
+      "text": "Generate a token to access the organization",
+      "category": "Organization",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Generate a token to access the organization",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/auth/membership_token",
+        "alias_endpoint": "/rossum/v1/auth/membership_token",
+        "api_ref": "https://elis.rossum.ai/api/docs/#generate-a-token-to-access-the-organization"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__organizations__id__billing_stats___post": {
+      "provider_intent": "rossum__v1__organizations__id__billing_stats___post",
+      "provider_alias_intent": "/v1/organizations/id/billing_stats",
+      "text": "Billing for organization",
+      "category": "Organization",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Billing for organization",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/organizations/{id}/billing_stats",
+        "alias_endpoint": "/rossum/v1/organizations/id/billing_stats",
+        "api_ref": "https://elis.rossum.ai/api/docs/#billing-for-organization"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__organization_groups___post": {
+      "provider_intent": "rossum__v1__organization_groups___post",
+      "provider_alias_intent": "/v1/organization_groups",
+      "text": "Create a new organization group",
+      "category": "Organization group",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new organization group",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/organization_groups",
+        "alias_endpoint": "/rossum/v1/organization_groups",
+        "api_ref": "https://elis.rossum.ai/api/docs/#create-a-new-organization-group"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__organization_groups__id___post": {
+      "provider_intent": "rossum__v1__organization_groups__id___post",
+      "provider_alias_intent": "/v1/organization_groups/id",
+      "text": "Retrieve an organization group",
+      "category": "Organization group",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve an organization group",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/organization_groups/{id}",
+        "alias_endpoint": "/rossum/v1/organization_groups/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#retrieve-an-organization-group"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__organization_groups__id__billing_stats___post": {
+      "provider_intent": "rossum__v1__organization_groups__id__billing_stats___post",
+      "provider_alias_intent": "/v1/organization_groups/id/billing_stats",
+      "text": "Billing stats for organization group",
+      "category": "Organization group",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Billing stats for organization group",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/organization_groups/{id}/billing_stats",
+        "alias_endpoint": "/rossum/v1/organization_groups/id/billing_stats",
+        "api_ref": "https://elis.rossum.ai/api/docs/#billing-for-organization-group"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__pages___post": {
+      "provider_intent": "rossum__v1__pages___post",
+      "provider_alias_intent": "/v1/pages",
+      "text": "List all pages",
+      "category": "Page",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all pages",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/pages",
+        "alias_endpoint": "/rossum/v1/pages",
+        "api_ref": "https://elis.rossum.ai/api/docs/#list-all-pages"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__pages__id___post": {
+      "provider_intent": "rossum__v1__pages__id___post",
+      "provider_alias_intent": "/v1/pages/id",
+      "text": "Retrieve a page",
+      "category": "Page",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve a page",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/pages/{id}",
+        "alias_endpoint": "/rossum/v1/pages/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#retrieve-a-page"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__questions___post": {
+      "provider_intent": "rossum__v1__questions___post",
+      "provider_alias_intent": "/v1/questions",
+      "text": "List all questions",
+      "category": "Question",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all questions",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/questions",
+        "alias_endpoint": "/rossum/v1/questions",
+        "api_ref": "https://elis.rossum.ai/api/docs/#list-all-questions"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__questions__uuid___post": {
+      "provider_intent": "rossum__v1__questions__uuid___post",
+      "provider_alias_intent": "/v1/questions/uuid",
+      "text": "Retrieve a question",
+      "category": "Question",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve a question",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/questions/{uuid}",
+        "alias_endpoint": "/rossum/v1/questions/uuid",
+        "api_ref": "https://elis.rossum.ai/api/docs/#retrieve-a-question"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__queues__id__export_or_post___v1__queues__id__export___post": {
+      "provider_intent": "rossum__v1__queues__id__export_or_post___v1__queues__id__export___post",
+      "provider_alias_intent": "/v1/queues/id/export or post /v1/queues/id/export",
+      "text": "Export annotations",
+      "category": "Queue",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Export annotations",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/queues/{id}/export or POST /v1/queues/{id}/export",
+        "alias_endpoint": "/rossum/v1/queues/id/export or post /v1/queues/id/export",
+        "api_ref": "https://elis.rossum.ai/api/docs/#export-annotations"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__queues__id__suggested_recipients___post": {
+      "provider_intent": "rossum__v1__queues__id__suggested_recipients___post",
+      "provider_alias_intent": "/v1/queues/id/suggested_recipients",
+      "text": "Get suggested email recipients",
+      "category": "Queue",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get suggested email recipients",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/queues/{id}/suggested_recipients",
+        "alias_endpoint": "/rossum/v1/queues/id/suggested_recipients",
+        "api_ref": "https://elis.rossum.ai/api/docs/#get-suggested-email-recipients-2"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__queues___post": {
+      "provider_intent": "rossum__v1__queues___post",
+      "provider_alias_intent": "/v1/queues",
+      "text": "Create new queue",
+      "category": "Queue",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create new queue",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/queues",
+        "alias_endpoint": "/rossum/v1/queues",
+        "api_ref": "https://elis.rossum.ai/api/docs/#create-new-queue"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__queues__id___post": {
+      "provider_intent": "rossum__v1__queues__id___post",
+      "provider_alias_intent": "/v1/queues/id",
+      "text": "Delete a queue",
+      "category": "Queue",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a queue",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/queues/{id}",
+        "alias_endpoint": "/rossum/v1/queues/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#delete-a-queue"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__queues__id__duplicate___post": {
+      "provider_intent": "rossum__v1__queues__id__duplicate___post",
+      "provider_alias_intent": "/v1/queues/id/duplicate",
+      "text": "Duplicate a queue",
+      "category": "Queue",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Duplicate a queue",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/queues/{id}/duplicate",
+        "alias_endpoint": "/rossum/v1/queues/id/duplicate",
+        "api_ref": "https://elis.rossum.ai/api/docs/#duplicate-a-queue"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__queues__id__next___post": {
+      "provider_intent": "rossum__v1__queues__id__next___post",
+      "provider_alias_intent": "/v1/queues/id/next",
+      "text": "Start annotation",
+      "category": "Queue",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Start annotation",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/queues/{id}/next",
+        "alias_endpoint": "/rossum/v1/queues/id/next",
+        "api_ref": "https://elis.rossum.ai/api/docs/#start-annotation-2"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__queues__id__related_objects_counts___post": {
+      "provider_intent": "rossum__v1__queues__id__related_objects_counts___post",
+      "provider_alias_intent": "/v1/queues/id/related_objects_counts",
+      "text": "Get counts of related objects",
+      "category": "Queue",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get counts of related objects",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/queues/{id}/related_objects_counts",
+        "alias_endpoint": "/rossum/v1/queues/id/related_objects_counts",
+        "api_ref": "https://elis.rossum.ai/api/docs/#get-counts-of-related-objects"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__relations___post": {
+      "provider_intent": "rossum__v1__relations___post",
+      "provider_alias_intent": "/v1/relations",
+      "text": "Create a new relation",
+      "category": "Relation",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new relation",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/relations",
+        "alias_endpoint": "/rossum/v1/relations",
+        "api_ref": "https://elis.rossum.ai/api/docs/#create-a-new-relation"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__relations__id___post": {
+      "provider_intent": "rossum__v1__relations__id___post",
+      "provider_alias_intent": "/v1/relations/id",
+      "text": "Delete a relation",
+      "category": "Relation",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a relation",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/relations/{id}",
+        "alias_endpoint": "/rossum/v1/relations/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#delete-a-relation"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__schemas__validate___post": {
+      "provider_intent": "rossum__v1__schemas__validate___post",
+      "provider_alias_intent": "/v1/schemas/validate",
+      "text": "Validate a schema",
+      "category": "Schema",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Validate a schema",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/schemas/validate",
+        "alias_endpoint": "/rossum/v1/schemas/validate",
+        "api_ref": "https://elis.rossum.ai/api/docs/#validate-a-schema"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__schemas___post": {
+      "provider_intent": "rossum__v1__schemas___post",
+      "provider_alias_intent": "/v1/schemas",
+      "text": "Create a new schema",
+      "category": "Schema",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new schema",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/schemas",
+        "alias_endpoint": "/rossum/v1/schemas",
+        "api_ref": "https://elis.rossum.ai/api/docs/#create-a-new-schema"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__schemas__id___post": {
+      "provider_intent": "rossum__v1__schemas__id___post",
+      "provider_alias_intent": "/v1/schemas/id",
+      "text": "Update a schema",
+      "category": "Schema",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update a schema",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/schemas/{id}",
+        "alias_endpoint": "/rossum/v1/schemas/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#update-a-schema"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__suggested_edits___post": {
+      "provider_intent": "rossum__v1__suggested_edits___post",
+      "provider_alias_intent": "/v1/suggested_edits",
+      "text": "Create a new suggested edit",
+      "category": "Suggested edit",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new suggested edit",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/suggested_edits",
+        "alias_endpoint": "/rossum/v1/suggested_edits",
+        "api_ref": "https://elis.rossum.ai/api/docs/#create-a-new-suggested-edit"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__suggested_edits__id___post": {
+      "provider_intent": "rossum__v1__suggested_edits__id___post",
+      "provider_alias_intent": "/v1/suggested_edits/id",
+      "text": "Update part of a suggested edit",
+      "category": "Suggested edit",
+      "method": "PATCH",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update part of a suggested edit",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/suggested_edits/{id}",
+        "alias_endpoint": "/rossum/v1/suggested_edits/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#update-part-of-a-suggested-edit"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum___v1__suggested_edits__id___post": {
+      "provider_intent": "rossum___v1__suggested_edits__id___post",
+      "provider_alias_intent": " /v1/suggested_edits/id",
+      "text": "Delete a suggested edit",
+      "category": "Suggested edit",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a suggested edit",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api /v1/suggested_edits/{id}",
+        "alias_endpoint": "/rossum /v1/suggested_edits/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#delete-a-suggested-edit"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__surveys___post": {
+      "provider_intent": "rossum__v1__surveys___post",
+      "provider_alias_intent": "/v1/surveys",
+      "text": "List all surveys",
+      "category": "Survey",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all surveys",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/surveys",
+        "alias_endpoint": "/rossum/v1/surveys",
+        "api_ref": "https://elis.rossum.ai/api/docs/#list-all-surveys"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__surveys__from_template___post": {
+      "provider_intent": "rossum__v1__surveys__from_template___post",
+      "provider_alias_intent": "/v1/surveys/from_template",
+      "text": "Create new survey object",
+      "category": "Survey",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create new survey object",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/surveys/from_template",
+        "alias_endpoint": "/rossum/v1/surveys/from_template",
+        "api_ref": "https://elis.rossum.ai/api/docs/#create-new-survey-object"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__surveys__id___post": {
+      "provider_intent": "rossum__v1__surveys__id___post",
+      "provider_alias_intent": "/v1/surveys/id",
+      "text": "Delete a survey",
+      "category": "Survey",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a survey",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/surveys/{id}",
+        "alias_endpoint": "/rossum/v1/surveys/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#delete-a-survey"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__triggers___post": {
+      "provider_intent": "rossum__v1__triggers___post",
+      "provider_alias_intent": "/v1/triggers",
+      "text": "Create new trigger object",
+      "category": "Trigger",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create new trigger object",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/triggers",
+        "alias_endpoint": "/rossum/v1/triggers",
+        "api_ref": "https://elis.rossum.ai/api/docs/#create-new-trigger-object"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__triggers__id___post": {
+      "provider_intent": "rossum__v1__triggers__id___post",
+      "provider_alias_intent": "/v1/triggers/id",
+      "text": "Delete a trigger",
+      "category": "Trigger",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a trigger",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/triggers/{id}",
+        "alias_endpoint": "/rossum/v1/triggers/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#delete-a-trigger"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__users___post": {
+      "provider_intent": "rossum__v1__users___post",
+      "provider_alias_intent": "/v1/users",
+      "text": "Create new user",
+      "category": "User",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create new user",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/users",
+        "alias_endpoint": "/rossum/v1/users",
+        "api_ref": "https://elis.rossum.ai/api/docs/#create-new-user"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__users__id___post": {
+      "provider_intent": "rossum__v1__users__id___post",
+      "provider_alias_intent": "/v1/users/id",
+      "text": "Deleting a user",
+      "category": "User",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Deleting a user",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/users/{id}",
+        "alias_endpoint": "/rossum/v1/users/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#deleting-a-user"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__auth__user___post": {
+      "provider_intent": "rossum__v1__auth__user___post",
+      "provider_alias_intent": "/v1/auth/user",
+      "text": "Retrieve currently authorized user",
+      "category": "User",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve currently authorized user",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/auth/user",
+        "alias_endpoint": "/rossum/v1/auth/user",
+        "api_ref": "https://elis.rossum.ai/api/docs/#retrieve-currently-authorized-user"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__auth__password__change___post": {
+      "provider_intent": "rossum__v1__auth__password__change___post",
+      "provider_alias_intent": "/v1/auth/password/change",
+      "text": "Change password",
+      "category": "User",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Change password",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/auth/password/change",
+        "alias_endpoint": "/rossum/v1/auth/password/change",
+        "api_ref": "https://elis.rossum.ai/api/docs/#password"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__auth__password__reset___post": {
+      "provider_intent": "rossum__v1__auth__password__reset___post",
+      "provider_alias_intent": "/v1/auth/password/reset",
+      "text": "Change password",
+      "category": "User",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Change password",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/auth/password/reset",
+        "alias_endpoint": "/rossum/v1/auth/password/reset",
+        "api_ref": "https://elis.rossum.ai/api/docs/#password"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__groups___post": {
+      "provider_intent": "rossum__v1__groups___post",
+      "provider_alias_intent": "/v1/groups",
+      "text": "List all user roles",
+      "category": "User Role",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all user roles",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/groups",
+        "alias_endpoint": "/rossum/v1/groups",
+        "api_ref": "https://elis.rossum.ai/api/docs/#list-all-user-roles"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__groups__id___post": {
+      "provider_intent": "rossum__v1__groups__id___post",
+      "provider_alias_intent": "/v1/groups/id",
+      "text": "Retrieve a user role",
+      "category": "User Role",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve a user role",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/groups/{id}",
+        "alias_endpoint": "/rossum/v1/groups/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#retrieve-a-user-role"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__workflows___post": {
+      "provider_intent": "rossum__v1__workflows___post",
+      "provider_alias_intent": "/v1/workflows",
+      "text": "List all workflows",
+      "category": "Workflow",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all workflows",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/workflows",
+        "alias_endpoint": "/rossum/v1/workflows",
+        "api_ref": "https://elis.rossum.ai/api/docs/#list-all-workflows"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__workflows__id___post": {
+      "provider_intent": "rossum__v1__workflows__id___post",
+      "provider_alias_intent": "/v1/workflows/id",
+      "text": "Retrieve a workflow",
+      "category": "Workflow",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve a workflow",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/workflows/{id}",
+        "alias_endpoint": "/rossum/v1/workflows/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#list-all-workflow-activities"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__workflow_activities___post": {
+      "provider_intent": "rossum__v1__workflow_activities___post",
+      "provider_alias_intent": "/v1/workflow_activities",
+      "text": "List all workflow activities",
+      "category": "Workflow activity",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all workflow activities",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/workflow_activities",
+        "alias_endpoint": "/rossum/v1/workflow_activities",
+        "api_ref": "https://elis.rossum.ai/api/docs/#retrieve-a-workflow-activity"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__workflow_activities__id___post": {
+      "provider_intent": "rossum__v1__workflow_activities__id___post",
+      "provider_alias_intent": "/v1/workflow_activities/id",
+      "text": "Retrieve a workflow activity",
+      "category": "Workflow activity",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve a workflow activity",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/workflow_activities/{id}",
+        "alias_endpoint": "/rossum/v1/workflow_activities/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#list-all-workflow-runs"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__workflow_runs___post": {
+      "provider_intent": "rossum__v1__workflow_runs___post",
+      "provider_alias_intent": "/v1/workflow_runs",
+      "text": "List all workflow runs",
+      "category": "Workflow run",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all workflow runs",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/workflow_runs",
+        "alias_endpoint": "/rossum/v1/workflow_runs",
+        "api_ref": "https://elis.rossum.ai/api/docs/#retrieve-a-workflow-run"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum___v1__workflow_runs__id___post": {
+      "provider_intent": "rossum___v1__workflow_runs__id___post",
+      "provider_alias_intent": " /v1/workflow_runs/id",
+      "text": "Retrieve a workflow run",
+      "category": "Workflow run",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve a workflow run",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api /v1/workflow_runs/{id}",
+        "alias_endpoint": "/rossum /v1/workflow_runs/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#retrieve-a-workflow-run"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__workflow_runs__id__reset___post": {
+      "provider_intent": "rossum__v1__workflow_runs__id__reset___post",
+      "provider_alias_intent": "/v1/workflow_runs/id/reset",
+      "text": "Reset workflow run",
+      "category": "Workflow run",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Reset workflow run",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/workflow_runs/{id}/reset",
+        "alias_endpoint": "/rossum/v1/workflow_runs/id/reset",
+        "api_ref": "https://elis.rossum.ai/api/docs/#reset-workflow-run"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__workflow_steps___post": {
+      "provider_intent": "rossum__v1__workflow_steps___post",
+      "provider_alias_intent": "/v1/workflow_steps",
+      "text": "List all workflow steps",
+      "category": "Workflow step",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all workflow steps",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/workflow_steps",
+        "alias_endpoint": "/rossum/v1/workflow_steps",
+        "api_ref": "https://elis.rossum.ai/api/docs/#list-all-workflow-steps"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__workflow_steps__id___post": {
+      "provider_intent": "rossum__v1__workflow_steps__id___post",
+      "provider_alias_intent": "/v1/workflow_steps/id",
+      "text": "Retrieve a workflow step",
+      "category": "Workflow step",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve a workflow step",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/workflow_steps/{id}",
+        "alias_endpoint": "/rossum/v1/workflow_steps/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#retrieve-a-workflow-step"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__workspaces___post": {
+      "provider_intent": "rossum__v1__workspaces___post",
+      "provider_alias_intent": "/v1/workspaces",
+      "text": "Create a new workspace",
+      "category": "Workspace",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new workspace",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/workspaces",
+        "alias_endpoint": "/rossum/v1/workspaces",
+        "api_ref": "https://elis.rossum.ai/api/docs/#create-a-new-workspace"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "rossum__v1__workspaces__id___post": {
+      "provider_intent": "rossum__v1__workspaces__id___post",
+      "provider_alias_intent": "/v1/workspaces/id",
+      "text": "Update part of a workspace",
+      "category": "Workspace",
+      "method": "PATCH",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update part of a workspace",
+        "rate_limit": [],
+        "api_endpoint": "https://<example>.rossum.app/api/v1/workspaces/{id}",
+        "alias_endpoint": "/rossum/v1/workspaces/id",
+        "api_ref": "https://elis.rossum.ai/api/docs/#update-part-of-a-workspace"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

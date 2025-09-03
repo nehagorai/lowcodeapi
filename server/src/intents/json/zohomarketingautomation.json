@@ -1,0 +1,132 @@
+{
+  "app": {
+    "title": "zohomarketingautomation API",
+    "description": "",
+    "api_base": "/zohomarketingautomation",
+    "copyright": "",
+    "copyright_year": "",
+    "contact_email": ""
+  },
+  "category": {
+    "All": ""
+  },
+  "routes": {
+    "get_open_journeys": {
+      "provider_intent": "get_open_journeys",
+      "provider_alias_intent": "/api/v1/journeys",
+      "text": "Get open journeys",
+      "category": "Journey Management API",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Open journeys will be open to leads moved from different sources",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/journeys",
+        "alias_endpoint": "/zohomarketingautomation/api/v1/journeys",
+        "api_ref": "https://www.zoho.com/marketingautomation/help/developers/get-open-journeys.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoMarketingAutomation.journey.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_topics": {
+      "provider_intent": "get_topics",
+      "provider_alias_intent": "/api/v1/topics",
+      "text": "Get Topics",
+      "category": "Topic Management API",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Use this API to get a list of all the topics available in your Zoho Marketing Automation account",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/topics",
+        "alias_endpoint": "/zohomarketingautomation/api/v1/topics",
+        "api_ref": "https://www.zoho.com/marketingautomation/help/developers/get-topics.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoMarketingAutomation.lead.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_all_domains": {
+      "provider_intent": "get_all_domains",
+      "provider_alias_intent": "/api/v1/domains",
+      "text": "Get all domains",
+      "category": "Web Assistant APIs",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Using this API, you can get the list of all domains",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/domains",
+        "alias_endpoint": "/zohomarketingautomation/api/v1/domains",
+        "api_ref": "https://www.zoho.com/marketingautomation/help/developers/get-domains.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoMarketingAutomation.wa.READ",
+      "subdomain": {},
+      "payload_type": ""
+    }
+  }
+}

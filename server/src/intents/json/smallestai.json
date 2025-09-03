@@ -1,0 +1,104 @@
+{
+  "routes": {
+    "smallestai__awaaz__get_server_state___post": {
+      "provider_intent": "smallestai__awaaz__get_server_state___post",
+      "provider_alias_intent": "/awaaz/get_server_state",
+      "text": "Get the state of the server/start the server",
+      "category": "Get Server State",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "start_server": {
+          "type": "boolean",
+          "text": "Give False if you just want to get the server state",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Get the state of the server/start the server",
+        "rate_limit": [],
+        "api_endpoint": "https://api.smallest.ai/awaaz/get_server_state",
+        "alias_endpoint": "/smallestai/awaaz/get_server_state",
+        "api_ref": "https://awaaz-docs.smallest.ai/get_server_state"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "smallestai__awaaz__get_speech___post": {
+      "provider_intent": "smallestai__awaaz__get_speech___post",
+      "provider_alias_intent": "/awaaz/get_speech",
+      "text": "Get speech from given text",
+      "category": "Get Speech",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "text": {
+          "type": "string",
+          "text": "The text to be synthesized into speech"
+        },
+        "voice_id": {
+          "type": "string",
+          "text": "The ID of the voice to be used for synthesis"
+        },
+        "speed": {
+          "type": "number",
+          "text": "The speed of the speech, ideally between 0.5 and 2"
+        },
+        "add_wav_header": {
+          "type": "boolean",
+          "text": "Whether to return the wav file with a header or without a header",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "sample_rate": {
+          "type": "number",
+          "text": "Sample rate of the output wav file"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Get speech from given text",
+        "rate_limit": [],
+        "api_endpoint": "https://api.smallest.ai/awaaz/get_speech",
+        "alias_endpoint": "/smallestai/awaaz/get_speech",
+        "api_ref": "https://awaaz-docs.smallest.ai/get_speech"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "token"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

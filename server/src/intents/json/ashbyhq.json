@@ -1,0 +1,79 @@
+{
+  "app": {
+    "title": "Ashby API",
+    "description": "",
+    "api_base": "/ashby",
+    "copyright": "",
+    "copyright_year": "",
+    "contact_email": ""
+  },
+  "category": {
+    "All": ""
+  },
+  "routes": {
+    "retrieve_information_about_the_api_key_being_used_to_make_the_request.": {
+      "provider_intent": "retrieve_information_about_the_api_key_being_used_to_make_the_request.",
+      "provider_alias_intent": "/apikey.info",
+      "text": "Retrieve information about the API key being used to make the request.",
+      "category": "API key",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1.0",
+        "auth": [],
+        "description": "Retrieve information about the API key being used to make the request.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.ashbyhq.com/apiKey.info",
+        "alias_endpoint": "/ashby/apikey.info",
+        "api_ref": "https://developers.ashbyhq.com/reference/apikeyinfo"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "api_key",
+          "password": ""
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "fetch_application_details_by_application_id": {
+      "provider_intent": "fetch_application_details_by_application_id",
+      "provider_alias_intent": "/application.info",
+      "text": "Fetch application details by application id",
+      "category": "Application",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "Fetch application details by application id or by submitted form instance id (which is return by the applicationForm.submit endpoint).",
+        "rate_limit": [],
+        "api_endpoint": "https://api.ashbyhq.com/application.info",
+        "alias_endpoint": "/ashby/application.info",
+        "api_ref": "https://developers.ashbyhq.com/reference/applicationinfo"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "api_key",
+          "password": ""
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

@@ -1,0 +1,1792 @@
+{
+  "routes": {
+    "unsplash__collections___get": {
+      "provider_intent": "unsplash__collections___get",
+      "provider_alias_intent": "/collections",
+      "text": "List collections",
+      "category": "Collections",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "number",
+          "text": "Page number to retrieve",
+          "enum": [
+            "default-1"
+          ]
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Number of items per page",
+          "enum": [
+            "default-10"
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "List collections",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/collections",
+        "alias_endpoint": "/collections",
+        "api_ref": "https://unsplash.com/documentation#list-collections"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__collections__id___get": {
+      "provider_intent": "unsplash__collections__id___get",
+      "provider_alias_intent": "/collections/id",
+      "text": "Get a collection",
+      "category": "Collections",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The collections’s ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The collections’s ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Get a collection",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/collections/:id",
+        "alias_endpoint": "/collections/id",
+        "api_ref": "https://unsplash.com/documentation#get-a-collection"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__collections__id__photos___get": {
+      "provider_intent": "unsplash__collections__id__photos___get",
+      "provider_alias_intent": "/collections/id/photos",
+      "text": "Get a collection's photos",
+      "category": "Collections",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The collections’s ID",
+          "required": true
+        },
+        "page": {
+          "type": "number",
+          "text": "Page number to retrieve",
+          "enum": [
+            "default-1"
+          ]
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Number of items per page",
+          "enum": [
+            "default-10"
+          ]
+        },
+        "orientation": {
+          "type": "string",
+          "text": "Filter by photo orientation"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The collections’s ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Get a collection's photos",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/collections/:id/photos",
+        "alias_endpoint": "/collections/id/photos",
+        "api_ref": "https://unsplash.com/documentation#get-a-collections-photos"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__collections__id__related___get": {
+      "provider_intent": "unsplash__collections__id__related___get",
+      "provider_alias_intent": "/collections/id/related",
+      "text": "List a collection's related collections",
+      "category": "Collections",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The collections’s ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The collections’s ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "List a collection's related collections",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/collections/:id/related",
+        "alias_endpoint": "/collections/id/related",
+        "api_ref": "https://unsplash.com/documentation#list-a-collections-related-collections"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__collections___post": {
+      "provider_intent": "unsplash__collections___post",
+      "provider_alias_intent": "/collections",
+      "text": "Create a new collection",
+      "category": "Collections",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "title": {
+          "type": "string",
+          "text": "The title of the collection",
+          "required": true
+        },
+        "description": {
+          "type": "string",
+          "text": "The collection’s description."
+        },
+        "private": {
+          "type": "boolean",
+          "text": "Whether to make this collection private.",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "OAuth is required for this",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/collections",
+        "alias_endpoint": "/collections",
+        "api_ref": "https://unsplash.com/documentation#create-a-new-collection"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__collections__id___put": {
+      "provider_intent": "unsplash__collections__id___put",
+      "provider_alias_intent": "/collections/id",
+      "text": "Update an existing collection",
+      "category": "Collections",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The collections’s ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "title": {
+          "type": "string",
+          "text": "The title of the collection."
+        },
+        "description": {
+          "type": "string",
+          "text": "The collection’s description."
+        },
+        "private": {
+          "type": "string",
+          "text": "Whether to make this collection private."
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The collections’s ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "OAuth is required for this",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/collections/:id",
+        "alias_endpoint": "/collections/id",
+        "api_ref": "https://unsplash.com/documentation#update-an-existing-collection"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__collections__id___delete": {
+      "provider_intent": "unsplash__collections__id___delete",
+      "provider_alias_intent": "/collections/id",
+      "text": "Delete a collection",
+      "category": "Collections",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The collections’s ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The collections’s ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "OAuth is required for this",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/collections/:id",
+        "alias_endpoint": "/collections/id",
+        "api_ref": "https://unsplash.com/documentation#delete-a-collection"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__collections__collection_id__add___post": {
+      "provider_intent": "unsplash__collections__collection_id__add___post",
+      "provider_alias_intent": "/collections/collection_id/add",
+      "text": "Add a photo to a collection",
+      "category": "Collections",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "collection_id": {
+          "type": "string",
+          "text": "The collection’s ID.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "photo_id": {
+          "type": "string",
+          "text": "The photo’s ID.",
+          "required": true
+        }
+      },
+      "path": {
+        "collection_id": {
+          "type": "string",
+          "text": "The collection’s ID.",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "OAuth is required for this",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/collections/:collection_id/add",
+        "alias_endpoint": "/collections/collection_id/add",
+        "api_ref": "https://unsplash.com/documentation#add-a-photo-to-a-collection"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__collections__collection_id__remove___get": {
+      "provider_intent": "unsplash__collections__collection_id__remove___get",
+      "provider_alias_intent": "/collections/collection_id/remove",
+      "text": "Remove a photo from a collection",
+      "category": "Collections",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "collection_id": {
+          "type": "string",
+          "text": "The collection’s ID",
+          "required": true
+        },
+        "photo_id": {
+          "type": "string",
+          "text": "The photo’s ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "collection_id": {
+          "type": "string",
+          "text": "The collection’s ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "OAuth is required for this",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/collections/:collection_id/remove",
+        "alias_endpoint": "/collections/collection_id/remove",
+        "api_ref": "https://unsplash.com/documentation#remove-a-photo-from-a-collection"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__me___get": {
+      "provider_intent": "unsplash__me___get",
+      "provider_alias_intent": "/me",
+      "text": "Get the users profile",
+      "category": "Current user",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "OAuth is required for this",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/me",
+        "alias_endpoint": "/me",
+        "api_ref": "https://unsplash.com/documentation#get-the-users-profile"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__me___put": {
+      "provider_intent": "unsplash__me___put",
+      "provider_alias_intent": "/me",
+      "text": "Update the current user's profile",
+      "category": "Current user",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "username": {
+          "type": "string",
+          "text": "Username"
+        },
+        "first_name": {
+          "type": "string",
+          "text": "First_name"
+        },
+        "last_name": {
+          "type": "string",
+          "text": "Last_name"
+        },
+        "email": {
+          "type": "string",
+          "text": "Email"
+        },
+        "url": {
+          "type": "string",
+          "text": "Portfolio/personal URL"
+        },
+        "location": {
+          "type": "string",
+          "text": "Location"
+        },
+        "bio": {
+          "type": "string",
+          "text": "About or bio"
+        },
+        "instagram_username": {
+          "type": "string",
+          "text": "Instagram username"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "OAuth is required for this",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/me",
+        "alias_endpoint": "/me",
+        "api_ref": "https://unsplash.com/documentation#update-the-current-users-profile"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__photos___get": {
+      "provider_intent": "unsplash__photos___get",
+      "provider_alias_intent": "/photos",
+      "text": "List photos",
+      "category": "Photos",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "string",
+          "text": "Page number to retrieve"
+        },
+        "per_page": {
+          "type": "string",
+          "text": "Number of items per page"
+        },
+        "order_by": {
+          "type": "string",
+          "text": "sort the photos"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "List photos",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/photos",
+        "alias_endpoint": "/photos",
+        "api_ref": "https://unsplash.com/documentation#list-photos"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__photos__id___get": {
+      "provider_intent": "unsplash__photos__id___get",
+      "provider_alias_intent": "/photos/id",
+      "text": "Get a photo",
+      "category": "Photos",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The photo’s ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The photo’s ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Get a photo",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/photos/:id",
+        "alias_endpoint": "/photos/id",
+        "api_ref": "https://unsplash.com/documentation#get-a-photo"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__photos__random___get": {
+      "provider_intent": "unsplash__photos__random___get",
+      "provider_alias_intent": "/photos/random",
+      "text": "Get a random photo",
+      "category": "Photos",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "collections": {
+          "type": "string",
+          "text": "Public collection ID(‘s) to filter selection"
+        },
+        "topics": {
+          "type": "string",
+          "text": "Public topic ID(‘s) to filter selection"
+        },
+        "username": {
+          "type": "string",
+          "text": "Limit selection to a single user",
+          "enum": [
+            "string"
+          ]
+        },
+        "orientation": {
+          "type": "string",
+          "text": "Filter by photo orientation"
+        },
+        "content_filter": {
+          "type": "string",
+          "text": "Limit results by content safety"
+        },
+        "count": {
+          "type": "number",
+          "text": "The number of photos to return",
+          "enum": [
+            "30)"
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Get a random photo",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/photos/random",
+        "alias_endpoint": "/photos/random",
+        "api_ref": "https://unsplash.com/documentation#get-a-random-photo"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__photos__id__statistics___get": {
+      "provider_intent": "unsplash__photos__id__statistics___get",
+      "provider_alias_intent": "/photos/id/statistics",
+      "text": "Get a photo's statistics",
+      "category": "Photos",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The public id of the photo",
+          "required": true
+        },
+        "resolution": {
+          "type": "string",
+          "text": "The frequency of the stats"
+        },
+        "quantity": {
+          "type": "number",
+          "text": "The amount of for each stat"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The public id of the photo",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Get a photo's statistics",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/photos/:id/statistics",
+        "alias_endpoint": "/photos/id/statistics",
+        "api_ref": "https://unsplash.com/documentation#get-a-photos-statistics"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__photos__id__download___get": {
+      "provider_intent": "unsplash__photos__id__download___get",
+      "provider_alias_intent": "/photos/id/download",
+      "text": "Track a photo download",
+      "category": "Photos",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The photo’s ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The photo’s ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Track a photo download",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/photos/:id/download",
+        "alias_endpoint": "/photos/id/download",
+        "api_ref": "https://unsplash.com/documentation#track-a-photo-download"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__photos__id___put": {
+      "provider_intent": "unsplash__photos__id___put",
+      "provider_alias_intent": "/photos/id",
+      "text": "Update a photo",
+      "category": "Photos",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The photo’s ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "description": {
+          "type": "string",
+          "text": "The photo’s description"
+        },
+        "show_on_profile": {
+          "type": "string",
+          "text": "The photo’s visibility"
+        },
+        "tags": {
+          "type": "string",
+          "text": "The photo’s tags"
+        },
+        "location[latitude]": {
+          "type": "number",
+          "text": "The photo location’s latitude rounded to 6 decimals"
+        },
+        "location[longitude]": {
+          "type": "number",
+          "text": "The photo location’s longitude rounded to 6 decimal"
+        },
+        "location[name]": {
+          "type": "string",
+          "text": "The photo’s full location string"
+        },
+        "location[city]": {
+          "type": "string",
+          "text": "The photo location’s city"
+        },
+        "location[country]": {
+          "type": "string",
+          "text": "The photo location’s country"
+        },
+        "exif[make]": {
+          "type": "string",
+          "text": "Camera’s brand"
+        },
+        "exif[model]": {
+          "type": "string",
+          "text": "Camera’s model"
+        },
+        "exif[exposure_time]": {
+          "type": "string",
+          "text": "Camera’s exposure time"
+        },
+        "exif[aperture_value]": {
+          "type": "string",
+          "text": "Camera’s aperture value"
+        },
+        "exif[focal_length]": {
+          "type": "number",
+          "text": "Camera’s focal length"
+        },
+        "exif[iso_speed_ratings]": {
+          "type": "string",
+          "text": "Camera’s iso"
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The photo’s ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "OAuth is required for this",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/photos/:id",
+        "alias_endpoint": "/photos/id",
+        "api_ref": "https://unsplash.com/documentation#update-a-photo"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__photos__id__like___post": {
+      "provider_intent": "unsplash__photos__id__like___post",
+      "provider_alias_intent": "/photos/id/like",
+      "text": "Like a photo",
+      "category": "Photos",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The photo’s ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The photo’s ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "OAuth is required for this",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/photos/:id/like",
+        "alias_endpoint": "/photos/id/like",
+        "api_ref": "https://unsplash.com/documentation#like-a-photo"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__photos__id__like___delete": {
+      "provider_intent": "unsplash__photos__id__like___delete",
+      "provider_alias_intent": "/photos/id/like",
+      "text": "Unlike a photo",
+      "category": "Photos",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The photo’s ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The photo’s ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "OAuth is required for this",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/photos/:id/like",
+        "alias_endpoint": "/photos/id/like",
+        "api_ref": "https://unsplash.com/documentation#unlike-a-photo"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__search__photos___get": {
+      "provider_intent": "unsplash__search__photos___get",
+      "provider_alias_intent": "/search/photos",
+      "text": "Search photos",
+      "category": "Search",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "query": {
+          "type": "string",
+          "text": "Search terms."
+        },
+        "page": {
+          "type": "number",
+          "text": "Page number to retrieve",
+          "enum": [
+            "default-1"
+          ]
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Number of items per page",
+          "enum": [
+            "default-10"
+          ]
+        },
+        "order_by": {
+          "type": "string",
+          "text": "How to sort the photos.Valid values are latest and relevant",
+          "enum": [
+            "default- relevant"
+          ]
+        },
+        "collections": {
+          "type": "string",
+          "text": "Collection ID(‘s) to narrow search"
+        },
+        "content_filter": {
+          "type": "string",
+          "text": "Limit results by content safety",
+          "enum": [
+            "default- low"
+          ]
+        },
+        "color": {
+          "type": "string",
+          "text": "Filter results by color"
+        },
+        "orientation": {
+          "type": "enum",
+          "text": "Filter by photo orientation",
+          "enum": [
+            "landscape",
+            "portrait",
+            "squarish"
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Search photos",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/search/photos",
+        "alias_endpoint": "/search/photos",
+        "api_ref": "https://unsplash.com/documentation#search-photos"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__search__collections___get": {
+      "provider_intent": "unsplash__search__collections___get",
+      "provider_alias_intent": "/search/collections",
+      "text": "Search collections",
+      "category": "Search",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "query": {
+          "type": "string",
+          "text": "Search terms"
+        },
+        "page": {
+          "type": "number",
+          "text": "Page number to retrieve"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Number of items per page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Search collections",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/search/collections",
+        "alias_endpoint": "/search/collections",
+        "api_ref": "https://unsplash.com/documentation#search-collections"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__search__users___get": {
+      "provider_intent": "unsplash__search__users___get",
+      "provider_alias_intent": "/search/users",
+      "text": "Search users",
+      "category": "Search",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "query": {
+          "type": "string",
+          "text": "Search terms"
+        },
+        "page": {
+          "type": "number",
+          "text": "Page number to retrieve",
+          "enum": [
+            "default-1"
+          ]
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Number of items per page",
+          "enum": [
+            "default-10"
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Search users",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/search/users",
+        "alias_endpoint": "/search/users",
+        "api_ref": "https://unsplash.com/documentation#search-users"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__stats__total___get": {
+      "provider_intent": "unsplash__stats__total___get",
+      "provider_alias_intent": "/stats/total",
+      "text": "Totals",
+      "category": "Stats",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Totals",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/stats/total",
+        "alias_endpoint": "/stats/total",
+        "api_ref": "https://unsplash.com/documentation#totals"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__stats__month___get": {
+      "provider_intent": "unsplash__stats__month___get",
+      "provider_alias_intent": "/stats/month",
+      "text": "Month",
+      "category": "Stats",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Month",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/stats/month",
+        "alias_endpoint": "/stats/month",
+        "api_ref": "https://unsplash.com/documentation#month"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__topics___get": {
+      "provider_intent": "unsplash__topics___get",
+      "provider_alias_intent": "/topics",
+      "text": "List topics",
+      "category": "Topics",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "ids": {
+          "type": "string",
+          "text": "Limit to only matching topic ids or slugs."
+        },
+        "page": {
+          "type": "number",
+          "text": "Page number to retrieve",
+          "enum": [
+            "default-1"
+          ]
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Number of items per page",
+          "enum": [
+            "default-10"
+          ]
+        },
+        "order_by": {
+          "type": "string",
+          "text": "sort the topics"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "ids": {
+          "type": "string",
+          "text": "Limit to only matching topic ids or slugs."
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "List topics",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/topics",
+        "alias_endpoint": "/topics",
+        "api_ref": "https://unsplash.com/documentation#list-topics"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__topics__id_or_slug___get": {
+      "provider_intent": "unsplash__topics__id_or_slug___get",
+      "provider_alias_intent": "/topics/id_or_slug",
+      "text": "Get a topic",
+      "category": "Topics",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id_or_slug": {
+          "type": "string",
+          "text": "The topics’s ID or slug",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id_or_slug": {
+          "type": "string",
+          "text": "The topics’s ID or slug",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Get a topic",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/topics/:id_or_slug",
+        "alias_endpoint": "/topics/id_or_slug",
+        "api_ref": "https://unsplash.com/documentation#get-a-topic"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__topics__id_or_slug__photos___get": {
+      "provider_intent": "unsplash__topics__id_or_slug__photos___get",
+      "provider_alias_intent": "/topics/id_or_slug/photos",
+      "text": "Get a topic's photos",
+      "category": "Topics",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id_or_slug": {
+          "type": "string",
+          "text": "The topics’s ID or slug",
+          "required": true,
+          "enum": [
+            "default-1"
+          ]
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Number of items per page",
+          "enum": [
+            "default-10"
+          ]
+        },
+        "orientation": {
+          "type": "string",
+          "text": "Filter by photo orientation"
+        },
+        "order_by": {
+          "type": "string",
+          "text": "How to sort the photos",
+          "enum": [
+            "default- latest."
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id_or_slug": {
+          "type": "string",
+          "text": "The topics’s ID or slug",
+          "required": true,
+          "enum": [
+            "default-1"
+          ]
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Get a topic's photos",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/topics/:id_or_slug/photos",
+        "alias_endpoint": "/topics/id_or_slug/photos",
+        "api_ref": "https://unsplash.com/documentation#get-a-topics-photos"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__users__username___get": {
+      "provider_intent": "unsplash__users__username___get",
+      "provider_alias_intent": "/users/username",
+      "text": "Get a user's public profile",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "username": {
+          "type": "string",
+          "text": "The user’s username",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "username": {
+          "type": "string",
+          "text": "The user’s username",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Get a user's public profile",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/users/:username",
+        "alias_endpoint": "/users/username",
+        "api_ref": "https://unsplash.com/documentation#get-a-users-public-profile"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__users__username__portfolio___get": {
+      "provider_intent": "unsplash__users__username__portfolio___get",
+      "provider_alias_intent": "/users/username/portfolio",
+      "text": "Get a user's portfolio link",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "username": {
+          "type": "string",
+          "text": "The user’s username",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "username": {
+          "type": "string",
+          "text": "The user’s username",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Get a user's portfolio link",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/users/:username/portfolio",
+        "alias_endpoint": "/users/username/portfolio",
+        "api_ref": "https://unsplash.com/documentation#get-a-users-portfolio-link"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__users__username__photos___get": {
+      "provider_intent": "unsplash__users__username__photos___get",
+      "provider_alias_intent": "/users/username/photos",
+      "text": "List a user’s photos",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "username": {
+          "type": "string",
+          "text": "The user’s username",
+          "required": true
+        },
+        "page": {
+          "type": "number",
+          "text": "Page number to retrieve",
+          "enum": [
+            "default- 1)"
+          ]
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Number of items per page",
+          "enum": [
+            "default- 10"
+          ]
+        },
+        "order_by": {
+          "type": "string",
+          "text": "How to sort the photos",
+          "enum": [
+            "default- latest"
+          ]
+        },
+        "stats": {
+          "type": "boolean",
+          "text": "Show the stats for each user’s photo",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "resolution": {
+          "type": "string",
+          "text": "The frequency of the stats",
+          "enum": [
+            "default- “days”"
+          ]
+        },
+        "quantity": {
+          "type": "number",
+          "text": "The amount of for each stats",
+          "enum": [
+            "default"
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "username": {
+          "type": "string",
+          "text": "The user’s username",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "List a user’s photos",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/users/:username/photos",
+        "alias_endpoint": "/users/username/photos",
+        "api_ref": "https://unsplash.com/documentation#list-a-users-photos"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__users__username__likes___get": {
+      "provider_intent": "unsplash__users__username__likes___get",
+      "provider_alias_intent": "/users/username/likes",
+      "text": "List a user's liked photos",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "username": {
+          "type": "string",
+          "text": "The user’s username",
+          "required": true
+        },
+        "page": {
+          "type": "number",
+          "text": "Page number to retrieve",
+          "enum": [
+            "default-1"
+          ]
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Number of items per page",
+          "enum": [
+            "default-30"
+          ]
+        },
+        "order_by": {
+          "type": "string",
+          "text": "How to sort the photos",
+          "enum": [
+            "default-latest"
+          ]
+        },
+        "orientation": {
+          "type": "string",
+          "text": "Filter by photo orientation"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "username": {
+          "type": "string",
+          "text": "The user’s username",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "List a user's liked photos",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/users/:username/likes",
+        "alias_endpoint": "/users/username/likes",
+        "api_ref": "https://unsplash.com/documentation#list-a-users-liked-photos"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__users__username__collections___get": {
+      "provider_intent": "unsplash__users__username__collections___get",
+      "provider_alias_intent": "/users/username/collections",
+      "text": "List a user's collections",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "username": {
+          "type": "string",
+          "text": "The user’s username",
+          "required": true
+        },
+        "page": {
+          "type": "number",
+          "text": "Page number to retrieve.",
+          "enum": [
+            "defaul-1"
+          ]
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Number of items per page",
+          "enum": [
+            "default-30"
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "username": {
+          "type": "string",
+          "text": "The user’s username",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "List a user's collections",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/users/:username/collections",
+        "alias_endpoint": "/users/username/collections",
+        "api_ref": "https://unsplash.com/documentation#list-a-users-collections"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unsplash__users__username__statistics___get": {
+      "provider_intent": "unsplash__users__username__statistics___get",
+      "provider_alias_intent": "/users/username/statistics",
+      "text": "Get a user's statistics",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "username": {
+          "type": "string",
+          "text": "The user’s username",
+          "required": true
+        },
+        "resolution": {
+          "type": "string",
+          "text": "The frequency of the stats",
+          "enum": [
+            "default-\"days\""
+          ]
+        },
+        "quantity": {
+          "type": "number",
+          "text": "The amount of for each stats",
+          "enum": [
+            "default-30"
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "username": {
+          "type": "string",
+          "text": "The user’s username",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Get a user's statistics",
+        "rate_limit": [],
+        "api_endpoint": "https://api.unsplash.com/users/:username/statistics",
+        "alias_endpoint": "/users/username/statistics",
+        "api_ref": "https://unsplash.com/documentation#get-a-users-statistics"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Client-ID",
+          "authKey": "access_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

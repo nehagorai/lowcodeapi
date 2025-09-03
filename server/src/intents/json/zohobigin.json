@@ -1,0 +1,126 @@
+{
+  "app": {
+    "title": "zohobigin API",
+    "description": "",
+    "api_base": "/zohobigin",
+    "copyright": "",
+    "copyright_year": "",
+    "contact_email": ""
+  },
+  "category": {
+    "All": ""
+  },
+  "routes": {
+    "get_all_profiles_data": {
+      "provider_intent": "get_all_profiles_data",
+      "provider_alias_intent": "/bigin/v2/settings/profiles",
+      "text": "Get all profiles data",
+      "category": "Profiles",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieves the list of available profiles and their properties in an organization",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/bigin/v2/settings/profiles",
+        "alias_endpoint": "/zohobigin/bigin/v2/settings/profiles",
+        "api_ref": "https://www.bigin.com/developer/docs/apis/v2/get-profiles.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_all_roles_data": {
+      "provider_intent": "get_all_roles_data",
+      "provider_alias_intent": "/bigin/v2/settings/roles",
+      "text": "Get all roles data",
+      "category": "Roles",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieves the list of available roles and their properties in an organization",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/bigin/v2/settings/roles",
+        "alias_endpoint": "/zohobigin/bigin/v2/settings/roles",
+        "api_ref": "https://www.bigin.com/developer/docs/apis/v2/get-roles.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_users_data": {
+      "provider_intent": "get_users_data",
+      "provider_alias_intent": "/bigin/v2/users",
+      "text": "Get users data",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieves the list of available users in an organization, and fetch a specific user with user ID",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/bigin/v2/users",
+        "alias_endpoint": "/zohobigin/bigin/v2/users",
+        "api_ref": "https://www.bigin.com/developer/docs/apis/v2/get-users.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    }
+  }
+}

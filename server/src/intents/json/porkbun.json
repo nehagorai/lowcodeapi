@@ -1,0 +1,832 @@
+{
+  "routes": {
+    "porkbun__api__json__v3__dns__create__domain___post": {
+      "provider_intent": "porkbun__api__json__v3__dns__create__domain___post",
+      "provider_alias_intent": "/api/json/v3/dns/create/domain",
+      "text": "DNS Create Record",
+      "category": "DNS Functionality",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domain": {
+          "type": "string",
+          "text": "Domain",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "The subdomain for the record being created, not including the domain itself"
+        },
+        "type": {
+          "type": "enum",
+          "text": "The type of record being created",
+          "required": true,
+          "enum": [
+            "A",
+            "MX",
+            "CNAME",
+            "ALIAS",
+            "TXT",
+            "NS",
+            "AAAA",
+            "SRV",
+            "TLSA",
+            "CAA",
+            "HTTPS",
+            "SVCB"
+          ]
+        },
+        "content": {
+          "type": "string",
+          "text": "The answer content for the record. Please see the DNS management popup from the domain management console for proper formatting of each record type",
+          "required": true
+        },
+        "ttl": {
+          "type": "string",
+          "text": "The time to live in seconds for the record. The minimum and the default is 600 second"
+        }
+      },
+      "path": {
+        "domain": {
+          "type": "string",
+          "text": "Domain",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Create a DNS record.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.porkbun.com/api/json/v3/dns/create/{domain}",
+        "alias_endpoint": "/porkbun/api/json/v3/dns/create/domain",
+        "api_ref": "https://porkbun.com/api/json/v3/documentation#DNS%20Create%20Record"
+      },
+      "auth": {
+        "body": {
+          "secretapikey": "secretapikey",
+          "apikey": "apikey"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "porkbun__api__json__v3__dns__edit__domain__id___post": {
+      "provider_intent": "porkbun__api__json__v3__dns__edit__domain__id___post",
+      "provider_alias_intent": "/api/json/v3/dns/edit/domain/id",
+      "text": "DNS Edit Record by Domain and ID",
+      "category": "DNS Functionality",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domain": {
+          "type": "string",
+          "text": "Domain",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "The subdomain for the record being created, not including the domain itself"
+        },
+        "type": {
+          "type": "enum",
+          "text": "The type of record being created",
+          "required": true,
+          "enum": [
+            "A",
+            "MX",
+            "CNAME",
+            "ALIAS",
+            "TXT",
+            "NS",
+            "AAAA",
+            "SRV",
+            "TLSA",
+            "CAA",
+            "HTTPS",
+            "SVCB"
+          ]
+        },
+        "content": {
+          "type": "string",
+          "text": "The answer content for the record. Please see the DNS management popup from the domain management console for proper formatting of each record type",
+          "required": true
+        },
+        "ttl": {
+          "type": "string",
+          "text": "The time to live in seconds for the record. The minimum and the default is 600 second"
+        }
+      },
+      "path": {
+        "domain": {
+          "type": "string",
+          "text": "Domain",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "Id",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Edit a DNS record.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.porkbun.com/api/json/v3/dns/edit/{domain}/{id}",
+        "alias_endpoint": "/porkbun/api/json/v3/dns/edit/domain/id",
+        "api_ref": "https://porkbun.com/api/json/v3/documentation#DNS%20Edit%20Record%20by%20Domain%20and%20ID"
+      },
+      "auth": {
+        "body": {
+          "secretapikey": "secretapikey",
+          "apikey": "apikey"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "porkbun__api__json__v3__dns__editbynametype__domain__type__subdomain___post": {
+      "provider_intent": "porkbun__api__json__v3__dns__editbynametype__domain__type__subdomain___post",
+      "provider_alias_intent": "/api/json/v3/dns/editbynametype/domain/type/subdomain",
+      "text": "DNS Edit Record by Domain, Subdomain and Type",
+      "category": "DNS Functionality",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domain": {
+          "type": "string",
+          "text": "Domain",
+          "required": true
+        },
+        "subdomain": {
+          "type": "string",
+          "text": "Sub Domain",
+          "required": true
+        },
+        "type": {
+          "type": "string",
+          "text": "Type",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "ttl": {
+          "type": "string",
+          "text": "The time to live in seconds for the record. The minimum and the default is 600 seconds"
+        },
+        "content": {
+          "type": "string",
+          "text": "The answer content for the record. Please see the DNS management popup from the domain management console for proper formatting of each record type",
+          "required": true
+        }
+      },
+      "path": {
+        "domain": {
+          "type": "string",
+          "text": "Domain",
+          "required": true
+        },
+        "subdomain": {
+          "type": "string",
+          "text": "Sub Domain",
+          "required": true
+        },
+        "type": {
+          "type": "string",
+          "text": "Type",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Edit all records for the domain that match a particular subdomain and type.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.porkbun.com/api/json/v3/dns/editByNameType/{domain}/{type}/{subdomain}",
+        "alias_endpoint": "/porkbun/api/json/v3/dns/editbynametype/domain/type/subdomain",
+        "api_ref": "https://porkbun.com/api/json/v3/documentation#DNS%20Edit%20Record%20by%20Domain,%20Subdomain%20and%20Type"
+      },
+      "auth": {
+        "body": {
+          "secretapikey": "secretapikey",
+          "apikey": "apikey"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "porkbun__api__json__v3__dns__delete__domain__id___post": {
+      "provider_intent": "porkbun__api__json__v3__dns__delete__domain__id___post",
+      "provider_alias_intent": "/api/json/v3/dns/delete/domain/id",
+      "text": "DNS Delete Record by Domain and ID",
+      "category": "DNS Functionality",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domain": {
+          "type": "string",
+          "text": "Domain",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domain": {
+          "type": "string",
+          "text": "Domain",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "Id",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Delete a specific DNS record.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.porkbun.com/api/json/v3/dns/delete/{domain}/{id}",
+        "alias_endpoint": "/porkbun/api/json/v3/dns/delete/domain/id",
+        "api_ref": "https://porkbun.com/api/json/v3/documentation#DNS%20Delete%20Record%20by%20Domain%20and%20ID"
+      },
+      "auth": {
+        "body": {
+          "secretapikey": "secretapikey",
+          "apikey": "apikey"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "porkbun__api__json__v3__dns__deletebynametype__domain__type__subdomain___post": {
+      "provider_intent": "porkbun__api__json__v3__dns__deletebynametype__domain__type__subdomain___post",
+      "provider_alias_intent": "/api/json/v3/dns/deletebynametype/domain/type/subdomain",
+      "text": "DNS Delete Records by Domain, Subdomain and Type",
+      "category": "DNS Functionality",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domain": {
+          "type": "string",
+          "text": "Domain",
+          "required": true
+        },
+        "subdomain": {
+          "type": "string",
+          "text": "Sub Domain",
+          "required": true
+        },
+        "type": {
+          "type": "string",
+          "text": "Type",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domain": {
+          "type": "string",
+          "text": "Domain",
+          "required": true
+        },
+        "subdomain": {
+          "type": "string",
+          "text": "Sub Domain",
+          "required": true
+        },
+        "type": {
+          "type": "string",
+          "text": "Type",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Delete all records for the domain that match a particular subdomain and type.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.porkbun.com/api/json/v3/dns/deleteByNameType/{domain}/{type}/{subdomain}",
+        "alias_endpoint": "/porkbun/api/json/v3/dns/deletebynametype/domain/type/subdomain",
+        "api_ref": "https://porkbun.com/api/json/v3/documentation#DNS%20Delete%20Records%20by%20Domain,%20Subdomain%20and%20Type"
+      },
+      "auth": {
+        "body": {
+          "secretapikey": "secretapikey",
+          "apikey": "apikey"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "porkbun__api__json__v3__dns__retrieve__domain__id___post": {
+      "provider_intent": "porkbun__api__json__v3__dns__retrieve__domain__id___post",
+      "provider_alias_intent": "/api/json/v3/dns/retrieve/domain/id",
+      "text": "DNS Retrieve Records by Domain or ID",
+      "category": "DNS Functionality",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domain": {
+          "type": "string",
+          "text": "Domain",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domain": {
+          "type": "string",
+          "text": "Domain",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "Id",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Retrieve all editable DNS records associated with a domain or a single record for a particular record ID.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.porkbun.com/api/json/v3/dns/retrieve/{domain}/{id}",
+        "alias_endpoint": "/porkbun/api/json/v3/dns/retrieve/domain/id",
+        "api_ref": "https://porkbun.com/api/json/v3/documentation#DNS%20Retrieve%20Records%20by%20Domain%20or%20ID"
+      },
+      "auth": {
+        "body": {
+          "secretapikey": "secretapikey",
+          "apikey": "apikey"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "porkbun__api__json__v3__dns__retrievebynametype__domain__type__subdomain___post": {
+      "provider_intent": "porkbun__api__json__v3__dns__retrievebynametype__domain__type__subdomain___post",
+      "provider_alias_intent": "/api/json/v3/dns/retrievebynametype/domain/type/subdomain",
+      "text": "DNS Retrieve Records by Domain, Subdomain and Type",
+      "category": "DNS Functionality",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domain": {
+          "type": "string",
+          "text": "Domain",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "Id",
+          "required": true
+        },
+        "type": {
+          "type": "string",
+          "text": "Type",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domain": {
+          "type": "string",
+          "text": "Domain",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "Id",
+          "required": true
+        },
+        "type": {
+          "type": "string",
+          "text": "Type",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Retrieve all editable DNS records associated with a domain, subdomain and type.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.porkbun.com/api/json/v3/dns/retrieveByNameType/{domain}/{type}/{subdomain}",
+        "alias_endpoint": "/porkbun/api/json/v3/dns/retrievebynametype/domain/type/subdomain",
+        "api_ref": "https://porkbun.com/api/json/v3/documentation#DNS%20Retrieve%20Records%20by%20Domain,%20Subdomain%20and%20Type"
+      },
+      "auth": {
+        "body": {
+          "secretapikey": "secretapikey",
+          "apikey": "apikey"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "porkbun__api__json__v3__domain__updatens__domain___post": {
+      "provider_intent": "porkbun__api__json__v3__domain__updatens__domain___post",
+      "provider_alias_intent": "/api/json/v3/domain/updatens/domain",
+      "text": "Domain Update Name Servers",
+      "category": "Domain Functionality",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domain": {
+          "type": "string",
+          "text": "Domain",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "ns": {
+          "type": "array",
+          "text": "An array of name servers that you would like to update your domain with",
+          "required": true
+        }
+      },
+      "path": {
+        "domain": {
+          "type": "string",
+          "text": "Domain",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Update the name servers for your domain.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.porkbun.com/api/json/v3/domain/updateNs/{domain}",
+        "alias_endpoint": "/porkbun/api/json/v3/domain/updatens/domain",
+        "api_ref": "https://porkbun.com/api/json/v3/documentation#Domain%20Update%20Name%20Servers"
+      },
+      "auth": {
+        "body": {
+          "secretapikey": "secretapikey",
+          "apikey": "apikey"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "porkbun__api__json__v3__domain__getns__domain___post": {
+      "provider_intent": "porkbun__api__json__v3__domain__getns__domain___post",
+      "provider_alias_intent": "/api/json/v3/domain/getns/domain",
+      "text": "Domain Get Name Servers",
+      "category": "Domain Functionality",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domain": {
+          "type": "string",
+          "text": "Domain",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domain": {
+          "type": "string",
+          "text": "Domain",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get the authoritative name servers listed at the registry for your domain.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.porkbun.com/api/json/v3/domain/getNs/{domain}",
+        "alias_endpoint": "/porkbun/api/json/v3/domain/getns/domain",
+        "api_ref": "https://porkbun.com/api/json/v3/documentation#Domain%20Get%20Name%20Servers"
+      },
+      "auth": {
+        "body": {
+          "secretapikey": "secretapikey",
+          "apikey": "apikey"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "porkbun__api__json__v3__domain__listall___post": {
+      "provider_intent": "porkbun__api__json__v3__domain__listall___post",
+      "provider_alias_intent": "/api/json/v3/domain/listall",
+      "text": "Domain List All",
+      "category": "Domain Functionality",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "start": {
+          "type": "number",
+          "text": "An index to start at when retrieving the domains, defaults to 0. To get all domains increment by 1000 until you receive an empty array."
+        },
+        "includeLabels": {
+          "type": "boolean",
+          "text": "If set to 'yes' we will return label information for the domains if it exists",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get all domain names in account. Domains are returned in chunks of 1000.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.porkbun.com/api/json/v3/domain/listAll",
+        "alias_endpoint": "/porkbun/api/json/v3/domain/listall",
+        "api_ref": "https://porkbun.com/api/json/v3/documentation#Domain%20List%20All"
+      },
+      "auth": {
+        "body": {
+          "secretapikey": "secretapikey",
+          "apikey": "apikey"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "porkbun__api__json__v3__domain__addurlforward__domain___post": {
+      "provider_intent": "porkbun__api__json__v3__domain__addurlforward__domain___post",
+      "provider_alias_intent": "/api/json/v3/domain/addurlforward/domain",
+      "text": "Domain Add URL Forward",
+      "category": "Domain Functionality",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domain": {
+          "type": "string",
+          "text": "Domain",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "subdomain": {
+          "type": "string",
+          "text": "A subdomain that you would like to add URL forwarding for. Leave this blank to forward the root domain."
+        },
+        "location": {
+          "type": "string",
+          "text": "Where you'd like to forward the domain to"
+        },
+        "type": {
+          "type": "string",
+          "text": "The type of forward. Valid types are: temporary or permanent"
+        },
+        "includePath": {
+          "type": "boolean",
+          "text": "Whether or not to include the URI path in the redirection. Valid options are yes or no",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "wildcard": {
+          "type": "boolean",
+          "text": "Also forward all subdomains of the domain. Valid options are yes or no",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "domain": {
+          "type": "string",
+          "text": "Domain",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Add URL forward for a domain.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.porkbun.com/api/json/v3/domain/addUrlForward/{domain}",
+        "alias_endpoint": "/porkbun/api/json/v3/domain/addurlforward/domain",
+        "api_ref": "https://porkbun.com/api/json/v3/documentation#Domain%20Add%20URL%20Forward"
+      },
+      "auth": {
+        "body": {
+          "secretapikey": "secretapikey",
+          "apikey": "apikey"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "porkbun__api__json__v3__domain__geturlforwarding__domain___post": {
+      "provider_intent": "porkbun__api__json__v3__domain__geturlforwarding__domain___post",
+      "provider_alias_intent": "/api/json/v3/domain/geturlforwarding/domain",
+      "text": "Domain Get URL Forwarding",
+      "category": "Domain Functionality",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domain": {
+          "type": "string",
+          "text": "Domain",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domain": {
+          "type": "string",
+          "text": "Domain",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get URL forwarding for a domain.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.porkbun.com/api/json/v3/domain/getUrlForwarding/{domain}",
+        "alias_endpoint": "/porkbun/api/json/v3/domain/geturlforwarding/domain",
+        "api_ref": "https://porkbun.com/api/json/v3/documentation#Domain%20Get%20URL%20Forwarding"
+      },
+      "auth": {
+        "body": {
+          "secretapikey": "secretapikey",
+          "apikey": "apikey"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "porkbun__api__json__v3__domain__addurlforward__domain__record_id___post": {
+      "provider_intent": "porkbun__api__json__v3__domain__addurlforward__domain__record_id___post",
+      "provider_alias_intent": "/api/json/v3/domain/addurlforward/domain/record_id",
+      "text": "Domain Delete URL Forward",
+      "category": "Domain Functionality",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domain": {
+          "type": "string",
+          "text": "Domain",
+          "required": true
+        },
+        "record_id": {
+          "type": "string",
+          "text": "Record Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domain": {
+          "type": "string",
+          "text": "Domain",
+          "required": true
+        },
+        "record_id": {
+          "type": "string",
+          "text": "Record Id",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Delete a URL forward for a domain.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.porkbun.com/api/json/v3/domain/addUrlForward/{domain}/{record_id}",
+        "alias_endpoint": "/porkbun/api/json/v3/domain/addurlforward/domain/record_id",
+        "api_ref": "https://porkbun.com/api/json/v3/documentation#Domain%20Delete%20URL%20Forward"
+      },
+      "auth": {
+        "body": {
+          "secretapikey": "secretapikey",
+          "apikey": "apikey"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "porkbun__api__json__v3__ssl__retrieve__domain___post": {
+      "provider_intent": "porkbun__api__json__v3__ssl__retrieve__domain___post",
+      "provider_alias_intent": "/api/json/v3/ssl/retrieve/domain",
+      "text": "SSL Retrieve Bundle by Domain",
+      "category": "SSL Functionality",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "domain": {
+          "type": "string",
+          "text": "Domain",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "domain": {
+          "type": "string",
+          "text": "Domain",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Retrieve the SSL certificate bundle for the domain.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.porkbun.com/api/json/v3/ssl/retrieve/{domain}",
+        "alias_endpoint": "/porkbun/api/json/v3/ssl/retrieve/domain",
+        "api_ref": "https://porkbun.com/api/json/v3/documentation#SSL%20Retrieve%20Bundle%20by%20Domain"
+      },
+      "auth": {
+        "body": {
+          "secretapikey": "secretapikey",
+          "apikey": "apikey"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

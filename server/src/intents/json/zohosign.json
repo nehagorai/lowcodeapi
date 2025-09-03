@@ -1,0 +1,315 @@
+{
+  "routes": {
+    "zohosign__api__v1__requests___post": {
+      "provider_intent": "zohosign__api__v1__requests___post",
+      "provider_alias_intent": "/api/v1/requests",
+      "text": "Create document",
+      "category": "Document Management",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "request_name": {
+          "type": "string",
+          "text": "name to be given to the signature request"
+        },
+        "is_sequential": {
+          "type": "boolean",
+          "text": "Sequential signing / Parallel Signing",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        " action_type": {
+          "type": "string",
+          "text": "  Recipient Action [SIGN|VIEW|INPERSONSIGN|APPROVER]"
+        },
+        "recipient_name": {
+          "type": "string",
+          "text": "  Recipient name"
+        },
+        "recipient_email": {
+          "type": "string",
+          "text": "Recipient email "
+        },
+        "verify_recipient": {
+          "type": "boolean",
+          "text": "Inperson recipient name",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This will create a new document",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/requests",
+        "alias_endpoint": "/zohosign/api/v1/requests",
+        "api_ref": "https://www.zoho.com/sign/api/document-managment/create-document.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/api/v1/requests",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohosign__api__v1__requests__request_id___put": {
+      "provider_intent": "zohosign__api__v1__requests__request_id___put",
+      "provider_alias_intent": "/api/v1/requests/request_id",
+      "text": "Update document",
+      "category": "Document Management",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "request_id": {
+          "type": "string",
+          "text": "Request Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "request_name": {
+          "type": "string",
+          "text": "name to be given to the signature request"
+        },
+        "is_sequential": {
+          "type": "boolean",
+          "text": "Sequential signing / Parallel Signing",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        " verify_recipient": {
+          "type": "boolean",
+          "text": "Authentication needs to be done or not",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "recipient_name": {
+          "type": "string",
+          "text": "Recipient name"
+        },
+        "recipient_email": {
+          "type": "string",
+          "text": "Recipient email "
+        },
+        "in_person_name": {
+          "type": "string",
+          "text": "Inperson recipient name"
+        },
+        "action_type": {
+          "type": "string",
+          "text": "Recipient Action [SIGN | VIEW | INPERSONSIGN | APPROVER]"
+        }
+      },
+      "path": {
+        "request_id": {
+          "type": "string",
+          "text": "Request Id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This will help you to update an existing document",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/requests/[request_id]",
+        "alias_endpoint": "/zohosign/api/v1/requests/request_id",
+        "api_ref": "https://www.zoho.com/sign/api/document-managment/update-document.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/api/v1/requests/[Request Id]",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohosign__api__v1__templates__template_id___put": {
+      "provider_intent": "zohosign__api__v1__templates__template_id___put",
+      "provider_alias_intent": "/api/v1/templates/template_id",
+      "text": "Update template",
+      "category": "Template Management",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "template_id": {
+          "type": "string",
+          "text": "Template Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "template_name": {
+          "type": "number",
+          "text": "name to be given to the signature request"
+        },
+        "is_sequential": {
+          "type": "boolean",
+          "text": "Sequential signing / Parallel Signing[true/false]",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "role": {
+          "type": "srting",
+          "text": "Role of the recipient"
+        },
+        "recipient_name": {
+          "type": "srting",
+          "text": "Recipient name "
+        },
+        "recipient_email": {
+          "type": "srting",
+          "text": "Recipient email "
+        },
+        "in_person_name": {
+          "type": "srting",
+          "text": "Inperson recipient name"
+        },
+        "action_type": {
+          "type": "srting",
+          "text": "Recipient Action [SIGN | VIEW | INPERSONSIGN]"
+        },
+        "verify_recipient": {
+          "type": "boolean",
+          "text": "Authentication needs to be done or not",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "template_id": {
+          "type": "string",
+          "text": "Template Id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This will help you to update an existing template.",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/templates/[template_id]",
+        "alias_endpoint": "/zohosign/api/v1/templates/template_id",
+        "api_ref": "https://www.zoho.com/sign/api/template-managment/update-template.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/api/v1/templates/[Template Id]",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohosign__api__v1__templates__template_id___get": {
+      "provider_intent": "zohosign__api__v1__templates__template_id___get",
+      "provider_alias_intent": "/api/v1/templates/template_id",
+      "text": "Get template details",
+      "category": "Template Management",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "template_id": {
+          "type": "string",
+          "text": "Template Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "template_id": {
+          "type": "string",
+          "text": "Template Id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the details of a particular template using its id - specifically lists the pre fill fields that need to be sent in order to convert the template into a document",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/templates/[template_id]",
+        "alias_endpoint": "/zohosign/api/v1/templates/template_id",
+        "api_ref": "https://www.zoho.com/sign/api/template-managment/get-template-details.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/api/v1/templates/[Template_ID]",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

@@ -1,0 +1,2907 @@
+{
+  "routes": {
+    "zohowriter__writer__api__v1__documents___get": {
+      "provider_intent": "zohowriter__writer__api__v1__documents___get",
+      "provider_alias_intent": "/writer/api/v1/documents",
+      "text": "Get Trashed List",
+      "category": "Document API",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "category": {
+          "type": "string",
+          "text": "'trashed' - Get only the list of documents moved to trash",
+          "required": true
+        },
+        "offset": {
+          "type": "number",
+          "text": "Set offset parameter to get the list of trashed documents from the respective page"
+        },
+        "limit": {
+          "type": "number",
+          "text": "Set document limit and retrieve the list of trashed documents within the specified limit"
+        },
+        "sortby": {
+          "type": "string",
+          "text": "Get the list of trashed documents with respect to the document created time, modified time, or name"
+        },
+        "sort_order_by": {
+          "type": "string",
+          "text": "Get the list of documents in ascending or descending order based on the 'sortby' param value configure"
+        },
+        "resource_type": {
+          "type": "string",
+          "text": "Enter the document type from which the specified list needs to be retrieved"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To retrieve the list of documents which are moved to trash with specified parameters",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/documents",
+        "alias_endpoint": "/zohowriter/writer/api/v1/documents",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/get-trashed-list.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__templates__template_id__bulkmerge___post": {
+      "provider_intent": "zohowriter__writer__api__v1__templates__template_id__bulkmerge___post",
+      "provider_alias_intent": "/writer/api/v1/templates/template_id/bulkmerge",
+      "text": "Bulk Merge",
+      "category": "Bulk API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "template_id": {
+          "type": "string",
+          "text": "Specify a unique id for the writer document",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "output_settings": {
+          "type": "object",
+          "text": "Using this param, you will be able to specify",
+          "required": true
+        },
+        "merge_data": {
+          "type": "object",
+          "text": "Pass a String value through 'data' key as JSON Array",
+          "required": true
+        },
+        "merge_data_csv_content": {
+          "type": "file",
+          "text": "Provide the required csv content in your API request body"
+        },
+        "merge_data_json_content": {
+          "type": "file",
+          "text": "Provide the required json content in your API request body."
+        },
+        "merge_data_csv_url": {
+          "type": "string",
+          "text": "Provide the required csv url in your API request body."
+        },
+        "merge_data_json_url": {
+          "type": "string",
+          "text": "Provide the required json url in your API request body."
+        },
+        "sign_service_name": {
+          "type": "string",
+          "text": "pecify the third party sign service name with respect to which the merged document needs to be generated."
+        }
+      },
+      "path": {
+        "template_id": {
+          "type": "string",
+          "text": "Specify a unique id for the writer document",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To merge documents in bulk",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/templates/{{template_id}}/bulkmerge",
+        "alias_endpoint": "/zohowriter/writer/api/v1/templates/template_id/bulkmerge",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/bulkmerge.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoWriter.documentEditor.ALL,\nZohoWriter.merge.ALL, \nWorkDrive.files.ALL",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__templates__template_id__bulkmerge__sign___post": {
+      "provider_intent": "zohowriter__writer__api__v1__templates__template_id__bulkmerge__sign___post",
+      "provider_alias_intent": "/writer/api/v1/templates/template_id/bulkmerge/sign",
+      "text": "Bulk Sign",
+      "category": "Bulk API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "template_id": {
+          "type": "string",
+          "text": "Specify a unique id for the writer document",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "filename": {
+          "type": "string",
+          "text": "Specify a unique name for the signed document",
+          "required": true
+        },
+        "signer_data": {
+          "type": "object",
+          "text": "Specify the recipients to whom the document needs to be sent to get signed, in person signed, approved or viewed in the form of a JSON Array",
+          "required": true
+        },
+        "merge_data": {
+          "type": "object",
+          "text": "Pass a String value through 'data' key as JSON Array",
+          "required": true
+        },
+        "merge_data_csv_content": {
+          "type": "file",
+          "text": "Provide the required csv content in your API request body",
+          "required": true
+        },
+        "merge_data_json_content": {
+          "type": "file",
+          "text": "Provide the required json content in your API request body",
+          "required": true
+        },
+        "merge_data_csv_url": {
+          "type": "string",
+          "text": "Provide the required csv url in your API request body",
+          "required": true
+        },
+        "merge_data_json_url": {
+          "type": "string",
+          "text": "Provide the required json url in your API request body",
+          "required": true
+        },
+        "sign_in_order": {
+          "type": "boolean",
+          "text": "Specify if we need to maintain the order of signing as mentioned",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "message_plaintext": {
+          "type": "string",
+          "text": "Specify any message for the signer either in the form of a plaintext or a HTML"
+        },
+        "set_expire": {
+          "type": "number",
+          "text": "Specify any message for the signer either in the form of a plaintext or a HTML"
+        },
+        "reminder_period": {
+          "type": "number",
+          "text": "Specify the interval when the remainder email needs to be send to the signers"
+        },
+        "common_attachments": {
+          "type": "string",
+          "text": "Specify the attachments that needs to be sent to all the recipients in common"
+        },
+        "unique_attachments": {
+          "type": "object",
+          "text": "Using this param, you can send a different or unique attachment to each recipient"
+        }
+      },
+      "path": {
+        "template_id": {
+          "type": "string",
+          "text": "Specify a unique id for the writer document",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Allows the merge and sign documents in bulk",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/templates/{{template_id}}/bulkmerge/sign",
+        "alias_endpoint": "/zohowriter/writer/api/v1/templates/template_id/bulkmerge/sign",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/bulkmerge-sign.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoWriter.documentEditor.ALL,\nZohoWriter.merge.ALL,\nZohoSign.documents.ALL",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__documents__document_id__sign___post": {
+      "provider_intent": "zohowriter__writer__api__v1__documents__document_id__sign___post",
+      "provider_alias_intent": "/writer/api/v1/documents/document_id/sign",
+      "text": "Sign API",
+      "category": "Bulk API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify a unique id for the writer document",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "recipients": {
+          "type": "array",
+          "text": "Specify the recipients to whom the document needs to be sent to get signed, in person signed, approved, or viewed in the form of a JSON Array",
+          "required": true
+        },
+        "subject": {
+          "type": "string",
+          "text": "Specify the subject for the email",
+          "required": true
+        },
+        "message": {
+          "type": "string",
+          "text": "Provide content for the mail",
+          "required": true
+        },
+        "signed_document_name": {
+          "type": "string",
+          "text": "Specify a name for the signed document",
+          "required": true
+        },
+        "attachments": {
+          "type": "file",
+          "text": "To send or provide any attachments in the mail (Maximum of 3 files can be attached)"
+        },
+        "is_sequential": {
+          "type": "boolean",
+          "text": "Specify the order in which the document singing or approving needs to take place",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "reminder_period": {
+          "type": "number",
+          "text": "To send a reminder for signing or approving the document every 'n' days"
+        },
+        "expire_in": {
+          "type": "number",
+          "text": "Specify the document expiry date"
+        },
+        "prefill_data": {
+          "type": "object",
+          "text": "Define the data that needs to be pre-filled in the document"
+        },
+        "callback_url": {
+          "type": "string",
+          "text": "Specify the location where you would like to receive the notification once the document has been signed"
+        }
+      },
+      "path": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify a unique id for the writer document",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Can send a document to get signed and track its status",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/documents/{{document_id}}/sign",
+        "alias_endpoint": "/zohowriter/writer/api/v1/documents/document_id/sign",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/sign-api.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoWriter.documentEditor.ALL,\nZohoSign.documents.ALL",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__documents__convert___post": {
+      "provider_intent": "zohowriter__writer__api__v1__documents__convert___post",
+      "provider_alias_intent": "/writer/api/v1/documents/convert",
+      "text": "Convert Documents with Web URL",
+      "category": "Conversion API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "url": {
+          "type": "string",
+          "text": "Specify the web URL, through which the document will be converted",
+          "required": true
+        },
+        "format": {
+          "type": "string",
+          "text": "Specify the format of the document to be converted. Supported file formats - docx, odt, rtf, txt, html, pdf",
+          "required": true
+        },
+        "filename": {
+          "type": "string",
+          "text": "Specify a name to the document to be converted",
+          "required": true
+        },
+        "password": {
+          "type": "string",
+          "text": "Specify a unique password for the document to be converted"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To convert any document's existing file format (say html) to another file format (say docx or txt) with web URL",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/documents/convert",
+        "alias_endpoint": "/zohowriter/writer/api/v1/documents/convert",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/convert-documents-with-web-url.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__documents___post": {
+      "provider_intent": "zohowriter__writer__api__v1__documents___post",
+      "provider_alias_intent": "/writer/api/v1/documents",
+      "text": "Create through Web URL",
+      "category": "Document API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "url": {
+          "type": "string",
+          "text": "Specify the Web URL (which is publicly accessible) through which the document needs to be created",
+          "required": true
+        },
+        "filename": {
+          "type": "string",
+          "text": "Specify a unique name for the document"
+        },
+        "folder_id": {
+          "type": "string",
+          "text": "Specify a folder name, if you would like the document to be created in a particular folder or location"
+        },
+        "resource_type": {
+          "type": "string",
+          "text": "Specify the type of document which needs to be created"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To create a document via Web URL",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/documents",
+        "alias_endpoint": "/zohowriter/writer/api/v1/documents",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/create-with-web-url.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__documents__document_id___get": {
+      "provider_intent": "zohowriter__writer__api__v1__documents__document_id___get",
+      "provider_alias_intent": "/writer/api/v1/documents/document_id",
+      "text": "Get All Fields",
+      "category": "Document API",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify the unique id for the Writer document",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify the unique id for the Writer document",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To get all the available fields present in the document",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/documents/{{document_id}}",
+        "alias_endpoint": "/zohowriter/writer/api/v1/documents/document_id",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/get-all-fields.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__download__document_id___get": {
+      "provider_intent": "zohowriter__writer__api__v1__download__document_id___get",
+      "provider_alias_intent": "/writer/api/v1/download/document_id",
+      "text": "Download Document",
+      "category": "Document API",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify the unique id of the document to be downloaded",
+          "required": true
+        },
+        "format": {
+          "type": "string",
+          "text": "Specify the format in which the document needs to be downloaded"
+        },
+        "options": {
+          "type": "object",
+          "text": " Specify how the track changed content needs to be reflected in downloaded file"
+        },
+        "sign_service_name": {
+          "type": "string",
+          "text": "This param needs to be configured"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify the unique id of the document to be downloaded",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To download the document in the specified format",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/download/{{document_id}}",
+        "alias_endpoint": "/zohowriter/writer/api/v1/download/document_id",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/download-document.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__documents__document_id__copy___post": {
+      "provider_intent": "zohowriter__writer__api__v1__documents__document_id__copy___post",
+      "provider_alias_intent": "/writer/api/v1/documents/document_id/copy",
+      "text": "Copy Document",
+      "category": "Document API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify the unique id for the document",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "document_name": {
+          "type": "string",
+          "text": "Specify a unique name for the copied document"
+        },
+        "format": {
+          "type": "string",
+          "text": "Specify the output format in which the copied file needs to be stored"
+        },
+        "password": {
+          "type": "string",
+          "text": "Specify a password if you would like to protect the copied document"
+        },
+        "folder_id": {
+          "type": "string",
+          "text": "Specify the folder_id in which you would like to store the copy of the document"
+        },
+        "options": {
+          "type": "object",
+          "text": "Specify if the comments needs to be included in the copied file or not"
+        }
+      },
+      "path": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify the unique id for the document",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To retrieve a copy of a specific document",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/documents/{{document_id}}/copy",
+        "alias_endpoint": "/zohowriter/writer/api/v1/documents/document_id/copy",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/copy-document.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__documents__search___get": {
+      "provider_intent": "zohowriter__writer__api__v1__documents__search___get",
+      "provider_alias_intent": "/writer/api/v1/documents/search",
+      "text": "Search Document",
+      "category": "Document API",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "query": {
+          "type": "string",
+          "text": "To search the document by the provided name, keyword, object and more",
+          "required": true
+        },
+        "team_id": {
+          "type": "string",
+          "text": "Specify the unique id of your team from which you would like to search the documents"
+        },
+        "offset": {
+          "type": "number",
+          "text": "Set offset parameter to get the list of documents searched from the respective page"
+        },
+        "limit": {
+          "type": "number",
+          "text": "Set document limit and retrieve the list of searched documents within the specified limit"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To search the documents across a team or organisation",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/documents/search",
+        "alias_endpoint": "/zohowriter/writer/api/v1/documents/search",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/search-document.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSearch.securesearch.READ,\nWorkDrive.team.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__documents__document_id__trash___delete": {
+      "provider_intent": "zohowriter__writer__api__v1__documents__document_id__trash___delete",
+      "provider_alias_intent": "/writer/api/v1/documents/document_id/trash",
+      "text": "Trash Document",
+      "category": "Document API",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify the unique id for the document to be trashed",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify the unique id for the document to be trashed",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To move the unwanted document to Trash. The documents inside Trash can be restored in future if require",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/documents/{{document_id}}/trash",
+        "alias_endpoint": "/zohowriter/writer/api/v1/documents/document_id/trash",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/trash-document.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__documents__document_id__restore___post": {
+      "provider_intent": "zohowriter__writer__api__v1__documents__document_id__restore___post",
+      "provider_alias_intent": "/writer/api/v1/documents/document_id/restore",
+      "text": "Restore Document",
+      "category": "Document API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify the unique id for the document to be restored",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify the unique id for the document to be restored",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To restore the trashed document",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/documents/{{document_id}}/restore",
+        "alias_endpoint": "/zohowriter/writer/api/v1/documents/document_id/restore",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/restore-document.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__documents__document_id__delete___delete": {
+      "provider_intent": "zohowriter__writer__api__v1__documents__document_id__delete___delete",
+      "provider_alias_intent": "/writer/api/v1/documents/document_id/delete",
+      "text": "Delete Document Permanently",
+      "category": "Document API",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify the unique id for the document to be deleted",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify the unique id for the document to be deleted",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To permanently delete the trashed documents",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/documents/{{document_id}}/delete",
+        "alias_endpoint": "/zohowriter/writer/api/v1/documents/document_id/delete",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/delete-document-permanently.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__folders___get": {
+      "provider_intent": "zohowriter__writer__api__v1__folders___get",
+      "provider_alias_intent": "/writer/api/v1/folders",
+      "text": "Get Folders List",
+      "category": "Folder API",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "category": {
+          "type": "string",
+          "text": "Get the list of all folders available in your Writer account",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To get a list of folders from your Writer account",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/folders",
+        "alias_endpoint": "/zohowriter/writer/api/v1/folders",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/get-list-of-folders.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoWriter.documentEditor.ALL,\nZohoPC.files.ALL,\nTeamDrive.files.ALL",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__folders__folder_id___get": {
+      "provider_intent": "zohowriter__writer__api__v1__folders__folder_id___get",
+      "provider_alias_intent": "/writer/api/v1/folders/folder_id",
+      "text": "Get Folder Information",
+      "category": "Folder API",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "folder_id": {
+          "type": "string",
+          "text": "Specify the id of the parent folder from which you would like to retrieve the list of sub folders",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "folder_id": {
+          "type": "string",
+          "text": "Specify the id of the parent folder from which you would like to retrieve the list of sub folders",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To get the sub folders list with the parent folder id",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/folders/{{folder_id}}",
+        "alias_endpoint": "/zohowriter/writer/api/v1/folders/folder_id",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/get-folder-info.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__folders___post": {
+      "provider_intent": "zohowriter__writer__api__v1__folders___post",
+      "provider_alias_intent": "/writer/api/v1/folders",
+      "text": "Create Folder",
+      "category": "Folder API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "folder_name": {
+          "type": "string",
+          "text": "Specify a name to the folder to be created",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To create a new folder",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/folders",
+        "alias_endpoint": "/zohowriter/writer/api/v1/folders",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/create-folder.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__folder__folder_id___post": {
+      "provider_intent": "zohowriter__writer__api__v1__folder__folder_id___post",
+      "provider_alias_intent": "/writer/api/v1/folder/folder_id",
+      "text": "Create Folder within Folder",
+      "category": "Folder API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "folder_id": {
+          "type": "string",
+          "text": "Specify the id of the parent folder in which you would like to create a sub folder",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "folder_name": {
+          "type": "string",
+          "text": "Specify the id of the parent folder in which you would like to create a sub folder",
+          "required": true
+        }
+      },
+      "path": {
+        "folder_id": {
+          "type": "string",
+          "text": "Specify the id of the parent folder in which you would like to create a sub folder",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To create a new folder within a folder",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/folder/{{folder_id}}",
+        "alias_endpoint": "/zohowriter/writer/api/v1/folder/folder_id",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/create-folder-within-folder.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__folders__folder_id___post": {
+      "provider_intent": "zohowriter__writer__api__v1__folders__folder_id___post",
+      "provider_alias_intent": "/writer/api/v1/folders/folder_id",
+      "text": "Create Folder with Web URL",
+      "category": "Folder API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "folder_id": {
+          "type": "string",
+          "text": "Specify the id of the parent folder where the new folder needs to be created",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "folder_name": {
+          "type": "string",
+          "text": "Specify a name to the new folder to be created",
+          "required": true
+        },
+        "filename": {
+          "type": "string",
+          "text": "Specify the document name",
+          "required": true
+        },
+        "url": {
+          "type": "string",
+          "text": "Specify the web URL from which the content needs to be uploaded (to the new folder) in your API request body",
+          "required": true
+        }
+      },
+      "path": {
+        "folder_id": {
+          "type": "string",
+          "text": "Specify the id of the parent folder where the new folder needs to be created",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To create a new folder along with the content of the web URL",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/folders/{{folder_id}}",
+        "alias_endpoint": "/zohowriter/writer/api/v1/folders/folder_id",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/create-folder-with-web-url.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__folders__folder_id___delete": {
+      "provider_intent": "zohowriter__writer__api__v1__folders__folder_id___delete",
+      "provider_alias_intent": "/writer/api/v1/folders/folder_id",
+      "text": "Delete Folder",
+      "category": "Folder API",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "folder_id": {
+          "type": "string",
+          "text": "Specify the unique id of the folder which needs to be deleted or removed",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "folder_id": {
+          "type": "string",
+          "text": "Specify the unique id of the folder which needs to be deleted or removed",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To delete a particular folder from your account",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/folders/{{folder_id}}",
+        "alias_endpoint": "/zohowriter/writer/api/v1/folders/folder_id",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/delete-folder.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__documents__document_id__merge__email___post": {
+      "provider_intent": "zohowriter__writer__api__v1__documents__document_id__merge__email___post",
+      "provider_alias_intent": "/writer/api/v1/documents/document_id/merge/email",
+      "text": "Merge and Email Attachment",
+      "category": "Merge API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify a unique id for the writer document",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "output_format": {
+          "type": "string",
+          "text": "Specify the format in which the merged document needs to attached and sent",
+          "required": true
+        },
+        "subject": {
+          "type": "string",
+          "text": "Specify a subject to the email",
+          "required": true
+        },
+        "message": {
+          "type": "string",
+          "text": "Specify a message related to the attachment in the email",
+          "required": true
+        },
+        "recipient_email": {
+          "type": "string",
+          "text": "Specify the receiver's email id",
+          "required": true
+        },
+        "merge_data": {
+          "type": "object",
+          "text": "Pass a String value through 'data' key as JSON Array",
+          "required": true
+        },
+        "merge_data_csv_content": {
+          "type": "file",
+          "text": "Provide the required csv content in your API request body",
+          "required": true
+        },
+        "merge_data_json_content": {
+          "type": "file",
+          "text": "Provide the required json content in your API request body",
+          "required": true
+        },
+        "merge_data_csv_url": {
+          "type": "string",
+          "text": "Provide the required csv url in your API request body",
+          "required": true
+        },
+        "cc_email": {
+          "type": "string",
+          "text": "Specify the Cc email id's (maximum upto 10) separated by comma"
+        },
+        "bcc_email": {
+          "type": "string",
+          "text": "Specify the BCC email id's (maximum upto 10) separated by comma"
+        },
+        "password": {
+          "type": "string",
+          "text": "Specify a password if you would like to protect the merged document"
+        },
+        "attachment_name": {
+          "type": "string",
+          "text": "Specify a name (without extension) for the merged document (pdf or docx) that is attached in the mail"
+        },
+        "from_email": {
+          "type": "string",
+          "text": "Specify the from address using which the merge document needs to be sent"
+        },
+        "common_attachments": {
+          "type": "file",
+          "text": "Specify the attachments that needs to be sent to all the recipients in common"
+        },
+        "unique_attachments": {
+          "type": "object",
+          "text": "Using this param, you can send a different or unique attachment to each recipient"
+        },
+        "from_name": {
+          "type": "string",
+          "text": "Specify the display name for your from address"
+        },
+        "replyto_email": {
+          "type": "string",
+          "text": "Specify the 'Reply to' email address to which you want the receipients response email to be sent"
+        },
+        "sign_service_name": {
+          "type": "string",
+          "text": "This param needs to be configured when you would like to upload the merged document with signer fields to a third party sign service"
+        },
+        "test_mode": {
+          "type": "boolean",
+          "text": "Using this param, you can test the Merge APIs without consuming any credit points",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify a unique id for the writer document",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To send the merge document as attachment with a message in the body of the email",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/documents/{{document_id}}/merge/email",
+        "alias_endpoint": "/zohowriter/writer/api/v1/documents/document_id/merge/email",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/to-send-merge-document-as-attachment-via-email.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoWriter.documentEditor.ALL,\n ZohoWriter.merge.ALL ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__documents__document_id__merge__webhook___post": {
+      "provider_intent": "zohowriter__writer__api__v1__documents__document_id__merge__webhook___post",
+      "provider_alias_intent": "/writer/api/v1/documents/document_id/merge/webhook",
+      "text": "Merge and Deliver via Webhook",
+      "category": "Merge API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify a unique id for the writer document",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "output_format": {
+          "type": "string",
+          "text": "Supported formats are pdf, pdfform and docx",
+          "required": true
+        },
+        "webhook": {
+          "type": "object",
+          "text": "Supported merge types are separatedoc and singledoc",
+          "required": true
+        },
+        "merge_data": {
+          "type": "object",
+          "text": "Pass a String value through 'data' key as JSON Array",
+          "required": true
+        },
+        "merge_data_csv_content": {
+          "type": "file",
+          "text": "Provide the required csv content in your API request body",
+          "required": true
+        },
+        "merge_data_csv_url": {
+          "type": "string",
+          "text": "Provide the required csv url in your API request body",
+          "required": true
+        },
+        "merge_data_json_url": {
+          "type": "file",
+          "text": "Provide the required json url in your API request body",
+          "required": true
+        },
+        "password": {
+          "type": "string",
+          "text": "Specify a password if you would like to protect the merged document"
+        },
+        "test_mode": {
+          "type": "boolean",
+          "text": "Using this param, you can test the Merge APIs without consuming any credit points",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify a unique id for the writer document",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To deliver the merge documents via Webhook for custom handling by consumers",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/documents/{{document_id}}/merge/webhook",
+        "alias_endpoint": "/zohowriter/writer/api/v1/documents/document_id/merge/webhook",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/merge-and-deliver-via-webhook.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__documents__document_id__merge___post": {
+      "provider_intent": "zohowriter__writer__api__v1__documents__document_id__merge___post",
+      "provider_alias_intent": "/writer/api/v1/documents/document_id/merge",
+      "text": "Merge Document",
+      "category": "Merge API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify a unique id for the writer document",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "output_format": {
+          "type": "string",
+          "text": " Specify a format in which you would like to download the merged document",
+          "required": true
+        },
+        "merge_data": {
+          "type": "object",
+          "text": "Pass a String value through 'data' key as JSON Array",
+          "required": true
+        },
+        "merge_data_csv_content": {
+          "type": "file",
+          "text": "Provide the required csv content in your API request body",
+          "required": true
+        },
+        "merge_data_json_content": {
+          "type": "file",
+          "text": "Provide the required json content in your API request body",
+          "required": true
+        },
+        "merge_data_csv_url": {
+          "type": "string",
+          "text": "Provide the required csv url in your API request body",
+          "required": true
+        },
+        "merge_data_json_url": {
+          "type": "string",
+          "text": "Provide the required json url in your API request body",
+          "required": true
+        },
+        "password": {
+          "type": "string",
+          "text": "Specify a password if you would like to protect the merged document"
+        },
+        "response_type": {
+          "type": "string",
+          "text": "Specify the response_type value as link to download the document using a link"
+        },
+        "filename": {
+          "type": "string",
+          "text": "Specify a name (without extension) for the merged document that needs to be downloaded"
+        },
+        "sign_service_name": {
+          "type": "file",
+          "text": "This param needs to be configured when you would like to upload the merged document with signer fields to a third party sign service"
+        },
+        "test_mode": {
+          "type": "boolean",
+          "text": "Using this param, you can test the Merge APIs without consuming any credit points",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify a unique id for the writer document",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To generate documents and merge them.",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/documents/{{document_id}}/merge",
+        "alias_endpoint": "/zohowriter/writer/api/v1/documents/document_id/merge",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/merge-document.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__documents__document_id__merge__store___post": {
+      "provider_intent": "zohowriter__writer__api__v1__documents__document_id__merge__store___post",
+      "provider_alias_intent": "/writer/api/v1/documents/document_id/merge/store",
+      "text": "Merge and Store V1 [Deprecated]",
+      "category": "Merge API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify a unique id for the writer document",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "output_settings": {
+          "type": "object",
+          "text": "Pass the values for 'doc_name' and 'folder_id' via this parameter as JSON",
+          "required": true
+        },
+        "merge_data": {
+          "type": "object",
+          "text": "Pass a String value through 'data' key as JSON Array",
+          "required": true
+        },
+        "merge_data_csv_content": {
+          "type": "file",
+          "text": "Provide the required csv content in your API request body",
+          "required": true
+        },
+        "merge_data_json_content": {
+          "type": "file",
+          "text": "Provide the required json content in your API request body",
+          "required": true
+        },
+        "merge_data_csv_url": {
+          "type": "string",
+          "text": "Provide the required csv url in your API request body",
+          "required": true
+        },
+        "merge_data_json_url": {
+          "type": "string",
+          "text": "Provide the required json url in your API request body",
+          "required": true
+        },
+        "sign_service_name": {
+          "type": "string",
+          "text": "This param needs to be configured when you would like to upload the merged document with signer fields to a third party sign service"
+        },
+        "test_mode": {
+          "type": "boolean",
+          "text": "Using this param, you can test the Merge APIs without consuming any credit points",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify a unique id for the writer document",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To store the merged document inside Zoho Workdrive",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/documents/{{document_id}}/merge/store",
+        "alias_endpoint": "/zohowriter/writer/api/v1/documents/document_id/merge/store",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/merge-and-store.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoWriter.documentEditor.ALL,\nZohoWriter.merge.ALL, \nWorkDrive.Files.ALL",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v2__documents__document_id__merge__store___post": {
+      "provider_intent": "zohowriter__writer__api__v2__documents__document_id__merge__store___post",
+      "provider_alias_intent": "/writer/api/v2/documents/document_id/merge/store",
+      "text": "Merge and Store V2",
+      "category": "Merge API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify a unique id for the writer document",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "output_settings": {
+          "type": "object",
+          "text": "Pass the values for 'doc_name' and 'folder_id' via this parameter as JSON",
+          "required": true
+        },
+        "merge_data": {
+          "type": "object",
+          "text": "Pass a String value through 'data' key as JSON Array",
+          "required": true
+        },
+        "merge_data_csv_content": {
+          "type": "file",
+          "text": "Provide the required csv content in your API request body",
+          "required": true
+        },
+        "merge_data_json_content": {
+          "type": "file",
+          "text": "Provide the required json content in your API request body",
+          "required": true
+        },
+        "merge_data_csv_url": {
+          "type": "string",
+          "text": "Provide the required csv url in your API request body",
+          "required": true
+        },
+        "merge_data_json_url": {
+          "type": "string",
+          "text": "Provide the required json url in your API request body",
+          "required": true
+        },
+        "sign_service_name": {
+          "type": "string",
+          "text": "This param needs to be configured when you would like to upload the merged document with signer fields to a third party sign service"
+        },
+        "test_mode": {
+          "type": "boolean",
+          "text": "Using this param, you can test the Merge APIs without consuming any credit points",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify a unique id for the writer document",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "To store the merged document inside Zoho Workdrive",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v2/documents/{{document_id}}/merge/store",
+        "alias_endpoint": "/zohowriter/writer/api/v2/documents/document_id/merge/store",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/merge-and-store-v2.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoWriter.documentEditor.ALL,\nZohoWriter.merge.ALL,\nWorkDrive.Files.ALL",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__documents__document_id__merge__sign___post": {
+      "provider_intent": "zohowriter__writer__api__v1__documents__document_id__merge__sign___post",
+      "provider_alias_intent": "/writer/api/v1/documents/document_id/merge/sign",
+      "text": "Merge and Sign",
+      "category": "Merge API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify a unique id for the writer document",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "service_name": {
+          "type": "string",
+          "text": "Specify the sign service name (zohosign)",
+          "required": true
+        },
+        "filename": {
+          "type": "string",
+          "text": "Specify a unique name for the signed document",
+          "required": true
+        },
+        "merge_data": {
+          "type": "object",
+          "text": "Pass a String value through 'data' key as JSON Array",
+          "required": true
+        },
+        "merge_data_csv_content": {
+          "type": "file",
+          "text": "Provide the required csv content in your API request body",
+          "required": true
+        },
+        "merge_data_json_content": {
+          "type": "file",
+          "text": "Provide the required json content in your API request body",
+          "required": true
+        },
+        "merge_data_csv_url": {
+          "type": "string",
+          "text": "Provide the required csv url in your API request body",
+          "required": true
+        },
+        "merge_data_json_url": {
+          "type": "string",
+          "text": "Provide the required json url in your API request body",
+          "required": true
+        },
+        "signer_data": {
+          "type": "array",
+          "text": "Specify the recipients to whom the document needs to be sent to get signed, in person signed, approved or viewed in the form of a JSON Array"
+        },
+        "sign_in_order": {
+          "type": "boolean",
+          "text": "Specify if we need to maintain the order of signing as mentioned",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "message": {
+          "type": "string",
+          "text": "Specify any message for the signer"
+        },
+        "set_expire": {
+          "type": "number",
+          "text": "Specify when the merged documents which are sent for sign needs to be expired"
+        },
+        "reminder_period": {
+          "type": "number",
+          "text": "Specify the interval when the remainder email needs to be send to the signers"
+        },
+        "common_attachments": {
+          "type": "file",
+          "text": "Specify the attachments that needs to be sent to all the recipients in common"
+        },
+        "unique_attachments": {
+          "type": "object",
+          "text": "Using this param, you can send a different or unique attachment to each recipient"
+        },
+        "test_mode": {
+          "type": "boolean",
+          "text": "Using this param, you can test the Merge APIs without consuming any credit points",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify a unique id for the writer document",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To send the merged documents for sign",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/documents/{{document_id}}/merge/sign",
+        "alias_endpoint": "/zohowriter/writer/api/v1/documents/document_id/merge/sign",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/merge-and-sign.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoWriter.documentEditor.ALL,\nZohoWriter.merge.ALL,\nZohoSign.documents.ALL",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__documents__document_id__merge__execute___post": {
+      "provider_intent": "zohowriter__writer__api__v1__documents__document_id__merge__execute___post",
+      "provider_alias_intent": "/writer/api/v1/documents/document_id/merge/execute",
+      "text": "Merge and Invoke",
+      "category": "Merge API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify a unique id for the writer document",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "merge_data": {
+          "type": "object",
+          "text": "Pass a String value through 'data' key as JSON Array",
+          "required": true
+        },
+        "merge_data_csv_content": {
+          "type": "file",
+          "text": "        Provide the required csv content in your API request body",
+          "required": true
+        },
+        "merge_data_json_content": {
+          "type": "file",
+          "text": "Provide the required json content in your API request body",
+          "required": true
+        },
+        "merge_data_csv_url": {
+          "type": "string",
+          "text": "Provide the required csv url in your API request body",
+          "required": true
+        },
+        "merge_data_json_url": {
+          "type": "string",
+          "text": "        Provide the required json url in your API request body",
+          "required": true
+        },
+        "output_settings": {
+          "type": "object",
+          "text": "Using this param, you will be able to specify"
+        },
+        "test_mode": {
+          "type": "boolean",
+          "text": "Using this param, you can test the Merge APIs without consuming any credit points",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify a unique id for the writer document",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To execute/invoke the custom function configured in the template and merge it",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/documents/{{document_id}}/merge/execute",
+        "alias_endpoint": "/zohowriter/writer/api/v1/documents/document_id/merge/execute",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/merge-and-invoke.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoWriter.documentEditor.ALL,\nZohoWriter.merge.ALL ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__documents__document_id__merge__sharetofill___post": {
+      "provider_intent": "zohowriter__writer__api__v1__documents__document_id__merge__sharetofill___post",
+      "provider_alias_intent": "/writer/api/v1/documents/document_id/merge/sharetofill",
+      "text": "Merge and Share Fillable Link",
+      "category": "Merge API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify a unique id for the writer document",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "merge_data": {
+          "type": "object",
+          "text": "Pass a String value through 'data' key as JSON Array",
+          "required": true
+        },
+        "merge_data_csv_content": {
+          "type": "file",
+          "text": "Provide the required csv content in your API request body",
+          "required": true
+        },
+        "merge_data_json_content": {
+          "type": "file",
+          "text": "Provide the required json content in your API request body",
+          "required": true
+        },
+        "merge_data_csv_url": {
+          "type": "string",
+          "text": "Provide the required csv url in your API request body",
+          "required": true
+        },
+        "merge_data_json_url": {
+          "type": "file",
+          "text": "Provide the required json url in your API request body",
+          "required": true
+        },
+        "test_mode": {
+          "type": "boolean",
+          "text": "Using this param, you can test the Merge APIs without consuming any credit points",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify a unique id for the writer document",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To generate pre-filled fillable links for the given records",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/documents/{{document_id}}/merge/sharetofill",
+        "alias_endpoint": "/zohowriter/writer/api/v1/documents/document_id/merge/sharetofill",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/merge-and-share-fillable-link.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoWriter.documentEditor.ALL,\nZohoWriter.merge.ALL ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__documents__document_id__mergewithpresets___post": {
+      "provider_intent": "zohowriter__writer__api__v1__documents__document_id__mergewithpresets___post",
+      "provider_alias_intent": "/writer/api/v1/documents/document_id/mergewithpresets",
+      "text": "Merge with Presets",
+      "category": "Merge API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify a unique id for the writer document",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "merge_data": {
+          "type": "object",
+          "text": "Pass a String value through 'data' key as JSON Array",
+          "required": true
+        },
+        "merge_data_csv_content": {
+          "type": "file",
+          "text": "Provide the required csv content in your API request body",
+          "required": true
+        },
+        "merge_data_json_content": {
+          "type": "file",
+          "text": "Provide the required json content in your API request body",
+          "required": true
+        },
+        "merge_data_csv_url": {
+          "type": "string",
+          "text": "Provide the required csv url in your API request body",
+          "required": true
+        },
+        "merge_data_json_url": {
+          "type": "string",
+          "text": "Provide the required json url in your API request body",
+          "required": true
+        },
+        "webhook_info": {
+          "type": "object",
+          "text": "Using this param, you will be able to specify"
+        },
+        "test_mode": {
+          "type": "boolean",
+          "text": "Using this param, you can test the Merge APIs without consuming any credit points",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify a unique id for the writer document",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To facilitates the execution of merge operations according to the configured template settings",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/documents/{{document_id}}/mergewithpresets",
+        "alias_endpoint": "/zohowriter/writer/api/v1/documents/document_id/mergewithpresets",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/merge-with-presets.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__documents__pdf__combine___post": {
+      "provider_intent": "zohowriter__writer__api__v1__documents__pdf__combine___post",
+      "provider_alias_intent": "/writer/api/v1/documents/pdf/combine",
+      "text": "Combine PDFs",
+      "category": "Merge API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "files": {
+          "type": "file",
+          "text": "To upload the input files from your local drive or desktop",
+          "required": true
+        },
+        "output_settings": {
+          "type": "object",
+          "text": "Specify a unique name for the merged or combined output file"
+        },
+        "input_options": {
+          "type": "object",
+          "text": "It is possible to combine selected pages or a specific range pages in a document"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To combine two PDF documents",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/documents/pdf/combine",
+        "alias_endpoint": "/zohowriter/writer/api/v1/documents/pdf/combine",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/combine-pdfs.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoWriter.documentEditor.ALL,\nZohoWriter.merge.ALL,\nWorkDrive.organization.ALL",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__documents__document_id__meta___post": {
+      "provider_intent": "zohowriter__writer__api__v1__documents__document_id__meta___post",
+      "provider_alias_intent": "/writer/api/v1/documents/document_id/meta",
+      "text": "Enable/Disable Track Changes",
+      "category": "Meta API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify the unique id for the Writer document",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "operations": {
+          "type": "object",
+          "text": "Pass a String value (either enable or disable) through 'track_changes' key inside the JSONObject",
+          "required": true
+        }
+      },
+      "path": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify the unique id for the Writer document",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To enable or disable the track changes option for a document",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/documents/{{document_id}}/meta",
+        "alias_endpoint": "/zohowriter/writer/api/v1/documents/document_id/meta",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/enable-or-disable-track-changes.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__documents__document_id__publish___post": {
+      "provider_intent": "zohowriter__writer__api__v1__documents__document_id__publish___post",
+      "provider_alias_intent": "/writer/api/v1/documents/document_id/publish",
+      "text": "Publish Specific Document Version",
+      "category": "Publish API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify the unique id of the document to be published",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "scope": {
+          "type": "string",
+          "text": "Specify scope as 'external' to publish the document to public or 'organization' to publish it within the organization",
+          "required": true
+        },
+        "auto_republish": {
+          "type": "boolean",
+          "text": "Enter auto_republish as 'false' to publish only the recent version of the document",
+          "required": true,
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify the unique id of the document to be published",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To publish the most recent version of the document externally",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/documents/{{document_id}}/publish",
+        "alias_endpoint": "/zohowriter/writer/api/v1/documents/document_id/publish",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/publish-specific-version.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__documents__document_id__publish___delete": {
+      "provider_intent": "zohowriter__writer__api__v1__documents__document_id__publish___delete",
+      "provider_alias_intent": "/writer/api/v1/documents/document_id/publish",
+      "text": "Unpublish Document",
+      "category": "Publish API",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify the unique id of the document to be published",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify the unique id of the document to be published",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To unpublish the document that has been published already",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/documents/{{document_id}}/publish",
+        "alias_endpoint": "/zohowriter/writer/api/v1/documents/document_id/publish",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/unpublish-document.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__apps__blog__wordpress__accounts___get": {
+      "provider_intent": "zohowriter__writer__api__v1__apps__blog__wordpress__accounts___get",
+      "provider_alias_intent": "/writer/api/v1/apps/blog/wordpress/accounts",
+      "text": "Get WordPress Accounts",
+      "category": "Publish API",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To retrieve the list of WordPress accounts that are linked with Writer",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/apps/blog/wordpress/accounts",
+        "alias_endpoint": "/zohowriter/writer/api/v1/apps/blog/wordpress/accounts",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/get-wordpress-accounts.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__documents__document_id__apps__blog__wordpress__accounts__account_id__blogs__site_id___post": {
+      "provider_intent": "zohowriter__writer__api__v1__documents__document_id__apps__blog__wordpress__accounts__account_id__blogs__site_id___post",
+      "provider_alias_intent": "/writer/api/v1/documents/document_id/apps/blog/wordpress/accounts/account_id/blogs/site_id",
+      "text": "Post to WordPress",
+      "category": "Publish API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify the unique id of the document to be published in your WordPress site",
+          "required": true
+        },
+        "account_id": {
+          "type": "string",
+          "text": "Specify the unique id of your WordPress account",
+          "required": true
+        },
+        "site_id": {
+          "type": "string",
+          "text": "Specify the unique id of the site in which the document needs to be posted",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "post_type": {
+          "type": "string",
+          "text": "Choose how the document needs to be posted",
+          "required": true
+        },
+        "title": {
+          "type": "string",
+          "text": "Specify a title for the post. Maximum 255 characters"
+        },
+        "schedule_time": {
+          "type": "number",
+          "text": "Specify the time (timestamp in milliseconds) when the Writer document needs to be posted in your WordPress account"
+        },
+        "tags": {
+          "type": "string",
+          "text": "Specify the comma-separated list of tag names"
+        },
+        "style": {
+          "type": "string",
+          "text": "Specify the style in which the document needs to be posted"
+        }
+      },
+      "path": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify the unique id of the document to be published in your WordPress site",
+          "required": true
+        },
+        "account_id": {
+          "type": "string",
+          "text": "Specify the unique id of your WordPress account",
+          "required": true
+        },
+        "site_id": {
+          "type": "string",
+          "text": "Specify the unique id of the site in which the document needs to be posted",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To post a document from Writer to WordPress",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/documents/{{document_id}}/apps/blog/wordpress/accounts/{{account_id}}/blogs/{{site_id}}",
+        "alias_endpoint": "/zohowriter/writer/api/v1/documents/document_id/apps/blog/wordpress/accounts/account_id/blogs/site_id",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/post-to-wordpress.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__apps__blog__blogger__accounts___get": {
+      "provider_intent": "zohowriter__writer__api__v1__apps__blog__blogger__accounts___get",
+      "provider_alias_intent": "/writer/api/v1/apps/blog/blogger/accounts",
+      "text": "Get Blogger Accounts",
+      "category": "Publish API",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To retrieve the list of your Blogger accounts that are linked with Writer",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/apps/blog/blogger/accounts",
+        "alias_endpoint": "/zohowriter/writer/api/v1/apps/blog/blogger/accounts",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/get-blogger-accounts.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__apps__blog__blogger__accounts__account_id__blogs___get": {
+      "provider_intent": "zohowriter__writer__api__v1__apps__blog__blogger__accounts__account_id__blogs___get",
+      "provider_alias_intent": "/writer/api/v1/apps/blog/blogger/accounts/account_id/blogs",
+      "text": "Get Blogs List in Blogger",
+      "category": "Publish API",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "string",
+          "text": "Specify the unique id of your Blogger account",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "string",
+          "text": "Specify the unique id of your Blogger account",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To retrieve the list of blogs available in your Blogger account",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/apps/blog/blogger/accounts/{{account_id}}/blogs",
+        "alias_endpoint": "/zohowriter/writer/api/v1/apps/blog/blogger/accounts/account_id/blogs",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/get-blogs-list-in-blogger.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__documents__document_id__apps__blog__blogger__accounts__account_id__blogs__blog_id___post": {
+      "provider_intent": "zohowriter__writer__api__v1__documents__document_id__apps__blog__blogger__accounts__account_id__blogs__blog_id___post",
+      "provider_alias_intent": "/writer/api/v1/documents/document_id/apps/blog/blogger/accounts/account_id/blogs/blog_id",
+      "text": "Post to Blogger",
+      "category": "Publish API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify the unique id of the document to be published in Blogger",
+          "required": true
+        },
+        "account_id": {
+          "type": "string",
+          "text": "Specify the unique id of your Blogger account",
+          "required": true
+        },
+        "blog_id": {
+          "type": "string",
+          "text": "Specify the unique id of the blog in which the Writer document needs to be posted",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "post_type": {
+          "type": "string",
+          "text": "Choose how the document needs to be posted",
+          "required": true
+        },
+        "title": {
+          "type": "string",
+          "text": "Specify a title for the post. Maximum 255 characters"
+        },
+        "schedule_time": {
+          "type": "number",
+          "text": "Specify the time (timestamp in milliseconds) to post the document in your Blogger account"
+        },
+        "style": {
+          "type": "string",
+          "text": "Specify the style in which the document needs to be posted"
+        }
+      },
+      "path": {
+        "document_id": {
+          "type": "string",
+          "text": "Specify the unique id of the document to be published in Blogger",
+          "required": true
+        },
+        "account_id": {
+          "type": "string",
+          "text": "Specify the unique id of your Blogger account",
+          "required": true
+        },
+        "blog_id": {
+          "type": "string",
+          "text": "Specify the unique id of the blog in which the Writer document needs to be posted",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To publish a document from Writer to Blogger",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/documents/{{document_id}}/apps/blog/blogger/accounts/{{account_id}}/blogs/{{blog_id}}",
+        "alias_endpoint": "/zohowriter/writer/api/v1/documents/document_id/apps/blog/blogger/accounts/account_id/blogs/blog_id",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/post-to-blogger.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__templates___get": {
+      "provider_intent": "zohowriter__writer__api__v1__templates___get",
+      "provider_alias_intent": "/writer/api/v1/templates",
+      "text": "Get List of Templates",
+      "category": "Template API",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "type": {
+          "type": "string",
+          "text": "Specify the type (either personal or organization) of templates that needs to be listed"
+        },
+        "offset": {
+          "type": "number",
+          "text": "Set offset parameter to get the list of templates from the respective page"
+        },
+        "limit": {
+          "type": "number",
+          "text": "Set document limit and retrieve the list of templates within the specified limit"
+        },
+        "sortby": {
+          "type": "string",
+          "text": "Get the list of templates in alphabetical order"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To get the list of templates based on the specified parameter",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/templates",
+        "alias_endpoint": "/zohowriter/writer/api/v1/templates",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/get-list-of-templates.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__templates___post": {
+      "provider_intent": "zohowriter__writer__api__v1__templates___post",
+      "provider_alias_intent": "/writer/api/v1/templates",
+      "text": "Create Template through Web URL",
+      "category": "Template API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "url": {
+          "type": "string",
+          "text": "Specify the Web URL (which is publicly accessible) through which the template needs to be created",
+          "required": true
+        },
+        "type": {
+          "type": "string",
+          "text": "Specify the type (either personal or organization) of templates that needs to be created"
+        },
+        "name": {
+          "type": "string",
+          "text": "Specify a unique name for the template"
+        },
+        "password": {
+          "type": "string",
+          "text": "If the provide input url is password protected, then you can specify that password via this parameter"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To create a template via Web URL",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/templates",
+        "alias_endpoint": "/zohowriter/writer/api/v1/templates",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/create-template-through-web-url.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__templates__template_id___get": {
+      "provider_intent": "zohowriter__writer__api__v1__templates__template_id___get",
+      "provider_alias_intent": "/writer/api/v1/templates/template_id",
+      "text": "Get Template Details",
+      "category": "Template API",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "template_id": {
+          "type": "string",
+          "text": "Specify the unique id for the template",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "template_id": {
+          "type": "string",
+          "text": "Specify the unique id for the template",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To get the details of a template",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/templates/{{template_id}}",
+        "alias_endpoint": "/zohowriter/writer/api/v1/templates/template_id",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/get-template-details.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__templates__template_id__copy___post": {
+      "provider_intent": "zohowriter__writer__api__v1__templates__template_id__copy___post",
+      "provider_alias_intent": "/writer/api/v1/templates/template_id/copy",
+      "text": "Copy Template",
+      "category": "Template API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "template_id": {
+          "type": "string",
+          "text": "Specify the unique id for the template",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "type": {
+          "type": "string",
+          "text": "Specify the type (either personal or organization) of templates that needs to be copied"
+        },
+        "name": {
+          "type": "string",
+          "text": "Specify a unique name for the template'"
+        }
+      },
+      "path": {
+        "template_id": {
+          "type": "string",
+          "text": "Specify the unique id for the template",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To retrieve a copy of a specific template",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/templates/{{template_id}}/copy",
+        "alias_endpoint": "/zohowriter/writer/api/v1/templates/template_id/copy",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/copy-template.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowriter__writer__api__v1__templates__template_id__delete___delete": {
+      "provider_intent": "zohowriter__writer__api__v1__templates__template_id__delete___delete",
+      "provider_alias_intent": "/writer/api/v1/templates/template_id/delete",
+      "text": "Delete Template",
+      "category": "Template API",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "template_id": {
+          "type": "string",
+          "text": "Specify the unique id for the template that needs to be deleted",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "template_id": {
+          "type": "string",
+          "text": "Specify the unique id for the template that needs to be deleted",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To delete the unwanted templates from the template list",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/writer/api/v1/templates/{{template_id}}/delete",
+        "alias_endpoint": "/zohowriter/writer/api/v1/templates/template_id/delete",
+        "api_ref": "https://www.zoho.com/writer/help/api/v1/delete-template.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

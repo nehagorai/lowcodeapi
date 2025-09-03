@@ -1,0 +1,5183 @@
+{
+  "routes": {
+    "zohocommerce__portaluser__userprofile___get": {
+      "provider_intent": "zohocommerce__portaluser__userprofile___get",
+      "provider_alias_intent": "/portaluser/userprofile",
+      "text": "Get User Profile",
+      "category": "Account Dashboard",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Get User Profile",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/portaluser/userProfile",
+        "alias_endpoint": "/zohocommerce/portaluser/userprofile",
+        "api_ref": "https://www.zoho.com/commerce/api/get-user-profile.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/portaluser/userProfile",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__portaluser__userprofile___post": {
+      "provider_intent": "zohocommerce__portaluser__userprofile___post",
+      "provider_alias_intent": "/portaluser/userprofile",
+      "text": "Edit User Profile",
+      "category": "Account Dashboard",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "token": {
+          "type": "string",
+          "text": "User's token",
+          "required": true
+        },
+        "contact_person_list": {
+          "type": "object",
+          "text": "Contains user contact_person_id",
+          "required": true
+        },
+        "user_info": {
+          "type": "array",
+          "text": "User_info contains the edited profile details of the user",
+          "required": true
+        },
+        "email": {
+          "type": "string",
+          "text": "Email ID of the user",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Edit User Profile",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/portaluser/userProfile",
+        "alias_endpoint": "/zohocommerce/portaluser/userprofile",
+        "api_ref": "https://www.zoho.com/commerce/api/edit-user-profile.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/portaluser/userProfile ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__portaluser__changepassword___post": {
+      "provider_intent": "zohocommerce__portaluser__changepassword___post",
+      "provider_alias_intent": "/portaluser/changepassword",
+      "text": "Change Password",
+      "category": "Account Dashboard",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "token": {
+          "type": "string",
+          "text": "User's token",
+          "required": true
+        },
+        "current_password": {
+          "type": "string",
+          "text": "Current password of the user's account",
+          "required": true
+        },
+        "new_password": {
+          "type": "string",
+          "text": "New password that needs to be updated",
+          "required": true
+        },
+        "confirm_password": {
+          "type": "string",
+          "text": "Confirmation password of the newly entered password",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Change Password",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/portaluser/changePassword",
+        "alias_endpoint": "/zohocommerce/portaluser/changepassword",
+        "api_ref": "https://www.zoho.com/commerce/api/change-password.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/portaluser/changePassword",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__portaluser__address___get": {
+      "provider_intent": "zohocommerce__portaluser__address___get",
+      "provider_alias_intent": "/portaluser/address",
+      "text": "Get Address Book",
+      "category": "Address Book",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Get Address Book",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/portaluser/address",
+        "alias_endpoint": "/zohocommerce/portaluser/address",
+        "api_ref": "https://www.zoho.com/commerce/api/get-address-book.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/portaluser/address",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__portaluser__address___post": {
+      "provider_intent": "zohocommerce__portaluser__address___post",
+      "provider_alias_intent": "/portaluser/address",
+      "text": "Create Address Book",
+      "category": "Address Book",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "address_details": {
+          "type": "object",
+          "text": "Contains JSON of user address detail that needed to be updated",
+          "required": true
+        },
+        "zuid": {
+          "type": "string",
+          "text": "User ID of the user",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Create Address Book",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/portaluser/address",
+        "alias_endpoint": "/zohocommerce/portaluser/address",
+        "api_ref": "https://www.zoho.com/commerce/api/create-address-book.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/portaluser/address",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__portaluser__address__address_id__default___post": {
+      "provider_intent": "zohocommerce__portaluser__address__address_id__default___post",
+      "provider_alias_intent": "/portaluser/address/address_id/default",
+      "text": "Mark Address as Default",
+      "category": "Address Book",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "address_id": {
+          "type": "string",
+          "text": "Address ID in the mapped shipping address detail of the user",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "address_id": {
+          "type": "string",
+          "text": "Address ID in the mapped shipping address detail of the user",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Mark Address as Default",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/portaluser/address/{address_id}/default",
+        "alias_endpoint": "/zohocommerce/portaluser/address/address_id/default",
+        "api_ref": "https://www.zoho.com/commerce/api/mark-address-as-default.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/portaluser/address/{address_id}/default",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__portaluser__address__address_id___delete": {
+      "provider_intent": "zohocommerce__portaluser__address__address_id___delete",
+      "provider_alias_intent": "/portaluser/address/address_id",
+      "text": "Delete Address Book",
+      "category": "Address Book",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "address_id": {
+          "type": "string",
+          "text": "Address ID in the mapped shipping address detail of the user",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "address_id": {
+          "type": "string",
+          "text": "Address ID in the mapped shipping address detail of the user",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Delete Address Book",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/portaluser/address/{address_id}",
+        "alias_endpoint": "/zohocommerce/portaluser/address/address_id",
+        "api_ref": "https://www.zoho.com/commerce/api/delete-address-book.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/portaluser/address/{address_id}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__portaluser__address__address_id___post": {
+      "provider_intent": "zohocommerce__portaluser__address__address_id___post",
+      "provider_alias_intent": "/portaluser/address/address_id",
+      "text": "Update Address Book",
+      "category": "Address Book",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "address_id": {
+          "type": "string",
+          "text": "Address ID in the mapped shipping address detail of the user",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "address_details": {
+          "type": "object",
+          "text": "Contains JSON of user address detail that needed to be updated",
+          "required": true
+        },
+        "zuid": {
+          "type": "string",
+          "text": "User ID of the user",
+          "required": true
+        }
+      },
+      "path": {
+        "address_id": {
+          "type": "string",
+          "text": "Address ID in the mapped shipping address detail of the user",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Update Address Book",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/portaluser/address/{address_id}",
+        "alias_endpoint": "/zohocommerce/portaluser/address/address_id",
+        "api_ref": "https://www.zoho.com/commerce/api/update-address-book.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/portaluser/address/{address_id}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__storefront__api__v1__cart___post": {
+      "provider_intent": "zohocommerce__storefront__api__v1__cart___post",
+      "provider_alias_intent": "/storefront/api/v1/cart",
+      "text": "Add to Cart",
+      "category": "Cart",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "product_variant_id": {
+          "type": "string",
+          "text": "The item to be added in cart.",
+          "required": true
+        },
+        "quantity": {
+          "type": "number",
+          "text": "Quantity of the item to be added in cart.",
+          "required": true
+        },
+        "cart_id": {
+          "type": "string",
+          "text": "The identifier of the cart. It is created by default, if there is no cart ID.",
+          "required": true
+        },
+        "custom_fields": {
+          "type": "array",
+          "text": "Contains the custom field values for the product."
+        },
+        "custom_field_id": {
+          "type": "number",
+          "text": "Unique identifier of the custom field."
+        },
+        "label": {
+          "type": "string",
+          "text": "The label value of the custom field."
+        },
+        "data_type": {
+          "type": "string",
+          "text": "The data type of the custom field."
+        },
+        "value": {
+          "type": "string",
+          "text": "The value of the custom field."
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Add to Cart\r",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/storefront/api/v1/cart",
+        "alias_endpoint": "/zohocommerce/storefront/api/v1/cart",
+        "api_ref": "https://www.zoho.com/commerce/api/add-to-cart.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/storefront/api/v1/cart",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__storefront__api__v1__cart___delete": {
+      "provider_intent": "zohocommerce__storefront__api__v1__cart___delete",
+      "provider_alias_intent": "/storefront/api/v1/cart",
+      "text": "Delete from Cart",
+      "category": "Cart",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "product_variant_id": {
+          "type": "string",
+          "text": "The item to be deleted from cart",
+          "required": true
+        },
+        "cart_id": {
+          "type": "string",
+          "text": "The identifier of the cart"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete from Cart",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/storefront/api/v1/cart",
+        "alias_endpoint": "/zohocommerce/storefront/api/v1/cart",
+        "api_ref": "https://www.zoho.com/commerce/api/delete-from-cart.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/storefront/api/v1/cart",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__storefront__api__v1__cart___put": {
+      "provider_intent": "zohocommerce__storefront__api__v1__cart___put",
+      "provider_alias_intent": "/storefront/api/v1/cart",
+      "text": "Update a Cart",
+      "category": "Cart",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "product_variant_id": {
+          "type": "string",
+          "text": "The item to be updated in cart",
+          "required": true
+        },
+        "quantity": {
+          "type": "number",
+          "text": "Quantity of the item to be updated in cart",
+          "required": true
+        },
+        "cart_id": {
+          "type": "string",
+          "text": "The identifier of the cart to be updated",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update a Cart",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/storefront/api/v1/cart",
+        "alias_endpoint": "/zohocommerce/storefront/api/v1/cart",
+        "api_ref": "https://www.zoho.com/commerce/api/update-cart.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/storefront/api/v1/cart",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__categories___get": {
+      "provider_intent": "zohocommerce__store__api__v1__categories___get",
+      "provider_alias_intent": "/store/api/v1/categories",
+      "text": "List All Categories",
+      "category": "Categories",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "number",
+          "text": "Page number"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Number of percentage taxable"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List All Categories",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/categories",
+        "alias_endpoint": "/zohocommerce/store/api/v1/categories",
+        "api_ref": "https://www.zoho.com/commerce/api/list-all-categories.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.items.READ",
+      "api_endpoint_src": "{endpoint}/store/api/v1/categories",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__categories___post": {
+      "provider_intent": "zohocommerce__store__api__v1__categories___post",
+      "provider_alias_intent": "/store/api/v1/categories",
+      "text": "Create a Category",
+      "category": "Categories",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Name of the category",
+          "required": true
+        },
+        "url": {
+          "type": "string",
+          "text": "URL of the category. The value should be unique [URL can contain only letters (upper and lower cases), numbers, hyphen(-) and underscore(_)]",
+          "required": true
+        },
+        "description": {
+          "type": "string",
+          "text": "Description about the category"
+        },
+        "visibility": {
+          "type": "boolean",
+          "text": "Visibility of the category in published site",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "show_in_menu": {
+          "type": "boolean",
+          "text": "Specify whether the category should be shown as a menu item in published site or not",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "seo_keyword": {
+          "type": "string",
+          "text": "Keywords related to category that can be used for SEO (Multiple keywords can be specified by separating them with commas)"
+        },
+        "seo_title": {
+          "type": "string",
+          "text": "Title of the category to be used in SEO"
+        },
+        "seo_description": {
+          "type": "string",
+          "text": "Description about the category to be used in SEO"
+        },
+        "parent_category_id": {
+          "type": "number",
+          "text": "Parent ID of the category (Empty will be considered as ROOT)"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a Category",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/categories",
+        "alias_endpoint": "/zohocommerce/store/api/v1/categories",
+        "api_ref": "https://www.zoho.com/commerce/api/create-a-category.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.items.CREATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/categories",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__categories__editpage___get": {
+      "provider_intent": "zohocommerce__store__api__v1__categories__editpage___get",
+      "provider_alias_intent": "/store/api/v1/categories/editpage",
+      "text": "Retrieve a Category",
+      "category": "Categories",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "category_id": {
+          "type": "number",
+          "text": "Category id for which category detail is required",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve a Category",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/categories/editpage",
+        "alias_endpoint": "/zohocommerce/store/api/v1/categories/editpage",
+        "api_ref": "https://www.zoho.com/commerce/api/retrieve-a-category.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.items.READ\r",
+      "api_endpoint_src": "{endpoint}/store/api/v1/categories/editpage",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__categories___put": {
+      "provider_intent": "zohocommerce__store__api__v1__categories___put",
+      "provider_alias_intent": "/store/api/v1/categories",
+      "text": "Update a Category",
+      "category": "Categories",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Name of the category"
+        },
+        "url": {
+          "type": "string",
+          "text": "URL of the category. The value should be unique [URL can contain only letters (upper and lower cases), numbers, hyphen(-), and underscore(_)]"
+        },
+        "description": {
+          "type": "string",
+          "text": "Description about the category"
+        },
+        "visibility": {
+          "type": "boolean",
+          "text": "Visibility of the category in published site",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "show_in_menu": {
+          "type": "boolean",
+          "text": "Specify whether the category should be shown as a menu item in published site or not",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "seo_keyword": {
+          "type": "string",
+          "text": "Keywords related to category that can be used for SEO (Multiple keywords can be specified by separating them with commas)"
+        },
+        "seo_title": {
+          "type": "string",
+          "text": "Title of the category to be used in SEO"
+        },
+        "seo_description": {
+          "type": "string",
+          "text": "Description about the category to be used in SEO"
+        },
+        "parent_category_id": {
+          "type": "number",
+          "text": "Parent ID of the category (Empty will be considered as ROOT)"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update a Category",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/categories",
+        "alias_endpoint": "/zohocommerce/store/api/v1/categories",
+        "api_ref": "https://www.zoho.com/commerce/api/update-category.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.items.UPDATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/categories",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__categories___delete": {
+      "provider_intent": "zohocommerce__store__api__v1__categories___delete",
+      "provider_alias_intent": "/store/api/v1/categories",
+      "text": "Delete a Category",
+      "category": "Categories",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "delete_sub_categories": {
+          "type": "boolean",
+          "text": "The value should be true when you're deleting the parent category. If the category has no child the param can be neglected",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a Category",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/categories",
+        "alias_endpoint": "/zohocommerce/store/api/v1/categories",
+        "api_ref": "https://www.zoho.com/commerce/api/delete-category.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.items.DELETE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/categories",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__categories__siblingorder___post": {
+      "provider_intent": "zohocommerce__store__api__v1__categories__siblingorder___post",
+      "provider_alias_intent": "/store/api/v1/categories/siblingorder",
+      "text": "Re-order Categories",
+      "category": "Categories",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "categories": {
+          "type": "object",
+          "text": "Array of category IDs in their respective sibling order",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Re-order Categories",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/categories/siblingorder",
+        "alias_endpoint": "/zohocommerce/store/api/v1/categories/siblingorder",
+        "api_ref": "https://www.zoho.com/commerce/api/reorder-categories.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.items.CREATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/categories//siblingorder",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__categories__images___post": {
+      "provider_intent": "zohocommerce__store__api__v1__categories__images___post",
+      "provider_alias_intent": "/store/api/v1/categories/images",
+      "text": "Add Category Image",
+      "category": "Categories",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "image": {
+          "type": "file",
+          "text": "Binary of the image",
+          "required": true
+        },
+        "alter_text": {
+          "type": "string",
+          "text": " Alternate text for the image"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Add Category Image",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/categories/images",
+        "alias_endpoint": "/zohocommerce/store/api/v1/categories/images",
+        "api_ref": "https://www.zoho.com/commerce/api/add-category-image.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.items.CREATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/categories//images",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__categories__images___put": {
+      "provider_intent": "zohocommerce__store__api__v1__categories__images___put",
+      "provider_alias_intent": "/store/api/v1/categories/images",
+      "text": "Edit Category Image",
+      "category": "Categories",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "name": {
+          "type": "string",
+          "text": "Name of the category's image (shouldn't contain any html characters like <>)"
+        },
+        "alter_text": {
+          "type": "string",
+          "text": " Alternate text for the category's image (shouldn't contain any html characters like <>)"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Edit Category Image",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/categories/images",
+        "alias_endpoint": "/zohocommerce/store/api/v1/categories/images",
+        "api_ref": "https://www.zoho.com/commerce/api/edit-category-image.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.items.UPDATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/categories//images",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__categories__documents___delete": {
+      "provider_intent": "zohocommerce__store__api__v1__categories__documents___delete",
+      "provider_alias_intent": "/store/api/v1/categories/documents",
+      "text": "Delete Category Image",
+      "category": "Categories",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete Category Image",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/categories/documents",
+        "alias_endpoint": "/zohocommerce/store/api/v1/categories/documents",
+        "api_ref": "https://www.zoho.com/commerce/api/delete-category-image.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.items.DELETE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/categories//documents",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__storefront__api__v1__checkout___get": {
+      "provider_intent": "zohocommerce__storefront__api__v1__checkout___get",
+      "provider_alias_intent": "/storefront/api/v1/checkout",
+      "text": "Get Checkout",
+      "category": "Checkout",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "checkout_id": {
+          "type": "string",
+          "text": "Unique ID generated by the server for the checkout. This is used as an identifier",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get Checkout",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/storefront/api/v1/checkout",
+        "alias_endpoint": "/zohocommerce/storefront/api/v1/checkout",
+        "api_ref": "https://www.zoho.com/commerce/api/get-checkout.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/storefront/api/v1/checkout",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__storefront__api__v1__checkout__address___post": {
+      "provider_intent": "zohocommerce__storefront__api__v1__checkout__address___post",
+      "provider_alias_intent": "/storefront/api/v1/checkout/address",
+      "text": "Add Address",
+      "category": "Checkout",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "checkout_id": {
+          "type": "string",
+          "text": "Unique ID generated by the server for the checkout. This is used as an identifier",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "shipping_address": {
+          "type": "object",
+          "text": "The address to which the goods must be delivered",
+          "required": true
+        },
+        "first_name": {
+          "type": "string",
+          "text": "First name of the customer's shipping/billing"
+        },
+        "last_name": {
+          "type": "string",
+          "text": "Last name of the customer's shipping/billing"
+        },
+        "email_address": {
+          "type": "string",
+          "text": "Email Id of the customer's shipping/billing address"
+        },
+        "state": {
+          "type": "string",
+          "text": "State of the customer's shipping/billing address"
+        },
+        "postal_code": {
+          "type": "string",
+          "text": "ZIP Code of the customer's shipping/billing address"
+        },
+        "telephone": {
+          "type": "string",
+          "text": "Phone number of the customer's shipping/billing address"
+        },
+        "country": {
+          "type": "string",
+          "text": "Country of the customer's shipping/billing address"
+        },
+        "same_billing_address": {
+          "type": "boolean",
+          "text": "Checks whether the billing address is the same as shipping address",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "billing_address": {
+          "type": "string",
+          "text": "Billing address of the customer (contains the same fields as above)",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Add Address",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/storefront/api/v1/checkout/address",
+        "alias_endpoint": "/zohocommerce/storefront/api/v1/checkout/address",
+        "api_ref": "https://www.zoho.com/commerce/api/add-address.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/storefront/api/v1/checkout/address",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__storefront__api__v1__checkout__shipping-methods___post": {
+      "provider_intent": "zohocommerce__storefront__api__v1__checkout__shipping-methods___post",
+      "provider_alias_intent": "/storefront/api/v1/checkout/shipping-methods",
+      "text": "Add Shipping Method",
+      "category": "Checkout",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "checkout_id": {
+          "type": "string",
+          "text": "Unique ID generated by the server for the checkout. This is used as an identifier",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "shipping": {
+          "type": "string",
+          "text": "The id of the shipping method to be added for the checkout",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Add Shipping Method",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/storefront/api/v1/checkout/shipping-methods",
+        "alias_endpoint": "/zohocommerce/storefront/api/v1/checkout/shipping-methods",
+        "api_ref": "https://www.zoho.com/commerce/api/add-shipping-method.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/storefront/api/v1/checkout/shipping-methods",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__storefront__api__v1__checkout__process-offline-payment___post": {
+      "provider_intent": "zohocommerce__storefront__api__v1__checkout__process-offline-payment___post",
+      "provider_alias_intent": "/storefront/api/v1/checkout/process-offline-payment",
+      "text": "Place an Order",
+      "category": "Checkout",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "checkout_id": {
+          "type": "string",
+          "text": "Unique ID generated by the server for the checkout. This is used as identifier",
+          "required": true
+        },
+        "payment_mode": {
+          "type": "string",
+          "text": "Allowed value: cash_on_delivery",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Place an Order",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/storefront/api/v1/checkout/process-offline-payment",
+        "alias_endpoint": "/zohocommerce/storefront/api/v1/checkout/process-offline-payment",
+        "api_ref": "https://www.zoho.com/commerce/api/place-order.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/storefront/api/v1/checkout/process-offline-payment",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__storefront__api__v1__checkout__applycoupon___post": {
+      "provider_intent": "zohocommerce__storefront__api__v1__checkout__applycoupon___post",
+      "provider_alias_intent": "/storefront/api/v1/checkout/applycoupon",
+      "text": "Add or Remove Coupons",
+      "category": "Checkout",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "checkout_id": {
+          "type": "string",
+          "text": "Unique ID generated by the server for the checkout. This is used as identifier",
+          "required": true
+        },
+        "coupon_code": {
+          "type": "string",
+          "text": "The coupon code to be applied. To remove the coupon you need to change the data type to empty string",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Add or Remove Coupons",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/storefront/api/v1/checkout/applycoupon",
+        "alias_endpoint": "/zohocommerce/storefront/api/v1/checkout/applycoupon",
+        "api_ref": "https://www.zoho.com/commerce/api/checkout-coupons.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/storefront/api/v1/checkout/applycoupon",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__coupons___get": {
+      "provider_intent": "zohocommerce__store__api__v1__coupons___get",
+      "provider_alias_intent": "/store/api/v1/coupons",
+      "text": "List Coupons",
+      "category": "Coupons",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List Coupons",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/coupons",
+        "alias_endpoint": "/zohocommerce/store/api/v1/coupons",
+        "api_ref": "https://www.zoho.com/commerce/api/list-coupons.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.coupons.READ",
+      "api_endpoint_src": "{endpoint}/store/api/v1/coupons",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__coupons__coupon_id___get": {
+      "provider_intent": "zohocommerce__store__api__v1__coupons__coupon_id___get",
+      "provider_alias_intent": "/store/api/v1/coupons/coupon_id",
+      "text": "Get Coupon",
+      "category": "Coupons",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "coupon_id": {
+          "type": "string",
+          "text": "Coupon Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "coupon_id": {
+          "type": "string",
+          "text": "Coupon Id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get Coupon",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/coupons/{coupon_id}",
+        "alias_endpoint": "/zohocommerce/store/api/v1/coupons/coupon_id",
+        "api_ref": "https://www.zoho.com/commerce/api/get-coupon.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.coupons.READ",
+      "api_endpoint_src": "{endpoint}/store/api/v1/coupons/{coupon_id}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__coupons___post": {
+      "provider_intent": "zohocommerce__store__api__v1__coupons___post",
+      "provider_alias_intent": "/store/api/v1/coupons",
+      "text": "Create Coupon",
+      "category": "Coupons",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "coupon_code": {
+          "type": "string",
+          "text": "Code for the coupon",
+          "required": true
+        },
+        "coupon_name": {
+          "type": "string",
+          "text": "Name of the coupon",
+          "required": true
+        },
+        "activation_time": {
+          "type": "boolean",
+          "text": "If true, guest users cannot apply this coupon",
+          "required": true,
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "minimum_order_value": {
+          "type": "string",
+          "text": "Order total must be greater than this amount in order to apply this coupon",
+          "required": true
+        },
+        "discount_type": {
+          "type": "string",
+          "text": "Type of coupon, either 'Flat' or 'Percentage'",
+          "required": true
+        },
+        "discount_value": {
+          "type": "string",
+          "text": "Value of the coupon",
+          "required": true
+        },
+        "max_redemption_count": {
+          "type": "number",
+          "text": "Coupon limit for store",
+          "required": true
+        },
+        "max_redemption_count_per_user": {
+          "type": "number",
+          "text": "Coupon limit per customer",
+          "required": true
+        },
+        "eligible_products": {
+          "type": "object",
+          "text": "Coupon applicable for the mentioned products"
+        },
+        "eligible_shipping_zones": {
+          "type": "object",
+          "text": "Coupon applicable for the mentioned shipping zones"
+        },
+        "eligible_customers": {
+          "type": "object",
+          "text": "Coupon applicable for the mentioned customers"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create Coupon",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/coupons",
+        "alias_endpoint": "/zohocommerce/store/api/v1/coupons",
+        "api_ref": "https://www.zoho.com/commerce/api/create-coupon.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.coupons.CREATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/coupons",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__coupons__coupon_id___put": {
+      "provider_intent": "zohocommerce__store__api__v1__coupons__coupon_id___put",
+      "provider_alias_intent": "/store/api/v1/coupons/coupon_id",
+      "text": "Update Coupon",
+      "category": "Coupons",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "coupon_id": {
+          "type": "string",
+          "text": "Coupon Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "coupon_code": {
+          "type": "string",
+          "text": "Code for the coupon",
+          "required": true
+        },
+        "coupon_name": {
+          "type": "string",
+          "text": "Name of the coupon",
+          "required": true
+        },
+        "activation_time": {
+          "type": "string",
+          "text": "Time of coupon activation",
+          "required": true
+        },
+        "expiry_time": {
+          "type": "string",
+          "text": "Expiry time for coupon",
+          "required": true
+        },
+        "restrict_for_guest_user": {
+          "type": "boolean",
+          "text": "If true, guest user cannot apply this coupon",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "minimum_order_value": {
+          "type": "string",
+          "text": "Order total must be greater than this amount in order to apply this coupon",
+          "required": true
+        },
+        "discount_type": {
+          "type": "string",
+          "text": "Type of coupon, either 'Flat' or 'Percentage'",
+          "required": true
+        },
+        "discount_value": {
+          "type": "string",
+          "text": "Value of the coupon",
+          "required": true
+        },
+        "max_redemption_count": {
+          "type": "number",
+          "text": "Coupon limit for store",
+          "required": true
+        },
+        "max_redemption_count_per_user": {
+          "type": "number",
+          "text": "Coupon limit per customer",
+          "required": true
+        },
+        "eligible_products": {
+          "type": "object",
+          "text": "Coupon applicable for the mentioned products"
+        },
+        "eligible_shipping_zones": {
+          "type": "object",
+          "text": "Coupon applicable for the mentioned shipping zones"
+        },
+        "eligible_customers": {
+          "type": "object",
+          "text": "Coupon applicable for the mentioned customers"
+        }
+      },
+      "path": {
+        "coupon_id": {
+          "type": "string",
+          "text": "Coupon Id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update Coupon",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/coupons/{coupon_id}",
+        "alias_endpoint": "/zohocommerce/store/api/v1/coupons/coupon_id",
+        "api_ref": "https://www.zoho.com/commerce/api/update-coupon.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.coupons.UPDATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/coupons/{coupon_id}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__coupons__coupon_id___delete": {
+      "provider_intent": "zohocommerce__store__api__v1__coupons__coupon_id___delete",
+      "provider_alias_intent": "/store/api/v1/coupons/coupon_id",
+      "text": "Delete Coupon",
+      "category": "Coupons",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "coupon_id": {
+          "type": "string",
+          "text": "Coupon Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "coupon_id": {
+          "type": "string",
+          "text": "Coupon Id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete Coupon",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/coupons/{coupon_id}",
+        "alias_endpoint": "/zohocommerce/store/api/v1/coupons/coupon_id",
+        "api_ref": "https://www.zoho.com/commerce/api/delete-coupon.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.coupons.DELETE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/coupons/{coupon_id}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__import__uploadfile___post": {
+      "provider_intent": "zohocommerce__store__api__v1__import__uploadfile___post",
+      "provider_alias_intent": "/store/api/v1/import/uploadfile",
+      "text": "Upload Import File",
+      "category": "Import Products",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "importfile": {
+          "type": "file",
+          "text": "Give file that needs to be imported",
+          "required": true
+        },
+        "entity": {
+          "type": "string",
+          "text": "Give entity type of the import. Only possible value is 'itemgroup'",
+          "required": true
+        },
+        "duplicate_handling": {
+          "type": "string",
+          "text": "Give value that defines how to handle duplicate records. Only possible value is 'overwrite'",
+          "required": true
+        },
+        "charencoding": {
+          "type": "string",
+          "text": "Give character encoding used in the file. Possible values are UTF-8, UTF-16",
+          "required": true
+        },
+        "delimiter": {
+          "type": "string",
+          "text": "Give delimiter used in the file. Possible values are ',' and ';'",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Upload Import File",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/import/uploadfile",
+        "alias_endpoint": "/zohocommerce/store/api/v1/import/uploadfile",
+        "api_ref": "https://www.zoho.com/commerce/api/import-products-step-1.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.import.CREATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/import/uploadfile",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__import__preview___put": {
+      "provider_intent": "zohocommerce__store__api__v1__import__preview___put",
+      "provider_alias_intent": "/store/api/v1/import/preview",
+      "text": "Preview Imported File",
+      "category": "Import Products",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "entity_columns": {
+          "type": "array",
+          "text": "Give array of all entity and csv column mapping (Use entity_columns array response format from the step 1)",
+          "required": true
+        },
+        "csv_column": {
+          "type": "string",
+          "text": "Give csv column name",
+          "required": true
+        },
+        "entity_column": {
+          "type": "string",
+          "text": "Give corresponding entity column name for mapping",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Preview Imported File",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/import/preview",
+        "alias_endpoint": "/zohocommerce/store/api/v1/import/preview",
+        "api_ref": "https://www.zoho.com/commerce/api/import-products-step-2.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.import.UPDATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/import//preview",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__import___put": {
+      "provider_intent": "zohocommerce__store__api__v1__import___put",
+      "provider_alias_intent": "/store/api/v1/import",
+      "text": "Import Products",
+      "category": "Import Products",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Import Products",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/import",
+        "alias_endpoint": "/zohocommerce/store/api/v1/import",
+        "api_ref": "https://www.zoho.com/commerce/api/import-products-step-3.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.import.UPDATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/import",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__inventoryadjustments___post": {
+      "provider_intent": "zohocommerce__store__api__v1__inventoryadjustments___post",
+      "provider_alias_intent": "/store/api/v1/inventoryadjustments",
+      "text": "Manage Stock",
+      "category": "Inventory",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "reason": {
+          "type": "string",
+          "text": "Reason for stock adjustment",
+          "required": true
+        },
+        "adjustment_type": {
+          "type": "string",
+          "text": "Adjustment type should be 'quantity'",
+          "required": true
+        },
+        "line_items": {
+          "type": "array",
+          "text": "Give a list of all the items along with adjustment quantity",
+          "required": true
+        },
+        "item_id": {
+          "type": "number",
+          "text": "Give variant_id of the product that needs to be adjusted",
+          "required": true
+        },
+        "quantity_adjusted": {
+          "type": "string",
+          "text": "The adjusted quantity of the line item",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Manage Stock",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/inventoryadjustments",
+        "alias_endpoint": "/zohocommerce/store/api/v1/inventoryadjustments",
+        "api_ref": "https://www.zoho.com/commerce/api/manage-stock.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.inventoryadjustments.CREATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/inventoryadjustments",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__storefront__api__v1__products__product_id___get": {
+      "provider_intent": "zohocommerce__storefront__api__v1__products__product_id___get",
+      "provider_alias_intent": "/storefront/api/v1/products/product_id",
+      "text": "Get Product",
+      "category": "Listing",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "product_id": {
+          "type": "string",
+          "text": "Unique ID generated by the server for the product. This is used as identifier",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "product_id": {
+          "type": "string",
+          "text": "Unique ID generated by the server for the product. This is used as identifier",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get Product",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/storefront/api/v1/products/{product_id}",
+        "alias_endpoint": "/zohocommerce/storefront/api/v1/products/product_id",
+        "api_ref": "https://www.zoho.com/commerce/api/get-product.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/storefront/api/v1/products/{product_id}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__storefront__api__v1__categories__category_id___get": {
+      "provider_intent": "zohocommerce__storefront__api__v1__categories__category_id___get",
+      "provider_alias_intent": "/storefront/api/v1/categories/category_id",
+      "text": "Get Category",
+      "category": "Listing",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "category_id": {
+          "type": "string",
+          "text": "Unique ID generated by the server for the category. This is used as identifier",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "category_id": {
+          "type": "string",
+          "text": "Unique ID generated by the server for the category. This is used as identifier",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get Category",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/storefront/api/v1/categories/{category_id}",
+        "alias_endpoint": "/zohocommerce/storefront/api/v1/categories/category_id",
+        "api_ref": "https://www.zoho.com/commerce/api/get-category.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/storefront/api/v1/categories/{category_id}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__storefront__api__v1__collections__collection_id___get": {
+      "provider_intent": "zohocommerce__storefront__api__v1__collections__collection_id___get",
+      "provider_alias_intent": "/storefront/api/v1/collections/collection_id",
+      "text": "Get Collection",
+      "category": "Listing",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "collection_id": {
+          "type": "string",
+          "text": "Unique ID generated by the server for the collection. This is used as identifier",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "collection_id": {
+          "type": "string",
+          "text": "Unique ID generated by the server for the collection. This is used as identifier",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get Collection",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/storefront/api/v1/collections/{collection_id}",
+        "alias_endpoint": "/zohocommerce/storefront/api/v1/collections/collection_id",
+        "api_ref": "https://www.zoho.com/commerce/api/get-collection.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/storefront/api/v1/collections/{collection_id}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__storefront__api__v1__search-products___get": {
+      "provider_intent": "zohocommerce__storefront__api__v1__search-products___get",
+      "provider_alias_intent": "/storefront/api/v1/search-products",
+      "text": "Search Product",
+      "category": "Listing",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "q": {
+          "type": "string",
+          "text": "The query string to be searched for in the store",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Search Product",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/storefront/api/v1/search-products",
+        "alias_endpoint": "/zohocommerce/storefront/api/v1/search-products",
+        "api_ref": "https://www.zoho.com/commerce/api/search-product.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/storefront/api/v1/search-products",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__portaluser__orders___get": {
+      "provider_intent": "zohocommerce__portaluser__orders___get",
+      "provider_alias_intent": "/portaluser/orders",
+      "text": "Get User Orders",
+      "category": "My Orders",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "filterDate": {
+          "type": "string",
+          "text": "Represents the number of months for which the orders need to be displayed"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Get User Orders",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/portaluser/orders",
+        "alias_endpoint": "/zohocommerce/portaluser/orders",
+        "api_ref": "https://www.zoho.com/commerce/api/get-user-orders.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/portaluser/orders",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__portaluser__orders__order_id___get": {
+      "provider_intent": "zohocommerce__portaluser__orders__order_id___get",
+      "provider_alias_intent": "/portaluser/orders/order_id",
+      "text": "Get Order Details",
+      "category": "My Orders",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "order_id": {
+          "type": "string",
+          "text": "order_id of an order",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "order_id": {
+          "type": "string",
+          "text": "order_id of an order",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Get Order Details",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/portaluser/orders/{order_id}",
+        "alias_endpoint": "/zohocommerce/portaluser/orders/order_id",
+        "api_ref": "https://www.zoho.com/commerce/api/get-order-details.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/portaluser/orders/{order_id} ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__portaluser__orders__returns___post": {
+      "provider_intent": "zohocommerce__portaluser__orders__returns___post",
+      "provider_alias_intent": "/portaluser/orders/returns",
+      "text": "Cancel Order",
+      "category": "My Orders",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "line_items": {
+          "type": "array",
+          "text": "List of line items to be returned",
+          "required": true
+        },
+        "salesorder_id": {
+          "type": "string",
+          "text": "Order ID of line items",
+          "required": true
+        },
+        "reason": {
+          "type": "string",
+          "text": "Reason for returning an item",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Cancel Order",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/portaluser/orders/returns",
+        "alias_endpoint": "/zohocommerce/portaluser/orders/returns",
+        "api_ref": "https://www.zoho.com/commerce/api/cancel-order.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/portaluser/orders/returns",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__salesorders__salesorders_id__payments___post": {
+      "provider_intent": "zohocommerce__store__api__v1__salesorders__salesorders_id__payments___post",
+      "provider_alias_intent": "/store/api/v1/salesorders/salesorders_id/payments",
+      "text": "Mark as Paid",
+      "category": "Payments",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "salesorders_id": {
+          "type": "string",
+          "text": "Salesorder Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "payment_mode": {
+          "type": "string",
+          "text": "Mode through which payment is made. This can be check, cash, credit card, bank transfer, bank remittance, auto transaction, or others. Maximum length = 100",
+          "required": true
+        },
+        "amount": {
+          "type": "number",
+          "text": "Amount paid in the respective payment",
+          "required": true
+        },
+        "reference_number": {
+          "type": "string",
+          "text": "Reference number generated for the payment. A string of your choice can also be used as the reference number. Maximum length of the reference number = 100",
+          "required": true
+        },
+        "date": {
+          "type": "string",
+          "text": "Date on which payment is made. Date Format [yyyy-mm-dd]",
+          "required": true
+        },
+        "description": {
+          "type": "string",
+          "text": "Description about the payment"
+        }
+      },
+      "path": {
+        "salesorders_id": {
+          "type": "string",
+          "text": "Salesorder Id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Mark as Paid",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/salesorders/{salesorders_id}/payments",
+        "alias_endpoint": "/zohocommerce/store/api/v1/salesorders/salesorders_id/payments",
+        "api_ref": "https://www.zoho.com/commerce/api/mark-as-paid.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.customerpayments.CREATE",
+      "api_endpoint_src": "{endpoint}//store/api/v1/salesorders/{salesorders_id}/payments",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__salesorders__order_id__payments__payment_id___put": {
+      "provider_intent": "zohocommerce__store__api__v1__salesorders__order_id__payments__payment_id___put",
+      "provider_alias_intent": "/store/api/v1/salesorders/order_id/payments/payment_id",
+      "text": "Update Payment",
+      "category": "Payments",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "order_id": {
+          "type": "string",
+          "text": "Order Id",
+          "required": true
+        },
+        "payment_id": {
+          "type": "string",
+          "text": "Payment Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "payment_mode": {
+          "type": "string",
+          "text": "Mode through which payment is made. This can be check, cash, credit card, bank transfer, bank remittance, auto transaction, or others. Maximum length = 100",
+          "required": true
+        },
+        "amount": {
+          "type": "number",
+          "text": "Amount paid in the respective payment",
+          "required": true
+        },
+        "reference_number": {
+          "type": "string",
+          "text": "Reference number generated for the payment. A string of your choice can also be used as the reference number. Maximum length of the reference number = 100",
+          "required": true
+        },
+        "date": {
+          "type": "string",
+          "text": "Date on which payment is made. Date Format [yyyy-mm-dd]",
+          "required": true
+        },
+        "description": {
+          "type": "string",
+          "text": "Description about the payment"
+        }
+      },
+      "path": {
+        "order_id": {
+          "type": "string",
+          "text": "Order Id",
+          "required": true
+        },
+        "payment_id": {
+          "type": "string",
+          "text": "Payment Id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update Payment",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/salesorders/{order_id}/payments/{payment_id}",
+        "alias_endpoint": "/zohocommerce/store/api/v1/salesorders/order_id/payments/payment_id",
+        "api_ref": "https://www.zoho.com/commerce/api/update-payment.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.customerpayments.UPDATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/salesorders/{order_id}/payments/{payment_id}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__salesorders__salesorder_id__refund___post": {
+      "provider_intent": "zohocommerce__store__api__v1__salesorders__salesorder_id__refund___post",
+      "provider_alias_intent": "/store/api/v1/salesorders/salesorder_id/refund",
+      "text": "Refund Payment",
+      "category": "Payments",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "salesorder_id": {
+          "type": "string",
+          "text": "Salesorder Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "amount": {
+          "type": "number",
+          "text": "Amount to be refunded",
+          "required": true
+        }
+      },
+      "path": {
+        "salesorder_id": {
+          "type": "string",
+          "text": "Salesorder Id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Refund Payment",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/salesorders/{salesorder_id}/refund",
+        "alias_endpoint": "/zohocommerce/store/api/v1/salesorders/salesorder_id/refund",
+        "api_ref": "https://www.zoho.com/commerce/api/refund-payment.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.salesorders.CREATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/salesorders/{salesorder_id}/refund",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__portaluser__signupfields___get": {
+      "provider_intent": "zohocommerce__portaluser__signupfields___get",
+      "provider_alias_intent": "/portaluser/signupfields",
+      "text": "Get Signup Fields",
+      "category": "Portal",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Get Signup Fields",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/portaluser/signupfields",
+        "alias_endpoint": "/zohocommerce/portaluser/signupfields",
+        "api_ref": "https://www.zoho.com/commerce/api/get-signup-fields.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/portaluser/signupfields",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__signout___get": {
+      "provider_intent": "zohocommerce__signout___get",
+      "provider_alias_intent": "/signout",
+      "text": "Signout",
+      "category": "Portal",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Signout",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/signout",
+        "alias_endpoint": "/zohocommerce/signout",
+        "api_ref": "https://www.zoho.com/commerce/api/signout.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/signout",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__portaluser__getcurrentportaluser___get": {
+      "provider_intent": "zohocommerce__portaluser__getcurrentportaluser___get",
+      "provider_alias_intent": "/portaluser/getcurrentportaluser",
+      "text": "Get Current User",
+      "category": "Portal",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Get Current User",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/portaluser/getCurrentPortalUser",
+        "alias_endpoint": "/zohocommerce/portaluser/getcurrentportaluser",
+        "api_ref": "https://www.zoho.com/commerce/api/get-current-user.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "",
+      "api_endpoint_src": "{endpoint}/portaluser/getCurrentPortalUser",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__products___get": {
+      "provider_intent": "zohocommerce__store__api__v1__products___get",
+      "provider_alias_intent": "/store/api/v1/products",
+      "text": "List All Products",
+      "category": "Products",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "filter_by": {
+          "type": "string",
+          "text": "Allowed Values : Status.All, Status.Active, Status.Inactive, ItemType.All, ItemType.Inventory, ItemType.NonInventory"
+        },
+        "sort_column": {
+          "type": "string",
+          "text": "Allowed Values : name, created_time, last_modified_time, min_rate, max_rate"
+        },
+        "sort_order": {
+          "type": "string",
+          "text": "Allowed Values : A ,D"
+        },
+        "page_start_from": {
+          "type": "number",
+          "text": "Allowed Values : 1 to n"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Allowed Values : 10,25,50,100,200"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List All Products",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/products",
+        "alias_endpoint": "/zohocommerce/store/api/v1/products",
+        "api_ref": "https://www.zoho.com/commerce/api/list-all-products.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.items.READ",
+      "api_endpoint_src": "{endpoint}/store/api/v1/products",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__products___post": {
+      "provider_intent": "zohocommerce__store__api__v1__products___post",
+      "provider_alias_intent": "/store/api/v1/products",
+      "text": "Create a Product with Variant",
+      "category": "Products",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Name of the product",
+          "required": true
+        },
+        "url": {
+          "type": "string",
+          "text": "URL of the product",
+          "required": true
+        },
+        "variant_type": {
+          "type": "string",
+          "text": "Give variant_type as 'inventory'"
+        },
+        "product_short_description": {
+          "type": "string",
+          "text": "Concise description of the product"
+        },
+        "product_description": {
+          "type": "string",
+          "text": "Detailed description of the product"
+        },
+        "show_in_storefront": {
+          "type": "boolean",
+          "text": "When enabled, this shows the product in store",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "attribute_name1": {
+          "type": "string",
+          "text": "Give attribute name for the product"
+        },
+        "attribute_name2": {
+          "type": "string",
+          "text": "Give attribute name for the product"
+        },
+        "attribute_name3": {
+          "type": "string",
+          "text": "Give attribute name for the product"
+        },
+        "attribute_type1": {
+          "type": "string",
+          "text": "Two possible values are Text (default value) or Color"
+        },
+        "attribute_type2": {
+          "type": "string",
+          "text": "Two possible values are Text (default value) or Color"
+        },
+        "attribute_type3": {
+          "type": "string",
+          "text": "Two possible values are Text (default value) or Color"
+        },
+        "category_id": {
+          "type": "number",
+          "text": "Give the unique category_id to map the category"
+        },
+        "tags": {
+          "type": "array",
+          "text": "Give the list of tags for the product"
+        },
+        "brand": {
+          "type": "string",
+          "text": "Give the brand name for the product"
+        },
+        "is_returnable": {
+          "type": "boolean",
+          "text": "Enable this if product can be returned by the customers",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "is_featured": {
+          "type": "boolean",
+          "text": "Enable this if product is on sale",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "seo_title": {
+          "type": "string",
+          "text": "Give title for SEO"
+        },
+        "seo_keyword": {
+          "type": "string",
+          "text": "Give SEO keywords for the product"
+        },
+        "seo_description": {
+          "type": "string",
+          "text": "Give SEO description for the product"
+        },
+        "specificationset_id": {
+          "type": "number",
+          "text": "Give unique specification set ID to give specification details for the product"
+        },
+        "specifications": {
+          "type": "array",
+          "text": "Give set of specification_id and specification_value_id"
+        },
+        "specification_id": {
+          "type": "number",
+          "text": "Give unique specification id that denotes the label"
+        },
+        "specification_value_id": {
+          "type": "number",
+          "text": "Denotes the value for the particular label"
+        },
+        "variants": {
+          "type": "array",
+          "text": "Give list of all the variants for the product",
+          "required": true
+        },
+        "rate": {
+          "type": "string",
+          "text": "Give selling price of the variant"
+        },
+        "initial_stock": {
+          "type": "string",
+          "text": "This field is MANDATORY if you pass variant_type as 'inventory'"
+        },
+        "attribute_option_name1": {
+          "type": "string",
+          "text": "Give attribute values for the corresponding attributes. For Eg: If attribute_name1 is SIZE then give attribute_option_name1 (eg: large,medium,..etc) with the corresponding values"
+        },
+        "attribute_option_name2": {
+          "type": "string",
+          "text": "Give attribute values for the corresponding attributes. For Eg: If attribute_name1 is SIZE then give attribute_option_name1 (eg: large,medium,..etc) with the corresponding values"
+        },
+        "attribute_option_name3": {
+          "type": "string",
+          "text": "Give attribute values for the corresponding attributes. For Eg: If attribute_name1 is SIZE then give attribute_option_name1 (eg: large,medium,..etc) with the corresponding values"
+        },
+        "attribute_option_data1": {
+          "type": "string",
+          "text": "Give color code for the correspoding attributes. This field is only needed when you give attribute_type as colour.For Eg: If attribute_type2 is Colour then give corresponding color code value in attribute_option_data2"
+        },
+        "attribute_option_data2": {
+          "type": "string",
+          "text": "Give color code for the correspoding attributes. This field is only needed when you give attribute_type as colour.For Eg: If attribute_type2 is Colour then give corresponding color code value in attribute_option_data2"
+        },
+        "attribute_option_data3": {
+          "type": "string",
+          "text": "Give color code for the correspoding attributes. This field is only needed when you give attribute_type as colour.For Eg: If attribute_type2 is Colour then give corresponding color code value in attribute_option_data2"
+        },
+        "label_rate": {
+          "type": "string",
+          "text": "Give retail price of the variant"
+        },
+        "sku": {
+          "type": "string",
+          "text": "Give SKU for the variant"
+        },
+        "custom_fields": {
+          "type": "array",
+          "text": "Give set of customfield_id and value for the variant"
+        },
+        "customfield_id": {
+          "type": "number",
+          "text": "Give unique cusomfield id to denote the label"
+        },
+        "value": {
+          "type": "string",
+          "text": "Give corresponding values for the label"
+        },
+        "reorder_level": {
+          "type": "string",
+          "text": "Low stock limit for the variant below which will trigger an email remainder"
+        },
+        "package_details": {
+          "type": "array",
+          "text": "Give package details such as weight, width, height and length. This is used to calcuate shipping charges at the time of checkout"
+        },
+        "height": {
+          "type": "string",
+          "text": "Give the package height"
+        },
+        "weight": {
+          "type": "string",
+          "text": "Give the package weight"
+        },
+        "length": {
+          "type": "string",
+          "text": "Give the package length"
+        },
+        "width": {
+          "type": "string",
+          "text": "Give the package width"
+        },
+        "ean": {
+          "type": "string",
+          "text": "Give EAN for the variant"
+        },
+        "upc": {
+          "type": "string",
+          "text": "Give UPC for the variant"
+        },
+        "isbn": {
+          "type": "string",
+          "text": "Give ISBN for the variant"
+        },
+        "part_number": {
+          "type": "string",
+          "text": "Give MPN for the variant"
+        },
+        "hsn_or_sac": {
+          "type": "string",
+          "text": "Give HSN or SAC for the variant. For India Only"
+        },
+        "avatax_tax_code": {
+          "type": "string",
+          "text": "Give Avalara tax code for the variant. For US Only"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a Product with Variant",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/products",
+        "alias_endpoint": "/zohocommerce/store/api/v1/products",
+        "api_ref": "https://www.zoho.com/commerce/api/create-a-product-with-variant.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.items.CREATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/products",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__products__editpage___get": {
+      "provider_intent": "zohocommerce__store__api__v1__products__editpage___get",
+      "provider_alias_intent": "/store/api/v1/products/editpage",
+      "text": "Product Details",
+      "category": "Products",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "product_id": {
+          "type": "string",
+          "text": "Give unique product id to get the details",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Product Details",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/products/editpage",
+        "alias_endpoint": "/zohocommerce/store/api/v1/products/editpage",
+        "api_ref": "https://www.zoho.com/commerce/api/product-details.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.items.READ",
+      "api_endpoint_src": "{endpoint}/store/api/v1/products/editpage",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__products___put": {
+      "provider_intent": "zohocommerce__store__api__v1__products___put",
+      "provider_alias_intent": "/store/api/v1/products",
+      "text": "Update a Product",
+      "category": "Products",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Name of the product"
+        },
+        "url": {
+          "type": "string",
+          "text": "URL of the product"
+        },
+        "variant_type": {
+          "type": "string",
+          "text": "Give variant_type as 'inventory' to track inventory stock for the product"
+        },
+        "product_short_description": {
+          "type": "string",
+          "text": "Concise description of the product"
+        },
+        "product_description": {
+          "type": "string",
+          "text": "Detailed description of the product"
+        },
+        "show_in_storefront": {
+          "type": "boolean",
+          "text": "When enabled, this shows the product in store",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "attribute_name1": {
+          "type": "string",
+          "text": "Give attribute name for the product. You can add a maximum of 3 attributes"
+        },
+        "attribute_name2": {
+          "type": "string",
+          "text": "Give attribute name for the product. You can add a maximum of 3 attributes"
+        },
+        "attribute_name3": {
+          "type": "string",
+          "text": "Give attribute name for the product. You can add a maximum of 3 attributes"
+        },
+        "attribute_type1": {
+          "type": "string",
+          "text": "Give attribute type corresponding to the attribute name given. Two possible values are Text (default value) or Colour"
+        },
+        "attribute_type2": {
+          "type": "string",
+          "text": "Give attribute type corresponding to the attribute name given. Two possible values are Text (default value) or Colour"
+        },
+        "attribute_type3": {
+          "type": "string",
+          "text": "Give attribute type corresponding to the attribute name given. Two possible values are Text (default value) or Colour"
+        },
+        "category_id": {
+          "type": "number",
+          "text": "Give the unique category_id to map the category"
+        },
+        "tags": {
+          "type": "array",
+          "text": "Give the list of tags for the product"
+        },
+        "brand": {
+          "type": "string",
+          "text": "Give the brand name for the product"
+        },
+        "is_returnable": {
+          "type": "boolean",
+          "text": "Enable this if the product can be returned by the customers",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "is_featured": {
+          "type": "boolean",
+          "text": "Enable this if the product is on sale",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "seo_title": {
+          "type": "string",
+          "text": "Give title for SEO"
+        },
+        "seo_keyword": {
+          "type": "string",
+          "text": "Give SEO keywords for the product"
+        },
+        "seo_description": {
+          "type": "string",
+          "text": "Give SEO description for the product"
+        },
+        "specificationset_id": {
+          "type": "number",
+          "text": "Give a unique specification set ID to give specification details for the product"
+        },
+        "specifications": {
+          "type": "array",
+          "text": "Give a set of specification_id and specification_value_id"
+        },
+        "specification_id": {
+          "type": "number",
+          "text": "Give a unique specification id that denotes the label"
+        },
+        "specification_value_id": {
+          "type": "number",
+          "text": "Give a unique specification value id that denotes the value for the particular label"
+        },
+        "page_layout_id": {
+          "type": "number",
+          "text": "Give a unique page layout id corresponding to custom field details pertaining to a specific product"
+        },
+        "variants": {
+          "type": "array",
+          "text": "Give a list of all the variants for the product"
+        },
+        "rate": {
+          "type": "string",
+          "text": "Give the selling price of the variant"
+        },
+        "initial_stock": {
+          "type": "string",
+          "text": "Give the stock count for the variant. This field is MANDATORY if you pass variant_type as 'inventory'"
+        },
+        "attribute_option_name1": {
+          "type": "string",
+          "text": "Give attribute values for the corresponding attributes. For example, if attribute_name1 is SIZE then give attribute_option_name1 (e.g., large, medium, etc.) with the corresponding values"
+        },
+        "attribute_option_name2": {
+          "type": "string",
+          "text": "Give attribute values for the corresponding attributes. For example, if attribute_name2 is SIZE then give attribute_option_name2 (e.g., large, medium, etc.) with the corresponding values"
+        },
+        "attribute_option_name3": {
+          "type": "string",
+          "text": "Give attribute values for the corresponding attributes. For example, if attribute_name3 is SIZE then give attribute_option_name3 (e.g., large, medium, etc.) with the corresponding values"
+        },
+        "attribute_option_data1": {
+          "type": "string",
+          "text": "Give color code for the corresponding attributes. This field is only needed when you give attribute_type as Colour. For example, if attribute_type2 is Colour then give the corresponding color code value in attribute_option_data2"
+        },
+        "attribute_option_data2": {
+          "type": "string",
+          "text": "Give color code for the corresponding attributes. This field is only needed when you give attribute_type as Colour. For example, if attribute_type2 is Colour then give the corresponding color code value in attribute_option_data2"
+        },
+        "attribute_option_data3": {
+          "type": "string",
+          "text": "Give color code for the corresponding attributes. This field is only needed when you give attribute_type as Colour. For example, if attribute_type3 is Colour then give the corresponding color code value in attribute_option_data3"
+        },
+        "label_rate": {
+          "type": "string",
+          "text": "Give the retail price of the variant"
+        },
+        "sku": {
+          "type": "string",
+          "text": "Give SKU for the variant"
+        },
+        "document_ids": {
+          "type": "array",
+          "text": "Give a set of document_id of the images to map with variants"
+        },
+        "custom_fields": {
+          "type": "array",
+          "text": "Give a set of custom_field values for the variant"
+        },
+        "customfield_id": {
+          "type": "number",
+          "text": "Give a unique custom field id to denote the label"
+        },
+        "value": {
+          "type": "string",
+          "text": "Give corresponding values for the label"
+        },
+        "reorder_level": {
+          "type": "string",
+          "text": "Low stock limit for the variant below which will trigger an email reminder"
+        },
+        "package_details": {
+          "type": "array",
+          "text": "Give package details such as weight, width, height, and length. This is used to calculate shipping charges at the time of checkout"
+        },
+        "height": {
+          "type": "string",
+          "text": "Give the package height"
+        },
+        "weight": {
+          "type": "string",
+          "text": "Give the package weight"
+        },
+        "length": {
+          "type": "string",
+          "text": "Give the package length"
+        },
+        "width": {
+          "type": "string",
+          "text": "Give the package width"
+        },
+        "ean": {
+          "type": "string",
+          "text": "Give EAN for the variant"
+        },
+        "upc": {
+          "type": "string",
+          "text": "Give UPC for the variant"
+        },
+        "isbn": {
+          "type": "string",
+          "text": "Give ISBN for the variant"
+        },
+        "part_number": {
+          "type": "string",
+          "text": "Give MPN for the variant"
+        },
+        "hsn_or_sac": {
+          "type": "string",
+          "text": "Give HSN or SAC for the variant. For India only"
+        },
+        "avatax_tax_code": {
+          "type": "string",
+          "text": "Give Avalara tax code for the variant. For US only"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update a Product",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/products",
+        "alias_endpoint": "/zohocommerce/store/api/v1/products",
+        "api_ref": "https://www.zoho.com/commerce/api/update-a-product.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.items.UPDATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/products",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__products___delete": {
+      "provider_intent": "zohocommerce__store__api__v1__products___delete",
+      "provider_alias_intent": "/store/api/v1/products",
+      "text": "Delete a List of Products",
+      "category": "Products",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "product_ids": {
+          "type": "string",
+          "text": "Give list of product_ids with comma separated",
+          "required": true
+        },
+        "is_deletedInfoNeeded": {
+          "type": "string",
+          "text": "To get the detail of the product"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a List of Products",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/products",
+        "alias_endpoint": "/zohocommerce/store/api/v1/products",
+        "api_ref": "https://www.zoho.com/commerce/api/delete-a-list-of-products.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.items.DELETE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/products",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__products__images___post": {
+      "provider_intent": "zohocommerce__store__api__v1__products__images___post",
+      "provider_alias_intent": "/store/api/v1/products/images",
+      "text": "Add Product Images",
+      "category": "Products",
+      "method": "POST",
+      "type": "UPLOAD",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "image": {
+          "type": "file",
+          "text": "Binary of the image",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Add Product Images",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/products/images",
+        "alias_endpoint": "/zohocommerce/store/api/v1/products/images",
+        "api_ref": "https://www.zoho.com/commerce/api/add-product-images.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.items.CREATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/products//images",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__products__images__reorder___post": {
+      "provider_intent": "zohocommerce__store__api__v1__products__images__reorder___post",
+      "provider_alias_intent": "/store/api/v1/products/images/reorder",
+      "text": "Re-order Product Images",
+      "category": "Products",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "documents": {
+          "type": "array",
+          "text": "Give set of document_id and order to reorder the images",
+          "required": true
+        },
+        "document_id": {
+          "type": "string",
+          "text": "Give document_id of the image obtained from product data",
+          "required": true
+        },
+        "order": {
+          "type": "number",
+          "text": "Give the order number of the particular image",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Re-order Product Images",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/products/images/reorder",
+        "alias_endpoint": "/zohocommerce/store/api/v1/products/images/reorder",
+        "api_ref": "https://www.zoho.com/commerce/api/reorder-product-images.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.items.CREATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/products//images/reorder",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__products__documents___delete": {
+      "provider_intent": "zohocommerce__store__api__v1__products__documents___delete",
+      "provider_alias_intent": "/store/api/v1/products/documents",
+      "text": "Delete Product Image",
+      "category": "Products",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete Product Image",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/products/documents",
+        "alias_endpoint": "/zohocommerce/store/api/v1/products/documents",
+        "api_ref": "https://www.zoho.com/commerce/api/delete-product-image.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.items.DELETE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/products//documents",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__export___get": {
+      "provider_intent": "zohocommerce__store__api__v1__export___get",
+      "provider_alias_intent": "/store/api/v1/export",
+      "text": "Export Products",
+      "category": "Products",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "entity": {
+          "type": "string",
+          "text": "Give entity type of the export. Only possible value is 'itemgroup'",
+          "required": true
+        },
+        "accept": {
+          "type": "string",
+          "text": "Give format for the export file. Possible values are csv/xls",
+          "required": true
+        },
+        "from_date": {
+          "type": "string",
+          "text": "Give from date for the export. Format: yyyy-mm-dd"
+        },
+        "to_date": {
+          "type": "string",
+          "text": "Give to_date for the export. Format: yyyy-mm-dd"
+        },
+        "export_limit": {
+          "type": "string",
+          "text": "Give export limit. Should be less than 25,000"
+        },
+        "export_start_id": {
+          "type": "string",
+          "text": "Entity that have IDs greater to this start id will be fetched with limit"
+        },
+        "export_start_index": {
+          "type": "string",
+          "text": "Offset row number: this will start exporting from nth row of export entity"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Export Products",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/export",
+        "alias_endpoint": "/zohocommerce/store/api/v1/export",
+        "api_ref": "https://www.zoho.com/commerce/api/export-products.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.export.READ",
+      "api_endpoint_src": "{endpoint}/store/api/v1/export",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__salesorders___get": {
+      "provider_intent": "zohocommerce__store__api__v1__salesorders___get",
+      "provider_alias_intent": "/store/api/v1/salesorders",
+      "text": "List All Sales Orders",
+      "category": "Sales Orders",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "filter_by": {
+          "type": "string",
+          "text": "Status filter. Options: All, Draft, Confirmed, ToBePacked, ToBeShipped, Shipped, ToBeInvoiced, Closed, Void"
+        },
+        "sort_column": {
+          "type": "string",
+          "text": "Column to sort by. Options: customer_name, salesorder_number, date, shipment_date, total, bcy_total, created_time, last_modified_time"
+        },
+        "sort_order": {
+          "type": "string",
+          "text": "Sort order. Options: A (ascending), D (descending)"
+        },
+        "page": {
+          "type": "number",
+          "text": "Page number. Should be a positive integer"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Items per page. Options: 10, 25, 50, 100, 200"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List All Sales Orders",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/salesorders",
+        "alias_endpoint": "/zohocommerce/store/api/v1/salesorders",
+        "api_ref": "https://www.zoho.com/commerce/api/list-all-sales-orders.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.salesorders.READ",
+      "api_endpoint_src": "{endpoint}/store/api/v1/salesorders",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__salesorders__order_id___get": {
+      "provider_intent": "zohocommerce__store__api__v1__salesorders__order_id___get",
+      "provider_alias_intent": "/store/api/v1/salesorders/order_id",
+      "text": "Retrieve a Sales Order",
+      "category": "Sales Orders",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "order_id": {
+          "type": "string",
+          "text": "Order Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "order_id": {
+          "type": "string",
+          "text": "Order Id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve a Sales Order",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/salesorders/{order_id}",
+        "alias_endpoint": "/zohocommerce/store/api/v1/salesorders/order_id",
+        "api_ref": "https://www.zoho.com/commerce/api/retrieve-sales-order.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.salesorders.READ",
+      "api_endpoint_src": "{endpoint}/store/api/v1/salesorders/order_id",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__salesorders__salesorder_id__status__status___post": {
+      "provider_intent": "zohocommerce__store__api__v1__salesorders__salesorder_id__status__status___post",
+      "provider_alias_intent": "/store/api/v1/salesorders/salesorder_id/status/status",
+      "text": "Update Status",
+      "category": "Sales Orders",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "salesorder_id": {
+          "type": "string",
+          "text": "Salesorder Id",
+          "required": true
+        },
+        "status": {
+          "type": "string",
+          "text": "Satus",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "salesorder_id": {
+          "type": "string",
+          "text": "Salesorder Id",
+          "required": true
+        },
+        "status": {
+          "type": "string",
+          "text": "Satus",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update Status",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/salesorders/{salesorder_id}/status/{status}",
+        "alias_endpoint": "/zohocommerce/store/api/v1/salesorders/salesorder_id/status/status",
+        "api_ref": "https://www.zoho.com/commerce/api/update-status.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.salesorders.CREATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/salesorders/{salesorder_id}/status/{status}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__salesorders__salesorder_id__comments___post": {
+      "provider_intent": "zohocommerce__store__api__v1__salesorders__salesorder_id__comments___post",
+      "provider_alias_intent": "/store/api/v1/salesorders/salesorder_id/comments",
+      "text": "Add Comments",
+      "category": "Sales Orders",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "salesorder_id": {
+          "type": "string",
+          "text": "Salesorder Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "description": {
+          "type": "string",
+          "text": "The comment to be added",
+          "required": true
+        },
+        "show_comment_to_client": {
+          "type": "boolean",
+          "text": "Boolean to determine whether the comment needs to be shown to client",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "mail_to_customer": {
+          "type": "boolean",
+          "text": "Boolean to determine whether it has to be mailed to the customer",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "transaction_type": {
+          "type": "string",
+          "text": "Allowed values: salesorder, customer_payment, shipment_order, contact, none",
+          "required": true
+        }
+      },
+      "path": {
+        "salesorder_id": {
+          "type": "string",
+          "text": "Salesorder Id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Add Comments",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/salesorders/{salesorder_id}/comments",
+        "alias_endpoint": "/zohocommerce/store/api/v1/salesorders/salesorder_id/comments",
+        "api_ref": "https://www.zoho.com/commerce/api/add-comments.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.salesorders.CREATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/salesorders/{salesorder_id}/comments",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__salesorders__order_id__address__address_type___put": {
+      "provider_intent": "zohocommerce__store__api__v1__salesorders__order_id__address__address_type___put",
+      "provider_alias_intent": "/store/api/v1/salesorders/order_id/address/address_type",
+      "text": "Update Address",
+      "category": "Sales Orders",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "order_id": {
+          "type": "string",
+          "text": "Order Id",
+          "required": true
+        },
+        "address_type": {
+          "type": "string",
+          "text": "Address Type",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "attention": {
+          "type": "string",
+          "text": "Name of the person, whose attention is required",
+          "required": true
+        },
+        "address": {
+          "type": "string",
+          "text": "Name of the street of the customer's billing address",
+          "required": true
+        },
+        "city": {
+          "type": "string",
+          "text": "Name of the city of the customer's billing address",
+          "required": true
+        },
+        "state": {
+          "type": "string",
+          "text": "Name of the state of the customer's billing address",
+          "required": true
+        },
+        "zip": {
+          "type": "string",
+          "text": "ZIP code of the customer's billing address",
+          "required": true
+        },
+        "country": {
+          "type": "string",
+          "text": "Name of the country of the customer's billing address",
+          "required": true
+        },
+        "fax": {
+          "type": "string",
+          "text": "Fax number of the customer's billing address"
+        },
+        "phone": {
+          "type": "string",
+          "text": "Phone number of the customer",
+          "required": true
+        }
+      },
+      "path": {
+        "order_id": {
+          "type": "string",
+          "text": "Order Id",
+          "required": true
+        },
+        "address_type": {
+          "type": "string",
+          "text": "Address Type",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update Address",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/salesorders/{order_id}/address/{address_type}",
+        "alias_endpoint": "/zohocommerce/store/api/v1/salesorders/order_id/address/address_type",
+        "api_ref": "https://www.zoho.com/commerce/api/update-address.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.salesorders.UPDATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/salesorders/{order_id}/address/{address_type}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__salesreturns___post": {
+      "provider_intent": "zohocommerce__store__api__v1__salesreturns___post",
+      "provider_alias_intent": "/store/api/v1/salesreturns",
+      "text": "Create a Sales Return",
+      "category": "Sales Return",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "salesorder_id": {
+          "type": "number",
+          "text": "Unique ID generated by the server for the sales order. This is used as identifier."
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "line_items": {
+          "type": "array",
+          "text": "List of items in a package. Each line item contains salesorder_item_id, item_id, and quantity",
+          "required": true
+        },
+        "salesorder_item_id": {
+          "type": "number",
+          "text": "Unique ID generated by the server for each line item. This is used as an identifier",
+          "required": true
+        },
+        "quantity": {
+          "type": "number",
+          "text": "Quantity of the item to be returned",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a Sales Return",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/salesreturns",
+        "alias_endpoint": "/zohocommerce/store/api/v1/salesreturns",
+        "api_ref": "https://www.zoho.com/commerce/api/create-a-sales-order.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.salesreturns.CREATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/salesreturns",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__salesreturns__salesreturn_id__status__salesreturn_status___post": {
+      "provider_intent": "zohocommerce__store__api__v1__salesreturns__salesreturn_id__status__salesreturn_status___post",
+      "provider_alias_intent": "/store/api/v1/salesreturns/salesreturn_id/status/salesreturn_status",
+      "text": "Change Status",
+      "category": "Sales Return",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "salesreturn_id": {
+          "type": "number",
+          "text": "Unique ID generated by the server for the sales return. This is used as identifier",
+          "required": true
+        },
+        "salesreturn_status": {
+          "type": "string",
+          "text": "The current status of the sales return",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "shipped_status": {
+          "type": "string",
+          "text": "The current status of the package"
+        },
+        "refund_status": {
+          "type": "string",
+          "text": "The current status of the refund"
+        },
+        "line_items": {
+          "type": "array",
+          "text": "List of items in a package. Each line item contains salesorder_item_id, item_id, and quantity"
+        }
+      },
+      "path": {
+        "salesreturn_id": {
+          "type": "number",
+          "text": "Unique ID generated by the server for the sales return. This is used as identifier",
+          "required": true
+        },
+        "salesreturn_status": {
+          "type": "string",
+          "text": "The current status of the sales return",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Change Status",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/salesreturns/{salesreturn_id}/status/{salesreturn_status}",
+        "alias_endpoint": "/zohocommerce/store/api/v1/salesreturns/salesreturn_id/status/salesreturn_status",
+        "api_ref": "https://www.zoho.com/commerce/api/change-status.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.salesreturns.CREATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/salesreturns/{salesreturn_id}/status/{salesreturn_status}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__salesreturn__salesreturn_id__refund___post": {
+      "provider_intent": "zohocommerce__store__api__v1__salesreturn__salesreturn_id__refund___post",
+      "provider_alias_intent": "/store/api/v1/salesreturn/salesreturn_id/refund",
+      "text": "Refund a Sales Return",
+      "category": "Sales Return",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "salesreturn_id": {
+          "type": "number",
+          "text": "Unique ID generated by the server for the sales return. This is used as identifier"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "salesreturn_item_id": {
+          "type": "number",
+          "text": "Unique ID generated by the server for the sales return. This is used as identifier"
+        },
+        "line_items": {
+          "type": "array",
+          "text": "List of items in a package. Each line item contains salesorder_item_id, item_id, and quantity",
+          "required": true
+        },
+        "amount": {
+          "type": "number",
+          "text": "Amount to be refunded",
+          "required": true
+        },
+        "quantity": {
+          "type": "number",
+          "text": "Quantity of the item to be returned"
+        },
+        "is_returned_to_stock": {
+          "type": "boolean",
+          "text": "Add product to stock. Allowed values are true and false.",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "salesreturn_id": {
+          "type": "number",
+          "text": "Unique ID generated by the server for the sales return. This is used as identifier",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Refund a Sales Return",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/salesreturn/{salesreturn_id}/refund",
+        "alias_endpoint": "/zohocommerce/store/api/v1/salesreturn/salesreturn_id/refund",
+        "api_ref": "https://www.zoho.com/commerce/api/refund-sales-return.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.salesreturns.CREATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/salesreturn/{salesreturn_id}/refund",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__salesorders__order_id__shipmentorders__delivered___post": {
+      "provider_intent": "zohocommerce__store__api__v1__salesorders__order_id__shipmentorders__delivered___post",
+      "provider_alias_intent": "/store/api/v1/salesorders/order_id/shipmentorders/delivered",
+      "text": "Mark as Delivered",
+      "category": "Shipment Orders",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "order_id": {
+          "type": "string",
+          "text": "Order Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "delivery_date": {
+          "type": "string",
+          "text": "Date of delivery of the product",
+          "required": true
+        }
+      },
+      "path": {
+        "order_id": {
+          "type": "string",
+          "text": "Order Id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Mark as Delivered",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/{endpoint}/store/api/v1/salesorders/{order_id}/shipmentorders/delivered",
+        "alias_endpoint": "/zohocommerce/store/api/v1/salesorders/order_id/shipmentorders/delivered",
+        "api_ref": "https://www.zoho.com/commerce/api/mark-as-delivered.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.shipmentorders.CREATE",
+      "api_endpoint_src": "{endpoint}/{endpoint}/store/api/v1/salesorders/{order_id}/shipmentorders/delivered",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__salesorders__order_id__shipmentorders__shipped___post": {
+      "provider_intent": "zohocommerce__store__api__v1__salesorders__order_id__shipmentorders__shipped___post",
+      "provider_alias_intent": "/store/api/v1/salesorders/order_id/shipmentorders/shipped",
+      "text": "Mark as Shipped",
+      "category": "Shipment Orders",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "order_id": {
+          "type": "string",
+          "text": "Order Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "shipment_date": {
+          "type": "string",
+          "text": "Shipment date of the sales order",
+          "required": true
+        },
+        "tracking_number": {
+          "type": "string",
+          "text": "Tracking number of shipment",
+          "required": true
+        },
+        "carrier": {
+          "type": "string",
+          "text": "Carrier used for shipment",
+          "required": true
+        },
+        "service": {
+          "type": "string",
+          "text": "Type of service selected for shipment"
+        },
+        "tracking_url": {
+          "type": "string",
+          "text": "The tracking URL of the shipment"
+        }
+      },
+      "path": {
+        "order_id": {
+          "type": "string",
+          "text": "Order Id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Mark as Shipped",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/salesorders/{order_id}/shipmentorders/shipped",
+        "alias_endpoint": "/zohocommerce/store/api/v1/salesorders/order_id/shipmentorders/shipped",
+        "api_ref": "https://www.zoho.com/commerce/api/mark-as-shipped.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.shipmentorders.CREATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/salesorders/{order_id}/shipmentorders/shipped",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__salesorders__salesorder_id__shipmentorders___put": {
+      "provider_intent": "zohocommerce__store__api__v1__salesorders__salesorder_id__shipmentorders___put",
+      "provider_alias_intent": "/store/api/v1/salesorders/salesorder_id/shipmentorders",
+      "text": "Update a Shipment Order",
+      "category": "Shipment Orders",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "salesorder_id": {
+          "type": "string",
+          "text": "Salesorder Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "salesorder_id": {
+          "type": "string",
+          "text": "Unique ID generated by the server for the sales order. This is used as identifier",
+          "required": true
+        },
+        "shipment_date": {
+          "type": "string",
+          "text": "Shipment date of the sales order",
+          "required": true
+        },
+        "tracking_number": {
+          "type": "string",
+          "text": "Tracking number of shipment",
+          "required": true
+        },
+        "carrier": {
+          "type": "string",
+          "text": "Carrier used for shipment",
+          "required": true
+        },
+        "service": {
+          "type": "string",
+          "text": "Type of service selected for shipment"
+        },
+        "tracking_url": {
+          "type": "string",
+          "text": "The tracking URL of the shipment"
+        }
+      },
+      "path": {
+        "salesorder_id": {
+          "type": "string",
+          "text": "Salesorder Id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update a Shipment Order",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/salesorders/{salesorder_id}/shipmentorders",
+        "alias_endpoint": "/zohocommerce/store/api/v1/salesorders/salesorder_id/shipmentorders",
+        "api_ref": "https://www.zoho.com/commerce/api/update-shipment-order.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.shipmentorders.UPDATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/salesorders/{salesorder_id}/shipmentorders",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__settings__taxrules___post": {
+      "provider_intent": "zohocommerce__store__api__v1__settings__taxrules___post",
+      "provider_alias_intent": "/store/api/v1/settings/taxrules",
+      "text": "Create a Tax",
+      "category": "Taxes",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "tax_name": {
+          "type": "string",
+          "text": "Name of the tax to be created",
+          "required": true
+        },
+        "tax_percentage": {
+          "type": "number",
+          "text": "Number of percentage taxable",
+          "required": true
+        },
+        "tax_type": {
+          "type": "string",
+          "text": "Type to determine whether it is a simple or compound tax. Allowed values: tax and compound_tax",
+          "required": true
+        },
+        "tax_specific_type": {
+          "type": "string",
+          "text": "Type of tax For Indian Edition. Allowed values: IGST, SGST, NIL, CESS."
+        },
+        "country_code": {
+          "type": "string",
+          "text": "Two-letter country code to which the tax belongs",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a Tax",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/settings/taxrules",
+        "alias_endpoint": "/zohocommerce/store/api/v1/settings/taxrules",
+        "api_ref": "https://www.zoho.com/commerce/api/create-tax.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.settings.CREATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/settings/taxrules",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__settings__taxrules__tax_id___put": {
+      "provider_intent": "zohocommerce__store__api__v1__settings__taxrules__tax_id___put",
+      "provider_alias_intent": "/store/api/v1/settings/taxrules/tax_id",
+      "text": "Update a Tax",
+      "category": "Taxes",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "tax_id": {
+          "type": "string",
+          "text": "Tax Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "tax_id": {
+          "type": "string",
+          "text": "Tax Id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update a Tax",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/settings/taxrules/{tax_id}",
+        "alias_endpoint": "/zohocommerce/store/api/v1/settings/taxrules/tax_id",
+        "api_ref": "https://www.zoho.com/commerce/api/update-tax.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.settings.UPDATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/settings/taxrules/{tax_id}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__settings__taxrules__tax_id___delete": {
+      "provider_intent": "zohocommerce__store__api__v1__settings__taxrules__tax_id___delete",
+      "provider_alias_intent": "/store/api/v1/settings/taxrules/tax_id",
+      "text": "Delete a Tax",
+      "category": "Taxes",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "tax_id": {
+          "type": "string",
+          "text": "Tax Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "tax_id": {
+          "type": "string",
+          "text": "Tax Id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a Tax",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/settings/taxrules/{tax_id}",
+        "alias_endpoint": "/zohocommerce/store/api/v1/settings/taxrules/tax_id",
+        "api_ref": "https://www.zoho.com/commerce/api/delete-tax.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.settings.DELETE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/settings/taxrules/{tax_id}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__settings__taxrules___get": {
+      "provider_intent": "zohocommerce__store__api__v1__settings__taxrules___get",
+      "provider_alias_intent": "/store/api/v1/settings/taxrules",
+      "text": "List Taxes",
+      "category": "Taxes",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List Taxes",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/settings/taxrules",
+        "alias_endpoint": "/zohocommerce/store/api/v1/settings/taxrules",
+        "api_ref": "https://www.zoho.com/commerce/api/list-taxes.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.settings.READ",
+      "api_endpoint_src": "{endpoint}/store/api/v1/settings/taxrules",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__settings__taxpreferences___put": {
+      "provider_intent": "zohocommerce__store__api__v1__settings__taxpreferences___put",
+      "provider_alias_intent": "/store/api/v1/settings/taxpreferences",
+      "text": "Update Tax Preferences",
+      "category": "Taxes",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update Tax Preferences",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/settings/taxpreferences",
+        "alias_endpoint": "/zohocommerce/store/api/v1/settings/taxpreferences",
+        "api_ref": "https://www.zoho.com/commerce/api/update-tax-preferences.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.settings.UPDATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/settings/taxpreferences",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__settings__taxpreferences___get": {
+      "provider_intent": "zohocommerce__store__api__v1__settings__taxpreferences___get",
+      "provider_alias_intent": "/store/api/v1/settings/taxpreferences",
+      "text": "Get Tax Preferences",
+      "category": "Taxes",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get Tax Preferences",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/settings/taxpreferences",
+        "alias_endpoint": "/zohocommerce/store/api/v1/settings/taxpreferences",
+        "api_ref": "https://www.zoho.com/commerce/api/get-tax-preferences.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.settings.READ",
+      "api_endpoint_src": "{endpoint}/store/api/v1/settings/taxpreferences",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__variants___get": {
+      "provider_intent": "zohocommerce__store__api__v1__variants___get",
+      "provider_alias_intent": "/store/api/v1/variants",
+      "text": "List All Variants",
+      "category": "Variants",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "status": {
+          "type": "string",
+          "text": "active, inactive"
+        },
+        "item_type": {
+          "type": "string",
+          "text": "ItemType.Inventory, ItemType.NonInventory"
+        },
+        "sort_column": {
+          "type": "string",
+          "text": "name, last_modified_time, actual_available_stock"
+        },
+        "sort_order": {
+          "type": "string",
+          "text": "A, D"
+        },
+        "page": {
+          "type": "number",
+          "text": "1 to n"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "10, 25, 50, 100, 200"
+        },
+        "variant_ids": {
+          "type": "number",
+          "text": "list of unique variant ids separated by comma to get specific variant details. Limit : 50"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List All Variants",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/variants",
+        "alias_endpoint": "/zohocommerce/store/api/v1/variants",
+        "api_ref": "https://www.zoho.com/commerce/api/list-all-variants.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.items.READ",
+      "api_endpoint_src": "{endpoint}/store/api/v1/variants",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__variants___post": {
+      "provider_intent": "zohocommerce__store__api__v1__variants___post",
+      "provider_alias_intent": "/store/api/v1/variants",
+      "text": "Create a Variant",
+      "category": "Variants",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "product_id": {
+          "type": "string",
+          "text": "Give product id of the product to which variant needs to be added"
+        },
+        "rate": {
+          "type": "string",
+          "text": "Give selling price of the variant",
+          "required": true
+        },
+        "initial_stock": {
+          "type": "string",
+          "text": "Give stock count for the variant. This field is MANDATORY if you pass variant_type as 'inventory'"
+        },
+        "attribute_option_name1": {
+          "type": "string",
+          "text": "Give attribute values for the corresponding attributes. For example, if attribute_name1 is SIZE then give attribute_option_name1 (e.g., large, medium, etc.) with the corresponding values"
+        },
+        "attribute_option_name2": {
+          "type": "string",
+          "text": "Give attribute values for the corresponding attributes. For example, if attribute_name2 is SIZE then give attribute_option_name2 (e.g., large, medium, etc.) with the corresponding values"
+        },
+        "attribute_option_name3": {
+          "type": "string",
+          "text": "Give attribute values for the corresponding attributes. For example, if attribute_name3 is SIZE then give attribute_option_name3 (e.g., large, medium, etc.) with the corresponding values"
+        },
+        "attribute_option_data1": {
+          "type": "string",
+          "text": "Give color code for the corresponding attributes. This field is only needed when you give attribute_type as Colour. For example, if attribute_type2 is Colour then give the corresponding color code value in attribute_option_data2"
+        },
+        "attribute_option_data2": {
+          "type": "string",
+          "text": "Give color code for the corresponding attributes. This field is only needed when you give attribute_type as Colour. For example, if attribute_type2 is Colour then give the corresponding color code value in attribute_option_data2"
+        },
+        "attribute_option_data3": {
+          "type": "string",
+          "text": "Give color code for the corresponding attributes. This field is only needed when you give attribute_type as Colour. For example, if attribute_type3 is Colour then give the corresponding color code value in attribute_option_data3"
+        },
+        "label_rate": {
+          "type": "string",
+          "text": "Give retail price of the variant"
+        },
+        "document_ids": {
+          "type": "array",
+          "text": "Give set of document_id of the images to map with variants"
+        },
+        "sku": {
+          "type": "string",
+          "text": "Give SKU for the variant"
+        },
+        "custom_fields": {
+          "type": "array",
+          "text": "Give set of custom_field values for the variant"
+        },
+        "customfield_id": {
+          "type": "number",
+          "text": "Give unique customfield id to denote the label"
+        },
+        "value": {
+          "type": "string",
+          "text": "Give corresponding values for the label"
+        },
+        "reorder_level": {
+          "type": "string",
+          "text": "Low stock limit for the variant below which will trigger an email remainder"
+        },
+        "package_details": {
+          "type": "array",
+          "text": "Give package details such as weight, width, height, and length. This is used to calculate shipping charges at the time of checkout"
+        },
+        "height": {
+          "type": "string",
+          "text": "Give the package height"
+        },
+        "weight": {
+          "type": "string",
+          "text": "Give the package weight"
+        },
+        "length": {
+          "type": "string",
+          "text": "Give the package length"
+        },
+        "width": {
+          "type": "string",
+          "text": "Give the package width"
+        },
+        "ean": {
+          "type": "string",
+          "text": "Give EAN for the variant"
+        },
+        "upc": {
+          "type": "string",
+          "text": "Give UPC for the variant"
+        },
+        "isbn": {
+          "type": "string",
+          "text": "Give ISBN for the variant"
+        },
+        "part_number": {
+          "type": "string",
+          "text": "Give MPN for the variant"
+        },
+        "hsn_or_sac": {
+          "type": "string",
+          "text": "Give HSN or SAC for the variant. For India only"
+        },
+        "avatax_tax_code": {
+          "type": "string",
+          "text": "Give Avalara tax code for the variant. For US only"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a Variant",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/variants",
+        "alias_endpoint": "/zohocommerce/store/api/v1/variants",
+        "api_ref": "https://www.zoho.com/commerce/api/create-a-variant.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.items.CREATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/variants",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__variants__variant_id___get": {
+      "provider_intent": "zohocommerce__store__api__v1__variants__variant_id___get",
+      "provider_alias_intent": "/store/api/v1/variants/variant_id",
+      "text": "Variant Details",
+      "category": "Variants",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "variant_id": {
+          "type": "string",
+          "text": "Variant Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "variant_id": {
+          "type": "string",
+          "text": "Variant Id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Variant Details",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/variants/{variant_id}",
+        "alias_endpoint": "/zohocommerce/store/api/v1/variants/variant_id",
+        "api_ref": "https://www.zoho.com/commerce/api/variant-details.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.items.READ",
+      "api_endpoint_src": "{endpoint}/store/api/v1/variants/<variant_id>",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__variants___put": {
+      "provider_intent": "zohocommerce__store__api__v1__variants___put",
+      "provider_alias_intent": "/store/api/v1/variants",
+      "text": "Update a Variant",
+      "category": "Variants",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "rate": {
+          "type": "string",
+          "text": "Give selling price of the variant"
+        },
+        "initial_stock": {
+          "type": "string",
+          "text": "Give stock count for the variant. This field is MANDATORY if you pass variant_type as 'inventory' "
+        },
+        "attribute_option_name1": {
+          "type": "string",
+          "text": "Give attribute values for the corresponding attributes. For example, if attribute_name1 is SIZE then give attribute_option_name1 (e.g., large, medium, etc.) with the corresponding values"
+        },
+        "attribute_option_name2": {
+          "type": "string",
+          "text": "Give attribute values for the corresponding attributes. For example, if attribute_name2 is SIZE then give attribute_option_name2 (e.g., large, medium, etc.) with the corresponding values"
+        },
+        "attribute_option_name3": {
+          "type": "string",
+          "text": "Give attribute values for the corresponding attributes. For example, if attribute_name3 is SIZE then give attribute_option_name3 (e.g., large, medium, etc.) with the corresponding values"
+        },
+        "attribute_option_data1": {
+          "type": "string",
+          "text": "Give color code for the corresponding attributes. This field is only needed when you give attribute_type as Colour. For example, if attribute_type2 is Colour then give the corresponding color code value in attribute_option_data2"
+        },
+        "attribute_option_data2": {
+          "type": "string",
+          "text": "Give color code for the corresponding attributes. This field is only needed when you give attribute_type as Colour. For example, if attribute_type2 is Colour then give the corresponding color code value in attribute_option_data2"
+        },
+        "attribute_option_data3": {
+          "type": "string",
+          "text": "Give color code for the corresponding attributes. This field is only needed when you give attribute_type as Colour. For example, if attribute_type3 is Colour then give the corresponding color code value in attribute_option_data3"
+        },
+        "label_rate": {
+          "type": "string",
+          "text": "Give retail price of the variant"
+        },
+        "document_ids": {
+          "type": "array",
+          "text": "Give set of document_id of the images to map with variants"
+        },
+        "status": {
+          "type": "string",
+          "text": "Give status of the variant. Allowed values: active, inactive"
+        },
+        "sku": {
+          "type": "string",
+          "text": "Give SKU for the variant"
+        },
+        "custom_fields": {
+          "type": "array",
+          "text": "Give set of custom_field values for the variant"
+        },
+        "customfield_id": {
+          "type": "number",
+          "text": "Give unique custom field id to denote the label"
+        },
+        "value": {
+          "type": "string",
+          "text": "Give corresponding values for the label"
+        },
+        "reorder_level": {
+          "type": "string",
+          "text": "Low stock limit for the variant below which will trigger an email remainder"
+        },
+        "package_details": {
+          "type": "array",
+          "text": "Give package details such as weight, width, height, and length. This is used to calculate shipping charges at the time of checkout"
+        },
+        "height": {
+          "type": "string",
+          "text": "Give the package height"
+        },
+        "weight": {
+          "type": "string",
+          "text": "Give the package weight"
+        },
+        "length": {
+          "type": "string",
+          "text": "Give the package length"
+        },
+        "width": {
+          "type": "string",
+          "text": "Give the package width"
+        },
+        "ean": {
+          "type": "string",
+          "text": "Give EAN for the variant"
+        },
+        "upc": {
+          "type": "string",
+          "text": "Give UPC for the variant"
+        },
+        "isbn": {
+          "type": "string",
+          "text": "Give ISBN for the variant"
+        },
+        "part_number": {
+          "type": "string",
+          "text": "Give MPN for the variant"
+        },
+        "hsn_or_sac": {
+          "type": "string",
+          "text": "Give HSN or SAC for the variant. For India only"
+        },
+        "avatax_tax_code": {
+          "type": "string",
+          "text": "Give Avalara tax code for the variant. For US only"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update a Variant",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/variants",
+        "alias_endpoint": "/zohocommerce/store/api/v1/variants",
+        "api_ref": "https://www.zoho.com/commerce/api/update-variant.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.items.UPDATE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/variants",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocommerce__store__api__v1__variants___delete": {
+      "provider_intent": "zohocommerce__store__api__v1__variants___delete",
+      "provider_alias_intent": "/store/api/v1/variants",
+      "text": "Delete a Variant",
+      "category": "Variants",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a Variant",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/store/api/v1/variants",
+        "alias_endpoint": "/zohocommerce/store/api/v1/variants",
+        "api_ref": "https://www.zoho.com/commerce/api/delete-variant.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCommerce.items.DELETE",
+      "api_endpoint_src": "{endpoint}/store/api/v1/variants",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

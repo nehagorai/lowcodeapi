@@ -1,0 +1,3186 @@
+{
+  "routes": {
+    "humeai__v0__batch__jobs___get": {
+      "provider_intent": "humeai__v0__batch__jobs___get",
+      "provider_alias_intent": "/v0/batch/jobs",
+      "text": "Chat",
+      "category": "Chat",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "config_id": {
+          "type": "string",
+          "text": "The unique identifier for the EVI configuration to be used"
+        },
+        "config_version": {
+          "type": "number",
+          "text": "The version number of the specified EVI configuration to be used"
+        },
+        "resumed_chat_group_id": {
+          "type": "string",
+          "text": "The unique identifier for a chat group. Used to resume a previous chat"
+        },
+        "access_token": {
+          "type": "string",
+          "text": "Access token used for authenticating the client"
+        },
+        "api_key": {
+          "type": "string",
+          "text": "API key used for authenticating the client"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "chat",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/batch/jobs",
+        "alias_endpoint": "/humeai/v0/batch/jobs",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/chat/chat"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__batch__jobs___post": {
+      "provider_intent": "humeai__v0__batch__jobs___post",
+      "provider_alias_intent": "/v0/batch/jobs",
+      "text": "Start inference job",
+      "category": "Batch",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "limit": {
+          "type": "number",
+          "text": "The maximum number of jobs to include in the response"
+        },
+        "status": {
+          "type": "enum",
+          "text": "Include only jobs with these statuses"
+        },
+        "when": {
+          "type": "enum",
+          "text": "Include only jobs that were created before or after timestamp_ms"
+        },
+        "timestamp_ms": {
+          "type": "number",
+          "text": "Defaults to the current date and time"
+        },
+        "sort_by": {
+          "type": "enum",
+          "text": "The job timestamp to sort by"
+        },
+        "direction": {
+          "type": "enum",
+          "text": "Allowed values"
+        },
+        "type": {
+          "type": "enum",
+          "text": "Include only jobs of these types"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Start inference job",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/batch/jobs",
+        "alias_endpoint": "/humeai/v0/batch/jobs",
+        "api_ref": "https://dev.hume.ai/reference/expression-measurement-api/batch/start-inference-job"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__batch__jobs__id___get": {
+      "provider_intent": "humeai__v0__batch__jobs__id___get",
+      "provider_alias_intent": "/v0/batch/jobs/id",
+      "text": "Get job details",
+      "category": "Batch",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Id"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Id"
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Get job details",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/batch/jobs/:id",
+        "alias_endpoint": "/humeai/v0/batch/jobs/id",
+        "api_ref": "https://dev.hume.ai/reference/expression-measurement-api/batch/get-job-details"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__batch__jobs__id__predictions___get": {
+      "provider_intent": "humeai__v0__batch__jobs__id__predictions___get",
+      "provider_alias_intent": "/v0/batch/jobs/id/predictions",
+      "text": "Get job predictions",
+      "category": "Batch",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Id"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Id"
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Get job predictions",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/batch/jobs/:id/predictions",
+        "alias_endpoint": "/humeai/v0/batch/jobs/id/predictions",
+        "api_ref": "https://dev.hume.ai/reference/expression-measurement-api/batch/get-job-predictions"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__batch__jobs__id__artifacts___get": {
+      "provider_intent": "humeai__v0__batch__jobs__id__artifacts___get",
+      "provider_alias_intent": "/v0/batch/jobs/id/artifacts",
+      "text": "Get job artifacts",
+      "category": "Batch",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Id"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Id"
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Get job artifacts",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/batch/jobs/:id/artifacts",
+        "alias_endpoint": "/humeai/v0/batch/jobs/id/artifacts",
+        "api_ref": "https://dev.hume.ai/reference/expression-measurement-api/batch/get-job-artifacts"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__chat_groups___get": {
+      "provider_intent": "humeai__v0__evi__chat_groups___get",
+      "provider_alias_intent": "/v0/evi/chat_groups",
+      "text": "List chat_groups",
+      "category": "Chat Groups",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page_number": {
+          "type": "number",
+          "text": "The page number of the results to return"
+        },
+        "page_size": {
+          "type": "number",
+          "text": "The maximum number of results to include per page"
+        },
+        "ascending_order": {
+          "type": "boolean",
+          "text": "Boolean to indicate if the results should be paginated in chronological order or reverse-chronological order. Defaults to true",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "List chat_groups",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/chat_groups",
+        "alias_endpoint": "/humeai/v0/evi/chat_groups",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/chat-groups/list-chat-groups"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__chat_groups__id__events___get": {
+      "provider_intent": "humeai__v0__evi__chat_groups__id__events___get",
+      "provider_alias_intent": "/v0/evi/chat_groups/id/events",
+      "text": "List chat events from a specific chat_group",
+      "category": "Chat Groups",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a chat. Formatted as a UUID"
+        },
+        "page_number": {
+          "type": "number",
+          "text": "The page number of the results to return"
+        },
+        "page_size": {
+          "type": "number",
+          "text": "The maximum number of results to include per page"
+        },
+        "ascending_order": {
+          "type": "boolean",
+          "text": "Boolean to indicate if the results should be paginated in chronological order or reverse-chronological order. Defaults to true",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a chat. Formatted as a UUID"
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "List chat events from a specific chat_group",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/chat_groups/:id/events",
+        "alias_endpoint": "/humeai/v0/evi/chat_groups/id/events",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/chat-groups/list-chat-group-events"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__chats___get": {
+      "provider_intent": "humeai__v0__evi__chats___get",
+      "provider_alias_intent": "/v0/evi/chats",
+      "text": "List chats",
+      "category": "Chats",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page_number": {
+          "type": "number",
+          "text": "The page number of the results to return"
+        },
+        "page_size": {
+          "type": "number",
+          "text": "The maximum number of results to include per page"
+        },
+        "ascending_order": {
+          "type": "boolean",
+          "text": "Boolean to indicate if the results should be paginated in chronological order or reverse-chronological order. Defaults to true",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "List chats",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/chats",
+        "alias_endpoint": "/humeai/v0/evi/chats",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/chats/list-chats"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__chats__id___get": {
+      "provider_intent": "humeai__v0__evi__chats__id___get",
+      "provider_alias_intent": "/v0/evi/chats/id",
+      "text": "List chat events",
+      "category": "Chats",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a chat. Formatted as a UUID"
+        },
+        "page_number": {
+          "type": "number",
+          "text": "The page number of the results to return"
+        },
+        "page_size": {
+          "type": "number",
+          "text": "The maximum number of results to include per page"
+        },
+        "ascending_order": {
+          "type": "boolean",
+          "text": "Boolean to indicate if the results should be paginated in chronological order or reverse-chronological order. Defaults to true",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a chat. Formatted as a UUID"
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "List chat events",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/chats/:id",
+        "alias_endpoint": "/humeai/v0/evi/chats/id",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/chats/list-chat-events"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__configs___get": {
+      "provider_intent": "humeai__v0__evi__configs___get",
+      "provider_alias_intent": "/v0/evi/configs",
+      "text": "List configs",
+      "category": "Configs",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page_number": {
+          "type": "number",
+          "text": "The page number of the results to return"
+        },
+        "page_size": {
+          "type": "number",
+          "text": "The maximum number of results to include per page"
+        },
+        "restrict_to_most_recent": {
+          "type": "boolean",
+          "text": "Only include the most recent version of each config in the list",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "List configs",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/configs",
+        "alias_endpoint": "/humeai/v0/evi/configs",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/configs/list-configs"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__configs___post": {
+      "provider_intent": "humeai__v0__evi__configs___post",
+      "provider_alias_intent": "/v0/evi/configs",
+      "text": "Create config",
+      "category": "Configs",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Name applied to all versions of a particular Config",
+          "required": true
+        },
+        "version_description": {
+          "type": "string",
+          "text": "Description that is appended to a specific version of a Config"
+        },
+        "prompt": {
+          "type": "object",
+          "text": "A specific prompt identifier to be posted to the server"
+        },
+        "voice": {
+          "type": "object",
+          "text": "A Voice specification posted to the server"
+        },
+        "language_model": {
+          "type": "object",
+          "text": "A LanguageModel to be posted to the server"
+        },
+        "ellm_model": {
+          "type": "object",
+          "text": "A eLLM model configuration to be posted to the server"
+        },
+        "tools": {
+          "type": "array",
+          "text": "Tool specification for a Config"
+        },
+        "builtin_tools": {
+          "type": "array",
+          "text": "Built-in tool specification for a Config"
+        },
+        "event_messages": {
+          "type": "object",
+          "text": "Collection of event_message specs to be posted to the server"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Create config",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/configs",
+        "alias_endpoint": "/humeai/v0/evi/configs",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/configs/create-config"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__configs__id___get": {
+      "provider_intent": "humeai__v0__evi__configs__id___get",
+      "provider_alias_intent": "/v0/evi/configs/id",
+      "text": "List config versions",
+      "category": "Configs",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a config Formatted as a UUID",
+          "required": true
+        },
+        "page_number": {
+          "type": "number",
+          "text": "The page number of the results to return"
+        },
+        "page_size": {
+          "type": "number",
+          "text": "The maximum number of results to include per page"
+        },
+        "restrict_to_most_recent": {
+          "type": "boolean",
+          "text": "Only include the most recent version of each config in the list",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a config Formatted as a UUID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "List config versions",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/configs/:id",
+        "alias_endpoint": "/humeai/v0/evi/configs/id",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/configs/list-config-versions"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__configs__id___post": {
+      "provider_intent": "humeai__v0__evi__configs__id___post",
+      "provider_alias_intent": "/v0/evi/configs/id",
+      "text": "Create config version",
+      "category": "Configs",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a config Formatted as a UUID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "version_description": {
+          "type": "string",
+          "text": "Description that is appended to a specific version of a Config"
+        },
+        "prompt": {
+          "type": "object",
+          "text": "A specific prompt identifier to be posted to the server"
+        },
+        "voice": {
+          "type": "object",
+          "text": "A Voice specification posted to the server"
+        },
+        "language_model": {
+          "type": "object",
+          "text": "A LanguageModel to be posted to the server"
+        },
+        "ellm_model": {
+          "type": "object",
+          "text": "A eLLM model configuration to be posted to the server"
+        },
+        "tools": {
+          "type": "object",
+          "text": "Tool specification for a Config"
+        },
+        "builtin_tools": {
+          "type": "object",
+          "text": "Built-in tool specification for a Config"
+        },
+        "event_messages": {
+          "type": "object",
+          "text": "Collection of event_message specs to be posted to the server"
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a config Formatted as a UUID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Create config version",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/configs/:id",
+        "alias_endpoint": "/humeai/v0/evi/configs/id",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/configs/create-config-version"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__configs__id___delete": {
+      "provider_intent": "humeai__v0__evi__configs__id___delete",
+      "provider_alias_intent": "/v0/evi/configs/id",
+      "text": "Delete config",
+      "category": "Configs",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a config Formatted as a UUID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a config Formatted as a UUID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Delete config",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/configs/:id",
+        "alias_endpoint": "/humeai/v0/evi/configs/id",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/configs/delete-config"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__configs__id___patch": {
+      "provider_intent": "humeai__v0__evi__configs__id___patch",
+      "provider_alias_intent": "/v0/evi/configs/id",
+      "text": "Update config name",
+      "category": "Configs",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a config Formatted as a UUID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Name applied to all versions of a particular Config",
+          "required": true
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a config Formatted as a UUID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Update config name",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/configs/:id",
+        "alias_endpoint": "/humeai/v0/evi/configs/id",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/configs/update-config-name"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__configs__id__version__version___get": {
+      "provider_intent": "humeai__v0__evi__configs__id__version__version___get",
+      "provider_alias_intent": "/v0/evi/configs/id/version/version",
+      "text": "Get config version",
+      "category": "Configs",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a config Formatted as a UUID",
+          "required": true
+        },
+        "version": {
+          "type": "number",
+          "text": "Version number for a config Version numbers should be integers",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a config Formatted as a UUID",
+          "required": true
+        },
+        "version": {
+          "type": "number",
+          "text": "Version number for a config Version numbers should be integers",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Get config version",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/configs/:id/version/:version",
+        "alias_endpoint": "/humeai/v0/evi/configs/id/version/version",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/configs/get-config-version"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__configs__id__version__version___delete": {
+      "provider_intent": "humeai__v0__evi__configs__id__version__version___delete",
+      "provider_alias_intent": "/v0/evi/configs/id/version/version",
+      "text": "Delete config version",
+      "category": "Configs",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a config Formatted as a UUID",
+          "required": true
+        },
+        "version": {
+          "type": "number",
+          "text": "Version number for a config Version numbers should be integers",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a config Formatted as a UUID",
+          "required": true
+        },
+        "version": {
+          "type": "number",
+          "text": "Version number for a config Version numbers should be integers",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Delete config version",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/configs/:id/version/:version",
+        "alias_endpoint": "/humeai/v0/evi/configs/id/version/version",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/configs/delete-config-version"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__configs__id__version__version___patch": {
+      "provider_intent": "humeai__v0__evi__configs__id__version__version___patch",
+      "provider_alias_intent": "/v0/evi/configs/id/version/version",
+      "text": "Update config description",
+      "category": "Configs",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a config Formatted as a UUID",
+          "required": true
+        },
+        "version": {
+          "type": "number",
+          "text": "Version number for a config Version numbers should be integers",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "version_description": {
+          "type": "string",
+          "text": "Description that is appended to a specific version of a Config"
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a config Formatted as a UUID",
+          "required": true
+        },
+        "version": {
+          "type": "number",
+          "text": "Version number for a config Version numbers should be integers",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Update config description",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/configs/:id/version/:version",
+        "alias_endpoint": "/humeai/v0/evi/configs/id/version/version",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/configs/update-config-description"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__registry__datasets___get": {
+      "provider_intent": "humeai__v0__registry__datasets___get",
+      "provider_alias_intent": "/v0/registry/datasets",
+      "text": "List datasets",
+      "category": "Datasets",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "name": {
+          "type": "string",
+          "text": "Dataset name to be queried"
+        },
+        "page_number": {
+          "type": "number",
+          "text": "Index of the first result"
+        },
+        "page_size": {
+          "type": "number",
+          "text": "Maximum number of results"
+        },
+        "shared_assets": {
+          "type": "boolean",
+          "text": "True Will show all assets owned by you and shared with you",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "List datasets",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/registry/datasets",
+        "alias_endpoint": "/humeai/v0/registry/datasets",
+        "api_ref": "https://dev.hume.ai/reference/custom-models-api/datasets/list-datasets"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__registry__datasets___post": {
+      "provider_intent": "humeai__v0__registry__datasets___post",
+      "provider_alias_intent": "/v0/registry/datasets",
+      "text": "Create dataset",
+      "category": "Datasets",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Name of the Dataset to be created",
+          "required": true
+        },
+        "feature_types": {
+          "type": "file",
+          "text": "Feature Types"
+        },
+        "labels_file": {
+          "type": "file",
+          "text": "Labels File"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Create dataset",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/registry/datasets",
+        "alias_endpoint": "/humeai/v0/registry/datasets",
+        "api_ref": "https://dev.hume.ai/reference/custom-models-api/datasets/create-dataset"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__registry__datasets__id___get": {
+      "provider_intent": "humeai__v0__registry__datasets__id___get",
+      "provider_alias_intent": "/v0/registry/datasets/id",
+      "text": "Get dataset",
+      "category": "Datasets",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a Dataset",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a Dataset",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Get dataset",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/registry/datasets/:id",
+        "alias_endpoint": "/humeai/v0/registry/datasets/id",
+        "api_ref": "https://dev.hume.ai/reference/custom-models-api/datasets/get-dataset"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__registry__datasets__id___post": {
+      "provider_intent": "humeai__v0__registry__datasets__id___post",
+      "provider_alias_intent": "/v0/registry/datasets/id",
+      "text": "Create dataset version",
+      "category": "Datasets",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a Dataset",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "feature_types": {
+          "type": "file",
+          "text": "Feature Types"
+        },
+        "labels_file": {
+          "type": "file",
+          "text": "Labels File"
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a Dataset",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Create dataset version",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/registry/datasets/:id",
+        "alias_endpoint": "/humeai/v0/registry/datasets/id",
+        "api_ref": "https://dev.hume.ai/reference/custom-models-api/datasets/create-dataset-version"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__registry__datasets__id___delete": {
+      "provider_intent": "humeai__v0__registry__datasets__id___delete",
+      "provider_alias_intent": "/v0/registry/datasets/id",
+      "text": "Delete dataset",
+      "category": "Datasets",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a Dataset",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a Dataset",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Delete dataset",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/registry/datasets/:id",
+        "alias_endpoint": "/humeai/v0/registry/datasets/id",
+        "api_ref": "https://dev.hume.ai/reference/custom-models-api/datasets/delete-dataset"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__registry__datasets__id__versions___get": {
+      "provider_intent": "humeai__v0__registry__datasets__id__versions___get",
+      "provider_alias_intent": "/v0/registry/datasets/id/versions",
+      "text": "List dataset versions",
+      "category": "Datasets",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a Dataset",
+          "required": true
+        },
+        "page_number": {
+          "type": "number",
+          "text": "Index of the first result"
+        },
+        "page_size": {
+          "type": "number",
+          "text": "Maximum number of results"
+        },
+        "shared_assets": {
+          "type": "boolean",
+          "text": "True Will show all assets owned by you and shared with you",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a Dataset",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "List dataset versions",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/registry/datasets/:id/versions",
+        "alias_endpoint": "/humeai/v0/registry/datasets/id/versions",
+        "api_ref": "https://dev.hume.ai/reference/custom-models-api/datasets/list-dataset-versions"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__registry__datasets__id__files___get": {
+      "provider_intent": "humeai__v0__registry__datasets__id__files___get",
+      "provider_alias_intent": "/v0/registry/datasets/id/files",
+      "text": "List dataset files",
+      "category": "Datasets",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a Dataset version",
+          "required": true
+        },
+        "page_number": {
+          "type": "number",
+          "text": "Index of the first result"
+        },
+        "page_size": {
+          "type": "number",
+          "text": "Maximum number of results"
+        },
+        "shared_assets": {
+          "type": "boolean",
+          "text": "True Will show all assets owned by you and shared with you",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a Dataset version",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "List dataset files",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/registry/datasets/:id/files",
+        "alias_endpoint": "/humeai/v0/registry/datasets/id/files",
+        "api_ref": "https://dev.hume.ai/reference/custom-models-api/datasets/list-dataset-files"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__registry__datasets__version__id___get": {
+      "provider_intent": "humeai__v0__registry__datasets__version__id___get",
+      "provider_alias_intent": "/v0/registry/datasets/version/id",
+      "text": "Get dataset version",
+      "category": "Datasets",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a Dataset version",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a Dataset version",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Get dataset version",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/registry/datasets/version/:id",
+        "alias_endpoint": "/humeai/v0/registry/datasets/version/id",
+        "api_ref": "https://dev.hume.ai/reference/custom-models-api/datasets/get-dataset-version"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__registry__datasets__version__id__files___get": {
+      "provider_intent": "humeai__v0__registry__datasets__version__id__files___get",
+      "provider_alias_intent": "/v0/registry/datasets/version/id/files",
+      "text": "List dataset version files",
+      "category": "Datasets",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a Dataset version",
+          "required": true
+        },
+        "page_number": {
+          "type": "number",
+          "text": "Index of the first result"
+        },
+        "page_size": {
+          "type": "number",
+          "text": "Maximum number of results"
+        },
+        "shared_assets": {
+          "type": "boolean",
+          "text": "True Will show all assets owned by you and shared with you",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a Dataset version",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "List dataset version files",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/registry/datasets/version/:id/files",
+        "alias_endpoint": "/humeai/v0/registry/datasets/version/id/files",
+        "api_ref": "https://dev.hume.ai/reference/custom-models-api/datasets/get-dataset-version"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__registry__files___get": {
+      "provider_intent": "humeai__v0__registry__files___get",
+      "provider_alias_intent": "/v0/registry/files",
+      "text": "List files",
+      "category": "Files",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page_number": {
+          "type": "number",
+          "text": "Index of the first result"
+        },
+        "page_size": {
+          "type": "number",
+          "text": "Maximum number of results"
+        },
+        "shared_assets": {
+          "type": "boolean",
+          "text": " Will show all assets owned by you and shared with you",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "List files",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/registry/files",
+        "alias_endpoint": "/humeai/v0/registry/files",
+        "api_ref": "https://dev.hume.ai/reference/custom-models-api/files/list-files"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__registry__files___post": {
+      "provider_intent": "humeai__v0__registry__files___post",
+      "provider_alias_intent": "/v0/registry/files",
+      "text": "Create files",
+      "category": "Files",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "file": {
+          "type": "object",
+          "text": "File details",
+          "required": true
+        },
+        "attributes": {
+          "type": "object",
+          "text": "List of Attributes"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Create files",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/registry/files",
+        "alias_endpoint": "/humeai/v0/registry/files",
+        "api_ref": "https://dev.hume.ai/reference/custom-models-api/files/create-files"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__registry__files__upload___post": {
+      "provider_intent": "humeai__v0__registry__files__upload___post",
+      "provider_alias_intent": "/v0/registry/files/upload",
+      "text": "Upload file",
+      "category": "Files",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "file": {
+          "type": "file",
+          "text": "File"
+        },
+        "attributes": {
+          "type": "file",
+          "text": "Attributes"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Upload file",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/registry/files/upload",
+        "alias_endpoint": "/humeai/v0/registry/files/upload",
+        "api_ref": "https://dev.hume.ai/reference/custom-models-api/files/upload-file"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__registry__files__id___get": {
+      "provider_intent": "humeai__v0__registry__files__id___get",
+      "provider_alias_intent": "/v0/registry/files/id",
+      "text": "Get file",
+      "category": "Files",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a File",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a File",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Get file",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/registry/files/:id",
+        "alias_endpoint": "/humeai/v0/registry/files/id",
+        "api_ref": "https://dev.hume.ai/reference/custom-models-api/files/get-file"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__registry__files__id___delete": {
+      "provider_intent": "humeai__v0__registry__files__id___delete",
+      "provider_alias_intent": "/v0/registry/files/id",
+      "text": "Delete file",
+      "category": "Files",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a File",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a File",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Delete file",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/registry/files/:id",
+        "alias_endpoint": "/humeai/v0/registry/files/id",
+        "api_ref": "https://dev.hume.ai/reference/custom-models-api/files/delete-file"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__registry__files__id___patch": {
+      "provider_intent": "humeai__v0__registry__files__id___patch",
+      "provider_alias_intent": "/v0/registry/files/id",
+      "text": "Update file name",
+      "category": "Files",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a File",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "New File name",
+          "required": true
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a File",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Update file name",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/registry/files/:id",
+        "alias_endpoint": "/humeai/v0/registry/files/id",
+        "api_ref": "https://dev.hume.ai/reference/custom-models-api/files/update-file-name"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__registry__files__id__predictions___get": {
+      "provider_intent": "humeai__v0__registry__files__id__predictions___get",
+      "provider_alias_intent": "/v0/registry/files/id/predictions",
+      "text": "Get file predictions",
+      "category": "Files",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a File",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a File",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Get file predictions",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/registry/files/:id/predictions",
+        "alias_endpoint": "/humeai/v0/registry/files/id/predictions",
+        "api_ref": "https://dev.hume.ai/reference/custom-models-api/files/get-file-predictions"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__registry__v0__batch__jobs__tl__train___post": {
+      "provider_intent": "humeai__v0__registry__v0__batch__jobs__tl__train___post",
+      "provider_alias_intent": "/v0/registry/v0/batch/jobs/tl/train",
+      "text": "Start training job",
+      "category": "Jobs",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "custom_model": {
+          "type": "object",
+          "text": "Custom Model",
+          "required": true
+        },
+        "dataset": {
+          "type": "object",
+          "text": "Custom Model",
+          "required": true
+        },
+        "target_feature": {
+          "type": "string",
+          "text": "Target Feature"
+        },
+        "task": {
+          "type": "object",
+          "text": "Task"
+        },
+        "evaluation": {
+          "type": "object",
+          "text": "Evaluation"
+        },
+        "alternatives": {
+          "type": "array",
+          "text": "Alternatives"
+        },
+        "callback_url": {
+          "type": "string",
+          "text": "Callback url"
+        },
+        "notify": {
+          "type": "boolean",
+          "text": "Notify",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Start training job",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/registry/v0/batch/jobs/tl/train",
+        "alias_endpoint": "/humeai/v0/registry/v0/batch/jobs/tl/train",
+        "api_ref": "https://dev.hume.ai/reference/custom-models-api/jobs/start-training-job"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__registry__v0__batch__jobs__tl__inference___post": {
+      "provider_intent": "humeai__v0__registry__v0__batch__jobs__tl__inference___post",
+      "provider_alias_intent": "/v0/registry/v0/batch/jobs/tl/inference",
+      "text": "Start custom models inference job",
+      "category": "Jobs",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "custom_model": {
+          "type": "object",
+          "text": "Custom Model",
+          "required": true
+        },
+        "urls": {
+          "type": "array",
+          "text": "URLs to the media files to be processed"
+        },
+        "registry_files": {
+          "type": "array",
+          "text": "List of File IDs corresponding to the files in the asset registry"
+        },
+        "callback_url": {
+          "type": "string",
+          "text": "If provided, a POST request will be made to the URL with the generated predictions on completion or the error message on failure"
+        },
+        "notify": {
+          "type": "boolean",
+          "text": "Whether to send an email notification to the user upon job completion/failure",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Start custom models inference job",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/registry/v0/batch/jobs/tl/inference",
+        "alias_endpoint": "/humeai/v0/registry/v0/batch/jobs/tl/inference",
+        "api_ref": "https://dev.hume.ai/reference/custom-models-api/jobs/start-custom-models-inference-job"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__registry__models___get": {
+      "provider_intent": "humeai__v0__registry__models___get",
+      "provider_alias_intent": "/v0/registry/models",
+      "text": "List models",
+      "category": "Models",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "name": {
+          "type": "string",
+          "text": "Model name to be queried"
+        },
+        "page_number": {
+          "type": "number",
+          "text": "Index of the first result"
+        },
+        "page_size": {
+          "type": "number",
+          "text": "Maximum number of results"
+        },
+        "shared_assets": {
+          "type": "boolean",
+          "text": "True Will show all assets owned by you and shared with you",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "List models",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/registry/models",
+        "alias_endpoint": "/humeai/v0/registry/models",
+        "api_ref": "https://dev.hume.ai/reference/custom-models-api/models/list-models"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__registry__models__id___get": {
+      "provider_intent": "humeai__v0__registry__models__id___get",
+      "provider_alias_intent": "/v0/registry/models/id",
+      "text": "Get model details",
+      "category": "Models",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a Model",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a Model",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Get model details",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/registry/models/:id",
+        "alias_endpoint": "/humeai/v0/registry/models/id",
+        "api_ref": "https://dev.hume.ai/reference/custom-models-api/models/get-model-details"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__registry__models__id___patch": {
+      "provider_intent": "humeai__v0__registry__models__id___patch",
+      "provider_alias_intent": "/v0/registry/models/id",
+      "text": "Update model name",
+      "category": "Models",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a Model",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "New Model name",
+          "required": true
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a Model",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Update model name",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/registry/models/:id",
+        "alias_endpoint": "/humeai/v0/registry/models/id",
+        "api_ref": "https://dev.hume.ai/reference/custom-models-api/models/update-model-name"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__registry__models__version___get": {
+      "provider_intent": "humeai__v0__registry__models__version___get",
+      "provider_alias_intent": "/v0/registry/models/version",
+      "text": "List model versions",
+      "category": "Models",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated Model Version IDs to be queried"
+        },
+        "name": {
+          "type": "string",
+          "text": "Model version name to be queried"
+        },
+        "version": {
+          "type": "string",
+          "text": "Model version number to be queried"
+        },
+        "shared_assets": {
+          "type": "boolean",
+          "text": "True Will show all assets owned by you and shared with you",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "List model versions",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/registry/models/version",
+        "alias_endpoint": "/humeai/v0/registry/models/version",
+        "api_ref": "https://dev.hume.ai/reference/custom-models-api/models/list-model-versions"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__registry__models__version__id___get": {
+      "provider_intent": "humeai__v0__registry__models__version__id___get",
+      "provider_alias_intent": "/v0/registry/models/version/id",
+      "text": "Get model version",
+      "category": "Models",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a Model version",
+          "required": true
+        },
+        "shared_assets": {
+          "type": "boolean",
+          "text": "True Will show all assets owned by you and shared with you",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a Model version",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Get model version",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/registry/models/version/:id",
+        "alias_endpoint": "/humeai/v0/registry/models/version/id",
+        "api_ref": "https://dev.hume.ai/reference/custom-models-api/models/get-model-version"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__registry__models__version__id___patch": {
+      "provider_intent": "humeai__v0__registry__models__version__id___patch",
+      "provider_alias_intent": "/v0/registry/models/version/id",
+      "text": "Update model description",
+      "category": "Models",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a Model version",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Hume-generated ID of a Model version",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Update model description",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/registry/models/version/:id",
+        "alias_endpoint": "/humeai/v0/registry/models/version/id",
+        "api_ref": "https://dev.hume.ai/reference/custom-models-api/models/update-model-description"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__privacy__settings___get": {
+      "provider_intent": "humeai__v0__evi__privacy__settings___get",
+      "provider_alias_intent": "/v0/evi/privacy/settings",
+      "text": "Get User Privacy Settings",
+      "category": "Privacy",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Get User Privacy Settings",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/privacy/settings",
+        "alias_endpoint": "/humeai/v0/evi/privacy/settings",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/privacy/get-user-privacy-settings"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__privacy__settings___patch": {
+      "provider_intent": "humeai__v0__evi__privacy__settings___patch",
+      "provider_alias_intent": "/v0/evi/privacy/settings",
+      "text": "Patch User Privacy Settings",
+      "category": "Privacy",
+      "method": "PATCH",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "allowRetention": {
+          "type": "boolean",
+          "text": "Allow Retention",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "allowTraining": {
+          "type": "boolean",
+          "text": "Allow Training",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Patch User Privacy Settings",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/privacy/settings",
+        "alias_endpoint": "/humeai/v0/evi/privacy/settings",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/privacy/patch-user-privacy-settings"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__privacy___delete": {
+      "provider_intent": "humeai__v0__evi__privacy___delete",
+      "provider_alias_intent": "/v0/evi/privacy",
+      "text": "Delete User Data",
+      "category": "Privacy",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Delete User Data",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/privacy",
+        "alias_endpoint": "/humeai/v0/evi/privacy",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/privacy/delete-user-data"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__prompts___get": {
+      "provider_intent": "humeai__v0__evi__prompts___get",
+      "provider_alias_intent": "/v0/evi/prompts",
+      "text": "List prompts",
+      "category": "Prompts",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page_number": {
+          "type": "number",
+          "text": "The page number of the results to return"
+        },
+        "page_size": {
+          "type": "number",
+          "text": "The maximum number of results to include per page"
+        },
+        "restrict_to_most_recent": {
+          "type": "boolean",
+          "text": "Only include the most recent version of each prompt in the list",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "List prompts",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/prompts",
+        "alias_endpoint": "/humeai/v0/evi/prompts",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/prompts/list-prompts"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__prompts___post": {
+      "provider_intent": "humeai__v0__evi__prompts___post",
+      "provider_alias_intent": "/v0/evi/prompts",
+      "text": "Create prompt",
+      "category": "Prompts",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Name applied to all versions of a particular Prompt",
+          "required": true
+        },
+        "text": {
+          "type": "string",
+          "text": "Text used for this version of the Prompt",
+          "required": true
+        },
+        "version_description": {
+          "type": "string",
+          "text": "Description that is appended to a specific version of a Prompt"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Create prompt",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/prompts",
+        "alias_endpoint": "/humeai/v0/evi/prompts",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/prompts/create-prompt"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__prompts__id___get": {
+      "provider_intent": "humeai__v0__evi__prompts__id___get",
+      "provider_alias_intent": "/v0/evi/prompts/id",
+      "text": "List prompt versions",
+      "category": "Prompts",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a tool. Formatted as a UUID",
+          "required": true
+        },
+        "page_number": {
+          "type": "number",
+          "text": "The page number of the results to return"
+        },
+        "text": {
+          "type": "number",
+          "text": "The maximum number of results to include per page"
+        },
+        "version_description": {
+          "type": "boolean",
+          "text": "Only include the most recent version of each prompt in the list",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a tool. Formatted as a UUID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "List prompt versions",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/prompts/:id",
+        "alias_endpoint": "/humeai/v0/evi/prompts/id",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/prompts/list-prompt-versions"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__prompts__id___post": {
+      "provider_intent": "humeai__v0__evi__prompts__id___post",
+      "provider_alias_intent": "/v0/evi/prompts/id",
+      "text": "Create prompt version",
+      "category": "Prompts",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a prompt. Formatted as a UUID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "text": {
+          "type": "string",
+          "text": "Text used for this version of the Prompt",
+          "required": true
+        },
+        "version_description": {
+          "type": "string",
+          "text": "Description that is appended to a specific version of a Prompt"
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a prompt. Formatted as a UUID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Create prompt version",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/prompts/:id",
+        "alias_endpoint": "/humeai/v0/evi/prompts/id",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/prompts/create-prompt-verison"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__prompts__id___delete": {
+      "provider_intent": "humeai__v0__evi__prompts__id___delete",
+      "provider_alias_intent": "/v0/evi/prompts/id",
+      "text": "Delete prompt",
+      "category": "Prompts",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a prompt. Formatted as a UUID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a prompt. Formatted as a UUID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Delete prompt",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/prompts/:id",
+        "alias_endpoint": "/humeai/v0/evi/prompts/id",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/prompts/delete-prompt"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__prompts__id___patch": {
+      "provider_intent": "humeai__v0__evi__prompts__id___patch",
+      "provider_alias_intent": "/v0/evi/prompts/id",
+      "text": "Update prompt name",
+      "category": "Prompts",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a prompt. Formatted as a UUID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Name applied to all versions of a particular Prompt",
+          "required": true
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a prompt. Formatted as a UUID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Update prompt name",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/prompts/:id",
+        "alias_endpoint": "/humeai/v0/evi/prompts/id",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/prompts/update-prompt-name"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__prompts__id__version__version___get": {
+      "provider_intent": "humeai__v0__evi__prompts__id__version__version___get",
+      "provider_alias_intent": "/v0/evi/prompts/id/version/version",
+      "text": "Get prompt version",
+      "category": "Prompts",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a prompt. Formatted as a UUID",
+          "required": true
+        },
+        "version": {
+          "type": "number",
+          "text": "Version number for a prompt. Version numbers should be integers",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a prompt. Formatted as a UUID",
+          "required": true
+        },
+        "version": {
+          "type": "number",
+          "text": "Version number for a prompt",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Get prompt version",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/prompts/:id/version/:version",
+        "alias_endpoint": "/humeai/v0/evi/prompts/id/version/version",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/prompts/get-prompt-version"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__prompts__id__version__version___delete": {
+      "provider_intent": "humeai__v0__evi__prompts__id__version__version___delete",
+      "provider_alias_intent": "/v0/evi/prompts/id/version/version",
+      "text": "Delete prompt version",
+      "category": "Prompts",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a prompt. Formatted as a UUID",
+          "required": true
+        },
+        "version": {
+          "type": "number",
+          "text": "Version number for a prompt",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a prompt. Formatted as a UUID",
+          "required": true
+        },
+        "version": {
+          "type": "number",
+          "text": "Version number for a prompt",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Delete prompt version",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/prompts/:id/version/:version",
+        "alias_endpoint": "/humeai/v0/evi/prompts/id/version/version",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/prompts/delete-prompt-version"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__prompts__id__version__version___patch": {
+      "provider_intent": "humeai__v0__evi__prompts__id__version__version___patch",
+      "provider_alias_intent": "/v0/evi/prompts/id/version/version",
+      "text": "Update prompt description",
+      "category": "Prompts",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a prompt. Formatted as a UUID",
+          "required": true
+        },
+        "version": {
+          "type": "number",
+          "text": "Version number for a prompt",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "version_description": {
+          "type": "string",
+          "text": "Description that is appended to a specific version of a Prompt"
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a prompt. Formatted as a UUID",
+          "required": true
+        },
+        "version": {
+          "type": "number",
+          "text": "Version number for a prompt",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Update prompt description",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/prompts/:id/version/:version",
+        "alias_endpoint": "/humeai/v0/evi/prompts/id/version/version",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/prompts/update-prompt-description"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__tools___get": {
+      "provider_intent": "humeai__v0__evi__tools___get",
+      "provider_alias_intent": "/v0/evi/tools",
+      "text": "List tools",
+      "category": "Tools",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page_number": {
+          "type": "number",
+          "text": "The page number of the results to return"
+        },
+        "page_size": {
+          "type": "number",
+          "text": "The maximum number of results to include per page"
+        },
+        "restrict_to_most_recent": {
+          "type": "boolean",
+          "text": "Only include the most recent version of each tool in the list",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Liat tool",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/tools",
+        "alias_endpoint": "/humeai/v0/evi/tools",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/tools/list-tools"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__tools___post": {
+      "provider_intent": "humeai__v0__evi__tools___post",
+      "provider_alias_intent": "/v0/evi/tools",
+      "text": "Create tool",
+      "category": "Tools",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Name applied to all versions of a particular Tool",
+          "required": true
+        },
+        "parameters": {
+          "type": "string",
+          "text": "Stringified JSON defining the parameters used by this version of the Tool",
+          "required": true
+        },
+        "version_description": {
+          "type": "string",
+          "text": "Description that is appended to a specific version of a Tool"
+        },
+        "description": {
+          "type": "string",
+          "text": "Text describing what the tool doesl"
+        },
+        "fallback_content": {
+          "type": "string",
+          "text": "Text to use if the tool fails to generate content"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Create tool",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/tools",
+        "alias_endpoint": "/humeai/v0/evi/tools",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/tools/create-tool"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__tools__id___get": {
+      "provider_intent": "humeai__v0__evi__tools__id___get",
+      "provider_alias_intent": "/v0/evi/tools/id",
+      "text": "List tool versions",
+      "category": "Tools",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a tool. Formatted as a UUID",
+          "required": true
+        },
+        "page_number": {
+          "type": "number",
+          "text": "The page number of the results to return"
+        },
+        "page_size": {
+          "type": "number",
+          "text": "The maximum number of results to include per page"
+        },
+        "restrict_to_most_recent": {
+          "type": "boolean",
+          "text": "Only include the most recent version of each tool in the list",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a tool. Formatted as a UUID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "List tool versions",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/tools/:id",
+        "alias_endpoint": "/humeai/v0/evi/tools/id",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/tools/list-tool-versions"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__tools__id___post": {
+      "provider_intent": "humeai__v0__evi__tools__id___post",
+      "provider_alias_intent": "/v0/evi/tools/id",
+      "text": "Create tool version",
+      "category": "Tools",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a tool. Formatted as a UUID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "parameters": {
+          "type": "string",
+          "text": "Stringified JSON defining the parameters used by this version of the Tool",
+          "required": true
+        },
+        "version_description": {
+          "type": "string",
+          "text": "Description that is appended to a specific version of a Tool"
+        },
+        "description": {
+          "type": "string",
+          "text": "Text describing what the tool does"
+        },
+        "fallback_content": {
+          "type": "string",
+          "text": "Text to use if the tool fails to generate content"
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a tool. Formatted as a UUID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Create tool version",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/tools/:id",
+        "alias_endpoint": "/humeai/v0/evi/tools/id",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/tools/create-tool-version"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__tools__id___delete": {
+      "provider_intent": "humeai__v0__evi__tools__id___delete",
+      "provider_alias_intent": "/v0/evi/tools/id",
+      "text": "Delete tool",
+      "category": "Tools",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a tool. Formatted as a UUID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a tool. Formatted as a UUID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Delete tool",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/tools/:id",
+        "alias_endpoint": "/humeai/v0/evi/tools/id",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/tools/delete-tool"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__tools__id___patch": {
+      "provider_intent": "humeai__v0__evi__tools__id___patch",
+      "provider_alias_intent": "/v0/evi/tools/id",
+      "text": "Update tool name",
+      "category": "Tools",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a tool. Formatted as a UUID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Name applied to all versions of a particular Tool",
+          "required": true
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Identifier for a tool. Formatted as a UUID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Update tool name",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/tools/:id",
+        "alias_endpoint": "/humeai/v0/evi/tools/id",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/tools/update-tool-name"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__tools__id__version__version___get": {
+      "provider_intent": "humeai__v0__evi__tools__id__version__version___get",
+      "provider_alias_intent": "/v0/evi/tools/id/version/version",
+      "text": "Get tool version",
+      "category": "Tools",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Identifire for a tool",
+          "required": true
+        },
+        "version": {
+          "type": "number",
+          "text": "Version number for a tool. Version numbers should be integers",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Identifire for a tool",
+          "required": true
+        },
+        "version": {
+          "type": "number",
+          "text": "Version number for a tool. Version numbers should be integers",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Get tool version",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/tools/:id/version/:version",
+        "alias_endpoint": "/humeai/v0/evi/tools/id/version/version",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/tools/get-tool-version"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__tools__id__version__version___delete": {
+      "provider_intent": "humeai__v0__evi__tools__id__version__version___delete",
+      "provider_alias_intent": "/v0/evi/tools/id/version/version",
+      "text": "Delete tool version",
+      "category": "Tools",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Identifire for a tool",
+          "required": true
+        },
+        "version": {
+          "type": "number",
+          "text": "Version number for a tool. Version numbers should be integers",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Identifire for a tool",
+          "required": true
+        },
+        "version": {
+          "type": "number",
+          "text": "Version number for a tool. Version numbers should be integers",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Delete tool version",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/tools/:id/version/:version",
+        "alias_endpoint": "/humeai/v0/evi/tools/id/version/version",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/tools/delete-tool-version"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "humeai__v0__evi__tools__id__version__version___patch": {
+      "provider_intent": "humeai__v0__evi__tools__id__version__version___patch",
+      "provider_alias_intent": "/v0/evi/tools/id/version/version",
+      "text": "Update tool description",
+      "category": "Tools",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Identifire for a tool",
+          "required": true
+        },
+        "version": {
+          "type": "number",
+          "text": "Version number for a tool. Version numbers should be integers",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "version_description": {
+          "type": "string",
+          "text": "Description that is appended to a specific version of a Tool"
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Identifire for a tool",
+          "required": true
+        },
+        "version": {
+          "type": "number",
+          "text": "Version number for a tool. Version numbers should be integers",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Update tool description",
+        "rate_limit": [],
+        "api_endpoint": "https://api.hume.ai/v0/evi/tools/:id/version/:version",
+        "alias_endpoint": "/humeai/v0/evi/tools/id/version/version",
+        "api_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/tools/update-tool-description"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

@@ -1,0 +1,249 @@
+{
+  "routes": {
+    "pixabay__api___get": {
+      "provider_intent": "pixabay__api___get",
+      "provider_alias_intent": "/api",
+      "text": "Search Images",
+      "category": "API",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "q": {
+          "type": "string",
+          "text": "URL-encoded search term"
+        },
+        "lang": {
+          "type": "string",
+          "text": "Search language code",
+          "enum": [
+            "cs",
+            "da",
+            "de",
+            "en",
+            "es",
+            "fr",
+            "id",
+            "it",
+            "hu",
+            "nl",
+            "no",
+            "pl",
+            "pt",
+            "ro",
+            "sk",
+            "fi",
+            "sv",
+            "tr",
+            "vi",
+            "th",
+            "bg",
+            "ru",
+            "el",
+            "ja",
+            "ko",
+            "zh"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "text": "Retrieve images by unique IDs"
+        },
+        "image_type": {
+          "type": "enum",
+          "text": "Filter results by image type",
+          "enum": [
+            "all",
+            "photo",
+            "illustration",
+            "vector"
+          ]
+        },
+        "orientation": {
+          "type": "string",
+          "text": "Image: wide or tall, describe it"
+        },
+        "category": {
+          "type": "string",
+          "text": "Filter results by category"
+        },
+        "min_width": {
+          "type": "number",
+          "text": "Minimum image width"
+        },
+        "min_height": {
+          "type": "number",
+          "text": "Minimum image height"
+        },
+        "colors": {
+          "type": "string",
+          "text": "Filter images by color properties"
+        },
+        "editors_choice": {
+          "type": "boolean",
+          "text": "Editor's Choice: Select Award-Winning Images",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "safesearch": {
+          "type": "boolean",
+          "text": "Family-friendly image filter option enabled",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "order": {
+          "type": "string",
+          "text": "Order results by relevance or popularity"
+        },
+        "page": {
+          "type": "number",
+          "text": "Select page number for search results"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Determine results per page"
+        },
+        "callback": {
+          "type": "string",
+          "text": "JSONP callback function naming convention"
+        },
+        "pretty": {
+          "type": "boolean",
+          "text": "Indent JSON output: not for production use",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Search Images",
+        "rate_limit": [],
+        "api_endpoint": "https://pixabay.com/api",
+        "alias_endpoint": "/pixabay/api",
+        "api_ref": "https://pixabay.com/api/docs/#api_search_images"
+      },
+      "auth": {
+        "queryMap": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "pixabay__api__videos___get": {
+      "provider_intent": "pixabay__api__videos___get",
+      "provider_alias_intent": "/api/videos",
+      "text": "Search Videos",
+      "category": "API",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "q": {
+          "type": "string",
+          "text": "A URL encoded search term"
+        },
+        "lang": {
+          "type": "string",
+          "text": "Specify language code before searching"
+        },
+        "id": {
+          "type": "string",
+          "text": "Retrieve individual videos by ID."
+        },
+        "video_type": {
+          "type": "string",
+          "text": "Filter results by video type"
+        },
+        "category": {
+          "type": "string",
+          "text": "Filter results by category"
+        },
+        "min_width": {
+          "type": "number",
+          "text": "Minimum video width",
+          "default": "0"
+        },
+        "min_height": {
+          "type": "number",
+          "text": "Minimum video height",
+          "default": "0"
+        },
+        "editors_choice": {
+          "type": "boolean",
+          "text": "Choose Editor's Choice awarded videos here",
+          "default": "false",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "safesearch": {
+          "type": "boolean",
+          "text": "Only family-friendly videos flag",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "order": {
+          "type": "string",
+          "text": "Order results by specified criteria"
+        },
+        "page": {
+          "type": "number",
+          "text": "Select page number for paginated results"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Page results: determine number per page"
+        },
+        "callback": {
+          "type": "string",
+          "text": "SONP callback function name"
+        },
+        "pretty": {
+          "type": "boolean",
+          "text": "Not for production: Indent JSON output",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Search Videos",
+        "rate_limit": [],
+        "api_endpoint": "https://pixabay.com/api/videos",
+        "alias_endpoint": "/pixabay/api/videos",
+        "api_ref": "https://pixabay.com/api/docs/#api_search_videos"
+      },
+      "auth": {
+        "queryMap": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

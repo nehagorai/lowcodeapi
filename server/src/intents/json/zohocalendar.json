@@ -1,0 +1,1175 @@
+{
+  "app": {
+    "title": "zohocalendar API",
+    "description": "",
+    "api_base": "/zohocalendar",
+    "copyright": "",
+    "copyright_year": "",
+    "contact_email": ""
+  },
+  "category": {
+    "All": ""
+  },
+  "routes": {
+    "activity_logs": {
+      "provider_intent": "activity_logs",
+      "provider_alias_intent": "/api/v1/organization/activity",
+      "text": "Activity logs",
+      "category": "Activity logs",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This API is used to get the activity logs of the user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/organization/activity",
+        "alias_endpoint": "/zohocalendar/api/v1/organization/activity",
+        "api_ref": "https://www.zoho.com/calendar/help/api/get-activity-logs.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.activity.ALL",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_calendar_list": {
+      "provider_intent": "get_calendar_list",
+      "provider_alias_intent": "/api/v1/calendars",
+      "text": "Get calendar list",
+      "category": "Calendars API",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This API is used to get the list of all calendars or list of calendars based on a specific category/entity of a given user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/calendars",
+        "alias_endpoint": "/zohocalendar/api/v1/calendars",
+        "api_ref": "https://www.zoho.com/calendar/help/api/get-calendar-list.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.calendar.ALL,\nZohoCalendar.calendar.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_calendar_details": {
+      "provider_intent": "get_calendar_details",
+      "provider_alias_intent": "/api/v1/calendars/calendar_uid|default|primary",
+      "text": "Get calendar details",
+      "category": "Calendars API",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "CALENDAR_UID": {
+          "type": "string",
+          "text": "If you want to get the details of a particular calendar using calendar UID",
+          "required": true
+        },
+        "default": {
+          "type": "string",
+          "text": " If you want to get the default calendar details"
+        },
+        "primary": {
+          "type": "string",
+          "text": "If you want to get the default calendar details"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "CALENDAR_UID": {
+          "type": "string",
+          "text": "If you want to get the details of a particular calendar using calendar UID",
+          "required": true
+        },
+        "default": {
+          "type": "string",
+          "text": " If you want to get the default calendar details"
+        },
+        "primary": {
+          "type": "string",
+          "text": "If you want to get the default calendar details"
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This API retrieves the details of a particular calendar using the Calendar UID",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/calendars/<CALENDAR_UID>|<default>|<primary>",
+        "alias_endpoint": "/zohocalendar/api/v1/calendars/calendar_uid|default|primary",
+        "api_ref": "https://www.zoho.com/calendar/help/api/get-calendar-details.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.calendar.ALL",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "create_new_calendar": {
+      "provider_intent": "create_new_calendar",
+      "provider_alias_intent": "/api/v1/calendars",
+      "text": "Create new calendar",
+      "category": "Calendars API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This API helps in creating a new calendar",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/calendars",
+        "alias_endpoint": "/zohocalendar/api/v1/calendars",
+        "api_ref": "https://www.zoho.com/calendar/help/api/post-create-calendar.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.calendar.ALL",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "update_calendar": {
+      "provider_intent": "update_calendar",
+      "provider_alias_intent": "/api/v1/calendars/calendaruid",
+      "text": "Update calendar",
+      "category": "Calendars API",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This API is used to update an existing calendar",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/calendars/<calendaruid>",
+        "alias_endpoint": "/zohocalendar/api/v1/calendars/calendaruid",
+        "api_ref": "https://www.zoho.com/calendar/help/api/put-update-calendar.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.calendar.ALL",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "delete_calendar": {
+      "provider_intent": "delete_calendar",
+      "provider_alias_intent": "/api/v1/calendars/calendaruid",
+      "text": "Delete calendar",
+      "category": "Calendars API",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "calendaruid": {
+          "type": "string",
+          "text": "Calendar Identifier deletes the calendar based on the calendar identifier",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This API is used to delete a calendar using the calendar identifier",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/calendars/<calendaruid>",
+        "alias_endpoint": "/zohocalendar/api/v1/calendars/calendaruid",
+        "api_ref": "https://www.zoho.com/calendar/help/api/delete-calendar.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.calendar.ALL",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_events_list": {
+      "provider_intent": "get_events_list",
+      "provider_alias_intent": "/api/v1/calendars/calendar_uid/events",
+      "text": "Get events list",
+      "category": "Events API",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This API is used to get a list of all the events in a particular calendar of the user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/calendars/<CALENDAR_UID>/events",
+        "alias_endpoint": "/zohocalendar/api/v1/calendars/calendar_uid/events",
+        "api_ref": "https://www.zoho.com/calendar/help/api/get-events-list.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.calendar.ALL,\nZohoCalendar.calendar.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_event_details": {
+      "provider_intent": "get_event_details",
+      "provider_alias_intent": "/api/v1/calendars/calendar_uid/events/event_uid",
+      "text": "Get event details",
+      "category": "Events API",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "{\n  \"recurrenceid\"": {
+          "type": "{\n   \"type\""
+        },
+        "\"text\"": {
+          "type": "\"Recurrence id in ics format\""
+        },
+        "\"required\"": {
+          "type": "true\n   }\n}"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This API is used to get the event details of a specific event in the user's calendar",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/calendars/<CALENDAR_UID>/events/<EVENT_UID>",
+        "alias_endpoint": "/zohocalendar/api/v1/calendars/calendar_uid/events/event_uid",
+        "api_ref": "https://www.zoho.com/calendar/help/api/get-event-details.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.event.ALL",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_attachment_details": {
+      "provider_intent": "get_attachment_details",
+      "provider_alias_intent": "/api/v1/calendars/cal_uid/events/event_uid/attachment/file_id",
+      "text": "Get attachment details",
+      "category": "Events API",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This API is used to get the details of a specific attachment in a particular event",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/calendars/<CAL_UID>/events/<EVENT_UID>/attachment/<FILE_ID>",
+        "alias_endpoint": "/zohocalendar/api/v1/calendars/cal_uid/events/event_uid/attachment/file_id",
+        "api_ref": "https://www.zoho.com/calendar/help/api/get-attachment-details.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.event.ALL",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_group_attendees_details": {
+      "provider_intent": "get_group_attendees_details",
+      "provider_alias_intent": "/api/v1/calendars/calendar_uid/events/event_uid/groupattendeestatus",
+      "text": "Get group attendees details",
+      "category": "Events API",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This API is used to get the group attendees details of a specific event in the user's calendar",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/calendars/<CALENDAR_UID>/events/<EVENT_UID>/groupattendeestatus",
+        "alias_endpoint": "/zohocalendar/api/v1/calendars/calendar_uid/events/event_uid/groupattendeestatus",
+        "api_ref": "https://www.zoho.com/calendar/help/api/get-group-attendees-details.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.event.ALL",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_event_by_instance": {
+      "provider_intent": "get_event_by_instance",
+      "provider_alias_intent": "/api/v1/calendars/calendar_uid/events/event_uid/byinstance",
+      "text": "Get Event By Instance",
+      "category": "Events API",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This API is used to get all instances of a particular repeat event",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/calendars/<CALENDAR_UID>/events/<EVENT_UID>/byinstance",
+        "alias_endpoint": "/zohocalendar/api/v1/calendars/calendar_uid/events/event_uid/byinstance",
+        "api_ref": "https://www.zoho.com/calendar/help/api/get-event-by-instance.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.event.ALL",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "create_a_new_event": {
+      "provider_intent": "create_a_new_event",
+      "provider_alias_intent": "/api/v1/calendars/calendar_uid/events",
+      "text": "Create a new event",
+      "category": "Events API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This API is used to create a new event in a user's calendar",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/calendars/<CALENDAR_UID>/events",
+        "alias_endpoint": "/zohocalendar/api/v1/calendars/calendar_uid/events",
+        "api_ref": "https://www.zoho.com/calendar/help/api/post-create-event.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.event.ALL",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "attach_file": {
+      "provider_intent": "attach_file",
+      "provider_alias_intent": "/api/v1/attachment",
+      "text": "Attach file",
+      "category": "Events API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This API is used to attach a file to an event in the calendar",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/attachment",
+        "alias_endpoint": "/zohocalendar/api/v1/attachment",
+        "api_ref": "https://www.zoho.com/calendar/help/api/attach-file.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.event.ALL",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "update_event": {
+      "provider_intent": "update_event",
+      "provider_alias_intent": "/api/v1/calendars/calendar_uid/events/event_uid",
+      "text": "Update event",
+      "category": "Events API",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This API is used to update the details of an existing event in a user's calendar",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/calendars/<CALENDAR_UID>/events/<EVENT_UID>",
+        "alias_endpoint": "/zohocalendar/api/v1/calendars/calendar_uid/events/event_uid",
+        "api_ref": "https://www.zoho.com/calendar/help/api/put-update-event.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.event.ALL",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "delete_event": {
+      "provider_intent": "delete_event",
+      "provider_alias_intent": "/api/v1/calendars/calendar_uid/events/event_uid",
+      "text": "Delete event",
+      "category": "Events API",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This API is used to delete an event from a user's calendar",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/calendars/<CALENDAR_UID>/events/<EVENT_UID>",
+        "alias_endpoint": "/zohocalendar/api/v1/calendars/calendar_uid/events/event_uid",
+        "api_ref": "https://www.zoho.com/calendar/help/api/delete-event.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.event.ALL",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "move_event": {
+      "provider_intent": "move_event",
+      "provider_alias_intent": "/api/v1/calendars/calendaruid/events/eventuid",
+      "text": "Move event",
+      "category": "Events API",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This API is used to move event from one calendar to other",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/calendars/<calendaruid>/events/<eventuid>",
+        "alias_endpoint": "/zohocalendar/api/v1/calendars/calendaruid/events/eventuid",
+        "api_ref": "https://www.zoho.com/calendar/help/api/move-event.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.event.ALL",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "delete_attachment": {
+      "provider_intent": "delete_attachment",
+      "provider_alias_intent": "/api/v1/calendars/calendar_uid/events/event_uid",
+      "text": "Delete attachment",
+      "category": "Events API",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This API is used to delete attachment from an event.",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/calendars/<CALENDAR_UID>/events/<EVENT_UID>",
+        "alias_endpoint": "/zohocalendar/api/v1/calendars/calendar_uid/events/event_uid",
+        "api_ref": "https://www.zoho.com/calendar/help/api/delete-attachment.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.event.ALL",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_user's_free/_busy_details": {
+      "provider_intent": "get_user's_free/_busy_details",
+      "provider_alias_intent": "/api/v1/calendars/freebusy",
+      "text": "Get user's free/ busy details",
+      "category": "Free/ Busy API",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This API is used to get the free/busy details of the user from all the calendars",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/calendars/freebusy",
+        "alias_endpoint": "/zohocalendar/api/v1/calendars/freebusy",
+        "api_ref": "https://www.zoho.com/calendar/help/api/get-user-freebusy-details.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.freebusy.ALL",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "_get_group_calendar_list": {
+      "provider_intent": "_get_group_calendar_list",
+      "provider_alias_intent": "/api/v1/groups",
+      "text": "Get Group Calendar list",
+      "category": "Groups API",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To get the list of all group calendars",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/groups",
+        "alias_endpoint": "/zohocalendar/api/v1/groups",
+        "api_ref": "https://www.zoho.com/calendar/help/api/get-group-calendar-list.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.group.ALL",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_notification_details": {
+      "provider_intent": "get_notification_details",
+      "provider_alias_intent": "/api/v1/notification",
+      "text": "Get notification details",
+      "category": "Notification API",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This API is used to get the notification details of a particular user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/notification",
+        "alias_endpoint": "/zohocalendar/api/v1/notification",
+        "api_ref": "https://www.zoho.com/calendar/help/api/get-notification-details.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.notification.ALL",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "update_notification_details": {
+      "provider_intent": "update_notification_details",
+      "provider_alias_intent": "/api/v1/notification",
+      "text": "Update notification details",
+      "category": "Notification API",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This API is used to update the notification details of a particular user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/notification",
+        "alias_endpoint": "/zohocalendar/api/v1/notification",
+        "api_ref": "https://www.zoho.com/calendar/help/api/put-update-notification-details.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.notification.ALL",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_event_list_through_search": {
+      "provider_intent": "get_event_list_through_search",
+      "provider_alias_intent": "/api/v1/calendars/calendaruid/search",
+      "text": "Get event list through search",
+      "category": "Search API",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This API is used to get the list of events through search",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/calendars/<calendaruid>/search",
+        "alias_endpoint": "/zohocalendar/api/v1/calendars/calendaruid/search",
+        "api_ref": "https://www.zoho.com/calendar/help/api/get-event-list-through-search.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.search.ALL",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_event_through_search": {
+      "provider_intent": "get_event_through_search",
+      "provider_alias_intent": "/api/v1/calendars/calendaruid/search",
+      "text": "Get event through search",
+      "category": "Search API",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This API is used to get a particular event from a calendar through search",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/calendars/<calendaruid>/search",
+        "alias_endpoint": "/zohocalendar/api/v1/calendars/calendaruid/search",
+        "api_ref": "https://www.zoho.com/calendar/help/api/get-event-through-search.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.search.ALL",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_calendar_settings": {
+      "provider_intent": "get_calendar_settings",
+      "provider_alias_intent": "/api/v1/settings",
+      "text": "Get calendar settings",
+      "category": "Settings API",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This API is used to get the calendar settings of the user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/settings",
+        "alias_endpoint": "/zohocalendar/api/v1/settings",
+        "api_ref": "https://www.zoho.com/calendar/help/api/get-calendar-settings.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.settings.ALL",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "update_calendar_settings": {
+      "provider_intent": "update_calendar_settings",
+      "provider_alias_intent": "/api/v1/settings",
+      "text": "Update calendar settings",
+      "category": "Settings API",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This API is used to update the calendar settings of the user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/settings",
+        "alias_endpoint": "/zohocalendar/api/v1/settings",
+        "api_ref": "https://www.zoho.com/calendar/help/api/put-update-calendar-settings.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.settings.ALL",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_shared_calendar_details": {
+      "provider_intent": "get_shared_calendar_details",
+      "provider_alias_intent": "/api/v1/calendars/calendar_uid/share",
+      "text": "Get shared calendar details",
+      "category": "Share API",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "calendaruid": {
+          "type": "string",
+          "text": "Calendar unique identifier",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "calendaruid": {
+          "type": "string",
+          "text": "Calendar unique identifier",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This API is used to get the calendar details of a calendar that has been shared with another user.",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/calendars/<CALENDAR_UID>/share",
+        "alias_endpoint": "/zohocalendar/api/v1/calendars/calendar_uid/share",
+        "api_ref": "https://www.zoho.com/calendar/help/api/get-shared-calendar-details.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.calendar.ALL,\nZohoCalendar.calendar.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "share_calendar": {
+      "provider_intent": "share_calendar",
+      "provider_alias_intent": "/api/v1/calendars/calendar_uid/share",
+      "text": "Share calendar",
+      "category": "Share API",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "calendaruid": {
+          "type": "string",
+          "text": "Calendar unique identifier",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "calendaruid": {
+          "type": "string",
+          "text": "Calendar unique identifier",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This API is used to update the calendar that is shared with another user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/calendars/<CALENDAR_UID>/share",
+        "alias_endpoint": "/zohocalendar/api/v1/calendars/calendar_uid/share",
+        "api_ref": "https://www.zoho.com/calendar/help/api/put-share-calendar.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.calendar.ALL",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "create_event_using_smart_add": {
+      "provider_intent": "create_event_using_smart_add",
+      "provider_alias_intent": "/api/v1/smartadd",
+      "text": "Create event using Smart Add",
+      "category": "Smart Add API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This API is used to create a new event in a particular calendar using Smart Add",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/smartadd",
+        "alias_endpoint": "/zohocalendar/api/v1/smartadd",
+        "api_ref": "https://www.zoho.com/calendar/help/api/post-create-event-smart-add.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.event.ALL",
+      "subdomain": {},
+      "payload_type": ""
+    }
+  }
+}

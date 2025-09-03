@@ -1,0 +1,2266 @@
+{
+  "routes": {
+    "googlecalendar__calendar__v3__calendars__calendarid__acl__ruleid___put": {
+      "provider_intent": "googlecalendar__calendar__v3__calendars__calendarid__acl__ruleid___put",
+      "provider_alias_intent": "/calendar/v3/calendars/calendarid/acl/ruleid",
+      "text": "Updates an access control rule.",
+      "category": "ACL",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "ruleId": {
+          "type": "string",
+          "text": "ACL rule identifier",
+          "required": true
+        },
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        },
+        "sendNotifications": {
+          "type": "boolean",
+          "text": "Whether to send notifications about the calendar sharing change",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "ruleId": {
+          "type": "string",
+          "text": "ACL rule identifier",
+          "required": true
+        },
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Updates an access control rule.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/calendars/{calendarId}/acl/{ruleId}",
+        "alias_endpoint": "/googlecalendar/calendar/v3/calendars/calendarid/acl/ruleid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__calendars__calendarid__acl__ruleid___delete": {
+      "provider_intent": "googlecalendar__calendar__v3__calendars__calendarid__acl__ruleid___delete",
+      "provider_alias_intent": "/calendar/v3/calendars/calendarid/acl/ruleid",
+      "text": "Deletes an access control rule.",
+      "category": "ACL",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "ruleId": {
+          "type": "string",
+          "text": "ACL rule identifier",
+          "required": true
+        },
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "ruleId": {
+          "type": "string",
+          "text": "ACL rule identifier",
+          "required": true
+        },
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Deletes an access control rule.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/calendars/{calendarId}/acl/{ruleId}",
+        "alias_endpoint": "/googlecalendar/calendar/v3/calendars/calendarid/acl/ruleid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__calendars__calendarid__acl___get": {
+      "provider_intent": "googlecalendar__calendar__v3__calendars__calendarid__acl___get",
+      "provider_alias_intent": "/calendar/v3/calendars/calendarid/acl",
+      "text": "Returns the rules in the access control list for the calendar.",
+      "category": "ACL",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        },
+        "pageToken": {
+          "type": "string",
+          "text": "Token specifying which result page to return"
+        },
+        "syncToken": {
+          "type": "string",
+          "text": "Token obtained from the nextSyncToken field returned on the last page of results from the previous list request"
+        },
+        "maxResults": {
+          "type": "integer",
+          "text": "Maximum number of entries returned on one result page"
+        },
+        "showDeleted": {
+          "type": "boolean",
+          "text": "Whether to include deleted ACLs in the result",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns the rules in the access control list for the calendar.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/calendars/{calendarId}/acl",
+        "alias_endpoint": "/googlecalendar/calendar/v3/calendars/calendarid/acl",
+        "api_ref": "https://developers.google.com/calendar/api/v3/reference/acl/get"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__calendars__calendarid__acl__ruleid___patch": {
+      "provider_intent": "googlecalendar__calendar__v3__calendars__calendarid__acl__ruleid___patch",
+      "provider_alias_intent": "/calendar/v3/calendars/calendarid/acl/ruleid",
+      "text": "Updates an access control rule.",
+      "category": "ACL",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "ruleId": {
+          "type": "string",
+          "text": "ACL rule identifier",
+          "required": true
+        },
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        },
+        "sendNotifications": {
+          "type": "boolean",
+          "text": "Whether to send notifications about the calendar sharing change",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "ruleId": {
+          "type": "string",
+          "text": "ACL rule identifier",
+          "required": true
+        },
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Updates an access control rule.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/calendars/{calendarId}/acl/{ruleId}",
+        "alias_endpoint": "/googlecalendar/calendar/v3/calendars/calendarid/acl/ruleid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__calendars__calendarid__acl__watch___post": {
+      "provider_intent": "googlecalendar__calendar__v3__calendars__calendarid__acl__watch___post",
+      "provider_alias_intent": "/calendar/v3/calendars/calendarid/acl/watch",
+      "text": "Watch for changes to ACL resources.",
+      "category": "ACL",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        },
+        "pageToken": {
+          "type": "string",
+          "text": "Token specifying which result page to return"
+        },
+        "maxResults": {
+          "type": "integer",
+          "text": "Maximum number of entries returned on one result page"
+        },
+        "syncToken": {
+          "type": "string",
+          "text": "Token obtained from the nextSyncToken field returned on the last page of results from the previous list request"
+        },
+        "showDeleted": {
+          "type": "boolean",
+          "text": "Whether to include deleted ACLs in the result",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Watch for changes to ACL resources.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/calendars/{calendarId}/acl/watch",
+        "alias_endpoint": "/googlecalendar/calendar/v3/calendars/calendarid/acl/watch",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__calendars__calendarid__acl__ruleid___get": {
+      "provider_intent": "googlecalendar__calendar__v3__calendars__calendarid__acl__ruleid___get",
+      "provider_alias_intent": "/calendar/v3/calendars/calendarid/acl/ruleid",
+      "text": "Returns an access control rule.",
+      "category": "ACL",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        },
+        "ruleId": {
+          "type": "string",
+          "text": "ACL rule identifier",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        },
+        "ruleId": {
+          "type": "string",
+          "text": "ACL rule identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns an access control rule.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/calendars/{calendarId}/acl/{ruleId}",
+        "alias_endpoint": "/googlecalendar/calendar/v3/calendars/calendarid/acl/ruleid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__calendars__calendarid__acl___post": {
+      "provider_intent": "googlecalendar__calendar__v3__calendars__calendarid__acl___post",
+      "provider_alias_intent": "/calendar/v3/calendars/calendarid/acl",
+      "text": "Creates an access control rule.",
+      "category": "ACL",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        },
+        "sendNotifications": {
+          "type": "boolean",
+          "text": "Whether to send notifications about the calendar sharing change",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Creates an access control rule.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/calendars/{calendarId}/acl",
+        "alias_endpoint": "/googlecalendar/calendar/v3/calendars/calendarid/acl",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__users__me__calendarlist___post": {
+      "provider_intent": "googlecalendar__calendar__v3__users__me__calendarlist___post",
+      "provider_alias_intent": "/calendar/v3/users/me/calendarlist",
+      "text": "Inserts an existing calendar into the user's calendar list.",
+      "category": "Calendar List",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "colorRgbFormat": {
+          "type": "boolean",
+          "text": "Whether to use the foregroundColor and backgroundColor fields to write the calendar colors (RGB)",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Inserts an existing calendar into the user's calendar list.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/users/me/calendarList",
+        "alias_endpoint": "/googlecalendar/calendar/v3/users/me/calendarlist",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__users__me__calendarlist__calendarid___patch": {
+      "provider_intent": "googlecalendar__calendar__v3__users__me__calendarlist__calendarid___patch",
+      "provider_alias_intent": "/calendar/v3/users/me/calendarlist/calendarid",
+      "text": "Updates an existing calendar on the user's calendar list.",
+      "category": "Calendar List",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        },
+        "colorRgbFormat": {
+          "type": "boolean",
+          "text": "Whether to use the foregroundColor and backgroundColor fields to write the calendar colors (RGB)",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Updates an existing calendar on the user's calendar list.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/users/me/calendarList/{calendarId}",
+        "alias_endpoint": "/googlecalendar/calendar/v3/users/me/calendarlist/calendarid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__users__me__calendarlist__calendarid___put": {
+      "provider_intent": "googlecalendar__calendar__v3__users__me__calendarlist__calendarid___put",
+      "provider_alias_intent": "/calendar/v3/users/me/calendarlist/calendarid",
+      "text": "Updates an existing calendar on the user's calendar list.",
+      "category": "Calendar List",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        },
+        "colorRgbFormat": {
+          "type": "boolean",
+          "text": "Whether to use the foregroundColor and backgroundColor fields to write the calendar colors (RGB)",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Updates an existing calendar on the user's calendar list.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/users/me/calendarList/{calendarId}",
+        "alias_endpoint": "/googlecalendar/calendar/v3/users/me/calendarlist/calendarid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__users__me__calendarlist__calendarid___delete": {
+      "provider_intent": "googlecalendar__calendar__v3__users__me__calendarlist__calendarid___delete",
+      "provider_alias_intent": "/calendar/v3/users/me/calendarlist/calendarid",
+      "text": "Removes a calendar from the user's calendar list.",
+      "category": "Calendar List",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Removes a calendar from the user's calendar list.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/users/me/calendarList/{calendarId}",
+        "alias_endpoint": "/googlecalendar/calendar/v3/users/me/calendarlist/calendarid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__users__me__calendarlist__calendarid___get": {
+      "provider_intent": "googlecalendar__calendar__v3__users__me__calendarlist__calendarid___get",
+      "provider_alias_intent": "/calendar/v3/users/me/calendarlist/calendarid",
+      "text": "Returns a calendar from the user's calendar list.",
+      "category": "Calendar List",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns a calendar from the user's calendar list.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/users/me/calendarList/{calendarId}",
+        "alias_endpoint": "/googlecalendar/calendar/v3/users/me/calendarlist/calendarid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__users__me__calendarlist__watch___post": {
+      "provider_intent": "googlecalendar__calendar__v3__users__me__calendarlist__watch___post",
+      "provider_alias_intent": "/calendar/v3/users/me/calendarlist/watch",
+      "text": "Watch for changes to CalendarList resources.",
+      "category": "Calendar List",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "minAccessRole": {
+          "type": "string",
+          "text": "The minimum access role for the user in the returned entries"
+        },
+        "showHidden": {
+          "type": "boolean",
+          "text": "Whether to show hidden entries",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "maxResults": {
+          "type": "integer",
+          "text": "Maximum number of entries returned on one result page"
+        },
+        "syncToken": {
+          "type": "string",
+          "text": "Token obtained from the nextSyncToken field returned on the last page of results from the previous list request"
+        },
+        "pageToken": {
+          "type": "string",
+          "text": "Token specifying which result page to return"
+        },
+        "showDeleted": {
+          "type": "boolean",
+          "text": "Whether to include deleted calendar list entries in the result",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Watch for changes to CalendarList resources.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/users/me/calendarList/watch",
+        "alias_endpoint": "/googlecalendar/calendar/v3/users/me/calendarlist/watch",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__users__me__calendarlist___get": {
+      "provider_intent": "googlecalendar__calendar__v3__users__me__calendarlist___get",
+      "provider_alias_intent": "/calendar/v3/users/me/calendarlist",
+      "text": "Returns the calendars on the user's calendar list.",
+      "category": "Calendar List",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "maxResults": {
+          "type": "integer",
+          "text": "Maximum number of entries returned on one result page"
+        },
+        "showDeleted": {
+          "type": "boolean",
+          "text": "Whether to include deleted calendar list entries in the result",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "pageToken": {
+          "type": "string",
+          "text": "Token specifying which result page to return"
+        },
+        "syncToken": {
+          "type": "string",
+          "text": "Token obtained from the nextSyncToken field returned on the last page of results from the previous list request"
+        },
+        "showHidden": {
+          "type": "boolean",
+          "text": "Whether to show hidden entries",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "minAccessRole": {
+          "type": "string",
+          "text": "The minimum access role for the user in the returned entries"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns the calendars on the user's calendar list.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/users/me/calendarList",
+        "alias_endpoint": "/googlecalendar/calendar/v3/users/me/calendarlist",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__calendars__calendarid___patch": {
+      "provider_intent": "googlecalendar__calendar__v3__calendars__calendarid___patch",
+      "provider_alias_intent": "/calendar/v3/calendars/calendarid",
+      "text": "Updates metadata for a calendar.",
+      "category": "Calendars",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Updates metadata for a calendar.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/calendars/{calendarId}",
+        "alias_endpoint": "/googlecalendar/calendar/v3/calendars/calendarid",
+        "api_ref": "https://developers.google.com/calendar/api/v3/reference/calendars/patch"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__calendars___post": {
+      "provider_intent": "googlecalendar__calendar__v3__calendars___post",
+      "provider_alias_intent": "/calendar/v3/calendars",
+      "text": "Creates a secondary calendar.",
+      "category": "Calendars",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Creates a secondary calendar.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/calendars",
+        "alias_endpoint": "/googlecalendar/calendar/v3/calendars",
+        "api_ref": "https://developers.google.com/calendar/api/v3/reference/calendars/insert"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__calendars__calendarid___delete": {
+      "provider_intent": "googlecalendar__calendar__v3__calendars__calendarid___delete",
+      "provider_alias_intent": "/calendar/v3/calendars/calendarid",
+      "text": "Deletes a secondary calendar.",
+      "category": "Calendars",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Deletes a secondary calendar.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/calendars/{calendarId}",
+        "alias_endpoint": "/googlecalendar/calendar/v3/calendars/calendarid",
+        "api_ref": "https://developers.google.com/calendar/api/v3/reference/calendars/delete"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__calendars__calendarid___get": {
+      "provider_intent": "googlecalendar__calendar__v3__calendars__calendarid___get",
+      "provider_alias_intent": "/calendar/v3/calendars/calendarid",
+      "text": "Returns metadata for a calendar.",
+      "category": "Calendars",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns metadata for a calendar.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/calendars/{calendarId}",
+        "alias_endpoint": "/googlecalendar/calendar/v3/calendars/calendarid",
+        "api_ref": "https://developers.google.com/calendar/api/v3/reference/calendars/get"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__calendars__calendarid___put": {
+      "provider_intent": "googlecalendar__calendar__v3__calendars__calendarid___put",
+      "provider_alias_intent": "/calendar/v3/calendars/calendarid",
+      "text": "Updates metadata for a calendar.",
+      "category": "Calendars",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Updates metadata for a calendar.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/calendars/{calendarId}",
+        "alias_endpoint": "/googlecalendar/calendar/v3/calendars/calendarid",
+        "api_ref": "https://developers.google.com/calendar/api/v3/reference/calendars/update"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__channels__stop___post": {
+      "provider_intent": "googlecalendar__calendar__v3__channels__stop___post",
+      "provider_alias_intent": "/calendar/v3/channels/stop",
+      "text": "Stop watching resources through this channel.",
+      "category": "Channels",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Stop watching resources through this channel.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/channels/stop",
+        "alias_endpoint": "/googlecalendar/calendar/v3/channels/stop",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__colors___get": {
+      "provider_intent": "googlecalendar__calendar__v3__colors___get",
+      "provider_alias_intent": "/calendar/v3/colors",
+      "text": "Returns the color definitions for calendars and events.",
+      "category": "Colors",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns the color definitions for calendars and events.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/colors",
+        "alias_endpoint": "/googlecalendar/calendar/v3/colors",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__calendars__calendarid__events__eventid___put": {
+      "provider_intent": "googlecalendar__calendar__v3__calendars__calendarid__events__eventid___put",
+      "provider_alias_intent": "/calendar/v3/calendars/calendarid/events/eventid",
+      "text": "Updates an event.",
+      "category": "Events",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        },
+        "eventId": {
+          "type": "string",
+          "text": "Event identifier",
+          "required": true
+        },
+        "alwaysIncludeEmail": {
+          "type": "boolean",
+          "text": "Deprecated and ignored",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "conferenceDataVersion": {
+          "type": "integer",
+          "text": "Version number of conference data supported by the API client"
+        },
+        "sendNotifications": {
+          "type": "boolean",
+          "text": "Deprecated",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "supportsAttachments": {
+          "type": "boolean",
+          "text": "Whether API client performing operation supports event attachments",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "sendUpdates": {
+          "type": "string",
+          "text": "Guests who should receive notifications about the event update (for example title changes"
+        },
+        "etc": {
+          "type": ""
+        },
+        "maxAttendees": {
+          "type": "integer",
+          "text": "The maximum number of attendees to include in the response"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        },
+        "eventId": {
+          "type": "string",
+          "text": "Event identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Updates an event.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/calendars/{calendarId}/events/{eventId}",
+        "alias_endpoint": "/googlecalendar/calendar/v3/calendars/calendarid/events/eventid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__calendars__calendarid__events__eventid___delete": {
+      "provider_intent": "googlecalendar__calendar__v3__calendars__calendarid__events__eventid___delete",
+      "provider_alias_intent": "/calendar/v3/calendars/calendarid/events/eventid",
+      "text": "Deletes an event.",
+      "category": "Events",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "eventId": {
+          "type": "string",
+          "text": "Event identifier",
+          "required": true
+        },
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        },
+        "sendUpdates": {
+          "type": "string",
+          "text": "Guests who should receive notifications about the deletion of the event"
+        },
+        "sendNotifications": {
+          "type": "boolean",
+          "text": "Deprecated",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "eventId": {
+          "type": "string",
+          "text": "Event identifier",
+          "required": true
+        },
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Deletes an event.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/calendars/{calendarId}/events/{eventId}",
+        "alias_endpoint": "/googlecalendar/calendar/v3/calendars/calendarid/events/eventid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__calendars__calendarid__events__eventid___patch": {
+      "provider_intent": "googlecalendar__calendar__v3__calendars__calendarid__events__eventid___patch",
+      "provider_alias_intent": "/calendar/v3/calendars/calendarid/events/eventid",
+      "text": "Updates an event.",
+      "category": "Events",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        },
+        "eventId": {
+          "type": "string",
+          "text": "Event identifier",
+          "required": true
+        },
+        "alwaysIncludeEmail": {
+          "type": "boolean",
+          "text": "Deprecated and ignored",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "sendUpdates": {
+          "type": "string",
+          "text": "Guests who should receive notifications about the event update (for example title changes"
+        },
+        "etc": {
+          "type": ""
+        },
+        "conferenceDataVersion": {
+          "type": "integer",
+          "text": "Version number of conference data supported by the API client"
+        },
+        "sendNotifications": {
+          "type": "boolean",
+          "text": "Deprecated",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "maxAttendees": {
+          "type": "integer",
+          "text": "The maximum number of attendees to include in the response"
+        },
+        "supportsAttachments": {
+          "type": "boolean",
+          "text": "Whether API client performing operation supports event attachments",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        },
+        "eventId": {
+          "type": "string",
+          "text": "Event identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Updates an event.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/calendars/{calendarId}/events/{eventId}",
+        "alias_endpoint": "/googlecalendar/calendar/v3/calendars/calendarid/events/eventid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__calendars__calendarid__events___get": {
+      "provider_intent": "googlecalendar__calendar__v3__calendars__calendarid__events___get",
+      "provider_alias_intent": "/calendar/v3/calendars/calendarid/events",
+      "text": "Returns events on the specified calendar.",
+      "category": "Events",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        },
+        "alwaysIncludeEmail": {
+          "type": "boolean",
+          "text": "Deprecated and ignored",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "timeZone": {
+          "type": "string",
+          "text": "Time zone used in the response"
+        },
+        "singleEvents": {
+          "type": "boolean",
+          "text": "Whether to expand recurring events into instances and only return single one-off events and instances of recurring events but not the underlying recurring events themselves",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "q": {
+          "type": "string",
+          "text": "Free text search terms to find events that match these terms in the following fields",
+          "enum": [
+            "summary description"
+          ]
+        },
+        "location": {
+          "type": ""
+        },
+        "attendee's displayName": {
+          "type": ""
+        },
+        "attendee's email": {
+          "type": ""
+        },
+        "iCalUID": {
+          "type": "string",
+          "text": "Specifies an event ID in the iCalendar format to be provided in the response"
+        },
+        "sharedExtendedProperty": {
+          "type": "string",
+          "text": "Extended properties constraint specified as propertyName=value"
+        },
+        "timeMin": {
+          "type": "string",
+          "text": "Lower bound (exclusive) for an event's end time to filter by"
+        },
+        "pageToken": {
+          "type": "string",
+          "text": "Token specifying which result page to return"
+        },
+        "maxResults": {
+          "type": "integer",
+          "text": "Maximum number of events returned on one result page"
+        },
+        "updatedMin": {
+          "type": "string",
+          "text": "Lower bound for an event's last modification time (as a RFC3339 timestamp) to filter by"
+        },
+        "maxAttendees": {
+          "type": "integer",
+          "text": "The maximum number of attendees to include in the response"
+        },
+        "privateExtendedProperty": {
+          "type": "string",
+          "text": "Extended properties constraint specified as propertyName=value"
+        },
+        "showHiddenInvitations": {
+          "type": "boolean",
+          "text": "Whether to include hidden invitations in the result",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "eventTypes": {
+          "type": "string",
+          "text": "Event types to return"
+        },
+        "showDeleted": {
+          "type": "boolean",
+          "text": "Whether to include deleted events (with status equals \"cancelled\") in the result",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "orderBy": {
+          "type": "string",
+          "text": "The order of the events returned in the result"
+        },
+        "timeMax": {
+          "type": "string",
+          "text": "Upper bound (exclusive) for an event's start time to filter by"
+        },
+        "syncToken": {
+          "type": "string",
+          "text": "Token obtained from the nextSyncToken field returned on the last page of results from the previous list request"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns events on the specified calendar.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/calendars/{calendarId}/events",
+        "alias_endpoint": "/googlecalendar/calendar/v3/calendars/calendarid/events",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__calendars__calendarid__events___post": {
+      "provider_intent": "googlecalendar__calendar__v3__calendars__calendarid__events___post",
+      "provider_alias_intent": "/calendar/v3/calendars/calendarid/events",
+      "text": "Creates an event.",
+      "category": "Events",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        },
+        "sendUpdates": {
+          "type": "string",
+          "text": "Whether to send notifications about the creation of the new event"
+        },
+        "sendNotifications": {
+          "type": "boolean",
+          "text": "Deprecated",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "maxAttendees": {
+          "type": "integer",
+          "text": "The maximum number of attendees to include in the response"
+        },
+        "conferenceDataVersion": {
+          "type": "integer",
+          "text": "Version number of conference data supported by the API client"
+        },
+        "supportsAttachments": {
+          "type": "boolean",
+          "text": "Whether API client performing operation supports event attachments",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Creates an event.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/calendars/{calendarId}/events",
+        "alias_endpoint": "/googlecalendar/calendar/v3/calendars/calendarid/events",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__calendars__calendarid__events__import___post": {
+      "provider_intent": "googlecalendar__calendar__v3__calendars__calendarid__events__import___post",
+      "provider_alias_intent": "/calendar/v3/calendars/calendarid/events/import",
+      "text": "Imports an event.",
+      "category": "Events",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        },
+        "supportsAttachments": {
+          "type": "boolean",
+          "text": "Whether API client performing operation supports event attachments",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "conferenceDataVersion": {
+          "type": "integer",
+          "text": "Version number of conference data supported by the API client"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Imports an event.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/calendars/{calendarId}/events/import",
+        "alias_endpoint": "/googlecalendar/calendar/v3/calendars/calendarid/events/import",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__calendars__calendarid__events__eventid__instances___get": {
+      "provider_intent": "googlecalendar__calendar__v3__calendars__calendarid__events__eventid__instances___get",
+      "provider_alias_intent": "/calendar/v3/calendars/calendarid/events/eventid/instances",
+      "text": "Returns instances of the specified recurring event.",
+      "category": "Events",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        },
+        "eventId": {
+          "type": "string",
+          "text": "Recurring event identifier",
+          "required": true
+        },
+        "originalStart": {
+          "type": "string",
+          "text": "The original start time of the instance in the result"
+        },
+        "timeMax": {
+          "type": "string",
+          "text": "Upper bound (exclusive) for an event's start time to filter by"
+        },
+        "maxAttendees": {
+          "type": "integer",
+          "text": "The maximum number of attendees to include in the response"
+        },
+        "alwaysIncludeEmail": {
+          "type": "boolean",
+          "text": "Deprecated and ignored",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "pageToken": {
+          "type": "string",
+          "text": "Token specifying which result page to return"
+        },
+        "showDeleted": {
+          "type": "boolean",
+          "text": "Whether to include deleted events (with status equals \"cancelled\") in the result",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "timeMin": {
+          "type": "string",
+          "text": "Lower bound (inclusive) for an event's end time to filter by"
+        },
+        "maxResults": {
+          "type": "integer",
+          "text": "Maximum number of events returned on one result page"
+        },
+        "timeZone": {
+          "type": "string",
+          "text": "Time zone used in the response"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        },
+        "eventId": {
+          "type": "string",
+          "text": "Recurring event identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns instances of the specified recurring event.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/calendars/{calendarId}/events/{eventId}/instances",
+        "alias_endpoint": "/googlecalendar/calendar/v3/calendars/calendarid/events/eventid/instances",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__calendars__calendarid__events__eventid__move___post": {
+      "provider_intent": "googlecalendar__calendar__v3__calendars__calendarid__events__eventid__move___post",
+      "provider_alias_intent": "/calendar/v3/calendars/calendarid/events/eventid/move",
+      "text": "Moves an event to another calendar i.",
+      "category": "Events",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "eventId": {
+          "type": "string",
+          "text": "Event identifier",
+          "required": true
+        },
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier of the source calendar where the event currently is on",
+          "required": true
+        },
+        "destination": {
+          "type": "string",
+          "text": "Calendar identifier of the target calendar where the event is to be moved to",
+          "required": true
+        },
+        "sendNotifications": {
+          "type": "boolean",
+          "text": "Deprecated",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "sendUpdates": {
+          "type": "string",
+          "text": "Guests who should receive notifications about the change of the event's organizer"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "eventId": {
+          "type": "string",
+          "text": "Event identifier",
+          "required": true
+        },
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier of the source calendar where the event currently is on",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Moves an event to another calendar i.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/calendars/{calendarId}/events/{eventId}/move",
+        "alias_endpoint": "/googlecalendar/calendar/v3/calendars/calendarid/events/eventid/move",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__calendars__calendarid__events__quickadd___post": {
+      "provider_intent": "googlecalendar__calendar__v3__calendars__calendarid__events__quickadd___post",
+      "provider_alias_intent": "/calendar/v3/calendars/calendarid/events/quickadd",
+      "text": "Creates an event based on a simple text string.",
+      "category": "Events",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        },
+        "sendNotifications": {
+          "type": "boolean",
+          "text": "Deprecated",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "text": {
+          "type": "string",
+          "text": "The text describing the event to be created",
+          "required": true
+        },
+        "sendUpdates": {
+          "type": "string",
+          "text": "Guests who should receive notifications about the creation of the new event"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Creates an event based on a simple text string.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/calendars/{calendarId}/events/quickAdd",
+        "alias_endpoint": "/googlecalendar/calendar/v3/calendars/calendarid/events/quickadd",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__calendars__calendarid__events__watch___post": {
+      "provider_intent": "googlecalendar__calendar__v3__calendars__calendarid__events__watch___post",
+      "provider_alias_intent": "/calendar/v3/calendars/calendarid/events/watch",
+      "text": "Watch for changes to Events resources.",
+      "category": "Events",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        },
+        "privateExtendedProperty": {
+          "type": "string",
+          "text": "Extended properties constraint specified as propertyName=value"
+        },
+        "q": {
+          "type": "string",
+          "text": "Free text search terms to find events that match these terms in the following fields",
+          "enum": [
+            "summary description"
+          ]
+        },
+        "location": {
+          "type": ""
+        },
+        "attendee's displayName": {
+          "type": ""
+        },
+        "attendee's email": {
+          "type": ""
+        },
+        "sharedExtendedProperty": {
+          "type": "string",
+          "text": "Extended properties constraint specified as propertyName=value"
+        },
+        "timeMax": {
+          "type": "string",
+          "text": "Upper bound (exclusive) for an event's start time to filter by"
+        },
+        "orderBy": {
+          "type": "string",
+          "text": "The order of the events returned in the result"
+        },
+        "updatedMin": {
+          "type": "string",
+          "text": "Lower bound for an event's last modification time (as a RFC3339 timestamp) to filter by"
+        },
+        "syncToken": {
+          "type": "string",
+          "text": "Token obtained from the nextSyncToken field returned on the last page of results from the previous list request"
+        },
+        "eventTypes": {
+          "type": "string",
+          "text": "Event types to return"
+        },
+        "showHiddenInvitations": {
+          "type": "boolean",
+          "text": "Whether to include hidden invitations in the result",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "iCalUID": {
+          "type": "string",
+          "text": "Specifies an event ID in the iCalendar format to be provided in the response"
+        },
+        "showDeleted": {
+          "type": "boolean",
+          "text": "Whether to include deleted events (with status equals \"cancelled\") in the result",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "timeZone": {
+          "type": "string",
+          "text": "Time zone used in the response"
+        },
+        "maxAttendees": {
+          "type": "integer",
+          "text": "The maximum number of attendees to include in the response"
+        },
+        "alwaysIncludeEmail": {
+          "type": "boolean",
+          "text": "Deprecated and ignored",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "timeMin": {
+          "type": "string",
+          "text": "Lower bound (exclusive) for an event's end time to filter by"
+        },
+        "pageToken": {
+          "type": "string",
+          "text": "Token specifying which result page to return"
+        },
+        "singleEvents": {
+          "type": "boolean",
+          "text": "Whether to expand recurring events into instances and only return single one-off events and instances of recurring events but not the underlying recurring events themselves",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "maxResults": {
+          "type": "integer",
+          "text": "Maximum number of events returned on one result page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Watch for changes to Events resources.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/calendars/{calendarId}/events/watch",
+        "alias_endpoint": "/googlecalendar/calendar/v3/calendars/calendarid/events/watch",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__calendars__calendarid__events__eventid___get": {
+      "provider_intent": "googlecalendar__calendar__v3__calendars__calendarid__events__eventid___get",
+      "provider_alias_intent": "/calendar/v3/calendars/calendarid/events/eventid",
+      "text": "Returns an event based on its Google Calendar ID.",
+      "category": "Events",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "eventId": {
+          "type": "string",
+          "text": "Event identifier",
+          "required": true
+        },
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        },
+        "alwaysIncludeEmail": {
+          "type": "boolean",
+          "text": "Deprecated and ignored",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "maxAttendees": {
+          "type": "integer",
+          "text": "The maximum number of attendees to include in the response"
+        },
+        "timeZone": {
+          "type": "string",
+          "text": "Time zone used in the response"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "eventId": {
+          "type": "string",
+          "text": "Event identifier",
+          "required": true
+        },
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns an event based on its Google Calendar ID.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/calendars/{calendarId}/events/{eventId}",
+        "alias_endpoint": "/googlecalendar/calendar/v3/calendars/calendarid/events/eventid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__freebusy___post": {
+      "provider_intent": "googlecalendar__calendar__v3__freebusy___post",
+      "provider_alias_intent": "/calendar/v3/freebusy",
+      "text": "Returns free/busy information for a set of calendars.",
+      "category": "Freebusy",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns free/busy information for a set of calendars.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/freeBusy",
+        "alias_endpoint": "/googlecalendar/calendar/v3/freebusy",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__users__me__settings__watch___post": {
+      "provider_intent": "googlecalendar__calendar__v3__users__me__settings__watch___post",
+      "provider_alias_intent": "/calendar/v3/users/me/settings/watch",
+      "text": "Watch for changes to Settings resources.",
+      "category": "Settings",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "syncToken": {
+          "type": "string",
+          "text": "Token obtained from the nextSyncToken field returned on the last page of results from the previous list request"
+        },
+        "maxResults": {
+          "type": "integer",
+          "text": "Maximum number of entries returned on one result page"
+        },
+        "pageToken": {
+          "type": "string",
+          "text": "Token specifying which result page to return"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Watch for changes to Settings resources.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/users/me/settings/watch",
+        "alias_endpoint": "/googlecalendar/calendar/v3/users/me/settings/watch",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__users__me__settings__setting___get": {
+      "provider_intent": "googlecalendar__calendar__v3__users__me__settings__setting___get",
+      "provider_alias_intent": "/calendar/v3/users/me/settings/setting",
+      "text": "Returns a single user setting.",
+      "category": "Settings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "setting": {
+          "type": "string",
+          "text": "The id of the user setting",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "setting": {
+          "type": "string",
+          "text": "The id of the user setting",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns a single user setting.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/users/me/settings/{setting}",
+        "alias_endpoint": "/googlecalendar/calendar/v3/users/me/settings/setting",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__users__me__settings___get": {
+      "provider_intent": "googlecalendar__calendar__v3__users__me__settings___get",
+      "provider_alias_intent": "/calendar/v3/users/me/settings",
+      "text": "Returns all user settings for the authenticated user.",
+      "category": "Settings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "pageToken": {
+          "type": "string",
+          "text": "Token specifying which result page to return"
+        },
+        "maxResults": {
+          "type": "integer",
+          "text": "Maximum number of entries returned on one result page"
+        },
+        "syncToken": {
+          "type": "string",
+          "text": "Token obtained from the nextSyncToken field returned on the last page of results from the previous list request"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns all user settings for the authenticated user.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/users/me/settings",
+        "alias_endpoint": "/googlecalendar/calendar/v3/users/me/settings",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googlecalendar__calendar__v3__calendars__calendarid__clear___post": {
+      "provider_intent": "googlecalendar__calendar__v3__calendars__calendarid__clear___post",
+      "provider_alias_intent": "/calendar/v3/calendars/calendarid/clear",
+      "text": "Clears a primary calendar.",
+      "category": "calendars",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "calendarId": {
+          "type": "string",
+          "text": "Calendar identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Clears a primary calendar.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.googleapis.com/calendar/v3/calendars/{calendarId}/clear",
+        "alias_endpoint": "/googlecalendar/calendar/v3/calendars/calendarid/clear",
+        "api_ref": "https://developers.google.com/calendar/api/v3/reference/calendars/clear"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

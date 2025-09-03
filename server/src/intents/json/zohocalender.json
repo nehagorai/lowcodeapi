@@ -1,0 +1,132 @@
+{
+  "app": {
+    "title": "zohocalender API",
+    "description": "",
+    "api_base": "/zohocalender",
+    "copyright": "",
+    "copyright_year": "",
+    "contact_email": ""
+  },
+  "category": {
+    "All": ""
+  },
+  "routes": {
+    "get_calendar_list": {
+      "provider_intent": "get_calendar_list",
+      "provider_alias_intent": "/api/v1/calendars",
+      "text": "Get calendar list",
+      "category": "Calendars API",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "This API is used to get the list of all calendars or list of calendars based on a specific category/entity of a given user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/calendars",
+        "alias_endpoint": "/zohocalender/api/v1/calendars",
+        "api_ref": "https://www.zoho.com/calendar/help/api/get-calendar-list.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.calendar.ALL,\nZohoCalendar.calendar.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_events_list": {
+      "provider_intent": "get_events_list",
+      "provider_alias_intent": "api/v1/calendars/calendar_uid/events",
+      "text": "Get events list",
+      "category": "Events API",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "This API is used to get a list of all the events in a particular calendar of the user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}api/v1/calendars/<CALENDAR_UID>/events",
+        "alias_endpoint": "/zohocalenderapi/v1/calendars/calendar_uid/events",
+        "api_ref": "https://www.zoho.com/calendar/help/api/get-events-list.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.calendar.ALL,\nZohoCalendar.calendar.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_shared_calendar_details": {
+      "provider_intent": "get_shared_calendar_details",
+      "provider_alias_intent": "/api/v1/calendars/calendar_uid/share",
+      "text": "Get shared calendar details",
+      "category": "Share API",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "This API is used to get the calendar details of a calendar that has been shared with another user.",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/calendars/<CALENDAR_UID>/share",
+        "alias_endpoint": "/zohocalender/api/v1/calendars/calendar_uid/share",
+        "api_ref": "https://www.zoho.com/calendar/help/api/get-shared-calendar-details.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCalendar.calendar.ALL,\nZohoCalendar.calendar.READ",
+      "subdomain": {},
+      "payload_type": ""
+    }
+  }
+}

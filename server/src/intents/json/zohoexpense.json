@@ -1,0 +1,3544 @@
+{
+  "routes": {
+    "zohoexpense__expense__v1__settings__currencies___post": {
+      "provider_intent": "zohoexpense__expense__v1__settings__currencies___post",
+      "provider_alias_intent": "/expense/v1/settings/currencies",
+      "text": "Create a currency",
+      "category": "Currencies",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "currency_code": {
+          "type": "string",
+          "text": "Currency code",
+          "required": true
+        },
+        "currency_name": {
+          "type": "string",
+          "text": "Name of the currency"
+        },
+        "currency_symbol": {
+          "type": "string",
+          "text": "Symbol for the currency"
+        },
+        "price_precision": {
+          "type": "number",
+          "text": "Precise amount upto n decimal points"
+        },
+        "currency_format": {
+          "type": "string",
+          "text": "Currency format",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a currency",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/settings/currencies",
+        "alias_endpoint": "/zohoexpense/expense/v1/settings/currencies",
+        "api_ref": "https://www.zoho.com/expense/api/v1/currencies/#create-a-currency"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__settings__currencies___get": {
+      "provider_intent": "zohoexpense__expense__v1__settings__currencies___get",
+      "provider_alias_intent": "/expense/v1/settings/currencies",
+      "text": "Retrieve list of currencies",
+      "category": "Currencies",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "currency_symbol": {
+          "type": "string",
+          "text": "Symbol for the currency"
+        },
+        "price_precision": {
+          "type": "number",
+          "text": "Precise amount upto n decimal points"
+        },
+        "currency_format": {
+          "type": "string",
+          "text": "Currency format",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details of all existing currencies",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/settings/currencies",
+        "alias_endpoint": "/zohoexpense/expense/v1/settings/currencies",
+        "api_ref": "https://www.zoho.com/expense/api/v1/currencies/#retrieve-list-of-currencies"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__settings__currencies__currency_id___put": {
+      "provider_intent": "zohoexpense__expense__v1__settings__currencies__currency_id___put",
+      "provider_alias_intent": "/expense/v1/settings/currencies/currency_id",
+      "text": "Update details of a currency",
+      "category": "Currencies",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "currency_id": {
+          "type": "string",
+          "text": "Currency ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "currency_id": {
+          "type": "string",
+          "text": "Currency ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update the details of an existing currency",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/settings/currencies/{currency_id}",
+        "alias_endpoint": "/zohoexpense/expense/v1/settings/currencies/currency_id",
+        "api_ref": "https://www.zoho.com/expense/api/v1/currencies/#update-details-of-a-currency"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__settings__currencies__currency_id___get": {
+      "provider_intent": "zohoexpense__expense__v1__settings__currencies__currency_id___get",
+      "provider_alias_intent": "/expense/v1/settings/currencies/currency_id",
+      "text": "Retrieve details of a currency",
+      "category": "Currencies",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "currency_id": {
+          "type": "string",
+          "text": "Currency ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "currency_id": {
+          "type": "string",
+          "text": "Currency ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details of an existing currency",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/settings/currencies/{currency_id}",
+        "alias_endpoint": "/zohoexpense/expense/v1/settings/currencies/currency_id",
+        "api_ref": "https://www.zoho.com/expense/api/v1/currencies/#retrieve-details-of-a-currency"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__settings__currencies__currency_id___delete": {
+      "provider_intent": "zohoexpense__expense__v1__settings__currencies__currency_id___delete",
+      "provider_alias_intent": "/expense/v1/settings/currencies/currency_id",
+      "text": "Delete a currency",
+      "category": "Currencies",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "currency_id": {
+          "type": "string",
+          "text": "Currency ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "currency_id": {
+          "type": "string",
+          "text": "Currency ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete an existing currency",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/settings/currencies/{currency_id}",
+        "alias_endpoint": "/zohoexpense/expense/v1/settings/currencies/currency_id",
+        "api_ref": "https://www.zoho.com/expense/api/v1/currencies/#delete-a-currency"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__contacts___post": {
+      "provider_intent": "zohoexpense__expense__v1__contacts___post",
+      "provider_alias_intent": "/expense/v1/contacts",
+      "text": "Create a customer",
+      "category": "Customers",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "contact_name": {
+          "type": "string",
+          "text": "Name of the contact",
+          "required": true
+        },
+        "company_name": {
+          "type": "string",
+          "text": "Registered name of the company the contact represents"
+        },
+        "website": {
+          "type": "string",
+          "text": "Website of the contact"
+        },
+        "email": {
+          "type": "string",
+          "text": "Email address of the contact person"
+        },
+        "mobile": {
+          "type": "number",
+          "text": "Mobile number of the contact person"
+        },
+        "twitter": {
+          "type": "string",
+          "text": "Twitter handle of the contact person"
+        },
+        "facebook": {
+          "type": "string",
+          "text": "Facebook ID of the contact person"
+        },
+        "phone": {
+          "type": "number",
+          "text": "Landline phone number of the contact person"
+        },
+        "billing_address": {
+          "type": "object",
+          "text": "Contact's billing address objectn"
+        },
+        "shipping_address": {
+          "type": "object",
+          "text": "Contact’s shipping address object"
+        },
+        "contact_persons": {
+          "type": "object",
+          "text": "List of contact persons for the contact"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new customer",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/contacts",
+        "alias_endpoint": "/zohoexpense/expense/v1/contacts",
+        "api_ref": "https://www.zoho.com/expense/api/v1/customers/#create-a-customer"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__contacts___get": {
+      "provider_intent": "zohoexpense__expense__v1__contacts___get",
+      "provider_alias_intent": "/expense/v1/contacts",
+      "text": "List of all customers",
+      "category": "Customers",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List of all customers.",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/contacts",
+        "alias_endpoint": "/zohoexpense/expense/v1/contacts",
+        "api_ref": "https://www.zoho.com/expense/api/v1/customers/#list-of-all-customers"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__contacts__customer_id___put": {
+      "provider_intent": "zohoexpense__expense__v1__contacts__customer_id___put",
+      "provider_alias_intent": "/expense/v1/contacts/customer_id",
+      "text": "Update a customer",
+      "category": "Customers",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "customer_id": {
+          "type": "string",
+          "text": "Customer ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "contact_name": {
+          "type": "string",
+          "text": "Name of the contact",
+          "required": true
+        },
+        "company_name": {
+          "type": "string",
+          "text": "Registered name of the company the contact represents"
+        },
+        "website": {
+          "type": "string",
+          "text": "Website of the contact"
+        },
+        "notes": {
+          "type": "string",
+          "text": "A short note about the contact"
+        },
+        "email": {
+          "type": "string",
+          "text": "Email address of the contact person"
+        },
+        "phone": {
+          "type": "number",
+          "text": "Landline phone number of the contact person"
+        },
+        "facebook": {
+          "type": "string",
+          "text": "Facebook ID of the contact person"
+        },
+        "mobile": {
+          "type": "number",
+          "text": "Mobile number of the contact person"
+        },
+        "billing_address": {
+          "type": "object",
+          "text": "Contact's billing address object"
+        }
+      },
+      "path": {
+        "customer_id": {
+          "type": "string",
+          "text": "Customer ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update the details of an existing customer",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/contacts/{customer_id}",
+        "alias_endpoint": "/zohoexpense/expense/v1/contacts/customer_id",
+        "api_ref": "https://www.zoho.com/expense/api/v1/customers/#update-a-customer"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__contacts__customer_id___get": {
+      "provider_intent": "zohoexpense__expense__v1__contacts__customer_id___get",
+      "provider_alias_intent": "/expense/v1/contacts/customer_id",
+      "text": "Retrieve details of a customer",
+      "category": "Customers",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "customer_id": {
+          "type": "string",
+          "text": "Customer ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "customer_id": {
+          "type": "string",
+          "text": "Customer ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details of an existing customer",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/contacts/{customer_id}",
+        "alias_endpoint": "/zohoexpense/expense/v1/contacts/customer_id",
+        "api_ref": "https://www.zoho.com/expense/api/v1/customers/#retrieve-details-of-a-customer"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__contacts__customer_id___delete": {
+      "provider_intent": "zohoexpense__expense__v1__contacts__customer_id___delete",
+      "provider_alias_intent": "/expense/v1/contacts/customer_id",
+      "text": "Delete a customer",
+      "category": "Customers",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "customer_id": {
+          "type": "string",
+          "text": "Customer ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "customer_id": {
+          "type": "string",
+          "text": "Customer ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete an existing customer",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/contacts/{customer_id}",
+        "alias_endpoint": "/zohoexpense/expense/v1/contacts/customer_id",
+        "api_ref": "https://www.zoho.com/expense/api/v1/customers/#delete-a-customer"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__expenses___post": {
+      "provider_intent": "zohoexpense__expense__v1__expenses___post",
+      "provider_alias_intent": "/expense/v1/expenses",
+      "text": "Upload Receipts",
+      "category": "Receipts",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "receipt": {
+          "type": "number",
+          "text": "File Path of the Receipt to be uploaded",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Upload receipts for autoscanning",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/expenses",
+        "alias_endpoint": "/zohoexpense/expense/v1/expenses",
+        "api_ref": "https://www.zoho.com/expense/api/v1/receipts/#upload-receipts"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__expenses__expense_id\n___put": {
+      "provider_intent": "zohoexpense__expense__v1__expenses__expense_id\n___put",
+      "provider_alias_intent": "/expense/v1/expenses/expense_id\n",
+      "text": "Update an expense",
+      "category": "Expense",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "expense_id": {
+          "type": "string",
+          "text": "Expense ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "paid_through_account_id": {
+          "type": "number",
+          "text": "Unique ID for the paid through account."
+        },
+        "date": {
+          "type": "string",
+          "text": "Date of the expense"
+        },
+        "is_reimbursable": {
+          "type": "boolean",
+          "text": "Whether the expense is reimbursable.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "currency_id": {
+          "type": "number",
+          "text": "Unique ID for currency"
+        },
+        "merchant_id": {
+          "type": "number",
+          "text": "Unique ID for merchant"
+        },
+        "report_id": {
+          "type": "number",
+          "text": "Unique ID for report"
+        },
+        "payment_mode": {
+          "type": "string",
+          "text": "payment moder"
+        },
+        "customer_id": {
+          "type": "number",
+          "text": "Unique ID for the customer"
+        },
+        "project_id": {
+          "type": "number",
+          "text": "Unique ID for the project"
+        },
+        "is_billable": {
+          "type": "boolean",
+          "text": "Whether the expense is billable",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "is_inclusive_tax": {
+          "type": "boolean",
+          "text": "Whether the expense amount is inclusive of tax",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "attendees": {
+          "type": "array",
+          "text": "Attendees for the expense"
+        },
+        "custom_fields": {
+          "type": "array",
+          "text": "Custom Fields"
+        },
+        "line_items": {
+          "type": "array",
+          "text": "Line Items of the expense",
+          "required": true
+        }
+      },
+      "path": {
+        "expense_id": {
+          "type": "string",
+          "text": "Expense ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update the details of an expense",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/expenses/{expense_id}\n",
+        "alias_endpoint": "/zohoexpense/expense/v1/expenses/expense_id\n",
+        "api_ref": "https://www.zoho.com/expense/api/v1/expenses/#update-an-expense"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__expenses__expense_id__merge___post": {
+      "provider_intent": "zohoexpense__expense__v1__expenses__expense_id__merge___post",
+      "provider_alias_intent": "/expense/v1/expenses/expense_id/merge",
+      "text": "Merge expenses",
+      "category": "Expense",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "expense_id": {
+          "type": "string",
+          "text": "Expense ID",
+          "required": true
+        },
+        "duplicate_expense_id": {
+          "type": "number",
+          "text": "Unique ID of the expense to be merged",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "expense_id": {
+          "type": "string",
+          "text": "Expense ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Merge multiple expenses",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/expenses/{expense_id}/merge",
+        "alias_endpoint": "/zohoexpense/expense/v1/expenses/expense_id/merge",
+        "api_ref": "https://www.zoho.com/expense/api/v1/expenses/#merge-expenses"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__expensecategories___post": {
+      "provider_intent": "zohoexpense__expense__v1__expensecategories___post",
+      "provider_alias_intent": "/expense/v1/expensecategories",
+      "text": "Create an expense category",
+      "category": "Expense Categories",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "category_name": {
+          "type": "string",
+          "text": "Name of the expense category",
+          "required": true
+        },
+        "gl_code": {
+          "type": "string",
+          "text": "Unique account code for the expense category"
+        },
+        "description": {
+          "type": "string",
+          "text": "Description of the expense category"
+        },
+        "maximum_allowed_amount": {
+          "type": "number",
+          "text": "Expense amount limit"
+        },
+        "receipt_required_amount": {
+          "type": "number",
+          "text": "Amount limit above which receipt is mandatory"
+        },
+        "flat_amount": {
+          "type": "number",
+          "text": "Amount for the expense category"
+        },
+        "parent_account_id": {
+          "type": "number",
+          "text": "Account ID of parent category"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new expense category",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/expensecategories",
+        "alias_endpoint": "/zohoexpense/expense/v1/expensecategories",
+        "api_ref": "https://www.zoho.com/expense/api/v1/expense-categories/#create-an-expense-category"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__expensecategories___get": {
+      "provider_intent": "zohoexpense__expense__v1__expensecategories___get",
+      "provider_alias_intent": "/expense/v1/expensecategories",
+      "text": "List of expense categories",
+      "category": "Expense Categories",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "filter_by": {
+          "type": "object",
+          "text": "For filtering Expense Categories based on Status",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List of all active expense categories",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/expensecategories",
+        "alias_endpoint": "/zohoexpense/expense/v1/expensecategories",
+        "api_ref": "https://www.zoho.com/expense/api/v1/expense-categories/#list-of-expense-categories"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__expensecategories__expense_category_id___put": {
+      "provider_intent": "zohoexpense__expense__v1__expensecategories__expense_category_id___put",
+      "provider_alias_intent": "/expense/v1/expensecategories/expense_category_id",
+      "text": "Update an expense category",
+      "category": "Expense Categories",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "expense_category_id": {
+          "type": "string",
+          "text": "Expense Category ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "category_name": {
+          "type": "string",
+          "text": "Name of the expense category"
+        },
+        "gl_code": {
+          "type": "string",
+          "text": "Unique account code for the expense category"
+        },
+        "description": {
+          "type": "string",
+          "text": "Description of the expense category"
+        },
+        "maximum_allowed_amount": {
+          "type": "number",
+          "text": "Expense amount limit"
+        },
+        "receipt_required_amount": {
+          "type": "number",
+          "text": "Amount limit above which receipt is mandatory"
+        },
+        "flat_amount": {
+          "type": "number",
+          "text": "Amount for the expense category"
+        }
+      },
+      "path": {
+        "expense_category_id": {
+          "type": "string",
+          "text": "Expense Category ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update the details of an existing expense category",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/expensecategories/{expense_category_id}",
+        "alias_endpoint": "/zohoexpense/expense/v1/expensecategories/expense_category_id",
+        "api_ref": "https://www.zoho.com/expense/api/v1/expense-categories/#update-an-expense-category"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__expensecategories__expense_category_id___get": {
+      "provider_intent": "zohoexpense__expense__v1__expensecategories__expense_category_id___get",
+      "provider_alias_intent": "/expense/v1/expensecategories/expense_category_id",
+      "text": "Retrieve details of an expense category",
+      "category": "Expense Categories",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "expense_category_id": {
+          "type": "string",
+          "text": "Expense Category ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "expense_category_id": {
+          "type": "string",
+          "text": "Expense Category ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details of an existing expense category",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/expensecategories/{expense_category_id}",
+        "alias_endpoint": "/zohoexpense/expense/v1/expensecategories/expense_category_id",
+        "api_ref": "https://www.zoho.com/expense/api/v1/expense-categories/#retrieve-details-of-an-expense-category"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__expensecategories__expense_category_id___delete": {
+      "provider_intent": "zohoexpense__expense__v1__expensecategories__expense_category_id___delete",
+      "provider_alias_intent": "/expense/v1/expensecategories/expense_category_id",
+      "text": "Delete an expense category",
+      "category": "Expense Categories",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "expense_category_id": {
+          "type": "string",
+          "text": "Expense Category ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "expense_category_id": {
+          "type": "string",
+          "text": "Expense Category ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete an existing expense category",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/expensecategories/{expense_category_id}",
+        "alias_endpoint": "/zohoexpense/expense/v1/expensecategories/expense_category_id",
+        "api_ref": "https://www.zoho.com/expense/api/v1/expense-categories/#delete-an-expense-category"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__expensecategories__expense_category_id__show___post": {
+      "provider_intent": "zohoexpense__expense__v1__expensecategories__expense_category_id__show___post",
+      "provider_alias_intent": "/expense/v1/expensecategories/expense_category_id/show",
+      "text": "Enable an expense category",
+      "category": "Expense Categories",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "expense_category_id": {
+          "type": "string",
+          "text": "Expense Category ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "expense_category_id": {
+          "type": "string",
+          "text": "Expense Category ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Enable an expense category",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/expensecategories/{expense_category_id}/show",
+        "alias_endpoint": "/zohoexpense/expense/v1/expensecategories/expense_category_id/show",
+        "api_ref": "https://www.zoho.com/expense/api/v1/expense-categories/#enable-an-expense-category"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__expensecategories__expense_category_id__hide___post": {
+      "provider_intent": "zohoexpense__expense__v1__expensecategories__expense_category_id__hide___post",
+      "provider_alias_intent": "/expense/v1/expensecategories/expense_category_id/hide",
+      "text": "Disable an expense category",
+      "category": "Expense Categories",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "expense_category_id": {
+          "type": "string",
+          "text": "Expense Category ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "expense_category_id": {
+          "type": "string",
+          "text": "Expense Category ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Disable an expense category",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/expensecategories/{expense_category_id}/hide",
+        "alias_endpoint": "/zohoexpense/expense/v1/expensecategories/expense_category_id/hide",
+        "api_ref": "https://www.zoho.com/expense/api/v1/expense-categories/#disable-an-expense-category"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__reports__expensedetails___get": {
+      "provider_intent": "zohoexpense__expense__v1__reports__expensedetails___get",
+      "provider_alias_intent": "/expense/v1/reports/expensedetails",
+      "text": "List all expenses",
+      "category": "Expenses",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "status": {
+          "type": "string",
+          "text": "Status of the expense report with which the expense is associated"
+        },
+        "date_start": {
+          "type": "number",
+          "text": "Date start"
+        },
+        "date_end": {
+          "type": "number",
+          "text": "Ending Date"
+        },
+        "user_id": {
+          "type": "string",
+          "text": "Unique ID for user"
+        },
+        "category_id": {
+          "type": "string",
+          "text": "Unique ID for expense category"
+        },
+        "merchant_id": {
+          "type": "string",
+          "text": "Unique ID for merchant"
+        },
+        "customer_id": {
+          "type": "string",
+          "text": "Unique ID for the customer"
+        },
+        "project_id": {
+          "type": "string",
+          "text": "Unique ID of the project associated with the trip",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List of all existing expenses",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/reports/expensedetails",
+        "alias_endpoint": "/zohoexpense/expense/v1/reports/expensedetails",
+        "api_ref": "https://www.zoho.com/expense/api/v1/expenses/#list-all-expenses"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__projects___post": {
+      "provider_intent": "zohoexpense__expense__v1__projects___post",
+      "provider_alias_intent": "/expense/v1/projects",
+      "text": "Create a project",
+      "category": "Projects\n",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "project_name": {
+          "type": "string",
+          "text": "Name of the project",
+          "required": true
+        },
+        "customer_id": {
+          "type": "number",
+          "text": "Unique ID of the customer",
+          "required": true
+        },
+        "description": {
+          "type": "string",
+          "text": "Description about the project"
+        },
+        "billing_type": {
+          "type": "string",
+          "text": "Type of billing for the project"
+        },
+        "show_to_all_users": {
+          "type": "boolean",
+          "text": "Whether the Project is shown to all users",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "project_head_id": {
+          "type": "number",
+          "text": "Unique ID of Project Head"
+        },
+        "users": {
+          "type": "array",
+          "text": "Associated user details list"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new project",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/projects",
+        "alias_endpoint": "/zohoexpense/expense/v1/projects",
+        "api_ref": "https://www.zoho.com/expense/api/v1/projects/#create-a-project"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__projects___get": {
+      "provider_intent": "zohoexpense__expense__v1__projects___get",
+      "provider_alias_intent": "/expense/v1/projects",
+      "text": "List of all projects",
+      "category": "Projects\n",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List of all projects",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/projects",
+        "alias_endpoint": "/zohoexpense/expense/v1/projects",
+        "api_ref": "https://www.zoho.com/expense/api/v1/projects/#list-of-all-projects"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__projects__project_id___put": {
+      "provider_intent": "zohoexpense__expense__v1__projects__project_id___put",
+      "provider_alias_intent": "/expense/v1/projects/project_id",
+      "text": "Update the details of a project",
+      "category": "Projects\n",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "Project ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "project_name": {
+          "type": "string",
+          "text": "Name of the project"
+        },
+        "customer_id": {
+          "type": "number",
+          "text": "Unique ID of the customer"
+        },
+        "description": {
+          "type": "string",
+          "text": "Description about the project"
+        },
+        "billing_type": {
+          "type": "string",
+          "text": "Type of billing for the project"
+        }
+      },
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "Project ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update the details of an existing project",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/projects/{project_id}",
+        "alias_endpoint": "/zohoexpense/expense/v1/projects/project_id",
+        "api_ref": "https://www.zoho.com/expense/api/v1/projects/#update-the-details-of-a-project"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__projects__project_id___get": {
+      "provider_intent": "zohoexpense__expense__v1__projects__project_id___get",
+      "provider_alias_intent": "/expense/v1/projects/project_id",
+      "text": "Retrieve details of a project",
+      "category": "Projects\n",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "Project ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "Project ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details of an existing project",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/projects/{project_id}",
+        "alias_endpoint": "/zohoexpense/expense/v1/projects/project_id",
+        "api_ref": "https://www.zoho.com/expense/api/v1/projects/#retrieve-details-of-a-project"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__projects__project_id___delete": {
+      "provider_intent": "zohoexpense__expense__v1__projects__project_id___delete",
+      "provider_alias_intent": "/expense/v1/projects/project_id",
+      "text": "Delete a project",
+      "category": "Projects\n",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "Project ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "Project ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete an existing project",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/projects/{project_id}",
+        "alias_endpoint": "/zohoexpense/expense/v1/projects/project_id",
+        "api_ref": "https://www.zoho.com/expense/api/v1/projects/#delete-a-project"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__projects__project_id__active___post": {
+      "provider_intent": "zohoexpense__expense__v1__projects__project_id__active___post",
+      "provider_alias_intent": "/expense/v1/projects/project_id/active",
+      "text": "Make a project active",
+      "category": "Projects\n",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "Project ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "Project ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Mark a project as active",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/projects/{project_id}/active",
+        "alias_endpoint": "/zohoexpense/expense/v1/projects/project_id/active",
+        "api_ref": "https://www.zoho.com/expense/api/v1/projects/#make-a-project-active"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__projects__project_id__inactive___post": {
+      "provider_intent": "zohoexpense__expense__v1__projects__project_id__inactive___post",
+      "provider_alias_intent": "/expense/v1/projects/project_id/inactive",
+      "text": "Make a project inactive",
+      "category": "Projects\n",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "Project ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "Project ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Mark a project as inactive",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/projects/{project_id}/inactive",
+        "alias_endpoint": "/zohoexpense/expense/v1/projects/project_id/inactive",
+        "api_ref": "https://www.zoho.com/expense/api/v1/projects/#make-a-project-inactive"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__expensereports___post": {
+      "provider_intent": "zohoexpense__expense__v1__expensereports___post",
+      "provider_alias_intent": "/expense/v1/expensereports",
+      "text": "Create an expense report",
+      "category": "Receipts",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "report_name": {
+          "type": "string",
+          "text": "Name of the report",
+          "required": true
+        },
+        "description": {
+          "type": "string",
+          "text": "Description of the report"
+        },
+        "start_date": {
+          "type": "string",
+          "text": "Start date of the report",
+          "required": true
+        },
+        "end_date": {
+          "type": "string",
+          "text": "End date of the report"
+        },
+        "expenses": {
+          "type": "number",
+          "text": "Expenses associated with User"
+        },
+        "custom_fields": {
+          "type": "array",
+          "text": "Custom Fields related to Expense."
+        },
+        "customer_id": {
+          "type": "number",
+          "text": "Unique Id for the Customer."
+        },
+        "project_id": {
+          "type": "number",
+          "text": "Unique ID for the project"
+        },
+        "tags": {
+          "type": "array",
+          "text": "Tags associated with the Report."
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create an expense report",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/expensereports",
+        "alias_endpoint": "/zohoexpense/expense/v1/expensereports",
+        "api_ref": "https://www.zoho.com/expense/api/v1/expense-reports/#create-an-expense-report"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__expensereports___get": {
+      "provider_intent": "zohoexpense__expense__v1__expensereports___get",
+      "provider_alias_intent": "/expense/v1/expensereports",
+      "text": "List of all expense reports",
+      "category": "Receipts",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "filter_by": {
+          "type": "object",
+          "text": "For Filtering Expense Reports based on status"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List of all the submitted expense reports",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/expensereports",
+        "alias_endpoint": "/zohoexpense/expense/v1/expensereports",
+        "api_ref": "https://www.zoho.com/expense/api/v1/expense-reports/#list-of-all-expense-reports"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__expensereports__expense_report_id___put": {
+      "provider_intent": "zohoexpense__expense__v1__expensereports__expense_report_id___put",
+      "provider_alias_intent": "/expense/v1/expensereports/expense_report_id",
+      "text": "Update an expense report",
+      "category": "Receipts",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "expense_report_id": {
+          "type": "string",
+          "text": "Expense Report ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "report_name": {
+          "type": "string",
+          "text": "Name of the report"
+        },
+        "description": {
+          "type": "string",
+          "text": "Description of the report"
+        },
+        "start_date": {
+          "type": "string",
+          "text": "Start date of the report"
+        },
+        "end_date": {
+          "type": "string",
+          "text": "End date of the report"
+        },
+        "expenses": {
+          "type": "array",
+          "text": "Expenses associated with User",
+          "required": true
+        },
+        "custom_fields": {
+          "type": "array",
+          "text": "Custom Fields related to Expense."
+        },
+        "customer_id": {
+          "type": "number",
+          "text": "Unique Id for the Customer"
+        },
+        "project_id": {
+          "type": "number",
+          "text": "Unique ID for the project"
+        },
+        "tags": {
+          "type": "array",
+          "text": "Tags associated with the Report"
+        },
+        "expense_id": {
+          "type": "number",
+          "text": "Unique Id of the Expense"
+        },
+        "customfield_id": {
+          "type": "number",
+          "text": "Unique Id for the Custom Field"
+        },
+        "value": {
+          "type": "string",
+          "text": "Value of the Custom Field"
+        },
+        "tag_id": {
+          "type": "string",
+          "text": "Unique ID for Tag generated by the server"
+        },
+        "tag_option_id": {
+          "type": "number",
+          "text": "Unique ID for Tag option generated by the server"
+        }
+      },
+      "path": {
+        "expense_report_id": {
+          "type": "string",
+          "text": "Expense Report ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update an expense report",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/expensereports/{expense_report_id}",
+        "alias_endpoint": "/zohoexpense/expense/v1/expensereports/expense_report_id",
+        "api_ref": "https://www.zoho.com/expense/api/v1/expense-reports/#update-an-expense-report"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__expensereports__expense_report_id___get": {
+      "provider_intent": "zohoexpense__expense__v1__expensereports__expense_report_id___get",
+      "provider_alias_intent": "/expense/v1/expensereports/expense_report_id",
+      "text": "Retrieve details of an expense report",
+      "category": "Receipts",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "expense_report_id": {
+          "type": "string",
+          "text": "Expense Report ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "expense_report_id": {
+          "type": "string",
+          "text": "Expense Report ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details of an existing expense report",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/expensereports/{expense_report_id}",
+        "alias_endpoint": "/zohoexpense/expense/v1/expensereports/expense_report_id",
+        "api_ref": "https://www.zoho.com/expense/api/v1/expense-reports/#retrieve-details-of-an-expense-report"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__expensereports__expense_report_id__approve___post": {
+      "provider_intent": "zohoexpense__expense__v1__expensereports__expense_report_id__approve___post",
+      "provider_alias_intent": "/expense/v1/expensereports/expense_report_id/approve",
+      "text": "Approve an expense report",
+      "category": "Receipts",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "expense_report_id": {
+          "type": "string",
+          "text": "Expense Report ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "expense_report_id": {
+          "type": "string",
+          "text": "Expense Report ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Approve an expense report",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/expensereports/{expense_report_id}/approve",
+        "alias_endpoint": "/zohoexpense/expense/v1/expensereports/expense_report_id/approve",
+        "api_ref": "https://www.zoho.com/expense/api/v1/expense-reports/#approve-an-expense-report"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__expensereports__expense_report_id__reject___post": {
+      "provider_intent": "zohoexpense__expense__v1__expensereports__expense_report_id__reject___post",
+      "provider_alias_intent": "/expense/v1/expensereports/expense_report_id/reject",
+      "text": "Reject an expense report",
+      "category": "Receipts",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "expense_report_id": {
+          "type": "string",
+          "text": "Expense Report ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "comments": {
+          "type": "string",
+          "text": "Comments on the report"
+        }
+      },
+      "path": {
+        "expense_report_id": {
+          "type": "string",
+          "text": "Expense Report ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Reject an expense report",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/expensereports/expense_report_id}/reject",
+        "alias_endpoint": "/zohoexpense/expense/v1/expensereports/expense_report_id/reject",
+        "api_ref": "https://www.zoho.com/expense/api/v1/expense-reports/#reject-an-expense-report"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__expensereports__expense_report_id__reimburse___post": {
+      "provider_intent": "zohoexpense__expense__v1__expensereports__expense_report_id__reimburse___post",
+      "provider_alias_intent": "/expense/v1/expensereports/expense_report_id/reimburse",
+      "text": "Reimburse an expense report",
+      "category": "Receipts",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "expense_report_id": {
+          "type": "string",
+          "text": "Expense Report ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "notes": {
+          "type": "string",
+          "text": "Notes on Reimbursement"
+        },
+        "date": {
+          "type": "string",
+          "text": "Date of Expense"
+        },
+        "amount": {
+          "type": "number",
+          "text": "Total Amount"
+        },
+        "reference_number": {
+          "type": "string",
+          "text": "Reference Number"
+        },
+        "currency_id": {
+          "type": "number",
+          "text": "Unique ID for currency"
+        }
+      },
+      "path": {
+        "expense_report_id": {
+          "type": "string",
+          "text": "Expense Report ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Reimburse an expense report",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/expensereports/{expense_report_id}/reimburse",
+        "alias_endpoint": "/zohoexpense/expense/v1/expensereports/expense_report_id/reimburse",
+        "api_ref": "https://www.zoho.com/expense/api/v1/expense-reports/#reimburse-an-expense-report"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__expensereports__expense_report_id__approvalhistory___get": {
+      "provider_intent": "zohoexpense__expense__v1__expensereports__expense_report_id__approvalhistory___get",
+      "provider_alias_intent": "/expense/v1/expensereports/expense_report_id/approvalhistory",
+      "text": "Approval history of an expense report",
+      "category": "Receipts",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "expense_report_id": {
+          "type": "string",
+          "text": "Expense Report ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "expense_report_id": {
+          "type": "string",
+          "text": "Expense Report ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Approval history of an expense report",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/expensereports/{expense_report_id}/approvalhistory",
+        "alias_endpoint": "/zohoexpense/expense/v1/expensereports/expense_report_id/approvalhistory",
+        "api_ref": "https://www.zoho.com/expense/api/v1/expense-reports/#approval-history-of-an-expense-report"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__settings__taxes___post": {
+      "provider_intent": "zohoexpense__expense__v1__settings__taxes___post",
+      "provider_alias_intent": "/expense/v1/settings/taxes",
+      "text": "Create a tax",
+      "category": "Taxes",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "tax_name": {
+          "type": "string",
+          "text": "Name of the tax",
+          "required": true
+        },
+        "tax_percentage": {
+          "type": "number",
+          "text": "Tax percentage",
+          "required": true
+        },
+        "tax_type": {
+          "type": "string",
+          "text": "Type of tax"
+        },
+        "is_value_added": {
+          "type": "boolean",
+          "text": "Whether it is a value added tax",
+          "required": true,
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "tax_authority_name": {
+          "type": "string",
+          "text": "Name of the Tax Agency",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a tax.",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/settings/taxes",
+        "alias_endpoint": "/zohoexpense/expense/v1/settings/taxes",
+        "api_ref": "https://www.zoho.com/expense/api/v1/taxes/#create-a-tax"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__settings__taxes___get": {
+      "provider_intent": "zohoexpense__expense__v1__settings__taxes___get",
+      "provider_alias_intent": "/expense/v1/settings/taxes",
+      "text": "Retrieve list of taxes",
+      "category": "Taxes",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details of all existing taxes",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/settings/taxes",
+        "alias_endpoint": "/zohoexpense/expense/v1/settings/taxes",
+        "api_ref": "https://www.zoho.com/expense/api/v1/taxes/#retrieve-list-of-taxes"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__settings__taxes__tax_id___put": {
+      "provider_intent": "zohoexpense__expense__v1__settings__taxes__tax_id___put",
+      "provider_alias_intent": "/expense/v1/settings/taxes/tax_id",
+      "text": "Update details of a tax",
+      "category": "Taxes",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "tax_id": {
+          "type": "string",
+          "text": "Tax ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "tax_name": {
+          "type": "string",
+          "text": "Name of the tax"
+        },
+        "tax_percentage": {
+          "type": "number",
+          "text": "Tax percentage",
+          "required": true
+        },
+        "tax_type": {
+          "type": "string",
+          "text": "Type of tax"
+        },
+        "is_value_added": {
+          "type": "boolean",
+          "text": "Whether it is a value added tax",
+          "required": true,
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "tax_id": {
+          "type": "string",
+          "text": "Tax ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update the details of an existing tax",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/settings/taxes/{tax_id}",
+        "alias_endpoint": "/zohoexpense/expense/v1/settings/taxes/tax_id",
+        "api_ref": "https://www.zoho.com/expense/api/v1/taxes/#update-details-of-a-tax"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__settings__taxes__tax_id___get": {
+      "provider_intent": "zohoexpense__expense__v1__settings__taxes__tax_id___get",
+      "provider_alias_intent": "/expense/v1/settings/taxes/tax_id",
+      "text": "Retrieve details of a tax",
+      "category": "Taxes",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "tax_id": {
+          "type": "string",
+          "text": "Tax ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "tax_id": {
+          "type": "string",
+          "text": "Tax ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details of an existing tax",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/settings/taxes/{tax_id}",
+        "alias_endpoint": "/zohoexpense/expense/v1/settings/taxes/tax_id",
+        "api_ref": "https://www.zoho.com/expense/api/v1/taxes/#retrieve-details-of-a-tax"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__settings__taxes__tax_id___delete": {
+      "provider_intent": "zohoexpense__expense__v1__settings__taxes__tax_id___delete",
+      "provider_alias_intent": "/expense/v1/settings/taxes/tax_id",
+      "text": "Delete a tax",
+      "category": "Taxes",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "tax_id": {
+          "type": "string",
+          "text": "Tax ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "tax_id": {
+          "type": "string",
+          "text": "Tax ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete an existing tax",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/settings/taxes/{tax_id}",
+        "alias_endpoint": "/zohoexpense/expense/v1/settings/taxes/tax_id",
+        "api_ref": "https://www.zoho.com/expense/api/v1/taxes/#delete-a-tax"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__settings__taxgroups__tax_group_id___get": {
+      "provider_intent": "zohoexpense__expense__v1__settings__taxgroups__tax_group_id___get",
+      "provider_alias_intent": "/expense/v1/settings/taxgroups/tax_group_id",
+      "text": "Retrieve details of a tax group",
+      "category": "Taxes",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "tax_group_id": {
+          "type": "string",
+          "text": "Tax Group ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "tax_group_id": {
+          "type": "string",
+          "text": "Tax Group ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details of an existing tax group",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/settings/taxgroups/{tax_group_id}",
+        "alias_endpoint": "/zohoexpense/expense/v1/settings/taxgroups/tax_group_id",
+        "api_ref": "https://www.zoho.com/expense/api/v1/taxes/#retrieve-details-of-a-tax-group"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__trips___post": {
+      "provider_intent": "zohoexpense__expense__v1__trips___post",
+      "provider_alias_intent": "/expense/v1/trips",
+      "text": "Create a trip",
+      "category": "Trip",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "currency_id": {
+          "type": "number",
+          "text": "Unique ID for currency"
+        },
+        "exchange_rate": {
+          "type": "number",
+          "text": "Exchange rate of the currency with respect to base currency"
+        },
+        "budget_amount": {
+          "type": "number",
+          "text": "Budget amount for the trip"
+        },
+        "is_international": {
+          "type": "boolean",
+          "text": "Exchange rate of the currency with respect to base currency",
+          "required": true,
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "is_visa_required": {
+          "type": "boolean",
+          "text": "Whether visa is required for the trip",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "is_billable": {
+          "type": "boolean",
+          "text": "Purpose of the trip",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "customer_id": {
+          "type": "number",
+          "text": "Unique ID of the customer associated with the trip"
+        },
+        "project_id": {
+          "type": "number",
+          "text": "Unique ID of the project associated with the trip"
+        },
+        "destination_country": {
+          "type": "string",
+          "text": "Destination Country of the trip",
+          "required": true
+        },
+        "meal_preference": {
+          "type": "string",
+          "text": "Meal preference for the traveller in flight"
+        },
+        "seat_preference": {
+          "type": "string",
+          "text": "Seat preference for the traveller in flight"
+        },
+        "line_items": {
+          "type": "array",
+          "text": "Line Items"
+        },
+        "description": {
+          "type": "string",
+          "text": "Any comments about the trip"
+        },
+        "custom_fields": {
+          "type": "array",
+          "text": "Custom field added"
+        },
+        "attendees": {
+          "type": "array",
+          "text": "Other travellers of the trip"
+        },
+        "trip_number": {
+          "type": "string",
+          "text": "Trip's unique number",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new trip",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/trips",
+        "alias_endpoint": "/zohoexpense/expense/v1/trips",
+        "api_ref": "https://www.zoho.com/expense/api/v1/trips/#create-a-trip"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__trips___get": {
+      "provider_intent": "zohoexpense__expense__v1__trips___get",
+      "provider_alias_intent": "/expense/v1/trips",
+      "text": "Retrive list of all trips",
+      "category": "Trip",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "filter_by": {
+          "type": "object",
+          "text": "For filtering trips based on status"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all existing trips",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/trips",
+        "alias_endpoint": "/zohoexpense/expense/v1/trips",
+        "api_ref": "https://www.zoho.com/expense/api/v1/trips/#retrive-list-of-all-trips"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__trips__trip_id___put": {
+      "provider_intent": "zohoexpense__expense__v1__trips__trip_id___put",
+      "provider_alias_intent": "/expense/v1/trips/trip_id",
+      "text": "Update a trip",
+      "category": "Trip",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "trip_id": {
+          "type": "string",
+          "text": "Trip ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "currency_id": {
+          "type": "number",
+          "text": "Unique ID for currency"
+        },
+        "budget_amount": {
+          "type": "number",
+          "text": "Budget amount for the trip"
+        },
+        "is_international": {
+          "type": "boolean",
+          "text": "Whether the trip is an international trip",
+          "required": true,
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "is_visa_required": {
+          "type": "boolean",
+          "text": "Whether visa is required for the trip",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "business_purpose": {
+          "type": "string",
+          "text": "Purpose of the trip"
+        },
+        "is_billable": {
+          "type": "boolean",
+          "text": "Whether the customer needs to be billed for the trip",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "customer_id": {
+          "type": "number",
+          "text": "Unique ID of the project associated with the trip"
+        },
+        "project_id": {
+          "type": "number",
+          "text": "Unique ID of the project associated with the trip",
+          "required": true
+        },
+        "destination_country": {
+          "type": "string",
+          "text": "Destination Country of the trip"
+        },
+        "meal_preference": {
+          "type": "string",
+          "text": "Meal preference for the traveller in flight"
+        },
+        "seat_preference": {
+          "type": "string",
+          "text": "Seat preference for the traveller in flight"
+        },
+        "line_items": {
+          "type": "array",
+          "text": "Line Items"
+        },
+        "description": {
+          "type": "string",
+          "text": "Any comments about the trip"
+        },
+        "custom_fields": {
+          "type": "array",
+          "text": "Custom field added"
+        },
+        "attendees": {
+          "type": "array",
+          "text": "Other travellers of the trip"
+        },
+        "trip_number": {
+          "type": "string",
+          "text": "Trip's unique number",
+          "required": true
+        }
+      },
+      "path": {
+        "trip_id": {
+          "type": "string",
+          "text": "Trip ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update an existing Trip",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/trips/{trip_id}",
+        "alias_endpoint": "/zohoexpense/expense/v1/trips/trip_id",
+        "api_ref": "https://www.zoho.com/expense/api/v1/trips/#update-a-trip"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__trips__trip_id___get": {
+      "provider_intent": "zohoexpense__expense__v1__trips__trip_id___get",
+      "provider_alias_intent": "/expense/v1/trips/trip_id",
+      "text": "Retrive details of a trip",
+      "category": "Trip",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "trip_id": {
+          "type": "string",
+          "text": "Trip ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "trip_id": {
+          "type": "string",
+          "text": "Trip ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrive details of an existing trip",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/trips/{trip_id}",
+        "alias_endpoint": "/zohoexpense/expense/v1/trips/trip_id",
+        "api_ref": "https://www.zoho.com/expense/api/v1/trips/#retrive-details-of-a-trip"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__trips__trip_id___delete": {
+      "provider_intent": "zohoexpense__expense__v1__trips__trip_id___delete",
+      "provider_alias_intent": "/expense/v1/trips/trip_id",
+      "text": "Delete a trip request",
+      "category": "Trip",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "trip_id": {
+          "type": "string",
+          "text": "Trip ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "trip_id": {
+          "type": "string",
+          "text": "Trip ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a trip request",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/trips/{trip_id}",
+        "alias_endpoint": "/zohoexpense/expense/v1/trips/trip_id",
+        "api_ref": "https://www.zoho.com/expense/api/v1/trips/#delete-a-trip-request"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__trips__trip_id__approve___post": {
+      "provider_intent": "zohoexpense__expense__v1__trips__trip_id__approve___post",
+      "provider_alias_intent": "/expense/v1/trips/trip_id/approve",
+      "text": "Approve a trip request",
+      "category": "Trip",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "trip_id": {
+          "type": "string",
+          "text": "Trip ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "trip_id": {
+          "type": "string",
+          "text": "Trip ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Approve a submitted trip request.",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/trips/{trip_id}/approve",
+        "alias_endpoint": "/zohoexpense/expense/v1/trips/trip_id/approve",
+        "api_ref": "https://www.zoho.com/expense/api/v1/trips/#approve-a-trip-request"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__trips__trip_id__reject___post": {
+      "provider_intent": "zohoexpense__expense__v1__trips__trip_id__reject___post",
+      "provider_alias_intent": "/expense/v1/trips/trip_id/reject",
+      "text": "Reject a trip request",
+      "category": "Trip",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "trip_id": {
+          "type": "string",
+          "text": "Trip ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "comments": {
+          "type": "array",
+          "text": "comments"
+        }
+      },
+      "path": {
+        "trip_id": {
+          "type": "string",
+          "text": "Trip ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Reject a submitted trip request",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/trips/{trip_id}/reject",
+        "alias_endpoint": "/zohoexpense/expense/v1/trips/trip_id/reject",
+        "api_ref": "https://www.zoho.com/expense/api/v1/trips/#reject-a-trip-request"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__trips__trip_id__cancel___post": {
+      "provider_intent": "zohoexpense__expense__v1__trips__trip_id__cancel___post",
+      "provider_alias_intent": "/expense/v1/trips/trip_id/cancel",
+      "text": "Cancel a trip",
+      "category": "Trip",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "trip_id": {
+          "type": "string",
+          "text": "Trip ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "comments": {
+          "type": "array",
+          "text": "comments"
+        }
+      },
+      "path": {
+        "trip_id": {
+          "type": "string",
+          "text": "Trip ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Cancel a trip",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/trips/{trip_id}/cancel",
+        "alias_endpoint": "/zohoexpense/expense/v1/trips/trip_id/cancel",
+        "api_ref": "https://www.zoho.com/expense/api/v1/trips/#cancel-a-trip"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__trips__trip_id__close___post": {
+      "provider_intent": "zohoexpense__expense__v1__trips__trip_id__close___post",
+      "provider_alias_intent": "/expense/v1/trips/trip_id/close",
+      "text": "Close a trip",
+      "category": "Trip",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Close an approved trip",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/trips/{trip_id}/close",
+        "alias_endpoint": "/zohoexpense/expense/v1/trips/trip_id/close",
+        "api_ref": "https://www.zoho.com/expense/api/v1/trips/#close-a-trip"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__users___post": {
+      "provider_intent": "zohoexpense__expense__v1__users___post",
+      "provider_alias_intent": "/expense/v1/users",
+      "text": "Create an user",
+      "category": "User",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Name of the user",
+          "required": true
+        },
+        "email": {
+          "type": "string",
+          "text": "Active Email ID of the user",
+          "required": true
+        },
+        "user_role": {
+          "type": "number",
+          "text": "Role of the user"
+        },
+        "default_approver_email": {
+          "type": "string",
+          "text": "Email Id of the Approver for a user"
+        },
+        "approves_to_email": {
+          "type": "string",
+          "text": "Email ID of the user getting approved by"
+        },
+        "submission_amount_limit": {
+          "type": "number",
+          "text": "Limit of the amount being submitted"
+        },
+        "approval_amount_limit": {
+          "type": "number",
+          "text": "Limit of the amount being approved"
+        },
+        "employee_number": {
+          "type": "string",
+          "text": "Number of the employee"
+        },
+        "department_name": {
+          "type": "string",
+          "text": "Name of the department"
+        },
+        "designation_name": {
+          "type": "string",
+          "text": "Name of the designation"
+        },
+        "date_of_birth": {
+          "type": "string",
+          "text": "Date Of Birth of the User"
+        },
+        "date_of_joining": {
+          "type": "string",
+          "text": "Date of Joining of the User"
+        },
+        "mobile": {
+          "type": "number",
+          "text": "Mobile Number of the User"
+        },
+        "gender": {
+          "type": "string",
+          "text": "Gender of the User"
+        },
+        "policy_name": {
+          "type": "string",
+          "text": "Name of the Policy"
+        },
+        "custom_fields": {
+          "type": "array",
+          "text": "Custom Fields added"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/users",
+        "alias_endpoint": "/zohoexpense/expense/v1/users",
+        "api_ref": "https://www.zoho.com/expense/api/v1/users/#create-an-user"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__users__user_id___put": {
+      "provider_intent": "zohoexpense__expense__v1__users__user_id___put",
+      "provider_alias_intent": "/expense/v1/users/user_id",
+      "text": "Update details of an user",
+      "category": "User",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "user_id": {
+          "type": "string",
+          "text": "User ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Name of the user"
+        },
+        "user_role": {
+          "type": "number",
+          "text": "Role of the user"
+        },
+        "approval_amount_limit": {
+          "type": "number",
+          "text": "Limit of the amount being approved"
+        },
+        "submission_amount_limit": {
+          "type": "number",
+          "text": "Limit of the amount being submitted"
+        },
+        "department_id": {
+          "type": "number",
+          "text": "Unique ID for the department"
+        },
+        "department_name": {
+          "type": "string",
+          "text": "Name of the department"
+        },
+        "designation_name": {
+          "type": "string",
+          "text": "Name of the designation"
+        },
+        "mobile": {
+          "type": "number",
+          "text": "Mobile Number of the User"
+        },
+        "custom_fields": {
+          "type": "array",
+          "text": "Custom Fields added"
+        }
+      },
+      "path": {
+        "user_id": {
+          "type": "string",
+          "text": "User ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update the details of an existing user.",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/users/{user_id}",
+        "alias_endpoint": "/zohoexpense/expense/v1/users/user_id",
+        "api_ref": "https://www.zoho.com/expense/api/v1/users/#update-details-of-an-user"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__users__user_id___get": {
+      "provider_intent": "zohoexpense__expense__v1__users__user_id___get",
+      "provider_alias_intent": "/expense/v1/users/user_id",
+      "text": "Retrieve details of an user",
+      "category": "User",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "user_id": {
+          "type": "string",
+          "text": "User ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "user_id": {
+          "type": "string",
+          "text": "User ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details of an existing user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/users/{user_id}",
+        "alias_endpoint": "/zohoexpense/expense/v1/users/user_id",
+        "api_ref": "https://www.zoho.com/expense/api/v1/users/#retrieve-details-of-an-user"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__users__user_id___delete": {
+      "provider_intent": "zohoexpense__expense__v1__users__user_id___delete",
+      "provider_alias_intent": "/expense/v1/users/user_id",
+      "text": "Delete an user",
+      "category": "User",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "user_id": {
+          "type": "string",
+          "text": "User ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "user_id": {
+          "type": "string",
+          "text": "User ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete an existing user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/users/{user_id}",
+        "alias_endpoint": "/zohoexpense/expense/v1/users/user_id",
+        "api_ref": "https://www.zoho.com/expense/api/v1/users/#delete-an-user"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__users__user_id__inactive___post": {
+      "provider_intent": "zohoexpense__expense__v1__users__user_id__inactive___post",
+      "provider_alias_intent": "/expense/v1/users/user_id/inactive",
+      "text": "Make an user inactive",
+      "category": "User",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "user_id": {
+          "type": "string",
+          "text": "User ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "user_id": {
+          "type": "string",
+          "text": "User ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Make an user inactive",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/users/{user_id}/inactive",
+        "alias_endpoint": "/zohoexpense/expense/v1/users/user_id/inactive",
+        "api_ref": "https://www.zoho.com/expense/api/v1/users/#make-an-user-inactive"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__users__user_id__active___post": {
+      "provider_intent": "zohoexpense__expense__v1__users__user_id__active___post",
+      "provider_alias_intent": "/expense/v1/users/user_id/active",
+      "text": "Make an user active",
+      "category": "User",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "user_id": {
+          "type": "string",
+          "text": "User ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "user_id": {
+          "type": "string",
+          "text": "User ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Make an user active",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/users/{user_id}/active",
+        "alias_endpoint": "/zohoexpense/expense/v1/users/user_id/active",
+        "api_ref": "https://www.zoho.com/expense/api/v1/users/#make-an-user-active"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__users__user_id__role__role_id___post": {
+      "provider_intent": "zohoexpense__expense__v1__users__user_id__role__role_id___post",
+      "provider_alias_intent": "/expense/v1/users/user_id/role/role_id",
+      "text": "Assign a role to user",
+      "category": "User",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "user_id": {
+          "type": "string",
+          "text": "User ID",
+          "required": true
+        },
+        "role_id": {
+          "type": "string",
+          "text": "Role ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "user_id": {
+          "type": "string",
+          "text": "User ID",
+          "required": true
+        },
+        "role_id": {
+          "type": "string",
+          "text": "Role ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Assign a role to user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/users/{user_id}/role/{role_id}",
+        "alias_endpoint": "/zohoexpense/expense/v1/users/user_id/role/role_id",
+        "api_ref": "https://www.zoho.com/expense/api/v1/users/#assign-a-role-to-user"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoexpense__expense__v1__users___get": {
+      "provider_intent": "zohoexpense__expense__v1__users___get",
+      "provider_alias_intent": "/expense/v1/users",
+      "text": "Retrieve list of users",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details of all existing users",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/expense/v1/users",
+        "alias_endpoint": "/zohoexpense/expense/v1/users",
+        "api_ref": "https://www.zoho.com/expense/api/v1/users/#retrieve-list-of-users"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

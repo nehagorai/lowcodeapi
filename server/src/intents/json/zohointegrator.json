@@ -1,0 +1,52 @@
+{
+  "app": {
+    "title": "zohointegrator API",
+    "description": "",
+    "api_base": "/zohointegrator",
+    "copyright": "",
+    "copyright_year": "",
+    "contact_email": ""
+  },
+  "category": {
+    "All": ""
+  },
+  "routes": {
+    "plan_details": {
+      "provider_intent": "plan_details",
+      "provider_alias_intent": "/api/v1/plan",
+      "text": "Plan details",
+      "category": "Zoho Show",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "To retrieve the plan details including the API calls usage",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/plan",
+        "alias_endpoint": "/zohointegrator/api/v1/plan",
+        "api_ref": "https://www.zoho.com/officeintegrator/api/v1/get-plan-details.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    }
+  }
+}

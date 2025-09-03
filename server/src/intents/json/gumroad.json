@@ -1,0 +1,2014 @@
+{
+  "routes": {
+    "gumroad__v2__products__product_id__custom_fields___get": {
+      "provider_intent": "gumroad__v2__products__product_id__custom_fields___get",
+      "provider_alias_intent": "/v2/products/product_id/custom_fields",
+      "text": "Retrieve all of the existing custom fields for a product",
+      "category": "Custom fields",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve all of the existing custom fields for a product",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/products/:product_id/custom_fields",
+        "alias_endpoint": "/v2/products/product_id/custom_fields",
+        "api_ref": "https://app.gumroad.com/api#custom-fields"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__products__product_id__custom_fields___post": {
+      "provider_intent": "gumroad__v2__products__product_id__custom_fields___post",
+      "provider_alias_intent": "/v2/products/product_id/custom_fields",
+      "text": "Create a new custom field for a product",
+      "category": "Custom fields",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "variant": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "path": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Create a new custom field for a product",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/products/:product_id/custom_fields",
+        "alias_endpoint": "/v2/products/product_id/custom_fields",
+        "api_ref": "https://app.gumroad.com/api#custom-fields"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__products__product_id__custom_fields__name___put": {
+      "provider_intent": "gumroad__v2__products__product_id__custom_fields__name___put",
+      "provider_alias_intent": "/v2/products/product_id/custom_fields/name",
+      "text": "Edit an existing product's custom field",
+      "category": "Custom fields",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        },
+        "name": {
+          "type": "string",
+          "text": "custom Field",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "variant": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "path": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        },
+        "name": {
+          "type": "string",
+          "text": "custom Field",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Edit an existing product's custom field",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/products/:product_id/custom_fields/:name",
+        "alias_endpoint": "/v2/products/product_id/custom_fields/name",
+        "api_ref": "https://app.gumroad.com/api#custom-fields"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__products__product_id__custom_fields__name___delete": {
+      "provider_intent": "gumroad__v2__products__product_id__custom_fields__name___delete",
+      "provider_alias_intent": "/v2/products/product_id/custom_fields/name",
+      "text": "Permanently delete a product's custom field",
+      "category": "Custom fields",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        },
+        "name": {
+          "type": "string",
+          "text": "custom Field",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        },
+        "name": {
+          "type": "string",
+          "text": "custom Field",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Permanently delete a product's custom field",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/products/:product_id/custom_fields/:name",
+        "alias_endpoint": "/v2/products/product_id/custom_fields/name",
+        "api_ref": "https://app.gumroad.com/api#custom-fields"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__licenses__verify___post": {
+      "provider_intent": "gumroad__v2__licenses__verify___post",
+      "provider_alias_intent": "/v2/licenses/verify",
+      "text": "Verify a license",
+      "category": "Licenses",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "product_id": {
+          "type": "string",
+          "text": "the unique ID of the product",
+          "required": true
+        },
+        "license_key": {
+          "type": "string",
+          "text": "the license key provided by your customer",
+          "required": true
+        },
+        "increment_uses_count": {
+          "type": "boolean",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Verify a license",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/licenses/verify",
+        "alias_endpoint": "/v2/licenses/verify",
+        "api_ref": "https://app.gumroad.com/api#licenses"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__licenses__enable___put": {
+      "provider_intent": "gumroad__v2__licenses__enable___put",
+      "provider_alias_intent": "/v2/licenses/enable",
+      "text": "Enable a license",
+      "category": "Licenses",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "product_id": {
+          "type": "string",
+          "text": "the unique ID of the product",
+          "required": true
+        },
+        "license_key": {
+          "type": "string",
+          "text": "the license key provided by your customer",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Enable a license",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/licenses/enable",
+        "alias_endpoint": "/v2/licenses/enable",
+        "api_ref": "https://app.gumroad.com/api#licenses"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__licenses__disable___put": {
+      "provider_intent": "gumroad__v2__licenses__disable___put",
+      "provider_alias_intent": "/v2/licenses/disable",
+      "text": "Disable a license",
+      "category": "Licenses",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "product_id": {
+          "type": "string",
+          "text": "the unique ID of the product",
+          "required": true
+        },
+        "license_key": {
+          "type": "string",
+          "text": "the license key provided by your customer",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Disable a license",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/licenses/disable",
+        "alias_endpoint": "/v2/licenses/disable",
+        "api_ref": "https://app.gumroad.com/api#licenses"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__licenses__decrement_uses_count___put": {
+      "provider_intent": "gumroad__v2__licenses__decrement_uses_count___put",
+      "provider_alias_intent": "/v2/licenses/decrement_uses_count",
+      "text": "Decrement the uses count of a license",
+      "category": "Licenses",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "product_id": {
+          "type": "string",
+          "text": "the unique ID of the product",
+          "required": true
+        },
+        "license_key": {
+          "type": "string",
+          "text": "the license key provided by your customer",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Decrement the uses count of a license",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/licenses/decrement_uses_count",
+        "alias_endpoint": "/v2/licenses/decrement_uses_count",
+        "api_ref": "https://app.gumroad.com/api#licenses"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__products__product_id__offer_codes___get": {
+      "provider_intent": "gumroad__v2__products__product_id__offer_codes___get",
+      "provider_alias_intent": "/v2/products/product_id/offer_codes",
+      "text": "Retrieve all of the existing offer codes for a product",
+      "category": "Offer codes",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve all of the existing offer codes for a product",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/products/:product_id/offer_codes",
+        "alias_endpoint": "/v2/products/product_id/offer_codes",
+        "api_ref": "https://app.gumroad.com/api#offer-codes"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__products__product_id__offer_codes__id___get": {
+      "provider_intent": "gumroad__v2__products__product_id__offer_codes__id___get",
+      "provider_alias_intent": "/v2/products/product_id/offer_codes/id",
+      "text": "Retrieve the details of a specific offer code of a product",
+      "category": "Offer codes",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "ID"
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "ID"
+          ]
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve the details of a specific offer code of a product",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/products/:product_id/offer_codes/:id",
+        "alias_endpoint": "/v2/products/product_id/offer_codes/id",
+        "api_ref": "https://app.gumroad.com/api#offer-codes"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__products__product_id__offer_codes___post": {
+      "provider_intent": "gumroad__v2__products__product_id__offer_codes___post",
+      "provider_alias_intent": "/v2/products/product_id/offer_codes",
+      "text": "Create a new offer code for a product",
+      "category": "Offer codes",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "the coupon code used at checkout",
+          "required": true
+        },
+        "amount_off": {
+          "type": "string",
+          "required": true
+        },
+        "offer_type": {
+          "type": "string",
+          "text": "cents/percent Default-cents\nmax_purchase_count",
+          "enum": [
+            "string"
+          ]
+        }
+      },
+      "path": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Create a new offer code for a product",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/products/:product_id/offer_codes",
+        "alias_endpoint": "/v2/products/product_id/offer_codes",
+        "api_ref": "https://app.gumroad.com/api#offer-codes"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__products__product_id__offer_codes__id___put": {
+      "provider_intent": "gumroad__v2__products__product_id__offer_codes__id___put",
+      "provider_alias_intent": "/v2/products/product_id/offer_codes/id",
+      "text": "Edit an existing product's offer code",
+      "category": "Offer codes",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "ID"
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "offer_code": {
+          "type": "string",
+          "text": "string",
+          "enum": [
+            "required"
+          ]
+        }
+      },
+      "path": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "ID"
+          ]
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Edit an existing product's offer code",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/products/:product_id/offer_codes/:id",
+        "alias_endpoint": "/v2/products/product_id/offer_codes/id",
+        "api_ref": "https://app.gumroad.com/api#offer-codes"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__products__product_id__offer_codes__id___delete": {
+      "provider_intent": "gumroad__v2__products__product_id__offer_codes__id___delete",
+      "provider_alias_intent": "/v2/products/product_id/offer_codes/id",
+      "text": "Permanently delete a product's offer code",
+      "category": "Offer codes",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "ID"
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "ID"
+          ]
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Permanently delete a product's offer code",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/products/:product_id/offer_codes/:id",
+        "alias_endpoint": "/v2/products/product_id/offer_codes/id",
+        "api_ref": "https://app.gumroad.com/api#offer-codes"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__products___get": {
+      "provider_intent": "gumroad__v2__products___get",
+      "provider_alias_intent": "/v2/products",
+      "text": "Retrieve all of the existing products for the authenticated user",
+      "category": "Products",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve all of the existing products for the authenticated user",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/products",
+        "alias_endpoint": "/v2/products",
+        "api_ref": "https://app.gumroad.com/api#products"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__products__id___get": {
+      "provider_intent": "gumroad__v2__products__id___get",
+      "provider_alias_intent": "/v2/products/id",
+      "text": "Retrieve the details of a product",
+      "category": "Products",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve the details of a product",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/products/:id",
+        "alias_endpoint": "/v2/products/id",
+        "api_ref": "https://app.gumroad.com/api#products"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__products__id___delete": {
+      "provider_intent": "gumroad__v2__products__id___delete",
+      "provider_alias_intent": "/v2/products/id",
+      "text": "Permanently delete a product",
+      "category": "Products",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Permanently delete a product",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/products/:id",
+        "alias_endpoint": "/v2/products/id",
+        "api_ref": "https://app.gumroad.com/api#products"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__products__id__enable___put": {
+      "provider_intent": "gumroad__v2__products__id__enable___put",
+      "provider_alias_intent": "/v2/products/id/enable",
+      "text": "Enable an existing product",
+      "category": "Products",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Enable an existing product",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/products/:id/enable",
+        "alias_endpoint": "/v2/products/id/enable",
+        "api_ref": "https://app.gumroad.com/api#products"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__products__id__disable___put": {
+      "provider_intent": "gumroad__v2__products__id__disable___put",
+      "provider_alias_intent": "/v2/products/id/disable",
+      "text": "Disable an existing product",
+      "category": "Products",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Disable an existing product",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/products/:id/disable",
+        "alias_endpoint": "/v2/products/id/disable",
+        "api_ref": "https://app.gumroad.com/api#products"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__resource_subscriptions___put": {
+      "provider_intent": "gumroad__v2__resource_subscriptions___put",
+      "provider_alias_intent": "/v2/resource_subscriptions",
+      "text": "Subscribe to a resource",
+      "category": "Resource subscriptions",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "subscription_id": {
+          "type": "string",
+          "text": "id of the subscription"
+        },
+        "product_id": {
+          "type": "string",
+          "text": "id of the product"
+        },
+        "product_name": {
+          "type": "string",
+          "text": "name of the product"
+        },
+        "user_id": {
+          "type": "string",
+          "text": "user id of the subscriber"
+        },
+        "user_email": {
+          "type": "string",
+          "text": "email address of the subscriber"
+        },
+        "purchase_ids": {
+          "type": "string",
+          "text": "array of charge ids belonging to this subscription"
+        },
+        "created_at": {
+          "type": "string",
+          "text": "timestamp when subscription was created"
+        },
+        "charge_occurrence_count": {
+          "type": "string",
+          "text": "number of charges made for this subscription"
+        },
+        "recurrence": {
+          "type": "subscription duration",
+          "enum": [
+            "monthly",
+            "quarterly",
+            "biannually",
+            "yearly"
+          ]
+        },
+        "free_trial_ends_at": {
+          "type": "string",
+          "text": "timestamp when free trial ends"
+        },
+        "custom_fields": {
+          "type": "string",
+          "text": "custom fields from the original purchase"
+        },
+        "license_key": {
+          "type": "string",
+          "text": "license key from the original purchase."
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Subscribe to a resource",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/resource_subscriptions",
+        "alias_endpoint": "/v2/resource_subscriptions",
+        "api_ref": "https://app.gumroad.com/api#resource-subscriptions"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__resource_subscriptions___get": {
+      "provider_intent": "gumroad__v2__resource_subscriptions___get",
+      "provider_alias_intent": "/v2/resource_subscriptions",
+      "text": "Show all active subscriptions of user for the input resource",
+      "category": "Resource subscriptions",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "resource_name": {
+          "type": "string",
+          "text": "Currently there are 8 supported values - sale; refund; dispute; dispute_won; cancellation; subscription_updated; subscription_ended; and subscription_restarted."
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Show all active subscriptions of user for the input resource",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/resource_subscriptions",
+        "alias_endpoint": "/v2/resource_subscriptions",
+        "api_ref": "https://app.gumroad.com/api#resource-subscriptions"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__resource_subscriptions__resource_subscription_id___delete": {
+      "provider_intent": "gumroad__v2__resource_subscriptions__resource_subscription_id___delete",
+      "provider_alias_intent": "/v2/resource_subscriptions/resource_subscription_id",
+      "text": "Unsubscribe from a resource",
+      "category": "Resource subscriptions",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "resource_subscription_id": {
+          "type": "string",
+          "text": "Resource subscription ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "resource_subscription_id": {
+          "type": "string",
+          "text": "Resource subscription ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Unsubscribe from a resource",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/resource_subscriptions/:resource_subscription_id",
+        "alias_endpoint": "/v2/resource_subscriptions/resource_subscription_id",
+        "api_ref": "https://app.gumroad.com/api#resource-subscriptions"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__sales___get": {
+      "provider_intent": "gumroad__v2__sales___get",
+      "provider_alias_intent": "/v2/sales",
+      "text": "Retrieves all of the successful sales by the authenticated user",
+      "category": "Sales",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "after": {
+          "type": "string",
+          "text": "Only return sales after this date. date in form YYYY-MM-DD"
+        },
+        "before": {
+          "type": "string",
+          "text": "Only return sales before this date. date in form YYYY-MM-DD"
+        },
+        "product_id": {
+          "type": "string",
+          "text": "Filter sales by this product"
+        },
+        "email": {
+          "type": "string",
+          "text": "Filter sales by this email"
+        },
+        "order_id": {
+          "type": "string",
+          "text": "Filter sales by this Order ID"
+        },
+        "page_key": {
+          "type": "string",
+          "text": "A key representing a page of results. It is given in the response as next_page_key."
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieves all of the successful sales by the authenticated user",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/sales",
+        "alias_endpoint": "/v2/sales",
+        "api_ref": "https://app.gumroad.com/api#sales"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__sales__id___get": {
+      "provider_intent": "gumroad__v2__sales__id___get",
+      "provider_alias_intent": "/v2/sales/id",
+      "text": "Retrieves the details of a sale by this user",
+      "category": "Sales",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Sales ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Sales ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieves the details of a sale by this user",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/sales/:id",
+        "alias_endpoint": "/v2/sales/id",
+        "api_ref": "https://app.gumroad.com/api#sales"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__sales__id__mark_as_shipped___put": {
+      "provider_intent": "gumroad__v2__sales__id__mark_as_shipped___put",
+      "provider_alias_intent": "/v2/sales/id/mark_as_shipped",
+      "text": "Marks a sale as shipped",
+      "category": "Sales",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Sales ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "tracking_url": {
+          "type": "string"
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Sales ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Marks a sale as shipped",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/sales/:id/mark_as_shipped",
+        "alias_endpoint": "/v2/sales/id/mark_as_shipped",
+        "api_ref": "https://app.gumroad.com/api#sales"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__sales__id__refund___put": {
+      "provider_intent": "gumroad__v2__sales__id__refund___put",
+      "provider_alias_intent": "/v2/sales/id/refund",
+      "text": "Refunds a sale",
+      "category": "Sales",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Sales ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "amount_cents": {
+          "type": "string",
+          "text": "Amount in cents (in currency of the sale) to be refunded. If set issue partial refund by this amount. If not set; issue full refund. You can issue multiple partial refunds per sale until it is fully refunded."
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Sales ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Refunds a sale",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/sales/:id/refund",
+        "alias_endpoint": "/v2/sales/id/refund",
+        "api_ref": "https://app.gumroad.com/api#sales"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__products__product_id__subscribers___get": {
+      "provider_intent": "gumroad__v2__products__product_id__subscribers___get",
+      "provider_alias_intent": "/v2/products/product_id/subscribers",
+      "text": "Retrieves all of the active subscribers for one of the authenticated user's products",
+      "category": "Subscribers",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        },
+        "email": {
+          "type": "string",
+          "text": "Filter subscribers by this email"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieves all of the active subscribers for one of the authenticated user's products",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/products/:product_id/subscribers",
+        "alias_endpoint": "/v2/products/product_id/subscribers",
+        "api_ref": "https://app.gumroad.com/api#subscribers"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__subscribers__id___get": {
+      "provider_intent": "gumroad__v2__subscribers__id___get",
+      "provider_alias_intent": "/v2/subscribers/id",
+      "text": "Retrieves the details of a subscriber to this user's product",
+      "category": "Subscribers",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Subscribers ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Subscribers ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieves the details of a subscriber to this user's product",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/subscribers/:id",
+        "alias_endpoint": "/v2/subscribers/id",
+        "api_ref": "https://app.gumroad.com/api#subscribers"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__user___get": {
+      "provider_intent": "gumroad__v2__user___get",
+      "provider_alias_intent": "/v2/user",
+      "text": "Retrieve the user's data",
+      "category": "User",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve the user's data",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/user",
+        "alias_endpoint": "/v2/user",
+        "api_ref": "https://app.gumroad.com/api#user"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__products__product_id__variant_categories___post": {
+      "provider_intent": "gumroad__v2__products__product_id__variant_categories___post",
+      "provider_alias_intent": "/v2/products/product_id/variant_categories",
+      "text": "Create a new variant category on a product",
+      "category": "Variant categories",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "variant_category": {
+          "type": "string",
+          "required": true
+        },
+        "title": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "path": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Create a new variant category on a product",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/products/:product_id/variant_categories",
+        "alias_endpoint": "/v2/products/product_id/variant_categories",
+        "api_ref": "https://app.gumroad.com/api#variant-categories"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__products__product_id__variant_categories__id___get": {
+      "provider_intent": "gumroad__v2__products__product_id__variant_categories__id___get",
+      "provider_alias_intent": "/v2/products/product_id/variant_categories/id",
+      "text": "Retrieve the details of a variant category of a product",
+      "category": "Variant categories",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve the details of a variant category of a product",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/products/:product_id/variant_categories/:id",
+        "alias_endpoint": "/v2/products/product_id/variant_categories/id",
+        "api_ref": "https://app.gumroad.com/api#variant-categories"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__products__product_id__variant_categories__id___put": {
+      "provider_intent": "gumroad__v2__products__product_id__variant_categories__id___put",
+      "provider_alias_intent": "/v2/products/product_id/variant_categories/id",
+      "text": "Edit a variant category of an existing product",
+      "category": "Variant categories",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "variant_category": {
+          "type": "string",
+          "required": true
+        },
+        "title": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "path": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Edit a variant category of an existing product",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/products/:product_id/variant_categories/:id",
+        "alias_endpoint": "/v2/products/product_id/variant_categories/id",
+        "api_ref": "https://app.gumroad.com/api#variant-categories"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__products__product_id__variant_categories__id___delete": {
+      "provider_intent": "gumroad__v2__products__product_id__variant_categories__id___delete",
+      "provider_alias_intent": "/v2/products/product_id/variant_categories/id",
+      "text": "Permanently delete a variant category of a product",
+      "category": "Variant categories",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Permanently delete a variant category of a product",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/products/:product_id/variant_categories/:id",
+        "alias_endpoint": "/v2/products/product_id/variant_categories/id",
+        "api_ref": "https://app.gumroad.com/api#variant-categories"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__products__product_id__variant_categories___get": {
+      "provider_intent": "gumroad__v2__products__product_id__variant_categories___get",
+      "provider_alias_intent": "/v2/products/product_id/variant_categories",
+      "text": "Retrieve all of the existing variant categories of a product",
+      "category": "Variant categories",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve all of the existing variant categories of a product",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/products/:product_id/variant_categories",
+        "alias_endpoint": "/v2/products/product_id/variant_categories",
+        "api_ref": "https://app.gumroad.com/api#variant-categories"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__products__product_id__variant_categories__variant_category_id__variantss___post": {
+      "provider_intent": "gumroad__v2__products__product_id__variant_categories__variant_category_id__variantss___post",
+      "provider_alias_intent": "/v2/products/product_id/variant_categories/variant_category_id/variantss",
+      "text": "Create a new variant of a product",
+      "category": "Variant categories",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        },
+        "variant_category_id": {
+          "type": "string",
+          "text": "Variant Category ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "variant": {
+          "type": "string",
+          "required": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "price_difference_cents": {
+          "type": "string",
+          "required": true
+        },
+        "max_purchase_count": {
+          "type": "string"
+        }
+      },
+      "path": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        },
+        "variant_category_id": {
+          "type": "string",
+          "text": "Variant Category ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Create a new variant of a product",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/products/:product_id/variant_categories/:variant_category_id/variantss",
+        "alias_endpoint": "/v2/products/product_id/variant_categories/variant_category_id/variantss",
+        "api_ref": "https://app.gumroad.com/api#variant-categories"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__products__product_id__variant_categories__variant_category_id__variants__id___get": {
+      "provider_intent": "gumroad__v2__products__product_id__variant_categories__variant_category_id__variants__id___get",
+      "provider_alias_intent": "/v2/products/product_id/variant_categories/variant_category_id/variants/id",
+      "text": "Retrieve the details of a variant of a product",
+      "category": "Variant categories",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        },
+        "variant_category_id": {
+          "type": "string",
+          "text": "Variant Category ID",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        },
+        "variant_category_id": {
+          "type": "string",
+          "text": "Variant Category ID",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve the details of a variant of a product",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/products/:product_id/variant_categories/:variant_category_id/variants/:id",
+        "alias_endpoint": "/v2/products/product_id/variant_categories/variant_category_id/variants/id",
+        "api_ref": "https://app.gumroad.com/api#variant-categories"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__products__product_id__variant_categories__variant_category_id__variants__id___put": {
+      "provider_intent": "gumroad__v2__products__product_id__variant_categories__variant_category_id__variants__id___put",
+      "provider_alias_intent": "/v2/products/product_id/variant_categories/variant_category_id/variants/id",
+      "text": "Edit a variant of an existing product",
+      "category": "Variant categories",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        },
+        "variant_category_id": {
+          "type": "string",
+          "text": "Variant Category ID",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "variant": {
+          "type": "string",
+          "required": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "price_difference_cents": {
+          "type": "string",
+          "required": true
+        },
+        "max_purchase_count": {
+          "type": "string"
+        }
+      },
+      "path": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        },
+        "variant_category_id": {
+          "type": "string",
+          "text": "Variant Category ID",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Edit a variant of an existing product",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/products/:product_id/variant_categories/:variant_category_id/variants/:id",
+        "alias_endpoint": "/v2/products/product_id/variant_categories/variant_category_id/variants/id",
+        "api_ref": "https://app.gumroad.com/api#variant-categories"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__products__product_id__variant_categories__variant_category_id__variants__id___delete": {
+      "provider_intent": "gumroad__v2__products__product_id__variant_categories__variant_category_id__variants__id___delete",
+      "provider_alias_intent": "/v2/products/product_id/variant_categories/variant_category_id/variants/id",
+      "text": "Permanently delete a variant of a product",
+      "category": "Variant categories",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        },
+        "variant_category_id": {
+          "type": "string",
+          "text": "Variant Category ID",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        },
+        "variant_category_id": {
+          "type": "string",
+          "text": "Variant Category ID",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Permanently delete a variant of a product",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/products/:product_id/variant_categories/:variant_category_id/variants/:id",
+        "alias_endpoint": "/v2/products/product_id/variant_categories/variant_category_id/variants/id",
+        "api_ref": "https://app.gumroad.com/api#variant-categories"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "gumroad__v2__products__product_id__variant_categories__variant_category_id__variants___get": {
+      "provider_intent": "gumroad__v2__products__product_id__variant_categories__variant_category_id__variants___get",
+      "provider_alias_intent": "/v2/products/product_id/variant_categories/variant_category_id/variants",
+      "text": "Retrieve all of the existing variants in a variant category",
+      "category": "Variant categories",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        },
+        "variant_category_id": {
+          "type": "string",
+          "text": "Variant Category ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "product_id": {
+          "type": "string",
+          "text": "Product ID",
+          "required": true
+        },
+        "variant_category_id": {
+          "type": "string",
+          "text": "Variant Category ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve all of the existing variants in a variant category",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gumroad.com/v2/products/:product_id/variant_categories/:variant_category_id/variants",
+        "alias_endpoint": "/v2/products/product_id/variant_categories/variant_category_id/variants",
+        "api_ref": "https://app.gumroad.com/api#variant-categories"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

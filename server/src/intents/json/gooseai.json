@@ -1,0 +1,204 @@
+{
+  "routes": {
+    "gooseai__v1__engines___get": {
+      "provider_intent": "gooseai__v1__engines___get",
+      "provider_alias_intent": "/v1/engines",
+      "provider_proxy_intent": "https://api.goose.ai/v1/engines",
+      "text": "List engines",
+      "category": "Engines",
+      "method": "Get",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://www.goose.ai/docs/api/engines",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Lists the currently available engines, and provides basic information about each one such as the owner and availability.",
+        "api_endpoint": "https://api.goose.ai/v1/engines",
+        "alias_endpoint": "/gooseai/v1/engines"
+      },
+      "auth": {
+        "header": {
+          "authKey": "token",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "gooseai__v1__engines__engine_id___get": {
+      "provider_intent": "gooseai__v1__engines__engine_id___get",
+      "provider_alias_intent": "/v1/engines/engine_id",
+      "provider_proxy_intent": "https://api.goose.ai/v1/engines/{engine_id}",
+      "text": "Get engines",
+      "category": "Engines",
+      "method": "Get",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "engine_id": {
+          "text": "Engine Id",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://www.goose.ai/docs/api/engines",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Gets information about an individual engine available, such as the owner, name, availability, and description.",
+        "api_endpoint": "https://api.goose.ai/v1/engines/{engine_id}",
+        "alias_endpoint": "/gooseai/v1/engines/engine_id"
+      },
+      "auth": {
+        "header": {
+          "authKey": "token",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:32:03.000Z"
+    },
+    "gooseai__v1__engines__engine_id__completions___post": {
+      "provider_intent": "gooseai__v1__engines__engine_id__completions___post",
+      "provider_alias_intent": "/v1/engines/engine_id/completions",
+      "provider_proxy_intent": "https://api.goose.ai/v1/engines/{engine_id}/completions",
+      "text": "Create completion",
+      "category": "Completions",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "engine_id": {
+          "text": "Engine Id",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "n": {
+          "text": "n number of completions to perform per prompt",
+          "type": "number"
+        },
+        "tfs": {
+          "text": "Number between 0 and 1.0. Similar to nucleus sampling, but it sets its cutoff point based on the cumulative sum of the accelerations (second derivatives) of the sorted token probabilities rather than the probabilities themselves",
+          "type": "number"
+        },
+        "echo": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "Echo back the prompt in addition to the completion",
+          "type": "boolean"
+        },
+        "stop": {
+          "text": "Stops completion when string or one of the strings in the array is encountered.",
+          "type": "string"
+        },
+        "top_a": {
+          "text": "Number between 0 and 1.0",
+          "type": "number"
+        },
+        "top_k": {
+          "text": "Truncates logits to the set value",
+          "type": "number"
+        },
+        "top_p": {
+          "text": "An integer between 0 and 20 specifying the number of most likely tokens to return at each token position, each with an associated log probability",
+          "type": "number"
+        },
+        "prompt": {
+          "text": "The prompt(s) to generate completions for, encoded as a string, array of strings, array of tokens, or array of token arrays",
+          "type": "string"
+        },
+        "stream": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "Number between 0 and 1.0. Selects tokens according to the expected amount of information they contribute.",
+          "type": "boolean"
+        },
+        "logprobs": {
+          "text": "Include the log probabilities on the logprobs most likely tokens, as well the chosen tokens. ",
+          "type": "number"
+        },
+        "typical_p": {
+          "text": "Number between 0 and 1.0. Selects tokens according to the expected amount of information they contribute.",
+          "type": "number"
+        },
+        "logit_bias": {
+          "text": "Bias for or against the specified tokens appearing",
+          "type": "number"
+        },
+        "max_tokens": {
+          "text": "The maximum number of tokens to generate in the completion",
+          "type": "number"
+        },
+        "min_tokens": {
+          "text": "The minimum number of tokens to generate in the completion",
+          "type": "number"
+        },
+        "temperature": {
+          "text": "Whether to return log probabilities of the output tokens or not",
+          "type": "number"
+        },
+        "presence_penalty": {
+          "text": "Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.",
+          "type": "number"
+        },
+        "frequency_penalty": {
+          "text": "Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.",
+          "type": "number"
+        },
+        "repetition_penalty": {
+          "text": "Number between 0 and 8.0. HuggingFace repetition penalty implementation, uses a divisor",
+          "type": "number"
+        },
+        "repetition_penalty_range": {
+          "text": "Number between 0 and 2048. The token range to apply the repetition_penalty and repetition_penalty_slope",
+          "type": "number"
+        },
+        "repetition_penalty_slope": {
+          "text": "Number between 0 and 1.0",
+          "type": "number"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://www.goose.ai/docs/api/completions",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Given a prompt, the model will return one or more predicted completions, and can also return the probabilities of alternative tokens at each position.",
+        "api_endpoint": "https://api.goose.ai/v1/engines/{engine_id}/completions",
+        "alias_endpoint": "/gooseai/v1/engines/engine_id/completions"
+      },
+      "auth": {
+        "header": {
+          "authKey": "token",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:31:39.000Z"
+    }
+  }
+}

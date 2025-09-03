@@ -1,0 +1,3152 @@
+{
+  "app": {
+    "title": "Drip API",
+    "description": "",
+    "api_base": "/drip",
+    "copyright": "",
+    "copyright_year": "",
+    "contact_email": ""
+  },
+  "category": {
+    "All": ""
+  },
+  "routes": {
+    "list_all_accounts": {
+      "provider_intent": "list_all_accounts",
+      "provider_alias_intent": "/v2/accounts",
+      "text": "List all accounts",
+      "category": "Accounts",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List all accounts",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/accounts",
+        "alias_endpoint": "/drip/v2/accounts",
+        "api_ref": "https://developer.drip.com/#list-all-accounts"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "fetch_an_account": {
+      "provider_intent": "fetch_an_account",
+      "provider_alias_intent": "/v2/accounts/account_id",
+      "text": "Fetch an account",
+      "category": "Accounts",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Fetch an account",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/accounts/:account_id",
+        "alias_endpoint": "/drip/v2/accounts/account_id",
+        "api_ref": "https://developer.drip.com/#fetch-an-account"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "create_or_update_a_batch_of_subscribers": {
+      "provider_intent": "create_or_update_a_batch_of_subscribers",
+      "provider_alias_intent": "/v2/account_id/subscribers/batches",
+      "text": "Create or update a batch of subscribers",
+      "category": "Batch API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "batches": {
+          "type": "array",
+          "required": true,
+          "examples": [
+            {
+              "subscribers": [
+                {
+                  "email": "john@acme.com",
+                  "time_zone": "America/Los_Angeles",
+                  "tags": [
+                    "Customer",
+                    "SEO"
+                  ],
+                  "custom_fields": {
+                    "shirt_size": "Medium"
+                  }
+                },
+                {
+                  "email": "joe@acme.com",
+                  "time_zone": "America/Los_Angeles",
+                  "tags": [
+                    "Prospect"
+                  ],
+                  "custom_fields": {
+                    "shirt_size": "Medium"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Create or update a batch of subscribers",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/subscribers/batches",
+        "alias_endpoint": "/drip/v2/account_id/subscribers/batches",
+        "api_ref": "https://developer.drip.com/#create-or-update-a-batch-of-subscribers"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "unsubscribe_a_batch_of_subscribers": {
+      "provider_intent": "unsubscribe_a_batch_of_subscribers",
+      "provider_alias_intent": "/v2/account_id/unsubscribes/batches",
+      "text": "Unsubscribe a batch of subscribers",
+      "category": "Batch API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "batches": {
+          "type": "array",
+          "required": true,
+          "examples": [
+            {
+              "subscribers": [
+                {
+                  "email": "john@acme.com"
+                },
+                {
+                  "email": "jane@acme.com"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Unsubscribe a batch of subscribers",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/unsubscribes/batches",
+        "alias_endpoint": "/drip/v2/account_id/unsubscribes/batches",
+        "api_ref": "https://developer.drip.com/#unsubscribe-a-batch-of-subscribers"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "record_a_batch_of_events": {
+      "provider_intent": "record_a_batch_of_events",
+      "provider_alias_intent": "/v2/account_id/events/batches",
+      "text": "Record a batch of events",
+      "category": "Batch API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "batches": {
+          "type": "array",
+          "required": true,
+          "examples": [
+            {
+              "events": [
+                {
+                  "email": "john@acme.com",
+                  "action": "Opened a door"
+                },
+                {
+                  "email": "joe@acme.com",
+                  "action": "Closed a door"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Record a batch of events",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/events/batches",
+        "alias_endpoint": "/drip/v2/account_id/events/batches",
+        "api_ref": "https://developer.drip.com/#record-a-batch-of-events"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "create_or_update_a_batch_of_carts": {
+      "provider_intent": "create_or_update_a_batch_of_carts",
+      "provider_alias_intent": "/v3/account_id/shopper_activity/cart/batch",
+      "text": "Create or update a batch of carts",
+      "category": "Batch API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "carts": {
+          "type": "array",
+          "required": true,
+          "examples": [
+            {
+              "provider": "my_custom_platform",
+              "email": "user@gmail.com",
+              "action": "created",
+              "cart_id": "456445746",
+              "occurred_at": "2019-01-17T20:50:00Z",
+              "cart_public_id": "#5",
+              "grand_total": 16.99,
+              "total_discounts": 5.34,
+              "currency": "USD",
+              "cart_url": "https://mysuperstore.com/cart/456445746",
+              "items": [
+                {
+                  "product_id": "B01J4SWO1G",
+                  "product_variant_id": "B01J4SWO1G-CW-BOTT",
+                  "sku": "XHB-1234",
+                  "name": "The Coolest Water Bottle",
+                  "brand": "Drip",
+                  "categories": [
+                    "Accessories"
+                  ],
+                  "price": 11.16,
+                  "quantity": 2,
+                  "discounts": 5.34,
+                  "total": 16.99,
+                  "product_url": "https://mysuperstore.com/dp/B01J4SWO1G",
+                  "image_url": "https://www.getdrip.com/images/example_products/water_bottle.png",
+                  "product_tag": "Best Seller"
+                }
+              ]
+            },
+            {
+              "provider": "my_custom_platform",
+              "email": "john@acme.com",
+              "action": "created",
+              "occurred_at": "2019-03-12T15:31:58Z",
+              "cart_id": "63754763",
+              "cart_public_id": "#4",
+              "grand_total": 54,
+              "total_discounts": 1,
+              "currency": "USD",
+              "order_url": "http://myorders.com/orders/4",
+              "items": [
+                {
+                  "product_id": "B01F9AQ99M",
+                  "product_variant_id": "B01F9AQ99M-YEL-BT",
+                  "sku": "JDT-4321",
+                  "name": "Yellow Boots of Might",
+                  "brand": "Drip",
+                  "categories": [
+                    "Of Might",
+                    "Outdoors"
+                  ],
+                  "price": 55,
+                  "quantity": 1,
+                  "discounts": 1,
+                  "total": 54,
+                  "color": "black",
+                  "product_url": "https://mysuperstore.com/dp/B01F9AQ99M",
+                  "image_url": "https://www.getdrip.com/images/example_products/boots.png"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Create or update a batch of carts",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v3/:account_id/shopper_activity/cart/batch",
+        "alias_endpoint": "/drip/v3/account_id/shopper_activity/cart/batch",
+        "api_ref": "https://developer.drip.com/#create-or-update-a-batch-of-carts"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "create_or_update_a_batch_of_orders_legacy": {
+      "provider_intent": "create_or_update_a_batch_of_orders_legacy",
+      "provider_alias_intent": "/v2/account_id/orders/batches",
+      "text": "Create or update a batch of orders (Legacy)",
+      "category": "Batch API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "batches": {
+          "type": "array",
+          "required": true,
+          "examples": [
+            {
+              "orders": [
+                {
+                  "email": "john@acme.com",
+                  "provider": "shopify",
+                  "upstream_id": "abcdef",
+                  "identifier": "Order_123456",
+                  "amount": 4900,
+                  "tax": 100,
+                  "fees": 0,
+                  "discount": 0,
+                  "permalink": "http://myorders.com/orders/123456",
+                  "currency_code": "USD",
+                  "properties": {
+                    "shirt_size": "Medium",
+                    "color": "red"
+                  },
+                  "occurred_at": "2013-06-21T10:31:58Z",
+                  "closed_at": "2013-06-21T10:35:58Z",
+                  "cancelled_at": null,
+                  "financial_state": "paid",
+                  "fulfillment_state": "fulfilled",
+                  "billing_address": {
+                    "name": "Bill Billington",
+                    "first_name": "Bill",
+                    "last_name": "Billington",
+                    "company": "Bills R US",
+                    "address_1": "123 Bill St.",
+                    "address_2": "Apt. B",
+                    "city": "Billtown",
+                    "state": "CA",
+                    "zip": "01234",
+                    "country": "United States",
+                    "phone": "555-555-5555",
+                    "email": "bill@bills.com"
+                  },
+                  "shipping_address": {
+                    "name": "Ship Shippington",
+                    "first_name": "Ship",
+                    "last_name": "Shipington",
+                    "company": "Shipping 4 Less",
+                    "address_1": "123 Ship St.",
+                    "address_2": "null",
+                    "city": "Shipville",
+                    "state": "CA",
+                    "zip": "01234",
+                    "country": "United States",
+                    "phone": "555-555-5555",
+                    "email": "ship@shipping.com"
+                  },
+                  "items": [
+                    {
+                      "id": "8888888",
+                      "product_id": "765432",
+                      "sku": "4444",
+                      "amount": 4900,
+                      "name": "Canoe",
+                      "quantity": 1,
+                      "upstream_id": "hijkl",
+                      "upstream_product_id": "opqrs",
+                      "upstream_product_variant_id": "zyxwv",
+                      "price": 4900,
+                      "tax": 100,
+                      "fees": 0,
+                      "discount": 100,
+                      "taxable": true,
+                      "properties": {
+                        "color": "black"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "email": "joe@acme.com",
+                  "provider": "shopify",
+                  "upstream_id": "fedcba",
+                  "identifier": "Order_654321",
+                  "amount": 4900,
+                  "tax": 100,
+                  "fees": 0,
+                  "discount": 0,
+                  "permalink": "http://myorders.com/orders/654321",
+                  "currency_code": "USD",
+                  "properties": {
+                    "size": "small",
+                    "color": "blue"
+                  },
+                  "occurred_at": "2013-05-18T10:31:58Z",
+                  "closed_at": "2013-05-18T10:35:58Z",
+                  "cancelled_at": null,
+                  "financial_state": "paid",
+                  "fulfillment_state": "fulfilled",
+                  "billing_address": {
+                    "name": "Bill Billington",
+                    "first_name": "Bill",
+                    "last_name": "Billington",
+                    "company": "Bills R US",
+                    "address_1": "123 Bill St.",
+                    "address_2": "Apt. B",
+                    "city": "Billtown",
+                    "state": "CA",
+                    "zip": "01234",
+                    "country": "United States",
+                    "phone": "555-555-5555",
+                    "email": "bill@bills.com"
+                  },
+                  "shipping_address": {
+                    "name": "Ship Shippington",
+                    "first_name": "Ship",
+                    "last_name": "Shipington",
+                    "company": "Shipping 4 Less",
+                    "address_1": "123 Ship St.",
+                    "address_2": "null",
+                    "city": "Shipville",
+                    "state": "CA",
+                    "zip": "01234",
+                    "country": "United States",
+                    "phone": "555-555-5555",
+                    "email": "ship@shipping.com"
+                  },
+                  "items": [
+                    {
+                      "id": "8888888",
+                      "product_id": "765432",
+                      "sku": "4444",
+                      "amount": 4900,
+                      "name": "Canoe",
+                      "quantity": 1,
+                      "upstream_id": "hijkl",
+                      "upstream_product_id": "opqrs",
+                      "upstream_product_variant_id": "zyxwv",
+                      "price": 4900,
+                      "tax": 100,
+                      "fees": 0,
+                      "discount": 100,
+                      "taxable": true,
+                      "properties": {
+                        "color": "black"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Create or update a batch of orders (Legacy)",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/orders/batches",
+        "alias_endpoint": "/drip/v2/account_id/orders/batches",
+        "api_ref": "https://developer.drip.com/#create-or-update-a-batch-of-orders-legacy"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "create_or_update_a_batch_of_orders": {
+      "provider_intent": "create_or_update_a_batch_of_orders",
+      "provider_alias_intent": "/v3/account_id/shopper_activity/order/batch",
+      "text": "Create or update a batch of orders",
+      "category": "Batch API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "orders": {
+          "type": "array",
+          "required": true,
+          "examples": [
+            {
+              "provider": "my_custom_platform",
+              "email": "john@acme.com",
+              "action": "placed",
+              "occurred_at": "2019-03-12T15:31:58Z",
+              "order_id": "63754763",
+              "order_public_id": "#4",
+              "grand_total": 54,
+              "total_discounts": 1,
+              "total_taxes": 1,
+              "total_fees": 0,
+              "total_shipping": 5,
+              "currency": "USD",
+              "order_url": "http://myorders.com/orders/4",
+              "items": [
+                {
+                  "product_id": "B01F9AQ99M",
+                  "product_variant_id": "B01F9AQ99M-YEL-BT",
+                  "sku": "JDT-4321",
+                  "name": "Yellow Boots of Might",
+                  "brand": "Drip",
+                  "categories": [
+                    "Of Might",
+                    "Outdoors"
+                  ],
+                  "price": 49,
+                  "quantity": 1,
+                  "discounts": 1,
+                  "taxes": 1,
+                  "fees": 0,
+                  "shipping": 5,
+                  "total": 54,
+                  "color": "black",
+                  "product_url": "https://mysuperstore.com/dp/B01F9AQ99M",
+                  "image_url": "https://www.getdrip.com/images/example_products/boots.png"
+                }
+              ],
+              "billing_address": {
+                "label": "Primary Billing",
+                "first_name": "Bill",
+                "last_name": "Billington",
+                "company": "Bills R US",
+                "address_1": "123 Bill St.",
+                "address_2": "Apt. B",
+                "city": "Billtown",
+                "state": "CA",
+                "postal_code": "01234",
+                "country": "United States",
+                "phone": "555-555-5555"
+              },
+              "shipping_address": {
+                "label": "Downtown Office",
+                "first_name": "Ship",
+                "last_name": "Shipington",
+                "company": "Shipping 4 Less",
+                "address_1": "123 Ship St.",
+                "address_2": "null",
+                "city": "Shipville",
+                "state": "CA",
+                "postal_code": "01234",
+                "country": "United States",
+                "phone": "555-555-5555"
+              }
+            },
+            {
+              "provider": "my_custom_platform",
+              "email": "user@gmail.com",
+              "action": "updated",
+              "occurred_at": "2019-03-12T15:27:16Z",
+              "order_id": "456445746",
+              "order_public_id": "#5",
+              "grand_total": 21.48,
+              "total_discounts": 5.34,
+              "total_taxes": 1,
+              "total_fees": 2,
+              "total_shipping": 5,
+              "currency": "USD",
+              "order_url": "https://mysuperstore.com/order/5",
+              "items": [
+                {
+                  "product_id": "B01J4SWO1G",
+                  "product_variant_id": "B01J4SWO1G-CW-BOTT",
+                  "sku": "XHB-1234",
+                  "name": "The Coolest Water Bottle",
+                  "brand": "Drip",
+                  "categories": [
+                    "Accessories"
+                  ],
+                  "price": 11.16,
+                  "sale_price": 10.16,
+                  "quantity": 2,
+                  "discounts": 5.34,
+                  "taxes": 1,
+                  "fees": 0.5,
+                  "shipping": 5,
+                  "total": 21.48,
+                  "product_url": "https://mysuperstore.com/dp/B01J4SWO1G",
+                  "image_url": "https://www.getdrip.com/images/example_products/water_bottle.png",
+                  "product_tag": "Best Seller"
+                }
+              ],
+              "billing_address": {
+                "label": "Primary Billing",
+                "first_name": "Bill",
+                "last_name": "Billington",
+                "company": "Bills R US",
+                "address_1": "123 Bill St.",
+                "address_2": "Apt. B",
+                "city": "Billtown",
+                "state": "CA",
+                "postal_code": "01234",
+                "country": "United States",
+                "phone": "555-555-5555"
+              },
+              "shipping_address": {
+                "label": "Downtown Office",
+                "first_name": "Ship",
+                "last_name": "Shipington",
+                "company": "Shipping 4 Less",
+                "address_1": "123 Ship St.",
+                "city": "Shipville",
+                "state": "CA",
+                "postal_code": "01234",
+                "country": "United States",
+                "phone": "555-555-5555"
+              }
+            }
+          ]
+        }
+      },
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Create or update a batch of orders",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v3/:account_id/shopper_activity/order/batch",
+        "alias_endpoint": "/drip/v3/account_id/shopper_activity/order/batch",
+        "api_ref": "https://developer.drip.com/#create-or-update-a-batch-of-orders"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "create_or_update_a_batch_of_products": {
+      "provider_intent": "create_or_update_a_batch_of_products",
+      "provider_alias_intent": "/v3/account_id/shopper_activity/product/batch",
+      "text": "Create or update a batch of products",
+      "category": "Batch API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "products": {
+          "type": "array",
+          "required": true,
+          "examples": [
+            {
+              "provider": "my_custom_platform",
+              "action": "created",
+              "occurred_at": "2019-01-28T12:15:23Z",
+              "product_id": "B01J4SWO1G",
+              "product_variant_id": "B01J4SWO1G-CW-BOTT",
+              "sku": "XHB-1234",
+              "name": "The Coolest Water Bottle",
+              "brand": "Drip",
+              "categories": [
+                "Accessories"
+              ],
+              "price": 11.16,
+              "inventory": 42,
+              "product_url": "https://mysuperstore.com/dp/B01J4SWO1G",
+              "image_url": "https://www.getdrip.com/images/example_products/water_bottle.png"
+            },
+            {
+              "provider": "my_custom_platform",
+              "action": "created",
+              "occurred_at": "2019-01-28T12:15:23Z",
+              "product_id": "B01J4SWO1G2",
+              "product_variant_id": "B01J4SWO1G-CW-BOTT2",
+              "sku": "XHB-1235",
+              "name": "The Coolest Water Bottle",
+              "brand": "Drip",
+              "categories": [
+                "Accessories"
+              ],
+              "price": 11.16,
+              "inventory": 42,
+              "product_url": "https://mysuperstore.com/dp/B01J4SWO1G2",
+              "image_url": "https://www.getdrip.com/images/example_products/water_bottle.png"
+            },
+            {
+              "provider": "my_custom_platform",
+              "action": "created",
+              "occurred_at": "2019-01-28T12:15:23Z",
+              "product_id": "B01J4SWO1G3",
+              "product_variant_id": "B01J4SWO1G-CW-BOTT3",
+              "sku": "XHB-1236",
+              "name": "The Coolest Water Bottle",
+              "brand": "Drip",
+              "categories": [
+                "Accessories"
+              ],
+              "price": 11.16,
+              "inventory": 42,
+              "product_url": "https://mysuperstore.com/dp/B01J4SWO1G3",
+              "image_url": "https://www.getdrip.com/images/example_products/water_bottle.png"
+            }
+          ]
+        }
+      },
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Create or update a batch of products",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v3/:account_id/shopper_activity/product/batch",
+        "alias_endpoint": "/drip/v3/account_id/shopper_activity/product/batch",
+        "api_ref": "https://developer.drip.com/#create-or-update-a-batch-of-products"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "create_or_update_a_cart": {
+      "provider_intent": "create_or_update_a_cart",
+      "provider_alias_intent": "/v3/account_id/shopper_activity/cart",
+      "text": "Create or update a cart",
+      "category": "Cart Activity",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Create or update a cart",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v3/:account_id/shopper_activity/cart",
+        "alias_endpoint": "/drip/v3/account_id/shopper_activity/cart",
+        "api_ref": "https://developer.drip.com/#create-or-update-a-cart"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "list_all_conversions": {
+      "provider_intent": "list_all_conversions",
+      "provider_alias_intent": "/v2/account_id/goals",
+      "text": "List all conversions",
+      "category": "Conversions",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List all conversions",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/goals",
+        "alias_endpoint": "/drip/v2/account_id/goals",
+        "api_ref": "https://developer.drip.com/#list-all-conversions"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "fetch_a_conversion": {
+      "provider_intent": "fetch_a_conversion",
+      "provider_alias_intent": "/v2/account_id/goals/conversion_id",
+      "text": "Fetch a conversion",
+      "category": "Conversions",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "conversion_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "conversion_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Fetch a conversion",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/goals/:conversion_id",
+        "alias_endpoint": "/drip/v2/account_id/goals/conversion_id",
+        "api_ref": "https://developer.drip.com/#fetch-a-conversion"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "list_all_custom_field_identifiers_used_in_an_account": {
+      "provider_intent": "list_all_custom_field_identifiers_used_in_an_account",
+      "provider_alias_intent": "/v2/account_id/custom_field_identifiers",
+      "text": "List all custom field identifiers used in an account",
+      "category": "Custom Fields",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List all custom field identifiers used in an account",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/custom_field_identifiers",
+        "alias_endpoint": "/drip/v2/account_id/custom_field_identifiers",
+        "api_ref": "https://developer.drip.com/#list-all-custom-field-identifiers-used-in-an-account"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "list_all_email_series_campaigns": {
+      "provider_intent": "list_all_email_series_campaigns",
+      "provider_alias_intent": "/v2/account_id/campaigns",
+      "text": "List all Email Series Campaigns",
+      "category": "Email Series Campaigns",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List all Email Series Campaigns",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/campaigns",
+        "alias_endpoint": "/drip/v2/account_id/campaigns",
+        "api_ref": "https://developer.drip.com/#list-all-email-series-campaigns"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "fetch_an_email_series_campaign": {
+      "provider_intent": "fetch_an_email_series_campaign",
+      "provider_alias_intent": "/v2/account_id/campaigns/campaign_id",
+      "text": "Fetch an Email Series Campaign",
+      "category": "Email Series Campaigns",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "campaign_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "campaign_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Fetch an Email Series Campaign",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/campaigns/:campaign_id",
+        "alias_endpoint": "/drip/v2/account_id/campaigns/campaign_id",
+        "api_ref": "https://developer.drip.com/#fetch-an-email-series-campaign"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "activate_an_email_series_campaign": {
+      "provider_intent": "activate_an_email_series_campaign",
+      "provider_alias_intent": "/v2/account_id/campaigns/campaign_id/activate",
+      "text": "Activate an Email Series Campaign",
+      "category": "Email Series Campaigns",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "campaign_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "campaign_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Activate an Email Series Campaign",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/campaigns/:campaign_id/activate",
+        "alias_endpoint": "/drip/v2/account_id/campaigns/campaign_id/activate",
+        "api_ref": "https://developer.drip.com/#activate-an-email-series-campaign"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "pause_an_email_series_campaign": {
+      "provider_intent": "pause_an_email_series_campaign",
+      "provider_alias_intent": "/v2/account_id/campaigns/campaign_id/pause",
+      "text": "Pause an Email Series Campaign",
+      "category": "Email Series Campaigns",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "campaign_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "campaign_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Pause an Email Series Campaign",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/campaigns/:campaign_id/pause",
+        "alias_endpoint": "/drip/v2/account_id/campaigns/campaign_id/pause",
+        "api_ref": "https://developer.drip.com/#pause-an-email-series-campaign"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "list_all_subscribers_subscribed_to_an_email_series_campaign": {
+      "provider_intent": "list_all_subscribers_subscribed_to_an_email_series_campaign",
+      "provider_alias_intent": "/v2/account_id/campaigns/campaign_id/subscribers",
+      "text": "List all subscribers subscribed to an Email Series Campaign",
+      "category": "Email Series Campaigns",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "campaign_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "campaign_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List all subscribers subscribed to an Email Series Campaign",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/campaigns/:campaign_id/subscribers",
+        "alias_endpoint": "/drip/v2/account_id/campaigns/campaign_id/subscribers",
+        "api_ref": "https://developer.drip.com/#list-all-subscribers-subscribed-to-an-email-series-campaign"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "subscribe_someone_to_an_email_series_campaign": {
+      "provider_intent": "subscribe_someone_to_an_email_series_campaign",
+      "provider_alias_intent": "/v2/account_id/campaigns/campaign_id/subscribers",
+      "text": "Subscribe someone to an Email Series Campaign",
+      "category": "Email Series Campaigns",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "campaign_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "subscribers": {
+          "type": "array",
+          "required": true,
+          "examples": [
+            {
+              "email": "john@acme.com",
+              "utc_offset": 660,
+              "double_optin": true,
+              "starting_email_index": 0,
+              "reactivate_if_removed": true,
+              "custom_fields": {
+                "shirt_size": "Medium"
+              }
+            }
+          ]
+        }
+      },
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "campaign_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Subscribe someone to an Email Series Campaign",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/campaigns/:campaign_id/subscribers",
+        "alias_endpoint": "/drip/v2/account_id/campaigns/campaign_id/subscribers",
+        "api_ref": "https://developer.drip.com/#subscribe-someone-to-an-email-series-campaign"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "list_all_of_a_subscriber's_email_series_campaign_subscriptions": {
+      "provider_intent": "list_all_of_a_subscriber's_email_series_campaign_subscriptions",
+      "provider_alias_intent": "/v2/account_id/subscribers/subscriber_id/campaign_subscriptions",
+      "text": "List all of a subscriber's Email Series Campaign subscriptions",
+      "category": "Email Series Campaigns",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "subscriber_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "subscriber_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List all of a subscriber's Email Series Campaign subscriptions",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/subscribers/:subscriber_id/campaign_subscriptions",
+        "alias_endpoint": "/drip/v2/account_id/subscribers/subscriber_id/campaign_subscriptions",
+        "api_ref": "https://developer.drip.com/#list-all-of-a-subscriber-39-s-email-series-campaign-subscriptions"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "record_an_event": {
+      "provider_intent": "record_an_event",
+      "provider_alias_intent": "/v2/account_id/events",
+      "text": "Record an event",
+      "category": "Events",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "events": {
+          "type": "array",
+          "required": true,
+          "examples": [
+            {
+              "email": "john@acme.com",
+              "action": "Logged in",
+              "properties": {
+                "affiliate_code": "XYZ"
+              },
+              "occurred_at": "2014-03-22T03:00:00Z"
+            }
+          ]
+        }
+      },
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Record an event",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/events",
+        "alias_endpoint": "/drip/v2/account_id/events",
+        "api_ref": "https://developer.drip.com/#record-an-event"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "list_all_custom_events_actions_used_in_an_account": {
+      "provider_intent": "list_all_custom_events_actions_used_in_an_account",
+      "provider_alias_intent": "/v2/account_id/event_actions",
+      "text": "List all custom events actions used in an account",
+      "category": "Events",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List all custom events actions used in an account",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/event_actions",
+        "alias_endpoint": "/drip/v2/account_id/event_actions",
+        "api_ref": "https://developer.drip.com/#list-all-custom-events-actions-used-in-an-account"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "list_all_forms": {
+      "provider_intent": "list_all_forms",
+      "provider_alias_intent": "/v2/account_id/forms",
+      "text": "List all forms",
+      "category": "Forms",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List all forms",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/forms",
+        "alias_endpoint": "/drip/v2/account_id/forms",
+        "api_ref": "https://developer.drip.com/#list-all-forms"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "fetch_a_form": {
+      "provider_intent": "fetch_a_form",
+      "provider_alias_intent": "/v2/account_id/forms/form_id",
+      "text": "Fetch a form",
+      "category": "Forms",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "form_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "form_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Fetch a form",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/forms/:form_id",
+        "alias_endpoint": "/drip/v2/account_id/forms/form_id",
+        "api_ref": "https://developer.drip.com/#fetch-a-form"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "create_or_update_an_order": {
+      "provider_intent": "create_or_update_an_order",
+      "provider_alias_intent": "/v3/account_id/shopper_activity/order",
+      "text": "Create or update an order",
+      "category": "Order Activity",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Create or update an order",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v3/:account_id/shopper_activity/order",
+        "alias_endpoint": "/drip/v3/account_id/shopper_activity/order",
+        "api_ref": "https://developer.drip.com/#sapi-create-or-update-order"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "create_or_update_an_order_legacy": {
+      "provider_intent": "create_or_update_an_order_legacy",
+      "provider_alias_intent": "/v2/account_id/orders",
+      "text": "Create or update an order (Legacy)",
+      "category": "Orders (Legacy)",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "orders": {
+          "type": "array",
+          "required": true,
+          "examples": [
+            {
+              "email": "john@acme.com",
+              "provider": "shopify",
+              "upstream_id": "abcdef",
+              "identifier": "Order_123456",
+              "amount": 4900,
+              "tax": 100,
+              "fees": 0,
+              "discount": 0,
+              "permalink": "http://myorders.com/orders/123456",
+              "currency_code": "USD",
+              "properties": {
+                "shirt_size": "Medium",
+                "color": "red"
+              },
+              "occurred_at": "2013-06-21T10:31:58Z",
+              "closed_at": "2013-06-21T10:35:58Z",
+              "financial_state": "paid",
+              "fulfillment_state": "fulfilled",
+              "billing_address": {
+                "name": "Bill Billington",
+                "first_name": "Bill",
+                "last_name": "Billington",
+                "company": "Bills R US",
+                "address_1": "123 Bill St.",
+                "address_2": "Apt. B",
+                "city": "Billtown",
+                "state": "CA",
+                "zip": "01234",
+                "country": "United States",
+                "phone": "555-555-5555",
+                "email": "bill@bills.com"
+              },
+              "shipping_address": {
+                "name": "Ship Shippington",
+                "first_name": "Ship",
+                "last_name": "Shipington",
+                "company": "Shipping 4 Less",
+                "address_1": "123 Ship St.",
+                "address_2": "null",
+                "city": "Shipville",
+                "state": "CA",
+                "zip": "01234",
+                "country": "United States",
+                "phone": "555-555-5555",
+                "email": "ship@shipping.com"
+              },
+              "items": [
+                {
+                  "id": "8888888",
+                  "product_id": "765432",
+                  "sku": "4444",
+                  "amount": 4900,
+                  "name": "Canoe",
+                  "quantity": 1,
+                  "upstream_id": "hijkl",
+                  "upstream_product_id": "opqrs",
+                  "upstream_product_variant_id": "zyxwv",
+                  "price": 4900,
+                  "tax": 100,
+                  "fees": 0,
+                  "discount": 100,
+                  "taxable": true,
+                  "properties": {
+                    "color": "black"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Create or update an order (Legacy)",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/orders",
+        "alias_endpoint": "/drip/v2/account_id/orders",
+        "api_ref": "https://developer.drip.com/#create-or-update-an-order"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "create_or_update_a_refund_legacy": {
+      "provider_intent": "create_or_update_a_refund_legacy",
+      "provider_alias_intent": "/v2/account_id/refunds",
+      "text": "Create or update a refund (Legacy)",
+      "category": "Orders (Legacy)",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "refunds": {
+          "type": "array",
+          "required": true,
+          "examples": [
+            {
+              "provider": "shopify",
+              "order_upstream_id": "abcdef",
+              "upstream_id": "tuvwx",
+              "amount": 2000,
+              "note": "Incorrect size",
+              "processed_at": "2013-06-22T10:41:11Z"
+            }
+          ]
+        }
+      },
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Create or update a refund (Legacy)",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/refunds",
+        "alias_endpoint": "/drip/v2/account_id/refunds",
+        "api_ref": "https://developer.drip.com/#create-or-update-a-refund"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "create_or_update_a_product": {
+      "provider_intent": "create_or_update_a_product",
+      "provider_alias_intent": "/v3/account_id/shopper_activity/product",
+      "text": "Create or update a product",
+      "category": "Product Activity",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Create or update a product",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v3/:account_id/shopper_activity/product",
+        "alias_endpoint": "/drip/v3/account_id/shopper_activity/product",
+        "api_ref": "https://developer.drip.com/#create-or-update-a-product"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "list_all_single-email_campaigns": {
+      "provider_intent": "list_all_single-email_campaigns",
+      "provider_alias_intent": "/v2/account_id/broadcasts",
+      "text": "List all Single-Email Campaigns",
+      "category": "Single-Email Campaigns",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List all Single-Email Campaigns",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/broadcasts",
+        "alias_endpoint": "/drip/v2/account_id/broadcasts",
+        "api_ref": "https://developer.drip.com/#list-all-single-email-campaigns"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "fetch_a_single-email_campaign": {
+      "provider_intent": "fetch_a_single-email_campaign",
+      "provider_alias_intent": "/v2/account_id/broadcasts/broadcast_id",
+      "text": "Fetch a Single-Email Campaign",
+      "category": "Single-Email Campaigns",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "broadcast_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "broadcast_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Fetch a Single-Email Campaign",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/broadcasts/:broadcast_id",
+        "alias_endpoint": "/drip/v2/account_id/broadcasts/broadcast_id",
+        "api_ref": "https://developer.drip.com/#fetch-a-single-email-campaign"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "create_or_update_a_subscriber": {
+      "provider_intent": "create_or_update_a_subscriber",
+      "provider_alias_intent": "/v2/account_id/subscribers",
+      "text": "Create or update a subscriber",
+      "category": "Subscribers",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "subscribers": {
+          "type": "array",
+          "required": true,
+          "examples": [
+            {
+              "email": "john@acme.com",
+              "time_zone": "America/Los_Angeles",
+              "custom_fields": {
+                "shirt_size": "Medium"
+              }
+            }
+          ]
+        }
+      },
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Create or update a subscriber",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/subscribers",
+        "alias_endpoint": "/drip/v2/account_id/subscribers",
+        "api_ref": "https://developer.drip.com/#create-or-update-a-subscriber"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "list_all_subscribers": {
+      "provider_intent": "list_all_subscribers",
+      "provider_alias_intent": "/v2/account_id/subscribers",
+      "text": "List all subscribers",
+      "category": "Subscribers",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List all subscribers",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/subscribers",
+        "alias_endpoint": "/drip/v2/account_id/subscribers",
+        "api_ref": "https://developer.drip.com/#list-all-subscribers"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "fetch_a_subscriber": {
+      "provider_intent": "fetch_a_subscriber",
+      "provider_alias_intent": "/v2/account_id/subscribers/id_or_email_or_visitor_uuid",
+      "text": "Fetch a subscriber",
+      "category": "Subscribers",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Fetch a subscriber",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/subscribers/:id_or_email_or_visitor_uuid",
+        "alias_endpoint": "/drip/v2/account_id/subscribers/id_or_email_or_visitor_uuid",
+        "api_ref": "https://developer.drip.com/#fetch-a-subscriber"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "remove_a_subscriber_from_one_or_all_email_series_campaigns": {
+      "provider_intent": "remove_a_subscriber_from_one_or_all_email_series_campaigns",
+      "provider_alias_intent": "/v2/account_id/subscribers/id_or_email/remove",
+      "text": "Remove a subscriber from one or all Email Series Campaigns",
+      "category": "Subscribers",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Remove a subscriber from one or all Email Series Campaigns",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/subscribers/:id_or_email/remove",
+        "alias_endpoint": "/drip/v2/account_id/subscribers/id_or_email/remove",
+        "api_ref": "https://developer.drip.com/#remove-a-subscriber-from-one-or-all-email-series-campaigns"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "unsubscribe_from_all_mailings": {
+      "provider_intent": "unsubscribe_from_all_mailings",
+      "provider_alias_intent": "/v2/account_id/subscribers/id_or_email/unsubscribe_all",
+      "text": "Unsubscribe from all mailings",
+      "category": "Subscribers",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Unsubscribe from all mailings",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/subscribers/:id_or_email/unsubscribe_all",
+        "alias_endpoint": "/drip/v2/account_id/subscribers/id_or_email/unsubscribe_all",
+        "api_ref": "https://developer.drip.com/#unsubscribe-from-all-mailings"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "delete_a_subscriber": {
+      "provider_intent": "delete_a_subscriber",
+      "provider_alias_intent": "/v2/account_id/subscribers/id_or_email",
+      "text": "Delete a subscriber",
+      "category": "Subscribers",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Delete a subscriber",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/subscribers/:id_or_email",
+        "alias_endpoint": "/drip/v2/account_id/subscribers/id_or_email",
+        "api_ref": "https://developer.drip.com/#delete-a-subscriber"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "list_all_tags_used_in_an_account": {
+      "provider_intent": "list_all_tags_used_in_an_account",
+      "provider_alias_intent": "/v2/account_id/tags",
+      "text": "List all tags used in an account",
+      "category": "Tags",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List all tags used in an account",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/tags",
+        "alias_endpoint": "/drip/v2/account_id/tags",
+        "api_ref": "https://developer.drip.com/#list-all-tags-used-in-an-account"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "apply_a_tag_to_a_subscriber": {
+      "provider_intent": "apply_a_tag_to_a_subscriber",
+      "provider_alias_intent": "/v2/account_id/tags",
+      "text": "Apply a tag to a subscriber",
+      "category": "Tags",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "tags": {
+          "type": "arry",
+          "required": true,
+          "examples": [
+            {
+              "email": "john@acme.com",
+              "tag": "Customer"
+            }
+          ]
+        }
+      },
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Apply a tag to a subscriber",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/tags",
+        "alias_endpoint": "/drip/v2/account_id/tags",
+        "api_ref": "https://developer.drip.com/#apply-a-tag-to-a-subscriber"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "remove_a_tag_from_a_subscriber": {
+      "provider_intent": "remove_a_tag_from_a_subscriber",
+      "provider_alias_intent": "/v2/account_id/subscribers/email/tags/tag",
+      "text": "Remove a tag from a subscriber",
+      "category": "Tags",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "email": {
+          "type": "string",
+          "required": true
+        },
+        "tag": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "email": {
+          "type": "string",
+          "required": true
+        },
+        "tag": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Remove a tag from a subscriber",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/subscribers/:email/tags/:tag",
+        "alias_endpoint": "/drip/v2/account_id/subscribers/email/tags/tag",
+        "api_ref": "https://developer.drip.com/#remove-a-tag-from-a-subscriber"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "fetch_the_authenticated_user": {
+      "provider_intent": "fetch_the_authenticated_user",
+      "provider_alias_intent": "/v2/user",
+      "text": "Fetch the authenticated user",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Fetch the authenticated user",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/user",
+        "alias_endpoint": "/drip/v2/user",
+        "api_ref": "https://developer.drip.com/#fetch-the-authenticated-user"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "list_all_webhooks": {
+      "provider_intent": "list_all_webhooks",
+      "provider_alias_intent": "/v2/account_id/webhooks",
+      "text": "List all webhooks",
+      "category": "Webhooks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List all webhooks",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/webhooks",
+        "alias_endpoint": "/drip/v2/account_id/webhooks",
+        "api_ref": "https://developer.drip.com/#list-all-webhooks"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "fetch_a_webhook": {
+      "provider_intent": "fetch_a_webhook",
+      "provider_alias_intent": "/v2/account_id/webhooks/webhook_id",
+      "text": "Fetch a webhook",
+      "category": "Webhooks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "webhook_id": {
+          "type": "",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "webhook_id": {
+          "type": "",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Fetch a webhook",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/webhooks/:webhook_id",
+        "alias_endpoint": "/drip/v2/account_id/webhooks/webhook_id",
+        "api_ref": "https://developer.drip.com/#fetch-a-webhook"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "create_a_new_webhook": {
+      "provider_intent": "create_a_new_webhook",
+      "provider_alias_intent": "/v2/account_id/webhooks",
+      "text": "Create a new webhook",
+      "category": "Webhooks",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "webhooks": {
+          "type": "array",
+          "required": true,
+          "examples": [
+            {
+              "post_url": "http://www.mysite.com/my-webhook-endpoint",
+              "events": [
+                "subscriber.created",
+                "subscriber.subscribed_to_campaign"
+              ]
+            }
+          ]
+        }
+      },
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Create a new webhook",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/webhooks",
+        "alias_endpoint": "/drip/v2/account_id/webhooks",
+        "api_ref": "https://developer.drip.com/#create-a-new-webhook"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "destroy_a_webhook": {
+      "provider_intent": "destroy_a_webhook",
+      "provider_alias_intent": "/v2/account_id/webhooks/webhook_id",
+      "text": "Destroy a webhook",
+      "category": "Webhooks",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "webhook_id": {
+          "type": "",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "webhook_id": {
+          "type": "",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Destroy a webhook",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/webhooks/:webhook_id",
+        "alias_endpoint": "/drip/v2/account_id/webhooks/webhook_id",
+        "api_ref": "https://developer.drip.com/#destroy-a-webhook"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "list_all_workflows": {
+      "provider_intent": "list_all_workflows",
+      "provider_alias_intent": "/v2/account_id/workflows",
+      "text": "List all workflows",
+      "category": "Workflows",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List all workflows",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/workflows",
+        "alias_endpoint": "/drip/v2/account_id/workflows",
+        "api_ref": "https://developer.drip.com/#list-all-workflows"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "fetch_a_workflow": {
+      "provider_intent": "fetch_a_workflow",
+      "provider_alias_intent": "/v2/account_id/workflows/workflow_id",
+      "text": "Fetch a workflow",
+      "category": "Workflows",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "workflow_id": {
+          "type": "",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "workflow_id": {
+          "type": "",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Fetch a workflow",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/workflows/:workflow_id",
+        "alias_endpoint": "/drip/v2/account_id/workflows/workflow_id",
+        "api_ref": "https://developer.drip.com/#fetch-a-workflow"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "activate_a_workflow": {
+      "provider_intent": "activate_a_workflow",
+      "provider_alias_intent": "/v2/account_id/workflows/workflow_id/activate",
+      "text": "Activate a workflow",
+      "category": "Workflows",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "workflow_id": {
+          "type": "",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "workflow_id": {
+          "type": "",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Activate a workflow",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/workflows/:workflow_id/activate",
+        "alias_endpoint": "/drip/v2/account_id/workflows/workflow_id/activate",
+        "api_ref": "https://developer.drip.com/#activate-a-workflow"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "pause_a_workflow": {
+      "provider_intent": "pause_a_workflow",
+      "provider_alias_intent": "/v2/account_id/workflows/workflow_id/pause",
+      "text": "Pause a workflow",
+      "category": "Workflows",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "workflow_id": {
+          "type": "",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "workflow_id": {
+          "type": "",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Pause a workflow",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/workflows/:workflow_id/pause",
+        "alias_endpoint": "/drip/v2/account_id/workflows/workflow_id/pause",
+        "api_ref": "https://developer.drip.com/#pause-a-workflow"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "start_someone_on_a_workflow": {
+      "provider_intent": "start_someone_on_a_workflow",
+      "provider_alias_intent": "/v2/account_id/workflows/workflow_id/subscribers",
+      "text": "Start someone on a workflow",
+      "category": "Workflows",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "workflow_id": {
+          "type": "",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "subscribers": {
+          "type": "array",
+          "required": true,
+          "examples": [
+            {
+              "email": "john@acme.com",
+              "time_zone": "America/Los_Angeles",
+              "custom_fields": {
+                "shirt_size": "Medium"
+              }
+            }
+          ]
+        }
+      },
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "workflow_id": {
+          "type": "",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Start someone on a workflow",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/workflows/:workflow_id/subscribers",
+        "alias_endpoint": "/drip/v2/account_id/workflows/workflow_id/subscribers",
+        "api_ref": "https://developer.drip.com/#start-someone-on-a-workflow"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "remove_a_subscriber_from_a_workflow": {
+      "provider_intent": "remove_a_subscriber_from_a_workflow",
+      "provider_alias_intent": "/v2/account_id/workflows/workflow_id/subscribers/id_or_email",
+      "text": "Remove a subscriber from a workflow",
+      "category": "Workflows",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "workflow_id": {
+          "type": "",
+          "required": true
+        },
+        "id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "workflow_id": {
+          "type": "",
+          "required": true
+        },
+        "id": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Remove a subscriber from a workflow",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/workflows/:workflow_id/subscribers/:id_or_email",
+        "alias_endpoint": "/drip/v2/account_id/workflows/workflow_id/subscribers/id_or_email",
+        "api_ref": "https://developer.drip.com/#remove-a-subscriber-from-a-workflow"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "list_all_workflow_triggers": {
+      "provider_intent": "list_all_workflow_triggers",
+      "provider_alias_intent": "/v2/account_id/workflows/workflow_id/triggers",
+      "text": "List all workflow triggers",
+      "category": "Workflows",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "workflow_id": {
+          "type": "",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "workflow_id": {
+          "type": "",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List all workflow triggers",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/workflows/:workflow_id/triggers",
+        "alias_endpoint": "/drip/v2/account_id/workflows/workflow_id/triggers",
+        "api_ref": "https://developer.drip.com/#list-all-workflow-triggers"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "create_a_workflow_trigger": {
+      "provider_intent": "create_a_workflow_trigger",
+      "provider_alias_intent": "/v2/account_id/workflows/workflow_id/triggers",
+      "text": "Create a workflow trigger",
+      "category": "Workflows",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "workflow_id": {
+          "type": "",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "triggers": {
+          "type": "array",
+          "required": true,
+          "examples": [
+            {
+              "provider": "leadpages",
+              "trigger_type": "submitted_landing_page",
+              "properties": {
+                "landing_page": "My Landing Page"
+              }
+            }
+          ]
+        }
+      },
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "workflow_id": {
+          "type": "",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Create a workflow trigger",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/workflows/:workflow_id/triggers",
+        "alias_endpoint": "/drip/v2/account_id/workflows/workflow_id/triggers",
+        "api_ref": "https://developer.drip.com/#create-a-workflow-trigger"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "update_a_workflow_trigger": {
+      "provider_intent": "update_a_workflow_trigger",
+      "provider_alias_intent": "/v2/account_id/workflows/workflow_id/triggers/trigger_id",
+      "text": "Update a workflow trigger",
+      "category": "Workflows",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "workflow_id": {
+          "type": "",
+          "required": true
+        },
+        "trigger_id": {
+          "type": "",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "triggers": {
+          "type": "array",
+          "required": true,
+          "examples": [
+            {
+              "provider": "leadpages",
+              "trigger_type": "submitted_landing_page",
+              "properties": {
+                "landing_page": "My Landing Page"
+              }
+            }
+          ]
+        }
+      },
+      "path": {
+        "account_id": {
+          "type": "number",
+          "required": true
+        },
+        "workflow_id": {
+          "type": "",
+          "required": true
+        },
+        "trigger_id": {
+          "type": "",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Update a workflow trigger",
+        "rate_limit": [],
+        "api_endpoint": "https://api.getdrip.com/v2/:account_id/workflows/:workflow_id/triggers/:trigger_id",
+        "alias_endpoint": "/drip/v2/account_id/workflows/workflow_id/triggers/trigger_id",
+        "api_ref": "https://developer.drip.com/#update-a-workflow-trigger"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "routes": {
+    "spaceship__v1__domains___get": {
+      "provider_intent": "spaceship__v1__domains___get",
+      "provider_alias_intent": "/v1/domains",
+      "text": "Get domain list",
+      "category": "Domains",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "skip": {
+          "text": "Number of response items to skip",
+          "type": "string",
+          "required": false
+        },
+        "take": {
+          "text": "Number of response items per page",
+          "type": "number",
+          "required": false
+        },
+        "orderBy": {
+          "text": "Specifies fields and order to sort the response items",
+          "type": "array",
+          "required": false
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.spaceship.dev/#tag/Domains/operation/getDomainList",
+        "version": "",
+        "rate_limit": [],
+        "description": "Retrieves a paginated list of domains.",
+        "api_endpoint": "https://spaceship.dev/api/v1/domains"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-02-03T15:31:43.000Z"
+    }
+  }
+}

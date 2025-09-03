@@ -1,0 +1,3261 @@
+{
+  "routes": {
+    "voicegainai__v1__asr__transcribe___get": {
+      "provider_intent": "voicegainai__v1__asr__transcribe___get",
+      "provider_alias_intent": "/v1/asr/transcribe",
+      "text": "Poll by WS name",
+      "category": "Transcribe",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "full": {
+          "text": "Controls whether full or incremental results should be returned. If full=true, and the results are not final yet, no words nor transcript will be included in the result",
+          "type": "boolean"
+        },
+        "stop": {
+          "enum": [
+            "retainResults",
+            "discardResults"
+          ],
+          "text": "Can be used to immediately stop processing of the current session.",
+          "type": "enum"
+        },
+        "wsName": {
+          "text": "Name of the websocket",
+          "type": "string",
+          "required": true
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://console.voicegain.ai/api/v1/index.html#operation/asrTranscribeAsyncGetByWSName",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Poll speech transcription in async mode using the Websocket name.",
+        "api_endpoint": "https://api.voicegain.ai/v1/asr/transcribe"
+      },
+      "auth": [],
+      "response_format": {
+        "audio": {
+          "source": {
+            "dataStore": {
+              "uuid": "9f5dgi4-js7bl-ah981g6-hhsdu622"
+            }
+          },
+          "channel": "mix"
+        },
+        "debug": {
+          "message": "... some information useful to troubleshoot the error ..."
+        },
+        "result": {
+          "ttml": "https:/api.ascalon.ai/v1/asr/transcribe/captions/ttml/3b241101-e2bb-4255-8caf-4136c566a962",
+          "final": true,
+          "words": [
+            {
+              "spk": 2,
+              "start": 70,
+              "duration": 60,
+              "utterance": "banana",
+              "confidence": 0.765,
+              "alternatives": [
+                {
+                  "spk": 2,
+                  "utterance": "banana",
+                  "confidence": 0.765
+                }
+              ]
+            }
+          ],
+          "status": "INPROGRESS",
+          "message": "string",
+          "rmsData": "string",
+          "vadData": "string",
+          "captions": [
+            {
+              "spk": 2,
+              "text": "the man said",
+              "time": 0,
+              "duration": 0
+            }
+          ],
+          "language": "ar",
+          "segments": [
+            {
+              "spk": 1,
+              "time": 0,
+              "duration": 0,
+              "alternatives": [
+                {
+                  "text": "Hi there",
+                  "confidence": 0.8355
+                }
+              ]
+            }
+          ],
+          "speakers": [
+            {
+              "age": "young-adult",
+              "spk": 0,
+              "name": "john doe",
+              "gender": "male"
+            }
+          ],
+          "wordTree": [
+            {
+              "id": 7,
+              "spk": 2,
+              "start": 70,
+              "parent": 5,
+              "duration": 60,
+              "utterance": "banana",
+              "confidence": 0.765
+            }
+          ],
+          "lastEvent": "START-OF-INPUT",
+          "sentences": [
+            {
+              "spk": 1,
+              "time": 0,
+              "duration": 0,
+              "alternatives": [
+                {
+                  "text": "Hi there",
+                  "confidence": 0.8355
+                }
+              ]
+            }
+          ],
+          "transcript": "the quick brown fox jumps over the lazy dog",
+          "numberSpeakers": 0
+        },
+        "session": {
+          "metadata": [
+            {
+              "name": "param1",
+              "value": "value of param 1"
+            }
+          ],
+          "asyncMode": "REAL-TIME",
+          "sessionId": "dee11d4e-63c6-4d90-983c-5c9f1e79e96c"
+        },
+        "progress": {
+          "phase": "ACCEPTED",
+          "message": "... some optional msg about progress ...",
+          "callback": {
+            "url": "string",
+            "code": 200,
+            "time": 1677173892602
+          },
+          "xRealTime": 0.482758,
+          "audioEndTime": 1560,
+          "clockEndTime": 1557179997,
+          "audioDuration": 1450,
+          "audioStartTime": 110,
+          "clockStartTime": 1557179297,
+          "percentCompleted": 75.3
+        },
+        "redactions": [
+          {
+            "spk": 1,
+            "mask": "string",
+            "type": "ner",
+            "start": 0,
+            "options": "string",
+            "pattern": "string",
+            "duration": 0,
+            "confidence": 0,
+            "originalValue": "string",
+            "redactedValue": "string"
+          }
+        ],
+        "responseType": "AsyncResultFull",
+        "audioCallback": {
+          "uri": "http://example.com",
+          "code": 200,
+          "time": 1677173892602,
+          "method": "POST",
+          "authConf": "string",
+          "response": "string",
+          "multipartFormData": [
+            {
+              "name": "string",
+              "value": "string",
+              "contentType": "string"
+            }
+          ]
+        }
+      },
+      "updated_at": "2025-01-12T06:04:07.000Z"
+    },
+    "voicegainai__v1__asr__transcribe___post": {
+      "provider_intent": "voicegainai__v1__asr__transcribe___post",
+      "provider_alias_intent": "/v1/asr/transcribe",
+      "text": "Sync Transcribe",
+      "category": "Transcribe",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "audio": {
+          "text": "Defines speech audio input source for sync transcription or sync recognition. Note that streaming into the ASR using the Sync mode is not directly possible. However, the Resource URI can be used to provide streaming input that will be pulled by the ASR.",
+          "type": "object",
+          "required": true
+        },
+        "setting": {
+          "text": "All the settings relevant to sync transcription tasks.",
+          "type": "object",
+          "required": false
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://console.voicegain.ai/api/v1/index.html#operation/asrTranscribePost",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Synchronous Transcription API Method.",
+        "api_endpoint": "https://api.voicegain.ai/v1/asr/transcribe"
+      },
+      "auth": [],
+      "response_format": {
+        "debug": {
+          "message": "... some information useful to troubleshoot the error ..."
+        },
+        "result": {
+          "status": "INPROGRESS",
+          "message": "... if error then explains the errors, otherwise, optional ...",
+          "lastEvent": "START-OF-INPUT",
+          "alternatives": [
+            {
+              "utterance": "pizza with cheese",
+              "confidence": 0.935
+            }
+          ]
+        },
+        "session": {
+          "modelName": "VoiceGain-Omega:1",
+          "sessionId": "ede11d4e-63c6-4d90-983c-5c9f1e79e96c"
+        },
+        "capturedAudio": "5fc05d28-155d-45b9-bbd1-fb5dff697c01"
+      },
+      "updated_at": "2025-01-12T11:47:32.000Z"
+    },
+    "voicegainai__v1__asr__transcribe__status__queue___get": {
+      "provider_intent": "voicegainai__v1__asr__transcribe__status__queue___get",
+      "provider_alias_intent": "/v1/asr/transcribe/status/queue",
+      "text": "Transcribe Queue Status",
+      "category": "Transcribe",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://console.voicegain.ai/api/v1/index.html#operation/asrTranscribeStatusQueueGet",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Return status of the transcription queue for this account (the account is identified by the JWT token or HMAC).",
+        "api_endpoint": "https://api.voicegain.ai/v1/asr/transcribe/status/queue"
+      },
+      "auth": [],
+      "response_format": {
+        "queueSizeLimit": 1000,
+        "queueSizeLimitUsed": 123,
+        "queueSizeLimitReached": false,
+        "queueSizeLimitReachedAt": "2019-09-09T12:00:00.000Z"
+      },
+      "updated_at": "2025-01-12T11:48:01.000Z"
+    },
+    "voicegainai__v1__asr__transcribe__async___post": {
+      "provider_intent": "voicegainai__v1__asr__transcribe__async___post",
+      "provider_alias_intent": "/v1/asr/transcribe/async",
+      "text": "Async Transcribe",
+      "category": "Transcribe",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "contextId": {
+          "text": "Context Id. Only needed if making a request without JWT but using MAC Access Authentication instead.",
+          "type": "string"
+        }
+      },
+      "path": {},
+      "body": {
+        "audio": {
+          "text": "Defines audio input for transcription or recognition. Note that not all audio sources are suitable for various async modes. Here are the modes supported by various audio input:",
+          "type": "object",
+          "required": true
+        },
+        "sessions": {
+          "text": "Initialize Async Transcription Session",
+          "type": "array",
+          "required": true
+        },
+        "settings": {
+          "text": "All the settings relevant to async transcription tasks.",
+          "type": "object",
+          "required": false
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://console.voicegain.ai/api/v1/index.html#operation/asrTranscribeAsyncPost",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Start speech transcription in asynchronous mode. Obtain results later.",
+        "api_endpoint": "https://api.voicegain.ai/v1/asr/transcribe/async"
+      },
+      "auth": [],
+      "response_format": {
+        "audio": {
+          "stream": {
+            "ip": "172.24.13.87",
+            "sid": 1234,
+            "port": 5100,
+            "portChn2": 5100,
+            "websocketUrl": "string"
+          },
+          "capturedAudio": "ahy635d-mfu735-ajdy-qq558a"
+        },
+        "debug": {
+          "message": "... some information useful to troubleshoot the error ..."
+        },
+        "sessions": [
+          {
+            "poll": {
+              "url": "string",
+              "persist": 600000,
+              "afterlife": 60000
+            },
+            "content": {
+              "full": [
+                "progress",
+                "transcript"
+              ],
+              "incremental": [
+                "progress"
+              ]
+            },
+            "callback": {
+              "uri": "http://some.host/some/path/uuid?sid=12hft65-77hnfjf-77dfj2-mjjkf111"
+            },
+            "asyncMode": "REAL-TIME",
+            "modelName": "VoiceGain-Omega:1",
+            "sessionId": "dee11d4e-63c6-4d90-983c-5c9f1e79e96c",
+            "websocket": {
+              "url": "wss://api.voicegain.ai/nats-websocket/port",
+              "name": "acme-EventA-live"
+            },
+            "sessionUrl": "https://api.voicegain.ai/v1/0/asr/transcribe/O-0-0kqtz5ejz15f7g5d9801ugdgcot4"
+          }
+        ],
+        "preemptible": false
+      },
+      "updated_at": "2025-01-12T11:36:54.000Z"
+    },
+    "voicegainai__v1__asr__transcribe__sessionid___delete": {
+      "provider_intent": "voicegainai__v1__asr__transcribe__sessionid___delete",
+      "provider_alias_intent": "/v1/asr/transcribe/sessionid",
+      "text": "Delete Transcript",
+      "category": "Transcribe",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "contextId": {
+          "text": "Context Id. Only needed if making a request without JWT but using MAC Access Authentication instead.",
+          "type": "string",
+          "required": false
+        }
+      },
+      "path": {
+        "sessionId": {
+          "text": "ID of the session",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://console.voicegain.ai/api/v1/index.html#operation/asrTranscribeAsyncDelete",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Delete transcript and any captured audio (if applicable).",
+        "api_endpoint": "https://api.voicegain.ai/v1/asr/transcribe/{sessionId}"
+      },
+      "auth": [],
+      "response_format": {
+        "debug": {
+          "message": "... some information useful to troubleshoot the error ..."
+        },
+        "session": {
+          "metadata": [
+            {
+              "name": "param1",
+              "value": "value of param 1"
+            }
+          ],
+          "asyncMode": "REAL-TIME",
+          "sessionId": "dee11d4e-63c6-4d90-983c-5c9f1e79e96c"
+        }
+      },
+      "updated_at": "2025-01-12T15:29:51.000Z"
+    },
+    "voicegainai__v1__asr__transcribe__sessionid___get": {
+      "provider_intent": "voicegainai__v1__asr__transcribe__sessionid___get",
+      "provider_alias_intent": "/v1/asr/transcribe/sessionid",
+      "text": "Poll Transcript",
+      "category": "Transcribe",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "full": {
+          "text": "Controls whether full or incremental results should be returned. If full=true, and the results are not final yet, no words nor transcript will be included in the result.",
+          "type": "boolean",
+          "required": false
+        },
+        "stop": {
+          "enum": [
+            "retainResults",
+            "discardResults"
+          ],
+          "text": "Can be used to immediately stop processing of the current session. ",
+          "type": "string",
+          "required": false
+        },
+        "rmsInclude": {
+          "text": "If true then the response will include encoded RMS data. Not returned with incremental result responses.",
+          "type": "boolean",
+          "required": false
+        }
+      },
+      "path": {
+        "sessionId": {
+          "text": "ID of the session",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://console.voicegain.ai/api/v1/index.html#operation/asrTranscribeAsyncGet",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Poll results of speech transcription.",
+        "api_endpoint": "https://api.voicegain.ai/v1/asr/transcribe/{sessionId}"
+      },
+      "auth": [],
+      "response_format": {
+        "audio": {
+          "source": {
+            "dataStore": {
+              "uuid": "9f5dgi4-js7bl-ah981g6-hhsdu622"
+            }
+          },
+          "channel": "mix"
+        },
+        "debug": {
+          "message": "... some information useful to troubleshoot the error ..."
+        },
+        "result": {
+          "ttml": "https:/api.ascalon.ai/v1/asr/transcribe/captions/ttml/3b241101-e2bb-4255-8caf-4136c566a962",
+          "final": true,
+          "words": [
+            {
+              "spk": 2,
+              "start": 70,
+              "duration": 60,
+              "utterance": "banana",
+              "confidence": 0.765,
+              "alternatives": [
+                {
+                  "spk": 2,
+                  "utterance": "banana",
+                  "confidence": 0.765
+                }
+              ]
+            }
+          ],
+          "status": "INPROGRESS",
+          "message": "string",
+          "rmsData": "string",
+          "vadData": "string",
+          "captions": [
+            {
+              "spk": 2,
+              "text": "the man said",
+              "time": 0,
+              "duration": 0
+            }
+          ],
+          "language": "ar",
+          "segments": [
+            {
+              "spk": 1,
+              "time": 0,
+              "duration": 0,
+              "alternatives": [
+                {
+                  "text": "Hi there",
+                  "confidence": 0.8355
+                }
+              ]
+            }
+          ],
+          "speakers": [
+            {
+              "age": "young-adult",
+              "spk": 0,
+              "name": "john doe",
+              "gender": "male"
+            }
+          ],
+          "wordTree": [
+            {
+              "id": 7,
+              "spk": 2,
+              "start": 70,
+              "parent": 5,
+              "duration": 60,
+              "utterance": "banana",
+              "confidence": 0.765
+            }
+          ],
+          "lastEvent": "START-OF-INPUT",
+          "sentences": [
+            {
+              "spk": 1,
+              "time": 0,
+              "duration": 0,
+              "alternatives": [
+                {
+                  "text": "Hi there",
+                  "confidence": 0.8355
+                }
+              ]
+            }
+          ],
+          "transcript": "the quick brown fox jumps over the lazy dog",
+          "numberSpeakers": 0
+        },
+        "session": {
+          "metadata": [
+            {
+              "name": "param1",
+              "value": "value of param 1"
+            }
+          ],
+          "asyncMode": "REAL-TIME",
+          "sessionId": "dee11d4e-63c6-4d90-983c-5c9f1e79e96c"
+        },
+        "progress": {
+          "phase": "ACCEPTED",
+          "message": "... some optional msg about progress ...",
+          "callback": {
+            "url": "string",
+            "code": 200,
+            "time": 1677173892602
+          },
+          "xRealTime": 0.482758,
+          "audioEndTime": 1560,
+          "clockEndTime": 1557179997,
+          "audioDuration": 1450,
+          "audioStartTime": 110,
+          "clockStartTime": 1557179297,
+          "percentCompleted": 75.3
+        },
+        "redactions": [
+          {
+            "spk": 1,
+            "mask": "string",
+            "type": "ner",
+            "start": 0,
+            "options": "string",
+            "pattern": "string",
+            "duration": 0,
+            "confidence": 0,
+            "originalValue": "string",
+            "redactedValue": "string"
+          }
+        ],
+        "responseType": "AsyncResultFull",
+        "audioCallback": {
+          "uri": "http://example.com",
+          "code": 200,
+          "time": 1677173892602,
+          "method": "POST",
+          "authConf": "string",
+          "response": "string",
+          "multipartFormData": [
+            {
+              "name": "string",
+              "value": "string",
+              "contentType": "string"
+            }
+          ]
+        }
+      },
+      "updated_at": "2025-01-12T15:30:14.000Z"
+    },
+    "voicegainai__v1__asr__transcribe__sessionid___put": {
+      "provider_intent": "voicegainai__v1__asr__transcribe__sessionid___put",
+      "provider_alias_intent": "/v1/asr/transcribe/sessionid",
+      "text": "Modify Transcribe Sess.",
+      "category": "Transcribe",
+      "method": "PUT",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "contextId": {
+          "text": "Context Id. Only needed if making a request without JWT but using MAC Access Authentication instead.",
+          "type": "string",
+          "required": false
+        }
+      },
+      "path": {
+        "sessionId": {
+          "text": "ID of the session",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "metadata": {
+          "text": "Metadata passed with the request to async transcription, recognition, or Speech Analytics. Consist of a list of named string values. Names in the list have to be unique. If duplicates are provided then only the last one will be retained. ",
+          "type": "array of objects",
+          "required": true
+        },
+        "sessionId": {
+          "text": "ID of the session",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://console.voicegain.ai/api/v1/index.html#operation/asrTranscribeAsyncPut",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Modify existing Transcription session",
+        "api_endpoint": "https://api.voicegain.ai/v1/asr/transcribe/{sessionId}"
+      },
+      "auth": [],
+      "response_format": {
+        "debug": {
+          "message": "... some information useful to troubleshoot the error ..."
+        },
+        "session": {
+          "metadata": [
+            {
+              "name": "param1",
+              "value": "value of param 1"
+            }
+          ],
+          "asyncMode": "REAL-TIME",
+          "sessionId": "dee11d4e-63c6-4d90-983c-5c9f1e79e96c"
+        }
+      },
+      "updated_at": "2025-01-12T15:30:33.000Z"
+    },
+    "voicegainai__v1__asr__recognize___post": {
+      "provider_intent": "voicegainai__v1__asr__recognize___post",
+      "provider_alias_intent": "/v1/asr/recognize",
+      "text": "Sync Recognition",
+      "category": "Recognize",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "audio": {
+          "text": "Defines speech audio input source for sync transcription or sync recognition. Note that streaming into the ASR using the Sync mode is not directly possible. However, the Resource URI can be used to provide streaming input that will be pulled by the ASR.",
+          "type": "object",
+          "required": true
+        },
+        "settings": {
+          "text": "All the settings relevant to speech recognition tasks.",
+          "type": "object",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://console.voicegain.ai/api/v1/index.html#operation/asrRecognizePost",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Perform speech recognition in a single request.",
+        "api_endpoint": "https://api.voicegain.ai/v1/asr/recognize"
+      },
+      "auth": [],
+      "response_format": {
+        "debug": {
+          "message": "... some information useful to troubleshoot the error ..."
+        },
+        "result": {
+          "status": "INPROGRESS",
+          "message": "string",
+          "lastEvent": "START-OF-INPUT",
+          "alternatives": [
+            {
+              "grammar": "PIZZA_TOPPING",
+              "utterance": "cheese",
+              "confidence": 0.867,
+              "literalTag": "cheese",
+              "semanticTags": {
+                "topping": "cheese"
+              }
+            }
+          ],
+          "utteranceAudio": "string"
+        },
+        "session": {
+          "modelName": "VoiceGain-Omega:1",
+          "sessionId": "ede11d4e-63c6-4d90-983c-5c9f1e79e96c"
+        },
+        "capturedAudio": "5fc05d28-155d-45b9-bbd1-fb5dff697c01"
+      },
+      "updated_at": "2025-01-12T15:30:59.000Z"
+    },
+    "voicegainai__v1__asr__recognize__async___get": {
+      "provider_intent": "voicegainai__v1__asr__recognize__async___get",
+      "provider_alias_intent": "/v1/asr/recognize/async",
+      "text": "Async Recognition",
+      "category": "Recognize",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "audio": {
+          "text": "Defines audio input for transcription or recognition. Note that not all audio sources are suitable for various async modes. Here are the modes supported by various audio input:",
+          "type": "object",
+          "required": true
+        },
+        "session": {
+          "text": "nitialize Async Recognition Session",
+          "type": "array",
+          "required": true
+        },
+        "settings": {
+          "text": "All the settings relevant to speech recognition tasks.",
+          "type": "object",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://console.voicegain.ai/api/v1/index.html#operation/asrRecognizeAsync",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Start speech recognition (grammar required). Obtain results later.",
+        "api_endpoint": "https://api.voicegain.ai/v1/asr/recognize/async"
+      },
+      "auth": [],
+      "response_format": {
+        "audio": {
+          "stream": {
+            "ip": "172.24.13.87",
+            "sid": 1234,
+            "port": 5100,
+            "portChn2": 5100,
+            "websocketUrl": "string"
+          },
+          "capturedAudio": "ahy635d-mfu735-ajdy-qq558a"
+        },
+        "debug": {
+          "message": "... some information useful to troubleshoot the error ..."
+        },
+        "sessions": [
+          {
+            "poll": {
+              "url": "string",
+              "persist": 600000,
+              "afterlife": 60000
+            },
+            "callback": {
+              "uri": "http://some.host/some/path/uuid?sid=12hft65-77hnfjf-77dfj2-mjjkf111"
+            },
+            "asyncMode": "REAL-TIME",
+            "modelName": "VoiceGain-Omega:1",
+            "sessionId": "dee11d4e-63c6-4d90-983c-5c9f1e79e96c",
+            "websocket": {
+              "url": "wss://api.voicegain.ai/nats-websocket/port",
+              "name": "acme-EventA-live"
+            }
+          }
+        ],
+        "preemptible": false
+      },
+      "updated_at": "2025-01-12T15:31:19.000Z"
+    },
+    "voicegainai__v1__asr__recognize__sessionid___get": {
+      "provider_intent": "voicegainai__v1__asr__recognize__sessionid___get",
+      "provider_alias_intent": "/v1/asr/recognize/sessionid",
+      "text": "Poll Recognition",
+      "category": "Recognize",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "stop": {
+          "text": "Can be used to immediately stop processing of the current session. ",
+          "type": "string",
+          "required": false
+        }
+      },
+      "path": {
+        "sessionId": {
+          "text": "ID of the session",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://console.voicegain.ai/api/v1/index.html#operation/asrRecognizeAsyncGet",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Poll speech recognition results.",
+        "api_endpoint": "https://api.voicegain.ai/v1/asr/recognize/{sessionId}"
+      },
+      "auth": [],
+      "response_format": {
+        "debug": {
+          "message": "... some information useful to troubleshoot the error ..."
+        },
+        "phase": "ACCEPTED",
+        "result": {
+          "final": true,
+          "status": "INPROGRESS",
+          "message": "string",
+          "lastEvent": "START-OF-INPUT",
+          "alternatives": [
+            {
+              "grammar": "PIZZA_TOPPING",
+              "utterance": "cheese",
+              "confidence": 0.867,
+              "literalTag": "cheese",
+              "semanticTags": {
+                "topping": "cheese"
+              }
+            }
+          ],
+          "utteranceAudio": "string"
+        },
+        "session": {
+          "metadata": [
+            {
+              "name": "param1",
+              "value": "value of param 1"
+            }
+          ],
+          "asyncMode": "REAL-TIME",
+          "sessionId": "dee11d4e-63c6-4d90-983c-5c9f1e79e96c"
+        }
+      },
+      "updated_at": "2025-01-12T15:31:36.000Z"
+    },
+    "voicegainai__v1__customer__asr-recognize-callback___post": {
+      "provider_intent": "voicegainai__v1__customer__asr-recognize-callback___post",
+      "provider_alias_intent": "/v1/customer/asr-recognize-callback",
+      "text": "Recognition Callback",
+      "category": "STT Callback",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "debug": {
+          "text": "Contains debug information that may be included in the response.",
+          "type": "object",
+          "required": false
+        },
+        "phase": {
+          "text": "Phase of recognition or transcription .",
+          "type": "string",
+          "required": false
+        },
+        "result": {
+          "text": "Provides the result of async recognition",
+          "type": "object",
+          "required": false
+        },
+        "session": {
+          "text": "Base info for the established async session.",
+          "type": "object",
+          "required": false
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://console.voicegain.ai/api/v1/index.html#operation/asrRecognizeCallback",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Needs to be implemented by the user of the API on a URL of your choice.",
+        "api_endpoint": "https://api.voicegain.ai/v1/customer/asr-recognize-callback"
+      },
+      "auth": [],
+      "response_format": {
+        "stop": false
+      },
+      "updated_at": "2025-01-12T15:32:14.000Z"
+    },
+    "voicegainai__v1__customer__asr-transcribe-callback___post": {
+      "provider_intent": "voicegainai__v1__customer__asr-transcribe-callback___post",
+      "provider_alias_intent": "/v1/customer/asr-transcribe-callback",
+      "text": "Transcription Callback",
+      "category": "STT Callback",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "debug": {
+          "text": "Contains debug information that may be included in the response.",
+          "type": "object",
+          "required": false
+        },
+        "result": {
+          "text": "Full, i.e. non-incremental, results of transcription. The following fields should always be present:",
+          "type": "object",
+          "required": false
+        },
+        "session": {
+          "text": "Base info for the established async session.",
+          "type": "object",
+          "required": true
+        },
+        "progress": {
+          "text": "Provides information about the progress of processing. Either incremental or full depending on the context.",
+          "type": "object",
+          "required": false
+        },
+        "redactions": {
+          "text": "Performed Redaction",
+          "type": "array of objects",
+          "required": false
+        },
+        "responseType": {
+          "text": "Whether the result is incremental or full",
+          "type": "string",
+          "required": true
+        },
+        "audioCallback": {
+          "text": "Present whenever the OFFLINE transcription session was started with the audio callback option and the source audio was provided from URL. ",
+          "type": "object",
+          "required": false
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://console.voicegain.ai/api/v1/index.html#operation/asrTranscribeCallback",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Needs to be implemented by the user of the API on a URL of your choice.",
+        "api_endpoint": "https://api.voicegain.ai/v1/customer/asr-transcribe-callback"
+      },
+      "auth": [],
+      "response_format": {
+        "stop": false
+      },
+      "updated_at": "2025-01-12T15:32:34.000Z"
+    },
+    "voicegainai__v1__customer__aivr-callback___post": {
+      "provider_intent": "voicegainai__v1__customer__aivr-callback___post",
+      "provider_alias_intent": "/v1/customer/aivr-callback",
+      "text": "New Bot Session",
+      "category": "Tel Bot Callback",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "ani": {
+          "text": "(only if session originated over phone) Caller phone number or sip address",
+          "type": "string",
+          "required": false
+        },
+        "sid": {
+          "text": "AIVR session id on Voicegain platform",
+          "type": "string",
+          "required": true
+        },
+        "dnis": {
+          "text": "(only if session originated over phone) Called phone number or sip address",
+          "type": "string",
+          "required": false
+        },
+        "vars": {
+          "text": "(optional) Map with variables to initiate the new session.",
+          "type": "object",
+          "required": false
+        },
+        "media": {
+          "text": "AIVR Logic Media",
+          "type": "string",
+          "required": false
+        },
+        "sequence": {
+          "text": "sequential number within session of this callback or websocket message",
+          "type": "number",
+          "required": true
+        },
+        "tempCode": {
+          "text": "",
+          "type": "string",
+          "required": false
+        },
+        "aivrAppId": {
+          "text": "AIVR application id on Voicegain platform",
+          "type": "string",
+          "required": true
+        },
+        "authToken": {
+          "text": "Unique token that can be used to authenticate session related API requests outside of the callback or websocket. The token is valid while a session is in progress plus 5 minutes.",
+          "type": "string",
+          "required": true
+        },
+        "logicType": {
+          "text": "AIVR Logic Type",
+          "type": "string",
+          "required": false
+        },
+        "startTime": {
+          "text": "Start time of the AIVR session",
+          "type": "string",
+          "required": true
+        },
+        "userAppData": {
+          "text": "(optional) App specific data that was associated in the AIVR portal with this AIVR number/application.",
+          "type": "string",
+          "required": false
+        },
+        "defaultVoice": {
+          "text": "Default TTS voice that will be used for this call unless overridden by the callback responses.",
+          "type": "string",
+          "required": false
+        },
+        "toBeTranscribed": {
+          "text": "Whether this call is to have a transcript.",
+          "type": "boolean",
+          "required": false
+        },
+        "callIsBeingRecorded": {
+          "text": "Whether this call is being recorded.",
+          "type": "boolean",
+          "required": false
+        },
+        "estimatedQueueWaitSeconds": {
+          "text": "Estimated Queue Wait range in seconds",
+          "type": "object",
+          "required": false
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://console.voicegain.ai/api/v1/index.html#operation/aivrCallbackNew",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Specification of a callback method that invoked by the Voicegain Platform to indicate a start of a new Telephony Bot session to the User's dialog control logic.",
+        "api_endpoint": "https://api.voicegain.ai/v1/customer/aivr-callback"
+      },
+      "auth": [],
+      "response_format": {
+        "sid": "hd63d9-hmps973g-shhdf7-1287dt",
+        "csid": "cb65d9-lmps973g-zhhdf7-7287dtk",
+        "vars": {
+          "order": "pizza",
+          "toppings": {
+            "cheese": true,
+            "tomato": true
+          }
+        },
+        "prompt": {
+          "dtmf": "1234#",
+          "text": "what do you want to order?",
+          "waitMsec": 0,
+          "htmlProperties": {
+            "group": "string"
+          },
+          "audioProperties": {
+            "voice": "Mary",
+            "language": "en"
+          }
+        },
+        "question": {
+          "dtmf": "1234#",
+          "name": "toppings",
+          "text": "what do you want to order?",
+          "waitMsec": 0,
+          "htmlResponse": {
+            "checkBox": {
+              "items": [
+                {
+                  "text": true,
+                  "value": "string",
+                  "selectedByDefault": true
+                }
+              ]
+            },
+            "textEdit": {
+              "default": "string"
+            },
+            "radioButtons": {
+              "items": [
+                {
+                  "text": true,
+                  "value": "string",
+                  "selectedByDefault": true
+                },
+                {
+                  "text": true,
+                  "value": "string",
+                  "selectedByDefault": true
+                }
+              ]
+            }
+          },
+          "audioResponse": {
+            "hints": [
+              "Kayleigh[Kaylee]:7",
+              "McGuire"
+            ],
+            "grammar": [
+              {
+                "type": "BUILT-IN"
+              }
+            ],
+            "language": [
+              "en"
+            ],
+            "streaming": "words",
+            "noInputTimeout": 10000,
+            "questionPrompt": "What is you phone number?",
+            "completeTimeout": 2000,
+            "incompleteTimeout": 5000,
+            "percolatorThreshold": 0
+          },
+          "htmlProperties": {
+            "group": "string"
+          },
+          "audioProperties": {
+            "voice": "Mary",
+            "language": "en"
+          }
+        },
+        "sequence": 1,
+        "transfer": {
+          "logic": {
+            "type": "queue",
+            "vars": {}
+          },
+          "phone": {
+            "callerId": "main_dnis",
+            "phoneNumber": "string",
+            "callerIdNumber": "+19721231234"
+          },
+          "prompt": {
+            "dtmf": "1234#",
+            "text": "what do you want to order?",
+            "waitMsec": 0,
+            "htmlProperties": {
+              "group": "string"
+            },
+            "audioProperties": {
+              "voice": "Mary",
+              "language": "en"
+            }
+          },
+          "conference": {
+            "extension": "string"
+          }
+        },
+        "subReturn": {
+          "vars": [
+            "string"
+          ],
+          "bridge": true
+        },
+        "disconnect": {
+          "prompt": {
+            "dtmf": "1234#",
+            "text": "what do you want to order?",
+            "waitMsec": 0,
+            "htmlProperties": {
+              "group": "string"
+            },
+            "audioProperties": {
+              "voice": "Mary",
+              "language": "en"
+            }
+          },
+          "reason": "Order completed"
+        },
+        "redirectUrl": "http://example.com",
+        "warmTransfer": {
+          "phone": {
+            "callerId": "main_dnis",
+            "phoneNumber": "string",
+            "callerIdNumber": "+19721231234"
+          },
+          "prompt": {
+            "dtmf": "1234#",
+            "text": "what do you want to order?",
+            "waitMsec": 0,
+            "htmlProperties": {
+              "group": "string"
+            },
+            "audioProperties": {
+              "voice": "Mary",
+              "language": "en"
+            }
+          },
+          "aivrApp": "hd63d9-hmps973g-shhdf7-1287dd",
+          "bridgePrompt": {
+            "dtmf": "1234#",
+            "text": "what do you want to order?",
+            "waitMsec": 0,
+            "htmlProperties": {
+              "group": "string"
+            },
+            "audioProperties": {
+              "voice": "Mary",
+              "language": "en"
+            }
+          }
+        },
+        "switchLanguage": "en",
+        "asrAudioWebsocketUrl": "http://example.com",
+        "realTimeAsrTranscribeSession": {
+          "left": "string",
+          "right": "string"
+        }
+      },
+      "updated_at": "2025-01-12T15:33:00.000Z"
+    },
+    "voicegainai__v1__customer__aivr-callback__csid___delete": {
+      "provider_intent": "voicegainai__v1__customer__aivr-callback__csid___delete",
+      "provider_alias_intent": "/v1/customer/aivr-callback/csid",
+      "text": "End Bot Session",
+      "category": "Tel Bot Callback",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "seq": {
+          "text": "Interaction sequences of the AIVR session on Voicegain system.",
+          "type": "number",
+          "required": true
+        }
+      },
+      "path": {
+        "csid": {
+          "text": "ID of the AIVR session on customer's system.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "sid": {
+          "text": "AIVR session id on Voicegain platform",
+          "type": "string",
+          "required": true
+        },
+        "vars": {
+          "text": "Map with user reponses collected during this AIVR session.",
+          "type": "object",
+          "required": false
+        },
+        "events": {
+          "text": "List of AIVR events that occurred since last callback",
+          "type": "array of objects",
+          "required": false
+        },
+        "estimatedQueueWaitSecond": {
+          "text": "Estimated Queue Wait range in seconds",
+          "type": "object",
+          "required": false
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://console.voicegain.ai/api/v1/index.html#operation/aivrCallbackDelete",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Specification of a callback method that Voicegain Platform will use to communicate the end of a Telephony Bot Session to the User's dialog control logic.",
+        "api_endpoint": "https://api.voicegain.ai/v1/customer/aivr-callback/{csid}"
+      },
+      "auth": [],
+      "response_format": {
+        "csid": "cb65d9-lmps973g-zhhdf7-7287dtk",
+        "vars": {
+          "order": "pizza",
+          "toppings": {
+            "cheese": true,
+            "tomato": true
+          }
+        },
+        "subReturn": {
+          "vars": [
+            "string"
+          ],
+          "bridge": true
+        },
+        "termination": "normal"
+      },
+      "updated_at": "2025-01-12T15:33:18.000Z"
+    },
+    "voicegainai__v1__customer__aivr-callback__csid___put": {
+      "provider_intent": "voicegainai__v1__customer__aivr-callback__csid___put",
+      "provider_alias_intent": "/v1/customer/aivr-callback/csid",
+      "text": "Existing Bot Session",
+      "category": "Tel Bot Callback",
+      "method": "PUT",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "seq": {
+          "text": "Interaction sequences of the AIVR session on Voicegain system.",
+          "type": "number",
+          "required": true
+        }
+      },
+      "path": {
+        "csid": {
+          "text": "ID of the AIVR session on customer's system.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "sid": {
+          "text": "AIVR session id on Voicegain platform",
+          "type": "string",
+          "required": true
+        },
+        "vars": {
+          "text": "Map with user reponses collected during this AIVR session.",
+          "type": "object",
+          "required": false
+        },
+        "events": {
+          "text": "List of AIVR events that occurred since last callback",
+          "type": "array of objects",
+          "required": false
+        },
+        "estimatedQueueWaitSecond": {
+          "text": "Estimated Queue Wait range in seconds",
+          "type": "object",
+          "required": false
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://console.voicegain.ai/api/v1/index.html#operation/aivrCallbackExisting",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Specification of a callback method that Voicegain Platform will use to communicate events from an existing Telephony Bot session to the User's dialog control logic.",
+        "api_endpoint": "https://api.voicegain.ai/v1/customer/aivr-callback/{csid}"
+      },
+      "auth": [],
+      "response_format": {
+        "sid": "hd63d9-hmps973g-shhdf7-1287dt",
+        "csid": "cb65d9-lmps973g-zhhdf7-7287dtk",
+        "vars": {
+          "order": "pizza",
+          "toppings": {
+            "cheese": true,
+            "tomato": true
+          }
+        },
+        "prompt": {
+          "dtmf": "1234#",
+          "text": "what do you want to order?",
+          "waitMsec": 0,
+          "htmlProperties": {
+            "group": "string"
+          },
+          "audioProperties": {
+            "voice": "Mary",
+            "language": "en"
+          }
+        },
+        "question": {
+          "dtmf": "1234#",
+          "name": "toppings",
+          "text": "what do you want to order?",
+          "waitMsec": 0,
+          "htmlResponse": {
+            "checkBox": {
+              "items": [
+                {
+                  "text": true,
+                  "value": "string",
+                  "selectedByDefault": true
+                }
+              ]
+            },
+            "textEdit": {
+              "default": "string"
+            },
+            "radioButtons": {
+              "items": [
+                {
+                  "text": true,
+                  "value": "string",
+                  "selectedByDefault": true
+                },
+                {
+                  "text": true,
+                  "value": "string",
+                  "selectedByDefault": true
+                }
+              ]
+            }
+          },
+          "audioResponse": {
+            "hints": [
+              "Kayleigh[Kaylee]:7",
+              "McGuire"
+            ],
+            "grammar": [
+              {
+                "type": "BUILT-IN"
+              }
+            ],
+            "language": [
+              "en"
+            ],
+            "streaming": "words",
+            "noInputTimeout": 10000,
+            "questionPrompt": "What is you phone number?",
+            "completeTimeout": 2000,
+            "incompleteTimeout": 5000,
+            "percolatorThreshold": 0
+          },
+          "htmlProperties": {
+            "group": "string"
+          },
+          "audioProperties": {
+            "voice": "Mary",
+            "language": "en"
+          }
+        },
+        "sequence": 1,
+        "transfer": {
+          "logic": {
+            "type": "queue",
+            "vars": {}
+          },
+          "phone": {
+            "callerId": "main_dnis",
+            "phoneNumber": "string",
+            "callerIdNumber": "+19721231234"
+          },
+          "prompt": {
+            "dtmf": "1234#",
+            "text": "what do you want to order?",
+            "waitMsec": 0,
+            "htmlProperties": {
+              "group": "string"
+            },
+            "audioProperties": {
+              "voice": "Mary",
+              "language": "en"
+            }
+          },
+          "conference": {
+            "extension": "string"
+          }
+        },
+        "subReturn": {
+          "vars": [
+            "string"
+          ],
+          "bridge": true
+        },
+        "disconnect": {
+          "prompt": {
+            "dtmf": "1234#",
+            "text": "what do you want to order?",
+            "waitMsec": 0,
+            "htmlProperties": {
+              "group": "string"
+            },
+            "audioProperties": {
+              "voice": "Mary",
+              "language": "en"
+            }
+          },
+          "reason": "Order completed"
+        },
+        "redirectUrl": "http://example.com",
+        "warmTransfer": {
+          "phone": {
+            "callerId": "main_dnis",
+            "phoneNumber": "string",
+            "callerIdNumber": "+19721231234"
+          },
+          "prompt": {
+            "dtmf": "1234#",
+            "text": "what do you want to order?",
+            "waitMsec": 0,
+            "htmlProperties": {
+              "group": "string"
+            },
+            "audioProperties": {
+              "voice": "Mary",
+              "language": "en"
+            }
+          },
+          "aivrApp": "hd63d9-hmps973g-shhdf7-1287dd",
+          "bridgePrompt": {
+            "dtmf": "1234#",
+            "text": "what do you want to order?",
+            "waitMsec": 0,
+            "htmlProperties": {
+              "group": "string"
+            },
+            "audioProperties": {
+              "voice": "Mary",
+              "language": "en"
+            }
+          }
+        },
+        "switchLanguage": "en"
+      },
+      "updated_at": "2025-01-12T15:33:33.000Z"
+    },
+    "voicegainai__v1__sa___get": {
+      "provider_intent": "voicegainai__v1__sa___get",
+      "provider_alias_intent": "/v1/sa",
+      "text": "Query Sp. Analytics Data",
+      "category": "Speech Analytics",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "limit": {
+          "text": "set the maximum number of returned results",
+          "type": "number",
+          "required": false
+        },
+        "detailed": {
+          "text": "If true then detailed results will be returned including per channel data. Set to false if you need the results for just the table of available results w/o detail.",
+          "type": "boolean",
+          "required": false
+        },
+        "contextId": {
+          "text": "Context Id. Only needed if making a request without JWT but using MAC Access Authentication instead.",
+          "type": "string",
+          "required": false
+        },
+        "fromAllContexts": {
+          "text": "If true then results from all contexts will be retrieved",
+          "type": "boolean",
+          "required": false
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://console.voicegain.ai/api/v1/index.html#operation/saQuery",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Get Speech Analytics data that matches filters.",
+        "api_endpoint": "https://api.voicegain.ai/v1/sa"
+      },
+      "auth": [],
+      "response_format": [],
+      "updated_at": "2025-01-12T15:33:54.000Z"
+    },
+    "voicegainai__v1__sa___post": {
+      "provider_intent": "voicegainai__v1__sa___post",
+      "provider_alias_intent": "/v1/sa",
+      "text": "New Speech Analytics Ses.",
+      "category": "Speech Analytics",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "asr": {
+          "text": "ASR setting suitable for transcription for Speech Analytics.",
+          "type": "object",
+          "required": false
+        },
+        "tags": {
+          "text": "Tags associated with the Speech Analytics session. Each tag is a string with max length of 64 characters.",
+          "type": "array of strings",
+          "required": false
+        },
+        "audio": {
+          "text": "Defines audio input for transcription or recognition. Note that not all audio sources are suitable for various async modes. Here are the modes supported by various audio input:",
+          "type": "object",
+          "required": false
+        },
+        "label": {
+          "text": "Label to assign to the Speech Analytics session. May be displayed in a table to make identifying a session easier.",
+          "type": "string",
+          "required": false
+        },
+        "creator": {
+          "text": "(optional) Id of the user who starts this Speech Analytics session. If invoked from Web UI then we will use identity of the logged-in user.",
+          "type": "string",
+          "required": false
+        },
+        "persist": {
+          "text": "Time (in msec) to retain the result data after processing has completed. Data can be retained indefinitely if value is -1. As long as the persist has not expired the data will be available.",
+          "type": "number",
+          "required": false
+        },
+        "metadata": {
+          "text": "Metadata passed with the request to async transcription, recognition, or Speech Analytics. Consist of a list of named string values. Names in the list have to be unique. If duplicates are provided then only the last one will be retained. ",
+          "type": "array of objects",
+          "required": false
+        },
+        "saConfig": {
+          "text": "id of the Speech Analytics configuration to use. If not provided then default SA Config for the context will be used.",
+          "type": "string",
+          "required": true
+        },
+        "asyncMode": {
+          "text": "Mode for async speech analytics.",
+          "type": "string",
+          "required": false
+        },
+        "speakerchannels": {
+          "text": "For stereo audio this is used to map audio channels to processing sessions and to identify which one is Agent.",
+          "type": "array of objects",
+          "required": false
+        },
+        "callReviewConfig": {
+          "text": "(optional) id of the Call Review (Score Card) configuration to use. The Call Review Config will be used to guide the generation of autopopulated Call Review Answers.",
+          "type": "string",
+          "required": false
+        },
+        "notifyStompTopic": {
+          "text": "(optional) STOMP Topic name - if present then the entire POST /sa response will be sent over websocket to the specified STOMP topic.",
+          "type": "string",
+          "required": false
+        },
+        "topicDiscoveryConfig": {
+          "text": "(optional) id of the Topic Discovery configuration to use. If not provided then default Topic Discovery Config for the context will be used.",
+          "type": "string",
+          "required": false
+        },
+        "virtualDualChannelEnabled": {
+          "text": "Applies only if the source audio is mono (1 channel). This is intended to be used in cases where we want to process a call center call that was recorded in mono.",
+          "type": "boolean",
+          "required": false
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://console.voicegain.ai/api/v1/index.html#operation/saPost",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Create and launch new Speech Analytics Session. ",
+        "api_endpoint": "https://api.voicegain.ai/v1/sa"
+      },
+      "auth": [],
+      "response_format": {
+        "poll": {
+          "url": "string"
+        },
+        "audio": {
+          "stream": {
+            "ip": "172.24.13.87",
+            "sid": 1234,
+            "port": 5100,
+            "portChn2": 5100,
+            "websocketUrl": "string"
+          },
+          "capturedAudio": "ahy635d-mfu735-ajdy-qq558a"
+        },
+        "metadata": [
+          {
+            "name": "param1",
+            "value": "value of param 1"
+          }
+        ],
+        "websocket": {
+          "url": "wss://api.voicegain.ai/v1/0/plain/0-0kq8xjc561qfnc7iqo28vg72ycdu"
+        },
+        "crAnswersId": "39dfd018-9ab4-4841-9982-c37d498ef835",
+        "saSessionId": "f1dbdbb5-cd6c-4d3c-abf3-0e8cbd76d282",
+        "speakerChannels": [
+          {
+            "isAgent": false,
+            "vadMode": "normal",
+            "transcribeSessionId": "38cd852b-b921-48fc-a38e-cb94ed0c8b5e",
+            "audioChannelSelector": "mix"
+          }
+        ]
+      },
+      "updated_at": "2025-01-12T15:36:34.000Z"
+    },
+    "voicegainai__v1__sa__sasessionid__data___get": {
+      "provider_intent": "voicegainai__v1__sa__sasessionid__data___get",
+      "provider_alias_intent": "/v1/sa/sasessionid/data",
+      "text": "Get Sp. Analytics Data",
+      "category": "Speech Analytics",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "audio": {
+          "text": "If true then original or simulated (if diarization was used) multichannel (stereo) audio will be returned.",
+          "type": "boolean",
+          "required": false
+        },
+        "emotion": {
+          "text": "If true then emotion (mood and sentiment) information will be returned",
+          "type": "boolean",
+          "required": false
+        },
+        "phrases": {
+          "text": "If true then phrases spotted in the text will be returned",
+          "type": "boolean",
+          "required": false
+        },
+        "summary": {
+          "text": "If true then summary data for the transcript will be returned",
+          "type": "boolean",
+          "required": false
+        },
+        "criteria": {
+          "text": "If true then criteria satisfied in the text will be returned",
+          "type": "boolean",
+          "required": false
+        },
+        "decibels": {
+          "text": "If this parameter has a value then the result will contain an array of decibel values for the audio data.",
+          "type": "number",
+          "required": false
+        },
+        "entities": {
+          "text": "If true then named entities spotted in the text will be returned",
+          "type": "boolean",
+          "required": false
+        },
+        "keywords": {
+          "text": "If true then keywords spotted in the text will be returned",
+          "type": "boolean",
+          "required": false
+        },
+        "incidents": {
+          "text": "If true then list of incidents (silence, overtalk) identified in the call will be returned",
+          "type": "boolean",
+          "required": false
+        },
+        "wordCloud": {
+          "text": "If true then word cloud data for the transcript will be returned",
+          "type": "boolean",
+          "required": false
+        },
+        "audioZones": {
+          "text": "If true then audioZones information will be returned",
+          "type": "boolean",
+          "required": false
+        }
+      },
+      "path": {
+        "saSessionId": {
+          "text": "Session ID for Speech Analytics",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://console.voicegain.ai/api/v1/index.html#operation/saDataGet",
+        "version": "v1`",
+        "rate_limit": [],
+        "description": "Retrieve Speech Analytics result data.",
+        "api_endpoint": "https://api.voicegain.ai/v1/sa/{saSessionId}/data"
+      },
+      "auth": [],
+      "response_format": {
+        "tags": [
+          "billing",
+          "susan"
+        ],
+        "label": "Billing Queue - Susan",
+        "status": "ready",
+        "topics": [
+          {
+            "label": "BILLING",
+            "score": 0.386
+          }
+        ],
+        "creator": "1dccd4a6-75d2-43aa-a088-76d941f1b60a",
+        "persist": 3600000,
+        "silence": {
+          "totalMsec": "40|<30s|red",
+          "percentage": "5|<10%|green",
+          "maximumMsec": "11|<10s|yellow",
+          "incidentCount": 4
+        },
+        "summary": [
+          "string"
+        ],
+        "channels": [
+          {
+            "age": "young-adult",
+            "spk": 2,
+            "talk": {
+              "pitch": {
+                "median": 0,
+                "maximum": 0,
+                "minimum": 0,
+                "firstQuartile": 0,
+                "thirdQuartile": 0
+              },
+              "energy": {
+                "median": 0,
+                "maximum": 0,
+                "minimum": 0,
+                "firstQuartile": 0,
+                "thirdQuartile": 0
+              },
+              "talkRate": "140|(120-150)|green",
+              "totalMsec": 17,
+              "averageStreakMsec": "10|<60s|green",
+              "maximumStreakMsec": "110|<120s|green",
+              "percentageOfCallTime": "50|<75%|green",
+              "percentageOfSpeakerTime": "55|<80%|green"
+            },
+            "gender": "male",
+            "emotion": {
+              "list": [
+                {
+                  "mood": {
+                    "calm": 0.7,
+                    "neutral": 0.5
+                  },
+                  "endIdx": 5,
+                  "endTime": 730,
+                  "startIdx": 4,
+                  "sentiment": 0.76,
+                  "startTime": 450
+                }
+              ],
+              "totals": {
+                "mood": {
+                  "calm": 0.7,
+                  "neutral": 0.5
+                },
+                "sentiment": 0.76
+              }
+            },
+            "isAgent": true,
+            "phrases": {
+              "list": [
+                {
+                  "tag": "CALL_RESOLUTION",
+                  "score": 0,
+                  "slots": {
+                    "entities": [
+                      {
+                        "endIdx": 5,
+                        "entity": "GPE",
+                        "phrase": "United States",
+                        "endTime": 730,
+                        "concepts": [
+                          {}
+                        ],
+                        "startIdx": 4,
+                        "startTime": 450
+                      }
+                    ],
+                    "keywords": [
+                      {
+                        "tag": "CANCEL",
+                        "endIdx": 5,
+                        "phrase": "close my account",
+                        "endTime": 730,
+                        "startIdx": 4,
+                        "startTime": 450
+                      }
+                    ]
+                  },
+                  "endIdx": 5,
+                  "phrase": "My goal was to provide you with an excellent customer service. Did I do that for you today? yes",
+                  "endTime": 730,
+                  "startIdx": 4,
+                  "startTime": 450
+                }
+              ],
+              "counts": {
+                "SORRY": 2,
+                "GREETING": 1
+              }
+            },
+            "spkName": "John (accounting)",
+            "decibels": [
+              [
+                0,
+                0
+              ]
+            ],
+            "keywords": {
+              "list": [
+                {
+                  "tag": "CANCEL",
+                  "endIdx": 5,
+                  "phrase": "close my account",
+                  "endTime": 730,
+                  "startIdx": 4,
+                  "startTime": 450
+                }
+              ],
+              "counts": {
+                "CANCEL": 2,
+                "COMPETITOR": 1
+              }
+            },
+            "overtalk": {
+              "totalMsec": "1|<2s|green",
+              "percentage": "0.05|<0.1%|green",
+              "maximumMsec": "700|<300ms|red",
+              "incidentCount": 4
+            },
+            "audioZones": [
+              {
+                "class": "SILENCE",
+                "start": 0,
+                "duration": 0
+              }
+            ],
+            "channelType": "actual",
+            "namedEntities": [
+              {
+                "endIdx": 5,
+                "entity": "GPE",
+                "phrase": "United States",
+                "endTime": 730,
+                "concepts": [
+                  {
+                    "key": "STREET",
+                    "value": "Crouch Mountain Road"
+                  }
+                ],
+                "startIdx": 4,
+                "startTime": 450
+              }
+            ],
+            "transcribeSid": "0cf54a74-885b-4a14-8af5-339642d32768",
+            "audioChannelSelector": "left"
+          }
+        ],
+        "criteria": {
+          "list": [
+            {
+              "tag": "CALLER_GREETED",
+              "subCriteria": [
+                {
+                  "ner": [
+                    "GPE"
+                  ],
+                  "regex": [
+                    "string"
+                  ],
+                  "channel": "caller",
+                  "endTime": 0,
+                  "metrics": [
+                    "string"
+                  ],
+                  "phrases": [
+                    "string"
+                  ],
+                  "keywords": [
+                    "string"
+                  ],
+                  "negation": true,
+                  "startTime": 0,
+                  "callLocation": 0,
+                  "dialogElements": [
+                    "string"
+                  ]
+                }
+              ]
+            }
+          ],
+          "counts": {
+            "GREETED_CUSTOMER": 1,
+            "EXPRESSED_APOLOGY": 2
+          }
+        },
+        "metadata": [
+          {
+            "name": "param1",
+            "value": "value of param 1"
+          }
+        ],
+        "accountId": "3d07c219-0a88-45be-9cfc-91e9d095a1e9",
+        "asyncMode": "REAL-TIME",
+        "contextId": "84451116-c600-49e2-9c60-5b6b34fae0d6",
+        "incidents": [
+          {
+            "end": 7300,
+            "spk": 1,
+            "type": "silence",
+            "start": 4500,
+            "duration": 2800
+          }
+        ],
+        "startTime": "2019-02-06T02:06:18+0000",
+        "wordCloud": [
+          {
+            "freq": 2,
+            "phrase": "victory"
+          }
+        ],
+        "crAnswersId": "39dfd018-9ab4-4841-9982-c37d498ef835",
+        "durationSec": 0,
+        "saSessionId": "f1dbdbb5-cd6c-4d3c-abf3-0e8cbd76d282",
+        "phraseGroups": {
+          "list": [
+            {
+              "tag": "CALL_RESOLUTION",
+              "endIdx": 5,
+              "endTime": 730,
+              "startIdx": 4,
+              "startTime": 450,
+              "components": [
+                {
+                  "tag": "CALL_RESOLUTION",
+                  "score": 0,
+                  "slots": {
+                    "entities": [
+                      {
+                        "endIdx": 5,
+                        "entity": "GPE",
+                        "phrase": "United States",
+                        "endTime": 730,
+                        "concepts": [
+                          {}
+                        ],
+                        "startIdx": 4,
+                        "startTime": 450
+                      }
+                    ],
+                    "keywords": [
+                      {
+                        "tag": "CANCEL",
+                        "endIdx": 5,
+                        "phrase": "close my account",
+                        "endTime": 730,
+                        "startIdx": 4,
+                        "startTime": 450
+                      }
+                    ]
+                  },
+                  "endIdx": 5,
+                  "phrase": "My goal was to provide you with an excellent customer service. Did I do that for you today? yes",
+                  "channel": "caller",
+                  "endTime": 730,
+                  "startIdx": 4,
+                  "startTime": 450
+                }
+              ]
+            }
+          ],
+          "counts": {
+            "SORRY": 2,
+            "GREETING": 1
+          }
+        },
+        "multiChannelAudio": "8dd46366-794c-4af1-a4ed-b50077cfac50",
+        "multiChannelWords": [
+          {
+            "spk": 2,
+            "start": 70,
+            "words": [
+              {
+                "spk": 2,
+                "start": 70,
+                "duration": 60,
+                "utterance": "banana",
+                "confidence": 0.765,
+                "alternatives": [
+                  {
+                    "spk": 2,
+                    "utterance": "banana",
+                    "confidence": 0.765
+                  }
+                ]
+              }
+            ],
+            "duration": 600,
+            "columnPos": 1,
+            "numColumns": 1
+          }
+        ],
+        "singleChannelAudio": "dfdc3a63-3d37-489d-a352-587732f1cded",
+        "multiChannelDiarization": {
+          "list": [
+            {
+              "spk": 2,
+              "endIdx": 5,
+              "endTime": 730,
+              "startIdx": 4,
+              "startTime": 450
+            }
+          ],
+          "numberSpeakers": 2
+        }
+      },
+      "updated_at": "2025-01-12T15:36:50.000Z"
+    },
+    "voicegainai__v1__sa__sasessionid__status___get": {
+      "provider_intent": "voicegainai__v1__sa__sasessionid__status___get",
+      "provider_alias_intent": "/v1/sa/sasessionid/status",
+      "text": "Poll Sp. Analytics Ses.",
+      "category": "Speech Analytics",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "saSessionId": {
+          "text": "Session ID for Speech Analytics",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://console.voicegain.ai/api/v1/index.html#operation/saSessionStatusGet",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Get status of given speech-analytics session",
+        "api_endpoint": "https://api.voicegain.ai/v1/sa/{saSessionId}/status"
+      },
+      "auth": [],
+      "response_format": {
+        "status": "ready",
+        "creator": "1dccd4a6-75d2-43aa-a088-76d941f1b60a",
+        "accountId": "3d07c219-0a88-45be-9cfc-91e9d095a1e9",
+        "asyncMode": "REAL-TIME",
+        "contextId": "84451116-c600-49e2-9c60-5b6b34fae0d6",
+        "startTime": "2019-02-06T02:06:18+0000",
+        "saSessionId": "f1dbdbb5-cd6c-4d3c-abf3-0e8cbd76d282"
+      },
+      "updated_at": "2025-01-12T15:37:02.000Z"
+    },
+    "voicegainai__v1__sa__sasessionid__transcript___get": {
+      "provider_intent": "voicegainai__v1__sa__sasessionid__transcript___get",
+      "provider_alias_intent": "/v1/sa/sasessionid/transcript",
+      "text": "SA Transcript Content",
+      "category": "Speech Analytics",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "width": {
+          "text": "Applicable only to captions. Determines max caption width in number of characters.",
+          "type": "number",
+          "required": false
+        },
+        "format": {
+          "text": "Specifies the format of the transcript to be returned. Valid values are:",
+          "type": "string",
+          "required": false
+        },
+        "interval": {
+          "text": "Applicable only to plain text transcript. Determines interval (in seconds) between time stamps.",
+          "type": "number",
+          "required": false
+        }
+      },
+      "path": {
+        "saSessionId": {
+          "text": "Session ID for Speech Analytics",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://console.voicegain.ai/api/v1/index.html#operation/saGetTranscript",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Retrieve transcript from Speech Analytics session (after transcription is complete) in one of several possible formats.",
+        "api_endpoint": "https://api.voicegain.ai/v1/sa/{saSessionId}/transcript"
+      },
+      "auth": [],
+      "response_format": [
+        {
+          "spk": 2,
+          "start": 70,
+          "words": [
+            {
+              "spk": 2,
+              "start": 70,
+              "duration": 60,
+              "utterance": "banana",
+              "confidence": 0.765,
+              "alternatives": [
+                {
+                  "spk": 2,
+                  "utterance": "banana",
+                  "confidence": 0.765
+                }
+              ]
+            }
+          ],
+          "duration": 600
+        }
+      ],
+      "updated_at": "2025-01-12T15:37:15.000Z"
+    },
+    "voicegainai__v1__sa__config___post": {
+      "provider_intent": "voicegainai__v1__sa__config___post",
+      "provider_alias_intent": "/v1/sa/config",
+      "text": "Query Sp. Analytics Cfg.",
+      "category": "Speech Analytics",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "name": {
+          "text": "Name to match. If the provided name ends with a star * then a prefix match will be performed.",
+          "type": "string",
+          "required": false
+        },
+        "type": {
+          "text": "Speech Analytics Configuration Type - user, built-in, or any (any is a union of user and built-in)",
+          "type": "string",
+          "required": false
+        },
+        "contextId": {
+          "text": "Context Id. Only needed if making a request without JWT but using MAC Access Authentication instead.",
+          "type": "string",
+          "required": false
+        },
+        "inclOtherContextPublished": {
+          "text": "If true then will also retrieve Speech Analytics Configurations from other contexts on this account which have been published.",
+          "type": "boolean",
+          "required": false
+        }
+      },
+      "path": {},
+      "body": {
+        "name": {
+          "text": "Name to match. If the provided name ends with a star * then a prefix match will be performed.",
+          "type": "string",
+          "required": false
+        },
+        "type": {
+          "text": "Speech Analytics Configuration Type - user, built-in, or any (any is a union of user and built-in)",
+          "type": "string",
+          "required": false
+        },
+        "contextId": {
+          "text": "Context Id. Only needed if making a request without JWT but using MAC Access Authentication instead.",
+          "type": "string",
+          "required": false
+        },
+        "inclOtherContextPublished": {
+          "text": "If true then will also retrieve Speech Analytics Configurations from other contexts on this account which have been published.",
+          "type": "boolean",
+          "required": false
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://console.voicegain.ai/api/v1/index.html#operation/saConfigPost",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Create new Speech Analytics Configuration ",
+        "api_endpoint": "https://api.voicegain.ai/v1/sa/config"
+      },
+      "auth": [],
+      "response_format": {
+        "age": false,
+        "name": "Auto-Insurance-SA-Conf",
+        "moods": [
+          "neutral"
+        ],
+        "gender": false,
+        "builtIn": false,
+        "phrases": [
+          {
+            "tag": "call_resolved",
+            "regex": [
+              "Thank you .*"
+            ],
+            "slots": {
+              "entities": [
+                {
+                  "entity": "ORG",
+                  "required": true
+                }
+              ],
+              "keywords": [
+                {
+                  "tag": "Canon",
+                  "required": false
+                }
+              ]
+            },
+            "builtIn": false,
+            "disabled": false,
+            "examples": [
+              {
+                "state": "default",
+                "sentence": "Was I able to resolve your concerns up to your satisfaction today?",
+                "sensitivity": 0.5,
+                "negativeExample": false
+              }
+            ],
+            "location": {},
+            "hideIfGroup": false,
+            "sentenceType": "any",
+            "advancedRegex": [
+              {
+                "state": "default",
+                "minimumWords": 1,
+                "negativeRule": "Let's say",
+                "positiveRule": "Let's",
+                "negativeRegex": false
+              }
+            ],
+            "meetingMinutes": false,
+            "mustBeNounPhrase": false
+          }
+        ],
+        "summary": false,
+        "criteria": [
+          {
+            "tag": "CALLER_GREETED",
+            "requiredSubCriteria": [
+              {
+                "ner": [
+                  "GPE"
+                ],
+                "regex": [
+                  "string"
+                ],
+                "channel": "caller",
+                "metrics": [
+                  "string"
+                ],
+                "phrases": [
+                  "string"
+                ],
+                "keywords": [
+                  "string"
+                ],
+                "negation": true,
+                "callLocation": 0,
+                "dialogElements": [
+                  "string"
+                ]
+              }
+            ]
+          }
+        ],
+        "entities": [
+          "ADDRESS",
+          "PERSON"
+        ],
+        "keywords": [
+          {
+            "tag": "CANCEL",
+            "examples": [
+              {
+                "phrase": "cancel"
+              },
+              {
+                "phrase": "terminate"
+              }
+            ]
+          }
+        ],
+        "saConfId": "e0670e64-17a9-4958-8d62-262334450a92",
+        "accountId": "3d07c219-0a88-45be-9cfc-91e9d095a1e9",
+        "contextId": "84451116-c600-49e2-9c60-5b6b34fae0d6",
+        "profanity": false,
+        "published": false,
+        "sentiment": false,
+        "wordCloud": false,
+        "phraseGroups": [
+          {
+            "groupTag": "Apology",
+            "relation": "any",
+            "phraseTags": [
+              "GREETING",
+              "THANK_YOU"
+            ]
+          }
+        ],
+        "piiRedaction": [
+          {
+            "namedEntity": "GPE",
+            "redactAudio": "silence",
+            "redactTranscript": "[CC]"
+          }
+        ],
+        "keywordGroups": [
+          {
+            "groupTag": "Competition",
+            "keywordTags": [
+              "Acme",
+              "MiningSupplies"
+            ]
+          }
+        ],
+        "meetingMinutes": {
+          "enabled": false,
+          "syncedToReleaseVersion": {
+            "version": "1.10.7",
+            "majorVer": 1,
+            "minorVer": 10,
+            "maintenanceVer": 7
+          }
+        },
+        "llmSummaryPrompt": "Generate a one-sentence summary of the call.",
+        "llmCopilotNotesPrompt": "Generate brief notes for the record of this call in the CRM.",
+        "callResolutionCriteria": [
+          "string"
+        ],
+        "competitorKeywordGroups": [
+          "string"
+        ],
+        "callResolutionQuestionId": null,
+        "silenceTotalPercentageThreshold": 5,
+        "overtalkTotalPercentageThreshold": 3,
+        "silenceSingleDurationMaximumThreshold": 5000,
+        "overtalkSingleDurationMaximumThreshold": 750
+      },
+      "updated_at": "2025-01-12T15:39:44.000Z"
+    },
+    "voicegainai__v1__sa__config__saconfigid___delete": {
+      "provider_intent": "voicegainai__v1__sa__config__saconfigid___delete",
+      "provider_alias_intent": "/v1/sa/config/saconfigid",
+      "text": "Delete SA Cfg.",
+      "category": "Speech Analytics",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "saConfigId": {
+          "text": "Configuration ID for Speech Analytics",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://console.voicegain.ai/api/v1/index.html#operation/saConfigDelete",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Delete Speech Analytics configuration for given id",
+        "api_endpoint": "https://api.voicegain.ai/v1/sa/config/{saConfigId}"
+      },
+      "auth": [],
+      "response_format": {
+        "age": false,
+        "name": "Auto-Insurance-SA-Conf",
+        "moods": [
+          "neutral"
+        ],
+        "gender": false,
+        "builtIn": false,
+        "phrases": [
+          {
+            "tag": "call_resolved",
+            "regex": [
+              "Thank you .*"
+            ],
+            "slots": {
+              "entities": [
+                {
+                  "entity": "ORG",
+                  "required": true
+                }
+              ],
+              "keywords": [
+                {
+                  "tag": "Canon",
+                  "required": false
+                }
+              ]
+            },
+            "builtIn": false,
+            "disabled": false,
+            "examples": [
+              {
+                "state": "default",
+                "sentence": "Was I able to resolve your concerns up to your satisfaction today?",
+                "sensitivity": 0.5,
+                "negativeExample": false
+              }
+            ],
+            "location": {},
+            "hideIfGroup": false,
+            "sentenceType": "any",
+            "advancedRegex": [
+              {
+                "state": "default",
+                "minimumWords": 1,
+                "negativeRule": "Let's say",
+                "positiveRule": "Let's",
+                "negativeRegex": false
+              }
+            ],
+            "meetingMinutes": false,
+            "mustBeNounPhrase": false
+          }
+        ],
+        "summary": false,
+        "criteria": [
+          {
+            "tag": "CALLER_GREETED",
+            "requiredSubCriteria": [
+              {
+                "ner": [
+                  "GPE"
+                ],
+                "regex": [
+                  "string"
+                ],
+                "channel": "caller",
+                "metrics": [
+                  "string"
+                ],
+                "phrases": [
+                  "string"
+                ],
+                "keywords": [
+                  "string"
+                ],
+                "negation": true,
+                "callLocation": 0,
+                "dialogElements": [
+                  "string"
+                ]
+              }
+            ]
+          }
+        ],
+        "entities": [
+          "ADDRESS",
+          "PERSON"
+        ],
+        "keywords": [
+          {
+            "tag": "CANCEL",
+            "examples": [
+              {
+                "phrase": "cancel"
+              },
+              {
+                "phrase": "terminate"
+              }
+            ]
+          }
+        ],
+        "saConfId": "e0670e64-17a9-4958-8d62-262334450a92",
+        "accountId": "3d07c219-0a88-45be-9cfc-91e9d095a1e9",
+        "contextId": "84451116-c600-49e2-9c60-5b6b34fae0d6",
+        "profanity": false,
+        "published": false,
+        "sentiment": false,
+        "wordCloud": false,
+        "phraseGroups": [
+          {
+            "groupTag": "Apology",
+            "relation": "any",
+            "phraseTags": [
+              "GREETING",
+              "THANK_YOU"
+            ]
+          }
+        ],
+        "piiRedaction": [
+          {
+            "namedEntity": "GPE",
+            "redactAudio": "silence",
+            "redactTranscript": "[CC]"
+          }
+        ],
+        "keywordGroups": [
+          {
+            "groupTag": "Competition",
+            "keywordTags": [
+              "Acme",
+              "MiningSupplies"
+            ]
+          }
+        ],
+        "meetingMinutes": {
+          "enabled": false,
+          "syncedToReleaseVersion": {
+            "version": "1.10.7",
+            "majorVer": 1,
+            "minorVer": 10,
+            "maintenanceVer": 7
+          }
+        },
+        "llmSummaryPrompt": "Generate a one-sentence summary of the call.",
+        "llmCopilotNotesPrompt": "Generate brief notes for the record of this call in the CRM.",
+        "callResolutionCriteria": [
+          "string"
+        ],
+        "competitorKeywordGroups": [
+          "string"
+        ],
+        "callResolutionQuestionId": null,
+        "silenceTotalPercentageThreshold": 5,
+        "overtalkTotalPercentageThreshold": 3,
+        "silenceSingleDurationMaximumThreshold": 5000,
+        "overtalkSingleDurationMaximumThreshold": 750
+      },
+      "updated_at": "2025-01-12T15:38:10.000Z"
+    },
+    "voicegainai__v1__sa__config__saconfigid___get": {
+      "provider_intent": "voicegainai__v1__sa__config__saconfigid___get",
+      "provider_alias_intent": "/v1/sa/config/saconfigid",
+      "text": "Get Sp. Analytics Cfg.",
+      "category": "Speech Analytics",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "saConfigId": {
+          "text": "Configuration ID for Speech Analytics",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://console.voicegain.ai/api/v1/index.html#operation/saConfigGet",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Get Speech Analytics configuration for given id.",
+        "api_endpoint": "https://api.voicegain.ai/v1/sa/config/{saConfigId}"
+      },
+      "auth": [],
+      "response_format": {
+        "age": false,
+        "name": "Auto-Insurance-SA-Conf",
+        "moods": [
+          "neutral"
+        ],
+        "gender": false,
+        "builtIn": false,
+        "phrases": [
+          {
+            "tag": "call_resolved",
+            "regex": [
+              "Thank you .*"
+            ],
+            "slots": {
+              "entities": [
+                {
+                  "entity": "ORG",
+                  "required": true
+                }
+              ],
+              "keywords": [
+                {
+                  "tag": "Canon",
+                  "required": false
+                }
+              ]
+            },
+            "builtIn": false,
+            "disabled": false,
+            "examples": [
+              {
+                "state": "default",
+                "sentence": "Was I able to resolve your concerns up to your satisfaction today?",
+                "sensitivity": 0.5,
+                "negativeExample": false
+              }
+            ],
+            "location": {},
+            "hideIfGroup": false,
+            "sentenceType": "any",
+            "advancedRegex": [
+              {
+                "state": "default",
+                "minimumWords": 1,
+                "negativeRule": "Let's say",
+                "positiveRule": "Let's",
+                "negativeRegex": false
+              }
+            ],
+            "meetingMinutes": false,
+            "mustBeNounPhrase": false
+          }
+        ],
+        "summary": false,
+        "criteria": [
+          {
+            "tag": "CALLER_GREETED",
+            "requiredSubCriteria": [
+              {
+                "ner": [
+                  "GPE"
+                ],
+                "regex": [
+                  "string"
+                ],
+                "channel": "caller",
+                "metrics": [
+                  "string"
+                ],
+                "phrases": [
+                  "string"
+                ],
+                "keywords": [
+                  "string"
+                ],
+                "negation": true,
+                "callLocation": 0,
+                "dialogElements": [
+                  "string"
+                ]
+              }
+            ]
+          }
+        ],
+        "entities": [
+          "ADDRESS",
+          "PERSON"
+        ],
+        "keywords": [
+          {
+            "tag": "CANCEL",
+            "examples": [
+              {
+                "phrase": "cancel"
+              },
+              {
+                "phrase": "terminate"
+              }
+            ]
+          }
+        ],
+        "saConfId": "e0670e64-17a9-4958-8d62-262334450a92",
+        "accountId": "3d07c219-0a88-45be-9cfc-91e9d095a1e9",
+        "contextId": "84451116-c600-49e2-9c60-5b6b34fae0d6",
+        "profanity": false,
+        "published": false,
+        "sentiment": false,
+        "wordCloud": false,
+        "phraseGroups": [
+          {
+            "groupTag": "Apology",
+            "relation": "any",
+            "phraseTags": [
+              "GREETING",
+              "THANK_YOU"
+            ]
+          }
+        ],
+        "piiRedaction": [
+          {
+            "namedEntity": "GPE",
+            "redactAudio": "silence",
+            "redactTranscript": "[CC]"
+          }
+        ],
+        "keywordGroups": [
+          {
+            "groupTag": "Competition",
+            "keywordTags": [
+              "Acme",
+              "MiningSupplies"
+            ]
+          }
+        ],
+        "meetingMinutes": {
+          "enabled": false,
+          "syncedToReleaseVersion": {
+            "version": "1.10.7",
+            "majorVer": 1,
+            "minorVer": 10,
+            "maintenanceVer": 7
+          }
+        },
+        "llmSummaryPrompt": "Generate a one-sentence summary of the call.",
+        "llmCopilotNotesPrompt": "Generate brief notes for the record of this call in the CRM.",
+        "callResolutionCriteria": [
+          "string"
+        ],
+        "competitorKeywordGroups": [
+          "string"
+        ],
+        "callResolutionQuestionId": null,
+        "silenceTotalPercentageThreshold": 5,
+        "overtalkTotalPercentageThreshold": 3,
+        "silenceSingleDurationMaximumThreshold": 5000,
+        "overtalkSingleDurationMaximumThreshold": 750
+      },
+      "updated_at": "2025-01-12T15:38:30.000Z"
+    },
+    "voicegainai__v1__sa__config__saconfigid___put": {
+      "provider_intent": "voicegainai__v1__sa__config__saconfigid___put",
+      "provider_alias_intent": "/v1/sa/config/saconfigid",
+      "text": "Mod Sp. Analytics Cfg.",
+      "category": "Speech Analytics",
+      "method": "PUT",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "saConfigId": {
+          "text": "Configuration ID for Speech Analytics",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "age": {
+          "text": "(future functionality) Set to true to enable speaker age estimation",
+          "type": "boolean",
+          "required": false
+        },
+        "moods": {
+          "text": "Choose the moods to report.",
+          "type": "array of any",
+          "required": false
+        },
+        "gender": {
+          "text": "(not available for real-time mode yet) Set to true to enable voice gender classifcation",
+          "type": "boolean",
+          "required": false
+        },
+        "keyword": {
+          "text": "Configuration that specifies keywords to be detected. The keyword detection algorithm uses text matching with simple text manipulations like e.g. stemming.",
+          "type": "array of objects",
+          "required": false
+        },
+        "criteria": {
+          "text": "Criteria to be detected Each Criterion cofiguration contains a list of SubCriteria that need to be satisfied. All SubCriteria within the list must be satisfied for the list to return true.",
+          "type": "array of objects",
+          "required": false
+        },
+        "entities": {
+          "text": "Selection of Named Entity types to detect.",
+          "type": "array of any",
+          "required": false
+        },
+        "contextId": {
+          "text": "(Needed only if making a request using MAC Authentication. Otherwise will be taken from JWT.)",
+          "type": "string",
+          "required": false
+        },
+        "phraseGroup": {
+          "text": "Group of phrases/intents. Can be used to detect combinations of phrases in the caller.",
+          "type": "array of objects",
+          "required": false
+        },
+        "keywordGroup": {
+          "text": "Keyword groups - Group tags must be different from the tags used for keywords. One use for keyword groups is that the GET /sa/call-stats API supports reporting stats of keywords within a Group.",
+          "type": "array of objects",
+          "required": false
+        },
+        "meetingMinutes": {
+          "text": "Controls the generation of the Meeting minutes.",
+          "type": "object",
+          "required": false
+        },
+        "callResolutionCriteria": {
+          "text": "(beta) list of tags of the Criteria used to determine if the call was resolved. If any of these criteria are satisfied then the call will be considered as resolved.",
+          "type": "array of strings",
+          "required": false
+        },
+        "competitorKeywordGroups": {
+          "text": "(internal use - for Speech Analytics UI) Set of one or more keyword group tags that should be interpreted as identifying competitor mentions.",
+          "type": "array of strings ",
+          "required": false
+        },
+        "callResolutionQuestionId": {
+          "text": "(beta) id of the crQuestionId in Call Review that identifies question and answer regarding Call Resolution",
+          "type": "string",
+          "required": false
+        },
+        "overtalkTotalPercentageThreshold": {
+          "text": "Percentage-based threshold used to determine if an overtalk incident has occured. Applies to total overtalk expressed as percentage of the call duration.",
+          "type": "number",
+          "required": false
+        },
+        "overtalkSingleDurationMaximumThreshold": {
+          "text": "Duration-based threshold (in milliseconds) used to determine if an overtalk incident has occured. Applies to maximun duration of single/individual cases of overtalk.",
+          "type": "number",
+          "required": false
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://console.voicegain.ai/api/v1/index.html#operation/saConfigPut",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Modify existing Speech Analytics Configuration. ",
+        "api_endpoint": "https://api.voicegain.ai/v1/sa/config/{saConfigId}"
+      },
+      "auth": [],
+      "response_format": {
+        "age": false,
+        "name": "Auto-Insurance-SA-Conf",
+        "moods": [
+          "neutral"
+        ],
+        "gender": false,
+        "builtIn": false,
+        "phrases": [
+          {
+            "tag": "call_resolved",
+            "regex": [
+              "Thank you .*"
+            ],
+            "slots": {
+              "entities": [
+                {
+                  "entity": "ORG",
+                  "required": true
+                }
+              ],
+              "keywords": [
+                {
+                  "tag": "Canon",
+                  "required": false
+                }
+              ]
+            },
+            "builtIn": false,
+            "disabled": false,
+            "examples": [
+              {
+                "state": "default",
+                "sentence": "Was I able to resolve your concerns up to your satisfaction today?",
+                "sensitivity": 0.5,
+                "negativeExample": false
+              }
+            ],
+            "location": {},
+            "hideIfGroup": false,
+            "sentenceType": "any",
+            "advancedRegex": [
+              {
+                "state": "default",
+                "minimumWords": 1,
+                "negativeRule": "Let's say",
+                "positiveRule": "Let's",
+                "negativeRegex": false
+              }
+            ],
+            "meetingMinutes": false,
+            "mustBeNounPhrase": false
+          }
+        ],
+        "summary": false,
+        "criteria": [
+          {
+            "tag": "CALLER_GREETED",
+            "requiredSubCriteria": [
+              {
+                "ner": [
+                  "GPE"
+                ],
+                "regex": [
+                  "string"
+                ],
+                "channel": "caller",
+                "metrics": [
+                  "string"
+                ],
+                "phrases": [
+                  "string"
+                ],
+                "keywords": [
+                  "string"
+                ],
+                "negation": true,
+                "callLocation": 0,
+                "dialogElements": [
+                  "string"
+                ]
+              }
+            ]
+          }
+        ],
+        "entities": [
+          "ADDRESS",
+          "PERSON"
+        ],
+        "keywords": [
+          {
+            "tag": "CANCEL",
+            "examples": [
+              {
+                "phrase": "cancel"
+              },
+              {
+                "phrase": "terminate"
+              }
+            ]
+          }
+        ],
+        "saConfId": "e0670e64-17a9-4958-8d62-262334450a92",
+        "accountId": "3d07c219-0a88-45be-9cfc-91e9d095a1e9",
+        "contextId": "84451116-c600-49e2-9c60-5b6b34fae0d6",
+        "profanity": false,
+        "published": false,
+        "sentiment": false,
+        "wordCloud": false,
+        "phraseGroups": [
+          {
+            "groupTag": "Apology",
+            "relation": "any",
+            "phraseTags": [
+              "GREETING",
+              "THANK_YOU"
+            ]
+          }
+        ],
+        "piiRedaction": [
+          {
+            "namedEntity": "GPE",
+            "redactAudio": "silence",
+            "redactTranscript": "[CC]"
+          }
+        ],
+        "keywordGroups": [
+          {
+            "groupTag": "Competition",
+            "keywordTags": [
+              "Acme",
+              "MiningSupplies"
+            ]
+          }
+        ],
+        "meetingMinutes": {
+          "enabled": false,
+          "syncedToReleaseVersion": {
+            "version": "1.10.7",
+            "majorVer": 1,
+            "minorVer": 10,
+            "maintenanceVer": 7
+          }
+        },
+        "llmSummaryPrompt": "Generate a one-sentence summary of the call.",
+        "llmCopilotNotesPrompt": "Generate brief notes for the record of this call in the CRM.",
+        "callResolutionCriteria": [
+          "string"
+        ],
+        "competitorKeywordGroups": [
+          "string"
+        ],
+        "callResolutionQuestionId": null,
+        "silenceTotalPercentageThreshold": 5,
+        "overtalkTotalPercentageThreshold": 3,
+        "silenceSingleDurationMaximumThreshold": 5000,
+        "overtalkSingleDurationMaximumThreshold": 750
+      },
+      "updated_at": "2025-01-12T15:38:46.000Z"
+    },
+    "voicegainai__v1__text__redact___post": {
+      "provider_intent": "voicegainai__v1__text__redact___post",
+      "provider_alias_intent": "/v1/text/redact",
+      "text": "Redact Text",
+      "category": "Text",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "contextId": {
+          "text": "Context Id. Only needed if making a request without JWT but using MAC Access Authentication instead.",
+          "type": "string",
+          "required": false
+        }
+      },
+      "path": {},
+      "body": {
+        "debug": {
+          "text": "",
+          "required": false
+        },
+        "moods": {
+          "text": "Choose the moods to report.",
+          "type": "array of any",
+          "required": false
+        },
+        "gender": {
+          "text": "(not available for real-time mode yet) Set to true to enable voice gender classifcation",
+          "type": "boolean",
+          "required": false
+        },
+        "keyword": {
+          "text": "Configuration that specifies keywords to be detected. The keyword detection algorithm uses text matching with simple text manipulations like e.g. stemming.",
+          "type": "array of objects",
+          "required": false
+        },
+        "criteria": {
+          "text": "Criteria to be detected Each Criterion cofiguration contains a list of SubCriteria that need to be satisfied. All SubCriteria within the list must be satisfied for the list to return true.",
+          "type": "array of objects",
+          "required": false
+        },
+        "entities": {
+          "text": "Selection of Named Entity types to detect.",
+          "type": "array of any",
+          "required": false
+        },
+        "contextId": {
+          "text": "(Needed only if making a request using MAC Authentication. Otherwise will be taken from JWT.)",
+          "type": "string",
+          "required": false
+        },
+        "phraseGroup": {
+          "text": "Group of phrases/intents. Can be used to detect combinations of phrases in the caller.",
+          "type": "array of objects",
+          "required": false
+        },
+        "keywordGroup": {
+          "text": "Keyword groups - Group tags must be different from the tags used for keywords. One use for keyword groups is that the GET /sa/call-stats API supports reporting stats of keywords within a Group.",
+          "type": "array of objects",
+          "required": false
+        },
+        "meetingMinutes": {
+          "text": "Controls the generation of the Meeting minutes.",
+          "type": "object",
+          "required": false
+        },
+        "callResolutionCriteria": {
+          "text": "(beta) list of tags of the Criteria used to determine if the call was resolved. If any of these criteria are satisfied then the call will be considered as resolved.",
+          "type": "array of strings",
+          "required": false
+        },
+        "competitorKeywordGroups": {
+          "text": "(internal use - for Speech Analytics UI) Set of one or more keyword group tags that should be interpreted as identifying competitor mentions.",
+          "type": "array of strings ",
+          "required": false
+        },
+        "callResolutionQuestionId": {
+          "text": "(beta) id of the crQuestionId in Call Review that identifies question and answer regarding Call Resolution",
+          "type": "string",
+          "required": false
+        },
+        "overtalkTotalPercentageThreshold": {
+          "text": "Percentage-based threshold used to determine if an overtalk incident has occured. Applies to total overtalk expressed as percentage of the call duration.",
+          "type": "number",
+          "required": false
+        },
+        "overtalkSingleDurationMaximumThreshold": {
+          "text": "Duration-based threshold (in milliseconds) used to determine if an overtalk incident has occured. Applies to maximun duration of single/individual cases of overtalk.",
+          "type": "number",
+          "required": false
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://console.voicegain.ai/api/v1/index.html#operation/textRedactPost",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Methods for working text text inputs.",
+        "api_endpoint": "https://api.voicegain.ai/v1/text/redact"
+      },
+      "auth": [],
+      "response_format": {
+        "redactions": [
+          {
+            "idx": 0,
+            "spk": "Speaker 1:",
+            "mask": "string",
+            "type": "ner",
+            "options": "string",
+            "pattern": "string",
+            "confidence": 0,
+            "originalValue": "string",
+            "redactedValue": "string"
+          }
+        ],
+        "redactedText": "My SSN is ***-***-6789 and my CC is ****-****-9012-3456"
+      },
+      "updated_at": "2025-01-12T15:39:10.000Z"
+    }
+  }
+}

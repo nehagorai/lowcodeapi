@@ -1,0 +1,1755 @@
+{
+  "routes": {
+    "convertkit__v3__account___get": {
+      "provider_intent": "convertkit__v3__account___get",
+      "provider_alias_intent": "/v3/account",
+      "text": "Show the current account",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Show the current account",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/account",
+        "alias_endpoint": "/convertkit/v3/account",
+        "api_ref": "https://developers.convertkit.com/?shell#show-the-current-account"
+      },
+      "auth": {
+        "queryMap": {
+          "api_secret": "api_secret"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__broadcasts___get": {
+      "provider_intent": "convertkit__v3__broadcasts___get",
+      "provider_alias_intent": "/v3/broadcasts",
+      "text": "List broadcasts",
+      "category": "Broadcasts",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key",
+          "required": true
+        },
+        "page": {
+          "type": "string",
+          "text": "The page of results being requested."
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "List broadcasts",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/broadcasts",
+        "alias_endpoint": "/convertkit/v3/broadcasts",
+        "api_ref": "https://developers.convertkit.com/?shell#list-broadcasts"
+      },
+      "auth": {
+        "queryMap": {
+          "api_secret": "api_secret"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__broadcasts___post": {
+      "provider_intent": "convertkit__v3__broadcasts___post",
+      "provider_alias_intent": "/v3/broadcasts",
+      "text": "Create a broadcast",
+      "category": "Broadcasts",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key",
+          "required": true
+        },
+        "content": {
+          "type": "string",
+          "text": "The broadcast's email HTML content"
+        },
+        "description": {
+          "type": "string",
+          "text": "An internal description of this broadcast"
+        },
+        "email_address": {
+          "type": "string",
+          "text": "Sending email address leave blank to use your account's default sending email address"
+        },
+        "email_layout_template": {
+          "type": "string",
+          "text": "Name of the email template to use; leave blank to use your account's default email template"
+        },
+        "public": {
+          "type": "string",
+          "text": "Specifies whether or not this is a public post"
+        },
+        "published_at": {
+          "type": "string",
+          "text": "Specifies the time that this post was published (applicable only to public posts)"
+        },
+        "send_at": {
+          "type": "string",
+          "text": "Time that this broadcast should be sent leave blank to create a draft broadcast. If set to a future time; this is the time that the broadcast will be scheduled to send."
+        },
+        "subject": {
+          "type": "string",
+          "text": "The broadcast email's subject"
+        },
+        "thumbnail_alt": {
+          "type": "string",
+          "text": "Specify the ALT attribute of the public thumbnail image (applicable only to public posts)"
+        },
+        "thumbnail_url": {
+          "type": "string",
+          "text": "Specify the URL of the thumbnail image to accompany the broadcast post (applicable only to public posts)"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Create a broadcast",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/broadcasts",
+        "alias_endpoint": "/convertkit/v3/broadcasts",
+        "api_ref": "https://developers.convertkit.com/?shell#create-a-broadcast"
+      },
+      "auth": {
+        "body": {
+          "api_secret": "api_secret"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__broadcasts__broadcast_id___get": {
+      "provider_intent": "convertkit__v3__broadcasts__broadcast_id___get",
+      "provider_alias_intent": "/v3/broadcasts/broadcast_id",
+      "text": "Retrieve a specific broadcast",
+      "category": "Broadcasts",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "broadcast_id": {
+          "type": "string",
+          "text": "broadcast ID",
+          "required": true
+        },
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "broadcast_id": {
+          "type": "string",
+          "text": "broadcast ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Retrieve a specific broadcast",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/broadcasts/<broadcast_id>",
+        "alias_endpoint": "/convertkit/v3/broadcasts/broadcast_id",
+        "api_ref": "https://developers.convertkit.com/?shell#retrieve-a-specific-broadcast"
+      },
+      "auth": {
+        "queryMap": {
+          "api_secret": "api_secret"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__broadcasts__broadcast_id__stats___get": {
+      "provider_intent": "convertkit__v3__broadcasts__broadcast_id__stats___get",
+      "provider_alias_intent": "/v3/broadcasts/broadcast_id/stats",
+      "text": "Get stats",
+      "category": "Broadcasts",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "broadcast_id": {
+          "type": "string",
+          "text": "broadcast ID",
+          "required": true
+        },
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "broadcast_id": {
+          "type": "string",
+          "text": "broadcast ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get stats",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/broadcasts/<broadcast_id>/stats",
+        "alias_endpoint": "/convertkit/v3/broadcasts/broadcast_id/stats",
+        "api_ref": "https://developers.convertkit.com/?shell#get-stats"
+      },
+      "auth": {
+        "queryMap": {
+          "api_secret": "api_secret"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__broadcasts__broadcast_id___put": {
+      "provider_intent": "convertkit__v3__broadcasts__broadcast_id___put",
+      "provider_alias_intent": "/v3/broadcasts/broadcast_id",
+      "text": "Update a broadcast",
+      "category": "Broadcasts",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "broadcast_id": {
+          "type": "string",
+          "text": "broadcast ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key",
+          "required": true
+        },
+        "content": {
+          "type": "string",
+          "text": "The broadcast's email HTML content"
+        },
+        "description": {
+          "type": "string",
+          "text": "An internal description of this broadcast"
+        },
+        "email_address": {
+          "type": "string",
+          "text": "Sending email address; leave blank to use your account's default sending email address"
+        },
+        "email_layout_template": {
+          "type": "string",
+          "text": "Name of the email template to use; leave blank to use your account's default email template"
+        },
+        "public": {
+          "type": "string",
+          "text": "Specifies whether or not this is a public post"
+        },
+        "published_at": {
+          "type": "string",
+          "text": "Specifies the time that this post was published (applicable only to public posts)"
+        },
+        "send_at": {
+          "type": "string",
+          "text": "Time that this broadcast should be sent; leave blank to create a \"draft\" broadcast. If set to a future time; this is the time that the broadcast will be scheduled to send."
+        },
+        "subject": {
+          "type": "string",
+          "text": "The broadcast's email subject"
+        },
+        "thumbnail_alt": {
+          "type": "string",
+          "text": "Specify the ALT attribute of the public thumbnail image (applicable only to public posts)"
+        },
+        "thumbnail_url": {
+          "type": "string",
+          "text": "Specify the URL of the thumbnail image to accompany the broadcast post (applicable only to public posts)"
+        }
+      },
+      "path": {
+        "broadcast_id": {
+          "type": "string",
+          "text": "broadcast ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Update a broadcast",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/broadcasts/<broadcast_id>",
+        "alias_endpoint": "/convertkit/v3/broadcasts/broadcast_id",
+        "api_ref": "https://developers.convertkit.com/?shell#update-a-broadcast"
+      },
+      "auth": {
+        "body": {
+          "api_secret": "api_secret"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__broadcasts__broadcast_id___delete": {
+      "provider_intent": "convertkit__v3__broadcasts__broadcast_id___delete",
+      "provider_alias_intent": "/v3/broadcasts/broadcast_id",
+      "text": "Destroy a broadcast",
+      "category": "Broadcasts",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "broadcast_id": {
+          "type": "string",
+          "text": "broadcast ID",
+          "required": true
+        },
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "broadcast_id": {
+          "type": "string",
+          "text": "broadcast ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Destroy a broadcast",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/broadcasts/<broadcast_id>",
+        "alias_endpoint": "/convertkit/v3/broadcasts/broadcast_id",
+        "api_ref": "https://developers.convertkit.com/?shell#destroy-a-broadcast"
+      },
+      "auth": {
+        "queryMap": {
+          "api_secret": "api_secret"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__custom_fields___get": {
+      "provider_intent": "convertkit__v3__custom_fields___get",
+      "provider_alias_intent": "/v3/custom_fields",
+      "text": "List fields",
+      "category": "Custom Fields",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "List fields",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/custom_fields",
+        "alias_endpoint": "/convertkit/v3/custom_fields",
+        "api_ref": "https://developers.convertkit.com/?shell#list-fields"
+      },
+      "auth": {
+        "queryMap": {
+          "api_secret": "api_secret"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__custom_fields___post": {
+      "provider_intent": "convertkit__v3__custom_fields___post",
+      "provider_alias_intent": "/v3/custom_fields",
+      "text": "Create field",
+      "category": "Custom Fields",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "label": {
+          "type": "string",
+          "text": "The label(s) of the custom field",
+          "required": true
+        },
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Create field",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/custom_fields",
+        "alias_endpoint": "/convertkit/v3/custom_fields",
+        "api_ref": "https://developers.convertkit.com/?shell#create-field"
+      },
+      "auth": {
+        "body": {
+          "api_secret": "api_secret"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__custom_fields__id___put": {
+      "provider_intent": "convertkit__v3__custom_fields__id___put",
+      "provider_alias_intent": "/v3/custom_fields/id",
+      "text": "Update field",
+      "category": "Custom Fields",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The ID of your custom field",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key\nlabel",
+          "required": true,
+          "enum": [
+            "string"
+          ]
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The ID of your custom field",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Update field",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/custom_fields/<id>",
+        "alias_endpoint": "/convertkit/v3/custom_fields/id",
+        "api_ref": "https://developers.convertkit.com/?shell#update-field"
+      },
+      "auth": {
+        "body": {
+          "api_secret": "api_secret"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__custom_fields__id___delete": {
+      "provider_intent": "convertkit__v3__custom_fields__id___delete",
+      "provider_alias_intent": "/v3/custom_fields/id",
+      "text": "Destroy field",
+      "category": "Custom Fields",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The ID of your custom field",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The ID of your custom field",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Destroy field",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/custom_fields/<id>",
+        "alias_endpoint": "/convertkit/v3/custom_fields/id",
+        "api_ref": "https://developers.convertkit.com/?shell#destroy-field"
+      },
+      "auth": {
+        "queryMap": {
+          "api_secret": "api_secret"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__forms___get": {
+      "provider_intent": "convertkit__v3__forms___get",
+      "provider_alias_intent": "/v3/forms",
+      "text": "List forms",
+      "category": "Forms",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "List forms",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/forms",
+        "alias_endpoint": "/convertkit/v3/forms",
+        "api_ref": "https://developers.convertkit.com/?shell#list-forms"
+      },
+      "auth": {
+        "queryMap": {
+          "api_key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__forms__form_id__subscribe___post": {
+      "provider_intent": "convertkit__v3__forms__form_id__subscribe___post",
+      "provider_alias_intent": "/v3/forms/form_id/subscribe",
+      "text": "Add subscriber to a form",
+      "category": "Forms",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "form_id": {
+          "type": "string",
+          "text": "Form ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key",
+          "required": true
+        },
+        "email": {
+          "type": "string",
+          "text": "Subscriber email address",
+          "required": true
+        },
+        "first_name": {
+          "type": "string",
+          "text": "Subscriber first name"
+        },
+        "fields": {
+          "type": "string",
+          "text": "Object of key/value pairs for custom field(s); The custom field(s) must exist before you can use it here"
+        },
+        "tags": {
+          "type": "string",
+          "text": "Array of tag ids to subscribe to"
+        }
+      },
+      "path": {
+        "form_id": {
+          "type": "string",
+          "text": "Form ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Add subscriber to a form",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/forms/<form_id>/subscribe",
+        "alias_endpoint": "/convertkit/v3/forms/form_id/subscribe",
+        "api_ref": "https://developers.convertkit.com/?shell#add-subscriber-to-a-form"
+      },
+      "auth": {
+        "body": {
+          "api_key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__forms__form_id__subscriptions___get": {
+      "provider_intent": "convertkit__v3__forms__form_id__subscriptions___get",
+      "provider_alias_intent": "/v3/forms/form_id/subscriptions",
+      "text": "List subscriptions to a form",
+      "category": "Forms",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "form_id": {
+          "type": "string",
+          "text": "Form ID",
+          "required": true
+        },
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key",
+          "required": true
+        },
+        "sort_order": {
+          "type": "string",
+          "text": "asc to list subscribers added oldest to newest; desc to list subscribers added newest to oldest. asc is the default order.",
+          "enum": [
+            "asc",
+            "desc"
+          ]
+        },
+        "subscriber_state": {
+          "type": "string",
+          "text": "receive only active subscribers or cancelled subscribers",
+          "enum": [
+            "active",
+            "cancelled"
+          ]
+        },
+        "page": {
+          "type": "string",
+          "text": "the page to retrieve. 50 results are returned per page."
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "form_id": {
+          "type": "string",
+          "text": "Form ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "List subscriptions to a form",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/forms/<form_id>/subscriptions",
+        "alias_endpoint": "/convertkit/v3/forms/form_id/subscriptions",
+        "api_ref": "https://developers.convertkit.com/?shell#list-subscriptions-to-a-form"
+      },
+      "auth": {
+        "queryMap": {
+          "api_secret": "api_secret"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__purchases___get": {
+      "provider_intent": "convertkit__v3__purchases___get",
+      "provider_alias_intent": "/v3/purchases",
+      "text": "List purchases",
+      "category": "Purchases",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "string",
+          "text": "The page of results being requested.Default value is 1.Each page of results will contain up to 50 purchases."
+        },
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "List purchases",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/purchases",
+        "alias_endpoint": "/convertkit/v3/purchases",
+        "api_ref": "https://developers.convertkit.com/?shell#list-purchases"
+      },
+      "auth": {
+        "queryMap": {
+          "api_secret": "api_secret"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__purchases__purchase_id___get": {
+      "provider_intent": "convertkit__v3__purchases__purchase_id___get",
+      "provider_alias_intent": "/v3/purchases/purchase_id",
+      "text": "Retrieve a specific purchase",
+      "category": "Purchases",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "purchase_id": {
+          "type": "string",
+          "text": "A purchase ID",
+          "required": true
+        },
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "purchase_id": {
+          "type": "string",
+          "text": "A purchase ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Retrieve a specific purchase",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/purchases/<purchase_id>",
+        "alias_endpoint": "/convertkit/v3/purchases/purchase_id",
+        "api_ref": "https://developers.convertkit.com/?shell#retrieve-a-specific-purchase"
+      },
+      "auth": {
+        "queryMap": {
+          "api_secret": "api_secret"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__purchases___post": {
+      "provider_intent": "convertkit__v3__purchases___post",
+      "provider_alias_intent": "/v3/purchases",
+      "text": "Create a purchase",
+      "category": "Purchases",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "transaction_id": {
+          "type": "sting",
+          "text": "A unique ID for the purchase",
+          "required": true
+        },
+        "email_address": {
+          "type": "string",
+          "text": "The subscriber that the purchase belongs to",
+          "required": true
+        },
+        "currency": {
+          "type": "string",
+          "text": "3 letter currency code (e.g. USD)",
+          "required": true
+        },
+        "products": {
+          "type": "string",
+          "text": "Array of purchased products",
+          "required": true
+        },
+        "first_name": {
+          "type": "string",
+          "text": "The first name of the subscriber"
+        },
+        "subtotal": {
+          "type": "string",
+          "text": "The subtotal of the purchase"
+        },
+        "tax": {
+          "type": "string",
+          "text": "Tax applied to purchase"
+        },
+        "shipping": {
+          "type": "string",
+          "text": "Shipping amount applied to purchase"
+        },
+        "discount": {
+          "type": "string",
+          "text": "Discount amount applied to purchase"
+        },
+        "total": {
+          "type": "string",
+          "text": "Total cost of the purchase"
+        },
+        "transaction_time": {
+          "type": "string",
+          "text": "date and time of purchase as ISO string"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Create a purchase",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/purchases",
+        "alias_endpoint": "/convertkit/v3/purchases",
+        "api_ref": "https://developers.convertkit.com/?shell#create-a-purchase"
+      },
+      "auth": {
+        "body": {
+          "api_secret": "api_secret"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__sequences___get": {
+      "provider_intent": "convertkit__v3__sequences___get",
+      "provider_alias_intent": "/v3/sequences",
+      "text": "List sequences",
+      "category": "Sequences",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "List sequences",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/sequences",
+        "alias_endpoint": "/convertkit/v3/sequences",
+        "api_ref": "https://developers.convertkit.com/?shell#list-sequences"
+      },
+      "auth": {
+        "queryMap": {
+          "api_key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__sequences__sequence_id__subscribe___post": {
+      "provider_intent": "convertkit__v3__sequences__sequence_id__subscribe___post",
+      "provider_alias_intent": "/v3/sequences/sequence_id/subscribe",
+      "text": "Add subscriber to a sequence",
+      "category": "Sequences",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "sequences_id": {
+          "type": "string",
+          "text": "Sequences ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key",
+          "required": true
+        },
+        "email": {
+          "type": "string",
+          "text": "Subscriber email address",
+          "required": true
+        },
+        "first_name": {
+          "type": "string",
+          "text": "Subscriber first name"
+        },
+        "fields": {
+          "type": "string",
+          "text": "Object of key/value pairs for custom field(s); The custom field(s) must exist before you can use it here"
+        },
+        "tags": {
+          "type": "string",
+          "text": "Array of tag ids to subscribe to"
+        }
+      },
+      "path": {
+        "sequences_id": {
+          "type": "string",
+          "text": "Sequences ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Add subscriber to a sequence",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/sequences/<sequence_id>/subscribe",
+        "alias_endpoint": "/convertkit/v3/sequences/sequence_id/subscribe",
+        "api_ref": "https://developers.convertkit.com/?shell#add-subscriber-to-a-sequence"
+      },
+      "auth": {
+        "body": {
+          "api_key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__sequences__sequence_id__subscriptions___get": {
+      "provider_intent": "convertkit__v3__sequences__sequence_id__subscriptions___get",
+      "provider_alias_intent": "/v3/sequences/sequence_id/subscriptions",
+      "text": "List subscriptions to a sequence",
+      "category": "Sequences",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "sequences_id": {
+          "type": "string",
+          "text": "Sequences ID",
+          "required": true
+        },
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key",
+          "required": true
+        },
+        "sort_order": {
+          "type": "string",
+          "text": "asc to list subscribers added oldest to newest; desc to list subscribers added newest to oldest.asc is the default order.",
+          "enum": [
+            "asc",
+            "desc"
+          ]
+        },
+        "subscriber_state": {
+          "type": "string",
+          "text": "receive only active subscribers or cancelled subscribers",
+          "enum": [
+            "active",
+            "cancelled"
+          ]
+        },
+        "page": {
+          "type": "string",
+          "text": "the page to retrieve.50 results are returned per page."
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "sequences_id": {
+          "type": "string",
+          "text": "Sequences ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "List subscriptions to a sequence",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/sequences/<sequence_id>/subscriptions",
+        "alias_endpoint": "/convertkit/v3/sequences/sequence_id/subscriptions",
+        "api_ref": "https://developers.convertkit.com/?shell#list-subscriptions-to-a-sequence"
+      },
+      "auth": {
+        "queryMap": {
+          "api_secret": "api_secret"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__subscribers___get": {
+      "provider_intent": "convertkit__v3__subscribers___get",
+      "provider_alias_intent": "/v3/subscribers",
+      "text": "List subscribers",
+      "category": "Subscribers",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key",
+          "required": true
+        },
+        "page": {
+          "type": "string",
+          "text": "Page for paginated results"
+        },
+        "from": {
+          "type": "string",
+          "text": "Filter subscribers added on or after this date (format yyyy-mm-dd)"
+        },
+        "to": {
+          "type": "string",
+          "text": "Filter subscribers added on or before this date (format yyyy-mm-dd)"
+        },
+        "updated_from": {
+          "type": "string",
+          "text": "Filter subscribers who have been updated after this date (format yyyy-mm-dd)"
+        },
+        "updated_to": {
+          "type": "string",
+          "text": "Filter subscribers who have been updated before this date (format yyyy-mm-dd)"
+        },
+        "sort_order": {
+          "type": "string",
+          "text": "Sort order for results asc/desc"
+        },
+        "sort_field": {
+          "type": "string",
+          "text": "Field to sort by (cancelled_at)"
+        },
+        "email_address": {
+          "type": "string",
+          "text": "Search subscribers by email address"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "List subscribers",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/subscribers",
+        "alias_endpoint": "/convertkit/v3/subscribers",
+        "api_ref": "https://developers.convertkit.com/?shell#list-subscribers"
+      },
+      "auth": {
+        "queryMap": {
+          "api_secret": "api_secret"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__subscribers__subscriber_id___get": {
+      "provider_intent": "convertkit__v3__subscribers__subscriber_id___get",
+      "provider_alias_intent": "/v3/subscribers/subscriber_id",
+      "text": "View a single subscriber",
+      "category": "Subscribers",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "subscriber_id": {
+          "type": "string",
+          "text": "Subscriber ID",
+          "required": true
+        },
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "subscriber_id": {
+          "type": "string",
+          "text": "Subscriber ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "View a single subscriber",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/subscribers/<subscriber_id>",
+        "alias_endpoint": "/convertkit/v3/subscribers/subscriber_id",
+        "api_ref": "https://developers.convertkit.com/?shell#view-a-single-subscriber"
+      },
+      "auth": {
+        "queryMap": {
+          "api_secret": "api_secret"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__subscribers__subscriber_id___put": {
+      "provider_intent": "convertkit__v3__subscribers__subscriber_id___put",
+      "provider_alias_intent": "/v3/subscribers/subscriber_id",
+      "text": "Update subscriber",
+      "category": "Subscribers",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "subscriber_id": {
+          "type": "string",
+          "text": "Subscriber ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "first_name": {
+          "type": "string",
+          "text": "Updated first name for the subscriber."
+        },
+        "email_address": {
+          "type": "string",
+          "text": "Updated email address for the subscriber."
+        },
+        "fields": {
+          "type": "string",
+          "text": "Updated custom field(s) for your subscriber as object of key/value pairs.The custom field(s) must exist before you can use it here."
+        }
+      },
+      "path": {
+        "subscriber_id": {
+          "type": "string",
+          "text": "Subscriber ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Update subscriber",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/subscribers/<subscriber_id>",
+        "alias_endpoint": "/convertkit/v3/subscribers/subscriber_id",
+        "api_ref": "https://developers.convertkit.com/?shell#update-subscriber"
+      },
+      "auth": {
+        "body": {
+          "api_secret": "api_secret"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__unsubscribe___put": {
+      "provider_intent": "convertkit__v3__unsubscribe___put",
+      "provider_alias_intent": "/v3/unsubscribe",
+      "text": "Unsubscribe subscriber",
+      "category": "Subscribers",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "email": {
+          "type": "string",
+          "text": "Subscriber email address",
+          "required": true
+        },
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Unsubscribe subscriber",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/unsubscribe",
+        "alias_endpoint": "/convertkit/v3/unsubscribe",
+        "api_ref": "https://developers.convertkit.com/?shell#unsubscribe-subscriber"
+      },
+      "auth": {
+        "body": {
+          "api_secret": "api_secret"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__subscribers__subscriber_id__tags___get": {
+      "provider_intent": "convertkit__v3__subscribers__subscriber_id__tags___get",
+      "provider_alias_intent": "/v3/subscribers/subscriber_id/tags",
+      "text": "List tags for a subscriber",
+      "category": "Subscribers",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "subscriber_id": {
+          "type": "string",
+          "text": "Subscriber ID",
+          "required": true
+        },
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "subscriber_id": {
+          "type": "string",
+          "text": "Subscriber ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "List tags for a subscriber",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/subscribers/<subscriber_id>/tags",
+        "alias_endpoint": "/convertkit/v3/subscribers/subscriber_id/tags",
+        "api_ref": "https://developers.convertkit.com/?shell#list-tags-for-a-subscriber"
+      },
+      "auth": {
+        "queryMap": {
+          "api_secret": "api_secret"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__tags___get": {
+      "provider_intent": "convertkit__v3__tags___get",
+      "provider_alias_intent": "/v3/tags",
+      "text": "List tags",
+      "category": "Tags",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "List tags",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/tags",
+        "alias_endpoint": "/convertkit/v3/tags",
+        "api_ref": "https://developers.convertkit.com/?shell#list-tags"
+      },
+      "auth": {
+        "queryMap": {
+          "api_key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__tags___post": {
+      "provider_intent": "convertkit__v3__tags___post",
+      "provider_alias_intent": "/v3/tags",
+      "text": "Create a tag",
+      "category": "Tags",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "tag": {
+          "type": "string",
+          "text": "a JSON object or an array of JSON objects respectively that includes the tag name",
+          "required": true
+        },
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Create a tag",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/tags",
+        "alias_endpoint": "/convertkit/v3/tags",
+        "api_ref": "https://developers.convertkit.com/?shell#create-a-tag"
+      },
+      "auth": {
+        "body": {
+          "api_key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__tags__tag_id__subscribe___post": {
+      "provider_intent": "convertkit__v3__tags__tag_id__subscribe___post",
+      "provider_alias_intent": "/v3/tags/tag_id/subscribe",
+      "text": "Tag a subscriber",
+      "category": "Tags",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "tag_id": {
+          "type": "string",
+          "text": "Tag ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key",
+          "required": true
+        },
+        "email": {
+          "type": "string",
+          "text": "Subscriber email address",
+          "required": true
+        },
+        "first_name": {
+          "type": "string",
+          "text": "Subscriber first name"
+        },
+        "fields": {
+          "type": "string",
+          "text": "Object of key/value pairs for custom field(s).The custom field(s) must exist before you can use it here"
+        },
+        "tags": {
+          "type": "string",
+          "text": "Array of tag ids to subscribe to"
+        }
+      },
+      "path": {
+        "tag_id": {
+          "type": "string",
+          "text": "Tag ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Tag a subscriber",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/tags/<tag_id>/subscribe",
+        "alias_endpoint": "/convertkit/v3/tags/tag_id/subscribe",
+        "api_ref": "https://developers.convertkit.com/?shell#tag-a-subscriber"
+      },
+      "auth": {
+        "body": {
+          "api_secret": "api_secret"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__subscribers__subscriber_id__tags__tag_id___delete": {
+      "provider_intent": "convertkit__v3__subscribers__subscriber_id__tags__tag_id___delete",
+      "provider_alias_intent": "/v3/subscribers/subscriber_id/tags/tag_id",
+      "text": "Remove tag from a subscriber",
+      "category": "Tags",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "subscriber_id": {
+          "type": "string",
+          "text": "Subscriber ID",
+          "required": true
+        },
+        "tag_id": {
+          "type": "string",
+          "text": "Tag ID",
+          "required": true
+        },
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "subscriber_id": {
+          "type": "string",
+          "text": "Subscriber ID",
+          "required": true
+        },
+        "tag_id": {
+          "type": "string",
+          "text": "Tag ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Remove tag from a subscriber",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/subscribers/<subscriber_id>/tags/<tag_id>",
+        "alias_endpoint": "/convertkit/v3/subscribers/subscriber_id/tags/tag_id",
+        "api_ref": "https://developers.convertkit.com/?shell#remove-tag-from-a-subscriber"
+      },
+      "auth": {
+        "queryMap": {
+          "api_secret": "api_secret"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__tags__tag_id__unsubscribe___post": {
+      "provider_intent": "convertkit__v3__tags__tag_id__unsubscribe___post",
+      "provider_alias_intent": "/v3/tags/tag_id/unsubscribe",
+      "text": "Remove tag from a subscriber by email",
+      "category": "Tags",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "tag_id": {
+          "type": "string",
+          "text": "Tag ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "email": {
+          "type": "string",
+          "text": "Subscriber email address",
+          "required": true
+        },
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key",
+          "required": true
+        }
+      },
+      "path": {
+        "tag_id": {
+          "type": "string",
+          "text": "Tag ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Remove tag from a subscriber by email",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/tags/<tag_id>/unsubscribe",
+        "alias_endpoint": "/convertkit/v3/tags/tag_id/unsubscribe",
+        "api_ref": "https://developers.convertkit.com/?shell#remove-tag-from-a-subscriber-by-email"
+      },
+      "auth": {
+        "body": {
+          "api_secret": "api_secret"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__tags__tag_id__subscriptions___get": {
+      "provider_intent": "convertkit__v3__tags__tag_id__subscriptions___get",
+      "provider_alias_intent": "/v3/tags/tag_id/subscriptions",
+      "text": "List subscriptions to a tag",
+      "category": "Tags",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "tag_id": {
+          "type": "string",
+          "text": "Tag ID",
+          "required": true
+        },
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key",
+          "required": true
+        },
+        "sort_order": {
+          "type": "string",
+          "text": "asc to list subscribers added oldest to newest desc to list subscribers added newest to oldest. asc is the default order.",
+          "enum": [
+            "asc",
+            "desc"
+          ]
+        },
+        "subscriber_state": {
+          "type": "string",
+          "text": "receive only active subscribers or cancelled subscribers",
+          "enum": [
+            "active",
+            "cancelled"
+          ]
+        },
+        "page": {
+          "type": "string",
+          "text": "the page to retrieve. 50 results are returned per page."
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "tag_id": {
+          "type": "string",
+          "text": "Tag ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "List subscriptions to a tag",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/tags/<tag_id>/subscriptions",
+        "alias_endpoint": "/convertkit/v3/tags/tag_id/subscriptions",
+        "api_ref": "https://developers.convertkit.com/?shell#list-subscriptions-to-a-tag"
+      },
+      "auth": {
+        "queryMap": {
+          "api_secret": "api_secret"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__automations__hooks___post": {
+      "provider_intent": "convertkit__v3__automations__hooks___post",
+      "provider_alias_intent": "/v3/automations/hooks",
+      "text": "Create a webhook",
+      "category": "Webhooks",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "target_url": {
+          "type": "string",
+          "text": "The URL that will receive subscriber data when the event is triggered",
+          "required": true
+        },
+        "event": {
+          "type": "string",
+          "text": "JSON object that includes the trigger name and extra information when needed.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Create a webhook",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/automations/hooks",
+        "alias_endpoint": "/convertkit/v3/automations/hooks",
+        "api_ref": "https://developers.convertkit.com/?shell#create-a-webhook"
+      },
+      "auth": {
+        "body": {
+          "api_secret": "api_secret"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "convertkit__v3__automations__hooks__rule_id___delete": {
+      "provider_intent": "convertkit__v3__automations__hooks__rule_id___delete",
+      "provider_alias_intent": "/v3/automations/hooks/rule_id",
+      "text": "Destroy webhook",
+      "category": "Webhooks",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "rule_id": {
+          "type": "string",
+          "text": "Rule ID",
+          "required": true
+        },
+        "api_secret": {
+          "type": "string",
+          "text": "Your API secret key",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "rule_id": {
+          "type": "string",
+          "text": "Rule ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Destroy webhook",
+        "rate_limit": [],
+        "api_endpoint": "https://api.convertkit.com/v3/automations/hooks/<rule_id>",
+        "alias_endpoint": "/convertkit/v3/automations/hooks/rule_id",
+        "api_ref": "https://developers.convertkit.com/?shell#destroy-webhook"
+      },
+      "auth": {
+        "queryMap": {
+          "api_secret": "api_secret"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

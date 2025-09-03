@@ -1,0 +1,748 @@
+{
+  "app": {
+    "title": "zohoprojects API",
+    "description": "",
+    "api_base": "/zohoprojects",
+    "copyright": "",
+    "copyright_year": "",
+    "contact_email": ""
+  },
+  "category": {
+    "All": ""
+  },
+  "routes": {
+    "all_portals": {
+      "provider_intent": "all_portals",
+      "provider_alias_intent": "/restapi/portals",
+      "text": "All Portals",
+      "category": "Portals",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Gets all the portals for the logged in user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/restapi/portals",
+        "alias_endpoint": "/zohoprojects/restapi/portals",
+        "api_ref": "https://www.zoho.com/projects/help/rest-api/portals-api.html#alink1"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoProjects.portals.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "portal_details": {
+      "provider_intent": "portal_details",
+      "provider_alias_intent": "/restapi/portal/portalid",
+      "text": "Portal Details",
+      "category": "Portals",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "PORTALID": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "PORTALID": {
+          "type": "string"
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Lists the details of a particular portal",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/restapi/portal/[PORTALID]",
+        "alias_endpoint": "/zohoprojects/restapi/portal/portalid",
+        "api_ref": "https://www.zoho.com/projects/help/rest-api/portals-api.html#alink2"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoProjects.portals.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "schedule_portal_data_backup": {
+      "provider_intent": "schedule_portal_data_backup",
+      "provider_alias_intent": "/api/v3/portal/portal_id/portal_export",
+      "text": "Schedule Portal Data Backup",
+      "category": "Portals",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "PORTAL_ID": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "access_code": {
+          "type": "string",
+          "text": "Specify the password for file export",
+          "required": false
+        }
+      },
+      "path": {
+        "PORTAL_ID": {
+          "type": "string"
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Schedules a new portal data backup",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v3/portal/[PORTAL_ID]/portal_export",
+        "alias_endpoint": "/zohoprojects/api/v3/portal/portal_id/portal_export",
+        "api_ref": "https://www.zoho.com/projects/help/rest-api/portals-api.html#alink3"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoProjects.portals.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "portal_data_backup_status": {
+      "provider_intent": "portal_data_backup_status",
+      "provider_alias_intent": "/api/v3/portal/portal_id+/portal_export/export_id/status",
+      "text": "Portal Data Backup Status",
+      "category": "Portals",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "PORTAL_ID": {
+          "type": "string"
+        },
+        "EXPORT_ID": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "PORTAL_ID": {
+          "type": "string"
+        },
+        "EXPORT_ID": {
+          "type": "string"
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Provides the status of a scheduled portal data backup",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v3/portal/[PORTAL_ID]+/portal_export/[EXPORT_ID]/status",
+        "alias_endpoint": "/zohoprojects/api/v3/portal/portal_id+/portal_export/export_id/status",
+        "api_ref": "https://www.zoho.com/projects/help/rest-api/portals-api.html#alink4"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoProjects.portals.READ, ZohoFiles.files.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "all_projects": {
+      "provider_intent": "all_projects",
+      "provider_alias_intent": "/restapi/portal/portalid/projects",
+      "text": "All Projects",
+      "category": "Projects",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "PORTALID": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "PORTALID": {
+          "type": "string"
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Get all the projects in the portal for the logged in user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/restapi/portal/[PORTALID]/projects",
+        "alias_endpoint": "/zohoprojects/restapi/portal/portalid/projects",
+        "api_ref": "https://www.zoho.com/projects/help/rest-api/projects-api.html#alink1"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoProjects.projects.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "project_details": {
+      "provider_intent": "project_details",
+      "provider_alias_intent": "/restapi/portal/portalid/projects/projectid",
+      "text": "Project Details",
+      "category": "Projects",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "PORTALID": {
+          "type": "string"
+        },
+        "PROJECTID": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "PORTALID": {
+          "type": "string"
+        },
+        "PROJECTID": {
+          "type": "string"
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Lists all the details of the project",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/restapi/portal/[PORTALID]/projects/[PROJECTID]",
+        "alias_endpoint": "/zohoprojects/restapi/portal/portalid/projects/projectid",
+        "api_ref": "https://www.zoho.com/projects/help/rest-api/projects-api.html#alink2"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoProjects.projects.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_project_layouts": {
+      "provider_intent": "get_project_layouts",
+      "provider_alias_intent": "/restapi/portal/portalid/module/projects/layouts",
+      "text": "Get Project Layouts",
+      "category": "Projects",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "PORTALID": {
+          "type": "string"
+        },
+        "LAYOUTID": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "PORTALID": {
+          "type": "string"
+        },
+        "LAYOUTID": {
+          "type": "string"
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Gets list of project layouts",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/restapi/portal/[PORTALID]/module/projects/layouts",
+        "alias_endpoint": "/zohoprojects/restapi/portal/portalid/module/projects/layouts",
+        "api_ref": "https://www.zoho.com/projects/help/rest-api/projects-api.html#project-layouts"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoProjects.projects.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_layout_details": {
+      "provider_intent": "get_layout_details",
+      "provider_alias_intent": "/restapi/portal/portalid/module/projects/layouts/layoutid",
+      "text": "Get Layout Details",
+      "category": "Projects",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "PORTALID": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "PORTALID": {
+          "type": "string"
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Gets layout details",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/restapi/portal/[PORTALID]/module/projects/layouts/[LAYOUTID]",
+        "alias_endpoint": "/zohoprojects/restapi/portal/portalid/module/projects/layouts/layoutid",
+        "api_ref": "https://www.zoho.com/projects/help/rest-api/projects-api.html#layout-details"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoProjects.projects.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_project_custom_fields": {
+      "provider_intent": "get_project_custom_fields",
+      "provider_alias_intent": "/restapi/portal/portalid/projects/customfields",
+      "text": "Get Project Custom Fields",
+      "category": "Projects",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "PORTALID": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "PORTALID": {
+          "type": "string"
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Gets all the project custom fields",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/restapi/portal/[PORTALID]/projects/customfields",
+        "alias_endpoint": "/zohoprojects/restapi/portal/portalid/projects/customfields",
+        "api_ref": "https://www.zoho.com/projects/help/rest-api/projects-api.html#alink3"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoProjects.projects.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_project_custom_status": {
+      "provider_intent": "get_project_custom_status",
+      "provider_alias_intent": " /restapi/portal/portalid/module/projects/status",
+      "text": "Get Project Custom Status",
+      "category": "Projects",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "PORTALID": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "PORTALID": {
+          "type": "string"
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Gets list of all project custom status",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint} /restapi/portal/[PORTALID]/module/projects/status",
+        "alias_endpoint": "/zohoprojects /restapi/portal/portalid/module/projects/status",
+        "api_ref": "https://www.zoho.com/projects/help/rest-api/projects-api.html#custom-status"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoProjects.projects.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_project_groups": {
+      "provider_intent": "get_project_groups",
+      "provider_alias_intent": "/restapi/portal/portalid/projects/groups",
+      "text": "Get Project Groups",
+      "category": "Projects",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "PORTALID": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "PORTALID": {
+          "type": "string"
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Gets all the project groups",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/restapi/portal/[PORTALID]/projects/groups",
+        "alias_endpoint": "/zohoprojects/restapi/portal/portalid/projects/groups",
+        "api_ref": "https://www.zoho.com/projects/help/rest-api/projects-api.html#alink4"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoProjects.projects.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "create_a_project_group": {
+      "provider_intent": "create_a_project_group",
+      "provider_alias_intent": "/restapi/portal/portalid/projectgroups",
+      "text": "Create a Project Group",
+      "category": "Projects",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "PORTALID": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "PORTALID": {
+          "type": "string"
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Creates a project group in the portal",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/restapi/portal/[PORTALID]/projectgroups",
+        "alias_endpoint": "/zohoprojects/restapi/portal/portalid/projectgroups",
+        "api_ref": "https://www.zoho.com/projects/help/rest-api/projects-api.html#alink8"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoProjects.projects.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "create_a_project_": {
+      "provider_intent": "create_a_project_",
+      "provider_alias_intent": "/restapi/portal/portalid/projects",
+      "text": "Create a Project",
+      "category": "Projects",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "PORTALID": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "PORTALID": {
+          "type": "string"
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Creates a project in the portal",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/restapi/portal/[PORTALID]/projects",
+        "alias_endpoint": "/zohoprojects/restapi/portal/portalid/projects",
+        "api_ref": "https://www.zoho.com/projects/help/rest-api/projects-api.html#alink5"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoProjects.projects.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "update_a_project": {
+      "provider_intent": "update_a_project",
+      "provider_alias_intent": "/restapi/portal/portalid/projects/projectid",
+      "text": "Update a Project",
+      "category": "Projects",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "PORTALID": {
+          "type": "string"
+        },
+        "PROJECTID": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "PORTALID": {
+          "type": "string"
+        },
+        "PROJECTID": {
+          "type": "string"
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Updates a project in the portal",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/restapi/portal/[PORTALID]/projects/[PROJECTID]",
+        "alias_endpoint": "/zohoprojects/restapi/portal/portalid/projects/projectid",
+        "api_ref": "https://www.zoho.com/projects/help/rest-api/projects-api.html#alink6"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoProjects.projects.UPDATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "delete_a_project": {
+      "provider_intent": "delete_a_project",
+      "provider_alias_intent": "/restapi/portal/portalid/projects/projectid",
+      "text": "Delete a Project",
+      "category": "Projects",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "PORTALID": {
+          "type": "string"
+        },
+        "PROJECTID": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "PORTALID": {
+          "type": "string"
+        },
+        "PROJECTID": {
+          "type": "string"
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Deletes a project in the portal",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/restapi/portal/[PORTALID]/projects/[PROJECTID]",
+        "alias_endpoint": "/zohoprojects/restapi/portal/portalid/projects/projectid",
+        "api_ref": "https://www.zoho.com/projects/help/rest-api/projects-api.html#alink7"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoProjects.projects.DELETE",
+      "subdomain": {},
+      "payload_type": ""
+    }
+  }
+}

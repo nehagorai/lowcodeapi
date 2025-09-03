@@ -1,0 +1,183 @@
+{
+  "routes": {
+    "awss3__signed-url___get": {
+      "provider_intent": "awss3__signed-url___get",
+      "provider_alias_intent": "/signed-url",
+      "text": "Generate signed url for AWS S3",
+      "category": "Signed URL",
+      "method": "GET",
+      "type": "Custom",
+      "params": {
+        "bucket": {
+          "type": "string",
+          "text": "User's AWS S3 bucket name",
+          "required": true
+        },
+        "key_name": {
+          "type": "string",
+          "text": "File name to be signed",
+          "required": true
+        },
+        "type": {
+          "type": "enum",
+          "text": "Request type",
+          "enum": [
+            "upload",
+            "get"
+          ]
+        },
+        "acl": {
+          "type": "enum",
+          "text": "ACL of the file object, only applicable for upload. Default: private",
+          "enum": [
+            "private",
+            "public-read",
+            "public-read-write",
+            "authenticated-read",
+            "aws-exec-read",
+            "bucket-owner-read",
+            "bucket-owner-full-control"
+          ]
+        },
+        "expires_in": {
+          "type": "number",
+          "text": "Expire the signed url after this duration (in second). Default : 300 seconds"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Generate AWS S3 signed url for reading a file from S3 bucket.",
+        "rate_limit": [],
+        "api_endpoint": "/awss3/signed-url",
+        "alias_endpoint": "/awss3/signed-url",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {},
+        "subdomain": [
+          "region",
+          "bucket"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "awss3__signed-url__for-fetch___get": {
+      "provider_intent": "awss3__signed-url__for-fetch___get",
+      "provider_alias_intent": "/signed-url/for-fetch",
+      "text": "Signed url for fetching file object",
+      "category": "Signed URL",
+      "method": "GET",
+      "type": "Custom",
+      "params": {
+        "bucket": {
+          "type": "string",
+          "text": "User's AWS S3 bucket name",
+          "required": true
+        },
+        "key_name": {
+          "type": "string",
+          "text": "File name to be signed",
+          "required": true
+        },
+        "expires_in": {
+          "type": "number",
+          "text": "Expire the signed url after this duration (in second). Default : 300 seconds",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Generate AWS S3 signed url for reading a file from S3 bucket.",
+        "rate_limit": [],
+        "api_endpoint": "/awss3/signed-url/for-fetch",
+        "alias_endpoint": "/awss3/signed-url/for-fetch",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {},
+        "subdomain": [
+          "region",
+          "bucket"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "awss3__signed-url__for-upload___get": {
+      "provider_intent": "awss3__signed-url__for-upload___get",
+      "provider_alias_intent": "/signed-url/for-upload",
+      "text": "Signed url for uploading file object",
+      "category": "Signed URL",
+      "method": "GET",
+      "type": "Custom",
+      "params": {
+        "bucket": {
+          "type": "string",
+          "text": "User's AWS S3 bucket name",
+          "required": true
+        },
+        "key_name": {
+          "type": "string",
+          "text": "File name to be signed",
+          "required": true
+        },
+        "acl": {
+          "type": "enum",
+          "text": "ACL of the file object, only applicable for upload. Default: private",
+          "enum": [
+            "private",
+            "public-read",
+            "public-read-write",
+            "authenticated-read",
+            "aws-exec-read",
+            "bucket-owner-read",
+            "bucket-owner-full-control"
+          ]
+        },
+        "expires_in": {
+          "type": "number",
+          "text": "Expire the signed url after this duration (in second). Default : 300 seconds"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "Generate AWS S3 signed url for uploading a file.",
+        "rate_limit": [],
+        "api_endpoint": "/awss3/signed-url/for-upload",
+        "alias_endpoint": "/awss3/signed-url/for-upload",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {},
+        "subdomain": [
+          "region",
+          "bucket"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

@@ -1,0 +1,4185 @@
+{
+  "routes": {
+    "zohofsm__fsm__v1__assets__record_id___get": {
+      "provider_intent": "zohofsm__fsm__v1__assets__record_id___get",
+      "provider_alias_intent": "/fsm/v1/assets/record_id",
+      "text": "Get an Asset",
+      "category": "Asset",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To fetch a specific asset",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Assets/<record_id>",
+        "alias_endpoint": "/zohofsm/fsm/v1/assets/record_id",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/get-an-asset.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Assets.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__assets_____post": {
+      "provider_intent": "zohofsm__fsm__v1__assets_____post",
+      "provider_alias_intent": "/fsm/v1/assets/",
+      "text": "Create an Asset",
+      "category": "Asset",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "Name": {
+          "type": "string",
+          "text": "The name for the scheduled maintenance",
+          "required": true
+        },
+        "Product": {
+          "type": "string",
+          "text": "The ID of the part to which you want to associate the asset",
+          "required": true
+        },
+        "Contact": {
+          "type": "string",
+          "text": "The ID of the contact to which you want to associate the asset",
+          "required": true
+        },
+        "Company": {
+          "type": "string",
+          "text": "The ID of the company to which you want to associate the asset",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To insert a new asset record",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Assets/",
+        "alias_endpoint": "/zohofsm/fsm/v1/assets/",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/create-asset.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Assets.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__assets__record_id___put": {
+      "provider_intent": "zohofsm__fsm__v1__assets__record_id___put",
+      "provider_alias_intent": "/fsm/v1/assets/record_id",
+      "text": "Edit an Asset",
+      "category": "Asset",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To update an asset record",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Assets/<record_id>",
+        "alias_endpoint": "/zohofsm/fsm/v1/assets/record_id",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/edit-asset.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Assets.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__attendance__actions__checkin___post": {
+      "provider_intent": "zohofsm__fsm__v1__attendance__actions__checkin___post",
+      "provider_alias_intent": "/fsm/v1/attendance/actions/checkin",
+      "text": "Check In User",
+      "category": "Attendance",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "Check_In_Time": {
+          "type": "string",
+          "text": "The time at which you want to check in the user"
+        },
+        "user": {
+          "type": "string",
+          "text": "The id of the user"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Using the attendance APIs, you can check in an user, or check out an user from the mobile app",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Attendance/actions/checkin",
+        "alias_endpoint": "/zohofsm/fsm/v1/attendance/actions/checkin",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/check-in-user.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Attendance.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__attendance__actions__checkout___post": {
+      "provider_intent": "zohofsm__fsm__v1__attendance__actions__checkout___post",
+      "provider_alias_intent": "/fsm/v1/attendance/actions/checkout",
+      "text": "Check Out User",
+      "category": "Attendance",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "Check_In_Time": {
+          "type": "string",
+          "text": "The time at which you want to check out the user"
+        },
+        "user": {
+          "type": "string",
+          "text": "The id of the user"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To check out the user from the mobile app",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Attendance/actions/checkout",
+        "alias_endpoint": "/zohofsm/fsm/v1/attendance/actions/checkout",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/check-out-user.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Attendance.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__companies___get": {
+      "provider_intent": "zohofsm__fsm__v1__companies___get",
+      "provider_alias_intent": "/fsm/v1/companies",
+      "text": "List Companies",
+      "category": "Companies",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "number",
+          "text": "The page from which you want to fetch the records."
+        },
+        "per_page": {
+          "type": "number",
+          "text": "The number of records you want to fetch in a page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To fetch the list of all available companies",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Companies",
+        "alias_endpoint": "/zohofsm/fsm/v1/companies",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/get-companies.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Companies.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__companies__record_id___get": {
+      "provider_intent": "zohofsm__fsm__v1__companies__record_id___get",
+      "provider_alias_intent": "/fsm/v1/companies/record_id",
+      "text": "Get a Company",
+      "category": "Companies",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To fetch a specific company.",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Companies/<record_id>",
+        "alias_endpoint": "/zohofsm/fsm/v1/companies/record_id",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/get-a-company.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Companies.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__companies___post": {
+      "provider_intent": "zohofsm__fsm__v1__companies___post",
+      "provider_alias_intent": "/fsm/v1/companies",
+      "text": "Create a Company",
+      "category": "Companies",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "Company_Name": {
+          "type": "string",
+          "text": "The name of the company"
+        },
+        "Taxable": {
+          "type": "boolean",
+          "text": "Whether taxable is true or false",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "Tax_Name": {
+          "type": "string",
+          "text": "Tax name if taxable is true"
+        },
+        "Tax_Exemption_Code": {
+          "type": "string",
+          "text": "Tax exemption code if taxable is false"
+        },
+        "Tax_Authority": {
+          "type": "string",
+          "text": "A tax authority needs to be provided if taxable is false"
+        },
+        "GST_Treatment": {
+          "type": "string",
+          "text": "Applicable for the Indian edition"
+        },
+        "Place_of_Supply": {
+          "type": "string",
+          "text": "Applicable for the Indian edition"
+        },
+        "Tax_Reg_Number": {
+          "type": "string",
+          "text": "Applicable for the Indian edition"
+        },
+        "VAT_Treatment": {
+          "type": "string",
+          "text": "Applicable for the UK edition"
+        },
+        "Currency": {
+          "type": "string",
+          "text": "The currency you want to choose for the company"
+        },
+        "Exchange_Rate": {
+          "type": "string",
+          "text": "The exchange rate w.r.t the base currency of the organization"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To insert a new company record",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Companies",
+        "alias_endpoint": "/zohofsm/fsm/v1/companies",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/create-company.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Companies.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__companies__record_id___put": {
+      "provider_intent": "zohofsm__fsm__v1__companies__record_id___put",
+      "provider_alias_intent": "/fsm/v1/companies/record_id",
+      "text": "Edit a Company",
+      "category": "Companies",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To update a company record",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Companies/<record_id>",
+        "alias_endpoint": "/zohofsm/fsm/v1/companies/record_id",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/edit-company.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Companies.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__contacts___get": {
+      "provider_intent": "zohofsm__fsm__v1__contacts___get",
+      "provider_alias_intent": "/fsm/v1/contacts",
+      "text": "List Contacts",
+      "category": "Contacts",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "number",
+          "text": "The page from which you want to fetch the records"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "The number of records you want to fetch in a page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To fetch the list of all available contacts",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Contacts",
+        "alias_endpoint": "/zohofsm/fsm/v1/contacts",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/get-contacts.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Contacts.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__contacts__record_id___get": {
+      "provider_intent": "zohofsm__fsm__v1__contacts__record_id___get",
+      "provider_alias_intent": "/fsm/v1/contacts/record_id",
+      "text": "Get a Contact",
+      "category": "Contact",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To fetch a specific contact",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Contacts/<record_id>",
+        "alias_endpoint": "/zohofsm/fsm/v1/contacts/record_id",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/get-a-contact.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Contacts.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__contacts___post": {
+      "provider_intent": "zohofsm__fsm__v1__contacts___post",
+      "provider_alias_intent": "/fsm/v1/contacts",
+      "text": "Create a Contact",
+      "category": "Contact",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "Last_Name": {
+          "type": "string",
+          "text": "The last name of the contact",
+          "required": true
+        },
+        "Email": {
+          "type": "string",
+          "text": "The email address you want to associate with the contact",
+          "required": true
+        },
+        "Taxable": {
+          "type": "boolean",
+          "text": "Whether taxable is true or false",
+          "required": true,
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "Tax_Name": {
+          "type": "string",
+          "text": "Tax name if taxable is true",
+          "required": true
+        },
+        "Tax_Exemption_Code": {
+          "type": "string",
+          "text": "Tax exemption code if taxable is false",
+          "required": true
+        },
+        "Tax_Authority": {
+          "type": "string",
+          "text": "A tax authority needs to be provided if taxable is false",
+          "required": true
+        },
+        "GST_Treatment": {
+          "type": "string",
+          "text": "Applicable for the Indian edition",
+          "required": true
+        },
+        "Place_of_Supply": {
+          "type": "string",
+          "text": "Applicable for the Indian edition",
+          "required": true
+        },
+        "Tax_Reg_Number": {
+          "type": "string",
+          "text": "Applicable for the Indian edition",
+          "required": true
+        },
+        "VAT_Treatment": {
+          "type": "string",
+          "text": "Applicable for the UK edition",
+          "required": true
+        },
+        "Currency": {
+          "type": "string",
+          "text": "The currency you want to choose for the contact",
+          "required": true
+        },
+        "Exchange_Rate": {
+          "type": "string",
+          "text": "The exchange rate w.r.t the base currency of the organization",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To insert a new contact record",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Contacts",
+        "alias_endpoint": "/zohofsm/fsm/v1/contacts",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/create-contact.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Contacts.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__contacts__record_id___put": {
+      "provider_intent": "zohofsm__fsm__v1__contacts__record_id___put",
+      "provider_alias_intent": "/fsm/v1/contacts/record_id",
+      "text": "Edit a Contact",
+      "category": "Contact",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To update a contact record",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Contacts/<record_id>",
+        "alias_endpoint": "/zohofsm/fsm/v1/contacts/record_id",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/edit-contact.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Contacts.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__estimates___get": {
+      "provider_intent": "zohofsm__fsm__v1__estimates___get",
+      "provider_alias_intent": "/fsm/v1/estimates",
+      "text": "List Estimates",
+      "category": "Estimates",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "number",
+          "text": "The page from which you want to fetch the records"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "The number of records you want to fetch in a page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "The Estimate provides a ballpark figure for how much it would cost to provide the services asked for in a Request",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Estimates",
+        "alias_endpoint": "/zohofsm/fsm/v1/estimates",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/get-estimates.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Estimates.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__estimates__record_id___get": {
+      "provider_intent": "zohofsm__fsm__v1__estimates__record_id___get",
+      "provider_alias_intent": "/fsm/v1/estimates/record_id",
+      "text": "Get an Estimate",
+      "category": "Estimates",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To fetch a specific estimate",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Estimates/<record_id>",
+        "alias_endpoint": "/zohofsm/fsm/v1/estimates/record_id",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/get-an-estimate.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Estimates.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__estimates___post": {
+      "provider_intent": "zohofsm__fsm__v1__estimates___post",
+      "provider_alias_intent": "/fsm/v1/estimates",
+      "text": "Create an Estimate",
+      "category": "Estimates",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "Summary": {
+          "type": "string",
+          "text": "A summary for the estimate",
+          "required": true
+        },
+        "Contact": {
+          "type": "string",
+          "text": "The ID of the contact for whom the  estimate is being created",
+          "required": true
+        },
+        "Company": {
+          "type": "string",
+          "text": "The ID of the company for which the request is being created",
+          "required": true
+        },
+        "Email": {
+          "type": "string",
+          "text": "The email address you want to associate with the estimate",
+          "required": true
+        },
+        "Service_Address": {
+          "type": "number",
+          "text": "Specify the ID of the service address you want for the estimate",
+          "required": true
+        },
+        "Service_Line_Items": {
+          "type": "array",
+          "text": "Details of the services for which the estimate is being created",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To insert a new estimate record",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Estimates",
+        "alias_endpoint": "/zohofsm/fsm/v1/estimates",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/create-estimate.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Estimates.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__estimates__record_id___put": {
+      "provider_intent": "zohofsm__fsm__v1__estimates__record_id___put",
+      "provider_alias_intent": "/fsm/v1/estimates/record_id",
+      "text": "Add Parts to a Service of an Estimate",
+      "category": "Estimates",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To add parts to a service of an existing estimate",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Estimates/<record_id>",
+        "alias_endpoint": "/zohofsm/fsm/v1/estimates/record_id",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/add-part-to-estimate.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Estimates.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__estimates__record_id__actions__blueprint__transitions___get": {
+      "provider_intent": "zohofsm__fsm__v1__estimates__record_id__actions__blueprint__transitions___get",
+      "provider_alias_intent": "/fsm/v1/estimates/record_id/actions/blueprint/transitions",
+      "text": "List Estimate Transitions",
+      "category": "Estimates",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all the possible transitions that can be performed on an estimate",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Estimates/<record_id>/actions/blueprint/transitions",
+        "alias_endpoint": "/zohofsm/fsm/v1/estimates/record_id/actions/blueprint/transitions",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/list-estimate-transitions.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Estimates.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__estimates__record_id__actions__blueprint___put": {
+      "provider_intent": "zohofsm__fsm__v1__estimates__record_id__actions__blueprint___put",
+      "provider_alias_intent": "/fsm/v1/estimates/record_id/actions/blueprint",
+      "text": "Perform an Estimate Transition",
+      "category": "Estimates",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "transition_id": {
+          "type": "string",
+          "text": "The ID of the transition you want to perform on the estimate"
+        },
+        "data": {
+          "type": "string",
+          "text": "Use this to add notes while rejecting or canceling an estimate"
+        }
+      },
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To perform a transition on an estimate",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Estimates/<record_id>/actions/blueprint",
+        "alias_endpoint": "/zohofsm/fsm/v1/estimates/record_id/actions/blueprint",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/perform-estimate-transition.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Estimates.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__files___post": {
+      "provider_intent": "zohofsm__fsm__v1__files___post",
+      "provider_alias_intent": "/fsm/v1/files",
+      "text": "Upload a file to ZFS (Zoho File System)",
+      "category": "Files",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To upload a file to the Zoho File System (ZFS)",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/files",
+        "alias_endpoint": "/zohofsm/fsm/v1/files",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/upload-file-to-zfs.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.files.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__files___get": {
+      "provider_intent": "zohofsm__fsm__v1__files___get",
+      "provider_alias_intent": "/fsm/v1/files",
+      "text": "Download a file",
+      "category": "Files",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "file_id": {
+          "type": "string",
+          "text": "The encrypted file ID ($file_id) of the attachment in a note"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To download or fetch a file added as an attachment to a Note",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/files",
+        "alias_endpoint": "/zohofsm/fsm/v1/files",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/download-file.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.files.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsmto_fetch_the_list_of_all_available_invoices___get": {
+      "provider_intent": "zohofsmto_fetch_the_list_of_all_available_invoices___get",
+      "provider_alias_intent": "to fetch the list of all available invoices",
+      "text": "List Invoices",
+      "category": "Invoice ",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "number",
+          "text": "The page from which you want to fetch the records. The default value is 1"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "The number of records you want to fetch in a page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "The built-in integration with Zoho Books/Invoice allows you to conveniently and quickly create invoices for your work orders",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}To fetch the list of all available invoices",
+        "alias_endpoint": "/zohofsmto fetch the list of all available invoices",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/get-invoices.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.custom.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__invoices___post": {
+      "provider_intent": "zohofsm__fsm__v1__invoices___post",
+      "provider_alias_intent": "/fsm/v1/invoices",
+      "text": "Create Invoices",
+      "category": "Invoice ",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "Work_Order": {
+          "type": "string",
+          "text": "The ID of the work order for which the invoice is being created"
+        },
+        "$Service_Line_Items": {
+          "type": "array",
+          "text": "Include the IDs of the service line items in a work order for which you want to create an invoice"
+        },
+        "$finance_data": {
+          "type": "object",
+          "text": "Details required for creating the invoice"
+        },
+        "date": {
+          "type": "string",
+          "text": "The Invoice Date"
+        },
+        "payment_terms": {
+          "type": "number",
+          "text": "Value for Payment Terms"
+        },
+        "due_date": {
+          "type": "string",
+          "text": "The Due Date for the invoice"
+        },
+        "payment_terms_label": {
+          "type": "string",
+          "text": "The display name for Payment Terms"
+        },
+        "discount_preference": {
+          "type": "object",
+          "text": "Details of the discount offered"
+        },
+        "Discount": {
+          "type": "number",
+          "text": "The discount being offered"
+        },
+        "Adjustment": {
+          "type": "number",
+          "text": "Any change or adjustment to the invoice amount"
+        },
+        "Discount_Type": {
+          "type": "string",
+          "text": "Whether Percent or Currency"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To insert a new invoice record",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Invoices",
+        "alias_endpoint": "/zohofsm/fsm/v1/invoices",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/create-invoice.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.custom.ALL",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__invoices__record_id__actions__send_invoice___post": {
+      "provider_intent": "zohofsm__fsm__v1__invoices__record_id__actions__send_invoice___post",
+      "provider_alias_intent": "/fsm/v1/invoices/record_id/actions/send_invoice",
+      "text": "Send Invoice",
+      "category": "Invoice ",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "send_invoice_pdf": {
+          "type": "boolean",
+          "text": "Whether to add the invoice pdf as an attachment in the email",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "to_mail_ids": {
+          "type": "array",
+          "text": "List of recipient email IDs",
+          "required": true
+        },
+        "send_from_org_email_id": {
+          "type": "boolean",
+          "text": "Whether to send the email from the organization's email address",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Email an invoice to the desired recipients",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Invoices/<record_id>/actions/send_invoice",
+        "alias_endpoint": "/zohofsm/fsm/v1/invoices/record_id/actions/send_invoice",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/send-invoice.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.custom.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__module_api_name__record_id__notes___get": {
+      "provider_intent": "zohofsm__fsm__v1__module_api_name__record_id__notes___get",
+      "provider_alias_intent": "/fsm/v1/module_api_name/record_id/notes",
+      "text": "List Notes",
+      "category": "Notes",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "module_api_name": {
+          "type": "string",
+          "text": "Module API Name",
+          "required": true
+        },
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "module_api_name": {
+          "type": "string",
+          "text": "Module API Name",
+          "required": true
+        },
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Use Notes to add any additional information you might want to include in your record",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/<module_api_name>/<record_id>/Notes",
+        "alias_endpoint": "/zohofsm/fsm/v1/module_api_name/record_id/notes",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/get-notes.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.<module_name>.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__module_api_name__record_id__notes__note_id___get": {
+      "provider_intent": "zohofsm__fsm__v1__module_api_name__record_id__notes__note_id___get",
+      "provider_alias_intent": "/fsm/v1/module_api_name/record_id/notes/note_id",
+      "text": "Get a Note",
+      "category": "Notes",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "module_api_name": {
+          "type": "string",
+          "text": "Module API Name",
+          "required": true
+        },
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        },
+        "note_id": {
+          "type": "string",
+          "text": "Note ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "module_api_name": {
+          "type": "string",
+          "text": "Module API Name",
+          "required": true
+        },
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        },
+        "note_id": {
+          "type": "string",
+          "text": "Note ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To fetch a specific Note from a record",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/<module_api_name>/<record_id>/Notes/<note_id>",
+        "alias_endpoint": "/zohofsm/fsm/v1/module_api_name/record_id/notes/note_id",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/get-a-note.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.<module_name>.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__module_api_name__record_id__notes___post": {
+      "provider_intent": "zohofsm__fsm__v1__module_api_name__record_id__notes___post",
+      "provider_alias_intent": "/fsm/v1/module_api_name/record_id/notes",
+      "text": "Create a Note",
+      "category": "Notes",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "module_api_name": {
+          "type": "string",
+          "text": "Module API Name",
+          "required": true
+        },
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "Note_Content": {
+          "type": "string",
+          "text": "The body of the note"
+        },
+        "Note_Title": {
+          "type": "string",
+          "text": "The heading for the note"
+        },
+        "$attachments": {
+          "type": "array",
+          "text": "The file IDs (file_id) of the attachments"
+        }
+      },
+      "path": {
+        "module_api_name": {
+          "type": "string",
+          "text": "Module API Name",
+          "required": true
+        },
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To create a note in a record",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/<module_api_name>/<record_id>/Notes",
+        "alias_endpoint": "/zohofsm/fsm/v1/module_api_name/record_id/notes",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/create-note.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.<module_name>.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__module_api_name__record_id__notes__note_id___put": {
+      "provider_intent": "zohofsm__fsm__v1__module_api_name__record_id__notes__note_id___put",
+      "provider_alias_intent": "/fsm/v1/module_api_name/record_id/notes/note_id",
+      "text": "Edit a Note",
+      "category": "Notes",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "module_api_name": {
+          "type": "string",
+          "text": "Module API Name",
+          "required": true
+        },
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        },
+        "note_id": {
+          "type": "string",
+          "text": "Note ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "module_api_name": {
+          "type": "string",
+          "text": "Module API Name",
+          "required": true
+        },
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        },
+        "note_id": {
+          "type": "string",
+          "text": "Note ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To edit a particular note in a record",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/<module_api_name>/<record_id>/Notes/<note_id>",
+        "alias_endpoint": "/zohofsm/fsm/v1/module_api_name/record_id/notes/note_id",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/edit-note.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.<module_name>.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__notes__note_id__attachments___post": {
+      "provider_intent": "zohofsm__fsm__v1__notes__note_id__attachments___post",
+      "provider_alias_intent": "/fsm/v1/notes/note_id/attachments",
+      "text": "Add an Attachment",
+      "category": "Notes",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "note_id": {
+          "type": "string",
+          "text": "Note ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "File_Id": {
+          "type": "string",
+          "text": "The file_id you obtain after uploading the file to ZFS",
+          "required": true
+        },
+        "File_Name": {
+          "type": "string",
+          "text": "A display name for the file",
+          "required": true
+        }
+      },
+      "path": {
+        "note_id": {
+          "type": "string",
+          "text": "Note ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To attach a file to a specific Note. The file should first be uploaded to ZFS",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Notes/<note_id>/Attachments",
+        "alias_endpoint": "/zohofsm/fsm/v1/notes/note_id/attachments",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/add-attachment.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.notes.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__notifications__actions__send___post": {
+      "provider_intent": "zohofsm__fsm__v1__notifications__actions__send___post",
+      "provider_alias_intent": "/fsm/v1/notifications/actions/send",
+      "text": "Create a Notification",
+      "category": "Notification",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "title": {
+          "type": "string",
+          "text": "The title for the custom notification",
+          "required": true
+        },
+        "message": {
+          "type": "string",
+          "text": "The content of the custom notification",
+          "required": true
+        },
+        "userids": {
+          "type": "string",
+          "text": "The IDs of the users to whom the notifications need to be sent",
+          "required": true
+        },
+        "type": {
+          "type": "string",
+          "text": "Specify the type as web or mobile",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To create custom push notifications for the web and mobile app",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/notifications/actions/send",
+        "alias_endpoint": "/zohofsm/fsm/v1/notifications/actions/send",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/create-notification.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.notifications.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__module_api_name__search___get": {
+      "provider_intent": "zohofsm__fsm__v1__module_api_name__search___get",
+      "provider_alias_intent": "/fsm/v1/module_api_name/search",
+      "text": "Search Records",
+      "category": "Records",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "module_api_name": {
+          "type": "string",
+          "text": "Module API Name",
+          "required": true
+        },
+        "api_name": {
+          "type": "string",
+          "text": "API name of field to be searched on",
+          "required": true
+        },
+        "value": {
+          "type": "string",
+          "text": "Field value with which to perform the search",
+          "required": true
+        },
+        "comparator": {
+          "type": "string",
+          "text": "Use this parameter to determine how the search should be performed"
+        },
+        "page": {
+          "type": "number",
+          "text": "To get the list of records from the respective pages"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "To get the list of records available per page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "module_api_name": {
+          "type": "string",
+          "text": "Module API Name",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To search records using field values",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/<module_api_name>/search",
+        "alias_endpoint": "/zohofsm/fsm/v1/module_api_name/search",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/search-records.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.<module_name>.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__module_api_name__record_id__related_list_api_name___get": {
+      "provider_intent": "zohofsm__fsm__v1__module_api_name__record_id__related_list_api_name___get",
+      "provider_alias_intent": "/fsm/v1/module_api_name/record_id/related_list_api_name",
+      "text": "Get Related Records",
+      "category": "Records",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "module_api_name": {
+          "type": "string",
+          "text": "Module API Name",
+          "required": true
+        },
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        },
+        "related_list_api_name": {
+          "type": "string",
+          "text": "Related List API Name",
+          "required": true
+        },
+        "page": {
+          "type": "number",
+          "text": "To get the list of records from the respective pages"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "To get the list of records available per page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "module_api_name": {
+          "type": "string",
+          "text": "Module API Name",
+          "required": true
+        },
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        },
+        "related_list_api_name": {
+          "type": "string",
+          "text": "Related List API Name",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To fetch the related records of a module",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/<module_api_name>/<record_id>/<related_list_api_name>",
+        "alias_endpoint": "/zohofsm/fsm/v1/module_api_name/record_id/related_list_api_name",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/get-related-records.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.<module_name>.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__module_api_name__record_id__actions__process_sync___post": {
+      "provider_intent": "zohofsm__fsm__v1__module_api_name__record_id__actions__process_sync___post",
+      "provider_alias_intent": "/fsm/v1/module_api_name/record_id/actions/process_sync",
+      "text": "Associate Records with Integrated Service",
+      "category": "Records",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "module_api_name": {
+          "type": "string",
+          "text": "Module API Name",
+          "required": true
+        },
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "sync_service": {
+          "type": "string",
+          "text": "The Zoho service with whose record",
+          "required": true
+        }
+      },
+      "path": {
+        "module_api_name": {
+          "type": "string",
+          "text": "Module API Name",
+          "required": true
+        },
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To either link, or unlink a Zoho FSM record w.r.t a record in an integrated Zoho service",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/<module_api_name>/<record_id>/actions/process_sync",
+        "alias_endpoint": "/zohofsm/fsm/v1/module_api_name/record_id/actions/process_sync",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/download-record.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.<module_name>.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__module_api_name__record_id__actions__download___get": {
+      "provider_intent": "zohofsm__fsm__v1__module_api_name__record_id__actions__download___get",
+      "provider_alias_intent": "/fsm/v1/module_api_name/record_id/actions/download",
+      "text": "Download a record",
+      "category": "Records",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "module_api_name": {
+          "type": "string",
+          "text": "Module API Name",
+          "required": true
+        },
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "type": {
+          "type": "string",
+          "text": "The format in which",
+          "required": true
+        }
+      },
+      "path": {
+        "module_api_name": {
+          "type": "string",
+          "text": "Module API Name",
+          "required": true
+        },
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To download a record in PDF or HTML format",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/<module_api_name>/<record_id>/actions/download",
+        "alias_endpoint": "/zohofsm/fsm/v1/module_api_name/record_id/actions/download",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/download-record.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.<module_name>.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__requests___get": {
+      "provider_intent": "zohofsm__fsm__v1__requests___get",
+      "provider_alias_intent": "/fsm/v1/requests",
+      "text": "List Requests",
+      "category": "Requests",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "number",
+          "text": "The page from which you want to fetch the records"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "The number of records you want to fetch in a page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Requests are initiated to render services to customers",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Requests",
+        "alias_endpoint": "/zohofsm/fsm/v1/requests",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/get-requests.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Requests.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__requests__record_id___get": {
+      "provider_intent": "zohofsm__fsm__v1__requests__record_id___get",
+      "provider_alias_intent": "/fsm/v1/requests/record_id",
+      "text": "Get a Request",
+      "category": "Requests",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To fetch a specific request",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Requests/<record_id>",
+        "alias_endpoint": "/zohofsm/fsm/v1/requests/record_id",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/get-a-request.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Requests.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__requests___post": {
+      "provider_intent": "zohofsm__fsm__v1__requests___post",
+      "provider_alias_intent": "/fsm/v1/requests",
+      "text": "Create a Request",
+      "category": "Requests",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "Summary": {
+          "type": "string",
+          "text": "A summary for the requests"
+        },
+        "Contact": {
+          "type": "string",
+          "text": "The ID of the contact for whom the request is being created",
+          "required": true
+        },
+        "Company": {
+          "type": "string",
+          "text": "The ID of the company for which the request is being created",
+          "required": true
+        },
+        "Territory": {
+          "type": "string",
+          "text": "The ID of the territory where you want the request to be assigned"
+        },
+        "Service_Address": {
+          "type": "number",
+          "text": "Specify the ID of the service address you want for the request"
+        },
+        "Billing_Address": {
+          "type": "number",
+          "text": "Specify the ID of the business address you want for the request"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To insert a new request record",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Requests",
+        "alias_endpoint": "/zohofsm/fsm/v1/requests",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/create-request.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Requests.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__scheduled_maintenances___get": {
+      "provider_intent": "zohofsm__fsm__v1__scheduled_maintenances___get",
+      "provider_alias_intent": "/fsm/v1/scheduled_maintenances",
+      "text": "List Scheduled Maintenances",
+      "category": "Scheduled Maintenance",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "number",
+          "text": "To get the list of records from the respective pages"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "To get the list of records available per page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To fetch the list of all scheduled maintenances",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Scheduled_Maintenances",
+        "alias_endpoint": "/zohofsm/fsm/v1/scheduled_maintenances",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/get-scheduled-maintenances.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.ScheduledMaintenances.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__scheduled_maintenances__record_id___get": {
+      "provider_intent": "zohofsm__fsm__v1__scheduled_maintenances__record_id___get",
+      "provider_alias_intent": "/fsm/v1/scheduled_maintenances/record_id",
+      "text": "Get a Scheduled Maintenance",
+      "category": "Scheduled Maintenance",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To fetch a specific scheduled maintenance",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Scheduled_Maintenances/<record_id>",
+        "alias_endpoint": "/zohofsm/fsm/v1/scheduled_maintenances/record_id",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/get-a-scheduled-maintenance.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.ScheduledMaintenances.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__scheduled_maintenances___post": {
+      "provider_intent": "zohofsm__fsm__v1__scheduled_maintenances___post",
+      "provider_alias_intent": "/fsm/v1/scheduled_maintenances",
+      "text": "Create a Scheduled Maintenance",
+      "category": "Scheduled Maintenance",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "Name": {
+          "type": "string",
+          "text": "The name for the scheduled maintenance"
+        },
+        "Schedule": {
+          "type": "number",
+          "text": "The schedule details"
+        },
+        "Batch": {
+          "type": "number",
+          "text": "The batch details"
+        },
+        "Start_Date": {
+          "type": "string",
+          "text": "The date on or after which you want the records to be created for the maintenance plan"
+        },
+        "Ends": {
+          "type": "number",
+          "text": "Use this to specify the criteria for when you want the record creation for the maintenance plan to end"
+        },
+        "$work_order_template": {
+          "type": "number",
+          "text": "Use this to add the work order template"
+        },
+        "$appointment_template": {
+          "type": "number",
+          "text": "Use this to add the service appointment template"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To create a new scheduled maintenance record",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Scheduled_Maintenances",
+        "alias_endpoint": "/zohofsm/fsm/v1/scheduled_maintenances",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/create-scheduled-maintenance.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.ScheduledMaintenances.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__scheduled_maintenances___put": {
+      "provider_intent": "zohofsm__fsm__v1__scheduled_maintenances___put",
+      "provider_alias_intent": "/fsm/v1/scheduled_maintenances",
+      "text": "Edit a Scheduled Maintenance",
+      "category": "Scheduled Maintenance",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "id": {
+          "type": "string",
+          "text": "The ID of the scheduled maintenance record you want to update"
+        },
+        "$delete_work_order_template": {
+          "type": "boolean",
+          "text": "Use true to delete the work order",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "$delete_appointment_template": {
+          "type": "boolean",
+          "text": "Use true to delete the service appointment template associated with the record",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To update a scheduled maintenance record",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Scheduled_Maintenances",
+        "alias_endpoint": "/zohofsm/fsm/v1/scheduled_maintenances",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/edit-scheduled-maintenance.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.ScheduledMaintenances.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__scheduled_maintenances__record_id__enable___put": {
+      "provider_intent": "zohofsm__fsm__v1__scheduled_maintenances__record_id__enable___put",
+      "provider_alias_intent": "/fsm/v1/scheduled_maintenances/record_id/enable",
+      "text": "Enable a Scheduled Maintenance",
+      "category": "Scheduled Maintenance",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To change the status of a scheduled maintenance record to active",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Scheduled_Maintenances/<record_id>/enable",
+        "alias_endpoint": "/zohofsm/fsm/v1/scheduled_maintenances/record_id/enable",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/enable-a-scheduled-maintenance.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.ScheduledMaintenances.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__scheduled_maintenances__record_id__disable___put": {
+      "provider_intent": "zohofsm__fsm__v1__scheduled_maintenances__record_id__disable___put",
+      "provider_alias_intent": "/fsm/v1/scheduled_maintenances/record_id/disable",
+      "text": "Disable a Scheduled Maintenance",
+      "category": "Scheduled Maintenance",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To change the status of a scheduled maintenance record to inactive",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Scheduled_Maintenances/<record_id>/disable",
+        "alias_endpoint": "/zohofsm/fsm/v1/scheduled_maintenances/record_id/disable",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/disable-a-scheduled-maintenance.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.ScheduledMaintenances.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__service_appointments___get": {
+      "provider_intent": "zohofsm__fsm__v1__service_appointments___get",
+      "provider_alias_intent": "/fsm/v1/service_appointments",
+      "text": "List Service Appointments",
+      "category": "Service Appointment",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "number",
+          "text": "The page from which you want to fetch the records"
+        },
+        "per_page": {
+          "type": "Integer",
+          "text": "The number of records you want to fetch in a page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "A Service Appointment is a job created for carrying out the services in a work order",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Service_Appointments",
+        "alias_endpoint": "/zohofsm/fsm/v1/service_appointments",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/get-service-appointments.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.ServiceAppointments.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__service_appointments__record_id___get": {
+      "provider_intent": "zohofsm__fsm__v1__service_appointments__record_id___get",
+      "provider_alias_intent": "/fsm/v1/service_appointments/record_id",
+      "text": "Get a Service Appointment",
+      "category": "Service Appointment",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To fetch a specific service appointment",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Service_Appointments/<record_id>",
+        "alias_endpoint": "/zohofsm/fsm/v1/service_appointments/record_id",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/get-a-service-appointment.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.ServiceAppointments.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__service_appointments___post": {
+      "provider_intent": "zohofsm__fsm__v1__service_appointments___post",
+      "provider_alias_intent": "/fsm/v1/service_appointments",
+      "text": "Create a Service Appointment",
+      "category": "Service Appointment",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "Summary": {
+          "type": "string",
+          "text": "A summary for the service appointment"
+        },
+        "Scheduled_Start_Date_Time": {
+          "type": "string",
+          "text": "The scheduled start date time for the appointment"
+        },
+        "Scheduled_End_Date_Time": {
+          "type": "string",
+          "text": "The scheduled end date time for the appointment"
+        },
+        "$Service_Line_Items": {
+          "type": "array",
+          "text": "Include the IDs of the service line items in the work order for which you want to create an appointment"
+        },
+        "$Service_Tasks_Line_Itemsv": {
+          "type": "array",
+          "text": "Include the IDs of the service task line items in the work order"
+        },
+        "Territory": {
+          "type": "string",
+          "text": "Include the ID of the territory assigned to the work order"
+        },
+        "$Service_Resources": {
+          "type": "array",
+          "text": "Include the IDs of the service resources you want to assign to the appointment"
+        },
+        "Lead": {
+          "type": "string",
+          "text": "Provide an ID from those included in the $Service_Resources key"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To insert a new service appointment record",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Service_Appointments",
+        "alias_endpoint": "/zohofsm/fsm/v1/service_appointments",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/create-service-appointment.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.ServiceAppointments.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__service_appointments___put": {
+      "provider_intent": "zohofsm__fsm__v1__service_appointments___put",
+      "provider_alias_intent": "/fsm/v1/service_appointments",
+      "text": "Edit a Service Appointment",
+      "category": "Service Appointment",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To update a service appointment record",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Service_Appointments",
+        "alias_endpoint": "/zohofsm/fsm/v1/service_appointments",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/edit-service-appointment.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.ServiceAppointments.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__service_appointments__record_id__actions__reschedule___put": {
+      "provider_intent": "zohofsm__fsm__v1__service_appointments__record_id__actions__reschedule___put",
+      "provider_alias_intent": "/fsm/v1/service_appointments/record_id/actions/reschedule",
+      "text": "Reschedule a Service Appointment",
+      "category": "Service Appointment",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "Scheduled_Start_Date_Time ": {
+          "type": "string",
+          "text": "The start date and time at which you want to reschedule the appointment"
+        },
+        "Scheduled_End_Date_Time": {
+          "type": "string",
+          "text": "The end date and time at which you want to reschedule the appointment"
+        },
+        "$Service_Resources": {
+          "type": "array",
+          "text": "Include the IDs of the service resources assigned to the service appointment"
+        },
+        "Lead": {
+          "type": "string",
+          "text": "ID of the service resource you want to assign as the lead"
+        }
+      },
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To reschedule a service appointment",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Service_Appointments/<record_id>/actions/reschedule",
+        "alias_endpoint": "/zohofsm/fsm/v1/service_appointments/record_id/actions/reschedule",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/reschedule-service-appointment.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.serviceappointments.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__service_appointments__record_id__actions__blueprint__transitions___get": {
+      "provider_intent": "zohofsm__fsm__v1__service_appointments__record_id__actions__blueprint__transitions___get",
+      "provider_alias_intent": "/fsm/v1/service_appointments/record_id/actions/blueprint/transitions",
+      "text": "List Service Appointment Transitions",
+      "category": "Service Appointment",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all the possible transitions that can be performed on a service appointment",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Service_Appointments/<record_id>/actions/blueprint/transitions",
+        "alias_endpoint": "/zohofsm/fsm/v1/service_appointments/record_id/actions/blueprint/transitions",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/list-service-appointment-transitions.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.serviceappointments.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__service_appointments__record_id__actions__blueprint_____put": {
+      "provider_intent": "zohofsm__fsm__v1__service_appointments__record_id__actions__blueprint_____put",
+      "provider_alias_intent": "/fsm/v1/service_appointments/record_id/actions/blueprint/",
+      "text": "Dispatch a Service Appointment",
+      "category": "Service Appointment",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "transition_id ": {
+          "type": "string",
+          "text": "The ID for the transition Dispatch that can be obtained from the record using the List Transitions API",
+          "required": true
+        }
+      },
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Dispatch a Service Appointment",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Service_Appointments/<record_id>/actions/blueprint/",
+        "alias_endpoint": "/zohofsm/fsm/v1/service_appointments/record_id/actions/blueprint/",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/dispatch-service-appointment.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.serviceappointments.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__service_appointments__record_id__actions__blueprint___put": {
+      "provider_intent": "zohofsm__fsm__v1__service_appointments__record_id__actions__blueprint___put",
+      "provider_alias_intent": "/fsm/v1/service_appointments/record_id/actions/blueprint",
+      "text": "Terminate a Service Appointment",
+      "category": "Service Appointment",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "transition_id": {
+          "type": "String",
+          "text": "The ID for the transition Terminate that can be obtained from the record using the List Transitions API",
+          "required": true
+        },
+        "data": {
+          "type": "string",
+          "text": "Add the notes for terminating the service appointment",
+          "required": true
+        }
+      },
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To terminate a service appointmen",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Service_Appointments/<record_id>/actions/blueprint",
+        "alias_endpoint": "/zohofsm/fsm/v1/service_appointments/record_id/actions/blueprint",
+        "api_ref": "https://zoho.com/fsm/developer/help/api/terminate-service-appointment.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.serviceappointments.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsmfsm__v1__service_appointments__record_id__actions__blueprint___put": {
+      "provider_intent": "zohofsmfsm__v1__service_appointments__record_id__actions__blueprint___put",
+      "provider_alias_intent": "fsm/v1/service_appointments/record_id/actions/blueprint",
+      "text": "Complete Work for Service Appointment",
+      "category": "Service Appointment",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "transition_id": {
+          "type": "string",
+          "text": "The ID for the transition Complete Work",
+          "required": true
+        },
+        "$complete_pc_li": {
+          "type": "boolean",
+          "text": "Use this to complete partially completed line",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "$complete_wo": {
+          "type": "boolean",
+          "text": "Use this to complete the work order associated with the service appointment",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To complete work for an in progress service appointment",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}fsm/v1/Service_Appointments/<record_id>/actions/blueprint",
+        "alias_endpoint": "/zohofsmfsm/v1/service_appointments/record_id/actions/blueprint",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/complete-work-service-appointment.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.serviceappointments.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__territories___get": {
+      "provider_intent": "zohofsm__fsm__v1__territories___get",
+      "provider_alias_intent": "/fsm/v1/territories",
+      "text": "List Service Territories",
+      "category": "Service Territories",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "number",
+          "text": "The page from which you want to fetch the records"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "The number of records you want to fetch in a page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To fetch the list of all service territories",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Territories",
+        "alias_endpoint": "/zohofsm/fsm/v1/territories",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/get-territories.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Territories.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__territories__record_id___get": {
+      "provider_intent": "zohofsm__fsm__v1__territories__record_id___get",
+      "provider_alias_intent": "/fsm/v1/territories/record_id",
+      "text": "Get a Service Territory",
+      "category": "Service Territories",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To fetch a specific service territory",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Territories/<record_id>",
+        "alias_endpoint": "/zohofsm/fsm/v1/territories/record_id",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/get-a-territory.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Territories.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__territories__search___get": {
+      "provider_intent": "zohofsm__fsm__v1__territories__search___get",
+      "provider_alias_intent": "/fsm/v1/territories/search",
+      "text": "Search Service Territories",
+      "category": "Service Territories",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "api_name": {
+          "type": "string",
+          "text": "API name of the criteria to search by",
+          "required": true
+        },
+        "value": {
+          "type": "string",
+          "text": "Search string",
+          "required": true
+        },
+        "page": {
+          "type": "number",
+          "text": "To get the list of records from the respective pages"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "To get the list of records available per page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To search service territories using specific criteria",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Territories/search",
+        "alias_endpoint": "/zohofsm/fsm/v1/territories/search",
+        "api_ref": "https://zoho.com/fsm/developer/help/api/search-territories.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Territories.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__service_and_parts___get": {
+      "provider_intent": "zohofsm__fsm__v1__service_and_parts___get",
+      "provider_alias_intent": "/fsm/v1/service_and_parts",
+      "text": "List Services/Parts",
+      "category": "Services/Parts",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "number",
+          "text": "The page from which you want to fetch the records"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "The number of records you want to fetch in a page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To fetch the list of all available services/parts",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Service_And_Parts",
+        "alias_endpoint": "/zohofsm/fsm/v1/service_and_parts",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/get-products.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Service_And_Parts.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__service_and_parts__record_id___get": {
+      "provider_intent": "zohofsm__fsm__v1__service_and_parts__record_id___get",
+      "provider_alias_intent": "/fsm/v1/service_and_parts/record_id",
+      "text": "Get a Service/Part",
+      "category": "Services/Parts",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To fetch a specific service/part",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Service_And_Parts/<record_id>",
+        "alias_endpoint": "/zohofsm/fsm/v1/service_and_parts/record_id",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/get-a-product.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Service_And_Parts.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__service_and_parts___post": {
+      "provider_intent": "zohofsm__fsm__v1__service_and_parts___post",
+      "provider_alias_intent": "/fsm/v1/service_and_parts",
+      "text": "Create a Service/Part",
+      "category": "Services/Parts",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "Name": {
+          "type": "string",
+          "text": "The name of the service or part",
+          "required": true
+        },
+        "Unit_Price": {
+          "type": "number",
+          "text": "The unit price for the service or part",
+          "required": true
+        },
+        "Type": {
+          "type": "string",
+          "text": "The ID of the contact to which you want to associate the asset",
+          "required": true
+        },
+        "Taxable": {
+          "type": "boolean",
+          "text": "Whether taxable is true or false",
+          "required": true,
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "Tax_Name": {
+          "type": "string",
+          "text": "Tax name if taxable is true",
+          "required": true
+        },
+        "Tax_Exemption_Code": {
+          "type": "string",
+          "text": "Tax exemption code if taxable is false",
+          "required": true
+        },
+        "Inter_State_Tax_Rate": {
+          "type": "string",
+          "text": "Applicable for the Indian edition",
+          "required": true
+        },
+        "Intra_State_Tax_Rate": {
+          "type": "string",
+          "text": "Applicable for the Indian edition",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To insert a new service/part record",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Service_And_Parts",
+        "alias_endpoint": "/zohofsm/fsm/v1/service_and_parts",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/create-product.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Service_And_Parts.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__service_and_parts__record_id___put": {
+      "provider_intent": "zohofsm__fsm__v1__service_and_parts__record_id___put",
+      "provider_alias_intent": "/fsm/v1/service_and_parts/record_id",
+      "text": "Edit a Service/Part",
+      "category": "Services/Parts",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To update a service/part record",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Service_And_Parts/<record_id>",
+        "alias_endpoint": "/zohofsm/fsm/v1/service_and_parts/record_id",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/edit-product.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.Service_And_Parts.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__users__record_id___get": {
+      "provider_intent": "zohofsm__fsm__v1__users__record_id___get",
+      "provider_alias_intent": "/fsm/v1/users/record_id",
+      "text": "Get an User",
+      "category": "User",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To fetch a specific user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/users/<record_id>",
+        "alias_endpoint": "/zohofsm/fsm/v1/users/record_id",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/get-an-user.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.users.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__users___get": {
+      "provider_intent": "zohofsm__fsm__v1__users___get",
+      "provider_alias_intent": "/fsm/v1/users",
+      "text": "List Users",
+      "category": "Users ",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To fetch the list of all available users",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/users",
+        "alias_endpoint": "/zohofsm/fsm/v1/users",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/get-users.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.users.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__users___post": {
+      "provider_intent": "zohofsm__fsm__v1__users___post",
+      "provider_alias_intent": "/fsm/v1/users",
+      "text": "Create a User",
+      "category": "Users ",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "last_name": {
+          "type": "string",
+          "text": "The last name of the user",
+          "required": true
+        },
+        "email": {
+          "type": "string",
+          "text": "The email address of the user",
+          "required": true
+        },
+        "profile": {
+          "type": "string",
+          "text": "The ID of the profile you want to assign to the user",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To create a user record. The user will be listed under Invited Users",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/users",
+        "alias_endpoint": "/zohofsm/fsm/v1/users",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/create-user.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.users.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__users___put": {
+      "provider_intent": "zohofsm__fsm__v1__users___put",
+      "provider_alias_intent": "/fsm/v1/users",
+      "text": "Edit a User",
+      "category": "Users ",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To update a user record",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/users",
+        "alias_endpoint": "/zohofsm/fsm/v1/users",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/edit-user.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.users.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__settings__profiles___get": {
+      "provider_intent": "zohofsm__fsm__v1__settings__profiles___get",
+      "provider_alias_intent": "/fsm/v1/settings/profiles",
+      "text": "List Profiles",
+      "category": "Users ",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all profiles in your Zoho FSM organization",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/settings/profiles",
+        "alias_endpoint": "/zohofsm/fsm/v1/settings/profiles",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/list-profiles.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.settings.profiles.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__work_orders___get": {
+      "provider_intent": "zohofsm__fsm__v1__work_orders___get",
+      "provider_alias_intent": "/fsm/v1/work_orders",
+      "text": "List Work Orders",
+      "category": "Work",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "number",
+          "text": "The page from which you want to fetch the records"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "The number of records you want to fetch in a page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "A Work Order is a record created for executing a customer service request",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Work_Orders",
+        "alias_endpoint": "/zohofsm/fsm/v1/work_orders",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/get-work-orders.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.WorkOrders.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__work_orders__record_id___get": {
+      "provider_intent": "zohofsm__fsm__v1__work_orders__record_id___get",
+      "provider_alias_intent": "/fsm/v1/work_orders/record_id",
+      "text": "Get a Work Order",
+      "category": "Work",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To fetch a specific work order",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Work_Orders/<record_id>",
+        "alias_endpoint": "/zohofsm/fsm/v1/work_orders/record_id",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/get-a-work-order.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.WorkOrders.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__work_orders___post": {
+      "provider_intent": "zohofsm__fsm__v1__work_orders___post",
+      "provider_alias_intent": "/fsm/v1/work_orders",
+      "text": "Create a Work Order",
+      "category": "Work",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "Summary": {
+          "type": "string",
+          "text": "A summary for the work order"
+        },
+        "Type": {
+          "type": "string",
+          "text": "Whether the work order is of type Service or Inspection",
+          "required": true
+        },
+        "Contact": {
+          "type": "string",
+          "text": "The ID of the contact for whom the work order is being created",
+          "required": true
+        },
+        "Company": {
+          "type": "string",
+          "text": "The ID of the company for which the work order is being created",
+          "required": true
+        },
+        "Territory": {
+          "type": "string",
+          "text": "The ID of the territory where you want the work order to be assigned"
+        },
+        "Service_Address": {
+          "type": "number",
+          "text": "Specify the ID of the service address you want for the work order"
+        },
+        "Billing_Address": {
+          "type": "number",
+          "text": "Specify the ID of the business address you want for the work order"
+        },
+        "Service_Line_Items": {
+          "type": "array",
+          "text": "Details of the services for which the work order is being created"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To insert a new work order record",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Work_Orders",
+        "alias_endpoint": "/zohofsm/fsm/v1/work_orders",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/create-work-order.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.WorkOrders.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__work_orders__record_id___put": {
+      "provider_intent": "zohofsm__fsm__v1__work_orders__record_id___put",
+      "provider_alias_intent": "/fsm/v1/work_orders/record_id",
+      "text": "Edit a Work Order",
+      "category": "Work",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To update a work order record",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Work_Orders/<record_id>",
+        "alias_endpoint": "/zohofsm/fsm/v1/work_orders/record_id",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/edit-work-order.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.WorkOrders.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsmfsm__v1__work_orders__record_id__actions__blueprint__transitions___get": {
+      "provider_intent": "zohofsmfsm__v1__work_orders__record_id__actions__blueprint__transitions___get",
+      "provider_alias_intent": "fsm/v1/work_orders/record_id/actions/blueprint/transitions",
+      "text": "List Work Order Transitions",
+      "category": "Work",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all the possible transitions (actions) that can be performed on a work order",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}fsm/v1/Work_Orders/<record_id>/actions/blueprint/transitions",
+        "alias_endpoint": "/zohofsmfsm/v1/work_orders/record_id/actions/blueprint/transitions",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/list-work-order-transitions.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.WorkOrders.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__work_orders__record_id__actions__blueprint___put": {
+      "provider_intent": "zohofsm__fsm__v1__work_orders__record_id__actions__blueprint___put",
+      "provider_alias_intent": "/fsm/v1/work_orders/record_id/actions/blueprint",
+      "text": "Perform a Work Order Transition",
+      "category": "Work",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "$force_complete": {
+          "type": "boolean",
+          "text": "Complete partially completed line items (if any) and complete the work order",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To perform a transition on a work order",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Work_Orders/<record_id>/actions/blueprint",
+        "alias_endpoint": "/zohofsm/fsm/v1/work_orders/record_id/actions/blueprint",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/perform-work-order-transition.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.WorkOrders.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__work_types___get": {
+      "provider_intent": "zohofsm__fsm__v1__work_types___get",
+      "provider_alias_intent": "/fsm/v1/work_types",
+      "text": "List Work Types",
+      "category": "Work Types",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To fetch the list of all work types",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Work_Types",
+        "alias_endpoint": "/zohofsm/fsm/v1/work_types",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/get-work-types.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.ALL",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohofsm__fsm__v1__work_types__record_id___get": {
+      "provider_intent": "zohofsm__fsm__v1__work_types__record_id___get",
+      "provider_alias_intent": "/fsm/v1/work_types/record_id",
+      "text": "Get a Work Type",
+      "category": "Work Types",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "record_id": {
+          "type": "string",
+          "text": "Record ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To fetch the details of a specific Work Type record",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/fsm/v1/Work_Types/<record_id>",
+        "alias_endpoint": "/zohofsm/fsm/v1/work_types/record_id",
+        "api_ref": "https://www.zoho.com/fsm/developer/help/api/get-a-work-type.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoFSM.modules.ALL",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

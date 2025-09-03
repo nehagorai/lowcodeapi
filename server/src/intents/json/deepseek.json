@@ -1,0 +1,222 @@
+{
+  "routes": {
+    "deepseek__chat__completions___post": {
+      "provider_intent": "deepseek__chat__completions___post",
+      "provider_alias_intent": "/chat/completions",
+      "text": "Create Chat Completion",
+      "category": "Chat",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "stop": {
+          "text": "Stop",
+          "type": "object"
+        },
+        "model": {
+          "text": "Model",
+          "type": "string",
+          "required": true
+        },
+        "tools": {
+          "text": "Stop",
+          "type": "object"
+        },
+        "top_p": {
+          "text": "Top P",
+          "type": "number"
+        },
+        "stream": {
+          "text": "If set, partial message deltas will be sent.",
+          "type": "boolean"
+        },
+        "logprobs": {
+          "text": "Whether to return log probabilities of the output tokens or not",
+          "type": "boolean"
+        },
+        "messages": {
+          "text": "A list of messages comprising the conversation so far",
+          "type": "array",
+          "required": true
+        },
+        "max_tokens": {
+          "text": "Max Tokens",
+          "type": "number"
+        },
+        "temperature": {
+          "text": "Stop",
+          "type": "number"
+        },
+        "tool_choice": {
+          "text": "Tool Choice",
+          "type": "object"
+        },
+        "top_logprobs": {
+          "text": "An integer between 0 and 20 specifying the number of most likely tokens to return at each token position, each with an associated log probability",
+          "type": "number"
+        },
+        "stream_options": {
+          "text": "Options for streaming response. Only set this when you set stream: true",
+          "type": "object"
+        },
+        "response_format": {
+          "text": "An object specifying the format that the model must output",
+          "type": "object"
+        },
+        "presence_penalty": {
+          "text": "Presence Penalty",
+          "type": "number"
+        },
+        "frequency_penalty": {
+          "text": "Frequency Penalty",
+          "type": "number"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://api-docs.deepseek.com/api/create-chat-completion",
+        "version": "",
+        "rate_limit": [],
+        "description": "Creates a model response for the given chat conversation.",
+        "api_endpoint": "https://api.deepseek.com/chat/completions"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-02-04T11:23:33.000Z"
+    },
+    "deepseek__beta__completions___post": {
+      "provider_intent": "deepseek__beta__completions___post",
+      "provider_alias_intent": "/beta/completions",
+      "text": "Create FIM Completion (Beta)",
+      "category": "Completions",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "echo": {
+          "text": "Echo back the prompt in addition to the completion",
+          "type": "boolean"
+        },
+        "stop": {
+          "text": "Stop",
+          "type": "object"
+        },
+        "model": {
+          "text": "ID of the model to use.",
+          "type": "string",
+          "required": true
+        },
+        "top_p": {
+          "text": "An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass.",
+          "type": "number"
+        },
+        "prompt": {
+          "text": "The prompt to generate completions for.",
+          "type": "number",
+          "required": true
+        },
+        "stream": {
+          "text": "If set, partial message deltas will be sent.",
+          "type": "boolean"
+        },
+        "suffix": {
+          "text": "The suffix that comes after a completion of inserted text.",
+          "type": "string"
+        },
+        "logprobs": {
+          "text": "Whether to return log probabilities of the output tokens or not",
+          "type": "boolean"
+        },
+        "max_tokens": {
+          "text": "The maximum number of tokens that can be generated in the completion.",
+          "type": "number"
+        },
+        "temperature": {
+          "text": "Stop",
+          "type": "number"
+        },
+        "stream_options": {
+          "text": "Options for streaming response. Only set this when you set stream: true",
+          "type": "object"
+        },
+        "presence_penalty": {
+          "text": "Presence Penalty",
+          "type": "number"
+        },
+        "frequency_penalty": {
+          "text": "Frequency Penalty",
+          "type": "number"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://api-docs.deepseek.com/api/create-completion",
+        "version": "",
+        "rate_limit": [],
+        "description": "The FIM (Fill-In-the-Middle) Completion API.",
+        "api_endpoint": "https://api.deepseek.com/beta/completions"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-02-04T11:29:42.000Z"
+    },
+    "deepseek__models___get": {
+      "provider_intent": "deepseek__models___get",
+      "provider_alias_intent": "/models",
+      "text": "Lists Models",
+      "category": "Models",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://api-docs.deepseek.com/api/list-models",
+        "version": "",
+        "rate_limit": [],
+        "description": "Lists the currently available models, and provides basic information about each one such as the owner and availability.",
+        "api_endpoint": "https://api.deepseek.com/models"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-02-02T16:53:06.000Z"
+    },
+    "deepseek__user__balance___get": {
+      "provider_intent": "deepseek__user__balance___get",
+      "provider_alias_intent": "/user/balance",
+      "text": "Get User Balance",
+      "category": "Others",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://api-docs.deepseek.com/api/get-user-balance",
+        "version": "",
+        "rate_limit": [],
+        "description": "",
+        "api_endpoint": "https://api.deepseek.com/user/balance"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-02-02T16:54:36.000Z"
+    }
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "routes": {
+    "amberscript__v1__users___post": {
+      "provider_intent": "amberscript__v1__users___post",
+      "provider_alias_intent": "/v1/users",
+      "text": "Create a glossary",
+      "category": "Glossary",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "name": {
+          "text": "Name of the glossary",
+          "type": "string",
+          "required": true
+        },
+        "items": {
+          "text": "Array of glossary items. GlossaryItem format is described in the table below.",
+          "type": "array",
+          "required": false
+        },
+        "names": {
+          "text": "Array of names",
+          "type": "array",
+          "required": false
+        },
+        "item.name": {
+          "text": "Term which is being described.",
+          "type": "string",
+          "required": true
+        },
+        "item.description": {
+          "text": "Description of the term",
+          "type": "string",
+          "required": false
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://amberscript.github.io/api-docs/?javascript#create-a-glossary",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Create a glossary.",
+        "api_endpoint": "https://api.amberscript.com/v1/users"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-24T18:12:38.000Z"
+    },
+    "amberscript__v1__users___get": {
+      "provider_intent": "amberscript__v1__users___get",
+      "provider_alias_intent": "/v1/users",
+      "text": "Get a list of glossaries",
+      "category": "Glossary",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "sortBy": {
+          "text": "Field by which to sort the resulting list of glossaries.",
+          "type": "string"
+        },
+        "sortDirection": {
+          "text": "DESC or ASC",
+          "type": "string"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://amberscript.github.io/api-docs/?javascript#get-a-list-of-glossaries",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Get a list of glossaries.",
+        "api_endpoint": "https://api.amberscript.com/v1/users"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-24T18:00:46.000Z"
+    },
+    "amberscript__v1__users___delete": {
+      "provider_intent": "amberscript__v1__users___delete",
+      "provider_alias_intent": "/v1/users",
+      "text": "Delete a glossary",
+      "category": "Glossary",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://amberscript.github.io/api-docs/?javascript#delete-a-glossary",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Delete a specific glossary.",
+        "api_endpoint": "https://api.amberscript.com/v1/users"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-24T18:15:59.000Z"
+    },
+    "amberscript__v1__users___put": {
+      "provider_intent": "amberscript__v1__users___put",
+      "provider_alias_intent": "/v1/users",
+      "text": "Update a glossary",
+      "category": "Glossary",
+      "method": "PUT",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "name": {
+          "text": "Name of the glossary",
+          "type": "string",
+          "required": true
+        },
+        "items": {
+          "text": "Array of glossary items. GlossaryItem format is described in the table below.",
+          "type": "array",
+          "required": false
+        },
+        "names": {
+          "text": "Array of names",
+          "type": "array",
+          "required": false
+        },
+        "item.name": {
+          "text": "Term which is being described.",
+          "type": "string",
+          "required": true
+        },
+        "item.description": {
+          "text": "Description of the term",
+          "type": "string",
+          "required": false
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://amberscript.github.io/api-docs/?javascript#update-a-glossary",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Update a specific glossary.",
+        "api_endpoint": "https://api.amberscript.com/v1/users"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-24T18:14:23.000Z"
+    }
+  }
+}

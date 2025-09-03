@@ -1,0 +1,51 @@
+{
+    "defaultTabs" : [   
+        {
+            "name": "API List",
+            "active": true,
+            "id": "official"
+        }
+    ],
+    "customTabs": {
+        "trellow": [
+            {    
+                "id": "migrate_from",
+                "name": "Migrate From Trello",
+                "active": false,
+                "filter_name": "type",
+                "filter": "migrate_from"
+            },
+            {    
+                "id": "migrate_to",
+                "name": "Migrate To Trello",
+                "active": false,
+                "filter_name": "type",
+                "filter": ""
+            }
+        ],
+        "googlesheets": [
+
+        ], 
+        "googledocs": [
+
+        ],    
+        "twitter": [
+            {    
+                "id": "apisv1.1",
+                "name": "v1.1",
+                "version": "v1.1",
+                "active": true,
+                "filter_name": "v",
+                "filter": "v1.1"
+            },
+            {    
+                "id": "apisv2",
+                "name": "v2",
+                "version": "v2",
+                "active": true,
+                "filter_name": "v",
+                "filter": "v2"
+            }
+        ]
+    }
+}

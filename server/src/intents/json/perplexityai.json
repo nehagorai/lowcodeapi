@@ -1,0 +1,100 @@
+{
+  "routes": {
+    "perplexityai__chat__completions___post": {
+      "provider_intent": "perplexityai__chat__completions___post",
+      "provider_alias_intent": "/chat/completions",
+      "text": "Chat Completions",
+      "category": "Perplexity AI API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "model": {
+          "type": "string",
+          "text": "Defaults to llama-3-sonar-small-32k-online",
+          "required": true
+        },
+        "messages": {
+          "type": "array",
+          "text": "A list of messages comprising the conversation so far.",
+          "required": true
+        },
+        "max_tokens": {
+          "type": "number",
+          "text": "The maximum number of completion tokens returned by the API."
+        },
+        "temperature": {
+          "type": "number",
+          "text": "Defaults to 0.2"
+        },
+        "top_p": {
+          "type": "number",
+          "text": "Defaults to 0.9"
+        },
+        "return_citations": {
+          "type": "boolean",
+          "text": "Determines whether or not a request to an online model should return citations",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "return_images": {
+          "type": "boolean",
+          "text": "Determines whether or not a request to an online model should return images",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "top_k": {
+          "type": "number",
+          "text": "Specified as an integer between 0 and 2048 inclusive"
+        },
+        "stream": {
+          "type": "boolean",
+          "text": "Determines whether or not to incrementally stream the response",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "presence_penalty": {
+          "type": "number",
+          "text": "Value between -2.0 and 2.0"
+        },
+        "frequency_penalty": {
+          "type": "number",
+          "text": "Defaults to 1"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Generates a model's response for the given chat conversation",
+        "rate_limit": [],
+        "api_endpoint": "https://api.perplexity.ai",
+        "alias_endpoint": "/perplexityai/chat/completions",
+        "api_ref": "https://docs.perplexity.ai/reference/post_chat_completions"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

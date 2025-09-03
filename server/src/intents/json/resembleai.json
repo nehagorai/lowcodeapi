@@ -1,0 +1,2287 @@
+{
+  "routes": {
+    "resembleai__v2__voices__voice_uuid__recordings___get": {
+      "provider_intent": "resembleai__v2__voices__voice_uuid__recordings___get",
+      "provider_alias_intent": "/v2/voices/voice_uuid/recordings",
+      "text": "Get all recordings",
+      "category": "Create Voices / Recordings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "voice_uuid": {
+          "type": "string",
+          "text": "UUID of the voice to which the recording belongs",
+          "riquired": true
+        },
+        "page": {
+          "type": "number",
+          "text": "The page to fetch",
+          "riquired": true
+        },
+        "page_size": {
+          "type": "number",
+          "text": "Determines the number of items per page",
+          "riquired": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "voice_uuid": {
+          "type": "string",
+          "text": "UUID of the voice to which the recording belongs",
+          "riquired": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint retrieves recordings for a particular voice.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/voices/<voice_uuid>/recordings",
+        "alias_endpoint": "/resembleai/v2/voices/voice_uuid/recordings",
+        "api_ref": "https://docs.app.resemble.ai/docs/create_voices/resource_recording/all"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__voices__voice_uuid__recordings__recording_uuid___get": {
+      "provider_intent": "resembleai__v2__voices__voice_uuid__recordings__recording_uuid___get",
+      "provider_alias_intent": "/v2/voices/voice_uuid/recordings/recording_uuid",
+      "text": "Get a recording",
+      "category": "Create Voices / Recordings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "recording_uuid": {
+          "type": "string",
+          "text": "UUID of the recording to delete",
+          "riquired": true
+        },
+        "voice_uuid": {
+          "type": "string",
+          "text": "UUID of the voice to which the recording belongs",
+          "riquired": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "recording_uuid": {
+          "type": "string",
+          "text": "UUID of the recording to delete",
+          "riquired": true
+        },
+        "voice_uuid": {
+          "type": "string",
+          "text": "UUID of the voice to which the recording belongs",
+          "riquired": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint retrieves one recording for a particular voice.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/voices/<voice_uuid>/recordings/<recording_uuid>",
+        "alias_endpoint": "/resembleai/v2/voices/voice_uuid/recordings/recording_uuid",
+        "api_ref": "https://docs.app.resemble.ai/docs/create_voices/resource_recording/one"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__voices__voice_uuid__recordings___post": {
+      "provider_intent": "resembleai__v2__voices__voice_uuid__recordings___post",
+      "provider_alias_intent": "/v2/voices/voice_uuid/recordings",
+      "text": "Create a recording",
+      "category": "Create Voices / Recordings",
+      "method": "POST",
+      "type": "UPLOAD",
+      "params": {
+        "voice_uuid": {
+          "type": "string",
+          "text": "UUID of the voice to which the recording belongs",
+          "riquired": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "{\n    \"file\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"text\"": {
+          "type": "\"Defaulted to false. If true"
+        },
+        "\"riquired\"": {
+          "type": "true\n    }"
+        },
+        "\"emotion\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"is_active\"": {
+          "type": "{\n        \"type\""
+        },
+        "the recording is not used to train the voice model\"": {
+          "type": ""
+        },
+        "\"name\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"fill\"": {
+          "type": "{\n        \"type\""
+        },
+        "the recording will be used for Resemble Fill.\"\n    }": {
+          "type": ""
+        },
+        "}": {
+          "type": ""
+        }
+      },
+      "path": {
+        "voice_uuid": {
+          "type": "string",
+          "text": "UUID of the voice to which the recording belongs",
+          "riquired": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint creates a recording for a particular voice.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/voices/<voice_uuid>/recordings",
+        "alias_endpoint": "/resembleai/v2/voices/voice_uuid/recordings",
+        "api_ref": "https://docs.app.resemble.ai/docs/create_voices/resource_recording/create"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__voices__voice_uuid__recordings__recording_uuid\n___put": {
+      "provider_intent": "resembleai__v2__voices__voice_uuid__recordings__recording_uuid\n___put",
+      "provider_alias_intent": "/v2/voices/voice_uuid/recordings/recording_uuid\n",
+      "text": "Update a recording",
+      "category": "Create Voices / Recordings",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "recording_uuid": {
+          "type": "string",
+          "text": "UUID of the recording to delete",
+          "riquired": true
+        },
+        "voice_uuid": {
+          "type": "string",
+          "text": "UUID of the voice to which the recording belongs",
+          "riquired": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "emotion": {
+          "type": "string",
+          "text": "Emotion of the recording",
+          "riquired": true
+        },
+        "is_active": {
+          "type": "boolean",
+          "text": "If false, the recording is not used to train the voice model",
+          "riquired": true,
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "name": {
+          "type": "string",
+          "text": "Name of the recording",
+          "riquired": true
+        },
+        "text": {
+          "type": "string",
+          "text": "Transcript of the recording",
+          "riquired": true
+        },
+        "fill": {
+          "type": "boolean",
+          "text": "Defaulted to false. If true, the recording will be used for Resemble Fill.",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "recording_uuid": {
+          "type": "string",
+          "text": "UUID of the recording to delete",
+          "riquired": true
+        },
+        "voice_uuid": {
+          "type": "string",
+          "text": "UUID of the voice to which the recording belongs",
+          "riquired": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint updates a recording for a particular voice.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/voices/<voice_uuid>/recordings/<recording_uuid>\n",
+        "alias_endpoint": "/resembleai/v2/voices/voice_uuid/recordings/recording_uuid\n",
+        "api_ref": "https://docs.app.resemble.ai/docs/create_voices/resource_recording/update"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__voices__voice_uuid__recordings__recording_uuid\n___delete": {
+      "provider_intent": "resembleai__v2__voices__voice_uuid__recordings__recording_uuid\n___delete",
+      "provider_alias_intent": "/v2/voices/voice_uuid/recordings/recording_uuid\n",
+      "text": "Delete a recording",
+      "category": "Create Voices / Recordings",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "recording_uuid": {
+          "type": "string",
+          "text": "UUID of the recording to delete",
+          "riquired": true
+        },
+        "voice_uuid": {
+          "type": "string",
+          "text": "UUID of the voice to which the recording belongs",
+          "riquired": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "recording_uuid": {
+          "type": "string",
+          "text": "UUID of the recording to delete",
+          "riquired": true
+        },
+        "voice_uuid": {
+          "type": "string",
+          "text": "UUID of the voice to which the recording belongs",
+          "riquired": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint deletes one recording for a particular voice.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/voices/<voice_uuid>/recordings/<recording_uuid>\n",
+        "alias_endpoint": "/resembleai/v2/voices/voice_uuid/recordings/recording_uuid\n",
+        "api_ref": "https://docs.app.resemble.ai/docs/create_voices/resource_recording/delete"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__voices___get": {
+      "provider_intent": "resembleai__v2__voices___get",
+      "provider_alias_intent": "/v2/voices",
+      "text": "Get all voices",
+      "category": "Create Voices / Voices",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "number",
+          "text": "The page to fetch",
+          "required": true
+        },
+        "page_size": {
+          "type": "number",
+          "text": "Determines the number of items per page",
+          "required": true
+        },
+        "advanced": {
+          "type": "boolean",
+          "text": "Returns advanced voice information such as underlying model versions when set to true. ",
+          "required": true,
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint retrieves voices.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/voices",
+        "alias_endpoint": "/resembleai/v2/voices",
+        "api_ref": "https://docs.app.resemble.ai/docs/create_voices/resource_voice/all"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__voices__voice_uuid___get": {
+      "provider_intent": "resembleai__v2__voices__voice_uuid___get",
+      "provider_alias_intent": "/v2/voices/voice_uuid",
+      "text": "Get a voice",
+      "category": "Create Voices / Voices",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "voice_uuid": {
+          "type": "number",
+          "text": "UUID of the voice to fetch",
+          "required": true
+        },
+        "advanced": {
+          "type": "boolean",
+          "text": "Returns advanced voice information such as underlying model versions when set to true.",
+          "required": true,
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "voice_uuid": {
+          "type": "number",
+          "text": "UUID of the voice to fetch",
+          "required": true
+        },
+        "advanced": {
+          "type": "boolean",
+          "text": "Returns advanced voice information such as underlying model versions when set to true.",
+          "required": true,
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint retrieves a voice.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/voices/<voice_uuid>",
+        "alias_endpoint": "/resembleai/v2/voices/voice_uuid",
+        "api_ref": "https://docs.app.resemble.ai/docs/create_voices/resource_voice/one"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__voices___post": {
+      "provider_intent": "resembleai__v2__voices___post",
+      "provider_alias_intent": "/v2/voices",
+      "text": "Create a voice",
+      "category": "Create Voices / Voices",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Name of the voice",
+          "riquired": true
+        },
+        "consent": {
+          "type": "string",
+          "text": "A base-64 encoded Wavefile string containing your consent and authorization to create and clone a voice. Please see the Voice Consent section for more details.",
+          "riquired": true
+        },
+        "voice_type": {
+          "type": "string",
+          "text": "The type of voice to create. Either rapid or professional. If not provided defaults to professional"
+        },
+        "namdataset_urle": {
+          "type": "string",
+          "text": "A URL to a dataset on which to train the voice on. Please see here for acceptable dataset formats"
+        },
+        "callback_uri": {
+          "type": "string",
+          "text": "A URL (webhook) that will be notified upon voice training completion Please see here for callback details"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint creates a voice and optionally starts training\n",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/voices",
+        "alias_endpoint": "/resembleai/v2/voices",
+        "api_ref": "https://docs.app.resemble.ai/docs/create_voices/resource_voice/create"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__voices__voice_uuid__build___post": {
+      "provider_intent": "resembleai__v2__voices__voice_uuid__build___post",
+      "provider_alias_intent": "/v2/voices/voice_uuid/build",
+      "text": "Build a voice",
+      "category": "Create Voices / Voices",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "fill": {
+          "type": "boolean",
+          "text": "Defaulted to false. If true, the Resemble Fill model will be trained.",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint builds a voice. The voice must have at least 30 active recordings. To upload recordings for a voice, see the documentation for the recording resource.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/voices/<voice_uuid>/build",
+        "alias_endpoint": "/resembleai/v2/voices/voice_uuid/build",
+        "api_ref": "https://docs.app.resemble.ai/docs/create_voices/resource_voice/build"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__voices__voice_uuid___delete": {
+      "provider_intent": "resembleai__v2__voices__voice_uuid___delete",
+      "provider_alias_intent": "/v2/voices/voice_uuid",
+      "text": "Delete a voice",
+      "category": "Create Voices / Voices",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "voiceUuid": {
+          "type": "string",
+          "text": "UUID of the voice to delete",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "voiceUuid": {
+          "type": "string",
+          "text": "UUID of the voice to delete",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint deletes a voice.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/voices/<voice_uuid>",
+        "alias_endpoint": "/resembleai/v2/voices/voice_uuid",
+        "api_ref": "https://docs.app.resemble.ai/docs/create_voices/resource_voice/delete"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__detect___post": {
+      "provider_intent": "resembleai__v2__detect___post",
+      "provider_alias_intent": "/v2/detect",
+      "text": "Detect Deepfake",
+      "category": "Detect / Deepfake Detection",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "url": {
+          "type": "string",
+          "text": "The URL of the audio file to be analyzed for deepfake detection. The audio file should be in WAV format. Provide a valid HTTPS URL pointing to the audio file.",
+          "riquired": true
+        },
+        "callback_url": {
+          "type": "string",
+          "text": "A URL to sent the results to when analysis is completed."
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Submit an audio file for deepfake detection.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/detect",
+        "alias_endpoint": "/resembleai/v2/detect",
+        "api_ref": "https://docs.app.resemble.ai/docs/detect/resource_detect/create"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__detect__:uuid___get": {
+      "provider_intent": "resembleai__v2__detect__:uuid___get",
+      "provider_alias_intent": "/v2/detect/:uuid",
+      "text": "Get Detection Result",
+      "category": "Detect / Deepfake Detection",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve the deepfake detection result using the provided UUID.",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/detect/:uuid",
+        "alias_endpoint": "/resembleai/v2/detect/:uuid",
+        "api_ref": "https://docs.app.resemble.ai/docs/detect/resource_detect/get_results"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__watermark__apply___post": {
+      "provider_intent": "resembleai__v2__watermark__apply___post",
+      "provider_alias_intent": "/v2/watermark/apply",
+      "text": "Apply Watermark",
+      "category": "Detect / Watermark",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "url": {
+          "type": "string",
+          "text": "The URL of the audio file to be watermarked. The audio file should be in WAV format. Provide a valid HTTPS URL pointing to the audio file.",
+          "riquired": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Apply a watermark to an audio file using the provided URL.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/watermark/apply",
+        "alias_endpoint": "/resembleai/v2/watermark/apply",
+        "api_ref": "https://docs.app.resemble.ai/docs/detect/resource_watermark/apply"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__watermark__detect___post": {
+      "provider_intent": "resembleai__v2__watermark__detect___post",
+      "provider_alias_intent": "/v2/watermark/detect",
+      "text": "Detect Watermark",
+      "category": "Detect / Watermark",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "url": {
+          "type": "string",
+          "text": "The URL of the audio file to be watermarked. The audio file should be in WAV format. Provide a valid HTTPS URL pointing to the audio file.",
+          "riquired": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Detect a watermark in an audio file using the provided URL.",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/watermark/detect",
+        "alias_endpoint": "/resembleai/v2/watermark/detect",
+        "api_ref": "https://docs.app.resemble.ai/docs/detect/resource_watermark/detect"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__projects__project_uuid__batch___get": {
+      "provider_intent": "resembleai__v2__projects__project_uuid__batch___get",
+      "provider_alias_intent": "/v2/projects/project_uuid/batch",
+      "text": "Get all batches",
+      "category": "Generate Speech / Synthesize / Batch",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_uuid": {
+          "type": "string",
+          "text": "Batches for the project with this UUID will be returned",
+          "riquired": true
+        },
+        "page": {
+          "type": "number",
+          "text": "The page to fetch",
+          "riquired": true
+        },
+        "page_size": {
+          "type": "number",
+          "text": "Determines the number of items per page",
+          "riquired": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_uuid": {
+          "type": "string",
+          "text": "Batches for the project with this UUID will be returned",
+          "riquired": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint retrieves batches in a project.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/projects/<project_uuid>/batch",
+        "alias_endpoint": "/resembleai/v2/projects/project_uuid/batch",
+        "api_ref": "https://docs.app.resemble.ai/docs/generate_speech/action_synthesize/resource_batch/all"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__projects__project_uuid__batch__batch_uuid___get": {
+      "provider_intent": "resembleai__v2__projects__project_uuid__batch__batch_uuid___get",
+      "provider_alias_intent": "/v2/projects/project_uuid/batch/batch_uuid",
+      "text": "Get a batch",
+      "category": "Generate Speech / Synthesize / Batch",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "batch_uuid": {
+          "type": "string",
+          "text": "UUID of the batch to fetch",
+          "riquired": true
+        },
+        "project_uuid": {
+          "type": "string",
+          "text": "UUID of the project to which the batch belongs",
+          "riquired": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "batch_uuid": {
+          "type": "string",
+          "text": "UUID of the batch to fetch",
+          "riquired": true
+        },
+        "project_uuid": {
+          "type": "string",
+          "text": "UUID of the project to which the batch belongs",
+          "riquired": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint retrieves one batch in a project.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/projects/<project_uuid>/batch/<batch_uuid>",
+        "alias_endpoint": "/resembleai/v2/projects/project_uuid/batch/batch_uuid",
+        "api_ref": "https://docs.app.resemble.ai/docs/generate_speech/action_synthesize/resource_batch/one"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__projects__project_uuid__batch___post": {
+      "provider_intent": "resembleai__v2__projects__project_uuid__batch___post",
+      "provider_alias_intent": "/v2/projects/project_uuid/batch",
+      "text": "Creat a batch",
+      "category": "Generate Speech / Synthesize / Batch",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "project_uuid": {
+          "type": "string",
+          "text": "UUID of the project to which the clip should belong",
+          "riquired": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "body": {
+          "type": "string",
+          "text": "An array of strings where each string is content to be synthesized (this can be raw text or ssml) or an array of arrays where each element in the nested array conforms to the shape of ['title', ssml']. Max size of each element in the batch is 3,000 characters excluding ssml tags. Max size of the array is 1,000.",
+          "riquired": true
+        },
+        "voice_uuid": {
+          "type": "string",
+          "text": "UUID of the voice to use for synthesizing",
+          "riquired": true
+        },
+        "callback_uri": {
+          "type": "string",
+          "text": "The URL to POST the result of the batch to."
+        },
+        "precision": {
+          "type": "string",
+          "text": "one of the following values: PCM_32, PCM_24, PCM_16, or MULAW  The audio bit depth of generated audio"
+        },
+        "sample_rate": {
+          "type": "boolean",
+          "text": "one of the following values: 8000, 16000, 22050 or 44100 The sample rate (Hz) of the generated audio",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "output_format": {
+          "type": "boolean",
+          "text": "one of the following values: wav or mp3 The format of the generated audio",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "project_uuid": {
+          "type": "string",
+          "text": "UUID of the project to which the clip should belong",
+          "riquired": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint creates a batch in a project.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/projects/<project_uuid>/batch",
+        "alias_endpoint": "/resembleai/v2/projects/project_uuid/batch",
+        "api_ref": "https://docs.app.resemble.ai/docs/generate_speech/action_synthesize/resource_batch/create"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__projects__project_uuid__batch__batch_uuid___delete": {
+      "provider_intent": "resembleai__v2__projects__project_uuid__batch__batch_uuid___delete",
+      "provider_alias_intent": "/v2/projects/project_uuid/batch/batch_uuid",
+      "text": "Delete a batch",
+      "category": "Generate Speech / Synthesize / Batch",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "batch_uuid": {
+          "type": "string",
+          "text": "UUID of the batch to delete",
+          "riquired": true
+        },
+        "project_uuid": {
+          "type": "string",
+          "text": "UUID of the project to which the batch belongs",
+          "riquired": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "batch_uuid": {
+          "type": "string",
+          "text": "UUID of the batch to delete",
+          "riquired": true
+        },
+        "project_uuid": {
+          "type": "string",
+          "text": "UUID of the project to which the batch belongs",
+          "riquired": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint deletes a batch and all associated clips in a project.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/projects/<project_uuid>/batch/<batch_uuid>",
+        "alias_endpoint": "/resembleai/v2/projects/project_uuid/batch/batch_uuid",
+        "api_ref": "https://docs.app.resemble.ai/docs/generate_speech/action_synthesize/resource_batch/delete"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__projects__project_uuid__clips\n___get": {
+      "provider_intent": "resembleai__v2__projects__project_uuid__clips\n___get",
+      "provider_alias_intent": "/v2/projects/project_uuid/clips\n",
+      "text": "Get all clips",
+      "category": "Generate Speech / Synthesize / Clip",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_uuid": {
+          "type": "number",
+          "text": "Clips for the project with this UUID will be returned",
+          "riquired": true
+        },
+        "page": {
+          "type": "number",
+          "text": "The page to fetch",
+          "riquired": true
+        },
+        "page_size": {
+          "type": "number",
+          "text": "Determines the number of items per page ",
+          "riquired": true
+        },
+        "q": {
+          "type": "number",
+          "text": " Searches for clips with a title matching the value ",
+          "riquired": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_uuid": {
+          "type": "number",
+          "text": "Clips for the project with this UUID will be returned",
+          "riquired": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint retrieves clips in a project.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/projects/<project_uuid>/clips\n",
+        "alias_endpoint": "/resembleai/v2/projects/project_uuid/clips\n",
+        "api_ref": "https://docs.app.resemble.ai/docs/generate_speech/action_synthesize/resource_clip/all"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__projects__project_uuid__clips__clip_uuid___get": {
+      "provider_intent": "resembleai__v2__projects__project_uuid__clips__clip_uuid___get",
+      "provider_alias_intent": "/v2/projects/project_uuid/clips/clip_uuid",
+      "text": "Get a clips",
+      "category": "Generate Speech / Synthesize / Clip",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "clip_uuid": {
+          "type": "string",
+          "text": "UUID of the clip to fetch",
+          "riquired": true
+        },
+        "project_uuid": {
+          "type": "string",
+          "text": "UUID of the project to which the clip ",
+          "riquired": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "clip_uuid": {
+          "type": "string",
+          "text": "UUID of the clip to fetch",
+          "riquired": true
+        },
+        "project_uuid": {
+          "type": "string",
+          "text": "UUID of the project to which the clip ",
+          "riquired": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint retrieves one clip in a project.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/projects/<project_uuid>/clips/<clip_uuid>",
+        "alias_endpoint": "/resembleai/v2/projects/project_uuid/clips/clip_uuid",
+        "api_ref": "https://docs.app.resemble.ai/docs/generate_speech/action_synthesize/resource_clip/one"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__projects__project_uuid__clips___post": {
+      "provider_intent": "resembleai__v2__projects__project_uuid__clips___post",
+      "provider_alias_intent": "/v2/projects/project_uuid/clips",
+      "text": "Create a clips",
+      "category": "Generate Speech / Synthesize / Clip",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "project_uuid": {
+          "type": "string",
+          "text": "UUID of the project to which the clip should belong",
+          "riquired": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "title": {
+          "type": "string",
+          "text": "Title for this clip"
+        },
+        "body": {
+          "type": "string",
+          "text": "Content to be synthesized. Max size of 3,000 characters excluding SSML tags.",
+          "riquired": true
+        },
+        "voice_uuid": {
+          "type": "string",
+          "text": "UUID of the voice to use for synthesizing",
+          "riquired": true
+        },
+        "is_archived": {
+          "type": "boolean",
+          "text": "Whether this clip should be archived",
+          "required": true,
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "callback_uri": {
+          "type": "string",
+          "text": "The URL to POST the final clip to. If provided, the request is considered 'asynchronous', otherwise it's considered 'syncronous'."
+        },
+        "precision": {
+          "type": "enum",
+          "text": "The audio bit depth of generated audio",
+          "enum": [
+            "PCM_32",
+            "PCM_24",
+            "PCM_16",
+            "MULAW"
+          ],
+          "default": "PCM_32"
+        },
+        "sample_rate": {
+          "type": "enum",
+          "text": "The sample rate (Hz) of the generated audio",
+          "enum": [
+            16000,
+            22050,
+            44100
+          ],
+          "default": 22050
+        },
+        "output_format": {
+          "type": "enum",
+          "text": "The format of the generated audio",
+          "enum": [
+            "wav",
+            "mp3"
+          ],
+          "default": "wav"
+        },
+        "include_timestamps": {
+          "type": "boolean",
+          "text": " Whether to include timestamps for the generated content -- see the documentation on timestamps for more information",
+          "default": false,
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "raw": {
+          "type": "boolean",
+          "text": "Whether to return raw audio data in the response.",
+          "default": false,
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "suggestions": {
+          "type": "boolean",
+          "text": "Whether to apply substitutions and phonemes configured through the dashboard",
+          "default": false,
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "project_uuid": {
+          "type": "string",
+          "text": "UUID of the project to which the clip should belong",
+          "riquired": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint creates a clip in a project.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/projects/<project_uuid>/clips",
+        "alias_endpoint": "/resembleai/v2/projects/project_uuid/clips",
+        "api_ref": "https://docs.app.resemble.ai/docs/generate_speech/action_synthesize/resource_clip/create"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai___post": {
+      "provider_intent": "resembleai___post",
+      "provider_alias_intent": "",
+      "text": "Stream a clip",
+      "category": "Generate Speech / Synthesize / Clip",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Stream a clip",
+        "rate_limit": [],
+        "api_endpoint": "",
+        "alias_endpoint": "/resembleai",
+        "api_ref": "https://docs.app.resemble.ai/docs/generate_speech/action_synthesize/resource_clip/stream"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__projects__project_uuid__clips__clip_uuid___put": {
+      "provider_intent": "resembleai__v2__projects__project_uuid__clips__clip_uuid___put",
+      "provider_alias_intent": "/v2/projects/project_uuid/clips/clip_uuid",
+      "text": "Update a clip",
+      "category": "Generate Speech / Synthesize / Clip",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "clip_uuid": {
+          "type": "string",
+          "text": "UUID of the clip to fetch",
+          "riquired": true
+        },
+        "project_uuid": {
+          "type": "string",
+          "text": "UUID of the project to which the clip should belong",
+          "riquired": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "title": {
+          "type": "string",
+          "text": "Title for this clip"
+        },
+        "body": {
+          "type": "string",
+          "text": "Content to be synthesized. Max size of 3,000 characters excluding SSML tags.",
+          "riquired": true
+        },
+        "voice_uuid": {
+          "type": "string",
+          "text": "UUID of the voice to use for synthesizing",
+          "riquired": true
+        },
+        "is_archived": {
+          "type": "boolean",
+          "text": "Whether this clip should be archived",
+          "required": true,
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "callback_uri": {
+          "type": "string",
+          "text": "The URL to POST the final clip to"
+        },
+        "precision": {
+          "type": "string",
+          "text": " The audio bit depth of generated audio"
+        },
+        "sample_rate": {
+          "type": "enum",
+          "text": "The sample rate (Hz) of the generated audio",
+          "enum": [
+            16000,
+            22050,
+            44100
+          ],
+          "default": 22050
+        },
+        "output_format": {
+          "type": "enum",
+          "text": "The format of the generated audio",
+          "enum": [
+            "wav",
+            "mp3"
+          ],
+          "default": "wav"
+        },
+        "include_timestamps": {
+          "type": "boolean",
+          "text": " Whether to include timestamps for the generated content -- see the documentation on timestamps for more information",
+          "default": false,
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "clip_uuid": {
+          "type": "string",
+          "text": "UUID of the clip to fetch",
+          "riquired": true
+        },
+        "project_uuid": {
+          "type": "string",
+          "text": "UUID of the project to which the clip should belong",
+          "riquired": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint updates a clip in a project.\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/projects/<project_uuid>/clips/<clip_uuid>",
+        "alias_endpoint": "/resembleai/v2/projects/project_uuid/clips/clip_uuid",
+        "api_ref": "https://docs.app.resemble.ai/docs/generate_speech/action_synthesize/resource_clip/update"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__projects__project_uuid__clips__clip_uuid___delete": {
+      "provider_intent": "resembleai__v2__projects__project_uuid__clips__clip_uuid___delete",
+      "provider_alias_intent": "/v2/projects/project_uuid/clips/clip_uuid",
+      "text": "Delete a clips",
+      "category": "Generate Speech / Synthesize / Clip",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "clip_uuid": {
+          "type": "string",
+          "text": "UUID of the clip to delete",
+          "riquired": true
+        },
+        "project_uuid": {
+          "type": "string",
+          "text": "UUID of the project to which the clip should belong",
+          "riquired": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "clip_uuid": {
+          "type": "string",
+          "text": "UUID of the clip to delete",
+          "riquired": true
+        },
+        "project_uuid": {
+          "type": "string",
+          "text": "UUID of the project to which the clip should belong",
+          "riquired": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint deletes a clip in a project.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/projects/<project_uuid>/clips/<clip_uuid>",
+        "alias_endpoint": "/resembleai/v2/projects/project_uuid/clips/clip_uuid",
+        "api_ref": "https://docs.app.resemble.ai/docs/generate_speech/action_synthesize/resource_clip/delete"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__account___get": {
+      "provider_intent": "resembleai__v2__account___get",
+      "provider_alias_intent": "/v2/account",
+      "text": "Get account information",
+      "category": "Management / Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint retrieves your user account.",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/account",
+        "alias_endpoint": "/resembleai/v2/account",
+        "api_ref": "https://docs.app.resemble.ai/docs/management/resource_account/user"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__account__teams___get": {
+      "provider_intent": "resembleai__v2__account__teams___get",
+      "provider_alias_intent": "/v2/account/teams",
+      "text": "Get account teams",
+      "category": "Management / Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint retrieves the teams associated with the user account.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/account/teams",
+        "alias_endpoint": "/resembleai/v2/account/teams",
+        "api_ref": "https://docs.app.resemble.ai/docs/management/resource_account/teams"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__phonemes___get": {
+      "provider_intent": "resembleai__v2__phonemes___get",
+      "provider_alias_intent": "/v2/phonemes",
+      "text": "Get all phonemes",
+      "category": "Management / Phoneme",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "number",
+          "text": "The page to fetch",
+          "riquired": true
+        },
+        "page_size": {
+          "type": "number",
+          "text": "Determines the number of items per page",
+          "riquired": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint retrieves phonemes.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/phonemes",
+        "alias_endpoint": "/resembleai/v2/phonemes",
+        "api_ref": "https://docs.app.resemble.ai/docs/management/resource_phoneme/all"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__phonemes__phonemeuuid___get": {
+      "provider_intent": "resembleai__v2__phonemes__phonemeuuid___get",
+      "provider_alias_intent": "/v2/phonemes/phonemeuuid",
+      "text": "Get a phoneme",
+      "category": "Management / Phoneme",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "phonemeUuid": {
+          "type": "string",
+          "text": "UUID of the phoneme to retrieve",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "phonemeUuid": {
+          "type": "string",
+          "text": "UUID of the phoneme to retrieve",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint retrieves a phoneme.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/phonemes/<phonemeUuid>",
+        "alias_endpoint": "/resembleai/v2/phonemes/phonemeuuid",
+        "api_ref": "https://docs.app.resemble.ai/docs/management/resource_phoneme/one"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__phonemes___post": {
+      "provider_intent": "resembleai__v2__phonemes___post",
+      "provider_alias_intent": "/v2/phonemes",
+      "text": "Creat a phoneme",
+      "category": "Management / Phoneme",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "word": {
+          "type": "string",
+          "text": "text being transcribed e.g pressure",
+          "required": true
+        },
+        "phonetic_transcription": {
+          "type": "string",
+          "text": "IPA transcription e.g ˈprɛʃər",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint creates a phoneme.",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/phonemes",
+        "alias_endpoint": "/resembleai/v2/phonemes",
+        "api_ref": "https://docs.app.resemble.ai/docs/management/resource_phoneme/create"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__phonemes__phonemeuuid___delete": {
+      "provider_intent": "resembleai__v2__phonemes__phonemeuuid___delete",
+      "provider_alias_intent": "/v2/phonemes/phonemeuuid",
+      "text": "Delete a phoneme",
+      "category": "Management / Phoneme",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "phonemeUuid": {
+          "type": "string",
+          "text": "UUID of the phoneme to delete",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "phonemeUuid": {
+          "type": "string",
+          "text": "UUID of the phoneme to delete",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint deletes a phoneme.",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/phonemes/<phonemeUuid>",
+        "alias_endpoint": "/resembleai/v2/phonemes/phonemeuuid",
+        "api_ref": "https://docs.app.resemble.ai/docs/management/resource_phoneme/delete"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__projects___get": {
+      "provider_intent": "resembleai__v2__projects___get",
+      "provider_alias_intent": "/v2/projects",
+      "text": "Get all projects",
+      "category": "Management / Project",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "number",
+          "text": "The page to fetch",
+          "riquired": true
+        },
+        "page_size": {
+          "type": "number",
+          "text": "Determines the number of items per page",
+          "riquired": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint retrieves projects.",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/projects",
+        "alias_endpoint": "/resembleai/v2/projects",
+        "api_ref": "https://docs.app.resemble.ai/docs/management/resource_project/all"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__projects__project_uuid___get": {
+      "provider_intent": "resembleai__v2__projects__project_uuid___get",
+      "provider_alias_intent": "/v2/projects/project_uuid",
+      "text": "Get a project",
+      "category": "Management / Project",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_uuid": {
+          "type": "string",
+          "text": "UUID of the project to fetch",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_uuid": {
+          "type": "string",
+          "text": "UUID of the project to fetch",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint retrieves a project",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/projects/<project_uuid>",
+        "alias_endpoint": "/resembleai/v2/projects/project_uuid",
+        "api_ref": "https://docs.app.resemble.ai/docs/management/resource_project/one"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__projects___post": {
+      "provider_intent": "resembleai__v2__projects___post",
+      "provider_alias_intent": "/v2/projects",
+      "text": "Creat a project",
+      "category": "Management / Project",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Name of the project",
+          "required": true
+        },
+        "description": {
+          "type": "string",
+          "text": "Description of the project",
+          "required": true
+        },
+        "is_collaborative": {
+          "type": "boolean",
+          "text": "Whether to allow collaboration features for this project",
+          "required": true,
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "is_archived": {
+          "type": "boolean",
+          "text": "boolean Whether to archive the project",
+          "required": true,
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint creates a project.",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/projects",
+        "alias_endpoint": "/resembleai/v2/projects",
+        "api_ref": "https://docs.app.resemble.ai/docs/management/resource_project/create"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__projects__project_uuid___put": {
+      "provider_intent": "resembleai__v2__projects__project_uuid___put",
+      "provider_alias_intent": "/v2/projects/project_uuid",
+      "text": "Update a project",
+      "category": "Management / Project",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "project_uuid": {
+          "type": "string",
+          "text": "UUID of the project to fetch",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Name of the project",
+          "required": true
+        },
+        "description": {
+          "type": "string",
+          "text": "Description of the project",
+          "required": true
+        },
+        "is_collaborative": {
+          "type": "boolean",
+          "text": "Whether to allow collaboration features for this project",
+          "required": true,
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "is_archived": {
+          "type": "boolean",
+          "text": "boolean Whether to archive the project",
+          "required": true,
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "project_uuid": {
+          "type": "string",
+          "text": "UUID of the project to fetch",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint updates a project.",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/projects/<project_uuid>",
+        "alias_endpoint": "/resembleai/v2/projects/project_uuid",
+        "api_ref": "https://docs.app.resemble.ai/docs/management/resource_project/update"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__projects__project_uuid___delete": {
+      "provider_intent": "resembleai__v2__projects__project_uuid___delete",
+      "provider_alias_intent": "/v2/projects/project_uuid",
+      "text": "Delete a project",
+      "category": "Management / Project",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "projectUuid": {
+          "type": "string",
+          "text": "UUID of the project to delete",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "projectUuid": {
+          "type": "string",
+          "text": "UUID of the project to delete",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint deletes a project.",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/projects/<project_uuid>",
+        "alias_endpoint": "/resembleai/v2/projects/project_uuid",
+        "api_ref": "https://docs.app.resemble.ai/docs/management/resource_project/delete"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__term_substitutions___get": {
+      "provider_intent": "resembleai__v2__term_substitutions___get",
+      "provider_alias_intent": "/v2/term_substitutions",
+      "text": "Get all term substitutions",
+      "category": "Management / Term substitutions",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "number",
+          "text": "The page to fetch",
+          "riquired": true
+        },
+        "page_size": {
+          "type": "number",
+          "text": "Determines the number of items per page",
+          "riquired": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint retrieves term substitutions.",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/term_substitutions",
+        "alias_endpoint": "/resembleai/v2/term_substitutions",
+        "api_ref": "https://docs.app.resemble.ai/docs/management/resource_term_substitutions/all"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__term_substitutions__substitutionuuid___get": {
+      "provider_intent": "resembleai__v2__term_substitutions__substitutionuuid___get",
+      "provider_alias_intent": "/v2/term_substitutions/substitutionuuid",
+      "text": "Get a term substitution",
+      "category": "Management / Term substitutions",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "substitutionUuid": {
+          "type": "string",
+          "text": "UUID of the term substitution to retrieve",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "substitutionUuid": {
+          "type": "string",
+          "text": "UUID of the term substitution to retrieve",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint retrieves a term substitution.",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/term_substitutions/<substitutionUuid>",
+        "alias_endpoint": "/resembleai/v2/term_substitutions/substitutionuuid",
+        "api_ref": "https://docs.app.resemble.ai/docs/management/resource_term_substitutions/one"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__term_substitutions___post": {
+      "provider_intent": "resembleai__v2__term_substitutions___post",
+      "provider_alias_intent": "/v2/term_substitutions",
+      "text": "Creat a term substitution",
+      "category": "Management / Term substitutions",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "original_text": {
+          "type": "string",
+          "text": "text being replaced e.g Vodaphone",
+          "required": true
+        },
+        "replacement_text": {
+          "type": "string",
+          "text": "text to replace with e.g voduhfone",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint creates a term substitution.",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/term_substitutions",
+        "alias_endpoint": "/resembleai/v2/term_substitutions",
+        "api_ref": "https://docs.app.resemble.ai/docs/management/resource_term_substitutions/create"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "resembleai__v2__term_substitutions__term_substitution_uuid___delete": {
+      "provider_intent": "resembleai__v2__term_substitutions__term_substitution_uuid___delete",
+      "provider_alias_intent": "/v2/term_substitutions/term_substitution_uuid",
+      "text": "Delete a term substitution",
+      "category": "Management / Term substitutions",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "term_substitution_Uuid": {
+          "type": "string",
+          "text": "UUID of the term substitution to delete",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "term_substitution_Uuid": {
+          "type": "string",
+          "text": "UUID of the term substitution to delete",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This endpoint deletes a term substitution.",
+        "rate_limit": [],
+        "api_endpoint": "https://app.resemble.ai/api/v2/term_substitutions/<term_substitution_Uuid>",
+        "alias_endpoint": "/resembleai/v2/term_substitutions/term_substitution_uuid",
+        "api_ref": "https://docs.app.resemble.ai/docs/management/resource_term_substitutions/delete"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

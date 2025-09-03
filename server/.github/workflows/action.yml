@@ -1,0 +1,92 @@
+name: Lint and Build
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write
+
+jobs:
+  lint-and-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Build (TypeScript)
+        run: npm run build 
+
+      - name: Get short commit SHA
+        id: vars
+        run: echo "SHORT_SHA=$(echo $GITHUB_SHA | cut -c1-7)" >> $GITHUB_ENV
+
+      - name: Rename dist folder with commit SHA
+        run: mv dist "dist-${SHORT_SHA}"
+
+      - name: Zip build output
+        run: zip -r dist-${SHORT_SHA}.zip dist-${SHORT_SHA}
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-${{ env.SHORT_SHA }}
+          path: dist-${{ env.SHORT_SHA }}/
+
+      - name: Create GitHub Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: build-${{ env.SHORT_SHA }}
+          release_name: Build ${{ env.SHORT_SHA }}
+          body: |
+            Automated release for commit ${{ github.sha }}
+          draft: false
+          prerelease: false
+
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: dist-${{ env.SHORT_SHA }}.zip
+          asset_name: dist-${{ env.SHORT_SHA }}.zip
+          asset_content_type: application/zip
+
+      - name: Copy dist to server via SCP
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          source: "dist-${{ env.SHORT_SHA }}/*"
+          target: "/home/deploy/live/lca-artifact/dist-${{ env.SHORT_SHA }}"
+
+      - name: Restart server via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            export PATH=$PATH:/home/deploy/.nvm/versions/node/v18.19.0/bin
+            pm2 reload all

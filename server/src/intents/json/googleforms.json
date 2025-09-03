@@ -1,0 +1,518 @@
+{
+  "routes": {
+    "googleforms__v1__forms___post": {
+      "provider_intent": "googleforms__v1__forms___post",
+      "provider_alias_intent": "/v1/forms",
+      "text": "Generate a form with the provided message title.",
+      "category": "Forms",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "info": {
+          "type": "object",
+          "text": "This includes title and description of the form",
+          "required": true,
+          "examples": {
+            "title": "",
+            "documentTitle": ""
+          }
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new form using the title given in the provided form message in the request.",
+        "rate_limit": [],
+        "api_endpoint": "https://forms.googleapis.com/v1/forms",
+        "alias_endpoint": "/googleforms/v1/forms",
+        "api_ref": "https://developers.google.com/forms/api/reference/rest/v1/forms/create"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googleforms__v1__forms__formid___get": {
+      "provider_intent": "googleforms__v1__forms__formid___get",
+      "provider_alias_intent": "/v1/forms/formid",
+      "text": "Get a form.",
+      "category": "Forms",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "formId": {
+          "type": "string",
+          "text": "The form ID.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "formId": {
+          "type": "string",
+          "text": "The form ID.",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get a form.",
+        "rate_limit": [],
+        "api_endpoint": "https://forms.googleapis.com/v1/forms/{formId}",
+        "alias_endpoint": "/googleforms/v1/forms/formid",
+        "api_ref": "https://developers.google.com/forms/api/reference/rest/v1/forms/get"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googleforms__v1__forms__formid-batchupdate___post": {
+      "provider_intent": "googleforms__v1__forms__formid-batchupdate___post",
+      "provider_alias_intent": "/v1/forms/formid-batchupdate",
+      "text": "Update form with batch updates.",
+      "category": "Forms",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "formId": {
+          "type": "string",
+          "text": "The form ID.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "requests": {
+          "type": "array of object",
+          "text": "The update requests of this batch",
+          "required": true,
+          "examples": [
+            {
+              "updateFormInfo": {},
+              "updateSettings": {},
+              "createItem": {},
+              "moveItem": {},
+              "deleteItem": {},
+              "updateItem": {}
+            }
+          ]
+        },
+        "includeFormInResponse": {
+          "type": "boolean",
+          "text": "Whether to return an updated version of the model in the response",
+          "enum": [
+            true,
+            false
+          ],
+          "examples": 1
+        },
+        "writeControl": {
+          "type": "object",
+          "text": "Provides control over how write requests are executed",
+          "examples": {
+            "requiredRevisionId": "",
+            "targetRevisionId": ""
+          }
+        }
+      },
+      "path": {
+        "formId": {
+          "type": "string",
+          "text": "The form ID.",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Change the form with a batch of updates.",
+        "rate_limit": [],
+        "api_endpoint": "https://forms.googleapis.com/v1/forms/{formId}:batchUpdate",
+        "alias_endpoint": "/googleforms/v1/forms/formid-batchupdate",
+        "api_ref": "https://developers.google.com/forms/api/reference/rest/v1/forms/batchUpdate"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googleforms__v1__forms__formid__responses___get": {
+      "provider_intent": "googleforms__v1__forms__formid__responses___get",
+      "provider_alias_intent": "/v1/forms/formid/responses",
+      "text": "List a form's responses.",
+      "category": "Forms Responses",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "formId": {
+          "type": "string",
+          "text": "ID of the Form whose responses to list.",
+          "required": true
+        },
+        "pageSize": {
+          "type": "integer",
+          "text": "The maximum number of responses to return.The service may return fewer than this value. If unspecified or zero at most 5000 responses are returned."
+        },
+        "pageToken": {
+          "type": "string",
+          "text": "A page token returned by a previous list response. If this field is set the form and the values of the filter must be the same as for the original request."
+        },
+        "filter": {
+          "type": "string",
+          "text": "Which form responses to return. Currently the only supported filters are",
+          "enum": [
+            "* timestamp > *N* which means to get all form responses submitted after (but not at) timestamp *N*. * timestamp >= *N* which means to get all form responses submitted at and after timestamp *N*. For both supported filters"
+          ]
+        },
+        "timestamp must be formatted in RFC3339 UTC \"Zulu\" format. Examples": {
+          "type": "\"2014-10-02T15",
+          "text": "23Z\" and \"2014-10-02T15",
+          "enum": [
+            "01"
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "formId": {
+          "type": "string",
+          "text": "ID of the Form whose responses to list.",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List a form's responses.",
+        "rate_limit": [],
+        "api_endpoint": "https://forms.googleapis.com/v1/forms/{formId}/responses",
+        "alias_endpoint": "/googleforms/v1/forms/formid/responses",
+        "api_ref": "https://developers.google.com/forms/api/reference/rest/v1/forms.responses/list"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googleforms__v1__forms__formid__responses__responseid___get": {
+      "provider_intent": "googleforms__v1__forms__formid__responses__responseid___get",
+      "provider_alias_intent": "/v1/forms/formid/responses/responseid",
+      "text": "Get a single form response.",
+      "category": "Forms Responses",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "formId": {
+          "type": "string",
+          "text": "The form ID",
+          "required": true
+        },
+        "responseId": {
+          "type": "string",
+          "text": "The response ID within the form",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "formId": {
+          "type": "string",
+          "text": "The form ID",
+          "required": true
+        },
+        "responseId": {
+          "type": "string",
+          "text": "The response ID within the form",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get one response from the form.",
+        "rate_limit": [],
+        "api_endpoint": "https://forms.googleapis.com/v1/forms/{formId}/responses/{responseId}",
+        "alias_endpoint": "/googleforms/v1/forms/formid/responses/responseid",
+        "api_ref": "https://developers.google.com/forms/api/reference/rest/v1/forms.responses/get"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googleforms__v1__forms__formid__watches___get": {
+      "provider_intent": "googleforms__v1__forms__formid__watches___get",
+      "provider_alias_intent": "/v1/forms/formid/watches",
+      "text": "List project's owned watches.",
+      "category": "Forms Watches",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "formId": {
+          "type": "string",
+          "text": "ID of the Form whose watches to list.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "formId": {
+          "type": "string",
+          "text": "ID of the Form whose watches to list.",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Return a list of the watches owned by the invoking project.",
+        "rate_limit": [],
+        "api_endpoint": "https://forms.googleapis.com/v1/forms/{formId}/watches",
+        "alias_endpoint": "/googleforms/v1/forms/formid/watches",
+        "api_ref": "https://developers.google.com/forms/api/reference/rest/v1/forms.watches/list"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googleforms__v1__forms__formid__watches___post": {
+      "provider_intent": "googleforms__v1__forms__formid__watches___post",
+      "provider_alias_intent": "/v1/forms/formid/watches",
+      "text": "Create a new watch.",
+      "category": "Forms Watches",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "formId": {
+          "type": "string",
+          "text": "ID of the Form to watch.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "watch": {
+          "type": "object",
+          "text": "The watch object. No ID should be set on this object",
+          "required": true,
+          "examples": {
+            "target": {
+              "topic": {
+                "topicName": ""
+              }
+            },
+            "eventType": "",
+            "createTime": "",
+            "expireTime": "",
+            "errorType": "",
+            "state": ""
+          }
+        },
+        "watchId": {
+          "type": "string",
+          "text": "The ID to use for the watch",
+          "examples": ""
+        }
+      },
+      "path": {
+        "formId": {
+          "type": "string",
+          "text": "ID of the Form to watch.",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new watch.",
+        "rate_limit": [],
+        "api_endpoint": "https://forms.googleapis.com/v1/forms/{formId}/watches",
+        "alias_endpoint": "/googleforms/v1/forms/formid/watches",
+        "api_ref": "https://developers.google.com/forms/api/reference/rest/v1/forms.watches/create"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googleforms__v1__forms__formid__watches__watchid___delete": {
+      "provider_intent": "googleforms__v1__forms__formid__watches__watchid___delete",
+      "provider_alias_intent": "/v1/forms/formid/watches/watchid",
+      "text": "Delete a watch.",
+      "category": "Forms Watches",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "watchId": {
+          "type": "string",
+          "text": "The ID of the Watch to delete.",
+          "required": true
+        },
+        "formId": {
+          "type": "string",
+          "text": "The ID of the Form.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "watchId": {
+          "type": "string",
+          "text": "The ID of the Watch to delete.",
+          "required": true
+        },
+        "formId": {
+          "type": "string",
+          "text": "The ID of the Form.",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a watch.",
+        "rate_limit": [],
+        "api_endpoint": "https://forms.googleapis.com/v1/forms/{formId}/watches/{watchId}",
+        "alias_endpoint": "/googleforms/v1/forms/formid/watches/watchid",
+        "api_ref": "https://developers.google.com/forms/api/reference/rest/v1/forms.watches/delete"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "googleforms__v1__forms__formid__watches__watchid-renew___post": {
+      "provider_intent": "googleforms__v1__forms__formid__watches__watchid-renew___post",
+      "provider_alias_intent": "/v1/forms/formid/watches/watchid-renew",
+      "text": "Renew an existing watch for seven days.",
+      "category": "Forms Watches",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "formId": {
+          "type": "string",
+          "text": "The ID of the Form",
+          "required": true
+        },
+        "watchId": {
+          "type": "string",
+          "text": "The ID of the Watch to renew",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "formId": {
+          "type": "string",
+          "text": "The ID of the Form",
+          "required": true
+        },
+        "watchId": {
+          "type": "string",
+          "text": "The ID of the Watch to renew",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Renew an existing watch for seven days.",
+        "rate_limit": [],
+        "api_endpoint": "https://forms.googleapis.com/v1/forms/{formId}/watches/{watchId}:renew",
+        "alias_endpoint": "/googleforms/v1/forms/formid/watches/watchid-renew",
+        "api_ref": "https://developers.google.com/forms/api/reference/rest/v1/forms.watches/renew"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

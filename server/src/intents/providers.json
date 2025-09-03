@@ -1,0 +1,6081 @@
+[
+  {
+    "id": "googlesheets",
+    "name": "Google Sheets",
+    "description": "Google Sheets",
+    "logo_url": "googlesheets.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": {
+      "scope": [
+        {
+          "name": "https://www.googleapis.com/auth/spreadsheets.readonly",
+          "role": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/spreadsheets",
+          "role": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.readonly",
+          "role": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.file",
+          "role": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive",
+          "role": ""
+        }
+      ],
+      "setup": [
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Googlesheets's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Googlesheets's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Googlesheets's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Googlesheets's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Googlesheets's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Googlesheets's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/googlesheets"
+    },
+    "headers": {},
+    "api_endpoint": "https://sheets.googleapis.com",
+    "released": 1,
+    "updated_at": "2025-03-10T04:59:35.000Z",
+    "website": "https://developers.google.com/sheets",
+    "api_link_ref": "https://developers.google.com/sheets/api/reference/rest",
+    "total_api": 22,
+    "credential_link": "https://console.cloud.google.com/apis/credentials"
+  },
+  {
+    "id": "anthropic",
+    "name": "Anthropic",
+    "description": "",
+    "logo_url": "anthropic.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "x-api-key",
+        "headerValue": ""
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {
+      "anthropic-version": "2023-06-01"
+    },
+    "api_endpoint": "https://api.anthropic.com",
+    "released": 1,
+    "updated_at": "2024-12-22T03:01:13.000Z",
+    "website": "https://www.anthropic.com",
+    "api_link_ref": "https://docs.anthropic.com/en/home",
+    "total_api": 32,
+    "credential_link": "https://console.anthropic.com/settings/keys"
+  },
+  {
+    "id": "ashbyhq",
+    "name": "Ashby",
+    "description": "",
+    "logo_url": "ashbyhq.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "basicauth": {
+        "password": "",
+        "username": "api_key"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.ashbyhq.com",
+    "released": 1,
+    "updated_at": "2024-12-22T06:58:45.000Z",
+    "website": "https://www.ashbyhq.com",
+    "api_link_ref": "https://developers.ashbyhq.com/reference/introduction",
+    "total_api": 2,
+    "credential_link": ""
+  },
+  {
+    "id": "assemblyai",
+    "name": "AssemblyAI",
+    "description": "",
+    "logo_url": "assemblyai.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing the service.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.assemblyai.com",
+    "released": 1,
+    "updated_at": "2024-12-23T06:26:04.000Z",
+    "website": "https://www.assemblyai.com",
+    "api_link_ref": "https://www.assemblyai.com/docs/api-reference/overview",
+    "total_api": 19,
+    "credential_link": "https://www.assemblyai.com/app/account"
+  },
+  {
+    "id": "awss3",
+    "name": "AWS S3",
+    "description": "",
+    "logo_url": "awss3.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {},
+      "subdomain": [
+        "region",
+        "bucket"
+      ]
+    },
+    "auth_config": [
+      {
+        "name": "accessKeyId",
+        "type": "input",
+        "field": "input",
+        "label": "AWS Access Key Id",
+        "message": "This Access key will be used for accessing AWS S3 service",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "secretAccessKey",
+        "type": "input",
+        "field": "input",
+        "label": "AWS Secret Access Key",
+        "message": "This key will be used for accessing AWS S3 service",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "region",
+        "type": "input",
+        "field": "input",
+        "label": "AWS Region",
+        "message": "us-east-1, us-east-2",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://{bucket}.s3.{region}.amazonaws.com",
+    "released": 1,
+    "updated_at": "2024-12-22T05:47:54.000Z",
+    "website": "https://aws.amazon.com/",
+    "api_link_ref": "https://docs.aws.amazon.com/AmazonS3/latest/API/Type_API_Reference.html",
+    "total_api": 3,
+    "credential_link": "https://aws.amazon.com/"
+  },
+  {
+    "id": "awsses",
+    "name": "AWS SES",
+    "description": "",
+    "logo_url": "awsses.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {},
+      "subdomain": "region"
+    },
+    "auth_config": [
+      {
+        "name": "accessKeyId",
+        "type": "input",
+        "field": "input",
+        "label": "AWS Access Key Id",
+        "message": "This Access key will be used for accessing AWS SES service",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "secretAccessKey",
+        "type": "input",
+        "field": "input",
+        "label": "AWS Secret Access Key",
+        "message": "This key will be used for accessing AWS SES service",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "enum": [
+          "us-east-1",
+          "us-east-2",
+          "us-west-1"
+        ],
+        "name": "region",
+        "type": "input",
+        "field": "input",
+        "label": "AWS Region",
+        "message": "AWS Regions: us-east-1, us-east-2,us-west-1",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://email.{region}.amazonaws.com",
+    "released": 1,
+    "updated_at": "2024-12-22T05:52:31.000Z",
+    "website": "https://aws.amazon.com/",
+    "api_link_ref": "https://docs.aws.amazon.com/AmazonS3/latest/API/Type_API_Reference.html",
+    "total_api": 2,
+    "credential_link": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html"
+  },
+  {
+    "id": "base64ai",
+    "name": "Base64 AI",
+    "description": "",
+    "logo_url": "base64ai.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://base64.ai",
+    "released": 1,
+    "updated_at": "2024-12-22T06:01:39.000Z",
+    "website": "https://base64.ai/",
+    "api_link_ref": "https://documenter.getpostman.com/view/10132588/SWT5hfdz",
+    "total_api": 17,
+    "credential_link": ""
+  },
+  {
+    "id": "beyondwords",
+    "name": "BeyondWords ",
+    "description": "",
+    "logo_url": "beyondwords.svg",
+    "auth_type": "",
+    "auth": {},
+    "auth_config": {},
+    "headers": {},
+    "api_endpoint": "https://api.beyondwords.io",
+    "released": 1,
+    "updated_at": "2024-12-22T08:04:29.000Z",
+    "website": "https://beyondwords.io/",
+    "api_link_ref": "https://developers.beyondwords.io/reference/api-overview",
+    "total_api": 75,
+    "credential_link": "https://dash.beyondwords.io/dashboard"
+  },
+  {
+    "id": "bullhorn",
+    "name": "Bullhorn",
+    "description": "",
+    "logo_url": "bullhorn.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {},
+    "auth_config": {
+      "setup": [
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Bullhorn's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Bullhorn's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Bullhorn's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Bullhorn's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Bullhorn's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Bullhorn's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/bullhorn"
+    },
+    "headers": {},
+    "api_endpoint": "https://rest.bullhornstaffing.com",
+    "released": 1,
+    "updated_at": "2024-12-22T06:10:51.000Z",
+    "website": "https://www.bullhorn.com/",
+    "api_link_ref": "https://bullhorn.github.io/rest-api-docs/index.html#general-conventions",
+    "total_api": 3,
+    "credential_link": ""
+  },
+  {
+    "id": "cal",
+    "name": "Cal",
+    "description": "",
+    "logo_url": "cal.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "query": [
+        "apiKey"
+      ]
+    },
+    "auth_config": [
+      {
+        "name": "endpoint",
+        "type": "input",
+        "field": "input",
+        "label": "API Endpoint",
+        "message": "Enter your cal endpoint, for saas add https://api.cal.com",
+        "required": true,
+        "className": "",
+        "placeholder": "https://api.cal.com"
+      },
+      {
+        "name": "apiKey",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.cal.com",
+    "released": 1,
+    "updated_at": "2024-12-22T08:04:41.000Z",
+    "website": "https://cal.com",
+    "api_link_ref": "https://cal.com/docs/api-reference/v1/introduction",
+    "total_api": 67,
+    "credential_link": "https://app.cal.com/settings/developer/api-keys"
+  },
+  {
+    "id": "cloudflarer2",
+    "name": "Cloudflare R2",
+    "description": "Custom made Object Storage APIs for Cloudflare R2.",
+    "logo_url": "cloudflarer2.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "subdomain": [
+        "region",
+        "bucket"
+      ]
+    },
+    "auth_config": [
+      {
+        "name": "endpoint",
+        "type": "input",
+        "field": "input",
+        "label": "Cloudflare R2 Endpoint",
+        "message": "",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "accessKeyId",
+        "type": "input",
+        "field": "input",
+        "label": "Access Key Id",
+        "message": "This Access key will be used for accessing R2",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "secretAccessKey",
+        "type": "input",
+        "field": "input",
+        "label": "Secret Access Key",
+        "message": "This key will be used for accessing R2",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "",
+    "released": 1,
+    "updated_at": "2025-03-12T02:06:14.000Z",
+    "website": "https://developers.cloudflare.com/r2",
+    "api_link_ref": "https://developers.cloudflare.com/r2/api",
+    "total_api": 3,
+    "credential_link": "https://dash.cloudflare.com/"
+  },
+  {
+    "id": "cohere",
+    "name": "Cohere",
+    "description": "",
+    "logo_url": "cohere.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "Cohere API Key",
+        "message": "API Key is used for accessing the Cohere API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.cohere.com",
+    "released": 1,
+    "updated_at": "2024-12-22T06:34:15.000Z",
+    "website": "https://cohere.com/",
+    "api_link_ref": "https://docs.cohere.com/reference/about",
+    "total_api": 31,
+    "credential_link": "https://dashboard.cohere.com/api-keys"
+  },
+  {
+    "id": "colossyan",
+    "name": "Colossyan",
+    "description": "",
+    "logo_url": "colossyan.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "token",
+        "headerName": "authorizationtoken",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://app.colossyan.com/api",
+    "released": 1,
+    "updated_at": "2024-12-22T06:48:36.000Z",
+    "website": "https://www.colossyan.com/",
+    "api_link_ref": "https://docs.colossyan.com/",
+    "total_api": 6,
+    "credential_link": ""
+  },
+  {
+    "id": "convertkit",
+    "name": "ConvertKit",
+    "description": "",
+    "logo_url": "convertkit.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "body": {
+        "api_key": "api_key",
+        "api_secret": "api_secret"
+      },
+      "queryMap": {
+        "api_key": "api_key",
+        "api_secret": "api_secret"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "api_secret",
+        "type": "input",
+        "field": "input",
+        "label": "API Secret",
+        "message": "API Secret is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.kit.com",
+    "released": 1,
+    "updated_at": "2024-12-22T06:59:40.000Z",
+    "website": "https://kit.com/",
+    "api_link_ref": "https://developers.kit.com/v4#introduction",
+    "total_api": 33,
+    "credential_link": "https://app.convertkit.com/account_settings/advanced_settings"
+  },
+  {
+    "id": "copyai",
+    "name": "Copy AI",
+    "description": "",
+    "logo_url": "copyai.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "x-copy-ai-api-key",
+        "headerValue": ""
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.copy.ai/api",
+    "released": 1,
+    "updated_at": "2024-12-22T07:13:27.000Z",
+    "website": "https://www.copy.ai/",
+    "api_link_ref": "https://docs.copy.ai/reference/authentication",
+    "total_api": 7,
+    "credential_link": ""
+  },
+  {
+    "id": "crelate",
+    "name": "Crelate",
+    "description": "",
+    "logo_url": "crelate.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "X-Api-Key",
+        "headerValue": ""
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://app.crelate.com",
+    "released": 1,
+    "updated_at": "2024-12-22T07:17:15.000Z",
+    "website": "https://www.crelate.com/",
+    "api_link_ref": "https://app.crelate.com/api3/docs/index.html",
+    "total_api": 4,
+    "credential_link": ""
+  },
+  {
+    "id": "customgptai",
+    "name": "CustomGPT.ai",
+    "description": "",
+    "logo_url": "customgptai.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://app.customgpt.ai",
+    "released": 1,
+    "updated_at": "2024-12-22T08:48:49.000Z",
+    "website": "https://customgpt.ai/",
+    "api_link_ref": "https://docs.customgpt.ai/reference/i-api-homepage",
+    "total_api": 36,
+    "credential_link": ""
+  },
+  {
+    "id": "deepseek",
+    "name": "DeepSeek",
+    "description": "",
+    "logo_url": "deepseek.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.deepseek.com",
+    "released": 1,
+    "updated_at": "2025-02-06T09:42:39.000Z",
+    "website": "https://www.deepseek.com",
+    "api_link_ref": "https://api-docs.deepseek.com",
+    "total_api": 4,
+    "credential_link": "NA"
+  },
+  {
+    "id": "descript",
+    "name": "Descript",
+    "description": "",
+    "logo_url": "descript.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://descriptapi.com",
+    "released": 1,
+    "updated_at": "2024-12-22T08:51:01.000Z",
+    "website": "https://www.descript.com/",
+    "api_link_ref": "https://docs.descriptapi.com/#section/Authentication",
+    "total_api": 4,
+    "credential_link": "https://app.squadcast.fm/account/developers"
+  },
+  {
+    "id": "discord",
+    "name": "Discord",
+    "description": "",
+    "logo_url": "discord.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {},
+    "auth_config": {
+      "scope": [
+        {
+          "name": "",
+          "role": ""
+        }
+      ],
+      "setup": [
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Discord's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Discord's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Discord's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Discord's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Discord's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Discord's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/discord"
+    },
+    "headers": {},
+    "api_endpoint": "https://discord.com/api",
+    "released": 1,
+    "updated_at": "2024-12-22T08:53:47.000Z",
+    "website": "https://discord.com/",
+    "api_link_ref": "https://discord.com/developers/docs/reference",
+    "total_api": 151,
+    "credential_link": "https://discord.com/"
+  },
+  {
+    "id": "dropbox",
+    "name": "Dropbox",
+    "description": "",
+    "logo_url": "dropbox.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {},
+    "auth_config": {
+      "setup": [
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Dropbox's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Dropbox's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Dropbox's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Dropbox's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Dropbox's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Dropbox's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/dropbox"
+    },
+    "headers": {},
+    "api_endpoint": "https://api.dropboxapi.com",
+    "released": 1,
+    "updated_at": "2024-12-22T09:21:16.000Z",
+    "website": "https://www.dropbox.com/",
+    "api_link_ref": "https://dropbox.github.io/dropbox-api-v2-explorer/",
+    "total_api": 189,
+    "credential_link": "https://www.dropbox.com/developers/apps"
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "description": "",
+    "logo_url": "elevenlabs.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "xi-api-key",
+        "headerValue": ""
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.elevenlabs.io",
+    "released": 1,
+    "updated_at": "2024-12-22T09:22:48.000Z",
+    "website": "https://elevenlabs.io/",
+    "api_link_ref": "https://elevenlabs.io/docs/api-reference/introduction",
+    "total_api": 118,
+    "credential_link": "https://elevenlabs.io/app/speech-synthesis"
+  },
+  {
+    "id": "freshdesk",
+    "name": "FreshDesk",
+    "description": "",
+    "logo_url": "freshdesk.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "basicauth": {
+        "password": "X",
+        "username": "api_key"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "subdomain",
+        "type": "input",
+        "field": "input",
+        "label": "Freshdesk domain / subdomain",
+        "message": "Your freshdesk domain / subdomain",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://{subdomain}.freshdesk.com",
+    "released": 1,
+    "updated_at": "2025-02-26T12:33:27.000Z",
+    "website": "https://www.freshworks.com/freshdesk",
+    "api_link_ref": "https://developers.freshdesk.com/api",
+    "total_api": 3,
+    "credential_link": "https://support.freshdesk.com/en/support/solutions/articles/215517-how-to-find-your-api-key"
+  },
+  {
+    "id": "github",
+    "name": "Github",
+    "description": "",
+    "logo_url": "github.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {},
+    "auth_config": {},
+    "headers": {},
+    "api_endpoint": "",
+    "released": 1,
+    "updated_at": "2025-03-12T03:28:59.000Z",
+    "website": "https://github.com",
+    "api_link_ref": "",
+    "total_api": 889,
+    "credential_link": ""
+  },
+  {
+    "id": "gmail",
+    "name": "Gmail",
+    "description": "",
+    "logo_url": "gmail.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": {
+      "scope": [
+        {
+          "name": "https://www.googleapis.com/auth/gmail.modify",
+          "role": "Read, compose, and send emails from your Gmail account"
+        },
+        {
+          "name": "https://www.googleapis.com/auth/gmail.send",
+          "role": "Send email on your behalf"
+        },
+        {
+          "name": "https://www.googleapis.com/auth/gmail.readonly",
+          "role": "View your email messages and settings"
+        },
+        {
+          "name": "https://www.googleapis.com/auth/gmail.metadata",
+          "role": "View your email message metadata such as labels and headers, but not the email body"
+        },
+        {
+          "name": "https://www.googleapis.com/auth/gmail.labels",
+          "role": "See and edit your email labels"
+        },
+        {
+          "name": "https://www.googleapis.com/auth/gmail.insert",
+          "role": "Add emails into your Gmail mailbox"
+        },
+        {
+          "name": "https://www.googleapis.com/auth/gmail.compose",
+          "role": "Manage drafts and send emails"
+        },
+        {
+          "name": "https://mail.google.com/",
+          "role": "Read, compose, send, and permanently delete all your email from Gmail [Full Access]"
+        },
+        {
+          "name": "https://www.googleapis.com/auth/gmail.settings.basic",
+          "role": "See, edit, create, or change your email settings and filters in Gmail"
+        },
+        {
+          "name": "https://www.googleapis.com/auth/gmail.settings.sharing",
+          "role": "Manage your sensitive mail settings, including who can manage your mail"
+        }
+      ],
+      "setup": [
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Gmail's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Gmail's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Gmail's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Gmail's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Gmail's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Gmail's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/gmail"
+    },
+    "headers": {},
+    "api_endpoint": "https://gmail.googleapis.com",
+    "released": 1,
+    "updated_at": "2025-03-12T07:12:31.000Z",
+    "website": "https://developers.google.com/gmail",
+    "api_link_ref": "https://developers.google.com/gmail",
+    "total_api": 68,
+    "credential_link": "https://console.cloud.google.com/apis/credentials"
+  },
+  {
+    "id": "googlecalendar",
+    "name": "Google Calendar",
+    "description": "",
+    "logo_url": "googlecalendar.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": {
+      "scope": [
+        {
+          "name": "https://www.googleapis.com/auth/auth/calendar.app.created",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/auth/calendar.calendarlist.readonly",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/auth/calendar.events.freebusy",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/auth/calendar.events.public.readonly",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/auth/calendar.settings.readonly",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/auth/calendar.freebusy",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/calendar",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/calendar.acls",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/calendar.acsl.readonly",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/calendar.readonly",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/calendar.calendarlist",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/calendar.calendars",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/calendar.calendars.readonly",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/calendar.events",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/calendar.events.owned",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/calendar.events.owned.readonly",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/calendar.events.readonly",
+          "role": "",
+          "label": ""
+        }
+      ],
+      "setup": [
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Google Calendar's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Google Calendar's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Google Calendar's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Google Calendar's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Google Calendar's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Google Calendar's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/googlecalendar"
+    },
+    "headers": {},
+    "api_endpoint": "https://www.googleapis.com",
+    "released": 1,
+    "updated_at": "2024-12-22T09:28:16.000Z",
+    "website": "https://calendar.google.com/",
+    "api_link_ref": "https://developers.google.com/calendar/api/v3/reference",
+    "total_api": 37,
+    "credential_link": "https://console.cloud.google.com/apis/credentials"
+  },
+  {
+    "id": "googledocs",
+    "name": "Google Docs",
+    "description": "",
+    "logo_url": "googledocs.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": {
+      "scope": [
+        {
+          "name": "https://www.googleapis.com/auth/documents.readonly",
+          "role": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/documents",
+          "role": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.readonly",
+          "role": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.file",
+          "role": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive",
+          "role": ""
+        }
+      ],
+      "setup": [
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Google Docs's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Google Docs's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Google Docs's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Google Docs's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Google Docs's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Google Docs's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/googledocs"
+    },
+    "headers": {},
+    "api_endpoint": "https://docs.googleapis.com",
+    "released": 1,
+    "updated_at": "2024-12-22T09:30:03.000Z",
+    "website": "https://docs.google.com/",
+    "api_link_ref": "https://developers.google.com/docs/api/reference/rest",
+    "total_api": 4,
+    "credential_link": "https://console.cloud.google.com/apis/credentials"
+  },
+  {
+    "id": "googledrive",
+    "name": "Google Drive",
+    "description": "",
+    "logo_url": "googledrive.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": {
+      "scope": [
+        {
+          "name": "https://www.googleapis.com/auth/drive.admin.labels.readonly",
+          "role": "",
+          "type": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.appdata",
+          "role": "",
+          "type": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.file",
+          "role": "",
+          "type": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.install",
+          "role": "",
+          "type": "Sensitive Scope",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.labels",
+          "role": "",
+          "type": "Sensitive Scope",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.labels.readonly",
+          "role": "",
+          "type": "Sensitive Scope",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.admin.labels",
+          "role": "",
+          "type": "Sensitive Scope",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/docs",
+          "role": "",
+          "type": "Sensitive Scope",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.photos.readonly",
+          "role": "",
+          "type": "Sensitive Scope",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.apps.readonly",
+          "role": "",
+          "type": "Sensitive Scope",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.apps",
+          "role": "",
+          "type": "Sensitive Scope",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/activity",
+          "role": "",
+          "type": "Sensitive Scope",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive",
+          "role": "",
+          "type": "Restricted scope",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.metadata",
+          "role": "",
+          "type": "Restricted scope",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.metadata.readonly",
+          "role": "",
+          "type": "Restricted scope",
+          "label": ""
+        }
+      ],
+      "setup": [
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Google Drive's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Google Drive's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Google Drive's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Google Drive's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Google Drive's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Google Drive's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/googledrive"
+    },
+    "headers": {},
+    "api_endpoint": "https://www.googleapis.com",
+    "released": 1,
+    "updated_at": "2024-12-22T09:31:48.000Z",
+    "website": "https://drive.google.com/",
+    "api_link_ref": "https://developers.google.com/drive/api/reference/rest/v3",
+    "total_api": 45,
+    "credential_link": "https://console.cloud.google.com/apis/credentials"
+  },
+  {
+    "id": "googleforms",
+    "name": "Google Forms",
+    "description": "",
+    "logo_url": "googleforms.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": {
+      "scope": [
+        {
+          "name": "https://www.googleapis.com/auth/forms.body",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/forms.body.readonly",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/forms.responses.readonly",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.file",
+          "role": "",
+          "label": ""
+        }
+      ],
+      "setup": [
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Google Forms's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Google Forms's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Google Forms's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Google Forms's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Google Forms's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Google Forms's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/googleforms"
+    },
+    "headers": {},
+    "api_endpoint": "https://forms.googleapis.com",
+    "released": 1,
+    "updated_at": "2024-12-22T09:33:38.000Z",
+    "website": "https://docs.google.com/forms",
+    "api_link_ref": "https://developers.google.com/forms/api/reference/rest",
+    "total_api": 9,
+    "credential_link": "https://console.cloud.google.com/apis/credentials"
+  },
+  {
+    "id": "gorgias",
+    "name": "Gorgias",
+    "description": "",
+    "logo_url": "gorgias.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "basicauth": {
+        "password": "api_key",
+        "username": "email"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "subdomain",
+        "type": "input",
+        "field": "input",
+        "label": "Gorgias domain / subdomain",
+        "message": "Your Gorgias domain / subdomain",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "email",
+        "type": "input",
+        "field": "input",
+        "label": "Gorgias login email",
+        "message": "Your Gorgias email",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://{subdomain}.gorgias.com",
+    "released": 1,
+    "updated_at": "2024-12-22T09:22:51.000Z",
+    "website": "https://gorgias.com",
+    "api_link_ref": "https://developers.gorgias.com/docs",
+    "total_api": 2,
+    "credential_link": "https://developers.gorgias.com/docs/access-tokens-api-keys"
+  },
+  {
+    "id": "gumroad",
+    "name": "Gumroad",
+    "description": "",
+    "logo_url": "gumroad.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Gumroad's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Gumroad's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Gumroad's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Gumroad's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Gumroad's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Gumroad's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/gumroad"
+    },
+    "headers": {},
+    "api_endpoint": "https://api.gumroad.com",
+    "released": 1,
+    "updated_at": "2024-12-22T09:24:27.000Z",
+    "website": "https://gumroad.com",
+    "api_link_ref": "https://app.gumroad.com/api",
+    "total_api": 38,
+    "credential_link": "https://app.gumroad.com/settings/advanced"
+  },
+  {
+    "id": "heygen",
+    "name": "Heygen AI",
+    "description": "",
+    "logo_url": "heygen.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "x-api-key",
+        "headerValue": ""
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.heygen.com",
+    "released": 1,
+    "updated_at": "2024-12-22T09:40:11.000Z",
+    "website": "https://www.heygen.com/",
+    "api_link_ref": "https://docs.heygen.com/reference/authentication",
+    "total_api": 48,
+    "credential_link": "https://app.heygen.com/settings?nav=API"
+  },
+  {
+    "id": "hive",
+    "name": "Hive",
+    "description": "",
+    "logo_url": "hive.svg",
+    "auth_type": "",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "YOUR_API_KEY"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://app.hive.com",
+    "released": 1,
+    "updated_at": "2024-12-28T09:13:18.000Z",
+    "website": "https://hive.com/",
+    "api_link_ref": "https://developers.hive.com/reference/introduction",
+    "total_api": 14,
+    "credential_link": ""
+  },
+  {
+    "id": "hubspot",
+    "name": "HubSpot",
+    "description": "",
+    "logo_url": "hubspot.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "HubSpot's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter HubSpot's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "HubSpot's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter HubSpot's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing HubSpot's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter HubSpot's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/hubspot"
+    },
+    "headers": {},
+    "api_endpoint": "https://api.hubapi.com",
+    "released": 1,
+    "updated_at": "2024-12-22T09:42:44.000Z",
+    "website": "https://hubspot.com",
+    "api_link_ref": "https://developers.hubspot.com",
+    "total_api": 488,
+    "credential_link": "https://developers.hubspot.com/docs/api/working-with-oauth"
+  },
+  {
+    "id": "humeai",
+    "name": "Hume AI",
+    "description": "",
+    "logo_url": "humeai.svg",
+    "auth_type": "",
+    "auth": {},
+    "auth_config": {},
+    "headers": {},
+    "api_endpoint": "https://api.hume.ai",
+    "released": 1,
+    "updated_at": "2024-12-22T09:44:52.000Z",
+    "website": "https://www.hume.ai/",
+    "api_link_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/tools/list-tools",
+    "total_api": 63,
+    "credential_link": "https://beta.hume.ai/settings/keys"
+  },
+  {
+    "id": "jasper",
+    "name": "Jasper",
+    "description": "",
+    "logo_url": "jasper.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "x-api-key",
+        "headerValue": ""
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.jasper.ai",
+    "released": 1,
+    "updated_at": "2024-12-22T09:46:27.000Z",
+    "website": "https://www.jasper.ai/",
+    "api_link_ref": "https://developers.jasper.ai/reference/command-3",
+    "total_api": 19,
+    "credential_link": ""
+  },
+  {
+    "id": "klaviyo",
+    "name": "Klaviyo",
+    "description": "",
+    "logo_url": "klaviyo.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Klaviyo-API-Key"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://a.klaviyo.com",
+    "released": 1,
+    "updated_at": "2024-12-22T09:48:44.000Z",
+    "website": "https://www.klaviyo.com/",
+    "api_link_ref": "https://developers.klaviyo.com/en/docs/authenticate_#private-key-authentication",
+    "total_api": 4,
+    "credential_link": ""
+  },
+  {
+    "id": "leapai",
+    "name": "Leap AI",
+    "description": "",
+    "logo_url": "leapai.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.tryleap.ai",
+    "released": 1,
+    "updated_at": "2024-12-22T09:50:42.000Z",
+    "website": "https://www.tryleap.ai/",
+    "api_link_ref": "https://docs.tryleap.ai/api-reference/getting-started",
+    "total_api": 20,
+    "credential_link": "https://www.tryleap.ai/projects"
+  },
+  {
+    "id": "lemonsqueezy",
+    "name": "Lemonsqueezy",
+    "description": "",
+    "logo_url": "lemonsqueezy.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.lemonsqueezy.com",
+    "released": 1,
+    "updated_at": "2024-12-22T09:54:52.000Z",
+    "website": "https://www.lemonsqueezy.com/",
+    "api_link_ref": "https://docs.lemonsqueezy.com/api",
+    "total_api": 34,
+    "credential_link": "https://app.lemonsqueezy.com/settings/api"
+  },
+  {
+    "id": "letterdrop",
+    "name": "Letterdrop",
+    "description": "",
+    "logo_url": "letterdrop.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.letterdrop.com/api",
+    "released": 1,
+    "updated_at": "2024-12-22T09:56:53.000Z",
+    "website": "https://letterdrop.com/",
+    "api_link_ref": "https://docs.letterdrop.com/api",
+    "total_api": 8,
+    "credential_link": ""
+  },
+  {
+    "id": "lilt",
+    "name": "LILT",
+    "description": "",
+    "logo_url": "lilt.svg",
+    "auth_type": "",
+    "auth": {
+      "basicauth": {
+        "password": "token",
+        "username": "id"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "id",
+        "type": "input",
+        "field": "input",
+        "label": "ID",
+        "message": "This will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "auth_token",
+        "type": "input",
+        "field": "input",
+        "label": "Token",
+        "message": "This will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.lilt.com",
+    "released": 1,
+    "updated_at": "2024-12-22T09:58:50.000Z",
+    "website": "https://lilt.com/",
+    "api_link_ref": "https://developers.lilt.com/api",
+    "total_api": 47,
+    "credential_link": ""
+  },
+  {
+    "id": "linguix",
+    "name": "Linguix",
+    "description": "",
+    "logo_url": "linguix.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.linguix.com/api",
+    "released": 1,
+    "updated_at": "2024-12-22T10:00:26.000Z",
+    "website": "https://linguix.com/",
+    "api_link_ref": "https://help.linguix.com/docs/linguix-api/linguix-checker-rest-api/",
+    "total_api": 1,
+    "credential_link": "https://help.linguix.com/docs/linguix-api/linguix-checker-rest-api/"
+  },
+  {
+    "id": "lovo",
+    "name": "Lovo",
+    "description": "",
+    "logo_url": "lovo.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "X-API-KEY",
+        "headerValue": ""
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.genny.lovo.ai/api",
+    "released": 1,
+    "updated_at": "2024-12-22T10:01:46.000Z",
+    "website": "https://lovo.ai/",
+    "api_link_ref": "https://docs.genny.lovo.ai/reference/sync-tts",
+    "total_api": 5,
+    "credential_link": "https://docs.genny.lovo.ai/reference/intro/getting-started"
+  },
+  {
+    "id": "mailchimp",
+    "name": "Mailchimp",
+    "description": "",
+    "logo_url": "mailchimp.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "body": {
+        "key": "api_key"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://mandrillapp.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:05:01.000Z",
+    "website": "https://mailchimp.com/",
+    "api_link_ref": "https://mailchimp.com/developer/transactional/api/",
+    "total_api": 94,
+    "credential_link": "https://mailchimp.com/help/about-api-keys/#Generate_an_API_key"
+  },
+  {
+    "id": "mailersend",
+    "name": "Mailer send",
+    "description": "",
+    "logo_url": "mailersend.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.mailersend.com",
+    "released": 1,
+    "updated_at": "2024-12-22T11:23:06.000Z",
+    "website": "https://www.mailersend.com",
+    "api_link_ref": "https://developers.mailersend.com",
+    "total_api": 1,
+    "credential_link": "https://app.mailersend.com/api-tokens"
+  },
+  {
+    "id": "mailgun",
+    "name": "Mailgun",
+    "description": "",
+    "logo_url": "mailgun.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "basicauth": {
+        "password": "api_key",
+        "username": "api"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "domain_name",
+        "type": "input",
+        "field": "input",
+        "label": "Sending Domain Name",
+        "message": "We will use this domain to send email on your behalf.",
+        "required": false,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "from",
+        "type": "input",
+        "field": "input",
+        "label": "From Email",
+        "message": "We will use this email address to send email on your behalf.",
+        "required": false,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.mailgun.net",
+    "released": 1,
+    "updated_at": "2024-12-22T10:08:14.000Z",
+    "website": "https://www.mailgun.com/",
+    "api_link_ref": "https://documentation.mailgun.com/docs/mailgun/api-reference/intro/",
+    "total_api": 120,
+    "credential_link": "https://help.mailgun.com/hc/en-us/articles/203380100-Where-can-I-find-my-API-keys-and-SMTP-credentials#h_01HVM3GKEPNTB5TR11JGDHY367"
+  },
+  {
+    "id": "mailjet",
+    "name": "Mailjet",
+    "description": "",
+    "logo_url": "mailjet.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "body": {
+        "api_key": "api_key",
+        "api_secret": "api_secret"
+      },
+      "queryMap": {
+        "api_key": "api_key",
+        "api_secret": "api_secret"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "api_secret",
+        "type": "input",
+        "field": "input",
+        "label": "API Secret",
+        "message": "API Secret is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.mailjet.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:10:12.000Z",
+    "website": "https://www.mailjet.com/",
+    "api_link_ref": "https://dev.mailjet.com/email/reference/",
+    "total_api": 2,
+    "credential_link": "https://app.mailjet.com/account/apikeys"
+  },
+  {
+    "id": "mistralai",
+    "name": "Mistral AI",
+    "description": "",
+    "logo_url": "mistralai.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "token",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "token",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.mistral.ai",
+    "released": 1,
+    "updated_at": "2025-02-06T08:44:20.000Z",
+    "website": "https://mistral.ai",
+    "api_link_ref": "https://docs.mistral.ai",
+    "total_api": 21,
+    "credential_link": "https://console.mistral.ai/api-keys/"
+  },
+  {
+    "id": "name",
+    "name": "Name.com",
+    "description": "",
+    "logo_url": "name.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "basicauth": {
+        "password": "token",
+        "username": "username"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "username",
+        "type": "input",
+        "field": "input",
+        "label": "Username",
+        "message": "Username along with token is used for authenticating the API request.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "token",
+        "type": "input",
+        "field": "input",
+        "label": "API token",
+        "message": "Token is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.name.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:14:52.000Z",
+    "website": "https://www.name.com",
+    "api_link_ref": "https://www.name.com/api-docs",
+    "total_api": 49,
+    "credential_link": "https://www.name.com/account/settings/api"
+  },
+  {
+    "id": "namecheap",
+    "name": "Namecheap",
+    "description": "",
+    "logo_url": "namecheap.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "queryMap": {
+        "ApiKey": "ApiKey",
+        "APIUser": "APIUser",
+        "ClientIP": "ClientIP",
+        "UserName": "UserName"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "APIUser",
+        "type": "input",
+        "field": "input",
+        "label": "API User",
+        "message": "This API user will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "UserName",
+        "type": "input",
+        "field": "input",
+        "label": "Namecheap Username",
+        "message": "This username will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "ApiKey",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "ClientIP",
+        "type": "input",
+        "field": "input",
+        "label": "Whitelisted Client IP",
+        "message": "Whitelisted Client IP configured on Namecheap's dashboard",
+        "required": true,
+        "className": "",
+        "placeholder": "123.456.654.321"
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.namecheap.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:16:17.000Z",
+    "website": "https://www.namecheap.com/",
+    "api_link_ref": "https://www.namecheap.com/support/api/intro/",
+    "total_api": 59,
+    "credential_link": "https://ap.www.namecheap.com/settings/tools/apiaccess/"
+  },
+  {
+    "id": "nanonets",
+    "name": "Nanonets",
+    "description": "",
+    "logo_url": "nanonets.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": ""
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "Nanonets  API Key",
+        "message": "This API key will be used for accessing Nanonets  APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": "sk-xxxxx"
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://app.nanonets.com",
+    "released": 1,
+    "updated_at": "2024-12-22T11:23:22.000Z",
+    "website": "https://nanonets.com/",
+    "api_link_ref": "https://nanonets.com/documentation/#section/Authentication",
+    "total_api": 19,
+    "credential_link": "https://app.nanonets.com/#/keys"
+  },
+  {
+    "id": "notion",
+    "name": "Notion",
+    "description": "",
+    "logo_url": "notion.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {
+      "Notion-Version": "2022-06-28"
+    },
+    "api_endpoint": "https://api.notion.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:14:37.000Z",
+    "website": "https://notion.com",
+    "api_link_ref": "https://developers.notion.com",
+    "total_api": 20,
+    "credential_link": "https://www.notion.so/my-integrations"
+  },
+  {
+    "id": "olamaps",
+    "name": "OLA Maps",
+    "description": "",
+    "logo_url": "olamaps.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "query": [
+        "api_key"
+      ]
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.olamaps.io",
+    "released": 1,
+    "updated_at": "2024-12-22T10:21:02.000Z",
+    "website": "https://maps.olakrutrim.com/",
+    "api_link_ref": "https://maps.olakrutrim.com/apidocs",
+    "total_api": 9,
+    "credential_link": "https://maps.olakrutrim.com/dashboard/projects"
+  },
+  {
+    "id": "oneai",
+    "name": "One AI",
+    "description": "OneAI transforms websites into intelligent platforms with custom GPT agents, designed to engage and understand visitors in real-time. Our solution seamlessly integrates into any website, providing personalized interactions based on content directly from your site. With easy embedding, advanced analytics, and a customizable interface, OneAI not only enhances user experience but also drives engagement and sales. Elevate your digital presence with a GPT agent that's always in sync with your business needs.",
+    "logo_url": "oneai.svg",
+    "auth_type": "TOKEN",
+    "auth": {},
+    "auth_config": {},
+    "headers": {},
+    "api_endpoint": "https://api.oneai.com",
+    "released": 1,
+    "updated_at": "2025-01-04T04:26:20.000Z",
+    "website": "https://oneai.com/",
+    "api_link_ref": "https://docs.oneai.com/reference/create_agent_v1_create_post",
+    "total_api": 25,
+    "credential_link": ""
+  },
+  {
+    "id": "openai",
+    "name": "OpenAI",
+    "description": "",
+    "logo_url": "openai.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "OpenAI API Key",
+        "message": "This API key will be used for accessing OpenAI APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": "sk-xxxxx"
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.openai.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:22:16.000Z",
+    "website": "https://openai.com",
+    "api_link_ref": "https://platform.openai.com/docs/api-reference/introduction",
+    "total_api": 122,
+    "credential_link": "https://platform.openai.com/account/api-keys"
+  },
+  {
+    "id": "perplexityai",
+    "name": "Perplexity AI",
+    "description": "",
+    "logo_url": "perplexityai.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.perplexity.ai",
+    "released": 1,
+    "updated_at": "2024-12-22T10:23:43.000Z",
+    "website": "https://www.perplexity.ai/",
+    "api_link_ref": "https://docs.perplexity.ai/api-reference/chat-completions",
+    "total_api": 1,
+    "credential_link": "https://www.perplexity.ai/settings/api"
+  },
+  {
+    "id": "pexels",
+    "name": "Pexels",
+    "description": "",
+    "logo_url": "pexels.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": ""
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.pexels.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:26:00.000Z",
+    "website": "https://www.pexels.com/",
+    "api_link_ref": "https://www.pexels.com/api/documentation/#authorization",
+    "total_api": 9,
+    "credential_link": "https://www.pexels.com/api/new/"
+  },
+  {
+    "id": "pixabay",
+    "name": "Pixabay",
+    "description": "",
+    "logo_url": "pixabay.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "queryMap": {
+        "key": "api_key"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://pixabay.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:31:31.000Z",
+    "website": "https://pixabay.com/",
+    "api_link_ref": "https://pixabay.com/api/docs/",
+    "total_api": 2,
+    "credential_link": "https://pixabay.com/api/docs/"
+  },
+  {
+    "id": "playht",
+    "name": "PlayHT",
+    "description": "",
+    "logo_url": "playht.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": [
+        {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": ""
+        },
+        {
+          "authKey": "user_id",
+          "headerName": "X-USER-ID",
+          "headerValue": ""
+        }
+      ]
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "user_id",
+        "type": "input",
+        "field": "input",
+        "label": "User ID",
+        "message": "User ID of the API Key",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.play.ht",
+    "released": 1,
+    "updated_at": "2024-12-22T10:32:56.000Z",
+    "website": "https://play.ht/",
+    "api_link_ref": "https://docs.play.ht/reference/api-getting-started",
+    "total_api": 7,
+    "credential_link": "https://play.ht/studio/api-access"
+  },
+  {
+    "id": "porkbun",
+    "name": "Porkbun",
+    "description": "",
+    "logo_url": "porkbun.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "body": {
+        "apikey": "apikey",
+        "secretapikey": "secretapikey"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "apikey",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "secretapikey",
+        "type": "input",
+        "field": "input",
+        "label": "API Secret",
+        "message": "API Secret is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.porkbun.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:18:19.000Z",
+    "website": "https://porkbun.com",
+    "api_link_ref": "https://porkbun.com/api/json/v3/documentation",
+    "total_api": 14,
+    "credential_link": ""
+  },
+  {
+    "id": "postmark",
+    "name": "Postmark",
+    "description": "",
+    "logo_url": "postmark.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_token",
+        "headerName": "X-Postmark-Server-Token",
+        "headerValue": ""
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_token",
+        "type": "input",
+        "field": "input",
+        "label": "Postmark API Token",
+        "message": "This API key will be used for accessing Postmark service.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.postmarkapp.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:35:07.000Z",
+    "website": "https://postmarkapp.com/",
+    "api_link_ref": "https://postmarkapp.com/developer/",
+    "total_api": 77,
+    "credential_link": "https://account.postmarkapp.com/login"
+  },
+  {
+    "id": "razorpay",
+    "name": "Razorpay",
+    "description": "",
+    "logo_url": "razorpay.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "basicauth": {
+        "password": "api_secret",
+        "username": "api_key"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "api_secret",
+        "type": "input",
+        "field": "input",
+        "label": "API Secret",
+        "message": "This API secret will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.razorpay.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:19:07.000Z",
+    "website": "https://razorpay.com",
+    "api_link_ref": "https://razorpay.com/docs",
+    "total_api": 178,
+    "credential_link": "https://razorpay.com/docs/payments/dashboard/account-settings/api-keys"
+  },
+  {
+    "id": "replicate",
+    "name": "Replicate",
+    "description": "",
+    "logo_url": "replicate.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "TOKEN"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "Replicate API Key",
+        "message": "This API key will be used for accessing Replicate service.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.replicate.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:23:51.000Z",
+    "website": "https://replicate.com",
+    "api_link_ref": "https://replicate.com/docs",
+    "total_api": 29,
+    "credential_link": "https://replicate.com/account/api-tokens"
+  },
+  {
+    "id": "resembleai",
+    "name": "Resemble AI",
+    "description": "",
+    "logo_url": "resembleai.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://app.resemble.ai/api",
+    "released": 1,
+    "updated_at": "2024-12-22T10:37:40.000Z",
+    "website": "https://www.resemble.ai/",
+    "api_link_ref": "https://docs.app.resemble.ai/docs/getting_started/quick_start",
+    "total_api": 39,
+    "credential_link": "https://app.resemble.ai/account/api"
+  },
+  {
+    "id": "resend",
+    "name": "Resend",
+    "description": "",
+    "logo_url": "resend.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "Resend API Key",
+        "message": "This API key will be used for accessing Resend service.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.resend.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:11:29.000Z",
+    "website": "https://resend.com",
+    "api_link_ref": "https://resend.com/docs/api-reference",
+    "total_api": 9,
+    "credential_link": "https://resend.com/api-keys"
+  },
+  {
+    "id": "rossum",
+    "name": "Rossum",
+    "description": "",
+    "logo_url": "rossum.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://<example>.rossum.app/api",
+    "released": 1,
+    "updated_at": "2024-12-22T10:39:24.000Z",
+    "website": "https://rossum.ai/homepage/",
+    "api_link_ref": "https://elis.rossum.ai/api/docs/#api-reference",
+    "total_api": 129,
+    "credential_link": ""
+  },
+  {
+    "id": "rows",
+    "name": "Rows",
+    "description": "",
+    "logo_url": "rows.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.rows.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:41:32.000Z",
+    "website": "https://rows.com/try-rows",
+    "api_link_ref": "https://developers.rows.com/#tag/Workspace/",
+    "total_api": 8,
+    "credential_link": "https://rows.com"
+  },
+  {
+    "id": "runwayml",
+    "name": "runwayml",
+    "description": "General-purpose multimodal simulators of the world.",
+    "logo_url": "runwayml.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing the service.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {
+      "X-Runway-Version": "2024-11-06"
+    },
+    "api_endpoint": "https://api.dev.runwayml.com",
+    "released": 1,
+    "updated_at": "2025-01-04T04:26:21.000Z",
+    "website": "https://runwayml.com",
+    "api_link_ref": "https://docs.dev.runwayml.com/api",
+    "total_api": 3,
+    "credential_link": "https://dev.runwayml.com/organization/3143d26a-fb91-4372-9de3-cee667139314/api-keys"
+  },
+  {
+    "id": "scenario",
+    "name": "Scenario",
+    "description": "",
+    "logo_url": "scenario.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "mode": "base64",
+        "authKey": [
+          "api_key",
+          "api_secret"
+        ],
+        "headerName": "Authorization",
+        "headerValue": "Basic"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing service.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "api_secret",
+        "type": "input",
+        "field": "input",
+        "label": "API Secret",
+        "message": "This API key will be used for accessing service.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.cloud.scenario.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:26:56.000Z",
+    "website": "https://scenario.com",
+    "api_link_ref": "https://docs.scenario.com/docs/getting-started",
+    "total_api": 28,
+    "credential_link": "https://app.scenario.com/team"
+  },
+  {
+    "id": "sendfox",
+    "name": "Sendfox",
+    "description": "",
+    "logo_url": "sendfox.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.sendfox.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:45:45.000Z",
+    "website": "https://sendfox.com/",
+    "api_link_ref": "https://help.sendfox.com/article/278-endpoints",
+    "total_api": 2,
+    "credential_link": ""
+  },
+  {
+    "id": "sendgrid",
+    "name": "Sendgrid",
+    "description": "",
+    "logo_url": "sendgrid.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.sendgrid.com",
+    "released": 1,
+    "updated_at": "2024-12-22T11:15:50.000Z",
+    "website": "https://sendgrid.com/en-us",
+    "api_link_ref": "https://www.twilio.com/docs/sendgrid/api-reference",
+    "total_api": 351,
+    "credential_link": "https://app.sendgrid.com/settings/api_keys"
+  },
+  {
+    "id": "shopify",
+    "name": "Shopify",
+    "description": "",
+    "logo_url": "shopify.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "subdomain",
+          "type": "input",
+          "field": "input",
+          "label": "Shopify's store name",
+          "message": "Add your Shopify's store name, https://{store_name}.myshopify.com",
+          "required": true,
+          "className": "",
+          "placeholder": "store_name"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Shopify's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Shopify's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Shopify's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Shopify's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Shopify's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Shopify's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/shopify"
+    },
+    "headers": {},
+    "api_endpoint": "https://api.spotify.com",
+    "released": 1,
+    "updated_at": "2024-12-22T11:12:20.000Z",
+    "website": "https://www.shopify.com/in",
+    "api_link_ref": "https://shopify.dev/docs/api/admin-rest",
+    "total_api": 310,
+    "credential_link": "https://www.shopify.com/in/partners/blog/17056443-how-to-generate-a-shopify-api-token"
+  },
+  {
+    "id": "smallestai",
+    "name": "Smallest AI",
+    "description": "",
+    "logo_url": "smallestai.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "token",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "token",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.smallest.ai",
+    "released": 1,
+    "updated_at": "2024-12-22T11:17:14.000Z",
+    "website": "https://smallest.ai/",
+    "api_link_ref": "https://awaaz-docs.smallest.ai/introduction",
+    "total_api": 2,
+    "credential_link": "https://smallest.ai/acount"
+  },
+  {
+    "id": "spaceship",
+    "name": "Spaceship",
+    "description": "ICANN-accredited registrar.",
+    "logo_url": "spaceship.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": [
+        {
+          "authKey": "api_key",
+          "headerName": "X-Api-Key",
+          "headerValue": ""
+        },
+        {
+          "authKey": "api_secret",
+          "headerName": "X-Api-Secret",
+          "headerValue": ""
+        }
+      ]
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "api_secret",
+        "type": "input",
+        "field": "input",
+        "label": "API Secret",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://spaceship.dev/api",
+    "released": 1,
+    "updated_at": "2025-02-06T09:47:05.000Z",
+    "website": "https://www.spaceship.com",
+    "api_link_ref": "https://docs.spaceship.dev",
+    "total_api": 22,
+    "credential_link": "https://www.spaceship.com/application/api-manager"
+  },
+  {
+    "id": "squadcast",
+    "name": "Squadcast",
+    "description": "",
+    "logo_url": "squadcast.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.squadcast.fm",
+    "released": 1,
+    "updated_at": "2024-12-22T11:11:29.000Z",
+    "website": "https://squadcast.fm",
+    "api_link_ref": "https://developers.squadcast.fm/reference",
+    "total_api": 19,
+    "credential_link": "https://app.squadcast.fm/account/developers"
+  },
+  {
+    "id": "stabilityai",
+    "name": "Stability AI",
+    "description": "",
+    "logo_url": "stabilityai.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": ""
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing the service.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.stability.ai",
+    "released": 1,
+    "updated_at": "2024-12-22T11:09:59.000Z",
+    "website": "https://stability.ai",
+    "api_link_ref": "https://platform.stability.ai/docs/getting-started",
+    "total_api": 35,
+    "credential_link": "https://next.platform.stability.ai/account/keys"
+  },
+  {
+    "id": "strava",
+    "name": "Strava",
+    "description": "",
+    "logo_url": "strava.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Strava's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Strava's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Strava's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Strava's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Strava's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Strava's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/strava"
+    },
+    "headers": {},
+    "api_endpoint": "https://www.strava.com",
+    "released": 1,
+    "updated_at": "2024-12-22T11:06:33.000Z",
+    "website": "https://strava.com",
+    "api_link_ref": "https://developers.strava.com/docs/reference",
+    "total_api": 34,
+    "credential_link": "https://www.strava.com/settings/api"
+  },
+  {
+    "id": "stripe",
+    "name": "Stripe",
+    "description": "",
+    "logo_url": "stripe.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "secret_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_secret",
+        "type": "input",
+        "field": "input",
+        "label": "API Secret",
+        "message": "API Secret is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.stripe.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:22:28.000Z",
+    "website": "https://stripe.com",
+    "api_link_ref": "https://stripe.com/docs",
+    "total_api": 55,
+    "credential_link": "https://dashboard.stripe.com"
+  },
+  {
+    "id": "telegram",
+    "name": "Telegram",
+    "description": "Telegram",
+    "logo_url": "telegram.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "path": {
+        "token": "api_key"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "Telegram bot API Key",
+        "message": "Telegram bot API Key will be used for sending text, images, audio, video, poll.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.telegram.org",
+    "released": 1,
+    "updated_at": "2025-03-10T09:47:58.000Z",
+    "website": "https://telegram.org",
+    "api_link_ref": "https://core.telegram.org/api",
+    "total_api": 32,
+    "credential_link": "https://telegram.me/botfather"
+  },
+  {
+    "id": "textcortex",
+    "name": "TextCortex",
+    "description": "",
+    "logo_url": "textcortex.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.textcortex.com/v1",
+    "released": 1,
+    "updated_at": "2024-12-22T11:01:44.000Z",
+    "website": "https://textcortex.com",
+    "api_link_ref": "https://docs.textcortex.com/api",
+    "total_api": 35,
+    "credential_link": "https://app.textcortex.com/user/dashboard/settings/api-key"
+  },
+  {
+    "id": "trello",
+    "name": "Trello",
+    "description": "",
+    "logo_url": "trello.svg",
+    "auth_type": "OAUTH1.0",
+    "auth": {
+      "query": [
+        "key",
+        "token"
+      ]
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "api_key",
+          "type": "input",
+          "field": "input",
+          "label": "API Key",
+          "message": "Trello OAuth1.0 API Key",
+          "required": true,
+          "className": "",
+          "placeholder": "xxxxxxxxxxxxxx"
+        },
+        {
+          "name": "api_secret",
+          "type": "input",
+          "field": "input",
+          "label": "API Secret",
+          "message": "Trello OAuth1.0 API Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "xxxxxxxxxxxxx"
+        }
+      ]
+    },
+    "headers": {},
+    "api_endpoint": "https://api.trello.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:59:32.000Z",
+    "website": "https://trello.com",
+    "api_link_ref": "https://developer.atlassian.com/cloud/trello/res",
+    "total_api": 244,
+    "credential_link": "https://trello.com/power-ups/admin"
+  },
+  {
+    "id": "twelvelabs",
+    "name": "Twelve Labs",
+    "description": "",
+    "logo_url": "twelvelabs.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "x-api-key",
+        "headerValue": ""
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.twelvelabs.io",
+    "released": 1,
+    "updated_at": "2024-12-22T10:56:37.000Z",
+    "website": "https://www.twelvelabs.io",
+    "api_link_ref": "https://docs.twelvelabs.io/reference/api-reference",
+    "total_api": 38,
+    "credential_link": "https://dashboard.twelvelabs.io/home"
+  },
+  {
+    "id": "twitter",
+    "name": "Twitter v1.1",
+    "description": "",
+    "logo_url": "twitter.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {},
+    "auth_config": {},
+    "headers": {},
+    "api_endpoint": "https://api.twitter.com",
+    "released": 1,
+    "updated_at": "2025-03-12T06:54:55.000Z",
+    "website": "",
+    "api_link_ref": "",
+    "total_api": 129,
+    "credential_link": ""
+  },
+  {
+    "id": "unrealspeech",
+    "name": "Unreal Speech",
+    "description": "",
+    "logo_url": "unrealspeech.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.v7.unrealspeech.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:20:12.000Z",
+    "website": "https://unrealspeech.com",
+    "api_link_ref": "https://docs.unrealspeech.com/reference/getting-started-with-our-api",
+    "total_api": 4,
+    "credential_link": "https://unrealspeech.com/dashboard"
+  },
+  {
+    "id": "unsplash",
+    "name": "Unsplash",
+    "description": "",
+    "logo_url": "unsplash.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "access_key",
+        "headerName": "Authorization",
+        "headerValue": "Client-ID"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "access_key",
+        "type": "input",
+        "field": "input",
+        "label": "Access Key",
+        "message": "This access key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.unsplash.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:54:12.000Z",
+    "website": "https://unsplash.com",
+    "api_link_ref": "https://unsplash.com/documentation",
+    "total_api": 33,
+    "credential_link": "https://unsplash.com/oauth/applications"
+  },
+  {
+    "id": "voicerss",
+    "name": "Voice rss",
+    "description": "",
+    "logo_url": "voicerss.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "TOKEN"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "Replicate API Key",
+        "message": "This API key will be used for accessing Replicate service.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "http://api.voicerss.org",
+    "released": 1,
+    "updated_at": "2024-12-22T10:51:45.000Z",
+    "website": "http://www.voicerss.org",
+    "api_link_ref": "https://www.voicerss.org/api/",
+    "total_api": 1,
+    "credential_link": "https://voicerss.org/personel/"
+  },
+  {
+    "id": "voicegainai",
+    "name": "VoiceGain AI",
+    "description": "",
+    "logo_url": "voicegainai.svg",
+    "auth_type": "TOKEN",
+    "auth": {},
+    "auth_config": {},
+    "headers": {},
+    "api_endpoint": "https://api.voicegain.ai",
+    "released": 1,
+    "updated_at": "2025-01-04T04:26:20.000Z",
+    "website": "https://www.voicegain.ai/",
+    "api_link_ref": "https://console.voicegain.ai/api/v1/index.html#tag/transcribe",
+    "total_api": 26,
+    "credential_link": ""
+  },
+  {
+    "id": "voicemaker",
+    "name": "Voicemaker",
+    "description": "",
+    "logo_url": "voicemaker.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "Voicemaker API Key",
+        "message": "API Key is used for accessing the Voicemaker API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://developer.voicemaker.in",
+    "released": 1,
+    "updated_at": "2024-12-22T10:49:15.000Z",
+    "website": "https://www.voicemaker.in",
+    "api_link_ref": "https://www.developer.voicemaker.in/apidocs",
+    "total_api": 2,
+    "credential_link": "https://developer.voicemaker.in/"
+  },
+  {
+    "id": "weatherunion",
+    "name": "Weather Union",
+    "description": "",
+    "logo_url": "weatherunion.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "x-zomato-api-key",
+        "headerValue": ""
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://www.weatherunion.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:28:20.000Z",
+    "website": "https://www.weatherunion.com",
+    "api_link_ref": "https://b.zmtcdn.com/data/file_assets/915d4e8e95d067c47e1ae38d77d572b21715104204.pdf",
+    "total_api": 2,
+    "credential_link": "https://www.weatherunion.com/"
+  },
+  {
+    "id": "whatsapp",
+    "name": "WhatsApp (v22.0)",
+    "description": "",
+    "logo_url": "whatsapp.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {},
+    "auth_config": {},
+    "headers": {},
+    "api_endpoint": "https://graph.facebook.com",
+    "released": 1,
+    "updated_at": "2025-03-12T03:43:25.000Z",
+    "website": "https://meta.com",
+    "api_link_ref": "https://developers.facebook.com/docs/whatsapp/cloud-api/reference",
+    "total_api": 10,
+    "credential_link": "https://developers.facebook.com/docs/whatsapp"
+  },
+  {
+    "id": "wordpress",
+    "name": "Wordpress - Org",
+    "description": "Wordpress - A Cloud Based Blogging Platform ",
+    "logo_url": "wordpress.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Wordpress's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Wordpress's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Wordpress's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Wordpress's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Wordpress's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Wordpress's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/wordpress"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2025-03-05T16:23:48.000Z",
+    "website": "https://wordpress.org",
+    "api_link_ref": "https://developer.wordpress.org/docs",
+    "total_api": 68,
+    "credential_link": "https://developer.wordpress.org/apps"
+  },
+  {
+    "id": "writerai",
+    "name": "Writer AI",
+    "description": "",
+    "logo_url": "writerai.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T10:46:39.000Z",
+    "website": "https://writer.com",
+    "api_link_ref": "https://dev.writer.com/api-guides/introduction",
+    "total_api": 3,
+    "credential_link": ""
+  },
+  {
+    "id": "xero",
+    "name": "Xero",
+    "description": "",
+    "logo_url": "xero.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Xero's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Xero's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Xero's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Xero's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Xero's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Xero's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/xero"
+    },
+    "headers": {},
+    "api_endpoint": "https://api.xero.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:42:11.000Z",
+    "website": "https://www.xero.com",
+    "api_link_ref": "https://developer.xero.com/documentation/api/accounting/overview",
+    "total_api": 4,
+    "credential_link": ""
+  },
+  {
+    "id": "yepicai",
+    "name": "Yepic AI",
+    "description": "",
+    "logo_url": "yepicai.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "xi-api-key",
+        "headerValue": ""
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T10:21:09.000Z",
+    "website": "https://yepic.ai",
+    "api_link_ref": "https://docs.yepic.ai",
+    "total_api": 17,
+    "credential_link": "https://studio.yepic.ai"
+  },
+  {
+    "id": "zendesk",
+    "name": "Zendesk",
+    "description": "",
+    "logo_url": "zendesk.svg",
+    "auth_type": "TOKEN",
+    "auth": {},
+    "auth_config": [
+      {
+        "name": "subdomain",
+        "type": "input",
+        "field": "input",
+        "label": "zendesk domain / subdomain",
+        "message": "Your zendesk domain / subdomain",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "email_address",
+        "type": "input",
+        "field": "input",
+        "label": "zendesk login email",
+        "message": "Your zendesk email",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "api_token",
+        "type": "input",
+        "field": "input",
+        "label": "API Token",
+        "message": "This API Token will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://{subdomain}.gorgias.com",
+    "released": 1,
+    "updated_at": "2024-12-22T11:29:29.000Z",
+    "website": "https://zendesk.com",
+    "api_link_ref": "https://developer.zendesk.com/documentation",
+    "total_api": 2,
+    "credential_link": ""
+  },
+  {
+    "id": "zohoanalytics",
+    "name": "Zoho Analytics",
+    "description": "",
+    "logo_url": "zohoanalytics.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://analyticsapi.zoho.in, https://analyticsapi.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://analyticsapi.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho Analytics's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Analytics's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho Analytics's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Analytics's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho Analytics's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Analytics's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohoanalytics"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T10:29:10.000Z",
+    "website": "https://www.zoho.com/analytics",
+    "api_link_ref": "https://www.zoho.com/analytics/api/v2/introduction.html",
+    "total_api": 121,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
+  {
+    "id": "zohoassist",
+    "name": "Zoho Assist",
+    "description": "",
+    "logo_url": "zohoassist.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://assist.zoho.in, https://assist.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://assist.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho Assist's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Assist's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho Assist's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Assist's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho Assist's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Assist's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohoassist"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T10:26:04.000Z",
+    "website": "https://www.zoho.com/assist",
+    "api_link_ref": "https://www.zoho.com/assist/api/introduction.html",
+    "total_api": 13,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
+  {
+    "id": "zohobookings",
+    "name": "Zoho Bookings",
+    "description": "",
+    "logo_url": "zohobookings.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://www.zohoapis.in, https://www.zohoapis.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://www.zohoapis.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho Bookings's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Bookings's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho Bookings's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Bookings's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho Bookings's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Bookings's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohobookings"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T10:23:31.000Z",
+    "website": "https://www.zoho.com/bookings",
+    "api_link_ref": "https://www.zoho.com/bookings/help/api/v1/generate-accesstoken.html",
+    "total_api": 10,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
+  {
+    "id": "zohobugtracker",
+    "name": "Zoho Bug Tracker",
+    "description": "",
+    "logo_url": "zohobugtracker.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://projectsapi.zoho.com, https://projectsapi.zoho.in, accounts.zoho.eu,accounts.zoho.com.au, accounts.zoho.com.cn, accounts.zoho.jp",
+          "required": true,
+          "className": "",
+          "placeholder": "https://projectsapi.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho Bug Tracker's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Bug Tracker's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho Bug Tracker's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Bug Tracker's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho Bug Tracker's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Bug Tracker's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohobugtracker"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T10:16:52.000Z",
+    "website": "https://www.zoho.com/bugtracker",
+    "api_link_ref": "https://www.zoho.com/projects/help/rest-api/bugtracker-portal-api.html",
+    "total_api": 84,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
+  {
+    "id": "zohocalendar",
+    "name": "Zoho Calendar",
+    "description": "",
+    "logo_url": "zohocalendar.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://calendar.zoho.com, https://calendar.zoho.in",
+          "required": true,
+          "className": "",
+          "placeholder": "https://calendar.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "zohocalendar's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter zohocalendar's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "zohocalendar's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter zohocalendar's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing zohocalendar's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter zohocalendar's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohocalendar"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T10:13:07.000Z",
+    "website": "https://www.zoho.com/calendar",
+    "api_link_ref": "https://www.zoho.com/calendar/help/api/introduction.html",
+    "total_api": 28,
+    "credential_link": " https://accounts.zoho.com/developerconsole"
+  },
+  {
+    "id": "zohocampaigns",
+    "name": "Zoho Campaigns",
+    "description": "",
+    "logo_url": "zohocampaigns.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://campaigns.zoho.in, https://campaigns.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://campaigns.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho Campaigns's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Campaigns's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho Campaigns's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Campaigns's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho Campaigns's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Campaigns's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohocampaigns"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T10:11:26.000Z",
+    "website": "https://www.zoho.com/campaigns",
+    "api_link_ref": "https://www.zoho.com/campaigns/help/developers/",
+    "total_api": 33,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
+  {
+    "id": "zohocommerce",
+    "name": "Zoho Commerce",
+    "description": "",
+    "logo_url": "zohocommerce.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://commerce.zoho.in, https://commerce.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://commerce.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho Commerce's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Commerce's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho Commerce's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Commerce's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho Commerce's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Commerce's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohocommerce"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T10:09:25.000Z",
+    "website": "https://www.zoho.com/commerce",
+    "api_link_ref": "https://www.zoho.com/commerce/api/introduction.html",
+    "total_api": 78,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
+  {
+    "id": "zohoconnect",
+    "name": "Zoho Connect",
+    "description": "",
+    "logo_url": "zohoconnect.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://connect.zoho.in, https://connect.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://connect.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho Connect's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Connect's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho Connect's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Connect's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho Connect's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Connect's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohoconnect"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T10:08:04.000Z",
+    "website": "https://www.zoho.com/connect",
+    "api_link_ref": "https://www.zoho.com/connect/api/intro.html",
+    "total_api": 61,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
+  {
+    "id": "zohocontracts",
+    "name": "Zoho Contracts",
+    "description": "",
+    "logo_url": "zohocontracts.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://contracts.zoho.in, https://contracts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://contracts.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho Contracts's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Contracts's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho Contracts's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Contracts's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho Contracts's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Contracts's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohocontracts"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T10:05:32.000Z",
+    "website": "https://www.zoho.com/contract",
+    "api_link_ref": "https://www.zoho.com/contracts/api/introduction.html",
+    "total_api": 58,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
+  {
+    "id": "zohocrm",
+    "name": "Zoho CRM",
+    "description": "",
+    "logo_url": "zohocrm.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://www.zohoapis.in, https://www.zohoapis.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://www.zohoapis.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho CRM's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho CRM's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho CRM's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho CRM's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho CRM's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho CRM's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohocrm"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T10:05:45.000Z",
+    "website": "https://www.zoho.com/crm",
+    "api_link_ref": "https://www.zoho.com/crm/developer/docs/api/v6/",
+    "total_api": 4,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
+  {
+    "id": "zohoexpense",
+    "name": "Zoho Expense",
+    "description": "",
+    "logo_url": "zohoexpense.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://www.zohoapis.in, https://www.zohoapis.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://www.zohoapis.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho Expense's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Expense's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho Expense's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Expense's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho Expense's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Expense's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohoexpense"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2025-03-12T03:19:32.000Z",
+    "website": "https://www.zoho.com/in/expense",
+    "api_link_ref": "https://www.zoho.com/expense/api/v1/introduction",
+    "total_api": 59,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
+  {
+    "id": "zohofsm",
+    "name": "Zoho FSM",
+    "description": "",
+    "logo_url": "zohofsm.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://fsm.zoho.in, https://fsm.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://fsm.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho FSM's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho FSM's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho FSM's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho FSM's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho FSM's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho FSM's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohofsm"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T09:54:14.000Z",
+    "website": "https://www.zoho.com/fsm",
+    "api_link_ref": "https://www.zoho.com/fsm/developer/help/api",
+    "total_api": 72,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
+  {
+    "id": "zohoinventory",
+    "name": "Zoho Inventory",
+    "description": "",
+    "logo_url": "zohoinventory.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://www.zohoapis.in, https://www.zohoapis.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://www.zohoapis.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho Inventory's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Inventory's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho Inventory's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Inventory's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho Inventory's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Inventory's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohoinventory"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T09:52:29.000Z",
+    "website": "https://www.zoho.com/in/inventory",
+    "api_link_ref": "https://www.zoho.com/inventory/api/v1",
+    "total_api": 263,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
+  {
+    "id": "zohoinvoice",
+    "name": "Zoho Invoice",
+    "description": "",
+    "logo_url": "zohoinvoice.svg",
+    "auth_type": "",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {},
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T09:49:50.000Z",
+    "website": "https://www.zoho.com/invoice",
+    "api_link_ref": "https://www.zoho.com/invoice/api/v3/introduction",
+    "total_api": 258,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
+  {
+    "id": "zoholens",
+    "name": "Zoho Lens",
+    "description": "",
+    "logo_url": "zoholens.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://lens.zoho.in, https://lens.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://lens.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "zoholens's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter zoholens's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "zoholens's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter zoholens's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing zoholens's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter zoholens's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zoholens"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T09:47:07.000Z",
+    "website": "https://www.zoho.com/lens",
+    "api_link_ref": "https://www.zoho.com/lens/resources/api/introduction.html",
+    "total_api": 2,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
+  {
+    "id": "zohomail",
+    "name": "Zoho Mail",
+    "description": "",
+    "logo_url": "zohomail.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://mail.zoho.com, https://mail.zoho.in ",
+          "required": true,
+          "className": "",
+          "placeholder": "https://mail.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho Mail's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Mail's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho Mail's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Mail's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho Mail's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Mail's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohomail"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T09:43:35.000Z",
+    "website": "https://www.zoho.com/mail",
+    "api_link_ref": "https://www.zoho.com/mail/help/api/overview.html",
+    "total_api": 133,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
+  {
+    "id": "zohomarketing",
+    "name": "Zoho Marketing ",
+    "description": "",
+    "logo_url": "zohomarketing.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://marketingautomation.zoho.in, https://marketingautomation.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://marketingautomation.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho Marketing 's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Marketing 's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho Marketing 's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Marketing 's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho Marketing 's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Marketing 's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohomarketing"
+    },
+    "headers": {},
+    "api_endpoint": "https://marketingautomation.zoho.in",
+    "released": 1,
+    "updated_at": "2024-12-22T09:39:28.000Z",
+    "website": "https://www.zoho.com/marketingplus",
+    "api_link_ref": "https://www.zoho.com/marketingautomation/help/developers/v1",
+    "total_api": 46,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
+  {
+    "id": "zohopeople",
+    "name": "Zoho People",
+    "description": "",
+    "logo_url": "zohopeople.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://people.zoho.in, https://people.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://people.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho People's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho People's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho People's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho People's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho People's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho People's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohopeople"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T09:34:36.000Z",
+    "website": "https://www.zoho.com/people",
+    "api_link_ref": "https://www.zoho.com/people/api/overview.html",
+    "total_api": 189,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
+  {
+    "id": "zohoprojects",
+    "name": "Zoho Projects",
+    "description": "",
+    "logo_url": "zohoprojects.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region ",
+          "required": true,
+          "className": "",
+          "placeholder": "https://projectsapi.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "zohoprojects's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter zohoprojects's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "zohoprojects's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter zohoprojects's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing zohoprojects's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter zohoprojects's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohoprojects"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T09:33:04.000Z",
+    "website": "https://www.zoho.com/projects",
+    "api_link_ref": "https://www.zoho.com/projects/help/rest-api/zohoprojectsapi.html",
+    "total_api": 15,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
+  {
+    "id": "zohosalesiq",
+    "name": "Zoho SalesIQ",
+    "description": "",
+    "logo_url": "zohosalesiq.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://salesiq.zoho.in, https://salesiq.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://salesiq.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho SalesIQ's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho SalesIQ's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho SalesIQ's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho SalesIQ's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho SalesIQ's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho SalesIQ's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohosalesiq"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T09:30:25.000Z",
+    "website": "https://www.zoho.com/salesiq",
+    "api_link_ref": "https://www.zoho.com/salesiq/help/developer-section/rest-api-new.html",
+    "total_api": 6,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
+  {
+    "id": "zohosheet",
+    "name": "Zoho Sheet",
+    "description": "",
+    "logo_url": "zohosheet.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://sheet.zoho.in, https://sheet.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://sheet.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho Sheet's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Sheet's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho Sheet's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Sheet's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho Sheet's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Sheet's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohosheet"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T09:25:41.000Z",
+    "website": "https://www.zoho.com/sheet",
+    "api_link_ref": "https://www.zoho.com/sheet/help/api/v2/",
+    "total_api": 11,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
+  {
+    "id": "zohosign",
+    "name": "Zoho Sign",
+    "description": "",
+    "logo_url": "zohosign.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://sign.zoho.com, https://sign.zoho.in",
+          "required": true,
+          "className": "",
+          "placeholder": "https://sign.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho Sign's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Sign's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho Sign's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Sign's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho Sign's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Sign's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohosign"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T09:21:08.000Z",
+    "website": "https://www.zoho.com/en-in/sign",
+    "api_link_ref": "https://www.zoho.com/sign/api/",
+    "total_api": 4,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
+  {
+    "id": "zohotables",
+    "name": "Zoho Tables",
+    "description": "",
+    "logo_url": "zohotables.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://tables.zoho.in, https://tables.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://tables.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho Tables's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Tables's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho Tables's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Tables's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho Tables's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Tables's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohotables"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T09:16:29.000Z",
+    "website": "https://www.zoho.com/tables",
+    "api_link_ref": "https://tables.zoho.com/help/api/v1",
+    "total_api": 32,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
+  {
+    "id": "zohowebinar",
+    "name": "Zoho Webinar",
+    "description": "",
+    "logo_url": "zohowebinar.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://meeting.zoho.in, https://meeting.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://meeting.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho Webinar's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Webinar's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho Webinar's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Webinar's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho Webinar's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Webinar's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohowebinar"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T09:12:46.000Z",
+    "website": "https://www.zoho.com/webinar",
+    "api_link_ref": "https://www.zoho.com/meeting/api-integration/webinar-api.html",
+    "total_api": 10,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
+  {
+    "id": "zohoworkdrive",
+    "name": "Zoho WorkDrive",
+    "description": "",
+    "logo_url": "zohoworkdrive.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://www.zohoapis.in, https://www.zohoapis.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://www.zohoapis.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho WorkDrive's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho WorkDrive's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho WorkDrive's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho WorkDrive's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho WorkDrive's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho WorkDrive's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohoworkdrive"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T09:09:02.000Z",
+    "website": "https://www.zoho.com/workdrive",
+    "api_link_ref": "https://workdrive.zoho.com/apidocs/v1/overview",
+    "total_api": 138,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
+  {
+    "id": "zohoworkely",
+    "name": "Zoho Workely",
+    "description": "",
+    "logo_url": "zohoworkely.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://workerly.zoho.in, https://workerly.zoho.in",
+          "required": true,
+          "className": "",
+          "placeholder": "https://workerly.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho Workely's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Workely's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho Workely's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Workely's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho Workely's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Workely's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohoworkely"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T09:06:04.000Z",
+    "website": "https://www.zoho.com/workerly/",
+    "api_link_ref": "https://www.zoho.com/workerly/developer-guide/whats-new.html",
+    "total_api": 10,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
+  {
+    "id": "zohowriter",
+    "name": "Zoho Writer",
+    "description": "",
+    "logo_url": "zohowriter.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://www.zohoapis.in, https://www.zohoapis.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://www.zohoapis.com"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho Writer's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Writer's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho Writer's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Writer's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho Writer's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Writer's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohowriter"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T09:01:18.000Z",
+    "website": "https://www.zoho.com/writer",
+    "api_link_ref": "https://www.zoho.com/writer/help/api/v1/getting-started.html",
+    "total_api": 42,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
+  {
+    "id": "zohozeptomail",
+    "name": "Zoho Zeptomail",
+    "description": "",
+    "logo_url": "zohozeptomail.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-enczapikey"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "Zeptomail API key is used for sending email",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "endpoint",
+        "type": "input",
+        "field": "input",
+        "label": "Zeptomail Region",
+        "message": "Enter Zeptomail Region, https://api.zeptomail.in, https://api.zeptomail.com",
+        "required": true,
+        "className": "",
+        "placeholder": "https://api.zeptomail.in"
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T09:00:13.000Z",
+    "website": "https://www.zoho.com/zeptomail",
+    "api_link_ref": "https://www.zoho.com/zeptomail/email-api.html",
+    "total_api": 10,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  }
+]

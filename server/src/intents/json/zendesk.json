@@ -1,0 +1,78 @@
+{
+  "routes": {
+    "zendesk__api__v2__tickets__ticket_id___get": {
+      "provider_intent": "zendesk__api__v2__tickets__ticket_id___get",
+      "provider_alias_intent": "/api/v2/tickets/ticket_id",
+      "text": "Show Ticket",
+      "category": "Tickets",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "ticket_id": {
+          "type": "number",
+          "text": "The ID of the ticket",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "ticket_id": {
+          "type": "number",
+          "text": "The ID of the ticket",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "subdomain": {
+          "type": "string",
+          "replace_key": "{subdomain}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "https://developer.zendesk.com/api-reference/ticketing/tickets/tickets/#show-ticket",
+        "rate_limit": [],
+        "api_endpoint": "https://{subdomain}.zendesk.com/api/v2/tickets/{ticket_id}",
+        "alias_endpoint": "/zendesk/api/v2/tickets/ticket_id",
+        "api_ref": ""
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zendesk__api__v2__users___get": {
+      "provider_intent": "zendesk__api__v2__users___get",
+      "provider_alias_intent": "/api/v2/users",
+      "text": "List Users",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "subdomain": {
+          "type": "string",
+          "replace_key": "{subdomain}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "https://developer.zendesk.com/api-reference/ticketing/users/users/#list-users",
+        "rate_limit": [],
+        "api_endpoint": "https://{subdomain}.zendesk.com/api/v2/users",
+        "alias_endpoint": "/zendesk/api/v2/users",
+        "api_ref": ""
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

@@ -1,0 +1,4767 @@
+{
+  "app": {
+    "title": "algolia API",
+    "description": "",
+    "api_base": "/algolia",
+    "copyright": "",
+    "copyright_year": "",
+    "contact_email": ""
+  },
+  "category": {
+    "All": ""
+  },
+  "routes": {
+    "add_a/b_test": {
+      "provider_intent": "add_a/b_test",
+      "provider_alias_intent": "/2/abtests",
+      "text": "Add A/B test 🚧",
+      "category": "A/B Testing",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "Add A/B test",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/2/abtests",
+        "alias_endpoint": "/algolia/2/abtests",
+        "api_ref": "https://www.algolia.com/doc/rest-api/ab-test/#add-ab-test"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_a/b_test": {
+      "provider_intent": "get_a/b_test",
+      "provider_alias_intent": "/2/abtests/id",
+      "text": "Get A/B test 🚧",
+      "category": "A/B Testing",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "Get A/B test",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/2/abtests/{id}",
+        "alias_endpoint": "/algolia/2/abtests/id",
+        "api_ref": "https://www.algolia.com/doc/rest-api/ab-test/#get-ab-test"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "list_a/b_tests": {
+      "provider_intent": "list_a/b_tests",
+      "provider_alias_intent": "/2/abtests",
+      "text": "List A/B tests 🚧",
+      "category": "A/B Testing",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "List A/B tests",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/2/abtests",
+        "alias_endpoint": "/algolia/2/abtests",
+        "api_ref": "https://www.algolia.com/doc/rest-api/ab-test/#list-ab-tests"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "stop_a/b_test": {
+      "provider_intent": "stop_a/b_test",
+      "provider_alias_intent": "/2/abtests/id/stop",
+      "text": "Stop A/B test 🚧",
+      "category": "A/B Testing",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "Stop A/B test",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/2/abtests/{id}/stop",
+        "alias_endpoint": "/algolia/2/abtests/id/stop",
+        "api_ref": "https://www.algolia.com/doc/rest-api/ab-test/#stop-ab-test"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "delete_a/b_test": {
+      "provider_intent": "delete_a/b_test",
+      "provider_alias_intent": "/2/abtests/id",
+      "text": "Delete A/B test 🚧",
+      "category": "A/B Testing",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "Delete A/B test",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/2/abtests/{id}",
+        "alias_endpoint": "/algolia/2/abtests/id",
+        "api_ref": "https://www.algolia.com/doc/rest-api/ab-test/#delete-ab-test"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_status": {
+      "provider_intent": "get_status",
+      "provider_alias_intent": "/2/status",
+      "text": "Get status 🚧",
+      "category": "Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "Get status",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/2/status",
+        "alias_endpoint": "/algolia/2/status",
+        "api_ref": "https://www.algolia.com/doc/rest-api/analytics/#get-status"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_top_searches": {
+      "provider_intent": "get_top_searches",
+      "provider_alias_intent": "/2/searches",
+      "text": "Get top searches 🚧",
+      "category": "Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "Get top searches",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/2/searches",
+        "alias_endpoint": "/algolia/2/searches",
+        "api_ref": "https://www.algolia.com/doc/rest-api/analytics/#get-top-searches"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_count_of_searches": {
+      "provider_intent": "get_count_of_searches",
+      "provider_alias_intent": "/2/searches/count",
+      "text": "Get count of searches 🚧",
+      "category": "Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "Get count of searches",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/2/searches/count",
+        "alias_endpoint": "/algolia/2/searches/count",
+        "api_ref": "https://www.algolia.com/doc/rest-api/analytics/#get-count-of-searches"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_top_searches_with_no_results": {
+      "provider_intent": "get_top_searches_with_no_results",
+      "provider_alias_intent": "/2/searches/noResults",
+      "text": "Get top searches with no results 🚧",
+      "category": "Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "Get top searches with no results",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/2/searches/noResults",
+        "alias_endpoint": "/algolia/2/searches/noResults",
+        "api_ref": "https://www.algolia.com/doc/rest-api/analytics/#get-top-searches-with-no-results"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_top_searches_with_no_clicks_": {
+      "provider_intent": "get_top_searches_with_no_clicks_",
+      "provider_alias_intent": "/2/searches/noClicks",
+      "text": "Get top searches with no clicks 🚧",
+      "category": "Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "Get top searches with no clicks ",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/2/searches/noClicks",
+        "alias_endpoint": "/algolia/2/searches/noClicks",
+        "api_ref": "https://www.algolia.com/doc/rest-api/analytics/#get-top-searches-with-no-clicks"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_rate_of_no_results": {
+      "provider_intent": "get_rate_of_no_results",
+      "provider_alias_intent": "/2/searches/noResultRate",
+      "text": "Get rate of no results 🚧",
+      "category": "Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "Get rate of no results",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/2/searches/noResultRate",
+        "alias_endpoint": "/algolia/2/searches/noResultRate",
+        "api_ref": "https://www.algolia.com/doc/rest-api/analytics/#get-rate-of-no-results"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_rate_of_no_clicks": {
+      "provider_intent": "get_rate_of_no_clicks",
+      "provider_alias_intent": "/2/searches/noClickRate",
+      "text": "Get rate of no clicks 🚧",
+      "category": "Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "Get rate of no clicks",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/2/searches/noClickRate",
+        "alias_endpoint": "/algolia/2/searches/noClickRate",
+        "api_ref": "https://www.algolia.com/doc/rest-api/analytics/#get-rate-of-no-clicks"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_top_hits": {
+      "provider_intent": "get_top_hits",
+      "provider_alias_intent": "/2/hits",
+      "text": "Get top hits 🚧",
+      "category": "Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "Get top hits",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/2/hits",
+        "alias_endpoint": "/algolia/2/hits",
+        "api_ref": "https://www.algolia.com/doc/rest-api/analytics/#get-top-hits"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_top_hits_for_a_search": {
+      "provider_intent": "get_top_hits_for_a_search",
+      "provider_alias_intent": "/2/hits?search=",
+      "text": "Get top hits for a search 🚧",
+      "category": "Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "Get top hits for a search",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/2/hits?search=",
+        "alias_endpoint": "/algolia/2/hits?search=",
+        "api_ref": "https://www.algolia.com/doc/rest-api/analytics/#get-top-hits-for-a-search"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_count_of_users": {
+      "provider_intent": "get_count_of_users",
+      "provider_alias_intent": "/2/users/count",
+      "text": "Get count of users 🚧",
+      "category": "Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "Get count of users",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/2/users/count",
+        "alias_endpoint": "/algolia/2/users/count",
+        "api_ref": "https://www.algolia.com/doc/rest-api/analytics/#get-count-of-users"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_top_filter_attributes": {
+      "provider_intent": "get_top_filter_attributes",
+      "provider_alias_intent": "/2/filters",
+      "text": "Get top filter attributes 🚧",
+      "category": "Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "Get top filter attributes",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/2/filters",
+        "alias_endpoint": "/algolia/2/filters",
+        "api_ref": "https://www.algolia.com/doc/rest-api/analytics/#get-top-filter-attributes"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_top_filters_for_a_no_result_search": {
+      "provider_intent": "get_top_filters_for_a_no_result_search",
+      "provider_alias_intent": "/2/filters/noResults",
+      "text": "Get top filters for a no result search 🚧",
+      "category": "Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "Get top filters for a no result search",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/2/filters/noResults",
+        "alias_endpoint": "/algolia/2/filters/noResults",
+        "api_ref": "https://www.algolia.com/doc/rest-api/analytics/#get-top-filters-for-a-no-result-search"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_top_filter_attributes_for_a_search": {
+      "provider_intent": "get_top_filter_attributes_for_a_search",
+      "provider_alias_intent": "/2/filters?search=",
+      "text": "Get top filter attributes for a search 🚧",
+      "category": "Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "Get top filter attributes for a search",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/2/filters?search=",
+        "alias_endpoint": "/algolia/2/filters?search=",
+        "api_ref": "https://www.algolia.com/doc/rest-api/analytics/#get-top-filter-attributes-for-a-search"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_top_filters_for_attributes_and_search": {
+      "provider_intent": "get_top_filters_for_attributes_and_search",
+      "provider_alias_intent": "/2/filters/attribute list?search=",
+      "text": "Get top filters for attributes and search 🚧",
+      "category": "Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "Get top filters for attributes and search",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/2/filters/{attribute list}?search=",
+        "alias_endpoint": "/algolia/2/filters/attribute list?search=",
+        "api_ref": "https://www.algolia.com/doc/rest-api/analytics/#get-top-filters-for-attributes-and-search"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_top_filters_for_an_attribute": {
+      "provider_intent": "get_top_filters_for_an_attribute",
+      "provider_alias_intent": "/2/filters/attribute",
+      "text": "Get top filters for an attribute 🚧",
+      "category": "Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "Get top filters for an attribute",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/2/filters/{attribute}",
+        "alias_endpoint": "/algolia/2/filters/attribute",
+        "api_ref": "https://www.algolia.com/doc/rest-api/analytics/#get-top-filters-for-an-attribute"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_top_countries": {
+      "provider_intent": "get_top_countries",
+      "provider_alias_intent": "/2/countries",
+      "text": "Get top countries 🚧",
+      "category": "Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "Get top countries",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/2/countries",
+        "alias_endpoint": "/algolia/2/countries",
+        "api_ref": "https://www.algolia.com/doc/rest-api/analytics/#get-top-countries"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_average_click_position": {
+      "provider_intent": "get_average_click_position",
+      "provider_alias_intent": "/2/clicks/averageClickPosition",
+      "text": "Get average click position 🚧",
+      "category": "Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "Get average click position",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/2/clicks/averageClickPosition",
+        "alias_endpoint": "/algolia/2/clicks/averageClickPosition",
+        "api_ref": "https://www.algolia.com/doc/rest-api/analytics/#get-average-click-position"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_click_positions": {
+      "provider_intent": "get_click_positions",
+      "provider_alias_intent": "/2/clicks/positions",
+      "text": "Get click positions 🚧",
+      "category": "Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "Get click positions",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/2/clicks/positions",
+        "alias_endpoint": "/algolia/2/clicks/positions",
+        "api_ref": "https://www.algolia.com/doc/rest-api/analytics/#get-click-positions"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_click-through_rate": {
+      "provider_intent": "get_click-through_rate",
+      "provider_alias_intent": "/2/clicks/clickThroughRate",
+      "text": "Get click-through rate 🚧",
+      "category": "Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "Get click-through rate",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/2/clicks/clickThroughRate",
+        "alias_endpoint": "/algolia/2/clicks/clickThroughRate",
+        "api_ref": "https://www.algolia.com/doc/rest-api/analytics/#get-click-through-rate"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_conversion_rate": {
+      "provider_intent": "get_conversion_rate",
+      "provider_alias_intent": "/2/conversions/conversionRate",
+      "text": "Get conversion rate 🚧",
+      "category": "Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "2",
+        "auth": [],
+        "description": "Get conversion rate",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/2/conversions/conversionRate",
+        "alias_endpoint": "/algolia/2/conversions/conversionRate",
+        "api_ref": "https://www.algolia.com/doc/rest-api/analytics/#get-conversion-rate"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "create_a_crawler": {
+      "provider_intent": "create_a_crawler",
+      "provider_alias_intent": "/api/1/crawlers",
+      "text": "Create a crawler 🚧",
+      "category": "Crawler ",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Create a crawler",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/api/1/crawlers",
+        "alias_endpoint": "/algolia/api/1/crawlers",
+        "api_ref": "https://www.algolia.com/doc/rest-api/crawler/#create-a-crawler"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_available_crawlers": {
+      "provider_intent": "get_available_crawlers",
+      "provider_alias_intent": "/api/1/crawlers",
+      "text": "Get available crawlers 🚧",
+      "category": "Crawler ",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get available crawlers",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/api/1/crawlers",
+        "alias_endpoint": "/algolia/api/1/crawlers",
+        "api_ref": "https://www.algolia.com/doc/rest-api/crawler/#get-available-crawlers"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_a_crawler_": {
+      "provider_intent": "get_a_crawler_",
+      "provider_alias_intent": "/api/1/crawlers/id",
+      "text": "Get a crawler 🚧",
+      "category": "Crawler ",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get a crawler ",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/api/1/crawlers/{id}",
+        "alias_endpoint": "/algolia/api/1/crawlers/id",
+        "api_ref": "https://www.algolia.com/doc/rest-api/crawler/#get-a-crawler"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "partially_update_a_crawler": {
+      "provider_intent": "partially_update_a_crawler",
+      "provider_alias_intent": "/api/1/crawlers/id",
+      "text": "Partially update a crawler 🚧",
+      "category": "Crawler ",
+      "method": "PATCH",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Partially update a crawler",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/api/1/crawlers/{id}",
+        "alias_endpoint": "/algolia/api/1/crawlers/id",
+        "api_ref": "https://www.algolia.com/doc/rest-api/crawler/#partially-update-a-crawler"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "partially_update_a_crawler's_configuration": {
+      "provider_intent": "partially_update_a_crawler's_configuration",
+      "provider_alias_intent": "/api/1/crawlers/id/config",
+      "text": "Partially update a crawler's configuration 🚧",
+      "category": "Crawler ",
+      "method": "PATCH",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Partially update a crawler's configuration",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/api/1/crawlers/{id}/config",
+        "alias_endpoint": "/algolia/api/1/crawlers/id/config",
+        "api_ref": "https://www.algolia.com/doc/rest-api/crawler/#partially-update-a-crawlers-configuration"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "run_a_crawler": {
+      "provider_intent": "run_a_crawler",
+      "provider_alias_intent": "/api/1/crawlers/id/run",
+      "text": "Run a crawler 🚧",
+      "category": "Crawler ",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Run a crawler",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/api/1/crawlers/{id}/run",
+        "alias_endpoint": "/algolia/api/1/crawlers/id/run",
+        "api_ref": "https://www.algolia.com/doc/rest-api/crawler/#run-a-crawler"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "pause_a_crawler's_run": {
+      "provider_intent": "pause_a_crawler's_run",
+      "provider_alias_intent": "/api/1/crawlers/id/pause",
+      "text": "Pause a crawler's run 🚧",
+      "category": "Crawler ",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Pause a crawler's run",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/api/1/crawlers/{id}/pause",
+        "alias_endpoint": "/algolia/api/1/crawlers/id/pause",
+        "api_ref": "https://www.algolia.com/doc/rest-api/crawler/#pause-a-crawlers-run"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "reindex_with_a_crawler": {
+      "provider_intent": "reindex_with_a_crawler",
+      "provider_alias_intent": "/api/1/crawlers/id/reindex",
+      "text": "Reindex with a crawler 🚧",
+      "category": "Crawler ",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Reindex with a crawler",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/api/1/crawlers/{id}/reindex",
+        "alias_endpoint": "/algolia/api/1/crawlers/id/reindex",
+        "api_ref": "https://www.algolia.com/doc/rest-api/crawler/#reindex-with-a-crawler"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_statistics_on_a_crawler": {
+      "provider_intent": "get_statistics_on_a_crawler",
+      "provider_alias_intent": "/api/1/crawlers/id/stats/urls",
+      "text": "Get statistics on a crawler 🚧",
+      "category": "Crawler ",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get statistics on a crawler",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/api/1/crawlers/{id}/stats/urls",
+        "alias_endpoint": "/algolia/api/1/crawlers/id/stats/urls",
+        "api_ref": "https://www.algolia.com/doc/rest-api/crawler/#get-statistics-on-a-crawler"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "crawl_specific_urls": {
+      "provider_intent": "crawl_specific_urls",
+      "provider_alias_intent": "/api/1/crawlers/id/urls/crawl",
+      "text": "Crawl specific URLs 🚧",
+      "category": "Crawler ",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Crawl specific URLs",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/api/1/crawlers/{id}/urls/crawl",
+        "alias_endpoint": "/algolia/api/1/crawlers/id/urls/crawl",
+        "api_ref": "https://www.algolia.com/doc/rest-api/crawler/#crawl-specific-urls"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "test_a_url_on_a_crawler": {
+      "provider_intent": "test_a_url_on_a_crawler",
+      "provider_alias_intent": "/api/1/crawlers/id/test",
+      "text": "Test a URL on a crawler 🚧",
+      "category": "Crawler ",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Test a URL on a crawler",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/api/1/crawlers/{id}/test",
+        "alias_endpoint": "/algolia/api/1/crawlers/id/test",
+        "api_ref": "https://www.algolia.com/doc/rest-api/crawler/#test-a-url-on-a-crawler"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_status_of_a_task": {
+      "provider_intent": "get_status_of_a_task",
+      "provider_alias_intent": "/api/1/crawlers/id/tasks/tid",
+      "text": "Get status of a task 🚧",
+      "category": "Crawler ",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get status of a task",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/api/1/crawlers/{id}/tasks/{tid}",
+        "alias_endpoint": "/algolia/api/1/crawlers/id/tasks/tid",
+        "api_ref": "https://www.algolia.com/doc/rest-api/crawler/#get-status-of-a-task"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "cancel_a_blocking_task": {
+      "provider_intent": "cancel_a_blocking_task",
+      "provider_alias_intent": "/api/1/crawlers/id/tasks/tid/cancel",
+      "text": "Cancel a blocking task 🚧",
+      "category": "Crawler ",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Cancel a blocking task",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/api/1/crawlers/{id}/tasks/{tid}/cancel",
+        "alias_endpoint": "/algolia/api/1/crawlers/id/tasks/tid/cancel",
+        "api_ref": "https://www.algolia.com/doc/rest-api/crawler/#cancel-a-blocking-task"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_registered_domains_": {
+      "provider_intent": "get_registered_domains_",
+      "provider_alias_intent": "/api/1/domains",
+      "text": "Get registered domains 🚧",
+      "category": "Crawler ",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get registered domains ",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/api/1/domains",
+        "alias_endpoint": "/algolia/api/1/domains",
+        "api_ref": "https://www.algolia.com/doc/rest-api/crawler/#get-registered-domains"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "push_events": {
+      "provider_intent": "push_events",
+      "provider_alias_intent": "/1/events",
+      "text": "Push events 🚧",
+      "category": "Insights",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Push events",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/events",
+        "alias_endpoint": "/algolia/1/events",
+        "api_ref": "https://www.algolia.com/doc/rest-api/insights/#push-events"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_infrastructure_metrics_": {
+      "provider_intent": "get_infrastructure_metrics_",
+      "provider_alias_intent": "/1/infrastructure/metric/period/period",
+      "text": "Get Infrastructure metrics 🚧",
+      "category": "Monitoring / Infrastructure",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get Infrastructure metrics ",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/infrastructure/{metric}/period/{period}",
+        "alias_endpoint": "/algolia/1/infrastructure/metric/period/period",
+        "api_ref": "https://www.algolia.com/doc/rest-api/monitoring/#get-infrastructure-metrics"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "inventory_servers_": {
+      "provider_intent": "inventory_servers_",
+      "provider_alias_intent": "/1/inventory/servers",
+      "text": "Inventory servers 🚧",
+      "category": "Monitoring / Monitoring",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Inventory servers ",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/inventory/servers",
+        "alias_endpoint": "/algolia/1/inventory/servers",
+        "api_ref": "https://www.algolia.com/doc/rest-api/monitoring/#inventory-servers"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "average_latency": {
+      "provider_intent": "average_latency",
+      "provider_alias_intent": "/1/latency/servers",
+      "text": "Average latency 🚧",
+      "category": "Monitoring / Monitoring",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Average latency",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/latency/{servers}",
+        "alias_endpoint": "/algolia/1/latency/servers",
+        "api_ref": "https://www.algolia.com/doc/rest-api/monitoring/#average-latency"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_indexing_time_": {
+      "provider_intent": "get_indexing_time_",
+      "provider_alias_intent": "/1/indexing/servers",
+      "text": "Get indexing time 🚧",
+      "category": "Monitoring / Monitoring",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get indexing time ",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexing/{servers}",
+        "alias_endpoint": "/algolia/1/indexing/servers",
+        "api_ref": "https://www.algolia.com/doc/rest-api/monitoring/#get-indexing-time"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "server_reachability_": {
+      "provider_intent": "server_reachability_",
+      "provider_alias_intent": "/1/reachability/servers/probes",
+      "text": "Server reachability 🚧",
+      "category": "Monitoring / Monitoring",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Server reachability ",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/reachability/{servers}/probes",
+        "alias_endpoint": "/algolia/1/reachability/servers/probes",
+        "api_ref": "https://www.algolia.com/doc/rest-api/monitoring/#server-reachability"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_current_api_status_": {
+      "provider_intent": "get_current_api_status_",
+      "provider_alias_intent": "/1/status",
+      "text": "Get current API status 🚧",
+      "category": "Monitoring / Status ",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get current API status ",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/status",
+        "alias_endpoint": "/algolia/1/status",
+        "api_ref": "https://www.algolia.com/doc/rest-api/monitoring/#get-current-api-status"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "current_status_servers_": {
+      "provider_intent": "current_status_servers_",
+      "provider_alias_intent": "/1/status/servers",
+      "text": "Current status servers 🚧",
+      "category": "Monitoring / Status ",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Current status servers ",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/status/{servers}",
+        "alias_endpoint": "/algolia/1/status/servers",
+        "api_ref": "https://www.algolia.com/doc/rest-api/monitoring/#current-status-servers"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "list_last_incidents_": {
+      "provider_intent": "list_last_incidents_",
+      "provider_alias_intent": "/1/incidents",
+      "text": "List last incidents 🚧",
+      "category": "Monitoring / Status ",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "List last incidents ",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/incidents",
+        "alias_endpoint": "/algolia/1/incidents",
+        "api_ref": "https://www.algolia.com/doc/rest-api/monitoring/#list-last-incidents"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "list_last_incidents_servers_": {
+      "provider_intent": "list_last_incidents_servers_",
+      "provider_alias_intent": "/1/incidents/servers",
+      "text": "List last incidents servers 🚧",
+      "category": "Monitoring / Status ",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "List last incidents servers ",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/incidents/{servers}",
+        "alias_endpoint": "/algolia/1/incidents/servers",
+        "api_ref": "https://www.algolia.com/doc/rest-api/monitoring/#list-last-incidents-servers"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_a_usertoken_profile": {
+      "provider_intent": "get_a_usertoken_profile",
+      "provider_alias_intent": "/1/profiles/personalization/userToken",
+      "text": "Get a usertoken profile 🚧",
+      "category": "Personalization",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get a usertoken profile",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/profiles/personalization/{userToken}",
+        "alias_endpoint": "/algolia/1/profiles/personalization/userToken",
+        "api_ref": "https://www.algolia.com/doc/rest-api/personalization/#get-a-usertoken-profile"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "delete_a_user_profile": {
+      "provider_intent": "delete_a_user_profile",
+      "provider_alias_intent": "/1/profiles/userToken",
+      "text": "Delete a user profile 🚧",
+      "category": "Personalization",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Delete a user profile",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/profiles/{userToken}",
+        "alias_endpoint": "/algolia/1/profiles/userToken",
+        "api_ref": "https://www.algolia.com/doc/rest-api/personalization/#delete-a-user-profile"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_the_current_personalization_strategy": {
+      "provider_intent": "get_the_current_personalization_strategy",
+      "provider_alias_intent": "/1/strategies/personalization",
+      "text": "Get the current personalization strategy 🚧",
+      "category": "Personalization",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get the current personalization strategy",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/strategies/personalization",
+        "alias_endpoint": "/algolia/1/strategies/personalization",
+        "api_ref": "https://www.algolia.com/doc/rest-api/personalization/#get-the-current-personalization-strategy"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "set_a_new_personalization_strategy": {
+      "provider_intent": "set_a_new_personalization_strategy",
+      "provider_alias_intent": "/1/strategies/personalization",
+      "text": "Set a new personalization strategy 🚧",
+      "category": "Personalization",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Set a new personalization strategy",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/strategies/personalization",
+        "alias_endpoint": "/algolia/1/strategies/personalization",
+        "api_ref": "https://www.algolia.com/doc/rest-api/personalization/#set-a-new-personalization-strategy"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "create_a_configuration": {
+      "provider_intent": "create_a_configuration",
+      "provider_alias_intent": "/1/configs",
+      "text": "Create a configuration 🚧",
+      "category": "Query Suggestions",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Create a configuration",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/configs",
+        "alias_endpoint": "/algolia/1/configs",
+        "api_ref": "https://www.algolia.com/doc/rest-api/query-suggestions/#create-a-configuration"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "update_a_configuration_": {
+      "provider_intent": "update_a_configuration_",
+      "provider_alias_intent": "/1/configs/indexName",
+      "text": "Update a configuration 🚧",
+      "category": "Query Suggestions",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Update a configuration ",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/configs/{indexName}",
+        "alias_endpoint": "/algolia/1/configs/indexName",
+        "api_ref": "https://www.algolia.com/doc/rest-api/query-suggestions/#update-a-configuration"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "delete_a_configuration_": {
+      "provider_intent": "delete_a_configuration_",
+      "provider_alias_intent": "/1/configs/indexName",
+      "text": "Delete a configuration 🚧",
+      "category": "Query Suggestions",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Delete a configuration ",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/configs/{indexName}",
+        "alias_endpoint": "/algolia/1/configs/indexName",
+        "api_ref": "https://www.algolia.com/doc/rest-api/query-suggestions/#delete-a-configuration"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_a_single_configuration_": {
+      "provider_intent": "get_a_single_configuration_",
+      "provider_alias_intent": "/1/configs/indexName",
+      "text": "Get a single configuration 🚧",
+      "category": "Query Suggestions",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get a single configuration ",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/configs/{indexName}",
+        "alias_endpoint": "/algolia/1/configs/indexName",
+        "api_ref": "https://www.algolia.com/doc/rest-api/query-suggestions/#get-a-single-configuration"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_configuration_status_": {
+      "provider_intent": "get_configuration_status_",
+      "provider_alias_intent": "/1/configs/indexName/status",
+      "text": "Get configuration status 🚧",
+      "category": "Query Suggestions",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get configuration status ",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/configs/{indexName}/status",
+        "alias_endpoint": "/algolia/1/configs/indexName/status",
+        "api_ref": "https://www.algolia.com/doc/rest-api/query-suggestions/#get-configuration-status"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_all_configurations_": {
+      "provider_intent": "get_all_configurations_",
+      "provider_alias_intent": "/1/configs",
+      "text": "Get all configurations 🚧",
+      "category": "Query Suggestions",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get all configurations ",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/configs",
+        "alias_endpoint": "/algolia/1/configs",
+        "api_ref": "https://www.algolia.com/doc/rest-api/query-suggestions/#get-all-configurations"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_a_log_file_": {
+      "provider_intent": "get_a_log_file_",
+      "provider_alias_intent": "/1/logs/indexName",
+      "text": "Get a log file 🚧",
+      "category": "Query Suggestions",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get a log file ",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/logs/{indexName}",
+        "alias_endpoint": "/algolia/1/logs/indexName",
+        "api_ref": "https://www.algolia.com/doc/rest-api/query-suggestions/#get-a-log-file"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_recommendations_": {
+      "provider_intent": "get_recommendations_",
+      "provider_alias_intent": "/1/indexes/*/recommendations",
+      "text": "Get Recommendations 🚧",
+      "category": "Recommend / Endpoints",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get Recommendations ",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/*/recommendations",
+        "alias_endpoint": "/algolia/1/indexes/*/recommendations",
+        "api_ref": "https://www.algolia.com/doc/rest-api/recommend/#get-recommendations"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "batch_recommend_rules_": {
+      "provider_intent": "batch_recommend_rules_",
+      "provider_alias_intent": "/1/indexes/indexName/model/recommend/rules/batch",
+      "text": "Batch Recommend Rules 🚧",
+      "category": "Recommend / Endpoints",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Batch Recommend Rules ",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/{model}/recommend/rules/batch",
+        "alias_endpoint": "/algolia/1/indexes/indexName/model/recommend/rules/batch",
+        "api_ref": "https://www.algolia.com/doc/rest-api/recommend/#batch-recommend-rules"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_recommend_rule": {
+      "provider_intent": "get_recommend_rule",
+      "provider_alias_intent": "/1/indexes/indexName/model/recommend/rules/objectID",
+      "text": "Get Recommend Rule 🚧",
+      "category": "Recommend / Endpoints",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get Recommend Rule",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/{model}/recommend/rules/{objectID}",
+        "alias_endpoint": "/algolia/1/indexes/indexName/model/recommend/rules/objectID",
+        "api_ref": "https://www.algolia.com/doc/rest-api/recommend/#get-recommend-rule"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "delete_recommend_rule": {
+      "provider_intent": "delete_recommend_rule",
+      "provider_alias_intent": "/1/indexes/indexName/model/recommend/rules/objectID",
+      "text": "Delete Recommend Rule 🚧",
+      "category": "Recommend / Endpoints",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Delete Recommend Rule",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/{model}/recommend/rules/{objectID}",
+        "alias_endpoint": "/algolia/1/indexes/indexName/model/recommend/rules/objectID",
+        "api_ref": "https://www.algolia.com/doc/rest-api/recommend/#delete-recommend-rule"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "search_recommend_rules": {
+      "provider_intent": "search_recommend_rules",
+      "provider_alias_intent": "/1/indexes/indexName/model/recommend/rules/search",
+      "text": "Search Recommend Rules 🚧",
+      "category": "Recommend / Endpoints",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Search Recommend Rules",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/{model}/recommend/rules/search",
+        "alias_endpoint": "/algolia/1/indexes/indexName/model/recommend/rules/search",
+        "api_ref": "https://www.algolia.com/doc/rest-api/recommend/#search-recommend-rules"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_a_recommend_task's_status": {
+      "provider_intent": "get_a_recommend_task's_status",
+      "provider_alias_intent": "/1/indexes/indexName/model/task/taskID",
+      "text": "Get a Recommend task's status 🚧",
+      "category": "Recommend / Endpoints",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get a Recommend task's status",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/{model}/task/{taskID}",
+        "alias_endpoint": "/algolia/1/indexes/indexName/model/task/taskID",
+        "api_ref": "https://www.algolia.com/doc/rest-api/recommend/#get-a-recommend-tasks-status"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_logs": {
+      "provider_intent": "get_logs",
+      "provider_alias_intent": "/1/logs",
+      "text": "Get logs 🚧",
+      "category": "Search / Advanced",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get logs",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/logs",
+        "alias_endpoint": "/algolia/1/logs",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#get-logs"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_a_task's_status": {
+      "provider_intent": "get_a_task's_status",
+      "provider_alias_intent": "/1/indexes/indexName/task/taskID",
+      "text": "Get a task's status 🚧",
+      "category": "Search / Advanced",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get a task's status",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/task/{taskID}",
+        "alias_endpoint": "/algolia/1/indexes/indexName/task/taskID",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#get-a-tasks-status"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "add_or_delete_entries_in_batches": {
+      "provider_intent": "add_or_delete_entries_in_batches",
+      "provider_alias_intent": "/1/dictionaries/dictionaryName/batch",
+      "text": "Add or delete entries in batches 🚧",
+      "category": "Search / Dictionaries",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Add or delete entries in batches",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/dictionaries/{dictionaryName}/batch",
+        "alias_endpoint": "/algolia/1/dictionaries/dictionaryName/batch",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#add-or-delete-entries-in-batches"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "search_dictionary_entries_get": {
+      "provider_intent": "search_dictionary_entries_get",
+      "provider_alias_intent": "/1/dictionaries/dictionaryName/search",
+      "text": "Search dictionary entries (GET) 🚧",
+      "category": "Search / Dictionaries",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Search dictionary entries (GET)",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/dictionaries/{dictionaryName}/search",
+        "alias_endpoint": "/algolia/1/dictionaries/dictionaryName/search",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#search-dictionary-entries-get"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "search_dictionary_entries_post": {
+      "provider_intent": "search_dictionary_entries_post",
+      "provider_alias_intent": "/1/dictionaries/dictionaryName/search",
+      "text": "Search dictionary entries (POST) 🚧",
+      "category": "Search / Dictionaries",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Search dictionary entries (POST)",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/dictionaries/{dictionaryName}/search",
+        "alias_endpoint": "/algolia/1/dictionaries/dictionaryName/search",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#search-dictionary-entries-post"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "set_dictionary_settings": {
+      "provider_intent": "set_dictionary_settings",
+      "provider_alias_intent": "/1/dictionaries/*/settings",
+      "text": "Set dictionary settings 🚧",
+      "category": "Search / Dictionaries",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Set dictionary settings",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/dictionaries/*/settings",
+        "alias_endpoint": "/algolia/1/dictionaries/*/settings",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#set-dictionary-settings"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_dictionary_settings": {
+      "provider_intent": "get_dictionary_settings",
+      "provider_alias_intent": "/1/dictionaries/*/settings",
+      "text": "Get dictionary settings 🚧",
+      "category": "Search / Dictionaries",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get dictionary settings",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/dictionaries/*/settings",
+        "alias_endpoint": "/algolia/1/dictionaries/*/settings",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#get-dictionary-settings"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_available_languages": {
+      "provider_intent": "get_available_languages",
+      "provider_alias_intent": "/1/dictionaries/*/languages",
+      "text": "Get available languages 🚧",
+      "category": "Search / Dictionaries",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get available languages",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/dictionaries/*/languages",
+        "alias_endpoint": "/algolia/1/dictionaries/*/languages",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#get-available-languages"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "add_api_key": {
+      "provider_intent": "add_api_key",
+      "provider_alias_intent": "/1/keys",
+      "text": "Add API Key 🚧",
+      "category": "Search / Keys",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Add API Key",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/keys",
+        "alias_endpoint": "/algolia/1/keys",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#add-api-key"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "update_api_key": {
+      "provider_intent": "update_api_key",
+      "provider_alias_intent": "/1/keys/key",
+      "text": "Update API Key 🚧",
+      "category": "Search / Keys",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Update API Key",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/keys/{key}",
+        "alias_endpoint": "/algolia/1/keys/key",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#update-api-key"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "list_api_keys": {
+      "provider_intent": "list_api_keys",
+      "provider_alias_intent": "/1/keys",
+      "text": "List API Keys 🚧",
+      "category": "Search / Keys",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "List API Keys",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/keys",
+        "alias_endpoint": "/algolia/1/keys",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#list-api-keys"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_api_key_permissions": {
+      "provider_intent": "get_api_key_permissions",
+      "provider_alias_intent": "/1/keys/key",
+      "text": "Get API Key permissions 🚧",
+      "category": "Search / Keys",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get API Key permissions",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/keys/{key}",
+        "alias_endpoint": "/algolia/1/keys/key",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#get-api-key-permissions"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "delete_api_key": {
+      "provider_intent": "delete_api_key",
+      "provider_alias_intent": "/1/keys/key",
+      "text": "Delete API Key 🚧",
+      "category": "Search / Keys",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Delete API Key",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/keys/{key}",
+        "alias_endpoint": "/algolia/1/keys/key",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#delete-api-key"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "restore_api_key": {
+      "provider_intent": "restore_api_key",
+      "provider_alias_intent": "/1/keys/key/restore",
+      "text": "Restore API Key 🚧",
+      "category": "Search / Keys",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Restore API Key",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/keys/{key}/restore",
+        "alias_endpoint": "/algolia/1/keys/key/restore",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#restore-api-key"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "add_index_api_key": {
+      "provider_intent": "add_index_api_key",
+      "provider_alias_intent": "/1/indexes/indexName/keys",
+      "text": "Add index API key 🚧",
+      "category": "Search / Keys",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Add index API key",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/keys",
+        "alias_endpoint": "/algolia/1/indexes/indexName/keys",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#add-index-api-key"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "update_index_api_key": {
+      "provider_intent": "update_index_api_key",
+      "provider_alias_intent": "/1/indexes/indexName/keys/key",
+      "text": "Update index API key 🚧",
+      "category": "Search / Keys",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Update index API key",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/keys/{key}",
+        "alias_endpoint": "/algolia/1/indexes/indexName/keys/key",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#update-index-api-key"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "list_index_api_keys_for_all_index": {
+      "provider_intent": "list_index_api_keys_for_all_index",
+      "provider_alias_intent": "/1/indexes/indexName/keys",
+      "text": "List index API keys (for all index) 🚧",
+      "category": "Search / Keys",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "List index API keys (for all index)",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/keys",
+        "alias_endpoint": "/algolia/1/indexes/indexName/keys",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#list-index-api-keys-for-one-index"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "list_index_api_keys_for_all_indices": {
+      "provider_intent": "list_index_api_keys_for_all_indices",
+      "provider_alias_intent": "/1/indexes/*/keys",
+      "text": "List index API keys (for all indices) 🚧",
+      "category": "Search / Keys",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "List index API keys (for all indices)",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/*/keys",
+        "alias_endpoint": "/algolia/1/indexes/*/keys",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#list-index-api-keys-for-all-indices"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_index_api_key": {
+      "provider_intent": "get_index_api_key",
+      "provider_alias_intent": "/1/indexes/indexName/keys/key",
+      "text": "Get index API key 🚧",
+      "category": "Search / Keys",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get index API key",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/keys/{key}",
+        "alias_endpoint": "/algolia/1/indexes/indexName/keys/key",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#get-index-api-key"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "delete_index_api_key": {
+      "provider_intent": "delete_index_api_key",
+      "provider_alias_intent": "/1/indexes/indexName/keys/key",
+      "text": "Delete index API key 🚧",
+      "category": "Search / Keys",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Delete index API key",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/keys/{key}",
+        "alias_endpoint": "/algolia/1/indexes/indexName/keys/key",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#delete-index-api-key"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "delete_index": {
+      "provider_intent": "delete_index",
+      "provider_alias_intent": "/1/indexes/indexName",
+      "text": "Delete index 🚧",
+      "category": "Search / Manage indices",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Delete index",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}",
+        "alias_endpoint": "/algolia/1/indexes/indexName",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#delete-index"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "copy/move_index": {
+      "provider_intent": "copy/move_index",
+      "provider_alias_intent": "/1/indexes/indexName/operation",
+      "text": "Copy/move index 🚧",
+      "category": "Search / Manage indices",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Copy/move index",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/operation",
+        "alias_endpoint": "/algolia/1/indexes/indexName/operation",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#copymove-index"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "list_indices": {
+      "provider_intent": "list_indices",
+      "provider_alias_intent": "/1/indexes",
+      "text": "List Indices 🚧",
+      "category": "Search / Manage indices",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "List Indices",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes",
+        "alias_endpoint": "/algolia/1/indexes",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#list-indices"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "assign_or_move_userid": {
+      "provider_intent": "assign_or_move_userid",
+      "provider_alias_intent": "/1/clusters/mapping",
+      "text": "Assign or Move userID 🚧",
+      "category": "Search / MultiClusters",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Assign or Move userID",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/clusters/mapping",
+        "alias_endpoint": "/algolia/1/clusters/mapping",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#assign-or-move-userid"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "batch_assign_userids": {
+      "provider_intent": "batch_assign_userids",
+      "provider_alias_intent": "/1/clusters/mapping/batch",
+      "text": "Batch assign userIDs 🚧",
+      "category": "Search / MultiClusters",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Batch assign userIDs",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/clusters/mapping/batch",
+        "alias_endpoint": "/algolia/1/clusters/mapping/batch",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#batch-assign-userids"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_top_userid": {
+      "provider_intent": "get_top_userid",
+      "provider_alias_intent": "/1/clusters/mapping/top",
+      "text": "Get top userID 🚧",
+      "category": "Search / MultiClusters",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get top userID",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/clusters/mapping/top",
+        "alias_endpoint": "/algolia/1/clusters/mapping/top",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#get-top-userid"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_userid": {
+      "provider_intent": "get_userid",
+      "provider_alias_intent": "/1/clusters/mapping/$userID",
+      "text": "Get userID 🚧",
+      "category": "Search / MultiClusters",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get userID",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/clusters/mapping/${userID}",
+        "alias_endpoint": "/algolia/1/clusters/mapping/$userID",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#get-userid"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "list_clusters": {
+      "provider_intent": "list_clusters",
+      "provider_alias_intent": "/1/clusters",
+      "text": "List clusters 🚧",
+      "category": "Search / MultiClusters",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "List clusters",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/clusters",
+        "alias_endpoint": "/algolia/1/clusters",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#list-clusters"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "list_userids": {
+      "provider_intent": "list_userids",
+      "provider_alias_intent": "/1/clusters/mapping",
+      "text": "List userIDs 🚧",
+      "category": "Search / MultiClusters",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "List userIDs",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/clusters/mapping",
+        "alias_endpoint": "/algolia/1/clusters/mapping",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#list-userids"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "remove_userid": {
+      "provider_intent": "remove_userid",
+      "provider_alias_intent": "/1/clusters/mapping/$userID",
+      "text": "Remove userID 🚧",
+      "category": "Search / MultiClusters",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Remove userID",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/clusters/mapping/${userID}",
+        "alias_endpoint": "/algolia/1/clusters/mapping/$userID",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#remove-userid"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "search_userid": {
+      "provider_intent": "search_userid",
+      "provider_alias_intent": "/1/clusters/mapping/search",
+      "text": "Search userID 🚧",
+      "category": "Search / MultiClusters",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Search userID",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/clusters/mapping/search",
+        "alias_endpoint": "/algolia/1/clusters/mapping/search",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#search-userid"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "has_pending_mappings": {
+      "provider_intent": "has_pending_mappings",
+      "provider_alias_intent": "/1/clusters/mapping/pending",
+      "text": "Has pending mappings 🚧",
+      "category": "Search / MultiClusters",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Has pending mappings",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/clusters/mapping/pending",
+        "alias_endpoint": "/algolia/1/clusters/mapping/pending",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#has-pending-mappings"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "add_objectwithout_id": {
+      "provider_intent": "add_objectwithout_id",
+      "provider_alias_intent": "/1/indexes/indexName",
+      "text": "Add object(without ID) 🚧",
+      "category": "Search / Objects ",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Add object(without ID)",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}",
+        "alias_endpoint": "/algolia/1/indexes/indexName",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#add-object-without-id"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "add/update_object_with_id": {
+      "provider_intent": "add/update_object_with_id",
+      "provider_alias_intent": "/1/indexes/indexName/objectID",
+      "text": "Add/update object (with ID) 🚧",
+      "category": "Search / Objects ",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Add/update object (with ID)",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/{objectID}",
+        "alias_endpoint": "/algolia/1/indexes/indexName/objectID",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#addupdate-object-with-id"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "delete_object": {
+      "provider_intent": "delete_object",
+      "provider_alias_intent": "/1/indexes/indexName/objectID",
+      "text": "Delete object 🚧",
+      "category": "Search / Objects ",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Delete object",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/{objectID}",
+        "alias_endpoint": "/algolia/1/indexes/indexName/objectID",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#delete-object"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "delete_by": {
+      "provider_intent": "delete_by",
+      "provider_alias_intent": "/1/indexes/indexName/deleteByQuery",
+      "text": "Delete by 🚧",
+      "category": "Search / Objects ",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Delete by",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/deleteByQuery",
+        "alias_endpoint": "/algolia/1/indexes/indexName/deleteByQuery",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#delete-by"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "clear_objects": {
+      "provider_intent": "clear_objects",
+      "provider_alias_intent": "/1/indexes/indexName/clear",
+      "text": "Clear objects 🚧",
+      "category": "Search / Objects ",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Clear objects",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/clear",
+        "alias_endpoint": "/algolia/1/indexes/indexName/clear",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#clear-objects"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "partially_update_object": {
+      "provider_intent": "partially_update_object",
+      "provider_alias_intent": "/1/indexes/indexName/objectID/partial",
+      "text": "Partially update object 🚧",
+      "category": "Search / Objects ",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Partially update object",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/{objectID}/partial",
+        "alias_endpoint": "/algolia/1/indexes/indexName/objectID/partial",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#partially-update-object"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "batch_write_operations": {
+      "provider_intent": "batch_write_operations",
+      "provider_alias_intent": "/1/indexes/indexName/batch",
+      "text": "Batch write operations 🚧",
+      "category": "Search / Objects ",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Batch write operations",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/batch",
+        "alias_endpoint": "/algolia/1/indexes/indexName/batch",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#batch-write-operations"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "batch_write_operations_multiple_indices": {
+      "provider_intent": "batch_write_operations_multiple_indices",
+      "provider_alias_intent": "/1/indexes/*/batch",
+      "text": "Batch write operations (multiple indices) 🚧",
+      "category": "Search / Objects ",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Batch write operations (multiple indices)",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/*/batch",
+        "alias_endpoint": "/algolia/1/indexes/*/batch",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#batch-write-operations-multiple-indices"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_objects": {
+      "provider_intent": "get_objects",
+      "provider_alias_intent": "/1/indexes/*/objects",
+      "text": "Get objects 🚧",
+      "category": "Search / Objects ",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get objects",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/*/objects",
+        "alias_endpoint": "/algolia/1/indexes/*/objects",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#get-objects"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_object": {
+      "provider_intent": "get_object",
+      "provider_alias_intent": "/1/indexes/indexName/objectID",
+      "text": "Get object 🚧",
+      "category": "Search / Objects ",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get object",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/{objectID}",
+        "alias_endpoint": "/algolia/1/indexes/indexName/objectID",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#get-object"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "save_rule": {
+      "provider_intent": "save_rule",
+      "provider_alias_intent": "/1/indexes/indexName/rules/objectID",
+      "text": "Save rule 🚧",
+      "category": "Search / Rules",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Save rule",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/rules/{objectID}",
+        "alias_endpoint": "/algolia/1/indexes/indexName/rules/objectID",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#save-rule"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "batch_rules": {
+      "provider_intent": "batch_rules",
+      "provider_alias_intent": "/1/indexes/indexName/rules/batch",
+      "text": "Batch Rules 🚧",
+      "category": "Search / Rules",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Batch Rules",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/rules/batch",
+        "alias_endpoint": "/algolia/1/indexes/indexName/rules/batch",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#batch-rules"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_rule": {
+      "provider_intent": "get_rule",
+      "provider_alias_intent": "/1/indexes/indexName/rules/objectID",
+      "text": "Get Rule 🚧",
+      "category": "Search / Rules",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get Rule",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/rules/{objectID}",
+        "alias_endpoint": "/algolia/1/indexes/indexName/rules/objectID",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#get-rule"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "delete_rule": {
+      "provider_intent": "delete_rule",
+      "provider_alias_intent": "/1/indexes/indexName/rules/",
+      "text": "Delete Rule 🚧",
+      "category": "Search / Rules",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Delete Rule",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/rules/",
+        "alias_endpoint": "/algolia/1/indexes/indexName/rules/",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#delete-rule"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "clear_rules": {
+      "provider_intent": "clear_rules",
+      "provider_alias_intent": "/1/indexes/indexName/rules/clear",
+      "text": "Clear Rules 🚧",
+      "category": "Search / Rules",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Clear Rules",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/rules/clear",
+        "alias_endpoint": "/algolia/1/indexes/indexName/rules/clear",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#clear-rules"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "search_rules": {
+      "provider_intent": "search_rules",
+      "provider_alias_intent": "/1/indexes/indexName/rules/search",
+      "text": "Search rules 🚧",
+      "category": "Search / Rules",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Search rules",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/rules/search",
+        "alias_endpoint": "/algolia/1/indexes/indexName/rules/search",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#search-rules"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "search_index": {
+      "provider_intent": "search_index",
+      "provider_alias_intent": "/1/indexes/indexName",
+      "text": "Search index 🚧",
+      "category": "Search / Search ",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Search index",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}",
+        "alias_endpoint": "/algolia/1/indexes/indexName",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#search-index-get"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "search_multiple_indices": {
+      "provider_intent": "search_multiple_indices",
+      "provider_alias_intent": "/1/indexes/*/queries",
+      "text": "Search multiple indices 🚧",
+      "category": "Search / Search ",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Search multiple indices",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/*/queries",
+        "alias_endpoint": "/algolia/1/indexes/*/queries",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#search-multiple-indices"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "search_for_facet_values": {
+      "provider_intent": "search_for_facet_values",
+      "provider_alias_intent": "/1/indexes/indexName/facets/facetName/query",
+      "text": "Search for facet values 🚧",
+      "category": "Search / Search ",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Search for facet values",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/facets/{facetName}/query",
+        "alias_endpoint": "/algolia/1/indexes/indexName/facets/facetName/query",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#search-for-facet-values"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "browse_index": {
+      "provider_intent": "browse_index",
+      "provider_alias_intent": "/1/indexes/indexName/browse",
+      "text": "Browse index 🚧",
+      "category": "Search / Search ",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Browse index",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/browse",
+        "alias_endpoint": "/algolia/1/indexes/indexName/browse",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#browse-index-get"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_settings": {
+      "provider_intent": "get_settings",
+      "provider_alias_intent": "/1/indexes/indexName/settings",
+      "text": "Get settings 🚧",
+      "category": "Search / Settings",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get settings",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/settings",
+        "alias_endpoint": "/algolia/1/indexes/indexName/settings",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#get-settings"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "set_settings": {
+      "provider_intent": "set_settings",
+      "provider_alias_intent": "/1/indexes/indexName/settings",
+      "text": "Set settings 🚧",
+      "category": "Search / Settings",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Set settings",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/settings",
+        "alias_endpoint": "/algolia/1/indexes/indexName/settings",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#set-settings"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "save_synonym": {
+      "provider_intent": "save_synonym",
+      "provider_alias_intent": "/1/indexes/indexName/synonyms/objectID",
+      "text": "Save synonym 🚧",
+      "category": "Search / Synonyms",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Save synonym",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/synonyms/{objectID}",
+        "alias_endpoint": "/algolia/1/indexes/indexName/synonyms/objectID",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#save-synonym"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "save_synonyms": {
+      "provider_intent": "save_synonyms",
+      "provider_alias_intent": "/1/indexes/indexName/synonyms/batch",
+      "text": "Save synonyms 🚧",
+      "category": "Search / Synonyms",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Save synonyms",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/synonyms/batch",
+        "alias_endpoint": "/algolia/1/indexes/indexName/synonyms/batch",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#save-synonyms"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_synonym": {
+      "provider_intent": "get_synonym",
+      "provider_alias_intent": "/1/indexes/indexName/synonyms/objectID",
+      "text": "Get synonym 🚧",
+      "category": "Search / Synonyms",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get synonym",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/synonyms/{objectID}",
+        "alias_endpoint": "/algolia/1/indexes/indexName/synonyms/objectID",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#get-synonym"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "clear_all_synonyms": {
+      "provider_intent": "clear_all_synonyms",
+      "provider_alias_intent": "/1/indexes/indexName/synonyms/clear",
+      "text": "Clear all synonyms 🚧",
+      "category": "Search / Synonyms",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Clear all synonyms",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/synonyms/clear",
+        "alias_endpoint": "/algolia/1/indexes/indexName/synonyms/clear",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#clear-all-synonyms"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "delete_synonym": {
+      "provider_intent": "delete_synonym",
+      "provider_alias_intent": "/1/indexes/indexName/synonyms/objectID",
+      "text": "Delete synonym 🚧",
+      "category": "Search / Synonyms",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Delete synonym",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/synonyms/{objectID}",
+        "alias_endpoint": "/algolia/1/indexes/indexName/synonyms/objectID",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#delete-synonym"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "search_synonyms": {
+      "provider_intent": "search_synonyms",
+      "provider_alias_intent": "/1/indexes/indexName/synonyms/search",
+      "text": "Search synonyms 🚧",
+      "category": "Search / Synonyms",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Search synonyms",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/indexes/{indexName}/synonyms/search",
+        "alias_endpoint": "/algolia/1/indexes/indexName/synonyms/search",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#search-synonyms"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "list_allowed_sources_": {
+      "provider_intent": "list_allowed_sources_",
+      "provider_alias_intent": "/1/security/sources",
+      "text": "List allowed sources 🚧",
+      "category": "Search / Vault",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "List allowed sources ",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/security/sources",
+        "alias_endpoint": "/algolia/1/security/sources",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#list-allowed-sources"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "replace_the_list_of_allowed_sources_": {
+      "provider_intent": "replace_the_list_of_allowed_sources_",
+      "provider_alias_intent": "/1/security/sources",
+      "text": "Replace the list of allowed sources 🚧",
+      "category": "Search / Vault",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Replace the list of allowed sources ",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/security/sources",
+        "alias_endpoint": "/algolia/1/security/sources",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#replace-the-list-of-allowed-sources"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "add_a_source_to_the_allowed_sources_": {
+      "provider_intent": "add_a_source_to_the_allowed_sources_",
+      "provider_alias_intent": "/1/security/sources/append",
+      "text": "Add a source to the allowed sources 🚧",
+      "category": "Search / Vault",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Add a source to the allowed sources ",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/security/sources/append",
+        "alias_endpoint": "/algolia/1/security/sources/append",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#add-a-source-to-the-allowed-sources"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "delete_one_allowed_source_": {
+      "provider_intent": "delete_one_allowed_source_",
+      "provider_alias_intent": "/1/security/sources/source",
+      "text": "Delete one allowed source 🚧",
+      "category": "Search / Vault",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Delete one allowed source ",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/security/sources/{source}",
+        "alias_endpoint": "/algolia/1/security/sources/source",
+        "api_ref": "https://www.algolia.com/doc/rest-api/search/#delete-one-allowed-source"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_usage_": {
+      "provider_intent": "get_usage_",
+      "provider_alias_intent": "/1/usage/statistic",
+      "text": "Get usage 🚧",
+      "category": "Usage",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get usage ",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/usage/{statistic}",
+        "alias_endpoint": "/algolia/1/usage/statistic",
+        "api_ref": "https://www.algolia.com/doc/rest-api/usage/#get-usage"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    },
+    "get_usage_for_an_index_": {
+      "provider_intent": "get_usage_for_an_index_",
+      "provider_alias_intent": "/1/usage/statistic/index",
+      "text": "Get usage for an index 🚧",
+      "category": "Usage",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1",
+        "auth": [],
+        "description": "Get usage for an index ",
+        "rate_limit": [],
+        "api_endpoint": "https://{applicationid}.algolia.net/1/usage/{statistic}/{index}",
+        "alias_endpoint": "/algolia/1/usage/statistic/index",
+        "api_ref": "https://www.algolia.com/doc/rest-api/usage/#get-usage-for-an-index"
+      },
+      "auth": {
+        "header": {
+          "headerName": "X-Algolia-API-Key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 1,
+      "subdomain": {},
+      "payload_type": "",
+      "headers": {
+        "X-Algolia-Application-Id": "{applicationid}"
+      }
+    }
+  }
+}

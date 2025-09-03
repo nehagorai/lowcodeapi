@@ -1,0 +1,100 @@
+{
+  "routes": {
+    "checkr__v1__account___get": {
+      "provider_intent": "checkr__v1__account___get",
+      "provider_alias_intent": "/v1/account",
+      "text": "Retrieve authenticated account details",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve authenticated account details",
+        "rate_limit": [],
+        "api_endpoint": "https://api.checkr.com/v1/account",
+        "alias_endpoint": "/checkr/v1/account",
+        "api_ref": "https://docs.checkr.com/#operation/account"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "api_key",
+          "password": ""
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "checkr__v1__hierarchy__status___get": {
+      "provider_intent": "checkr__v1__hierarchy__status___get",
+      "provider_alias_intent": "/v1/hierarchy/status",
+      "text": "Retrieve Hierarchy update status",
+      "category": "Hierarchy (Enabled by request)",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve Hierarchy update status",
+        "rate_limit": [],
+        "api_endpoint": "https://api.checkr.com/v1/hierarchy/status",
+        "alias_endpoint": "/checkr/v1/hierarchy/status",
+        "api_ref": "https://docs.checkr.com/#operation/getAccountHierarchyStatus"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "api_key",
+          "password": ""
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "checkr__v1__users___get": {
+      "provider_intent": "checkr__v1__users___get",
+      "provider_alias_intent": "/v1/users",
+      "text": "List existing Users",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List existing Users",
+        "rate_limit": [],
+        "api_endpoint": "https://api.checkr.com/v1/users",
+        "alias_endpoint": "/checkr/v1/users",
+        "api_ref": "https://docs.checkr.com/#operation/usersList"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "api_key",
+          "password": ""
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "routes": {
+    "bullhorn__rest-services__corptoken__entity__entitytype__entityid___get": {
+      "provider_intent": "bullhorn__rest-services__corptoken__entity__entitytype__entityid___get",
+      "provider_alias_intent": "/rest-services/corptoken/entity/entitytype/entityid",
+      "text": "Gets one or more entities or to-many associations.",
+      "category": "Entity",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Gets one or more entities or to-many associations.",
+        "rate_limit": [],
+        "api_endpoint": "https://rest.bullhornstaffing.com/rest-services/{corpToken}/entity/{entityType}/{entityId}",
+        "alias_endpoint": "/bullhorn/rest-services/corptoken/entity/entitytype/entityid",
+        "api_ref": "https://bullhorn.github.io/rest-api-docs/index.html#entity"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "bullhorn__rest-services__corptoken__entity__entitytype___put": {
+      "provider_intent": "bullhorn__rest-services__corptoken__entity__entitytype___put",
+      "provider_alias_intent": "/rest-services/corptoken/entity/entitytype",
+      "text": "create new entities",
+      "category": "Entity",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "create new entities",
+        "rate_limit": [],
+        "api_endpoint": "https://rest.bullhornstaffing.com/rest-services/{corpToken}/entity/{entityType}",
+        "alias_endpoint": "/bullhorn/rest-services/corptoken/entity/entitytype",
+        "api_ref": "https://bullhorn.github.io/rest-api-docs/index.html#put-entity"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "bullhorn__rest-services__corptoken__allcorpnotes___get": {
+      "provider_intent": "bullhorn__rest-services__corptoken__allcorpnotes___get",
+      "provider_alias_intent": "/rest-services/corptoken/allcorpnotes",
+      "text": "Returns all Notes in the specified ClientCorporation",
+      "category": "allCorpNotes",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Returns all Notes in the specified ClientCorporation",
+        "rate_limit": [],
+        "api_endpoint": "https://rest.bullhornstaffing.com/rest-services/{corpToken}/allCorpNotes",
+        "alias_endpoint": "/bullhorn/rest-services/corptoken/allcorpnotes",
+        "api_ref": "https://bullhorn.github.io/rest-api-docs/index.html#allcorpnotes"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

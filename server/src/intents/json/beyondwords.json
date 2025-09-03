@@ -1,0 +1,5221 @@
+{
+  "routes": {
+    "beyondwords__v1__projects__project_id__ads___get": {
+      "provider_intent": "beyondwords__v1__projects__project_id__ads___get",
+      "provider_alias_intent": "/v1/projects/project_id/ads",
+      "text": "List",
+      "category": "Ads",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "pagination[limit]": {
+          "type": "number",
+          "text": "'limit' sets the number of results to return in each page."
+        },
+        "pagination[offset]": {
+          "type": "number",
+          "text": "'offset' sets the first position to return from the results of the query. The default is 0, which starts the page at the first result."
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Lists ads within a project",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/ads",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/ads",
+        "api_ref": "https://developers.beyondwords.io/reference/advertsindex"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__ads___post": {
+      "provider_intent": "beyondwords__v1__projects__project_id__ads___post",
+      "provider_alias_intent": "/v1/projects/project_id/ads",
+      "text": "Create",
+      "category": "Ads",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "{\n    \"type\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"text\"": {
+          "type": "\"The time range for when the ad should play in the player\"\n    }\n}"
+        },
+        "either custom or vast. Ads of type custom must have title": {
+          "type": ""
+        },
+        "url and media fields. Ads of type vast must have title and vast_url fields.\"": {
+          "type": ""
+        },
+        "\"default\"": {
+          "type": "\"pre-roll\"\n    }"
+        },
+        "\"placement\"": {
+          "type": "{\n        \"type\""
+        },
+        "mid-roll": {
+          "type": ""
+        },
+        "or post-roll\"": {
+          "type": ""
+        },
+        "\"enum\"": {
+          "type": "[\"auto\""
+        },
+        "\"mid-roll\"": {
+          "type": ""
+        },
+        "\"post-roll\"]": {
+          "type": ""
+        },
+        "\"title\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"click_through_url\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"image_url\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"media_url\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"theme\"": {
+          "type": "{\n        \"type\""
+        },
+        "dark": {
+          "type": ""
+        },
+        "light The autoß theme is based on the user's light/dark mode system preference.\"": {
+          "type": ""
+        },
+        "\"dark\"": {
+          "type": ""
+        },
+        "\"light\"]\n    }": {
+          "type": ""
+        },
+        "\"numeric_output\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"dark_theme\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"properties\"": {
+          "type": "{\n            \"start\"",
+          "text": "\"string\""
+        },
+        "\"background_color\"": {
+          "type": "{\n                \"type\""
+        },
+        "\"icon_color\"": {
+          "type": "{\n                \"type\""
+        },
+        "\"light_theme\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"video_theme\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"time_range\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"end\"": {
+          "type": "{\n                \"type\""
+        }
+      },
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Creates an ad in a project",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/ads",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/ads",
+        "api_ref": "https://developers.beyondwords.io/reference/adscreate"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__ads__id___put": {
+      "provider_intent": "beyondwords__v1__projects__project_id__ads__id___put",
+      "provider_alias_intent": "/v1/projects/project_id/ads/id",
+      "text": "Update",
+      "category": "Ads",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your ad",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "placement": {
+          "type": "enum",
+          "text": "Whether the ad should play before/during/after the audio content. Possible values are pre-roll, mid-roll, or post-roll",
+          "enum": [
+            "pre-roll",
+            "mid-roll",
+            "post-roll"
+          ],
+          "default": "pre-roll"
+        },
+        "title": {
+          "type": "string",
+          "text": "The title of the ad"
+        },
+        "click_through_url": {
+          "type": "string",
+          "text": "The click-through URL of the custom ad to show in the player"
+        },
+        "image_url": {
+          "type": "string",
+          "text": "The image URL to show in the player while the ad is playing"
+        },
+        "media_url": {
+          "type": "string",
+          "text": "The URL of the media file of the custom ad to play in the player"
+        },
+        "theme": {
+          "type": "enum",
+          "text": "The color theme to use for the ad when it is playing. Possible values are auto, dark,light The autoß theme is based on the user's light/dark mode system preference.",
+          "enum": [
+            "auto",
+            "dark",
+            "light"
+          ]
+        },
+        "dark_theme": {
+          "type": "object",
+          "properties": {
+            "text_color": {
+              "type": "string",
+              "text": "The hexadecimal text color to use in the player"
+            },
+            "background_color": {
+              "type": "string",
+              "text": "The hexadecimal background color to use in the player"
+            },
+            "icon_color": {
+              "type": "string",
+              "text": "The hexadecimal icon color to use in the player"
+            }
+          },
+          "text": "The dark theme colors"
+        },
+        "light_theme": {
+          "type": "object",
+          "properties": {
+            "text_color": {
+              "type": "string",
+              "text": "The hexadecimal text color to use in the player"
+            },
+            "background_color": {
+              "type": "string",
+              "text": "The hexadecimal background color to use in the player"
+            },
+            "icon_color": {
+              "type": "string",
+              "text": "The hexadecimal icon color to use in the player"
+            }
+          },
+          "text": "The light theme colors"
+        },
+        "video_theme": {
+          "type": "object",
+          "properties": {
+            "text_color": {
+              "type": "string",
+              "text": "The hexadecimal text color to use in the player"
+            },
+            "background_color": {
+              "type": "string",
+              "text": "The hexadecimal background color to use in the player"
+            },
+            "icon_color": {
+              "type": "string",
+              "text": "The hexadecimal icon color to use in the player"
+            }
+          },
+          "text": "The video theme colors"
+        },
+        "time_range": {
+          "type": "object",
+          "properties": {
+            "start": {
+              "type": "string",
+              "text": "The start time of when the ad should play"
+            },
+            "end": {
+              "type": "string",
+              "text": "The end time of when the ad should play"
+            }
+          },
+          "text": "The time range for when the ad should play in the player"
+        }
+      },
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your ad",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Updates an ad in a project",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/ads/{id}",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/ads/id",
+        "api_ref": "https://developers.beyondwords.io/reference/adsupdate"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__ads__id___get": {
+      "provider_intent": "beyondwords__v1__projects__project_id__ads__id___get",
+      "provider_alias_intent": "/v1/projects/project_id/ads/id",
+      "text": "Show",
+      "category": "Ads",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your ad",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your ad",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Gets an ad from a project\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/ads/{id}",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/ads/id",
+        "api_ref": "https://developers.beyondwords.io/reference/adsshow"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__ads__id___delete": {
+      "provider_intent": "beyondwords__v1__projects__project_id__ads__id___delete",
+      "provider_alias_intent": "/v1/projects/project_id/ads/id",
+      "text": "Delete",
+      "category": "Ads",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your ad",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your ad",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Deletes an ad from a project\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/ads/{id}",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/ads/id",
+        "api_ref": "https://developers.beyondwords.io/reference/adsdelete"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__organization__analytics___get": {
+      "provider_intent": "beyondwords__v1__organization__analytics___get",
+      "provider_alias_intent": "/v1/organization/analytics",
+      "text": "Organization analytics",
+      "category": "Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "aggregation": {
+          "type": "enum",
+          "enum": [
+            "all",
+            "year",
+            "month",
+            "week",
+            "day",
+            "hour"
+          ],
+          "text": "The way to aggregate the analytics. Possible values are all (aggregate all data together), year (aggregate data on a yearly basis), month (aggregate data on a yearly basis), week (aggregate data on a yearly basis), day (aggregate data on a yearly basis), or hour (aggregate data on an hourly basis, limited to a time_range 7 days or less)."
+        },
+        "time_range[start]": {
+          "type": "string",
+          "text": "The start date of the aggregation period. The value of this property should be a string in the format yyyy-mm-dd according to ISO 8601."
+        },
+        "time_range[end]": {
+          "type": "string",
+          "text": "The end date of the aggregation period. The value of this property should be a string in the format yyyy-mm-dd according to ISO 8601."
+        },
+        "metrics[]": {
+          "type": "array",
+          "text": "The metrics that you want to fetch data for"
+        },
+        "media_variants[]": {
+          "type": "array",
+          "text": "The media variants to fetch data for"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieves analytics for all projects within an organization\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/organization/analytics",
+        "alias_endpoint": "/beyondwords/v1/organization/analytics",
+        "api_ref": "https://developers.beyondwords.io/reference/organizationanalytics"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__analytics___get": {
+      "provider_intent": "beyondwords__v1__projects__analytics___get",
+      "provider_alias_intent": "/v1/projects/analytics",
+      "text": "Projects analytics",
+      "category": "Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "time_range[start]": {
+          "type": "string",
+          "text": "The start date of the aggregation period. The value of this property should be a string in the format yyyy-mm-dd according to ISO 8601."
+        },
+        "time_range[end]": {
+          "type": "string",
+          "text": "The end date of the aggregation period. The value of this property should be a string in the format yyyy-mm-dd according to ISO 8601."
+        },
+        "pagination[limit]": {
+          "type": "number",
+          "text": "'limit' sets the number of results to return in each page."
+        },
+        "pagination[offset]": {
+          "type": "number",
+          "text": "'offset' sets the first position to return from the results of the query. The default is 0, which starts the page at the first result."
+        },
+        "order[by]": {
+          "type": "enum",
+          "enum": [
+            "listens",
+            "avg_listen_time",
+            "avg_listen_duration"
+          ],
+          "text": "This is used to order analytics by number of listens or average listen time or average listen duration"
+        },
+        "order[dir]": {
+          "type": "enum",
+          "enum": [
+            "asc",
+            "desc"
+          ],
+          "text": "This is used to order analytics in the ascending or descending order"
+        },
+        "filter[title]": {
+          "type": "string",
+          "text": "Get analytics for content whose title contains the specified string. Note: filter[title] does not work in combination with order[by]"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieves an analytics overview for all projects within an organization\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/analytics",
+        "alias_endpoint": "/beyondwords/v1/projects/analytics",
+        "api_ref": "https://developers.beyondwords.io/reference/projectanalytics_list"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__id__analytics___get": {
+      "provider_intent": "beyondwords__v1__projects__id__analytics___get",
+      "provider_alias_intent": "/v1/projects/id/analytics",
+      "text": "Project analytics",
+      "category": "Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "project id",
+          "required": true
+        },
+        "aggregation": {
+          "type": "enum",
+          "enum": [
+            "all",
+            "year",
+            "month",
+            "week",
+            "day",
+            "hour"
+          ],
+          "text": "The way to aggregate the analytics. Possible values are all (aggregate all data together), year (aggregate data on a yearly basis), month (aggregate data on a yearly basis), week (aggregate data on a yearly basis), day (aggregate data on a yearly basis), or hour (aggregate data on an hourly basis, limited to a time_range 7 days or less)."
+        },
+        "time_range[start]": {
+          "type": "string",
+          "text": "The start date of the aggregation period. The value of this property should be a string in the format yyyy-mm-dd according to ISO 8601."
+        },
+        "time_range[end]": {
+          "type": "string",
+          "text": "The end date of the aggregation period. The value of this property should be a string in the format yyyy-mm-dd according to ISO 8601."
+        },
+        "metrics[]": {
+          "type": "array",
+          "text": "The metrics that you want to fetch data for"
+        },
+        "media_variants[]": {
+          "type": "array",
+          "text": "The media variants to fetch data for"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "project id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieves analytics for a project\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{id}/analytics",
+        "alias_endpoint": "/beyondwords/v1/projects/id/analytics",
+        "api_ref": "https://developers.beyondwords.io/reference/projectanalytics"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__content__analytics\n___get": {
+      "provider_intent": "beyondwords__v1__projects__project_id__content__analytics\n___get",
+      "provider_alias_intent": "/v1/projects/project_id/content/analytics\n",
+      "text": "Contents analytics",
+      "category": "Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "time_range[start]": {
+          "type": "string",
+          "text": "The start date of the aggregation period. The value of this property should be a string in the format yyyy-mm-dd according to ISO 8601."
+        },
+        "time_range[end]": {
+          "type": "string",
+          "text": "The end date of the aggregation period. The value of this property should be a string in the format yyyy-mm-dd according to ISO 8601."
+        },
+        "pagination[limit]": {
+          "type": "number",
+          "text": "'limit' sets the number of results to return in each page."
+        },
+        "pagination[offset]": {
+          "type": "number",
+          "text": "'offset' sets the first position to return from the results of the query. The default is 0, which starts the page at the first result."
+        },
+        "order[by]": {
+          "type": "enum",
+          "enum": [
+            "listens",
+            "avg_listen_time",
+            "avg_listen_duration"
+          ],
+          "text": "This is used to order analytics by number of listens or average listen time or average listen duration"
+        },
+        "order[dir]": {
+          "type": "enum",
+          "enum": [
+            "asc",
+            "desc"
+          ],
+          "text": "This is used to order analytics in the ascending or descending order"
+        },
+        "filter[title]": {
+          "type": "string",
+          "text": "Get analytics for content whose title contains the specified string. Note: filter[title] does not work in combination with order[by]"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieves an analytics overview for all content items in a project\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/content/analytics\n",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/content/analytics\n",
+        "api_ref": "https://developers.beyondwords.io/reference/contentanalytics_list"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__content__id__analytics___get": {
+      "provider_intent": "beyondwords__v1__projects__project_id__content__id__analytics___get",
+      "provider_alias_intent": "/v1/projects/project_id/content/id/analytics",
+      "text": "Content analytics",
+      "category": "Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "The UUID of the content item (or a legacy numeric ID)",
+          "required": true
+        },
+        "aggregation": {
+          "type": "enum",
+          "enum": [
+            "all",
+            "year",
+            "month",
+            "week",
+            "day",
+            "hour"
+          ],
+          "text": "The way to aggregate the analytics. Possible values are all (aggregate all data together), year (aggregate data on a yearly basis), month (aggregate data on a yearly basis), week (aggregate data on a yearly basis), day (aggregate data on a yearly basis), or hour (aggregate data on an hourly basis, limited to a time_range 7 days or less)."
+        },
+        "time_range[start]": {
+          "type": "string",
+          "text": "The start date of the aggregation period. The value of this property should be a string in the format yyyy-mm-dd according to ISO 8601."
+        },
+        "time_range[end]": {
+          "type": "string",
+          "text": "The end date of the aggregation period. The value of this property should be a string in the format yyyy-mm-dd according to ISO 8601."
+        },
+        "metrics[]": {
+          "type": "array",
+          "text": "The metrics that you want to fetch data for"
+        },
+        "media_variants[]": {
+          "type": "array",
+          "text": "The media variants to fetch data for"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "The UUID of the content item (or a legacy numeric ID)",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve analytics for some specific content.\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/content/{id}/analytics",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/content/id/analytics",
+        "api_ref": "https://developers.beyondwords.io/reference/contentanalytics"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__ads__analytics___get": {
+      "provider_intent": "beyondwords__v1__projects__project_id__ads__analytics___get",
+      "provider_alias_intent": "/v1/projects/project_id/ads/analytics",
+      "text": "Ads analytics",
+      "category": "Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "time_range[start]": {
+          "type": "string",
+          "text": "The start date of the aggregation period. The value of this property should be a string in the format yyyy-mm-dd according to ISO 8601."
+        },
+        "time_range[end]": {
+          "type": "string",
+          "text": "The end date of the aggregation period. The value of this property should be a string in the format yyyy-mm-dd according to ISO 8601."
+        },
+        "pagination[limit]": {
+          "type": "number",
+          "text": "'limit' sets the number of results to return in each page."
+        },
+        "pagination[offset]": {
+          "type": "number",
+          "text": "'offset' sets the first position to return from the results of the query. The default is 0, which starts the page at the first result."
+        },
+        "order[by]": {
+          "type": "enum",
+          "enum": [
+            "listens",
+            "avg_listen_time",
+            "avg_listen_duration"
+          ],
+          "text": "This is used to order analytics by number of listens or average listen time or average listen duration"
+        },
+        "order[dir]": {
+          "type": "enum",
+          "enum": [
+            "asc",
+            "desc"
+          ],
+          "text": "This is used to order analytics in the ascending or descending order"
+        },
+        "filter[title]": {
+          "type": "string",
+          "text": "Get analytics for content whose title contains the specified string. Note: filter[title] does not work in combination with order[by]"
+        },
+        "filter[ids][]": {
+          "type": "array",
+          "text": "filter ids"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve analytics overview for all ads in a project.\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/ads/analytics",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/ads/analytics",
+        "api_ref": "https://developers.beyondwords.io/reference/adsanalytics_list"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__ads__id__analytics\n___get": {
+      "provider_intent": "beyondwords__v1__projects__project_id__ads__id__analytics\n___get",
+      "provider_alias_intent": "/v1/projects/project_id/ads/id/analytics\n",
+      "text": "Ad analytics",
+      "category": "Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "The ID of the ads campaign",
+          "required": true
+        },
+        "time_range[start]": {
+          "type": "string",
+          "text": "The start date of the aggregation period. The value of this property should be a string in the format yyyy-mm-dd according to ISO 8601."
+        },
+        "time_range[end]": {
+          "type": "string",
+          "text": "The end date of the aggregation period. The value of this property should be a string in the format yyyy-mm-dd according to ISO 8601."
+        },
+        "metrics[]": {
+          "type": "array",
+          "text": "The metrics that you want to fetch data for"
+        },
+        "media_variants[]": {
+          "type": "array",
+          "text": "The media variants to fetch data for"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "The ID of the ads campaign",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve analytics for a single ad in a project.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/ads/{id}/analytics\n",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/ads/id/analytics\n",
+        "api_ref": "https://developers.beyondwords.io/reference/adsanalytics"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__background_tracks___get": {
+      "provider_intent": "beyondwords__v1__background_tracks___get",
+      "provider_alias_intent": "/v1/background_tracks",
+      "text": "List",
+      "category": "Background tracks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "pagination[limit]": {
+          "type": "number",
+          "text": "'limit' sets the number of results to return in each page."
+        },
+        "pagination[offset]": {
+          "type": "number",
+          "text": "'offset' sets the first position to return from the results of the query. The default is 0, which starts the page at the first result."
+        },
+        "filter[scopes]": {
+          "type": "object",
+          "text": "filter items by scopes"
+        },
+        "filter[custom]": {
+          "type": "boolean",
+          "text": "The media variants to fetch data for",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Lists background tracks.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/background_tracks",
+        "alias_endpoint": "/beyondwords/v1/background_tracks",
+        "api_ref": "https://developers.beyondwords.io/reference/background_tracksindex"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__background_tracks___post": {
+      "provider_intent": "beyondwords__v1__background_tracks___post",
+      "provider_alias_intent": "/v1/background_tracks",
+      "text": "Create",
+      "category": "Background tracks",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Name of the background track"
+        },
+        "volume": {
+          "type": "number",
+          "text": "Volume of the background track"
+        },
+        "project": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "number",
+              "text": "Backrgound track project id"
+            }
+          },
+          "text": "Background track project"
+        },
+        "media": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string",
+              "text": "Background track media url"
+            }
+          },
+          "text": "Background track media"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Creates a background track in a organization\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/background_tracks",
+        "alias_endpoint": "/beyondwords/v1/background_tracks",
+        "api_ref": "https://developers.beyondwords.io/reference/background_trackscreate"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__background_tracks__id___put": {
+      "provider_intent": "beyondwords__v1__background_tracks__id___put",
+      "provider_alias_intent": "/v1/background_tracks/id",
+      "text": "Update",
+      "category": "Background tracks",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your background track",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Name of the background track"
+        },
+        "volume": {
+          "type": "number",
+          "text": "Volume of the background track"
+        },
+        "project": {
+          "type": "object",
+          "propertise": {
+            "id": {
+              "type": "number",
+              "text": "Backrgound track project id"
+            }
+          },
+          "text": "Background track project"
+        },
+        "media": {
+          "type": "object",
+          "propertise": {
+            "url": {
+              "type": "string",
+              "text": "Background track media url"
+            }
+          },
+          "text": "Background track media"
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your background track",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Updates a background track in a organization\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/background_tracks/{id}",
+        "alias_endpoint": "/beyondwords/v1/background_tracks/id",
+        "api_ref": "https://developers.beyondwords.io/reference/background_tracksupdate"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__background_tracks__id___get": {
+      "provider_intent": "beyondwords__v1__background_tracks__id___get",
+      "provider_alias_intent": "/v1/background_tracks/id",
+      "text": "Show",
+      "category": "Background tracks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your background track",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your background track",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Gets a background track\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/background_tracks/{id}",
+        "alias_endpoint": "/beyondwords/v1/background_tracks/id",
+        "api_ref": "https://developers.beyondwords.io/reference/background_tracksshow"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__background_tracks__id___delete": {
+      "provider_intent": "beyondwords__v1__background_tracks__id___delete",
+      "provider_alias_intent": "/v1/background_tracks/id",
+      "text": "Delete",
+      "category": "Background tracks",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your background track",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your background track",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Deletes a background track",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/background_tracks/{id}",
+        "alias_endpoint": "/beyondwords/v1/background_tracks/id",
+        "api_ref": "https://developers.beyondwords.io/reference/background_tracksdelete"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__content___get": {
+      "provider_intent": "beyondwords__v1__projects__project_id__content___get",
+      "provider_alias_intent": "/v1/projects/project_id/content",
+      "text": "List",
+      "category": "Content",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "filter[title]": {
+          "type": "string",
+          "text": "filter by content title"
+        },
+        "filter[published]": {
+          "type": "string",
+          "text": "filter by content published status"
+        },
+        "filter[statuses][]": {
+          "type": "array",
+          "text": "filter by content statuses"
+        },
+        "filter[created][from]": {
+          "type": "date",
+          "text": "filter by created time from (ISO 8601)"
+        },
+        "filter[created][to]": {
+          "type": "date",
+          "text": "filter by created time to (ISO 8601)"
+        },
+        "filter[updated][from]": {
+          "type": "date",
+          "text": "filter by updated time from (ISO 8601)"
+        },
+        "filter[updated][to]": {
+          "type": "date",
+          "text": "filter by updated time to (ISO 8601)"
+        },
+        "pagination[limit]": {
+          "type": "number",
+          "text": "'limit' sets the number of results to return in each page."
+        },
+        "pagination[offset]": {
+          "type": "number",
+          "text": "'offset' sets the first position to return from the results of the query. The default is 0, which starts the page at the first result."
+        },
+        "order[by]": {
+          "type": "enum",
+          "enum": [
+            "published_at",
+            "duration",
+            "published"
+          ],
+          "text": "This is used to order content by created date or duration or published status"
+        },
+        "order[dir]": {
+          "type": "enum",
+          "enum": [
+            "ace",
+            "desc"
+          ],
+          "text": "This is used to order analytics in the ascending or descending order"
+        },
+        "segments": {
+          "type": "enum",
+          "enum": [
+            "partil",
+            "full"
+          ],
+          "text": "The level of detail to show for segments in the response: 'none', 'partial' or 'full'"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Lists content within a project\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/content",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/content",
+        "api_ref": "https://developers.beyondwords.io/reference/contentindex"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__content\n___post": {
+      "provider_intent": "beyondwords__v1__projects__project_id__content\n___post",
+      "provider_alias_intent": "/v1/projects/project_id/content\n",
+      "text": "Create",
+      "category": "Content",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "segments": {
+          "type": "enum",
+          "enum": [
+            "partil",
+            "full"
+          ],
+          "text": "The level of detail to show for segments in the response: 'none', 'partial' or 'full'"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "{\n    \"type\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"enum\"": {
+          "type": "[\n            \"auto_segment\""
+        },
+        "\"manual_segment\"": {
+          "type": ""
+        },
+        "\"audio_upload\"\n        ]": {
+          "type": ""
+        },
+        "\"defaults\"": {
+          "type": "\"auto_segment\""
+        },
+        "\"text\"": {
+          "type": "\"Background track\"\n    }\n}"
+        },
+        "manual_segment or audio_upload\"": {
+          "type": ""
+        },
+        "\"required\"": {
+          "type": "true\n    }"
+        },
+        "\"title\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"summary\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"body\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"title_enabled\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"body_enabled\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"summary_enabled\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"summary_title_enabled\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"source_id\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"source_url\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"author\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"image_url\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"metadata\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"published\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"publish_date\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"ads_enabled\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"auto_segment_updates_enabled\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"title_voice_id\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"summary_voice_id\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"body_voice_id\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"ai_summary_updates_enabled\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"background_track\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"properties\"": {
+          "type": "{\n                    \"id\"",
+          "text": "\"number\""
+        },
+        "\"track\"": {
+          "type": "{\n                \"type\""
+        },
+        "}": {
+          "type": ""
+        }
+      },
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Creates a content item in your project\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/content\n",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/content\n",
+        "api_ref": "https://developers.beyondwords.io/reference/contentcreate"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__content__id___put": {
+      "provider_intent": "beyondwords__v1__projects__project_id__content__id___put",
+      "provider_alias_intent": "/v1/projects/project_id/content/id",
+      "text": "Update",
+      "category": "Content",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "The UUID of the content item (or a legacy numeric ID)",
+          "required": true
+        },
+        "segments": {
+          "type": "string",
+          "text": "The level of detail to show for segments in the response: 'none', 'partial' or 'full'"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "{\n    \"title\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"text\"": {
+          "type": "\"Background track\"\n    }\n}"
+        },
+        "\"summary\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"body\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"title_enabled\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"body_enabled\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"summary_enabled\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"summary_title_enabled\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"source_id\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"source_url\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"author\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"image_url\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"metadata\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"published\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"publish_date\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"ads_enabled\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"auto_segment_updates_enabled\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"title_voice_id\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"summary_voice_id\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"body_voice_id\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"type\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"enum\"": {
+          "type": "[\n            \"auto_segment\""
+        },
+        "\"manual_segment\"": {
+          "type": ""
+        },
+        "\"audio_upload\"\n        ]": {
+          "type": ""
+        },
+        "manual_segment or audio_upload\"\n    }": {
+          "type": ""
+        },
+        "\"ai_summary_updates_enabled\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"background_track\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"propertise\"": {
+          "type": "{\n                    \"id\"",
+          "text": "\"number\""
+        },
+        "\"track\"": {
+          "type": "{\n                \"type\""
+        },
+        "}": {
+          "type": ""
+        }
+      },
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "The UUID of the content item (or a legacy numeric ID)",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update a content item from your project\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/content/{id}",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/content/id",
+        "api_ref": "https://developers.beyondwords.io/reference/contentupdate"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__content__id___get": {
+      "provider_intent": "beyondwords__v1__projects__project_id__content__id___get",
+      "provider_alias_intent": "/v1/projects/project_id/content/id",
+      "text": "Show",
+      "category": "Content",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "The UUID of the content item (or a legacy numeric ID)",
+          "required": true
+        },
+        "segments": {
+          "type": "string",
+          "text": "The level of detail to show for segments in the response: 'none', 'partial' or 'full'"
+        },
+        "words": {
+          "type": "string",
+          "text": "The level of detail to show for segment words in the response: 'none', 'partial' or 'full'"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "The UUID of the content item (or a legacy numeric ID)",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get a content item from your project\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/content/{id}",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/content/id",
+        "api_ref": "https://developers.beyondwords.io/reference/contentshow"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__content__id___delete": {
+      "provider_intent": "beyondwords__v1__projects__project_id__content__id___delete",
+      "provider_alias_intent": "/v1/projects/project_id/content/id",
+      "text": "Delete",
+      "category": "Content",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "The UUID of the content item (or a legacy numeric ID)",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "The UUID of the content item (or a legacy numeric ID)",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a content item from your project\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/content/{id}",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/content/id",
+        "api_ref": "https://developers.beyondwords.io/reference/contentdelete"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__content__id__regenerate___post": {
+      "provider_intent": "beyondwords__v1__projects__project_id__content__id__regenerate___post",
+      "provider_alias_intent": "/v1/projects/project_id/content/id/regenerate",
+      "text": "Regenerate",
+      "category": "Content",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "project_id",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "project_id",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Reprocess content in a project.\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/content/{id}/regenerate",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/content/id/regenerate",
+        "api_ref": "https://developers.beyondwords.io/reference/contentregenerate"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__content__search_fields___get": {
+      "provider_intent": "beyondwords__v1__projects__project_id__content__search_fields___get",
+      "provider_alias_intent": "/v1/projects/project_id/content/search_fields",
+      "text": "Search fields",
+      "category": "Content",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "project_id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "project_id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Project search fields.\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/content/search_fields",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/content/search_fields",
+        "api_ref": "https://developers.beyondwords.io/reference/contentsearch_fields"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__content__id__summarize___post": {
+      "provider_intent": "beyondwords__v1__projects__project_id__content__id__summarize___post",
+      "provider_alias_intent": "/v1/projects/project_id/content/id/summarize",
+      "text": "Summarize",
+      "category": "Content",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "project_id",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "model": {
+          "type": "string",
+          "text": "The model of AI. Possible values are chat_gpt"
+        },
+        "prompt": {
+          "type": "string",
+          "text": "The AI prompt"
+        }
+      },
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "project_id",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create summary.\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/content/{id}/summarize",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/content/id/summarize",
+        "api_ref": "https://developers.beyondwords.io/reference/contentsummarize"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__html_filters___get": {
+      "provider_intent": "beyondwords__v1__html_filters___get",
+      "provider_alias_intent": "/v1/html_filters",
+      "text": "List",
+      "category": "Html filters",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "pagination[limit]": {
+          "type": "number",
+          "text": "'limit' sets the number of results to return in each page."
+        },
+        "pagination[offset]": {
+          "type": "number",
+          "text": "'offset' sets the first position to return from the results of the query. The default is 0, which starts the page at the first result."
+        },
+        "filter[project.id]": {
+          "type": "string",
+          "text": "filter by project ID"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Html filters in a organization\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/html_filters",
+        "alias_endpoint": "/beyondwords/v1/html_filters",
+        "api_ref": "https://developers.beyondwords.io/reference/html_filtersindex"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__html_filters___post": {
+      "provider_intent": "beyondwords__v1__html_filters___post",
+      "provider_alias_intent": "/v1/html_filters",
+      "text": "Create",
+      "category": "Html filters",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "element_type": {
+          "type": "string",
+          "text": "The name of the tag representing the element"
+        },
+        "element_class": {
+          "type": "string",
+          "text": "The class attribute of an element. This filter will be applied to any element that contains the class"
+        },
+        "element_data": {
+          "type": "string",
+          "text": "The data attribute of an element"
+        },
+        "element_xpath": {
+          "type": "string",
+          "text": "The XPath specifying the elements. https://www.w3.org/TR/1999/REC-xpath-19991116/"
+        },
+        "element_id": {
+          "type": "string",
+          "text": "The class attribute of an element"
+        },
+        "value": {
+          "type": "string",
+          "text": "The string value contained within an element. This filter will be applied to any element that contains the value"
+        },
+        "include": {
+          "type": "boolean",
+          "text": "Whether BeyondWords should use the filter to include or exclude the selected part of the HTML document. The default is false",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "project": {
+          "type": "onject",
+          "properties": {
+            "id": {
+              "type": "number",
+              "text": "The project id"
+            }
+          },
+          "text": "The project id to apply this filter to"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Creates a html filter\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/html_filters",
+        "alias_endpoint": "/beyondwords/v1/html_filters",
+        "api_ref": "https://developers.beyondwords.io/reference/html_filterscreate"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__html_filters__id___put": {
+      "provider_intent": "beyondwords__v1__html_filters__id___put",
+      "provider_alias_intent": "/v1/html_filters/id",
+      "text": "Update",
+      "category": "Html filters",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your filter",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "element_type": {
+          "type": "string",
+          "text": "The name of the tag representing the element"
+        },
+        "element_class": {
+          "type": "string",
+          "text": "The class attribute of an element. This filter will be applied to any element that contains the class"
+        },
+        "element_data": {
+          "type": "string",
+          "text": "The data attribute of an element"
+        },
+        "element_xpath": {
+          "type": "string",
+          "text": "The XPath specifying the elements. https://www.w3.org/TR/1999/REC-xpath-19991116/"
+        },
+        "element_id": {
+          "type": "string",
+          "text": "The class attribute of an element"
+        },
+        "value": {
+          "type": "string",
+          "text": "The string value contained within an element. This filter will be applied to any element that contains the value"
+        },
+        "include": {
+          "type": "boolean",
+          "text": "Whether BeyondWords should use the filter to include or exclude the selected part of the HTML document. The default is false",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "project": {
+          "type": "onject",
+          "propertise": {
+            "id": {
+              "type": "number",
+              "text": "The project id"
+            }
+          },
+          "text": "The project id to apply this filter to"
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your filter",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Updates html filter\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/html_filters/{id}",
+        "alias_endpoint": "/beyondwords/v1/html_filters/id",
+        "api_ref": "https://developers.beyondwords.io/reference/html_filtersupdate"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__html_filters__id\n___get": {
+      "provider_intent": "beyondwords__v1__html_filters__id\n___get",
+      "provider_alias_intent": "/v1/html_filters/id\n",
+      "text": "Show",
+      "category": "Html filters",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your filter",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your filter",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Gets a html filter\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/html_filters/{id}\n",
+        "alias_endpoint": "/beyondwords/v1/html_filters/id\n",
+        "api_ref": "https://developers.beyondwords.io/reference/html_filtersshow"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__html_filters__id\n___delete": {
+      "provider_intent": "beyondwords__v1__html_filters__id\n___delete",
+      "provider_alias_intent": "/v1/html_filters/id\n",
+      "text": "Delete",
+      "category": "Html filters",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your filter",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your filter",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Deletes a html filter\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/html_filters/{id}\n",
+        "alias_endpoint": "/beyondwords/v1/html_filters/id\n",
+        "api_ref": "https://developers.beyondwords.io/reference/html_filtersdelete"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__organization__languages___get": {
+      "provider_intent": "beyondwords__v1__organization__languages___get",
+      "provider_alias_intent": "/v1/organization/languages",
+      "text": "List",
+      "category": "Languages",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Lists available languages",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/organization/languages",
+        "alias_endpoint": "/beyondwords/v1/organization/languages",
+        "api_ref": "https://developers.beyondwords.io/reference/organizationlanguagesindex"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__player__by_content_id__id___get": {
+      "provider_intent": "beyondwords__v1__projects__project_id__player__by_content_id__id___get",
+      "provider_alias_intent": "/v1/projects/project_id/player/by_content_id/id",
+      "text": "Show",
+      "category": "Player",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "The UUID of your content item (or a legacy numeric ID)",
+          "required": true
+        },
+        "preview_token": {
+          "type": "string",
+          "text": "The preview token of your content item"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "The UUID of your content item (or a legacy numeric ID)",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Gets player data related to a content item\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/player/by_content_id/{id}",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/player/by_content_id/id",
+        "api_ref": "https://developers.beyondwords.io/reference/playerby_content_id"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__player__by_playlist_id__id\n___get": {
+      "provider_intent": "beyondwords__v1__projects__project_id__player__by_playlist_id__id\n___get",
+      "provider_alias_intent": "/v1/projects/project_id/player/by_playlist_id/id\n",
+      "text": "Show",
+      "category": "Player",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your playlist",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your playlist",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Gets player data related to a playlist\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/player/by_playlist_id/{id}\n",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/player/by_playlist_id/id\n",
+        "api_ref": "https://developers.beyondwords.io/reference/playerby_playlist_id"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__player__by_source_id__id___get": {
+      "provider_intent": "beyondwords__v1__projects__project_id__player__by_source_id__id___get",
+      "provider_alias_intent": "/v1/projects/project_id/player/by_source_id/id",
+      "text": "Show",
+      "category": "Player",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "The source_id of your content item",
+          "required": true
+        },
+        "preview_token": {
+          "type": "string",
+          "text": "The preview token of your content item"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "The source_id of your content item",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Gets player data related to a content item\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/player/by_source_id/{id}",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/player/by_source_id/id",
+        "api_ref": "https://developers.beyondwords.io/reference/playerby_source_id"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__player__by_source_url__url___get": {
+      "provider_intent": "beyondwords__v1__projects__project_id__player__by_source_url__url___get",
+      "provider_alias_intent": "/v1/projects/project_id/player/by_source_url/url",
+      "text": "Show",
+      "category": "Player",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "url": {
+          "type": "string",
+          "text": "The source_url of your content item",
+          "required": true
+        },
+        "preview_token": {
+          "type": "string",
+          "text": "The preview token of your content item"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "url": {
+          "type": "string",
+          "text": "The source_url of your content item",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Gets player data related to a content item\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/player/by_source_url/{url}",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/player/by_source_url/url",
+        "api_ref": "https://developers.beyondwords.io/reference/playerby_source_url"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__player__by_identifiers__array___get": {
+      "provider_intent": "beyondwords__v1__projects__project_id__player__by_identifiers__array___get",
+      "provider_alias_intent": "/v1/projects/project_id/player/by_identifiers/array",
+      "text": "Show",
+      "category": "Player",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "array": {
+          "type": "string",
+          "text": "An encoded JSON array containing mixed identifiers",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "The source_url of your content item",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "array": {
+          "type": "string",
+          "text": "An encoded JSON array containing mixed identifiers",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "The source_url of your content item",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Gets player data related to a content item\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/player/by_identifiers/{array}",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/player/by_identifiers/array",
+        "api_ref": "https://developers.beyondwords.io/reference/playerby_identifiers"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__player_settings___get": {
+      "provider_intent": "beyondwords__v1__projects__project_id__player_settings___get",
+      "provider_alias_intent": "/v1/projects/project_id/player_settings",
+      "text": "Show",
+      "category": "Player settings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the player settings for your project\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/player_settings",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/player_settings",
+        "api_ref": "https://developers.beyondwords.io/reference/player_settingsshow"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__player_settings___put": {
+      "provider_intent": "beyondwords__v1__projects__project_id__player_settings___put",
+      "provider_alias_intent": "/v1/projects/project_id/player_settings",
+      "text": "Update",
+      "category": "Player settings",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "player_version": {
+          "type": "enum",
+          "enum": [
+            "0",
+            "1"
+          ],
+          "text": "The player version to use. Possible values are 0 for legacy and 1 for the current"
+        },
+        "player_style": {
+          "type": "enum",
+          "enum": [
+            "small",
+            "standard",
+            "large",
+            "video"
+          ],
+          "text": "he style of user interface to show for the player. Possible values are small, standard, large, or video"
+        },
+        "player_title": {
+          "type": "string",
+          "text": "The title to show in the large player when there isn't a playlist"
+        },
+        "call_to_action": {
+          "type": "string",
+          "text": "The text prompt to show on the player"
+        },
+        "image_url": {
+          "type": "string",
+          "text": "An image to show in the player instead of the content's image"
+        },
+        "persistent_ad_image": {
+          "type": "boolean",
+          "text": "Whether to show clickable ad images in the player when the ad isn't playing",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "theme": {
+          "type": "enum",
+          "enum": [
+            "auto",
+            "dark",
+            "light"
+          ],
+          "text": "The color theme to use for the player. The color theme to use for the player. Possible values are auto, dark, or light"
+        },
+        "dark_theme": {
+          "type": "onject",
+          "properties": {
+            "text_color": {
+              "type": "string",
+              "text": "The hexadecimal text color to use in the player"
+            },
+            "background_color": {
+              "type": "string",
+              "text": "The hexadecimal background color to use in the player"
+            },
+            "icon_color": {
+              "type": "string",
+              "text": "The hexadecimal icon color to use in the player"
+            },
+            "highlight_color": {
+              "type": "string",
+              "text": "The hexadecimal highlight color to use in the playerd"
+            }
+          },
+          "text": "The dark theme colors"
+        },
+        "light_theme": {
+          "type": "onject",
+          "properties": {
+            "text_color": {
+              "type": "string",
+              "text": "The hexadecimal text color to use in the player"
+            },
+            "background_color": {
+              "type": "string",
+              "text": "The hexadecimal background color to use in the player"
+            },
+            "icon_color": {
+              "type": "string",
+              "text": "The hexadecimal icon color to use in the player"
+            },
+            "highlight_color": {
+              "type": "string",
+              "text": "The hexadecimal highlight color to use in the playerd"
+            }
+          },
+          "text": "The light theme colors"
+        },
+        "video_theme": {
+          "type": "onject",
+          "properties": {
+            "text_color": {
+              "type": "string",
+              "text": "The hexadecimal text color to use in the player"
+            },
+            "background_color": {
+              "type": "string",
+              "text": "The hexadecimal background color to use in the player"
+            },
+            "icon_color": {
+              "type": "string",
+              "text": "The hexadecimal icon color to use in the player"
+            },
+            "highlight_color": {
+              "type": "string",
+              "text": "The hexadecimal highlight color to use in the playerd"
+            }
+          },
+          "text": "The video theme colors"
+        },
+        "title_enabled": {
+          "type": "boolean",
+          "text": "Whether to always show the content's title (e.g. instead of the call_to_action)",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "image_enabled": {
+          "type": "boolean",
+          "text": "Whether to show or hide the image in the player",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "widget_style": {
+          "type": "enum",
+          "enum": [
+            "none",
+            "small",
+            "standard",
+            "large",
+            "video"
+          ],
+          "text": "The style of user interface to show for the widget at the bottom of the screen. Possible values are none, small, standard, large, video The widget appears once you scroll past the player in the page."
+        },
+        "widget_position": {
+          "type": "enum",
+          "enum": [
+            "auto",
+            "left",
+            "center",
+            "right"
+          ],
+          "text": "The side of the screen on which to show the widget. Possible values are auto, left, center, right The 'auto' position places the standard player in the center, otherwise to the right."
+        },
+        "segment_playback_enabled": {
+          "type": "boolean",
+          "text": "Whether to allow playback by clicking on a segment (i.e. a paragraph) on the page Support for this depends on adding some markup into the HTML of the page.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "skip_button_style": {
+          "type": "string",
+          "text": "The style of skip buttons to show in the player. Possible values are auto, segments, seconds or audios You can specify the number of seconds to skip, e.g. seconds-15 or seconds-15-30 The auto style uses audios if there is a playlist and segments otherwise."
+        },
+        "intro_url": {
+          "type": "string",
+          "text": "The URL of an intro audio file to play before all content in the player"
+        },
+        "outro_url": {
+          "type": "string",
+          "text": "The URL of an outro audio file to play after all content in the player."
+        },
+        "intro_outro_enabled": {
+          "type": "boolean",
+          "text": "Whether or not the intro and outro should be played. The default is false",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "paywall_type": {
+          "type": "string",
+          "text": "The style of paywall to apply to the player. Possible values are none, show, hide or lock You can specify the number of body segments to make listenable, e.g. show-3"
+        },
+        "paywall_url": {
+          "type": "string",
+          "text": "The URL to link to when the content is paywalled, e.g. a signup page"
+        },
+        "download_button_enabled": {
+          "type": "boolean",
+          "text": "Whether to show a download button next to each playlist item in the player",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "share_button_enabled": {
+          "type": "boolean",
+          "text": "Whether to show a share button in the player",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "voice_icon_enabled": {
+          "type": "boolean",
+          "text": "Whether to show an icon stating that the voice was AI generated in the player",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "analytics_custom_url": {
+          "type": "string",
+          "text": "Custom analytics server URL"
+        },
+        "analytics_tag_enabled": {
+          "type": "string",
+          "text": "Google Analytics tag enabled"
+        },
+        "analytics_tag": {
+          "type": "string",
+          "text": "Google Analytics tag"
+        },
+        "logo_icon_enabled": {
+          "type": "boolean",
+          "text": "Whether to show the BeyondWords logo in the player",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Updates the player settings for a project\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/player_settings",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/player_settings",
+        "api_ref": "https://developers.beyondwords.io/reference/player_settingsupdate"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects\n___get": {
+      "provider_intent": "beyondwords__v1__projects\n___get",
+      "provider_alias_intent": "/v1/projects\n",
+      "text": "List",
+      "category": "Projects",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "pagination[limit]": {
+          "type": "number",
+          "text": "'limit' sets the number of results to return in each page."
+        },
+        "pagination[offset]": {
+          "type": "number",
+          "text": "'offset' sets the first position to return from the results of the query. The default is 0, which starts the page at the first result."
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Lists all projects in your organization\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects\n",
+        "alias_endpoint": "/beyondwords/v1/projects\n",
+        "api_ref": "https://developers.beyondwords.io/reference/projectsindex"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects___post": {
+      "provider_intent": "beyondwords__v1__projects___post",
+      "provider_alias_intent": "/v1/projects",
+      "text": "Create",
+      "category": "Projects",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "{\n    \"name\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"text\"": {
+          "type": "\"The project time zone\"\n    }\n}"
+        },
+        "\"required\"": {
+          "type": "true\n    }"
+        },
+        "\"language\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"title\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"properties\"": {
+          "type": "{\n                    \"id\"",
+          "text": "\"number\""
+        },
+        "\"default\"": {
+          "type": "true"
+        },
+        "\"voice\"": {
+          "type": "{\n                \"type\""
+        },
+        "}\n        }": {
+          "type": ""
+        },
+        "\"summary\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"body\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"background_track\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"track\"": {
+          "type": "{\n                \"type\""
+        },
+        "\"auto_publish_enabled\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"time_zone\"": {
+          "type": "{\n        \"type\""
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Creates a project in your organization\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects",
+        "alias_endpoint": "/beyondwords/v1/projects",
+        "api_ref": "https://developers.beyondwords.io/reference/projectscreate"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__id___put": {
+      "provider_intent": "beyondwords__v1__projects__id___put",
+      "provider_alias_intent": "/v1/projects/id",
+      "text": "Update",
+      "category": "Projects",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "project id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "{\n    \"name\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"text\"": {
+          "type": "\"The project time zone\"\n    }\n}"
+        },
+        "\"required\"": {
+          "type": "true\n    }"
+        },
+        "\"language\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"title\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"properties\"": {
+          "type": "{\n                    \"id\"",
+          "text": "\"number\""
+        },
+        "\"default\"": {
+          "type": "true"
+        },
+        "\"voice\"": {
+          "type": "{\n                \"type\""
+        },
+        "}\n        }": {
+          "type": ""
+        },
+        "\"summary\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"body\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"background_track\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"track\"": {
+          "type": "{\n                \"type\""
+        },
+        "\"auto_publish_enabled\"": {
+          "type": "{\n        \"type\""
+        },
+        "\"time_zone\"": {
+          "type": "{\n        \"type\""
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "project id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Updates a project in your organization\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{id}",
+        "alias_endpoint": "/beyondwords/v1/projects/id",
+        "api_ref": "https://developers.beyondwords.io/reference/projectsupdate"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__id___get": {
+      "provider_intent": "beyondwords__v1__projects__id___get",
+      "provider_alias_intent": "/v1/projects/id",
+      "text": "Show",
+      "category": "Projects",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "project id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "project id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Gets a project from your organization\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{id}",
+        "alias_endpoint": "/beyondwords/v1/projects/id",
+        "api_ref": "https://developers.beyondwords.io/reference/projectsshow"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__id\n___delete": {
+      "provider_intent": "beyondwords__v1__projects__id\n___delete",
+      "provider_alias_intent": "/v1/projects/id\n",
+      "text": "Delete",
+      "category": "Projects",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "project id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "project id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Deletes a project\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{id}\n",
+        "alias_endpoint": "/beyondwords/v1/projects/id\n",
+        "api_ref": "https://developers.beyondwords.io/reference/projectsdelete"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__integrations__rss_importer__feeds___get": {
+      "provider_intent": "beyondwords__v1__projects__project_id__integrations__rss_importer__feeds___get",
+      "provider_alias_intent": "/v1/projects/project_id/integrations/rss_importer/feeds",
+      "text": "List",
+      "category": "RSS Feed",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "pagination[limit]": {
+          "type": "number",
+          "text": "'limit' sets the number of results to return in each page."
+        },
+        "pagination[offset]": {
+          "type": "number",
+          "text": "'offset' sets the first position to return from the results of the query. The default is 0, which starts the page at the first result."
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "User should be able to list all RSS feeds.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/integrations/rss_importer/feeds",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/integrations/rss_importer/feeds",
+        "api_ref": "https://developers.beyondwords.io/reference/rss_importerfeedindex"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__integrations__rss_importer__feeds___post": {
+      "provider_intent": "beyondwords__v1__projects__project_id__integrations__rss_importer__feeds___post",
+      "provider_alias_intent": "/v1/projects/project_id/integrations/rss_importer/feeds",
+      "text": "Create",
+      "category": "RSS Feed",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "enabled": {
+          "type": "boolean",
+          "text": "Whether importing is enabled or disabled.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "feed_url": {
+          "type": "string",
+          "text": "URL of the RSS feed you want to import.",
+          "required": true
+        },
+        "feed_content_type": {
+          "type": "enum",
+          "enum": [
+            "xml",
+            "json"
+          ],
+          "text": "Type of content in the feed. Possible values include xml or json.",
+          "required": true
+        },
+        "feed_headers": {
+          "type": "object",
+          "text": "Headers that you want to include in the HTTP request when fetching the RSS feed."
+        },
+        "import_interval": {
+          "type": "number",
+          "text": "Number of minutes between each import of the RSS feed."
+        },
+        "extractor_enabled": {
+          "type": "boolean",
+          "text": "Whether or not the RSS importer should fetch the content from the page linked in the map.source_url property. Set to true if the RSS feed does not contain the content. In this case you can set map.body to null.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "extractor_headers": {
+          "type": "object",
+          "text": "Headers that you want to include in the HTTP request when fetching and extracting the content from the map.source_url."
+        },
+        "map": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "array",
+              "text": "Array of strings that represent the name of the element in the RSS feed that corresponds to the title of the feed item."
+            },
+            "body": {
+              "type": "array",
+              "text": "Array of strings that represent the name of the element in the RSS feed that corresponds to the content of the feed item. If extractor_enabled is true then the RSS importer will open the URL in the map.source_url and extract the content from the page."
+            },
+            "summary": {
+              "type": "array",
+              "text": "Array of strings that represent the name of the element in the RSS feed that corresponds to the summary of the feed item."
+            },
+            "source_id": {
+              "type": "string",
+              "text": "String that represents the name of the element in the RSS feed that corresponds to the id of the feed item.",
+              "required": true
+            },
+            "source_url": {
+              "type": "string",
+              "text": "String that represents the name of the element in the RSS feed that corresponds to the URL of the feed item."
+            },
+            "author": {
+              "type": "string",
+              "text": "String that represents the name of the element in the RSS feed that corresponds to the author of the feed item."
+            },
+            "metadata": {
+              "type": "string",
+              "text": "String that represents the name of the element in the RSS feed that corresponds to the metadata of the feed item."
+            },
+            "image_url": {
+              "type": "string",
+              "text": "String that represents the name of the element in the RSS feed that corresponds to the image header of the feed item."
+            },
+            "publish_date": {
+              "type": "string",
+              "text": "String that represents the name of the element in the RSS feed that corresponds to the pubDate of the feed item.",
+              "required": true
+            }
+          },
+          "text": "Object that contains mappings between the data in the RSS feed and the properties in the content object. Each property in the map object represents a property in the content object, and its value is a string that represents the name of the corresponding element in the RSS feed."
+        }
+      },
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "User should be able to create an RSS feed.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/integrations/rss_importer/feeds",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/integrations/rss_importer/feeds",
+        "api_ref": "https://developers.beyondwords.io/reference/rss_importerfeedcreate"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__integrations__rss_importer__feeds__id___put": {
+      "provider_intent": "beyondwords__v1__projects__project_id__integrations__rss_importer__feeds__id___put",
+      "provider_alias_intent": "/v1/projects/project_id/integrations/rss_importer/feeds/id",
+      "text": "Update",
+      "category": "RSS Feed",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "RSS feed id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "enabled": {
+          "type": "boolean",
+          "text": "Whether importing is enabled or disabled.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "feed_url": {
+          "type": "string",
+          "text": "URL of the RSS feed you want to import.",
+          "required": true
+        },
+        "feed_content_type": {
+          "type": "enum",
+          "enum": [
+            "xml",
+            "json"
+          ],
+          "text": "Type of content in the feed. Possible values include xml or json.",
+          "required": true
+        },
+        "feed_headers": {
+          "type": "object",
+          "text": "Headers that you want to include in the HTTP request when fetching the RSS feed."
+        },
+        "import_interval": {
+          "type": "number",
+          "text": "Number of minutes between each import of the RSS feed."
+        },
+        "extractor_enabled": {
+          "type": "boolean",
+          "text": "Whether or not the RSS importer should fetch the content from the page linked in the map.source_url property. Set to true if the RSS feed does not contain the content. In this case you can set map.body to null.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "extractor_headers": {
+          "type": "object",
+          "text": "Headers that you want to include in the HTTP request when fetching and extracting the content from the map.source_url."
+        },
+        "map": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "array",
+              "text": "Array of strings that represent the name of the element in the RSS feed that corresponds to the title of the feed item."
+            },
+            "body": {
+              "type": "array",
+              "text": "Array of strings that represent the name of the element in the RSS feed that corresponds to the content of the feed item. If extractor_enabled is true then the RSS importer will open the URL in the map.source_url and extract the content from the page."
+            },
+            "summary": {
+              "type": "array",
+              "text": "Array of strings that represent the name of the element in the RSS feed that corresponds to the summary of the feed item."
+            },
+            "source_id": {
+              "type": "string",
+              "text": "String that represents the name of the element in the RSS feed that corresponds to the id of the feed item.",
+              "required": true
+            },
+            "source_url": {
+              "type": "string",
+              "text": "String that represents the name of the element in the RSS feed that corresponds to the URL of the feed item."
+            },
+            "author": {
+              "type": "string",
+              "text": "String that represents the name of the element in the RSS feed that corresponds to the author of the feed item."
+            },
+            "metadata": {
+              "type": "string",
+              "text": "String that represents the name of the element in the RSS feed that corresponds to the metadata of the feed item."
+            },
+            "image_url": {
+              "type": "string",
+              "text": "String that represents the name of the element in the RSS feed that corresponds to the image header of the feed item."
+            },
+            "publish_date": {
+              "type": "string",
+              "text": "String that represents the name of the element in the RSS feed that corresponds to the pubDate of the feed item.",
+              "required": true
+            }
+          },
+          "text": "Object that contains mappings between the data in the RSS feed and the properties in the content object. Each property in the map object represents a property in the content object, and its value is a string that represents the name of the corresponding element in the RSS feed."
+        }
+      },
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "RSS feed id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Request body can include all but the readonly props.\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/integrations/rss_importer/feeds/{id}",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/integrations/rss_importer/feeds/id",
+        "api_ref": "https://developers.beyondwords.io/reference/rss_importerfeedupdate"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__integrations__rss_importer__feeds__id\n___delete": {
+      "provider_intent": "beyondwords__v1__projects__project_id__integrations__rss_importer__feeds__id\n___delete",
+      "provider_alias_intent": "/v1/projects/project_id/integrations/rss_importer/feeds/id\n",
+      "text": "Delete",
+      "category": "RSS Feed",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "RSS feed id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "RSS feed id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "User should be able to delete an RSS feed.\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/integrations/rss_importer/feeds/{id}\n",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/integrations/rss_importer/feeds/id\n",
+        "api_ref": "https://developers.beyondwords.io/reference/rss_importerfeeddelete"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__integrations__rss_importer__feeds__id__run___post": {
+      "provider_intent": "beyondwords__v1__projects__project_id__integrations__rss_importer__feeds__id__run___post",
+      "provider_alias_intent": "/v1/projects/project_id/integrations/rss_importer/feeds/id/run",
+      "text": "Run",
+      "category": "RSS Feed",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "RSS feed id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "RSS feed id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "User should be able to run an RSS feed bypassing the \"import_interval\".\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/integrations/rss_importer/feeds/{id}/run",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/integrations/rss_importer/feeds/id/run",
+        "api_ref": "https://developers.beyondwords.io/reference/rss_importerfeedrun"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__integrations__rss_importer__feeds__test___post": {
+      "provider_intent": "beyondwords__v1__projects__project_id__integrations__rss_importer__feeds__test___post",
+      "provider_alias_intent": "/v1/projects/project_id/integrations/rss_importer/feeds/test",
+      "text": "Test",
+      "category": "RSS Feed",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "enabled": {
+          "type": "boolean",
+          "text": "Whether importing is enabled or disabled.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "feed_url": {
+          "type": "string",
+          "text": "URL of the RSS feed you want to import.",
+          "required": true
+        },
+        "feed_content_type": {
+          "type": "enum",
+          "enum": [
+            "xml",
+            "json"
+          ],
+          "text": "Type of content in the feed. Possible values include xml or json.",
+          "required": true
+        },
+        "feed_headers": {
+          "type": "object",
+          "text": "Headers that you want to include in the HTTP request when fetching the RSS feed."
+        },
+        "import_interval": {
+          "type": "number",
+          "text": "Number of minutes between each import of the RSS feed."
+        },
+        "extractor_enabled": {
+          "type": "boolean",
+          "text": "Whether or not the RSS importer should fetch the content from the page linked in the map.source_url property. Set to true if the RSS feed does not contain the content. In this case you can set map.body to null.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "extractor_headers": {
+          "type": "object",
+          "text": "Headers that you want to include in the HTTP request when fetching and extracting the content from the map.source_url."
+        },
+        "map": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "array",
+              "text": "Array of strings that represent the name of the element in the RSS feed that corresponds to the title of the feed item."
+            },
+            "body": {
+              "type": "array",
+              "text": "Array of strings that represent the name of the element in the RSS feed that corresponds to the content of the feed item. If extractor_enabled is true then the RSS importer will open the URL in the map.source_url and extract the content from the page."
+            },
+            "summary": {
+              "type": "array",
+              "text": "Array of strings that represent the name of the element in the RSS feed that corresponds to the summary of the feed item."
+            },
+            "source_id": {
+              "type": "string",
+              "text": "String that represents the name of the element in the RSS feed that corresponds to the id of the feed item.",
+              "required": true
+            },
+            "source_url": {
+              "type": "string",
+              "text": "String that represents the name of the element in the RSS feed that corresponds to the URL of the feed item."
+            },
+            "author": {
+              "type": "string",
+              "text": "String that represents the name of the element in the RSS feed that corresponds to the author of the feed item."
+            },
+            "metadata": {
+              "type": "string",
+              "text": "String that represents the name of the element in the RSS feed that corresponds to the metadata of the feed item."
+            },
+            "image_url": {
+              "type": "string",
+              "text": "String that represents the name of the element in the RSS feed that corresponds to the image header of the feed item."
+            },
+            "publish_date": {
+              "type": "string",
+              "text": "String that represents the name of the element in the RSS feed that corresponds to the pubDate of the feed item.",
+              "required": true
+            }
+          },
+          "text": "Object that contains mappings between the data in the RSS feed and the properties in the content object. Each property in the map object represents a property in the content object, and its value is a string that represents the name of the corresponding element in the RSS feed."
+        }
+      },
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "User should be able to run an RSS feed bypassing the \"import_interval\".\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/integrations/rss_importer/feeds/test",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/integrations/rss_importer/feeds/test",
+        "api_ref": "https://developers.beyondwords.io/reference/rss_importerfeedtest"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__rules___get": {
+      "provider_intent": "beyondwords__v1__rules___get",
+      "provider_alias_intent": "/v1/rules",
+      "text": "List",
+      "category": "Rules",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "pagination[limit]": {
+          "type": "number",
+          "text": "'limit' sets the number of results to return in each page."
+        },
+        "pagination[offset]": {
+          "type": "number",
+          "text": "'offset' sets the first position to return from the results of the query. The default is 0, which starts the page at the first result."
+        },
+        "order[by]": {
+          "type": "enum",
+          "enum": [
+            "type",
+            "key",
+            "value"
+          ],
+          "text": "This is used to order rules by type or key or value"
+        },
+        "order[dir]": {
+          "type": "enum",
+          "enum": [
+            "asc",
+            "desc"
+          ],
+          "text": "This is used to order analytics in the ascending or descending order"
+        },
+        "filter[type]": {
+          "type": "string",
+          "text": "filter by rule type"
+        },
+        "filter[preview_status]": {
+          "type": "string",
+          "text": "filter by rule preview status"
+        },
+        "filter[key]": {
+          "type": "string",
+          "text": "filter by rule key"
+        },
+        "filter[scopes]": {
+          "type": "object",
+          "text": "filter items by scopes"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Lists rules in a organization\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/rules",
+        "alias_endpoint": "/beyondwords/v1/rules",
+        "api_ref": "https://developers.beyondwords.io/reference/rulesindex"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__rules___post": {
+      "provider_intent": "beyondwords__v1__rules___post",
+      "provider_alias_intent": "/v1/rules",
+      "text": "Create",
+      "category": "Rules",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "type": {
+          "type": "enum",
+          "enum": [
+            "substitute",
+            "say_as_word",
+            "say_as_letter_sequence",
+            "ipa_transcription",
+            "x_sampa_transcription",
+            "pinyin_transcription",
+            "jyutping_transcription"
+          ],
+          "text": "The rule type. Possible values are substitute, say_as_word, say_as_letter_sequence, ipa_transcription, x_sampa_transcription, pinyin_transcription, jyutping_transcription. Please note that not all voices support all rules"
+        },
+        "key": {
+          "type": "string",
+          "text": "The text you want the rule to be applied to"
+        },
+        "vakue": {
+          "type": "string",
+          "text": ""
+        },
+        "project": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "number",
+              "text": "Project id"
+            }
+          },
+          "text": "PROJECT OBJECT"
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "text": "Content id"
+            }
+          },
+          "text": "Content Object"
+        },
+        "language": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "text": "Language code"
+            }
+          },
+          "text": "Language Object"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Creates a rule in a organization\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/rules",
+        "alias_endpoint": "/beyondwords/v1/rules",
+        "api_ref": "https://developers.beyondwords.io/reference/rulescreate"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__rules__id___put": {
+      "provider_intent": "beyondwords__v1__rules__id___put",
+      "provider_alias_intent": "/v1/rules/id",
+      "text": "Update",
+      "category": "Rules",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your rule",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "type": {
+          "type": "enum",
+          "enum": [
+            "substitute",
+            "say_as_word",
+            "say_as_letter_sequence",
+            "ipa_transcription",
+            "x_sampa_transcription",
+            "pinyin_transcription",
+            "jyutping_transcription"
+          ],
+          "text": "The rule type. Possible values are substitute, say_as_word, say_as_letter_sequence, ipa_transcription, x_sampa_transcription, pinyin_transcription, jyutping_transcription. Please note that not all voices support all rules"
+        },
+        "key": {
+          "type": "string",
+          "text": "The text you want the rule to be applied to"
+        },
+        "vakue": {
+          "type": "string",
+          "text": ""
+        },
+        "project": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "number",
+              "text": "Project id"
+            }
+          },
+          "text": "PROJECT OBJECT"
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "text": "Content id"
+            }
+          },
+          "text": "Content Object"
+        },
+        "language": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "text": "Language code"
+            }
+          },
+          "text": "Language Object"
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your rule",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Updates rule in a organizaiton\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/rules/{id}",
+        "alias_endpoint": "/beyondwords/v1/rules/id",
+        "api_ref": "https://developers.beyondwords.io/reference/rulesupdate"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__rules__id\n___get": {
+      "provider_intent": "beyondwords__v1__rules__id\n___get",
+      "provider_alias_intent": "/v1/rules/id\n",
+      "text": "Show",
+      "category": "Rules",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your rule",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your rule",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Gets a rule from your organization\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/rules/{id}\n",
+        "alias_endpoint": "/beyondwords/v1/rules/id\n",
+        "api_ref": "https://developers.beyondwords.io/reference/rulesshow"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__rules__id\n___delete": {
+      "provider_intent": "beyondwords__v1__rules__id\n___delete",
+      "provider_alias_intent": "/v1/rules/id\n",
+      "text": "Delete",
+      "category": "Rules",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your rule",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your rule",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Deletes a rule from your organization\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/rules/{id}\n",
+        "alias_endpoint": "/beyondwords/v1/rules/id\n",
+        "api_ref": "https://developers.beyondwords.io/reference/rulesdelete"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__rules__id__regenerate_preview\n___post": {
+      "provider_intent": "beyondwords__v1__rules__id__regenerate_preview\n___post",
+      "provider_alias_intent": "/v1/rules/id/regenerate_preview\n",
+      "text": "Regenerate preview",
+      "category": "Rules",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your rule",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your rule",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Regenerate organization rule preview\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/rules/{id}/regenerate_preview\n",
+        "alias_endpoint": "/beyondwords/v1/rules/id/regenerate_preview\n",
+        "api_ref": "https://developers.beyondwords.io/reference/rulesregenerate_preview"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__rules__preview___post": {
+      "provider_intent": "beyondwords__v1__rules__preview___post",
+      "provider_alias_intent": "/v1/rules/preview",
+      "text": "Preview",
+      "category": "Rules",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "type": {
+          "type": "enum",
+          "enum": [
+            "substitute",
+            "say_as_word",
+            "say_as_letter_sequence",
+            "ipa_transcription",
+            "x_sampa_transcription",
+            "pinyin_transcription",
+            "jyutping_transcription"
+          ],
+          "text": "The rule type. Possible values are substitute, say_as_word, say_as_letter_sequence, ipa_transcription, x_sampa_transcription, pinyin_transcription, jyutping_transcription. Please note that not all voices support all rules"
+        },
+        "key": {
+          "type": "string",
+          "text": "The text you want the rule to be applied to"
+        },
+        "vakue": {
+          "type": "string",
+          "text": ""
+        },
+        "project": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "number",
+              "text": "Project id"
+            }
+          },
+          "text": "PROJECT OBJECT"
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "text": "Content id"
+            }
+          },
+          "text": "Content Object"
+        },
+        "language": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "text": "Language code"
+            }
+          },
+          "text": "Language Object"
+        },
+        "preview_voice": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "number",
+              "text": "preview_voice id"
+            }
+          },
+          "text": "preview_voice Object"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Preview audio for organization rule\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/rules/preview",
+        "alias_endpoint": "/beyondwords/v1/rules/preview",
+        "api_ref": "https://developers.beyondwords.io/reference/rulespreview"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__rules__phonemes___get": {
+      "provider_intent": "beyondwords__v1__rules__phonemes___get",
+      "provider_alias_intent": "/v1/rules/phonemes",
+      "text": "Phonemes",
+      "category": "Rules",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Phonemes list",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/rules/phonemes",
+        "alias_endpoint": "/beyondwords/v1/rules/phonemes",
+        "api_ref": "https://developers.beyondwords.io/reference/rulesphonemes"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__summarization_settings___get": {
+      "provider_intent": "beyondwords__v1__projects__project_id__summarization_settings___get",
+      "provider_alias_intent": "/v1/projects/project_id/summarization_settings",
+      "text": "Show",
+      "category": "Summarization settings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the summarization settings for your project\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/summarization_settings",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/summarization_settings",
+        "api_ref": "https://developers.beyondwords.io/reference/summarization_settingsshow"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__summarization_settings___put": {
+      "provider_intent": "beyondwords__v1__projects__project_id__summarization_settings___put",
+      "provider_alias_intent": "/v1/projects/project_id/summarization_settings",
+      "text": "Update",
+      "category": "Summarization settings",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "enabled": {
+          "type": "boolean",
+          "text": "Whether AI summaries should be generated for the project.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "prompt": {
+          "type": "string",
+          "text": "The prompt that will be used to generate AI summaries."
+        }
+      },
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update the summarization settings for your project\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/summarization_settings",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/summarization_settings",
+        "api_ref": "https://developers.beyondwords.io/reference/summarization_settingsupdate"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__upload___post": {
+      "provider_intent": "beyondwords__v1__upload___post",
+      "provider_alias_intent": "/v1/upload",
+      "text": "Upload",
+      "category": "Upload",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "file": {
+          "type": "file",
+          "text": "Binary file (limit 50 MB)",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Upload file",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/upload",
+        "alias_endpoint": "/beyondwords/v1/upload",
+        "api_ref": "https://developers.beyondwords.io/reference/uploadcreate"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__video_settings___get": {
+      "provider_intent": "beyondwords__v1__projects__project_id__video_settings___get",
+      "provider_alias_intent": "/v1/projects/project_id/video_settings",
+      "text": "Show",
+      "category": "Video Settings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the video settings for your project\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/video_settings",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/video_settings",
+        "api_ref": "https://developers.beyondwords.io/reference/video_settingsshow"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__video_settings___put": {
+      "provider_intent": "beyondwords__v1__projects__project_id__video_settings___put",
+      "provider_alias_intent": "/v1/projects/project_id/video_settings",
+      "text": "Update",
+      "category": "Video Settings",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "enabled": {
+          "type": "boolean",
+          "text": "Whether text-to-speech videos should be generated for the project.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "logo_image_url": {
+          "type": "string",
+          "text": "The logo that should appear in the corner of the video. Defaults to the BeyondWords logo."
+        },
+        "logo_image_position": {
+          "type": "enum",
+          "enum": [
+            "top-left",
+            "top-right"
+          ],
+          "text": "The position of the logo that appears in the corner of the video."
+        },
+        "background_color": {
+          "type": "string",
+          "text": "The background color of the video when there is no image. Supports CSS colors including linear-gradient(to right, ...)"
+        },
+        "text_background_color": {
+          "type": "string",
+          "text": "The background color to show behind text. Supports CSS colors including linear-gradient(to right, ...)"
+        },
+        "text_color": {
+          "type": "string",
+          "text": "The foreground color of text. Supports CSS colors including linear-gradient(to right, ...)"
+        },
+        "text_highlight_color": {
+          "type": "string",
+          "text": "The foreground color of text whilst the word is being read out. Supports CSS colors including linear-gradient(to right, ...)"
+        },
+        "waveform_color": {
+          "type": "string",
+          "text": "The color of the audio waveform bars. Supports CSS colors including linear-gradient(to right, ...)"
+        },
+        "content_image_enabled": {
+          "type": "boolean",
+          "text": "Whether to show the content's image_url as the default background image.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "image_extraction_enabled": {
+          "type": "boolean",
+          "text": "Whether to extract images by default from HTML content. Alternatively, set the data-beyondwords-image='true' attribute.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "pan_and_zoom_enabled": {
+          "type": "boolean",
+          "text": "Whether to automatically pan and zoom images in generated videos.",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update the video settings for your project\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/video_settings",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/video_settings",
+        "api_ref": "https://developers.beyondwords.io/reference/video_settingsupdate"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__voice_issues___get": {
+      "provider_intent": "beyondwords__v1__voice_issues___get",
+      "provider_alias_intent": "/v1/voice_issues",
+      "text": "List",
+      "category": "Voice issues",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "pagination[limit]": {
+          "type": "number",
+          "text": "'limit' sets the number of results to return in each page."
+        },
+        "pagination[offset]": {
+          "type": "number",
+          "text": "'offset' sets the first position to return from the results of the query. The default is 0, which starts the page at the first result."
+        },
+        "order[by]": {
+          "type": "enum",
+          "enum": [
+            "created"
+          ],
+          "text": "This is used to order voice issues by created time"
+        },
+        "order[dir]": {
+          "type": "enum",
+          "enum": [
+            "asc",
+            "desc"
+          ],
+          "text": "This is used to order analytics in the ascending or descending order"
+        },
+        "filter[label]": {
+          "type": "string",
+          "text": "filter by label"
+        },
+        "filter[status]": {
+          "type": "string",
+          "text": "filter by status"
+        },
+        "filter[description]": {
+          "type": "string",
+          "text": "filter by description"
+        },
+        "filter[scopes]": {
+          "type": "object",
+          "text": "filter items by scopes"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Lists voice issues in a organization.\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/voice_issues",
+        "alias_endpoint": "/beyondwords/v1/voice_issues",
+        "api_ref": "https://developers.beyondwords.io/reference/voice_issuesindex"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__voice_issues___post": {
+      "provider_intent": "beyondwords__v1__voice_issues___post",
+      "provider_alias_intent": "/v1/voice_issues",
+      "text": "Create",
+      "category": "Voice issues",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "label": {
+          "type": "enum",
+          "enum": [
+            "incorrect_pronunciation",
+            "incorrect_lexical_stress",
+            "incorrect_heteronym",
+            "incorrect_language",
+            "incorrect_intonation",
+            "incorrect_spoken_format",
+            "incorrect_pausing",
+            "incorrect_speed",
+            "text_missing_or_added",
+            "audio_issue"
+          ],
+          "text": "The voice issue label. Possible values are incorrect_pronunciation, incorrect_lexical_stress, incorrect_heteronym, incorrect_language, incorrect_intonation, incorrect_spoken_format, incorrect_pausing, incorrect_speed, text_missing_or_added, audio_issue"
+        },
+        "description": {
+          "type": "string",
+          "text": "The voice issue description"
+        },
+        "project": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "number",
+              "text": "Project id"
+            }
+          },
+          "text": "Project Object"
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "number",
+              "text": "Content id"
+            }
+          },
+          "text": "Content Object"
+        },
+        "media": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string",
+              "text": "Media id"
+            }
+          },
+          "text": "Media Object"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Creates a voice issue in a project\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/voice_issues",
+        "alias_endpoint": "/beyondwords/v1/voice_issues",
+        "api_ref": "https://developers.beyondwords.io/reference/voice_issuecreate"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__voice_issues__id___put": {
+      "provider_intent": "beyondwords__v1__voice_issues__id___put",
+      "provider_alias_intent": "/v1/voice_issues/id",
+      "text": "Update",
+      "category": "Voice issues",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your voice issue",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "label": {
+          "type": "enum",
+          "enum": [
+            "incorrect_pronunciation",
+            "incorrect_lexical_stress",
+            "incorrect_heteronym",
+            "incorrect_language",
+            "incorrect_intonation",
+            "incorrect_spoken_format",
+            "incorrect_pausing",
+            "incorrect_speed",
+            "text_missing_or_added",
+            "audio_issue"
+          ],
+          "text": "The voice issue label. Possible values are incorrect_pronunciation, incorrect_lexical_stress, incorrect_heteronym, incorrect_language, incorrect_intonation, incorrect_spoken_format, incorrect_pausing, incorrect_speed, text_missing_or_added, audio_issue"
+        },
+        "description": {
+          "type": "string",
+          "text": "The voice issue description"
+        },
+        "project": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "number",
+              "text": "Project id"
+            }
+          },
+          "text": "Project Object"
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "number",
+              "text": "Content id"
+            }
+          },
+          "text": "Content Object"
+        },
+        "media": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string",
+              "text": "Media id"
+            }
+          },
+          "text": "Media Object"
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your voice issue",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Updates a voice issue in a organization\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/voice_issues/{id}",
+        "alias_endpoint": "/beyondwords/v1/voice_issues/id",
+        "api_ref": "https://developers.beyondwords.io/reference/voice_issueupdate"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__voice_issues__id___get": {
+      "provider_intent": "beyondwords__v1__voice_issues__id___get",
+      "provider_alias_intent": "/v1/voice_issues/id",
+      "text": "Show",
+      "category": "Voice issues",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your voice issue",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your voice issue",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Gets a voice issue in a project\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/voice_issues/{id}",
+        "alias_endpoint": "/beyondwords/v1/voice_issues/id",
+        "api_ref": "https://developers.beyondwords.io/reference/voice_issueshow"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__voice_issues__id___delete": {
+      "provider_intent": "beyondwords__v1__voice_issues__id___delete",
+      "provider_alias_intent": "/v1/voice_issues/id",
+      "text": "Delete",
+      "category": "Voice issues",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your voice issue",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The numeric ID of your voice issue",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Deletes a voice issue in a project\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/voice_issues/{id}",
+        "alias_endpoint": "/beyondwords/v1/voice_issues/id",
+        "api_ref": "https://developers.beyondwords.io/reference/voice_issuedelete"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__organization__voices___get": {
+      "provider_intent": "beyondwords__v1__organization__voices___get",
+      "provider_alias_intent": "/v1/organization/voices",
+      "text": "List",
+      "category": "Voices",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "filter[language.id]": {
+          "type": "string",
+          "text": "filter by language id"
+        },
+        "filter[language.code]": {
+          "type": "string",
+          "text": "filter by language code"
+        },
+        "filter[scopes][]": {
+          "type": "array",
+          "text": "The filter scopes"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Lists available voices\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/organization/voices",
+        "alias_endpoint": "/beyondwords/v1/organization/voices",
+        "api_ref": "https://developers.beyondwords.io/reference/organizationvoicesindex"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__organization__voices__id___put": {
+      "provider_intent": "beyondwords__v1__organization__voices__id___put",
+      "provider_alias_intent": "/v1/organization/voices/id",
+      "text": "Update",
+      "category": "Voices",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "speaking_rate": {
+          "type": "number",
+          "text": "The speaking rate for this voice as a percentage. Ranges from 50 to 200, where 100 is default speed, 50 is half speed, and 200 is double speed.",
+          "required": true
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Updates a voice in a organization",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/organization/voices/{id}",
+        "alias_endpoint": "/beyondwords/v1/organization/voices/id",
+        "api_ref": "https://developers.beyondwords.io/reference/organizationvoicesupdate"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__webhooks\n___get": {
+      "provider_intent": "beyondwords__v1__projects__project_id__webhooks\n___get",
+      "provider_alias_intent": "/v1/projects/project_id/webhooks\n",
+      "text": "List",
+      "category": "Webhooks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "pagination[limit]": {
+          "type": "number",
+          "text": "'limit' sets the number of results to return in each page."
+        },
+        "pagination[offset]": {
+          "type": "number",
+          "text": "'offset' sets the first position to return from the results of the query. The default is 0, which starts the page at the first result."
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Lists webhooks within a project",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/webhooks\n",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/webhooks\n",
+        "api_ref": "https://developers.beyondwords.io/reference/projectswebhooksindex"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__webhooks___post": {
+      "provider_intent": "beyondwords__v1__projects__project_id__webhooks___post",
+      "provider_alias_intent": "/v1/projects/project_id/webhooks",
+      "text": "Create",
+      "category": "Webhooks",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "url": {
+          "type": "string",
+          "text": "The URL that BeyondWords will send webhook notifications to. This URL must be served over HTTPS",
+          "required": true
+        },
+        "headers": {
+          "type": "object",
+          "text": ""
+        },
+        "enabled": {
+          "type": "boolean",
+          "default": true,
+          "text": "Whether or not the webhook is enabled or disabled Has the value true if enabled. The default is true.",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Creates a webhook in project.\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/webhooks",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/webhooks",
+        "api_ref": "https://developers.beyondwords.io/reference/projectswebhookscreate"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__webhooks__id\n___put": {
+      "provider_intent": "beyondwords__v1__projects__project_id__webhooks__id\n___put",
+      "provider_alias_intent": "/v1/projects/project_id/webhooks/id\n",
+      "text": "Update",
+      "category": "Webhooks",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "url": {
+          "type": "string",
+          "text": "The URL that BeyondWords will send webhook notifications to. This URL must be served over HTTPS"
+        },
+        "headers": {
+          "type": "object",
+          "text": ""
+        },
+        "enabled": {
+          "type": "boolean",
+          "default": true,
+          "text": "Whether or not the webhook is enabled or disabled Has the value true if enabled. The default is true.",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Updates a webhook in a project\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/webhooks/{id}\n",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/webhooks/id\n",
+        "api_ref": "https://developers.beyondwords.io/reference/projectswebhooksupdate"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__webhooks__id\n___get": {
+      "provider_intent": "beyondwords__v1__projects__project_id__webhooks__id\n___get",
+      "provider_alias_intent": "/v1/projects/project_id/webhooks/id\n",
+      "text": "Show",
+      "category": "Webhooks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Gets a webhook in a project\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/webhooks/{id}\n",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/webhooks/id\n",
+        "api_ref": "https://developers.beyondwords.io/reference/projectswebhooksshow"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__webhooks__id___delete": {
+      "provider_intent": "beyondwords__v1__projects__project_id__webhooks__id___delete",
+      "provider_alias_intent": "/v1/projects/project_id/webhooks/id",
+      "text": "Delete",
+      "category": "Webhooks",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Deletes a webhook in a project.\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/webhooks/{id}",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/webhooks/id",
+        "api_ref": "https://developers.beyondwords.io/reference/projectswebhooksdelete"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "beyondwords__v1__projects__project_id__webhooks__test\n___post": {
+      "provider_intent": "beyondwords__v1__projects__project_id__webhooks__test\n___post",
+      "provider_alias_intent": "/v1/projects/project_id/webhooks/test\n",
+      "text": "Test",
+      "category": "Webhooks",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "url": {
+          "type": "string",
+          "text": "The URL that BeyondWords will send webhook notifications to. This URL must be served over HTTPS"
+        },
+        "headers": {
+          "type": "object",
+          "text": ""
+        }
+      },
+      "path": {
+        "project_id": {
+          "type": "string",
+          "text": "The numeric ID of your project",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Test project webhook\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.beyondwords.io/v1/projects/{project_id}/webhooks/test\n",
+        "alias_endpoint": "/beyondwords/v1/projects/project_id/webhooks/test\n",
+        "api_ref": "https://developers.beyondwords.io/reference/projectswebhookstest"
+      },
+      "auth": [],
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

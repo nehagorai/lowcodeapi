@@ -1,0 +1,686 @@
+{
+  "routes": {
+    "zohoworkely__workelry__v2__settings__fields___get": {
+      "provider_intent": "zohoworkely__workelry__v2__settings__fields___get",
+      "provider_alias_intent": "/workelry/v2/settings/fields",
+      "text": "Fields",
+      "category": "Meta Data API",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "module": {
+          "type": "string",
+          "text": "Specify the API name of the required module"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve information about the fields",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/workelry/v2/settings/fields",
+        "alias_endpoint": "/zohoworkely/workelry/v2/settings/fields",
+        "api_ref": "https://www.zoho.com/workerly/developer-guide/field-meta.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoWorkerly.settings.fields.read,\nZohoWorkerly.settings.fields.all\nZohoWorkerly.settings.all",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoworkely__workerly__v2__settings__layouts__module_id___get": {
+      "provider_intent": "zohoworkely__workerly__v2__settings__layouts__module_id___get",
+      "provider_alias_intent": "/workerly/v2/settings/layouts/module_id",
+      "text": "Layouts",
+      "category": "Meta Data API",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "module": {
+          "type": "string",
+          "text": "Specify the API name of the required module. For example, Temps, Contacts, Clients, Jobs and so on"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Get layouts for a specific module",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/workerly/v2/settings/layouts/{module_id}",
+        "alias_endpoint": "/zohoworkely/workerly/v2/settings/layouts/module_id",
+        "api_ref": "https://www.zoho.com/workerly/developer-guide/layouts-meta.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoWorkerly.settings.layouts.read,\nZohoWorkerly.settings.layouts.all,\nZohoWorkerly.settings.all",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoworkely__workerly__v2__settings__modules__module_api_name___get": {
+      "provider_intent": "zohoworkely__workerly__v2__settings__modules__module_api_name___get",
+      "provider_alias_intent": "/workerly/v2/settings/modules/module_api_name",
+      "text": "Custom Views Meta Data",
+      "category": "Meta Data API",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "module": {
+          "type": "string",
+          "text": "Specify the API name of the required module. For example, Temps, Contacts, Clients, and so on"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Get the custom views data of a particular module",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/workerly/v2/settings/modules/{module_api_name}",
+        "alias_endpoint": "/zohoworkely/workerly/v2/settings/modules/module_api_name",
+        "api_ref": "https://www.zoho.com/workerly/developer-guide/custom-view-meta.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoWorkerly.settings.custom_views.read, ZohoWorkerly.settings.custom_views.all\nZohoWorkerly.settings.all",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoworkely__workerly__v2__settings__related_lists___get": {
+      "provider_intent": "zohoworkely__workerly__v2__settings__related_lists___get",
+      "provider_alias_intent": "/workerly/v2/settings/related_lists",
+      "text": "Related Lists Meta Data",
+      "category": "Meta Data API",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "module": {
+          "type": "string",
+          "text": "Specify the API name of the required module. For example, Temps, Contacts, Clients, Timesheets and so on"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Get the related list data of a particular module",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/workerly/v2/settings/related_lists",
+        "alias_endpoint": "/zohoworkely/workerly/v2/settings/related_lists",
+        "api_ref": "https://www.zoho.com/workerly/developer-guide/related-list-meta.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoWorkerly.settings.related_lists.read,\nZohoWorkerly.settings.related_lists.all,\nZohoWorkerly.settings.all",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoworkely__workerly__v2__module_api_name___get": {
+      "provider_intent": "zohoworkely__workerly__v2__module_api_name___get",
+      "provider_alias_intent": "/workerly/v2/module_api_name",
+      "text": "Get Records",
+      "category": "Records",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "fields": {
+          "type": "string",
+          "text": "To list all the module records with respect to fields"
+        },
+        "sort_order": {
+          "type": "string",
+          "text": "To sort the available list of records in either ascending or descending order"
+        },
+        "sort_by": {
+          "type": "string",
+          "text": "To sort the available list of records based on the given field"
+        },
+        "converted": {
+          "type": "string",
+          "text": "To get the list of converted records"
+        },
+        "approved": {
+          "type": "string",
+          "text": "To get the list of approved records"
+        },
+        "page": {
+          "type": "number",
+          "text": "To get the list of records from the respective pages"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "To get the list of records available per page"
+        },
+        "cvid": {
+          "type": "number",
+          "text": "To get the list of records based on custom views"
+        },
+        "territory_id": {
+          "type": "number",
+          "text": "To get the list of records based on the territory"
+        },
+        "include_child": {
+          "type": "boolean",
+          "text": "To include records from the child territories",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "TO get the list of available records from a module",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/workerly/v2/{module_api_name}",
+        "alias_endpoint": "/zohoworkely/workerly/v2/module_api_name",
+        "api_ref": "https://www.zoho.com/workerly/developer-guide/get-records.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoWORKERLY.modules.all, ZohoWORKERLY.modules.{module_name}.{operation_type}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoworkely__workerly__v2__module_api_name___post": {
+      "provider_intent": "zohoworkely__workerly__v2__module_api_name___post",
+      "provider_alias_intent": "/workerly/v2/module_api_name",
+      "text": "Insert Records",
+      "category": "Records",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "Single Line": {
+          "type": "string",
+          "text": "Accepts up to 255 characters"
+        },
+        "Multi-Line": {
+          "type": "string",
+          "text": "Small - accepts up to 2000 characters"
+        },
+        "Email": {
+          "type": "string",
+          "text": "Accepts valid email IDs"
+        },
+        "Phone": {
+          "type": "string",
+          "text": "Accepts up to 30 characters. This limit may vary based on the value configured in 'Number of characters allowed' in the properties pop-up of the field, in UI"
+        },
+        "Picklist": {
+          "type": "string",
+          "text": "You can either pass an existing picklist value or add a new one"
+        },
+        "Multi-Select Picklist": {
+          "type": "array",
+          "text": "You can either pass existing picklist values or add a new one"
+        },
+        "Date": {
+          "type": "string",
+          "text": "Accepts date in yyyy-MM-dd format"
+        },
+        "Date/time": {
+          "type": "string",
+          "text": "Accepts date and time in yyyy-MM-ddTHH:mm:ss±HH:mm ISO 8601 format"
+        },
+        "Number": {
+          "type": "number",
+          "text": "Accepts numbers up to 9 digitst"
+        },
+        "Currency": {
+          "type": "number",
+          "text": "Before decimal point - accepts numbers up to 16 digits"
+        },
+        "Decimal": {
+          "type": "number",
+          "text": "Before decimal point - accepts numbers up to 16 digits"
+        },
+        "Percent": {
+          "type": "number",
+          "text": "Accepts numbers up to 5 digits"
+        },
+        "Long Integer": {
+          "type": "string",
+          "text": "Accepts numbers up to 18 digits"
+        },
+        "Checkbox": {
+          "type": "boolean",
+          "text": "Accepts only Boolean values(true,false)",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "URL": {
+          "type": "string",
+          "text": "Accepts valid URLs"
+        },
+        "Lookup": {
+          "type": "object",
+          "text": "Accepts valid name and unique ID of the record, which you can get through meta data API"
+        },
+        "Multi-select lookup": {
+          "type": "object",
+          "text": "Accepts valid record names and unique IDs"
+        },
+        "User": {
+          "type": "object",
+          "text": "This is a default look-up field to users in Zoho Workerly"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "To add new entities to a module",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/workerly/v2/{module_api_name}",
+        "alias_endpoint": "/zohoworkely/workerly/v2/module_api_name",
+        "api_ref": "https://www.zoho.com/workerly/developer-guide/insert-records.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoWorkerly.modules.all, ZohoWorkerly.modules.{module_name}.{operation_type}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoworkely__workerly__v2__module_api_name___put": {
+      "provider_intent": "zohoworkely__workerly__v2__module_api_name___put",
+      "provider_alias_intent": "/workerly/v2/module_api_name",
+      "text": "Update Records",
+      "category": "Records",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "Single Line": {
+          "type": "string",
+          "text": "Accepts up to 255 characters"
+        },
+        "Multi-Line": {
+          "type": "string",
+          "text": "Small - accepts up to 2000 characters"
+        },
+        "Email": {
+          "type": "string",
+          "text": "Accepts valid email IDs"
+        },
+        "Phone": {
+          "type": "string",
+          "text": "Accepts up to 30 characters. This limit may vary based on the value configured in 'Number of characters allowed' in the properties pop-up of the field, in UI"
+        },
+        "Picklist": {
+          "type": "string",
+          "text": "You can either pass an existing picklist value or add a new one"
+        },
+        "Multi-Select Picklist": {
+          "type": "array",
+          "text": "You can either pass existing picklist values or add a new one"
+        },
+        "Date": {
+          "type": "string",
+          "text": "Accepts date in yyyy-MM-dd format"
+        },
+        "Date/time": {
+          "type": "string",
+          "text": "Accepts date and time in yyyy-MM-ddTHH:mm:ss±HH:mm ISO 8601 format"
+        },
+        "Number": {
+          "type": "number",
+          "text": "Accepts numbers up to 9 digitst"
+        },
+        "Currency": {
+          "type": "number",
+          "text": "Before decimal point - accepts numbers up to 16 digits"
+        },
+        "Decimal": {
+          "type": "number",
+          "text": "Before decimal point - accepts numbers up to 16 digits"
+        },
+        "Percent": {
+          "type": "number",
+          "text": "Accepts numbers up to 5 digits"
+        },
+        "Long Integer": {
+          "type": "string",
+          "text": "Accepts numbers up to 18 digits"
+        },
+        "Checkbox": {
+          "type": "boolean",
+          "text": "Accepts only Boolean values(true,false)",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "URL": {
+          "type": "string",
+          "text": "Accepts valid URLs"
+        },
+        "Lookup": {
+          "type": "object",
+          "text": "Accepts valid name and unique ID of the record, which you can get through meta data API"
+        },
+        "Multi-select lookup": {
+          "type": "object",
+          "text": "Accepts valid record names and unique IDs"
+        },
+        "User": {
+          "type": "object",
+          "text": "This is a default look-up field to users in Zoho Workerly"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "To update existing entities in the module",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/workerly/v2/{module_api_name}",
+        "alias_endpoint": "/zohoworkely/workerly/v2/module_api_name",
+        "api_ref": "https://www.zoho.com/workerly/developer-guide/update-records.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoWorkerly.modules.all,  ZohoWorkerly.modules.{module_name}.{operation_type}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoworkely__workerly__v2__module_api_name___delete": {
+      "provider_intent": "zohoworkely__workerly__v2__module_api_name___delete",
+      "provider_alias_intent": "/workerly/v2/module_api_name",
+      "text": "Delete Records",
+      "category": "Records",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "ids": {
+          "type": "number",
+          "text": "Specify the unique ID of the record"
+        },
+        "wf_trigger": {
+          "type": "boolean",
+          "text": "Represents if the workflow rules are to be triggered upon record deletion",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "To delete entities or records from a module",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/workerly/v2/{module_api_name}",
+        "alias_endpoint": "/zohoworkely/workerly/v2/module_api_name",
+        "api_ref": "https://www.zoho.com/workerly/developer-guide/delete-records.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoWorkerly.modules.all, ZohoWorkerly.modules.{module_name}.{operation_type}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoworkely__workerly__v2__module_api_name__deleted___get": {
+      "provider_intent": "zohoworkely__workerly__v2__module_api_name__deleted___get",
+      "provider_alias_intent": "/workerly/v2/module_api_name/deleted",
+      "text": "List of Deleted Records",
+      "category": "Records",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "module ": {
+          "type": "string",
+          "text": "Specify the module API name"
+        },
+        "type": {
+          "type": "string",
+          "text": "To get the list of all deleted records Recycle"
+        },
+        "page": {
+          "type": "number",
+          "text": "To get the list of records from the respective pages"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "To get the list of records available per page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "To get the list of deleted records",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/workerly/v2/{module_api_name}/deleted",
+        "alias_endpoint": "/zohoworkely/workerly/v2/module_api_name/deleted",
+        "api_ref": "https://www.zoho.com/workerly/developer-guide/get-deleted-records.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoWorkerly.modules.all, ZohoWorkerly.modules.{module_name}.{operation_type}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoworkely__workerly__v2__module_api_name__search___get": {
+      "provider_intent": "zohoworkely__workerly__v2__module_api_name__search___get",
+      "provider_alias_intent": "/workerly/v2/module_api_name/search",
+      "text": "Search Records",
+      "category": "Records",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "criteria": {
+          "type": "string",
+          "text": "You can search for a maximum of 10 criteria (with same or different columns) with equals and starts_with conditions"
+        },
+        "email": {
+          "type": "string",
+          "text": "Performs module search by email. All the email fields of a particular module will be searched and listed"
+        },
+        "phone": {
+          "type": "string",
+          "text": "Performs module search by phone number. All the phone fields of a particular module will be searched and listed"
+        },
+        "word": {
+          "type": "string",
+          "text": "Performs global search by word"
+        },
+        "converted": {
+          "type": "string",
+          "text": "To get the list of converted records. Default value is false"
+        },
+        "approved": {
+          "type": "string",
+          "text": "To get the list of approved records. Default value is true"
+        },
+        "page": {
+          "type": "number",
+          "text": "To get the list of records from the respective pages"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "To get the list of records available per page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "To retrieve the records that match your search criteria",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/workerly/v2/{module_api_name}/search",
+        "alias_endpoint": "/zohoworkely/workerly/v2/module_api_name/search",
+        "api_ref": "https://www.zoho.com/workerly/developer-guide/search-records.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoWorkerly.modules.all,  ZohoWorkerly.modules.{module_name}.{operation_type}\n(and) note: Additionally, the API supports activated marketplace,extensions, ZohoSearch.securesearch .READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

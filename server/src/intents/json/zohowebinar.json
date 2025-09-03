@@ -1,0 +1,629 @@
+{
+  "routes": {
+    "zohowebinar__api__v2__zso_id__sessions__meeting_key-json___get": {
+      "provider_intent": "zohowebinar__api__v2__zso_id__sessions__meeting_key-json___get",
+      "provider_alias_intent": "/api/v2/zso_id/sessions/meeting_key.json",
+      "text": "Get Meeting API",
+      "category": "Meeting",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "zso_id": {
+          "type": "string",
+          "text": "zso Id",
+          "required": true
+        },
+        "meeting_key": {
+          "type": "string",
+          "text": "Meeting Key",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "zso_id": {
+          "type": "string",
+          "text": "zso Id",
+          "required": true
+        },
+        "meeting_key": {
+          "type": "string",
+          "text": "Meeting Key",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "You can use this API to get the details of a meeting",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/{zso_id}/sessions/{meeting_key}.json",
+        "alias_endpoint": "/zohowebinar/api/v2/zso_id/sessions/meeting_key.json",
+        "api_ref": "https://www.zoho.com/meeting/api-integration/meeting-api/get-meeting-api.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoMeeting.meeting.READ",
+      "api_endpoint_src": "{endpoint}/api/v2/{zsoid}/sessions/{meetingKey}.json",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowebinar__api__v2__zso_id__sessions-json___post": {
+      "provider_intent": "zohowebinar__api__v2__zso_id__sessions-json___post",
+      "provider_alias_intent": "/api/v2/zso_id/sessions.json",
+      "text": "Create a Meeting",
+      "category": "Meeting",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "zso_id": {
+          "type": "string",
+          "text": "zso Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "session": {
+          "type": "object",
+          "text": "Session"
+        }
+      },
+      "path": {
+        "zso_id": {
+          "type": "string",
+          "text": "zso Id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "This API allows you to create a meeting ",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/{zso_id}/sessions.json",
+        "alias_endpoint": "/zohowebinar/api/v2/zso_id/sessions.json",
+        "api_ref": "https://www.zoho.com/meeting/api-integration/meeting-api/create-a-meeting.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoMeeting.meeting.CREATE",
+      "api_endpoint_src": "{endpoint}/api/v2/{zsoid}/sessions.json",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowebinar__api__v2__zso_id__sessions-json___get": {
+      "provider_intent": "zohowebinar__api__v2__zso_id__sessions-json___get",
+      "provider_alias_intent": "/api/v2/zso_id/sessions.json",
+      "text": "List of Meeting API",
+      "category": "Meeting",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "zso_id": {
+          "type": "string",
+          "text": "zso Id",
+          "required": true
+        },
+        "listtype": {
+          "type": "string",
+          "text": "List Type of the Meeting. Allowed Regex: all | past | week | month | today | upcoming",
+          "required": true
+        },
+        "index": {
+          "type": "number",
+          "text": "Index of the Meeting Record",
+          "required": true
+        },
+        "count": {
+          "type": "number",
+          "text": "Count of the Meeting Records needed in list",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "zso_id": {
+          "type": "string",
+          "text": "zso Id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "You can use this API to get the list of meetings",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/{zso_id}/sessions.json",
+        "alias_endpoint": "/zohowebinar/api/v2/zso_id/sessions.json",
+        "api_ref": "https://www.zoho.com/meeting/api-integration/meeting-api/list-of-meeting-api.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoMeeting.meeting.READ",
+      "api_endpoint_src": "{endpoint}/api/v2/{zsoid}/sessions.json",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowebinar__api__v2__zso_id__sessions__meeting_key-json___put": {
+      "provider_intent": "zohowebinar__api__v2__zso_id__sessions__meeting_key-json___put",
+      "provider_alias_intent": "/api/v2/zso_id/sessions/meeting_key.json",
+      "text": "Edit Meeting API",
+      "category": "Meeting",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "zso_id": {
+          "type": "string",
+          "text": "zso Id",
+          "required": true
+        },
+        "meeting_key": {
+          "type": "string",
+          "text": "Meeting Key",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "session": {
+          "type": "object",
+          "text": "Session"
+        }
+      },
+      "path": {
+        "zso_id": {
+          "type": "string",
+          "text": "zso Id",
+          "required": true
+        },
+        "meeting_key": {
+          "type": "string",
+          "text": "Meeting Key",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "You can use this API to edit a meeting",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/{zso_id}/sessions/{meeting_key}.json",
+        "alias_endpoint": "/zohowebinar/api/v2/zso_id/sessions/meeting_key.json",
+        "api_ref": "https://www.zoho.com/meeting/api-integration/meeting-api/edit-meeting-api.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoMeeting.meeting.UPDATE",
+      "api_endpoint_src": "{endpoint}/api/v2/{zsoid}/sessions/{meetingKey}.json",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowebinar__api__v2__zso_id__sessions__meeting_key-json___delete": {
+      "provider_intent": "zohowebinar__api__v2__zso_id__sessions__meeting_key-json___delete",
+      "provider_alias_intent": "/api/v2/zso_id/sessions/meeting_key.json",
+      "text": "Delete Meeting API",
+      "category": "Meeting",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "zso_id": {
+          "type": "string",
+          "text": "zso Id",
+          "required": true
+        },
+        "meeting_key": {
+          "type": "string",
+          "text": "Meeting Key",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "zso_id": {
+          "type": "string",
+          "text": "zso Id",
+          "required": true
+        },
+        "meeting_key": {
+          "type": "string",
+          "text": "Meeting Key",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "You can use this API to delete a meeting",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/{zso_id}/sessions/{meeting_key}.json",
+        "alias_endpoint": "/zohowebinar/api/v2/zso_id/sessions/meeting_key.json",
+        "api_ref": "https://www.zoho.com/meeting/api-integration/meeting-api/delete-meeting-api.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoMeeting.meeting.DELETE",
+      "api_endpoint_src": "{endpoint}/api/v2/{zsoid}/sessions/{meetingKey}.json",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowebinar__api__v2__zso_id__webinar-json___get": {
+      "provider_intent": "zohowebinar__api__v2__zso_id__webinar-json___get",
+      "provider_alias_intent": "/api/v2/zso_id/webinar.json",
+      "text": "List of Webinar API",
+      "category": "Webinar",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "zso_id": {
+          "type": "string",
+          "text": "zso Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "zso_id": {
+          "type": "string",
+          "text": "zso Id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "You can use this API to get the list of webinars",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/{zso_id}/webinar.json",
+        "alias_endpoint": "/zohowebinar/api/v2/zso_id/webinar.json",
+        "api_ref": "https://www.zoho.com/meeting/api-integration/webinar-api/list-of-webinar-api.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoMeeting.webinar.READ",
+      "api_endpoint_src": "{endpoint}/api/v2/{zsoid}/webinar.json",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowebinar__api__v2__zso_id__webinar__webinar_key-json___get": {
+      "provider_intent": "zohowebinar__api__v2__zso_id__webinar__webinar_key-json___get",
+      "provider_alias_intent": "/api/v2/zso_id/webinar/webinar_key.json",
+      "text": "Get Webinar API",
+      "category": "Webinar",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "zso_id": {
+          "type": "string",
+          "text": "zso Id",
+          "required": true
+        },
+        "webniar_key": {
+          "type": "string",
+          "text": "Webniar Key",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "zso_id": {
+          "type": "string",
+          "text": "zso Id",
+          "required": true
+        },
+        "webniar_key": {
+          "type": "string",
+          "text": "Webniar Key",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "You can use this API to get the details of a webinar",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/{zso_id}/webinar/{webinar_key}.json",
+        "alias_endpoint": "/zohowebinar/api/v2/zso_id/webinar/webinar_key.json",
+        "api_ref": "https://www.zoho.com/meeting/api-integration/webinar-api/get-webinar-api.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoMeeting.webinar.READ",
+      "api_endpoint_src": "{endpoint}/api/v2/{zsoid}/webinar/{webinarKey}.json",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowebinar__api__v2__zso_id__webinar-json___post": {
+      "provider_intent": "zohowebinar__api__v2__zso_id__webinar-json___post",
+      "provider_alias_intent": "/api/v2/zso_id/webinar.json",
+      "text": "Create a Webinar",
+      "category": "Webinar",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "zso_id": {
+          "type": "string",
+          "text": "zso Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "session": {
+          "type": "object",
+          "text": "Session"
+        }
+      },
+      "path": {
+        "zso_id": {
+          "type": "string",
+          "text": "zso Id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "You can use this API to create a webinar ",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/{zso_id}/webinar.json",
+        "alias_endpoint": "/zohowebinar/api/v2/zso_id/webinar.json",
+        "api_ref": "https://www.zoho.com/meeting/api-integration/webinar-api/create-a-webinar.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoMeeting.webinar.CREATE",
+      "api_endpoint_src": "{endpoint}/api/v2/{zsoid}/webinar.json",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowebinar__api__v2__zso_id__webinar__webinar_key-json___put": {
+      "provider_intent": "zohowebinar__api__v2__zso_id__webinar__webinar_key-json___put",
+      "provider_alias_intent": "/api/v2/zso_id/webinar/webinar_key.json",
+      "text": "Edit Webinar API",
+      "category": "Webinar",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "zso_id": {
+          "type": "string",
+          "text": "zso Id",
+          "required": true
+        },
+        "webniar_key": {
+          "type": "string",
+          "text": "Webniar Key",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "session": {
+          "type": "object",
+          "text": "Session"
+        }
+      },
+      "path": {
+        "zso_id": {
+          "type": "string",
+          "text": "zso Id",
+          "required": true
+        },
+        "webniar_key": {
+          "type": "string",
+          "text": "Webniar Key",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "You can use this API to edit the title, description, and time of your webinar",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/{zso_id}/webinar/{webinar_key}.json",
+        "alias_endpoint": "/zohowebinar/api/v2/zso_id/webinar/webinar_key.json",
+        "api_ref": "https://www.zoho.com/meeting/api-integration/webinar-api/edit-webinar.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoMeeting.webinar.UPDATE",
+      "api_endpoint_src": "{endpoint}/api/v2/{zsoid}/webinar/{webinarKey}.json",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohowebinar__api__v2__zso_id__webinar__webinar_key-json___delete": {
+      "provider_intent": "zohowebinar__api__v2__zso_id__webinar__webinar_key-json___delete",
+      "provider_alias_intent": "/api/v2/zso_id/webinar/webinar_key.json",
+      "text": "Delete Webinar API",
+      "category": "Webinar",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "zso_id": {
+          "type": "string",
+          "text": "zso Id",
+          "required": true
+        },
+        "webniar_key": {
+          "type": "string",
+          "text": "Webniar Key",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "zso_id": {
+          "type": "string",
+          "text": "zso Id",
+          "required": true
+        },
+        "webniar_key": {
+          "type": "string",
+          "text": "Webniar Key",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "You can use this API to delete a webinar",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/{zso_id}/webinar/{webinar_key}.json",
+        "alias_endpoint": "/zohowebinar/api/v2/zso_id/webinar/webinar_key.json",
+        "api_ref": "https://www.zoho.com/meeting/api-integration/webinar-api/delete-webinar-api.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoMeeting.webinar.DELETE",
+      "api_endpoint_src": "{endpoint}/api/v2/{zsoid}/webinar/{webinarKey}.json",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

@@ -1,0 +1,3990 @@
+{
+  "routes": {
+    "zohoconnect__pulse__api__addevent___post": {
+      "provider_intent": "zohoconnect__pulse__api__addevent___post",
+      "provider_alias_intent": "/pulse/api/addevent",
+      "text": "Create Event",
+      "category": "Events",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "scopeID": {
+          "type": "string",
+          "text": "Network in which the event is to be posted",
+          "required": true
+        },
+        "partitionId": {
+          "type": "string",
+          "text": "The event can be posted in either the company wall or the group wall or the user's wall"
+        },
+        "title": {
+          "type": "string",
+          "text": "Event title. Maximum characters allowed is 250",
+          "required": true
+        },
+        "desc": {
+          "type": "string",
+          "text": "Description for the event"
+        },
+        "location": {
+          "type": "string",
+          "text": "Location for the event"
+        },
+        "fields": {
+          "type": "string",
+          "text": "Upload files using upload files API and then return the file IDs"
+        },
+        "startYear": {
+          "type": "string",
+          "text": "Start year for the event",
+          "required": true
+        },
+        "startMonth": {
+          "type": "string",
+          "text": "Start month for the event",
+          "required": true
+        },
+        "startDate": {
+          "type": "string",
+          "text": "Start date for the event",
+          "required": true
+        },
+        "startHour": {
+          "type": "string",
+          "text": "Start time for the event",
+          "required": true
+        },
+        "startMin": {
+          "type": "string",
+          "text": "Start time for the event",
+          "required": true
+        },
+        "endYear": {
+          "type": "string",
+          "text": "End year for the event",
+          "required": true
+        },
+        "endMonth": {
+          "type": "string",
+          "text": "End month for the event",
+          "required": true
+        },
+        "endDate": {
+          "type": "string",
+          "text": "End date for the event",
+          "required": true
+        },
+        "endHour": {
+          "type": "string",
+          "text": "End time for the event",
+          "required": true
+        },
+        "endMin": {
+          "type": "string",
+          "text": "End Minute of the event",
+          "required": true
+        },
+        "allDay": {
+          "type": "string",
+          "text": "Set this as true if you'd like the event to be an all-day one, and false if you don't"
+        },
+        "intervalDay": {
+          "type": "string",
+          "text": "Event reminder interval in days"
+        },
+        "intervalMinute": {
+          "type": "string",
+          "text": "Event reminder interval in minutes {5,15,30,60,120}"
+        },
+        "intervalHour": {
+          "type": "string",
+          "text": "Event Reminder Hour"
+        },
+        "invitedMembers": {
+          "type": "string",
+          "text": "User IDs of members to be invited to the event"
+        },
+        "invitedGroups": {
+          "type": "string",
+          "text": "IDs of Groups to be invited to the event"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "{": {
+          "type": ""
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to create an event in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/addEvent",
+        "alias_endpoint": "/zohoconnect/pulse/api/addevent",
+        "api_ref": "https://www.zoho.com/connect/api/create-event.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.events.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__addeventinvitees___post": {
+      "provider_intent": "zohoconnect__pulse__api__addeventinvitees___post",
+      "provider_alias_intent": "/pulse/api/addeventinvitees",
+      "text": "Add Event Attendees",
+      "category": "Events",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "scopeID": {
+          "type": "string",
+          "text": "Network in which the event is to be updated",
+          "required": true
+        },
+        "streamId ": {
+          "type": "string",
+          "text": "Stream ID to add invitees",
+          "required": true
+        },
+        "invitedMembers": {
+          "type": "string",
+          "text": "User IDs of members to be invited",
+          "required": true
+        },
+        "invitedGroups": {
+          "type": "string",
+          "text": "IDs of groups to be invited"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "{": {
+          "type": ""
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to add invitees to an event in Zoho Connect network",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/addEventInvitees",
+        "alias_endpoint": "/zohoconnect/pulse/api/addeventinvitees",
+        "api_ref": "https://www.zoho.com/connect/api/add-event-invitees.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.events.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__addeventreminder___post": {
+      "provider_intent": "zohoconnect__pulse__api__addeventreminder___post",
+      "provider_alias_intent": "/pulse/api/addeventreminder",
+      "text": "Add Event Reminder",
+      "category": "Events",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "scopeID": {
+          "type": "string",
+          "text": "Network in which the event is to be updated",
+          "required": true
+        },
+        "streamId": {
+          "type": "string",
+          "text": "Stream ID to add a reminder",
+          "required": true
+        },
+        "intervalDay": {
+          "type": "string",
+          "text": "Interval for even reminder in days {0,1,2,7}"
+        },
+        "intervalMinute": {
+          "type": "string",
+          "text": "Event reminder in minutes {5,15,30,60,120}"
+        },
+        "intervalHour": {
+          "type": "string",
+          "text": "Event Reminder in hours {0 - 23}"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "{": {
+          "type": ""
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to add event attendees in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/addEventReminder",
+        "alias_endpoint": "/zohoconnect/pulse/api/addeventreminder",
+        "api_ref": "https://www.zoho.com/connect/api/add-event-reminder.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.events.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__deleteevent___delete": {
+      "provider_intent": "zohoconnect__pulse__api__deleteevent___delete",
+      "provider_alias_intent": "/pulse/api/deleteevent",
+      "text": "Delete Event",
+      "category": "Events",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "Network in which the event is to be deleted",
+          "required": true
+        },
+        "streamId": {
+          "type": "string",
+          "text": "Stream ID to delete event",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "{": {
+          "type": ""
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to delete an event from Zoho Connect network",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/deleteEvent",
+        "alias_endpoint": "/zohoconnect/pulse/api/deleteevent",
+        "api_ref": "https://www.zoho.com/connect/api/delete-event.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.events.DELETE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__upcomingevents___get": {
+      "provider_intent": "zohoconnect__pulse__api__upcomingevents___get",
+      "provider_alias_intent": "/pulse/api/upcomingevents",
+      "text": "Get upcoming events",
+      "category": "Events",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the events are in",
+          "required": true
+        },
+        "selectedPartIds": {
+          "type": "string",
+          "text": "Group IDs separated by a comma",
+          "required": true
+        },
+        "partitionId": {
+          "type": "string",
+          "text": "Group ID",
+          "required": true
+        },
+        "startTime": {
+          "type": "string",
+          "text": "Fetch data from the specified time"
+        },
+        "endTime": {
+          "type": "string",
+          "text": "Fetch data till the specified time"
+        },
+        "sharedWithMe": {
+          "type": "string",
+          "text": "Get only events that the user has been invited to"
+        },
+        "partitionType": {
+          "type": "string",
+          "text": "If partitionId or selectedPartIds is not given, then this field has to be specified: (GROUP | DEFAULT)",
+          "required": true
+        },
+        "partitionUrl": {
+          "type": "string",
+          "text": "If partitionId or selectedPartIds is not given, then this field has to be specified",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "{": {
+          "type": ""
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to get the list of all upcoming events in a Zoho Connect network",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/upcomingEvents",
+        "alias_endpoint": "/zohoconnect/pulse/api/upcomingevents",
+        "api_ref": "https://www.zoho.com/connect/api/get-upcoming-events.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.events.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__deleteeventreminder___delete": {
+      "provider_intent": "zohoconnect__pulse__api__deleteeventreminder___delete",
+      "provider_alias_intent": "/pulse/api/deleteeventreminder",
+      "text": "Remove Event Reminder",
+      "category": "Events",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "Network in which the event reminder is to be deleted",
+          "required": true
+        },
+        "streamId": {
+          "type": "string",
+          "text": "stream ID to delete reminder",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "{": {
+          "type": ""
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to remove reminders from an event in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/deleteEventReminder",
+        "alias_endpoint": "/zohoconnect/pulse/api/deleteeventreminder",
+        "api_ref": "https://www.zoho.com/connect/api/remove-event-reminder.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.events.DELETE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__deleteeventinvitees___delete": {
+      "provider_intent": "zohoconnect__pulse__api__deleteeventinvitees___delete",
+      "provider_alias_intent": "/pulse/api/deleteeventinvitees",
+      "text": "Removing event attendees",
+      "category": "Events",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "Network in which the event is to be updated",
+          "required": true
+        },
+        "streamId": {
+          "type": "string",
+          "text": "Stream ID to add invitees",
+          "required": true
+        },
+        "invitedMembers": {
+          "type": "string",
+          "text": "IDs of members to be removed as invitees"
+        },
+        "invitedGroups": {
+          "type": "string",
+          "text": "IDs of groups to be removed as invitees"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "{": {
+          "type": ""
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to remove attendees from an event in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/deleteEventInvitees",
+        "alias_endpoint": "/zohoconnect/pulse/api/deleteeventinvitees",
+        "api_ref": "https://www.zoho.com/connect/api/remove-event-attendees.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.events.DELETE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__updateevent___put": {
+      "provider_intent": "zohoconnect__pulse__api__updateevent___put",
+      "provider_alias_intent": "/pulse/api/updateevent",
+      "text": "Update Event",
+      "category": "Events",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "scopeID": {
+          "type": "string",
+          "text": "Network in which the event to be updated is in",
+          "required": true
+        },
+        "streamId": {
+          "type": "string",
+          "text": "Stream ID to be updated",
+          "required": true
+        },
+        "title": {
+          "type": "string",
+          "text": "Event title. Maximum character limit is 250",
+          "required": true
+        },
+        "desc": {
+          "type": "string",
+          "text": "Event description. Maximum character limit is 1000"
+        },
+        "location": {
+          "type": "string",
+          "text": "Event location. Maximum character limit is 250"
+        },
+        "fields": {
+          "type": "string",
+          "text": " Upload files using upload Files API and then return the file IDs"
+        },
+        "startYear": {
+          "type": "string",
+          "text": "Start year for the event",
+          "required": true
+        },
+        "startMonth": {
+          "type": "string",
+          "text": "Start month for the event",
+          "required": true
+        },
+        "startDate": {
+          "type": "string",
+          "text": "Start date for the event",
+          "required": true
+        },
+        "startHour": {
+          "type": "string",
+          "text": "Start time for the event in hours",
+          "required": true
+        },
+        "startMin": {
+          "type": "string",
+          "text": "Start time for the event in minutes",
+          "required": true
+        },
+        "endYear": {
+          "type": "string",
+          "text": "End year for the event",
+          "required": true
+        },
+        "endMonth": {
+          "type": "string",
+          "text": "End month for the event",
+          "required": true
+        },
+        "endDate": {
+          "type": "string",
+          "text": "End date for the event",
+          "required": true
+        },
+        "endHour": {
+          "type": "string",
+          "text": "End time for the event in hours",
+          "required": true
+        },
+        "endMin": {
+          "type": "string",
+          "text": "End Minute of the event",
+          "required": true
+        },
+        "allDay": {
+          "type": "string",
+          "text": "Set this as true if you want the event as an all-day event and false if you don't"
+        },
+        "intervalDay": {
+          "type": "string",
+          "text": "Event reminder interval in days {0,1,2,7}"
+        },
+        "intervalMinute": {
+          "type": "string",
+          "text": "Event reminder interval in minutes {5,15,30,60,120}"
+        },
+        "intervalHour": {
+          "type": "string",
+          "text": "Event reminder interval in hours  {0 - 23}"
+        },
+        "invitedMembers": {
+          "type": "string",
+          "text": "Members to be invited to the event"
+        },
+        "invitedGroups": {
+          "type": "string",
+          "text": "Groups to be invited to the event"
+        },
+        "deleteMemInvitees": {
+          "type": "string",
+          "text": "Removed invitees. Multiple names should be separated by a comma"
+        },
+        "deleteGrpInvitees": {
+          "type": "string",
+          "text": "Removed groups that are invited. Multiple groups should be separated by a comma"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "{": {
+          "type": ""
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to update an event in a Zoho Connect network",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/updateEvent",
+        "alias_endpoint": "/zohoconnect/pulse/api/updateevent",
+        "api_ref": "https://www.zoho.com/connect/api/update-event.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.events.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__v2__addstream___post": {
+      "provider_intent": "zohoconnect__pulse__api__v2__addstream___post",
+      "provider_alias_intent": "/pulse/api/v2/addstream",
+      "text": "Create an Announcement",
+      "category": "Feeds",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "scopeID": {
+          "type": "string",
+          "text": "Network in which the announcement is to be posted",
+          "required": true
+        },
+        "partitionID": {
+          "type": "string",
+          "text": "It can be either be the Group or Company wall",
+          "required": true
+        },
+        "streamContent": {
+          "type": "string",
+          "text": "Add your announcement message",
+          "required": true
+        },
+        "streamTitle": {
+          "type": "string",
+          "text": "Title for your announcement",
+          "required": true
+        },
+        "streamType": {
+          "type": "string",
+          "text": "Set this as ANNOUNCEMENT",
+          "required": true
+        },
+        "fileIds": {
+          "type": "string",
+          "text": "Multiple file ids should be separated by a comma"
+        },
+        "isAnnouncement": {
+          "type": "string",
+          "text": "Set this as true",
+          "required": true
+        },
+        "expiryYear": {
+          "type": "string",
+          "text": "Expiry year for the announcement"
+        },
+        "expiryMonth": {
+          "type": "string",
+          "text": "Expiry month for the announcement"
+        },
+        "expiryDate": {
+          "type": "string",
+          "text": "Expiry date for the announcement"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "To purpose of this API is to create a new announcement in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/v2/addStream",
+        "alias_endpoint": "/zohoconnect/pulse/api/v2/addstream",
+        "api_ref": "https://www.zoho.com/connect/api/create-announcement.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.feedList.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__addpoll___post": {
+      "provider_intent": "zohoconnect__pulse__api__addpoll___post",
+      "provider_alias_intent": "/pulse/api/addpoll",
+      "text": "Creating a Poll",
+      "category": "Feeds",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "scopeID": {
+          "type": "string",
+          "text": "Network in which the poll is to be posted. You can get this from the network list API",
+          "required": true
+        },
+        "partition": {
+          "type": "string",
+          "text": "It can either be the Group/Company wall/User's partition id. By default, the user partition ID is taken"
+        },
+        "question ": {
+          "type": "string",
+          "text": "A question for the poll",
+          "required": true
+        },
+        "textOptions": {
+          "type": "string",
+          "text": "Text options for the poll, separated by a comma",
+          "required": true
+        },
+        "imageIds ": {
+          "type": "string",
+          "text": "Image Options for the Poll, separated by a comma"
+        },
+        "allowMultiple ": {
+          "type": "string",
+          "text": "Allow members to vote for multiple options. You can set this as either true or false"
+        },
+        "voteDisplayType": {
+          "type": "string",
+          "text": "Either (0 | 1 | 2). 0 represents DEFAULT, 1 represents SHOW_AFTER_VOTE, 2 represents SHOW_AFTER_ADMIN_APPROVAL",
+          "required": true
+        },
+        "canEditVote": {
+          "type": "string",
+          "text": "Set this as true or false depending on whether you want members to edit their choice"
+        },
+        "canDeclareResult": {
+          "type": "string",
+          "text": "Set this as true or false depending on whether you want the poll closed and the results declared"
+        },
+        "endYear": {
+          "type": "string",
+          "text": "End Year for the poll"
+        },
+        "endMonth": {
+          "type": "string",
+          "text": "End Month for the poll"
+        },
+        "endDate": {
+          "type": "string",
+          "text": "Days left for the poll to expire"
+        },
+        "endHour": {
+          "type": "string",
+          "text": "Hour(s) for the poll to expire"
+        },
+        "endMin": {
+          "type": "string",
+          "text": "Minutes for the poll to expire"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to create a poll in a Zoho Connect network",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/addPoll",
+        "alias_endpoint": "/zohoconnect/pulse/api/addpoll",
+        "api_ref": "https://www.zoho.com/connect/api/create-poll.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.feedList.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__v1__singlestream___get": {
+      "provider_intent": "zohoconnect__pulse__api__v1__singlestream___get",
+      "provider_alias_intent": "/pulse/api/v1/singlestream",
+      "text": "Get Single Feed",
+      "category": "Feeds",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "Network in which the post was made",
+          "required": true
+        },
+        "streamId": {
+          "type": "string",
+          "text": "Get the post by id",
+          "required": true
+        },
+        "streamUrl": {
+          "type": "string",
+          "text": "You can also fetch the post by URL"
+        },
+        "commentIndex": {
+          "type": "string",
+          "text": "Start an index for comments. The default will be 0"
+        },
+        "commentLimit": {
+          "type": "string",
+          "text": "Set a limit on the number of comments"
+        },
+        "isThread": {
+          "type": "string",
+          "text": "Normal view or threaded view(the replies will be nested into comments json)"
+        },
+        "needAllComments": {
+          "type": "string",
+          "text": "Show all comments or not."
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "The purpose of this API is to get  the details of a single post in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/v1/singleStream",
+        "alias_endpoint": "/zohoconnect/pulse/api/v1/singlestream",
+        "api_ref": "https://www.zoho.com/connect/api/get-single-feed.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.feedList.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__v2__addcomment___post": {
+      "provider_intent": "zohoconnect__pulse__api__v2__addcomment___post",
+      "provider_alias_intent": "/pulse/api/v2/addcomment",
+      "text": "Adding a Comment",
+      "category": "Feeds",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "scopeID": {
+          "type": "string",
+          "text": "Network in which the stream is to be posted",
+          "required": true
+        },
+        "streamId": {
+          "type": "string",
+          "text": "You can get the ID from the stream API",
+          "required": true
+        },
+        "parentCommentId": {
+          "type": "string",
+          "text": "For replies to a comment, the respective comment id has to be given"
+        },
+        "commentContent": {
+          "type": "string",
+          "text": "The Maximum character limit allowed for a comment is 10000",
+          "required": true
+        },
+        "fileIds": {
+          "type": "string",
+          "text": " File IDs should be seperated by comma"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "The purpose of this API is to add a comment to a post in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/v2/addComment",
+        "alias_endpoint": "/zohoconnect/pulse/api/v2/addcomment",
+        "api_ref": "https://www.zoho.com/connect/api/add-comment.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.feedList.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__deletestream___delete": {
+      "provider_intent": "zohoconnect__pulse__api__deletestream___delete",
+      "provider_alias_intent": "/pulse/api/deletestream",
+      "text": "Delete a Feed",
+      "category": "Feeds",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the Network the post has been made in",
+          "required": true
+        },
+        "streamId": {
+          "type": "string",
+          "text": "ID of the post to be deleted",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to delete a feed in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/deleteStream",
+        "alias_endpoint": "/zohoconnect/pulse/api/deletestream",
+        "api_ref": "https://www.zoho.com/connect/api/delete-feed.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.feedList.DELETE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__streams___get": {
+      "provider_intent": "zohoconnect__pulse__api__streams___get",
+      "provider_alias_intent": "/pulse/api/streams",
+      "text": "Fetch Feeds by ID",
+      "category": "Feeds",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the posts have been made in",
+          "required": true
+        },
+        "streamId": {
+          "type": "string",
+          "text": "IDs of posts you want to fetch",
+          "required": true
+        },
+        "partitionId": {
+          "type": "string",
+          "text": "IDs of posts you want to fetch"
+        },
+        "commentLimit": {
+          "type": "string",
+          "text": "Fetch comments based on a number limit"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "To fetch streams based on streamId",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/streams",
+        "alias_endpoint": "/zohoconnect/pulse/api/streams",
+        "api_ref": "https://www.zoho.com/connect/api/fetch-feeds-by-id.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.feedList.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__v1__recentstreams___get": {
+      "provider_intent": "zohoconnect__pulse__api__v1__recentstreams___get",
+      "provider_alias_intent": "/pulse/api/v1/recentstreams",
+      "text": "Get feeds from My Feed",
+      "category": "Feeds",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network in which the posts are made",
+          "required": true
+        },
+        "streamLimit": {
+          "type": "string",
+          "text": "Fetch feeds based on a limit"
+        },
+        "commentLimit": {
+          "type": "string",
+          "text": "Fetch comments based on a limit"
+        },
+        "modifiedTime": {
+          "type": "string",
+          "text": "Fetch posts made till a specified time"
+        },
+        "showUserDetails": {
+          "type": "string",
+          "text": "You can show or hide user details"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "The purpose of this API is to get posts from the My Feed page",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/v1/recentStreams",
+        "alias_endpoint": "/zohoconnect/pulse/api/v1/recentstreams",
+        "api_ref": "https://www.zoho.com/connect/api/get-feeds-from-myfeed.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.feedList.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__latestpartitioncomments___get": {
+      "provider_intent": "zohoconnect__pulse__api__latestpartitioncomments___get",
+      "provider_alias_intent": "/pulse/api/latestpartitioncomments",
+      "text": "Get Latest Comment",
+      "category": "Feeds",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the group belongs to",
+          "required": true
+        },
+        "partitionId": {
+          "type": "string",
+          "text": "ID of the Group you need to fetch the comments from",
+          "required": true
+        },
+        "lastViewedTime": {
+          "type": "string",
+          "text": "Fetch data after a specified time",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to get the latest comments from a group in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/latestPartitionComments",
+        "alias_endpoint": "/zohoconnect/pulse/api/latestpartitioncomments",
+        "api_ref": "https://www.zoho.com/connect/api/get-latest-comments.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.feedList.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__latestpartitionstreams___get": {
+      "provider_intent": "zohoconnect__pulse__api__latestpartitionstreams___get",
+      "provider_alias_intent": "/pulse/api/latestpartitionstreams",
+      "text": "Get Latest Group Feeds",
+      "category": "Feeds",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "Network id",
+          "required": true
+        },
+        "partitionId": {
+          "type": "string",
+          "text": "group id",
+          "required": true
+        },
+        "lastViewedTime ": {
+          "type": "string",
+          "text": "Fetch data after the given time",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to get the latest group feeds in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/latestPartitionStreams",
+        "alias_endpoint": "/zohoconnect/pulse/api/latestpartitionstreams",
+        "api_ref": "https://www.zoho.com/connect/api/get-latest-group-feed.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.feedList.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__getlateststreams___get": {
+      "provider_intent": "zohoconnect__pulse__api__getlateststreams___get",
+      "provider_alias_intent": "/pulse/api/getlateststreams",
+      "text": "Get My Feed & Group Feed",
+      "category": "Feeds",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the posts have been made in",
+          "required": true
+        },
+        "partition": {
+          "type": "string",
+          "text": "ID of the group the posts have been made in"
+        },
+        "lastViewedTime ": {
+          "type": "string",
+          "text": "Fetch data after a specified time",
+          "required": true
+        },
+        "streamLimit": {
+          "type": "string",
+          "text": "Set a limit for the posts"
+        },
+        "fetchTime": {
+          "type": "string",
+          "text": "Fetch data till a specified time"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to get recent posts made in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/getLatestStreams",
+        "alias_endpoint": "/zohoconnect/pulse/api/getlateststreams",
+        "api_ref": "https://www.zoho.com/connect/api/get-my-feed-group-feed.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.feedList.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__votedmembers___post": {
+      "provider_intent": "zohoconnect__pulse__api__votedmembers___post",
+      "provider_alias_intent": "/pulse/api/votedmembers",
+      "text": "Get poll results",
+      "category": "Feeds",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the poll has been created in",
+          "required": true
+        },
+        "streamId": {
+          "type": "string",
+          "text": "Stream ID"
+        },
+        "optionId ": {
+          "type": "string",
+          "text": "Option ID  of the poll",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to get the results of a poll in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/votedMembers",
+        "alias_endpoint": "/zohoconnect/pulse/api/votedmembers",
+        "api_ref": "https://www.zoho.com/connect/api/get-poll-results.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.feedList.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__updatestream___put": {
+      "provider_intent": "zohoconnect__pulse__api__updatestream___put",
+      "provider_alias_intent": "/pulse/api/updatestream",
+      "text": "Update Feed & Poll Preferences",
+      "category": "Feeds",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "streamId": {
+          "type": "string",
+          "text": "ID of the stream to be updated",
+          "required": true
+        },
+        "scopeID": {
+          "type": "string",
+          "text": "Network in which the stream to be updated is in",
+          "required": true
+        },
+        "streamContent": {
+          "type": "string",
+          "text": "Content for the stream",
+          "required": true
+        },
+        "streamTitle": {
+          "type": "string",
+          "text": "Title for the stream"
+        },
+        "linkURL": {
+          "type": "string",
+          "text": "Link URL to be shared"
+        },
+        "linkDesc": {
+          "type": "string",
+          "text": "Description for the link"
+        },
+        "linkTitle": {
+          "type": "string",
+          "text": "Title for the link URL"
+        },
+        "linkImage": {
+          "type": "string",
+          "text": "URL of the image to be shared"
+        },
+        "fileIds": {
+          "type": "string",
+          "text": "Multiple file IDs should be separated by a comma"
+        },
+        "reorderFileIds": {
+          "type": "string",
+          "text": "Reorder the file IDs and separate multiple IDs by a comma"
+        },
+        "videoUrl": {
+          "type": "string",
+          "text": "Video URL of Youtube/Docs"
+        },
+        "isZohoDocsUrl": {
+          "type": "string",
+          "text": "If video URL is a Zoho Docs file, set this as true"
+        },
+        "resourceType": {
+          "type": "string",
+          "text": "Zoho Docs file type"
+        },
+        "textOptions": {
+          "type": "string",
+          "text": "Provide options for the poll"
+        },
+        "removedOptionIds": {
+          "type": "string",
+          "text": "Reorder the poll option IDs and separate multiple IDs with a comma"
+        },
+        "imageIds": {
+          "type": "string",
+          "text": "Image options for the poll should be separated by a comma"
+        },
+        "textOption": {
+          "type": "string",
+          "text": "Text Options for the Poll"
+        },
+        "voteDisplayType": {
+          "type": "string",
+          "text": "Add the members' ZU IDs separated by commas"
+        },
+        "canEditVote": {
+          "type": "string",
+          "text": "Set this as True to enable editing of votes and False to disable edit"
+        },
+        "canDeclareResult": {
+          "type": "string",
+          "text": "Set this as True to declare results and False if you don't want them declared."
+        },
+        "allowMultiple": {
+          "type": "string",
+          "text": "Set this as True if you'd like to allow members to vote for multiple options and False if you want to disable voting for multiple options"
+        },
+        "optionOrders": {
+          "type": "string",
+          "text": "Order of the poll options, separated by a comma"
+        },
+        "endYear": {
+          "type": "string",
+          "text": "Year for the poll to expirem"
+        },
+        "endMonth": {
+          "type": "string",
+          "text": "Month for the poll to expire"
+        },
+        "endDate": {
+          "type": "string",
+          "text": "Day for the poll to expire"
+        },
+        "endHour": {
+          "type": "string",
+          "text": "Hour for the poll to expire"
+        },
+        "endMin": {
+          "type": "string",
+          "text": "Minute for the poll to expire"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to update feed or poll preferences in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/updateStream",
+        "alias_endpoint": "/zohoconnect/pulse/api/updatestream",
+        "api_ref": "https://www.zoho.com/connect/api/update-feed.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.feedlist.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__addblog___post": {
+      "provider_intent": "zohoconnect__pulse__api__addblog___post",
+      "provider_alias_intent": "/pulse/api/addblog",
+      "text": "Create a Forum Post",
+      "category": "Forums",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network in which the post is to be made",
+          "required": true
+        },
+        "title": {
+          "type": "string",
+          "text": "Forum title",
+          "required": true
+        },
+        "content": {
+          "type": "string",
+          "text": "Forum content",
+          "required": true
+        },
+        "categoryIDs": {
+          "type": "string",
+          "text": "Add the IDs of categories that the Forum post belongs to"
+        },
+        "disableComments": {
+          "type": "string",
+          "text": "Set this as true or false",
+          "required": true
+        },
+        "isPublished": {
+          "type": "string",
+          "text": "Set this as true or false",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to create a forum post in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/addBlog",
+        "alias_endpoint": "/zohoconnect/pulse/api/addblog",
+        "api_ref": "https://www.zoho.com/connect/api/create-forum.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.blogs.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__recentblogs___get": {
+      "provider_intent": "zohoconnect__pulse__api__recentblogs___get",
+      "provider_alias_intent": "/pulse/api/recentblogs",
+      "text": "Get Recent Forums",
+      "category": "Forums",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the post has been made in",
+          "required": true
+        },
+        "pageIndex": {
+          "type": "string",
+          "text": "Start index to fetch posts"
+        },
+        "limit": {
+          "type": "string",
+          "text": "End limit"
+        },
+        "lastBlogCreatedTime": {
+          "type": "string",
+          "text": "Fetch posts from the specified time"
+        },
+        "categoryId": {
+          "type": "string",
+          "text": "Filter by category ID"
+        },
+        "categoryUrl": {
+          "type": "string",
+          "text": "Filter by category URL"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to get the recent forum posts in Zoho Connec",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/recentBlogs",
+        "alias_endpoint": "/zohoconnect/pulse/api/recentblogs",
+        "api_ref": "https://www.zoho.com/connect/api/recent-forums.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.blogs.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__publishblog___post": {
+      "provider_intent": "zohoconnect__pulse__api__publishblog___post",
+      "provider_alias_intent": "/pulse/api/publishblog",
+      "text": "Publish a Forum",
+      "category": "Forums",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the post to be published is in",
+          "required": true
+        },
+        "blogId": {
+          "type": "string",
+          "text": "Blog id to publish",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to publish a forum in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/publishBlog",
+        "alias_endpoint": "/zohoconnect/pulse/api/publishblog",
+        "api_ref": "https://www.zoho.com/connect/api/publish-forum.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.blogs.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__updateblog___put": {
+      "provider_intent": "zohoconnect__pulse__api__updateblog___put",
+      "provider_alias_intent": "/pulse/api/updateblog",
+      "text": "Update a Forum",
+      "category": "Forums",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the forum post is in",
+          "required": true
+        },
+        "title": {
+          "type": "string",
+          "text": "Forum title",
+          "required": true
+        },
+        "content": {
+          "type": "string",
+          "text": "Forum content",
+          "required": true
+        },
+        "categoryIDs": {
+          "type": "string",
+          "text": "Category IDs to add the forum to"
+        },
+        "disableComments": {
+          "type": "string",
+          "text": "Set this as either true or false"
+        },
+        "blogId": {
+          "type": "string",
+          "text": "The ID of the forum post you would like to update",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to update a forum in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/updateBlog",
+        "alias_endpoint": "/zohoconnect/pulse/api/updateblog",
+        "api_ref": "https://www.zoho.com/connect/api/update-forum.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.blogs.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__allgroups___get": {
+      "provider_intent": "zohoconnect__pulse__api__allgroups___get",
+      "provider_alias_intent": "/pulse/api/allgroups",
+      "text": "Get all Groups",
+      "category": "Groups",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the groups have been created in. You can get this from the Network list API",
+          "required": true
+        },
+        "isRecentSort": {
+          "type": "string",
+          "text": "Sort groups based on recency. Se this as true or false"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to get all groups in Zoho Connect network",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/allGroups",
+        "alias_endpoint": "/zohoconnect/pulse/api/allgroups",
+        "api_ref": "https://www.zoho.com/connect/api/get-all-groups.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.userDetail.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__addgroup___post": {
+      "provider_intent": "zohoconnect__pulse__api__addgroup___post",
+      "provider_alias_intent": "/pulse/api/addgroup",
+      "text": "Creat a Group",
+      "category": "Groups",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the group needs to be created in",
+          "required": true
+        },
+        "name": {
+          "type": "string",
+          "text": "Provide a name for the group",
+          "required": true
+        },
+        "desc": {
+          "type": "string",
+          "text": "Add a description"
+        },
+        "userIds": {
+          "type": "string",
+          "text": "Add the user IDs of members separated by a comma"
+        },
+        "isPrivate": {
+          "type": "string",
+          "text": "Set this as true if you want your group to be private"
+        },
+        "isOpenMembership": {
+          "type": "string",
+          "text": "Set this as true if you'd like members to find and join this group"
+        },
+        "fileId": {
+          "type": "string",
+          "text": "Add a group logo ID"
+        },
+        "createChannel": {
+          "type": "string",
+          "text": "Set this as true if you'd like to create a channel for this group"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to create a group in Zoho Connect network",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/addGroup",
+        "alias_endpoint": "/zohoconnect/pulse/api/addgroup",
+        "api_ref": "https://www.zoho.com/connect/api/create-group.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.grouplist.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__updategroupdetails___put": {
+      "provider_intent": "zohoconnect__pulse__api__updategroupdetails___put",
+      "provider_alias_intent": "/pulse/api/updategroupdetails",
+      "text": "Update Group Details",
+      "category": "Groups",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the group is in",
+          "required": true
+        },
+        "partitionId": {
+          "type": "string",
+          "text": "Group id to update details",
+          "required": true
+        },
+        "name": {
+          "type": "string",
+          "text": "Group Name"
+        },
+        "desc": {
+          "type": "string",
+          "text": "Description for the group"
+        },
+        "isPrivate": {
+          "type": "string",
+          "text": "Set this as true if you want your group to be private"
+        },
+        "isOpenMembership": {
+          "type": "string",
+          "text": "Set this as true to allow anyone in your network to join this group"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to update a group's details in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/updateGroupDetails",
+        "alias_endpoint": "/zohoconnect/pulse/api/updategroupdetails",
+        "api_ref": "https://www.zoho.com/connect/api/update-group-details.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.grouplist.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__joingroup___post": {
+      "provider_intent": "zohoconnect__pulse__api__joingroup___post",
+      "provider_alias_intent": "/pulse/api/joingroup",
+      "text": "Join a Group",
+      "category": "Groups",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the group belongs to. You can get this from the Network list API",
+          "required": true
+        },
+        "partitionId": {
+          "type": "string",
+          "text": "ID of the Group to join",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to join a group in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/joinGroup",
+        "alias_endpoint": "/zohoconnect/pulse/api/joingroup",
+        "api_ref": "https://www.zoho.com/connect/api/join-a-group.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.grouplist.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__leavegroup___delete": {
+      "provider_intent": "zohoconnect__pulse__api__leavegroup___delete",
+      "provider_alias_intent": "/pulse/api/leavegroup",
+      "text": "Leave Group",
+      "category": "Groups",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the group belongs to. You can get this from the Network list API.",
+          "required": true
+        },
+        "partitionld": {
+          "type": "string",
+          "text": "ID of the Group you want to leave",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to leave a group in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/leaveGroup",
+        "alias_endpoint": "/zohoconnect/pulse/api/leavegroup",
+        "api_ref": "https://www.zoho.com/connect/api/leave-group.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.grouplist.DELETE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnectzohopulse-grouplist-create___post": {
+      "provider_intent": "zohoconnectzohopulse-grouplist-create___post",
+      "provider_alias_intent": "zohopulse.grouplist.create",
+      "text": "Add User Role in a Group",
+      "category": "Groups",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the Network the group is in. You can get this from the Network list API",
+          "required": true
+        },
+        "partitionld": {
+          "type": "string",
+          "text": "ID of the group you want to add users to",
+          "required": true
+        },
+        "memberIds": {
+          "type": "string",
+          "text": "User IDs separated by a comma. You can add up to 100 IDs"
+        },
+        "adminIds": {
+          "type": "string",
+          "text": "Comma separated IDs of users to be added as admins. You can add up to 100 IDs"
+        },
+        "userEmailIds": {
+          "type": "string",
+          "text": "Users' email addresses separated by a comma. You can add up to 100 addresses"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to add users to a group in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}zohopulse.grouplist.CREATE",
+        "alias_endpoint": "/zohoconnectzohopulse.grouplist.create",
+        "api_ref": "https://www.zoho.com/connect/api/add-user-to-group.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.grouplist.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__changeuserroleingroup___post": {
+      "provider_intent": "zohoconnect__pulse__api__changeuserroleingroup___post",
+      "provider_alias_intent": "/pulse/api/changeuserroleingroup",
+      "text": "Change User Role in a Group",
+      "category": "Groups",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the Network the group is in",
+          "required": true
+        },
+        "partitionld": {
+          "type": "string",
+          "text": "ID of the Group to change user roles",
+          "required": true
+        },
+        "userId": {
+          "type": "string",
+          "text": "ID of the user whose role is to be changed",
+          "required": true
+        },
+        "role": {
+          "type": "string",
+          "text": "Specify the role. You can choose between ADMIN, MEMBER, or MODERATOR",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to change user role in a group in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/changeUserRoleInGroup",
+        "alias_endpoint": "/zohoconnect/pulse/api/changeuserroleingroup",
+        "api_ref": "https://www.zoho.com/connect/api/change-user-role-in-group.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.grouplist.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__removeuserfromgroup___delete": {
+      "provider_intent": "zohoconnect__pulse__api__removeuserfromgroup___delete",
+      "provider_alias_intent": "/pulse/api/removeuserfromgroup",
+      "text": "Remove User from a Group",
+      "category": "Groups",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the group is in",
+          "required": true
+        },
+        "partitionld": {
+          "type": "string",
+          "text": "ID of the group to remove members from",
+          "required": true
+        },
+        "userId": {
+          "type": "string",
+          "text": "User ID to be removed",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to remove a user from a group in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/removeUserFromGroup",
+        "alias_endpoint": "/zohoconnect/pulse/api/removeuserfromgroup",
+        "api_ref": "https://www.zoho.com/connect/api/remove-user-from-group.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.grouplist.DELETE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__changepartitionstatus___post": {
+      "provider_intent": "zohoconnect__pulse__api__changepartitionstatus___post",
+      "provider_alias_intent": "/pulse/api/changepartitionstatus",
+      "text": "Archive & Un-archive a Group",
+      "category": "Groups",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the group is in",
+          "required": true
+        },
+        "partitionld": {
+          "type": "string",
+          "text": "Group id to archive",
+          "required": true
+        },
+        "isarchive": {
+          "type": "string",
+          "text": "Set this as either true or false",
+          "required": true
+        },
+        "isactive": {
+          "type": "string",
+          "text": "Set this as either true or false",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to archive/un-archive a group on Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/changePartitionStatus",
+        "alias_endpoint": "/zohoconnect/pulse/api/changepartitionstatus",
+        "api_ref": "https://www.zoho.com/connect/api/archive-group.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.grouplist.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__deletepartition___delete": {
+      "provider_intent": "zohoconnect__pulse__api__deletepartition___delete",
+      "provider_alias_intent": "/pulse/api/deletepartition",
+      "text": "Delete Group",
+      "category": "Groups",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the group is in",
+          "required": true
+        },
+        "partitionld": {
+          "type": "string",
+          "text": "Group ID to delete",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to delete a group from Zoho Connect network",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/deletePartition",
+        "alias_endpoint": "/zohoconnect/pulse/api/deletepartition",
+        "api_ref": "https://www.zoho.com/connect/api/delete-group.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.grouplist.DELETE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__mymanuals___get": {
+      "provider_intent": "zohoconnect__pulse__api__mymanuals___get",
+      "provider_alias_intent": "/pulse/api/mymanuals",
+      "text": "Get My Manuals",
+      "category": "Manuals",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "D of the network the manual is in",
+          "required": true
+        },
+        "sortBy": {
+          "type": "string",
+          "text": "You can sort the manuals alphabetically or by recently created ones"
+        },
+        "isAscSort": {
+          "type": "string",
+          "text": "Set this as either true or false"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to get my manuals in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/myManuals",
+        "alias_endpoint": "/zohoconnect/pulse/api/mymanuals",
+        "api_ref": "https://www.zoho.com/connect/api/get-my-manuals.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.pagelist.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__myarticles___get": {
+      "provider_intent": "zohoconnect__pulse__api__myarticles___get",
+      "provider_alias_intent": "/pulse/api/myarticles",
+      "text": "Get My Articles",
+      "category": "Manuals",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the articles are in",
+          "required": true
+        },
+        "sortBy": {
+          "type": "string",
+          "text": "You can sort the articles alphabetically or by recency"
+        },
+        "isAscSort": {
+          "type": "string",
+          "text": "Set this as true or false"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to get 'My Articles' in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/myArticles",
+        "alias_endpoint": "/zohoconnect/pulse/api/myarticles",
+        "api_ref": "https://www.zoho.com/connect/api/get-my-articles.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.pagelist.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__publishmanual___post": {
+      "provider_intent": "zohoconnect__pulse__api__publishmanual___post",
+      "provider_alias_intent": "/pulse/api/publishmanual",
+      "text": "Publish a Manual",
+      "category": "Manuals",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the manual is in",
+          "required": true
+        },
+        "manualId": {
+          "type": "string",
+          "text": "ID of the manual to be published",
+          "required": true
+        },
+        "partitionId ": {
+          "type": "string",
+          "text": "Group ID to publish the Manual to",
+          "required": true
+        },
+        "isPublic": {
+          "type": "string",
+          "text": "Set this as either True or False"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to publish a manual in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/publishManual",
+        "alias_endpoint": "/zohoconnect/pulse/api/publishmanual",
+        "api_ref": "https://www.zoho.com/connect/api/publish-manual.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.pagelist.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__partitionarticles___get": {
+      "provider_intent": "zohoconnect__pulse__api__partitionarticles___get",
+      "provider_alias_intent": "/pulse/api/partitionarticles",
+      "text": "Get Group Articals",
+      "category": "Manuals",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the articles are in",
+          "required": true
+        },
+        "partitionId": {
+          "type": "string",
+          "text": "ID of the Group the articles are in",
+          "required": true
+        },
+        "url": {
+          "type": "string",
+          "text": "URL of the Group"
+        },
+        "sortBy": {
+          "type": "string",
+          "text": "You can sort the Articles alphabetically or by recency"
+        },
+        "isAscSort": {
+          "type": "string",
+          "text": "Set this as either true or false"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to get Articles in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/partitionArticles",
+        "alias_endpoint": "/zohoconnect/pulse/api/partitionarticles",
+        "api_ref": "https://www.zoho.com/connect/api/get-group-articles.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.pagelist.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__partitionmanuals___get": {
+      "provider_intent": "zohoconnect__pulse__api__partitionmanuals___get",
+      "provider_alias_intent": "/pulse/api/partitionmanuals",
+      "text": "Get Group Manuals",
+      "category": "Manuals",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the Manual is in",
+          "required": true
+        },
+        "partitionId": {
+          "type": "string",
+          "text": "ID of the group to get manuals from",
+          "required": true
+        },
+        "url": {
+          "type": "string",
+          "text": "Group URL"
+        },
+        "sortBy": {
+          "type": "string",
+          "text": "You can sort the Manuals alphabetically or by recency"
+        },
+        "isAscSort": {
+          "type": "string",
+          "text": "Set this as either true or false"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "{": {
+          "type": ""
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this manual is to get manuals from a group in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/partitionManuals",
+        "alias_endpoint": "/zohoconnect/pulse/api/partitionmanuals",
+        "api_ref": "https://www.zoho.com/connect/api/get-group-manuals.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.pagelist.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__followingmanuals___get": {
+      "provider_intent": "zohoconnect__pulse__api__followingmanuals___get",
+      "provider_alias_intent": "/pulse/api/followingmanuals",
+      "text": "Get User Following Articles",
+      "category": "Manuals",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the Manual is in",
+          "required": true
+        },
+        "sortBy": {
+          "type": "string",
+          "text": "You can sort the Manuals alphabetically or by recency"
+        },
+        "isAscSort": {
+          "type": "string",
+          "text": "Set this as either true or false"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "{": {
+          "type": ""
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this manual is to get manuals followed by the user in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/followingManuals",
+        "alias_endpoint": "/zohoconnect/pulse/api/followingmanuals",
+        "api_ref": "https://www.zoho.com/connect/api/get-user-following-manuals.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.pagelist.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__publisharticle___post": {
+      "provider_intent": "zohoconnect__pulse__api__publisharticle___post",
+      "provider_alias_intent": "/pulse/api/publisharticle",
+      "text": "Publish an Article",
+      "category": "Manuals",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the article is to be published",
+          "required": true
+        },
+        "articleId": {
+          "type": "string",
+          "text": "ID of the article to be published",
+          "required": true
+        },
+        "publishContent": {
+          "type": "string",
+          "text": "Content to be published along with the article (if any)"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "{": {
+          "type": ""
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to publish an article in a manual in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/publishArticle",
+        "alias_endpoint": "/zohoconnect/pulse/api/publisharticle",
+        "api_ref": "https://www.zoho.com/connect/api/publish-article.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.pagelist.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__allscopes___get": {
+      "provider_intent": "zohoconnect__pulse__api__allscopes___get",
+      "provider_alias_intent": "/pulse/api/allscopes",
+      "text": "Get all Networks",
+      "category": "Network",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to get all networks from Zoho Connect\n",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/allScopes",
+        "alias_endpoint": "/zohoconnect/pulse/api/allscopes",
+        "api_ref": "https://www.zoho.com/connect/api/get-all-networks.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.networklist.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__orgmembers___get": {
+      "provider_intent": "zohoconnect__pulse__api__orgmembers___get",
+      "provider_alias_intent": "/pulse/api/orgmembers",
+      "text": "Get all network members",
+      "category": "Network",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "Network ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to get all network members from Zoho Connect Network",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/orgMembers",
+        "alias_endpoint": "/zohoconnect/pulse/api/orgmembers",
+        "api_ref": "https://www.zoho.com/connect/api/get-all-network-members.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.networklist.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__inviteuserstonetwork___post": {
+      "provider_intent": "zohoconnect__pulse__api__inviteuserstonetwork___post",
+      "provider_alias_intent": "/pulse/api/inviteuserstonetwork",
+      "text": "Invite users to a network",
+      "category": "Network",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "scopeID": {
+          "type": "string",
+          "text": "Scope ID of the network",
+          "required": true
+        },
+        "emailIds": {
+          "type": "string",
+          "text": "User email addresses. The maximum limit is 1000.",
+          "required": true
+        },
+        "partitionIds": {
+          "type": "string",
+          "text": "Comma separated group IDs. The user can be added to groups as well.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to invite users to a network in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/inviteUsersToNetwork",
+        "alias_endpoint": "/zohoconnect/pulse/api/inviteuserstonetwork",
+        "api_ref": "https://www.zoho.com/connect/api/invite-users-to-network.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.networkAdmin.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__deleteuserfromnetwork___post": {
+      "provider_intent": "zohoconnect__pulse__api__deleteuserfromnetwork___post",
+      "provider_alias_intent": "/pulse/api/deleteuserfromnetwork",
+      "text": "Delete User from an External Network",
+      "category": "Network",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "scopeID": {
+          "type": "string",
+          "text": "scope id of the network",
+          "required": true
+        },
+        "userId": {
+          "type": "string",
+          "text": "user id of user to be deleted",
+          "required": true
+        },
+        "emailId": {
+          "type": "string",
+          "text": "email id of user to be deleted",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to delete a user from a Zoho Connect external network",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/deleteUserFromNetwork",
+        "alias_endpoint": "/zohoconnect/pulse/api/deleteuserfromnetwork",
+        "api_ref": "https://www.zoho.com/connect/api/delete-user-from-external-network.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.networkAdmin.DELETE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__addboard___post": {
+      "provider_intent": "zohoconnect__pulse__api__addboard___post",
+      "provider_alias_intent": "/pulse/api/addboard",
+      "text": "Create a board",
+      "category": "Tasks & Boards",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the board is to be created in",
+          "required": true
+        },
+        "name": {
+          "type": "string",
+          "text": "Board name",
+          "required": true
+        },
+        "desc": {
+          "type": "string",
+          "text": "Description for the board",
+          "required": true
+        },
+        "memberIds": {
+          "type": "string",
+          "text": "User IDs of members to be added to the Board"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "{": {
+          "type": ""
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to create a board in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/addBoard",
+        "alias_endpoint": "/zohoconnect/pulse/api/addboard",
+        "api_ref": "https://www.zoho.com/connect/api/create-board.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.tasks.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__addmemberstoboard___post": {
+      "provider_intent": "zohoconnect__pulse__api__addmemberstoboard___post",
+      "provider_alias_intent": "/pulse/api/addmemberstoboard",
+      "text": "Add Members to a Board",
+      "category": "Tasks & Boards",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the board is in",
+          "required": true
+        },
+        "memberIds": {
+          "type": "string",
+          "text": "User IDs of members to be added to the board",
+          "required": true
+        },
+        "boardId": {
+          "type": "string",
+          "text": "ID of the board to add members to",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "{": {
+          "type": ""
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to add a member to a board in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/addMembersToBoard",
+        "alias_endpoint": "/zohoconnect/pulse/api/addmemberstoboard",
+        "api_ref": "https://www.zoho.com/connect/api/add-member-to-board.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.tasks.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__deletememberfromboard___delete": {
+      "provider_intent": "zohoconnect__pulse__api__deletememberfromboard___delete",
+      "provider_alias_intent": "/pulse/api/deletememberfromboard",
+      "text": "Delete Board Member",
+      "category": "Tasks & Boards",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "Network in which the board is in",
+          "required": true
+        },
+        "memberId": {
+          "type": "string",
+          "text": "ID of member to be removed",
+          "required": true
+        },
+        "boardId": {
+          "type": "string",
+          "text": "Board ID to remove the member from",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "{": {
+          "type": ""
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to delete a board member in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/deleteMemberFromBoard",
+        "alias_endpoint": "/zohoconnect/pulse/api/deletememberfromboard",
+        "api_ref": "https://www.zoho.com/connect/api/delete-board-member.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.tasks.DELETE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__updateboard___put": {
+      "provider_intent": "zohoconnect__pulse__api__updateboard___put",
+      "provider_alias_intent": "/pulse/api/updateboard",
+      "text": "Updating a Board",
+      "category": "Tasks & Boards",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the Board is in",
+          "required": true
+        },
+        "boardId": {
+          "type": "string",
+          "text": "ID of the Board",
+          "required": true
+        },
+        "desc": {
+          "type": "string",
+          "text": "Description for the board"
+        },
+        "name": {
+          "type": "string",
+          "text": "Board name"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "{": {
+          "type": ""
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to update a board's details in Zoho Connect network",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/updateBoard",
+        "alias_endpoint": "/zohoconnect/pulse/api/updateboard",
+        "api_ref": "https://www.zoho.com/connect/api/update-board.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.tasks.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__deleteboard___delete": {
+      "provider_intent": "zohoconnect__pulse__api__deleteboard___delete",
+      "provider_alias_intent": "/pulse/api/deleteboard",
+      "text": "Delete a Board",
+      "category": "Tasks & Boards",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the board is in",
+          "required": true
+        },
+        "boardId": {
+          "type": "string",
+          "text": "ID of the board to be deleted",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "{": {
+          "type": ""
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to delete a board in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/deleteBoard",
+        "alias_endpoint": "/zohoconnect/pulse/api/deleteboard",
+        "api_ref": "https://www.zoho.com/connect/api/delete-board.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.tasks.DELETE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__addtask___post": {
+      "provider_intent": "zohoconnect__pulse__api__addtask___post",
+      "provider_alias_intent": "/pulse/api/addtask",
+      "text": "Create a Task",
+      "category": "Tasks & Boards",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "scopeID": {
+          "type": "string",
+          "text": "Network in which the task is to be posted",
+          "required": true
+        },
+        "boardId": {
+          "type": "string",
+          "text": "In case the task needs to be added to a board, specify the board ID. If not, the task is added as a private task"
+        },
+        "title": {
+          "type": "string",
+          "text": "Task title. Maximum characters allowed is 5000",
+          "required": true
+        },
+        "desc": {
+          "type": "string",
+          "text": "Task description. Maximum characters allowed is 500"
+        },
+        "sectionId": {
+          "type": "string",
+          "text": "In case the task is added to a Board, provide the ID of the section to add the task to",
+          "required": true
+        },
+        "priority": {
+          "type": "string",
+          "text": "Set the priority levels as either: None or Low or Medium or High ",
+          "required": true
+        },
+        "streamId": {
+          "type": "string",
+          "text": "In case you want to add a task that refers to a post, provide the stream ID of that post"
+        },
+        "position": {
+          "type": "string",
+          "text": "Required in case of a board task",
+          "required": true
+        },
+        "fileIds": {
+          "type": "string",
+          "text": "Multiple file IDs should be separated by a comma"
+        },
+        "userIds": {
+          "type": "string",
+          "text": "User IDs of members whom the task should be assigned to"
+        },
+        "eyear": {
+          "type": "string",
+          "text": "Due date of the task. Mention the year"
+        },
+        "emonth": {
+          "type": "string",
+          "text": "Due date of the task. Mention the month"
+        },
+        "edate": {
+          "type": "string",
+          "text": "Due date of the task. Mention the date"
+        },
+        "isSelfReminder": {
+          "type": "string",
+          "text": "If the task requires a reminder set this as true"
+        },
+        "remYear": {
+          "type": "string",
+          "text": "Task Reminder Year ex) 2019"
+        },
+        "remMonth": {
+          "type": "string",
+          "text": "Task Reminder Month ex) 08"
+        },
+        "remDay": {
+          "type": "string",
+          "text": "Task Reminder Day ex) 21"
+        },
+        "remHour": {
+          "type": "string",
+          "text": "Task Reminder Hour"
+        },
+        "remMin": {
+          "type": "string",
+          "text": "Task Reminder Minute"
+        },
+        "checkList": {
+          "type": "string",
+          "text": "Maximum of 10 checklist items is allowed"
+        },
+        "tagNames": {
+          "type": "string",
+          "text": "Names of hashtags associated with the task"
+        },
+        "tagColors": {
+          "type": "string",
+          "text": "Differentiate tags by adding colors"
+        },
+        "frequency": {
+          "type": "string",
+          "text": "Set a value if you'd like to repeat the task"
+        },
+        "howOftenRepetition": {
+          "type": "string",
+          "text": "Set a value based on how often you'd like the task to be repeated"
+        },
+        "dayOfWeek": {
+          "type": "string",
+          "text": "Used when the task is repeated WEEKLY"
+        },
+        "dayOfMonth": {
+          "type": "string",
+          "text": "Set a value if you'd like to repeat the task"
+        },
+        "monthOfYear": {
+          "type": "string",
+          "text": "Allowed values 1 to 11"
+        },
+        "repeatEndYear": {
+          "type": "string",
+          "text": "End year for task repetition"
+        },
+        "repeatEndMonth": {
+          "type": "string",
+          "text": "End month for task repetition"
+        },
+        "repeatEndDate": {
+          "type": "string",
+          "text": "End date for task repetition"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "{": {
+          "type": ""
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to create a task in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/addTask",
+        "alias_endpoint": "/zohoconnect/pulse/api/addtask",
+        "api_ref": "https://www.zoho.com/connect/api/create-task.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.tasks.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__addboardsection___put": {
+      "provider_intent": "zohoconnect__pulse__api__addboardsection___put",
+      "provider_alias_intent": "/pulse/api/addboardsection",
+      "text": "Add Section to a Board",
+      "category": "Tasks & Boards",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "scopeID": {
+          "type": "string",
+          "text": "Network id. Can be taken from the network list API",
+          "required": true
+        },
+        "name": {
+          "type": "string",
+          "text": "Name of the section",
+          "required": true
+        },
+        "boardId": {
+          "type": "string",
+          "text": "ID of the board to add the section to",
+          "required": true
+        },
+        "position": {
+          "type": "string",
+          "text": "Position where the section needs to be inserted",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "{": {
+          "type": ""
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to add a section to the board in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/addBoardSection",
+        "alias_endpoint": "/zohoconnect/pulse/api/addboardsection",
+        "api_ref": "https://www.zoho.com/connect/api/add-section-to-board.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.tasks.CREATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__deleteboardsection___delete": {
+      "provider_intent": "zohoconnect__pulse__api__deleteboardsection___delete",
+      "provider_alias_intent": "/pulse/api/deleteboardsection",
+      "text": "Delete Board Section",
+      "category": "Tasks & Boards",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the Network the section is in",
+          "required": true
+        },
+        "sectionId": {
+          "type": "string",
+          "text": "ID of the section to be deleted",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "{": {
+          "type": ""
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to delete a section from a board in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/deleteBoardSection",
+        "alias_endpoint": "/zohoconnect/pulse/api/deleteboardsection",
+        "api_ref": "https://www.zoho.com/connect/api/delete-board-section.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.tasks.DELETE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__deletetask___delete": {
+      "provider_intent": "zohoconnect__pulse__api__deletetask___delete",
+      "provider_alias_intent": "/pulse/api/deletetask",
+      "text": "Delete Task",
+      "category": "Tasks & Boards",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the task is in",
+          "required": true
+        },
+        "taskId": {
+          "type": "string",
+          "text": "ID of the task to be deleted",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "{": {
+          "type": ""
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to delete a task",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/deleteTask",
+        "alias_endpoint": "/zohoconnect/pulse/api/deletetask",
+        "api_ref": "https://www.zoho.com/connect/api/delete-task.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.tasks.DELETE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__boardsections___get": {
+      "provider_intent": "zohoconnect__pulse__api__boardsections___get",
+      "provider_alias_intent": "/pulse/api/boardsections",
+      "text": "Get Board Section",
+      "category": "Tasks & Boards",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the board is in",
+          "required": true
+        },
+        "boardId": {
+          "type": "string",
+          "text": "ID of the board to get sections from",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "{": {
+          "type": ""
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to get sections from a board in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/boardSections",
+        "alias_endpoint": "/zohoconnect/pulse/api/boardsections",
+        "api_ref": "https://www.zoho.com/connect/api/get-board-sections.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.tasks.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__myboards___get": {
+      "provider_intent": "zohoconnect__pulse__api__myboards___get",
+      "provider_alias_intent": "/pulse/api/myboards",
+      "text": "Get my Boards",
+      "category": "Tasks & Boards",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network you want to get boards from",
+          "required": true
+        },
+        "boardsModifiedTime": {
+          "type": "string",
+          "text": "Fetch data from a specified time"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "{": {
+          "type": ""
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to get boards listed under My Boards in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/myBoards",
+        "alias_endpoint": "/zohoconnect/pulse/api/myboards",
+        "api_ref": "https://www.zoho.com/connect/api/get-my-boards.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.tasks.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__updateboardsection___put": {
+      "provider_intent": "zohoconnect__pulse__api__updateboardsection___put",
+      "provider_alias_intent": "/pulse/api/updateboardsection",
+      "text": "Update Board Section",
+      "category": "Tasks & Boards",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the board is in",
+          "required": true
+        },
+        "sectionId": {
+          "type": "string",
+          "text": "ID of the section to be updated",
+          "required": true
+        },
+        "name": {
+          "type": "string",
+          "text": "The updated section name"
+        },
+        "colourType": {
+          "type": "string",
+          "text": "This is to update the color for the section"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "{": {
+          "type": ""
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to update a section in a board in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/updateBoardSection",
+        "alias_endpoint": "/zohoconnect/pulse/api/updateboardsection",
+        "api_ref": "https://www.zoho.com/connect/api/update-board-section.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.tasks.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__updatetask___post": {
+      "provider_intent": "zohoconnect__pulse__api__updatetask___post",
+      "provider_alias_intent": "/pulse/api/updatetask",
+      "text": "Update a Task",
+      "category": "Tasks & Boards",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "scopeID": {
+          "type": "string",
+          "text": "Network in which the task to be updated is in",
+          "required": true
+        },
+        "taskId": {
+          "type": "string",
+          "text": "ID of the task. Can be taken from the response of add task json",
+          "required": true
+        },
+        "title": {
+          "type": "string",
+          "text": "Updated task title. Maximum characters allowed is 3000",
+          "required": true
+        },
+        "desc": {
+          "type": "string",
+          "text": "Task description"
+        },
+        "priority": {
+          "type": "string",
+          "text": "Update priority as either: None | Low | Medium | High",
+          "required": true
+        },
+        "status": {
+          "type": "string",
+          "text": "Update the task status by using these values: 0,1,2,3,4 {0-OPEN, 1-STARTED, 2-IN PROGRESS, 3-FOR REVIEW, 4-COMPLETED}"
+        },
+        "assigneeId": {
+          "type": "string",
+          "text": "User IDs of the task assigness"
+        },
+        "removeAssigneeId": {
+          "type": "string",
+          "text": "User IDs of assignees to be removed"
+        },
+        "eyear": {
+          "type": "string",
+          "text": "Due year for the task"
+        },
+        "emonth": {
+          "type": "string",
+          "text": "Due month for the task"
+        },
+        "edate": {
+          "type": "string",
+          "text": "Due day for the task"
+        },
+        "isClearDueDate": {
+          "type": "string",
+          "text": "You can clear the due date if needed"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "{": {
+          "type": ""
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to update a task in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/updateTask",
+        "alias_endpoint": "/zohoconnect/pulse/api/updatetask",
+        "api_ref": "https://www.zoho.com/connect/api/update-task.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.tasks.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__useractivities___get": {
+      "provider_intent": "zohoconnect__pulse__api__useractivities___get",
+      "provider_alias_intent": "/pulse/api/useractivities",
+      "text": "Get User Activity",
+      "category": "User",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the user belongs to",
+          "required": true
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's ZU ID or user ID",
+          "required": true
+        },
+        "modifiedTime": {
+          "type": "string",
+          "text": "Fetch data till a specified time"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to get a user's activity in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/userActivities",
+        "alias_endpoint": "/zohoconnect/pulse/api/useractivities",
+        "api_ref": "https://www.zoho.com/connect/api/user-activity.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.userDetail.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__v1__userstreams___get": {
+      "provider_intent": "zohoconnect__pulse__api__v1__userstreams___get",
+      "provider_alias_intent": "/pulse/api/v1/userstreams",
+      "text": "Get User Feed",
+      "category": "User",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the user belongs to",
+          "required": true
+        },
+        "userId": {
+          "type": "string",
+          "text": "The user's zu ID or user ID",
+          "required": true
+        },
+        "partitionId": {
+          "type": "string",
+          "text": "Group ID of the user"
+        },
+        "modifiedTime": {
+          "type": "string",
+          "text": "Fetch data till a specific time"
+        },
+        "limit": {
+          "type": "string",
+          "text": "Set a limit for the stream"
+        },
+        "commentLimit ": {
+          "type": "string",
+          "text": "Set a limit on the number of comments"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "The purpose of this API is to get a user's feed in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/v1/userStreams",
+        "alias_endpoint": "/zohoconnect/pulse/api/v1/userstreams",
+        "api_ref": "https://www.zoho.com/connect/api/get-user-feed.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.userDetail.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohoconnect__pulse__api__usergroups___get": {
+      "provider_intent": "zohoconnect__pulse__api__usergroups___get",
+      "provider_alias_intent": "/pulse/api/usergroups",
+      "text": "Get User Groups",
+      "category": "User",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "scopeID": {
+          "type": "string",
+          "text": "ID of the network the user belongs to",
+          "required": true
+        },
+        "isRecentSort": {
+          "type": "string",
+          "text": "Set this as either true or false",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "",
+        "auth": [],
+        "description": "The purpose of this API is to get user's groups in Zoho Connect",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/pulse/api/userGroups",
+        "alias_endpoint": "/zohoconnect/pulse/api/usergroups",
+        "api_ref": "https://www.zoho.com/connect/api/get-user-groups.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "zohopulse.userDetail.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

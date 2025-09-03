@@ -1,0 +1,1577 @@
+{
+  "routes": {
+    "scenario__v1__images__erase-background___put": {
+      "provider_intent": "scenario__v1__images__erase-background___put",
+      "provider_alias_intent": "/v1/images/erase-background",
+      "text": "Remove the background of a given image",
+      "category": "Images Edition",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "image": {
+          "type": "string",
+          "text": "The input image as a data URL"
+        },
+        "backgroundColor": {
+          "type": "string",
+          "text": "The background color as an hexadecimal code"
+        },
+        "assetId": {
+          "type": "string",
+          "text": "The asset ID"
+        },
+        "format": {
+          "type": "string",
+          "text": "The output format"
+        },
+        "name": {
+          "type": "string",
+          "text": "The original file name of the image"
+        },
+        "returnImage": {
+          "type": "boolean",
+          "text": "If true the image will be returned in the response",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Remove the background of a given image.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.cloud.scenario.com/v1/images/erase-background",
+        "alias_endpoint": "/scenario/v1/images/erase-background",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Basic",
+          "authKey": [
+            "api_key",
+            "api_secret"
+          ],
+          "mode": "base64"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "scenario__v1__images__pixelate___put": {
+      "provider_intent": "scenario__v1__images__pixelate___put",
+      "provider_alias_intent": "/v1/images/pixelate",
+      "text": "Pixelate a given image",
+      "category": "Images Edition",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "image": {
+          "type": "string",
+          "text": "The input image as a data URL"
+        },
+        "assetId": {
+          "type": "string",
+          "text": "The asset ID"
+        },
+        "pixelGridSize": {
+          "type": "number",
+          "text": "The size of the pixel grid in the output image"
+        },
+        "name": {
+          "type": "string",
+          "text": "The original file name of the image"
+        },
+        "removeNoise": {
+          "type": "boolean",
+          "text": "Reduce pixel art artefacts",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "removeBackground": {
+          "type": "boolean",
+          "text": "Remove the background from the image",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "returnImage": {
+          "type": "boolean",
+          "text": "If true the image will be returned in the response",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "colorPalette": {
+          "type": "array",
+          "text": "The color palette to use for the pixel art"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Pixelate a given image.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.cloud.scenario.com/v1/images/pixelate",
+        "alias_endpoint": "/scenario/v1/images/pixelate",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Basic",
+          "authKey": [
+            "api_key",
+            "api_secret"
+          ],
+          "mode": "base64"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "scenario__v1__images__remove-background___put": {
+      "provider_intent": "scenario__v1__images__remove-background___put",
+      "provider_alias_intent": "/v1/images/remove-background",
+      "text": "Remove Background of a given image",
+      "category": "Images Edition",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "backgroundColor": {
+          "type": "string",
+          "text": "The background color as an hexadecimal code"
+        },
+        "data": {
+          "type": "string",
+          "text": "The input image as a data URL"
+        },
+        "format": {
+          "type": "string",
+          "text": "The output format"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Remove Background of a given image.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.cloud.scenario.com/v1/images/remove-background",
+        "alias_endpoint": "/scenario/v1/images/remove-background",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Basic",
+          "authKey": [
+            "api_key",
+            "api_secret"
+          ],
+          "mode": "base64"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "scenario__v1__images__upscale___put": {
+      "provider_intent": "scenario__v1__images__upscale___put",
+      "provider_alias_intent": "/v1/images/upscale",
+      "text": "Upscale a given image",
+      "category": "Images Edition",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "image": {
+          "type": "string",
+          "text": "The image to upscale in base64 format string"
+        },
+        "forceFaceRestoration": {
+          "type": "boolean",
+          "text": "If true the image will be upscaled using a face restoration model",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "assetId": {
+          "type": "string",
+          "text": "The asset ID"
+        },
+        "name": {
+          "type": "string",
+          "text": "The original file name of the image"
+        },
+        "scalingFactor": {
+          "type": "number",
+          "text": "The scaling factor to apply to the image"
+        },
+        "returnImage": {
+          "type": "boolean",
+          "text": "If true the image will be returned in the response",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "photorealist": {
+          "type": "boolean",
+          "text": "If true the image will be upscaled using a photorealistic model",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Upscale a given image.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.cloud.scenario.com/v1/images/upscale",
+        "alias_endpoint": "/scenario/v1/images/upscale",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Basic",
+          "authKey": [
+            "api_key",
+            "api_secret"
+          ],
+          "mode": "base64"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "scenario__v1__inferences___get": {
+      "provider_intent": "scenario__v1__inferences___get",
+      "provider_alias_intent": "/v1/inferences",
+      "text": "Get all inferences",
+      "category": "Images Generation",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "pageSize": {
+          "type": "string",
+          "text": "The number of models to return in the response"
+        },
+        "paginationToken": {
+          "type": "string",
+          "text": "A token you received in a previous request to query the next page of models"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get all inferences.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.cloud.scenario.com/v1/inferences",
+        "alias_endpoint": "/scenario/v1/inferences",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Basic",
+          "authKey": [
+            "api_key",
+            "api_secret"
+          ],
+          "mode": "base64"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "scenario__v1__models___get": {
+      "provider_intent": "scenario__v1__models___get",
+      "provider_alias_intent": "/v1/models",
+      "text": "List all models",
+      "category": "Models",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "status": {
+          "type": "string",
+          "text": "The status of the models to return"
+        },
+        "privacy": {
+          "type": "string",
+          "text": "The privacy of the models to return"
+        },
+        "pageSize": {
+          "type": "string",
+          "text": "The number of models to return in the response"
+        },
+        "paginationToken": {
+          "type": "string",
+          "text": "A token you received in a previous request to query the next page of models"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all models.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.cloud.scenario.com/v1/models",
+        "alias_endpoint": "/scenario/v1/models",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Basic",
+          "authKey": [
+            "api_key",
+            "api_secret"
+          ],
+          "mode": "base64"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "scenario__v1__models___post": {
+      "provider_intent": "scenario__v1__models___post",
+      "provider_alias_intent": "/v1/models",
+      "text": "Create a new model",
+      "category": "Models",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "The name of your model"
+        },
+        "classSlug": {
+          "type": "string",
+          "text": "The slug of the class you want to use"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new model.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.cloud.scenario.com/v1/models",
+        "alias_endpoint": "/scenario/v1/models",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Basic",
+          "authKey": [
+            "api_key",
+            "api_secret"
+          ],
+          "mode": "base64"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "scenario__v1__models__modelid___get": {
+      "provider_intent": "scenario__v1__models__modelid___get",
+      "provider_alias_intent": "/v1/models/modelId",
+      "text": "Get a model's details including its training status and training progress if available",
+      "category": "Models",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "modelId": {
+          "type": "string",
+          "text": "The model ID to retrieve",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "modelId": {
+          "type": "string",
+          "text": "The model ID to retrieve",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get a model's details including its training status and training progress if available.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.cloud.scenario.com/v1/models/{modelId}",
+        "alias_endpoint": "/scenario/v1/models/modelId",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Basic",
+          "authKey": [
+            "api_key",
+            "api_secret"
+          ],
+          "mode": "base64"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "scenario__v1__models__modelid___put": {
+      "provider_intent": "scenario__v1__models__modelid___put",
+      "provider_alias_intent": "/v1/models/modelId",
+      "text": "Update a particular model",
+      "category": "Models",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "modelId": {
+          "type": "string",
+          "text": "The ID of the model to update",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "modelId": {
+          "type": "string",
+          "text": "The ID of the model to update",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update a particular model.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.cloud.scenario.com/v1/models/{modelId}",
+        "alias_endpoint": "/scenario/v1/models/modelId",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Basic",
+          "authKey": [
+            "api_key",
+            "api_secret"
+          ],
+          "mode": "base64"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "scenario__v1__models__modelid___delete": {
+      "provider_intent": "scenario__v1__models__modelid___delete",
+      "provider_alias_intent": "/v1/models/modelId",
+      "text": "Delete a model",
+      "category": "Models",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "modelId": {
+          "type": "string",
+          "text": "The ID of the model to delete",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "modelId": {
+          "type": "string",
+          "text": "The ID of the model to delete",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a model.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.cloud.scenario.com/v1/models/{modelId}",
+        "alias_endpoint": "/scenario/v1/models/modelId",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Basic",
+          "authKey": [
+            "api_key",
+            "api_secret"
+          ],
+          "mode": "base64"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "scenario__v1__models__modelid__categories___get": {
+      "provider_intent": "scenario__v1__models__modelid__categories___get",
+      "provider_alias_intent": "/v1/models/modelId/categories",
+      "text": "List all categories of a model",
+      "category": "Models",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "modelId": {
+          "type": "string",
+          "text": "The categories available for a model Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "modelId": {
+          "type": "string",
+          "text": "The categories available for a model Id",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all categories of a model.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.cloud.scenario.com/v1/models/{modelId}/categories",
+        "alias_endpoint": "/scenario/v1/models/modelId/categories",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Basic",
+          "authKey": [
+            "api_key",
+            "api_secret"
+          ],
+          "mode": "base64"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "scenario__v1__models__modelid__classes___get": {
+      "provider_intent": "scenario__v1__models__modelid__classes___get",
+      "provider_alias_intent": "/v1/models/modelId/classes",
+      "text": "List all classes for a model and category",
+      "category": "Models",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "modelId": {
+          "type": "string",
+          "text": "The ID of the model of the category",
+          "required": true
+        },
+        "category": {
+          "type": "string",
+          "text": "The category of the classes"
+        },
+        "pageSize": {
+          "type": "string",
+          "text": "The number of models to return in the response"
+        },
+        "paginationToken": {
+          "type": "string",
+          "text": "A token you received in a previous request to query the next page of models"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "modelId": {
+          "type": "string",
+          "text": "The ID of the model of the category",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all classes for a model and category.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.cloud.scenario.com/v1/models/{modelId}/classes",
+        "alias_endpoint": "/scenario/v1/models/modelId/classes",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Basic",
+          "authKey": [
+            "api_key",
+            "api_secret"
+          ],
+          "mode": "base64"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "scenario__v1__models__modelid__copy___post": {
+      "provider_intent": "scenario__v1__models__modelid__copy___post",
+      "provider_alias_intent": "/v1/models/modelId/copy",
+      "text": "Copy a model to a new model including all of its training images",
+      "category": "Models",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "modelId": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "modelId": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Copy a model to a new model including all of its training images.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.cloud.scenario.com/v1/models/{modelId}/copy",
+        "alias_endpoint": "/scenario/v1/models/modelId/copy",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Basic",
+          "authKey": [
+            "api_key",
+            "api_secret"
+          ],
+          "mode": "base64"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "scenario__v1__models__modelid__train___put": {
+      "provider_intent": "scenario__v1__models__modelid__train___put",
+      "provider_alias_intent": "/v1/models/modelId/train",
+      "text": "Trigger a model training",
+      "category": "Models",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "modelId": {
+          "type": "string",
+          "text": "The model Id for which the training will be triggered",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "parameters": {
+          "type": "object"
+        }
+      },
+      "path": {
+        "modelId": {
+          "type": "string",
+          "text": "The model Id for which the training will be triggered",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Trigger a model training.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.cloud.scenario.com/v1/models/{modelId}/train",
+        "alias_endpoint": "/scenario/v1/models/modelId/train",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Basic",
+          "authKey": [
+            "api_key",
+            "api_secret"
+          ],
+          "mode": "base64"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "scenario__v1__models__modelid__training-images___post": {
+      "provider_intent": "scenario__v1__models__modelid__training-images___post",
+      "provider_alias_intent": "/v1/models/modelId/training-images",
+      "text": "Add a new training image to a model",
+      "category": "Models",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "modelId": {
+          "type": "string",
+          "text": "The model Id where the training image will be stored",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "data": {
+          "type": "string",
+          "text": "The training image as a data URL"
+        },
+        "name": {
+          "type": "string",
+          "text": "The original file name of the image"
+        }
+      },
+      "path": {
+        "modelId": {
+          "type": "string",
+          "text": "The model Id where the training image will be stored",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Add a new training image to a model.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.cloud.scenario.com/v1/models/{modelId}/training-images",
+        "alias_endpoint": "/scenario/v1/models/modelId/training-images",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Basic",
+          "authKey": [
+            "api_key",
+            "api_secret"
+          ],
+          "mode": "base64"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "scenario__v1__models__modelid__training-images__trainingimageid___delete": {
+      "provider_intent": "scenario__v1__models__modelid__training-images__trainingimageid___delete",
+      "provider_alias_intent": "/v1/models/modelId/training-images/trainingImageId",
+      "text": "Delete a training image from a model",
+      "category": "Models",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "modelId": {
+          "type": "string",
+          "text": "The model Id of the training image id",
+          "required": true
+        },
+        "trainingImageId": {
+          "type": "string",
+          "text": "The training image Id that will be deleted",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "modelId": {
+          "type": "string",
+          "text": "The model Id of the training image id",
+          "required": true
+        },
+        "trainingImageId": {
+          "type": "string",
+          "text": "The training image Id that will be deleted",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a training image from a model.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.cloud.scenario.com/v1/models/{modelId}/training-images/{trainingImageId}",
+        "alias_endpoint": "/scenario/v1/models/modelId/training-images/trainingImageId",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Basic",
+          "authKey": [
+            "api_key",
+            "api_secret"
+          ],
+          "mode": "base64"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "scenario__v1__models__modelid__transfer___post": {
+      "provider_intent": "scenario__v1__models__modelid__transfer___post",
+      "provider_alias_intent": "/v1/models/modelId/transfer",
+      "text": "Transfer (with a copy or a full ownership change) a model to a new owner including all of its training images",
+      "category": "Models",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "modelId": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "destination_team_id": {
+          "type": "string",
+          "text": "The id of the team to transfer the model to"
+        },
+        "asCopy": {
+          "type": "boolean",
+          "text": "If set to true the model will be copied instead of transferred",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "modelId": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Transfer (with a copy or a full ownership change) a model to a new owner including all of its training images.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.cloud.scenario.com/v1/models/{modelId}/transfer",
+        "alias_endpoint": "/scenario/v1/models/modelId/transfer",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Basic",
+          "authKey": [
+            "api_key",
+            "api_secret"
+          ],
+          "mode": "base64"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "scenario__v1__models__modelid__images___delete": {
+      "provider_intent": "scenario__v1__models__modelid__images___delete",
+      "provider_alias_intent": "/v1/models/modelId/images",
+      "text": "Delete a training image",
+      "category": "Models / Images",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "modelId": {
+          "type": "string",
+          "text": "The ID of the model of the images to delete",
+          "required": true
+        },
+        "ids": {
+          "type": "string",
+          "text": "The ids of the images to delete",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "modelId": {
+          "type": "string",
+          "text": "The ID of the model of the images to delete",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a training image.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.cloud.scenario.com/v1/models/{modelId}/images",
+        "alias_endpoint": "/scenario/v1/models/modelId/images",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Basic",
+          "authKey": [
+            "api_key",
+            "api_secret"
+          ],
+          "mode": "base64"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "scenario__v1__models__modelid__inferences___get": {
+      "provider_intent": "scenario__v1__models__modelid__inferences___get",
+      "provider_alias_intent": "/v1/models/modelId/inferences",
+      "text": "Get all inferences for a particular model",
+      "category": "Models / Images",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "modelId": {
+          "type": "string",
+          "text": "The ID of the model of the generated images to delete",
+          "required": true
+        },
+        "pageSize": {
+          "type": "string",
+          "text": "The number of models to return in the response"
+        },
+        "paginationToken": {
+          "type": "string",
+          "text": "A token you received in a previous request to query the next page of models"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "modelId": {
+          "type": "string",
+          "text": "The ID of the model of the generated images to delete",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get all inferences for a particular model.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.cloud.scenario.com/v1/models/{modelId}/inferences",
+        "alias_endpoint": "/scenario/v1/models/modelId/inferences",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Basic",
+          "authKey": [
+            "api_key",
+            "api_secret"
+          ],
+          "mode": "base64"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "scenario__v1__models__modelid__inferences___post": {
+      "provider_intent": "scenario__v1__models__modelid__inferences___post",
+      "provider_alias_intent": "/v1/models/modelId/inferences",
+      "text": "Create a new inference for a specific model",
+      "category": "Models / Images",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "modelId": {
+          "type": "string",
+          "text": "The ID of model that will be used to generate new images",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "parameters": {
+          "type": "object"
+        }
+      },
+      "path": {
+        "modelId": {
+          "type": "string",
+          "text": "The ID of model that will be used to generate new images",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new inference for a specific model.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.cloud.scenario.com/v1/models/{modelId}/inferences",
+        "alias_endpoint": "/scenario/v1/models/modelId/inferences",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Basic",
+          "authKey": [
+            "api_key",
+            "api_secret"
+          ],
+          "mode": "base64"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "scenario__v1__models__modelid__inferences___delete": {
+      "provider_intent": "scenario__v1__models__modelid__inferences___delete",
+      "provider_alias_intent": "/v1/models/modelId/inferences",
+      "text": "Delete an inference",
+      "category": "Models / Images",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "modelId": {
+          "type": "string",
+          "text": "The ID of the model of the generated images to delete",
+          "required": true
+        },
+        "inferenceIds": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "modelId": {
+          "type": "string",
+          "text": "The ID of the model of the generated images to delete",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete an inference.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.cloud.scenario.com/v1/models/{modelId}/inferences",
+        "alias_endpoint": "/scenario/v1/models/modelId/inferences",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Basic",
+          "authKey": [
+            "api_key",
+            "api_secret"
+          ],
+          "mode": "base64"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "scenario__v1__models__modelid__inferences__all___delete": {
+      "provider_intent": "scenario__v1__models__modelid__inferences__all___delete",
+      "provider_alias_intent": "/v1/models/modelId/inferences/all",
+      "text": "Delete all inferences of a model",
+      "category": "Models / Images",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "modelId": {
+          "type": "string",
+          "text": "The ID of model on which all inferences will be deleted",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "modelId": {
+          "type": "string",
+          "text": "The ID of model on which all inferences will be deleted",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete all inferences of a model.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.cloud.scenario.com/v1/models/{modelId}/inferences/all",
+        "alias_endpoint": "/scenario/v1/models/modelId/inferences/all",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Basic",
+          "authKey": [
+            "api_key",
+            "api_secret"
+          ],
+          "mode": "base64"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "scenario__v1__models__modelid__inferences__inferenceid___get": {
+      "provider_intent": "scenario__v1__models__modelid__inferences__inferenceid___get",
+      "provider_alias_intent": "/v1/models/modelId/inferences/inferenceId",
+      "text": "Get an inference including its status",
+      "category": "Models / Images",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "inferenceId": {
+          "type": "string",
+          "text": "The inference Id to retrieve",
+          "required": true
+        },
+        "modelId": {
+          "type": "string",
+          "text": "The model Id of the inference id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "inferenceId": {
+          "type": "string",
+          "text": "The inference Id to retrieve",
+          "required": true
+        },
+        "modelId": {
+          "type": "string",
+          "text": "The model Id of the inference id",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get an inference including its status.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.cloud.scenario.com/v1/models/{modelId}/inferences/{inferenceId}",
+        "alias_endpoint": "/scenario/v1/models/modelId/inferences/inferenceId",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Basic",
+          "authKey": [
+            "api_key",
+            "api_secret"
+          ],
+          "mode": "base64"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "scenario__v1__models__modelid__inferences__inferenceid___delete": {
+      "provider_intent": "scenario__v1__models__modelid__inferences__inferenceid___delete",
+      "provider_alias_intent": "/v1/models/modelId/inferences/inferenceId",
+      "text": "Delete an inference and all its generated images",
+      "category": "Models / Images",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "inferenceId": {
+          "type": "string",
+          "text": "The inference Id that will be deleted",
+          "required": true
+        },
+        "modelId": {
+          "type": "string",
+          "text": "The model Id of the inference id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "inferenceId": {
+          "type": "string",
+          "text": "The inference Id that will be deleted",
+          "required": true
+        },
+        "modelId": {
+          "type": "string",
+          "text": "The model Id of the inference id",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete an inference and all its generated images.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.cloud.scenario.com/v1/models/{modelId}/inferences/{inferenceId}",
+        "alias_endpoint": "/scenario/v1/models/modelId/inferences/inferenceId",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Basic",
+          "authKey": [
+            "api_key",
+            "api_secret"
+          ],
+          "mode": "base64"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "scenario__v1__models__modelid__inferences__inferenceid__images__imageid___get": {
+      "provider_intent": "scenario__v1__models__modelid__inferences__inferenceid__images__imageid___get",
+      "provider_alias_intent": "/v1/models/modelId/inferences/inferenceId/images/imageId",
+      "text": "Get a particular image of an inference",
+      "category": "Models / Images",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "inferenceId": {
+          "type": "string",
+          "text": "The inference Id of the image id",
+          "required": true
+        },
+        "modelId": {
+          "type": "string",
+          "text": "The model Id of the inference id",
+          "required": true
+        },
+        "imageId": {
+          "type": "string",
+          "text": "The image Id to retrieve",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "inferenceId": {
+          "type": "string",
+          "text": "The inference Id of the image id",
+          "required": true
+        },
+        "modelId": {
+          "type": "string",
+          "text": "The model Id of the inference id",
+          "required": true
+        },
+        "imageId": {
+          "type": "string",
+          "text": "The image Id to retrieve",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get a particular image of an inference.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.cloud.scenario.com/v1/models/{modelId}/inferences/{inferenceId}/images/{imageId}",
+        "alias_endpoint": "/scenario/v1/models/modelId/inferences/inferenceId/images/imageId",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Basic",
+          "authKey": [
+            "api_key",
+            "api_secret"
+          ],
+          "mode": "base64"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "scenario__v1__models__modelid__inferences__inferenceid__images__imageid___delete": {
+      "provider_intent": "scenario__v1__models__modelid__inferences__inferenceid__images__imageid___delete",
+      "provider_alias_intent": "/v1/models/modelId/inferences/inferenceId/images/imageId",
+      "text": "Delete an image from an inference",
+      "category": "Models / Images",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "inferenceId": {
+          "type": "string",
+          "text": "The inference Id of the image id",
+          "required": true
+        },
+        "modelId": {
+          "type": "string",
+          "text": "The model Id of the inference id",
+          "required": true
+        },
+        "imageId": {
+          "type": "string",
+          "text": "The image Id to delete",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "inferenceId": {
+          "type": "string",
+          "text": "The inference Id of the image id",
+          "required": true
+        },
+        "modelId": {
+          "type": "string",
+          "text": "The model Id of the inference id",
+          "required": true
+        },
+        "imageId": {
+          "type": "string",
+          "text": "The image Id to delete",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete an image from an inference.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.cloud.scenario.com/v1/models/{modelId}/inferences/{inferenceId}/images/{imageId}",
+        "alias_endpoint": "/scenario/v1/models/modelId/inferences/inferenceId/images/imageId",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Basic",
+          "authKey": [
+            "api_key",
+            "api_secret"
+          ],
+          "mode": "base64"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "scenario__v1__tags___get": {
+      "provider_intent": "scenario__v1__tags___get",
+      "provider_alias_intent": "/v1/tags",
+      "text": "List all tags",
+      "category": "Tags",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "pageSize": {
+          "type": "string",
+          "text": "The number of models to return in the response"
+        },
+        "paginationToken": {
+          "type": "string",
+          "text": "A token you received in a previous request to query the next page of models"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all tags.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.cloud.scenario.com/v1/tags",
+        "alias_endpoint": "/scenario/v1/tags",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Basic",
+          "authKey": [
+            "api_key",
+            "api_secret"
+          ],
+          "mode": "base64"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "scenario__v1__usages___get": {
+      "provider_intent": "scenario__v1__usages___get",
+      "provider_alias_intent": "/v1/usages",
+      "text": "Get usages. Maximum time range with custom startDate and endDate is 120 days. Granularity is calculated based on the time range.",
+      "category": "Usage",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "timeRange": {
+          "type": "string",
+          "text": "The time range of the usage"
+        },
+        "startDate": {
+          "type": "string",
+          "text": "The start date of the usage"
+        },
+        "endDate": {
+          "type": "string",
+          "text": "The end date of the usage"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get usages.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.cloud.scenario.com/v1/usages",
+        "alias_endpoint": "/scenario/v1/usages",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Basic",
+          "authKey": [
+            "api_key",
+            "api_secret"
+          ],
+          "mode": "base64"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

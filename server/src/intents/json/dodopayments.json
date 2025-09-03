@@ -1,0 +1,1603 @@
+{
+  "routes": {
+    "dodopayments__payments___get": {
+      "provider_intent": "dodopayments__payments___get",
+      "provider_alias_intent": "/payments",
+      "text": "List Payments",
+      "category": "Payments",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "page_size": {
+          "text": "Page size default is 10 max is 100",
+          "type": "number"
+        },
+        "page_number": {
+          "text": "Page number default is 0",
+          "type": "number"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/payments/get-payments",
+        "version": "",
+        "rate_limit": [],
+        "description": "Get a list of all payments associated with your account.",
+        "api_endpoint": "https://test.dodopayments.com/payments"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-02T15:12:17.000Z"
+    },
+    "dodopayments__payments__payment_id___get": {
+      "provider_intent": "dodopayments__payments__payment_id___get",
+      "provider_alias_intent": "/payments/payment_id",
+      "text": "Get Payment Detail",
+      "category": "Payments",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "payment_id": {
+          "text": "Payment Id",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/payments/get-payments-1",
+        "version": "",
+        "rate_limit": [],
+        "description": "Get detailed information about a specific payment.",
+        "api_endpoint": " https://test.dodopayments.com/payments/{payment_id} "
+      },
+      "auth": [],
+      "response_format": {
+        "tax": 123,
+        "status": "succeeded",
+        "refunds": [
+          {
+            "amount": 123,
+            "reason": "<string>",
+            "status": "succeeded",
+            "currency": "AED",
+            "refund_id": "<string>",
+            "created_at": "2023-11-07T05:31:56Z",
+            "payment_id": "<string>",
+            "business_id": "<string>"
+          }
+        ],
+        "currency": "AED",
+        "customer": {
+          "name": "<string>",
+          "email": "<string>",
+          "customer_id": "<string>"
+        },
+        "disputes": [
+          {
+            "amount": "<string>",
+            "currency": "<string>",
+            "created_at": "2023-11-07T05:31:56Z",
+            "dispute_id": "<string>",
+            "payment_id": "<string>",
+            "business_id": "<string>",
+            "dispute_stage": "pre_dispute",
+            "dispute_status": "dispute_opened"
+          }
+        ],
+        "metadata": {},
+        "created_at": "2023-11-07T05:31:56Z",
+        "payment_id": "<string>",
+        "updated_at": "2023-11-07T05:31:56Z",
+        "business_id": "<string>",
+        "payment_link": "<string>",
+        "product_cart": [
+          {
+            "quantity": 1,
+            "product_id": "<string>"
+          }
+        ],
+        "total_amount": 123,
+        "payment_method": "<string>",
+        "subscription_id": "<string>",
+        "payment_method_type": "<string>"
+      },
+      "updated_at": "2025-01-02T15:23:04.000Z"
+    },
+    "dodopayments__licenses__activate___post": {
+      "provider_intent": "dodopayments__licenses__activate___post",
+      "provider_alias_intent": "/licenses/activate",
+      "text": "Activate License",
+      "category": "Licenses",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "name": {
+          "text": "Name",
+          "type": "string",
+          "required": true
+        },
+        "license_key": {
+          "text": "License Key",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "",
+        "version": "",
+        "rate_limit": [],
+        "description": "This endpoint allows you to activate a license for the user.",
+        "api_endpoint": "https://test.dodopayments.com/licenses/activate"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-02T16:20:03.000Z"
+    },
+    "dodopayments__licenses__deactivate___post": {
+      "provider_intent": "dodopayments__licenses__deactivate___post",
+      "provider_alias_intent": "/licenses/deactivate",
+      "text": "Deactivate License",
+      "category": "Licenses",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "license_key": {
+          "text": "License Key",
+          "type": "string",
+          "required": true
+        },
+        "license_key_instance_id": {
+          "text": "License Key Instance Id",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/licenses/deactivate-license",
+        "version": "",
+        "rate_limit": [],
+        "description": "This endpoint allows you to deactivate a license for the user.",
+        "api_endpoint": "https://test.dodopayments.com/licenses/deactivate"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-02T16:20:54.000Z"
+    },
+    "dodopayments__licenses__validate___post": {
+      "provider_intent": "dodopayments__licenses__validate___post",
+      "provider_alias_intent": "/licenses/validate",
+      "text": "Validate License",
+      "category": "Licenses",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "license_key": {
+          "text": "License Key",
+          "type": "string",
+          "required": true
+        },
+        "license_key_instance_id": {
+          "text": "License Key Instance Id",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/licenses/validate-license",
+        "version": "",
+        "rate_limit": [],
+        "description": "This endpoint allows you to validate a license for the user.",
+        "api_endpoint": "https://test.dodopayments.com/licenses/validate"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-02T16:21:37.000Z"
+    },
+    "dodopayments__license_keys___get": {
+      "provider_intent": "dodopayments__license_keys___get",
+      "provider_alias_intent": "/license_keys",
+      "text": "Get License Keys",
+      "category": "Licenses",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "status": {
+          "text": "Filter by license key status",
+          "type": "string"
+        },
+        "page_size": {
+          "text": "Page size default is 10 max is 100",
+          "type": "number"
+        },
+        "product_id": {
+          "text": "Filter by product ID",
+          "type": "object"
+        },
+        "customer_id": {
+          "text": "Filter by customer ID",
+          "type": "string"
+        },
+        "page_number": {
+          "text": "Page number default is 0",
+          "type": "number"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/licenses/get-license-keys",
+        "version": "",
+        "rate_limit": [],
+        "description": "Retrieve a list of license keys associated with your account.",
+        "api_endpoint": "https://test.dodopayments.com/license_keys"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-02T16:25:10.000Z"
+    },
+    "dodopayments__license_keys__id___get": {
+      "provider_intent": "dodopayments__license_keys__id___get",
+      "provider_alias_intent": "/license_keys/id",
+      "text": "Get License Key",
+      "category": "Licenses",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "id": {
+          "text": "License key ID",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/licenses/get-license-key",
+        "version": "",
+        "rate_limit": [],
+        "description": "Retrieve the details of a specific license key by its ID.",
+        "api_endpoint": "https://test.dodopayments.com/license_keys/{id}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-02T16:26:43.000Z"
+    },
+    "dodopayments__license_keys__id___patch": {
+      "provider_intent": "dodopayments__license_keys__id___patch",
+      "provider_alias_intent": "/license_keys/id",
+      "text": "Update License Key",
+      "category": "Licenses",
+      "method": "PATCH",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "id": {
+          "text": "License key ID",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "disabled": {
+          "text": "Disabled",
+          "type": "boolean"
+        },
+        "expires_at": {
+          "text": "Expires At",
+          "type": "string"
+        },
+        "activations_limit": {
+          "text": "Activations Limit",
+          "type": "number"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/licenses/update-license-key",
+        "version": "",
+        "rate_limit": [],
+        "description": "This endpoint allows you to update a license key by its ID.",
+        "api_endpoint": "https://test.dodopayments.com/license_keys/{id}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-02T16:29:23.000Z"
+    },
+    "dodopayments__subscriptions__subscription_id___get": {
+      "provider_intent": "dodopayments__subscriptions__subscription_id___get",
+      "provider_alias_intent": "/subscriptions/subscription_id",
+      "text": "Get Subscription Detail",
+      "category": "Subscriptions",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "subscription_id": {
+          "text": "Subscription Id",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/subscriptions/get-subscriptions",
+        "version": "",
+        "rate_limit": [],
+        "description": "Get detailed information about a specific subscription.",
+        "api_endpoint": "https://test.dodopayments.com/subscriptions/{subscription_id}"
+      },
+      "auth": [],
+      "response_format": {
+        "status": "pending",
+        "currency": "AED",
+        "customer": {
+          "name": "<string>",
+          "email": "<string>",
+          "customer_id": "<string>"
+        },
+        "metadata": {},
+        "quantity": 123,
+        "created_at": "2023-11-07T05:31:56Z",
+        "product_id": "<string>",
+        "subscription_id": "<string>",
+        "next_billing_date": "2023-11-07T05:31:56Z",
+        "trial_period_days": 123,
+        "payment_frequency_count": 123,
+        "recurring_pre_tax_amount": 123,
+        "subscription_period_count": 123,
+        "payment_frequency_interval": "Day",
+        "subscription_period_interval": "Day"
+      },
+      "updated_at": "2025-01-02T16:02:29.000Z"
+    },
+    "dodopayments__license_key_instances___get": {
+      "provider_intent": "dodopayments__license_key_instances___get",
+      "provider_alias_intent": "/license_key_instances",
+      "text": "Get License Key Instances",
+      "category": "Licenses",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "page_size": {
+          "text": "Page size default is 10 max is 100",
+          "type": "number"
+        },
+        "page_number": {
+          "text": "Page number default is 0",
+          "type": "number"
+        },
+        "license_key_id": {
+          "text": "Filter by license key ID",
+          "type": "string"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/licenses/get-license-key-instances",
+        "version": "",
+        "rate_limit": [],
+        "description": "Retrieve a list of instances for a specific license key.",
+        "api_endpoint": "https://test.dodopayments.com/license_key_instances"
+      },
+      "auth": [],
+      "response_format": [
+        {
+          "items": [
+            {
+              "id": "lki_123",
+              "name": "Production Server 1",
+              "created_at": "2024-01-01T00:00:00Z",
+              "business_id": "<string>",
+              "license_key_id": "lic_123"
+            }
+          ]
+        }
+      ],
+      "updated_at": "2025-01-02T16:31:02.000Z"
+    },
+    "dodopayments__license_key_instances__id___patch": {
+      "provider_intent": "dodopayments__license_key_instances__id___patch",
+      "provider_alias_intent": "/license_key_instances/id",
+      "text": "Update License Key Instance",
+      "category": "Licenses",
+      "method": "PATCH",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "id": {
+          "text": "License key instance ID",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "name": {
+          "text": "Name",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/licenses/update-license-key-instance",
+        "version": "",
+        "rate_limit": [],
+        "description": "This endpoint allows you to update a specific license key instance by its ID.",
+        "api_endpoint": "https://test.dodopayments.com/license_key_instances/{id}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-02T16:56:04.000Z"
+    },
+    "dodopayments__customers___post": {
+      "provider_intent": "dodopayments__customers___post",
+      "provider_alias_intent": "/customers",
+      "text": "Create Customer",
+      "category": "Customers",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "name": {
+          "text": "Name",
+          "type": "string",
+          "required": true
+        },
+        "email": {
+          "text": "Email",
+          "type": "string",
+          "required": true
+        },
+        "phone_number": {
+          "text": "Phone Number",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/customers/create-customer",
+        "version": "",
+        "rate_limit": [],
+        "description": "Create a new customer in your Dodo Payments account.",
+        "api_endpoint": "https://test.dodopayments.com/customers"
+      },
+      "auth": [],
+      "response_format": {
+        "name": "<string>",
+        "email": "<string>",
+        "created_at": "2023-11-07T05:31:56Z",
+        "business_id": "<string>",
+        "customer_id": "<string>",
+        "phone_number": "<string>"
+      },
+      "updated_at": "2025-01-02T18:24:25.000Z"
+    },
+    "dodopayments__customers___get": {
+      "provider_intent": "dodopayments__customers___get",
+      "provider_alias_intent": "/customers",
+      "text": "List Customers",
+      "category": "Customers",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "page_size": {
+          "text": "Page size default is 10 max is 100",
+          "type": "number"
+        },
+        "page_number": {
+          "text": "Page number default is 0",
+          "type": "number"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/customers/get-customers",
+        "version": "",
+        "rate_limit": [],
+        "description": "Get a list of all customers associated with your account.",
+        "api_endpoint": "https://test.dodopayments.com/customers"
+      },
+      "auth": [],
+      "response_format": {
+        "items": [
+          {
+            "name": "<string>",
+            "email": "<string>",
+            "created_at": "2023-11-07T05:31:56Z",
+            "business_id": "<string>",
+            "customer_id": "<string>",
+            "phone_number": "<string>"
+          }
+        ]
+      },
+      "updated_at": "2025-01-02T18:25:54.000Z"
+    },
+    "dodopayments__customers__customer_id___get": {
+      "provider_intent": "dodopayments__customers__customer_id___get",
+      "provider_alias_intent": "/customers/customer_id",
+      "text": "Get Customer Detail",
+      "category": "Customers",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "customer_id": {
+          "text": "Customer Id",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/customers/get-customers-1",
+        "version": "",
+        "rate_limit": [],
+        "description": "Get detailed information about a specific customer.",
+        "api_endpoint": "https://test.dodopayments.com/customers/{customer_id}"
+      },
+      "auth": [],
+      "response_format": {
+        "name": "<string>",
+        "email": "<string>",
+        "created_at": "2023-11-07T05:31:56Z",
+        "business_id": "<string>",
+        "customer_id": "<string>",
+        "phone_number": "<string>"
+      },
+      "updated_at": "2025-01-02T18:29:52.000Z"
+    },
+    "dodopayments__customers__customer_id___patch": {
+      "provider_intent": "dodopayments__customers__customer_id___patch",
+      "provider_alias_intent": "/customers/customer_id",
+      "text": "Patch Customer",
+      "category": "Customers",
+      "method": "PATCH",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "customer_id": {
+          "text": "Customer Id",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "name": {
+          "text": "Name",
+          "type": "string"
+        },
+        "phone_number": {
+          "text": "Phone Number",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/customers/patch-customer",
+        "version": "",
+        "rate_limit": [],
+        "description": "Update a customer’s information.",
+        "api_endpoint": "https://test.dodopayments.com/customers/{customer_id}"
+      },
+      "auth": [],
+      "response_format": {
+        "name": "<string>",
+        "email": "<string>",
+        "created_at": "2023-11-07T05:31:56Z",
+        "business_id": "<string>",
+        "customer_id": "<string>",
+        "phone_number": "<string>"
+      },
+      "updated_at": "2025-01-02T18:34:00.000Z"
+    },
+    "dodopayments__webhook_events___get": {
+      "provider_intent": "dodopayments__webhook_events___get",
+      "provider_alias_intent": "/webhook_events",
+      "text": "List Webhook Events",
+      "category": "Webhooks",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "limit": {
+          "text": "Min : 1, Max : 100, default 10",
+          "type": "number"
+        },
+        "object_id": {
+          "text": "Get events history of a specific object like payment/subscription/refund/dispute",
+          "type": "string"
+        },
+        "page_size": {
+          "text": "Page size default is 10 max is 100",
+          "type": "number"
+        },
+        "page_number": {
+          "text": "Page number default is 0",
+          "type": "number"
+        },
+        "created_at_gte": {
+          "text": "Get events after this created time",
+          "type": "string"
+        },
+        "created_at_lte": {
+          "text": "Get events created before this time",
+          "type": "string"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/webhooks/get-webhook_events",
+        "version": "",
+        "rate_limit": [],
+        "description": "Get a list of all webhook events associated with your account.",
+        "api_endpoint": "https://test.dodopayments.com/webhook_events "
+      },
+      "auth": [],
+      "response_format": {
+        "items": [
+          {
+            "request": "<string>",
+            "event_id": "<string>",
+            "response": "<string>",
+            "object_id": "<string>",
+            "created_at": "2023-11-07T05:31:56Z",
+            "event_type": "<string>",
+            "business_id": "<string>",
+            "latest_attempted_at": "2023-11-07T05:31:56Z"
+          }
+        ]
+      },
+      "updated_at": "2025-01-02T17:49:05.000Z"
+    },
+    "dodopayments__webhook_events__webhook_event_id___get": {
+      "provider_intent": "dodopayments__webhook_events__webhook_event_id___get",
+      "provider_alias_intent": "/webhook_events/webhook_event_id",
+      "text": "Get Webhook Event Detail",
+      "category": "Webhooks",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "webhook_event_id": {
+          "text": "Webhook Event Id",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/webhooks/get-webhook_event-detail",
+        "version": "",
+        "rate_limit": [],
+        "description": "Get detailed information about a specific webhook event.",
+        "api_endpoint": "https://test.dodopayments.com/webhook_events/{webhook_event_id}"
+      },
+      "auth": [],
+      "response_format": {
+        "request": "<string>",
+        "event_id": "<string>",
+        "response": "<string>",
+        "object_id": "<string>",
+        "created_at": "2023-11-07T05:31:56Z",
+        "event_type": "<string>",
+        "business_id": "<string>",
+        "latest_attempted_at": "2023-11-07T05:31:56Z"
+      },
+      "updated_at": "2025-01-02T17:51:45.000Z"
+    },
+    "dodopayments__your-webhook-url___post": {
+      "provider_intent": "dodopayments__your-webhook-url___post",
+      "provider_alias_intent": "/your-webhook-url",
+      "text": "Outgoing Webhooks",
+      "category": "Webhooks",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "data": {
+          "text": "Data",
+          "type": "object",
+          "required": true
+        },
+        "type": {
+          "text": "Event types for Dodo events",
+          "type": "string",
+          "required": true
+        },
+        "timestamp": {
+          "text": "The timestamp of when the event occurred (not necessarily the same of when it was delivered)",
+          "type": "object",
+          "required": true
+        },
+        "business_id": {
+          "text": "Business Id",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/webhooks/outgoing-webhooks",
+        "version": "",
+        "rate_limit": [],
+        "description": "Send a POST request to your webhook URL to receive notifications about events that occur in your account.",
+        "api_endpoint": "https://test.dodopayments.com/your-webhook-url"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-02T18:21:16.000Z"
+    },
+    "dodopayments__products__id__images___put": {
+      "provider_intent": "dodopayments__products__id__images___put",
+      "provider_alias_intent": "/products/id/images",
+      "text": "Update Product Images",
+      "category": "Products",
+      "method": "PUT",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "id": {
+          "text": "Product Id",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/products/put-products-images",
+        "version": "",
+        "rate_limit": [],
+        "description": "Update a product’s images.",
+        "api_endpoint": "https://test.dodopayments.com/products/{id}/images"
+      },
+      "auth": [],
+      "response_format": {
+        "url": "<string>"
+      },
+      "updated_at": "2025-01-02T17:41:21.000Z"
+    },
+    "dodopayments__refunds___get": {
+      "provider_intent": "dodopayments__refunds___get",
+      "provider_alias_intent": "/refunds",
+      "text": "List Refunds",
+      "category": "Refunds",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "page_size": {
+          "text": "Page size default is 10 max is 100",
+          "type": "number"
+        },
+        "page_number": {
+          "text": "Page number default is 0",
+          "type": "number"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/refunds/get-refunds",
+        "version": "",
+        "rate_limit": [],
+        "description": "Get a list of all refunds associated with your account.",
+        "api_endpoint": "https://test.dodopayments.com/refunds"
+      },
+      "auth": [],
+      "response_format": {
+        "items": [
+          {
+            "amount": 123,
+            "reason": "<string>",
+            "status": "succeeded",
+            "currency": "AED",
+            "refund_id": "<string>",
+            "created_at": "2023-11-07T05:31:56Z",
+            "payment_id": "<string>",
+            "business_id": "<string>"
+          }
+        ]
+      },
+      "updated_at": "2025-01-02T17:06:35.000Z"
+    },
+    "dodopayments__refunds___post": {
+      "provider_intent": "dodopayments__refunds___post",
+      "provider_alias_intent": "/refunds",
+      "text": "Create Refund",
+      "category": "Refunds",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "amount": {
+          "text": "Amount",
+          "type": "number"
+        },
+        "reason": {
+          "text": "Reason",
+          "type": "string"
+        },
+        "payment_id": {
+          "text": "Payment Id",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/refunds/post-refunds",
+        "version": "",
+        "rate_limit": [],
+        "description": "Create a refund for a payment.",
+        "api_endpoint": "https://test.dodopayments.com/refunds"
+      },
+      "auth": [],
+      "response_format": {
+        "amount": 123,
+        "reason": "<string>",
+        "status": "succeeded",
+        "currency": "AED",
+        "refund_id": "<string>",
+        "created_at": "2023-11-07T05:31:56Z",
+        "payment_id": "<string>",
+        "business_id": "<string>"
+      },
+      "updated_at": "2025-01-02T17:11:35.000Z"
+    },
+    "dodopayments__refunds__refund_id___get": {
+      "provider_intent": "dodopayments__refunds__refund_id___get",
+      "provider_alias_intent": "/refunds/refund_id",
+      "text": "Get Refund Detail",
+      "category": "Refunds",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "refund_id": {
+          "text": "Refund Id",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/refunds/get-refunds-1",
+        "version": "",
+        "rate_limit": [],
+        "description": "Get detailed information about a specific refund.\n\n",
+        "api_endpoint": "https://test.dodopayments.com/refunds/{refund_id}"
+      },
+      "auth": [],
+      "response_format": {
+        "amount": 123,
+        "reason": "<string>",
+        "status": "succeeded",
+        "currency": "AED",
+        "refund_id": "<string>",
+        "created_at": "2023-11-07T05:31:56Z",
+        "payment_id": "<string>",
+        "business_id": "<string>"
+      },
+      "updated_at": "2025-01-02T17:12:27.000Z"
+    },
+    "dodopayments__disputes___get": {
+      "provider_intent": "dodopayments__disputes___get",
+      "provider_alias_intent": "/disputes",
+      "text": "List Disputes",
+      "category": "Disputes",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "page_size": {
+          "text": "Page size default is 10 max is 100",
+          "type": "number"
+        },
+        "page_number": {
+          "text": "Page number default is 0",
+          "type": "number"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/disputes/get-disputes",
+        "version": "",
+        "rate_limit": [],
+        "description": "Get a list of all disputes associated with your account.",
+        "api_endpoint": "https://test.dodopayments.com/disputes"
+      },
+      "auth": [],
+      "response_format": {
+        "items": [
+          {
+            "amount": "<string>",
+            "currency": "<string>",
+            "created_at": "2023-11-07T05:31:56Z",
+            "dispute_id": "<string>",
+            "payment_id": "<string>",
+            "business_id": "<string>",
+            "dispute_stage": "pre_dispute",
+            "dispute_status": "dispute_opened"
+          }
+        ]
+      },
+      "updated_at": "2025-01-02T16:59:47.000Z"
+    },
+    "dodopayments__disputes__dispute_id___get": {
+      "provider_intent": "dodopayments__disputes__dispute_id___get",
+      "provider_alias_intent": "/disputes/dispute_id",
+      "text": "Get Dispute Detail",
+      "category": "Disputes",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "dispute_id": {
+          "text": "Dispute Id",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/disputes/get-disputes-1",
+        "version": "",
+        "rate_limit": [],
+        "description": "Get detailed information about a specific dispute",
+        "api_endpoint": "https://test.dodopayments.com/disputes/{dispute_id}"
+      },
+      "auth": [],
+      "response_format": {
+        "amount": "<string>",
+        "currency": "<string>",
+        "created_at": "2023-11-07T05:31:56Z",
+        "dispute_id": "<string>",
+        "payment_id": "<string>",
+        "business_id": "<string>",
+        "dispute_stage": "pre_dispute",
+        "dispute_status": "dispute_opened"
+      },
+      "updated_at": "2025-01-02T17:01:15.000Z"
+    },
+    "dodopayments__payouts___get": {
+      "provider_intent": "dodopayments__payouts___get",
+      "provider_alias_intent": "/payouts",
+      "text": "List Payouts",
+      "category": "Payouts",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "page_size": {
+          "text": "Page size default is 10 max is 100",
+          "type": "number"
+        },
+        "page_number": {
+          "text": "Page number default is 0",
+          "type": "number"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/payouts/get-payouts",
+        "version": "",
+        "rate_limit": [],
+        "description": "Get a list of all payouts associated with your account.",
+        "api_endpoint": "https://test.dodopayments.com/payouts"
+      },
+      "auth": [],
+      "response_format": {
+        "items": [
+          {
+            "fee": 123,
+            "tax": 123,
+            "name": "<string>",
+            "amount": 123,
+            "status": "in_progress",
+            "refunds": 123,
+            "remarks": "<string>",
+            "currency": "AED",
+            "payout_id": "<string>",
+            "created_at": "2023-11-07T05:31:56Z",
+            "updated_at": "2023-11-07T05:31:56Z",
+            "business_id": "<string>",
+            "chargebacks": 123,
+            "payment_method": "<string>",
+            "payout_document_url": "<string>"
+          }
+        ]
+      },
+      "updated_at": "2025-01-02T16:59:03.000Z"
+    },
+    "dodopayments__checkout__supported_countries___get": {
+      "provider_intent": "dodopayments__checkout__supported_countries___get",
+      "provider_alias_intent": "/checkout/supported_countries",
+      "text": "Supported Countries",
+      "category": "Miscellaneous",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/misc/supported-countries",
+        "version": "",
+        "rate_limit": [],
+        "description": "Retrieve a list of countries that are supported by the Dodo Payments for your customers.",
+        "api_endpoint": "https://test.dodopayments.com/checkout/supported_countries"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-02T05:25:58.000Z"
+    },
+    "dodopayments__subscriptions__subscription_id___patch": {
+      "provider_intent": "dodopayments__subscriptions__subscription_id___patch",
+      "provider_alias_intent": "/subscriptions/subscription_id",
+      "text": "Update Subscription",
+      "category": "Subscriptions",
+      "method": "PATCH",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "subscription_id": {
+          "text": "Subscription Id",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "status": {
+          "text": "Status",
+          "type": "string",
+          "required": false
+        },
+        "metadata": {
+          "text": "Metadata",
+          "type": "string",
+          "required": false
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/subscriptions/patch-subscriptions",
+        "version": "",
+        "rate_limit": [],
+        "description": "Update a subscription’s details.",
+        "api_endpoint": "https://test.dodopayments.com/subscriptions/{subscription_id}"
+      },
+      "auth": [],
+      "response_format": {
+        "status": "pending",
+        "currency": "AED",
+        "customer": {
+          "name": "<string>",
+          "email": "<string>",
+          "customer_id": "<string>"
+        },
+        "metadata": {},
+        "quantity": 123,
+        "created_at": "2023-11-07T05:31:56Z",
+        "product_id": "<string>",
+        "subscription_id": "<string>",
+        "next_billing_date": "2023-11-07T05:31:56Z",
+        "trial_period_days": 123,
+        "payment_frequency_count": 123,
+        "recurring_pre_tax_amount": 123,
+        "subscription_period_count": 123,
+        "payment_frequency_interval": "Day",
+        "subscription_period_interval": "Day"
+      },
+      "updated_at": "2025-01-02T16:05:42.000Z"
+    },
+    "dodopayments__subscriptions___get": {
+      "provider_intent": "dodopayments__subscriptions___get",
+      "provider_alias_intent": "/subscriptions",
+      "text": "List subscriptions",
+      "category": "Subscriptions",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "page_size": {
+          "text": "Page size default is 10 max is 100",
+          "type": "number"
+        },
+        "page_number": {
+          "text": "Page number default is 0",
+          "type": "number"
+        }
+      },
+      "path": {
+        "subscription_id": {
+          "text": "Subscription Id",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "status": {
+          "text": "Status",
+          "type": "string",
+          "required": false
+        },
+        "metadata": {
+          "text": "Metadata",
+          "type": "string",
+          "required": false
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/subscriptions/get-subscriptions-1",
+        "version": "",
+        "rate_limit": [],
+        "description": "Get a list of all subscriptions associated with your account.",
+        "api_endpoint": "https://test.dodopayments.com/subscriptions"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-02T16:11:00.000Z"
+    },
+    "dodopayments__subscriptions___post": {
+      "provider_intent": "dodopayments__subscriptions___post",
+      "provider_alias_intent": "/subscriptions",
+      "text": "Create Subscription",
+      "category": "Subscriptions",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "billing": {
+          "text": "Billing",
+          "type": "object",
+          "required": true
+        },
+        "customer": {
+          "text": "Customer",
+          "type": "object",
+          "required": true
+        },
+        "metadata": {
+          "text": "Metadata",
+          "type": "object"
+        },
+        "quantity": {
+          "text": "Quantity",
+          "type": "number",
+          "required": true
+        },
+        "product_id": {
+          "text": "Product Id",
+          "type": "string",
+          "required": true
+        },
+        "return_url": {
+          "text": "Return Url",
+          "type": "string"
+        },
+        "payment_link": {
+          "text": "Payment Link",
+          "type": "boolen"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/subscriptions/post-subscriptions",
+        "version": "",
+        "rate_limit": [],
+        "description": "Create a subscription for a customer.",
+        "api_endpoint": "https://test.dodopayments.com/subscriptions"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-02T16:17:46.000Z"
+    },
+    "dodopayments__license_key_instances__id___get": {
+      "provider_intent": "dodopayments__license_key_instances__id___get",
+      "provider_alias_intent": "/license_key_instances/id",
+      "text": "Get License Key Instance",
+      "category": "Licenses",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "id": {
+          "text": "License key instance ID",
+          "type": "string",
+          "required": false
+        }
+      },
+      "body": {
+        "billing": {
+          "text": "Billing",
+          "type": "object",
+          "required": true
+        },
+        "customer": {
+          "text": "Customer",
+          "type": "object",
+          "required": true
+        },
+        "metadata": {
+          "text": "Metadata",
+          "type": "object"
+        },
+        "quantity": {
+          "text": "Quantity",
+          "type": "number",
+          "required": true
+        },
+        "product_id": {
+          "text": "Product Id",
+          "type": "string",
+          "required": true
+        },
+        "return_url": {
+          "text": "Return Url",
+          "type": "string"
+        },
+        "payment_link": {
+          "text": "Payment Link",
+          "type": "boolen"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/licenses/get-license-key-instance",
+        "version": "",
+        "rate_limit": [],
+        "description": "Retrieve details of a specific license key instance by its ID.",
+        "api_endpoint": "https://test.dodopayments.com/license_key_instances/{id}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-02T16:54:19.000Z"
+    },
+    "dodopayments__products___get": {
+      "provider_intent": "dodopayments__products___get",
+      "provider_alias_intent": "/products",
+      "text": "List Products",
+      "category": "Products",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "page_size": {
+          "text": "Page size default is 10 max is 100",
+          "type": "number"
+        },
+        "page_number": {
+          "text": "Page number default is 0",
+          "type": "number"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/products/get-products",
+        "version": "",
+        "rate_limit": [],
+        "description": "Get a list of all products associated with your account.",
+        "api_endpoint": "https://test.dodopayments.com/products"
+      },
+      "auth": [],
+      "response_format": {
+        "items": [
+          {
+            "name": "<string>",
+            "image": "<string>",
+            "price": 123,
+            "created_at": "2023-11-07T05:31:56Z",
+            "product_id": "<string>",
+            "updated_at": "2023-11-07T05:31:56Z",
+            "business_id": "<string>",
+            "description": "<string>",
+            "is_recurring": true,
+            "tax_category": "digital_products"
+          }
+        ]
+      },
+      "updated_at": "2025-01-02T17:26:01.000Z"
+    },
+    "dodopayments__products___post": {
+      "provider_intent": "dodopayments__products___post",
+      "provider_alias_intent": "/products",
+      "text": "Create Product",
+      "category": "Products",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "name": {
+          "text": "Name",
+          "type": "string"
+        },
+        "price": {
+          "text": "Price",
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "text": "Description",
+          "type": "string"
+        },
+        "tax_category": {
+          "text": "Represents the different categories of taxation applicable to various products and services",
+          "type": "string",
+          "required": true
+        },
+        "license_key_enabled": {
+          "text": "Put true to generate and send license key to your customer. Default is false",
+          "type": "boolean"
+        },
+        "license_key_duration": {
+          "text": "License key Duration",
+          "type": "object"
+        },
+        "license_key_activations_limit": {
+          "text": "The number of times the license key can be activated",
+          "type": "number"
+        },
+        "license_key_activation_message": {
+          "text": "License Key Activation Message",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/products/post-products",
+        "version": "",
+        "rate_limit": [],
+        "description": "Create a new product.",
+        "api_endpoint": "https://test.dodopayments.com/products"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-02T17:37:33.000Z"
+    },
+    "dodopayments__products__id___get": {
+      "provider_intent": "dodopayments__products__id___get",
+      "provider_alias_intent": "/products/id",
+      "text": "Get Product Detail",
+      "category": "Products",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "id": {
+          "text": "Product Id",
+          "type": "string",
+          "required": false
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/products/get-products-1",
+        "version": "",
+        "rate_limit": [],
+        "description": "Get detailed information about a specific product.",
+        "api_endpoint": "https://test.dodopayments.com/products/{id}"
+      },
+      "auth": [],
+      "response_format": {
+        "name": "<string>",
+        "image": "<string>",
+        "price": {
+          "type": "one_time_price",
+          "price": 123,
+          "currency": "AED",
+          "discount": 123,
+          "purchasing_power_parity": true
+        },
+        "created_at": "2023-11-07T05:31:56Z",
+        "product_id": "<string>",
+        "updated_at": "2023-11-07T05:31:56Z",
+        "business_id": "<string>",
+        "description": "<string>",
+        "is_recurring": true,
+        "tax_category": "digital_products",
+        "license_key_enabled": true,
+        "license_key_duration": {
+          "count": 123,
+          "interval": "Day"
+        },
+        "license_key_activations_limit": 123,
+        "license_key_activation_message": "<string>"
+      },
+      "updated_at": "2025-01-02T17:40:10.000Z"
+    },
+    "dodopayments__products__id___patch": {
+      "provider_intent": "dodopayments__products__id___patch",
+      "provider_alias_intent": "/products/id",
+      "text": "Update Product",
+      "category": "Products",
+      "method": "PATCH",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "id": {
+          "text": "ID",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "name": {
+          "text": "Name",
+          "type": "string"
+        },
+        "price": {
+          "text": "Price",
+          "type": "object"
+        },
+        "description": {
+          "text": "Description",
+          "type": "string"
+        },
+        "tax_category": {
+          "text": "Represents the different categories of taxation applicable to various products and services",
+          "type": "string"
+        },
+        "license_key_duration": {
+          "text": "License key Duration",
+          "type": "object"
+        },
+        "license_key_activations_limit": {
+          "text": "License Key Activations Limit",
+          "type": "number"
+        },
+        "license_key_activation_message": {
+          "text": "License Key Activation Message",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.dodopayments.com/api-reference/products/patch-products",
+        "version": "",
+        "rate_limit": [],
+        "description": "Update a product’s details.",
+        "api_endpoint": "https://test.dodopayments.com/products/{id}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-02T17:45:27.000Z"
+    }
+  }
+}

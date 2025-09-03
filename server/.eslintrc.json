@@ -1,0 +1,66 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2021": true
+  },
+  // "plugin:@typescript-eslint/recommended"
+  "extends": ["airbnb-base"],
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "rules": {
+    "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "js": "never",
+          "jsx": "never",
+          "ts": "never",
+          "tsx": "never"
+        }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.test.ts",
+          "**/*.test.js",
+          "**/*.spec.ts",
+          "**/*.spec.js",
+          "**/test/**",
+          "**/__tests__/**"
+        ]
+      }
+    ],
+    "indent": ["error", 2],
+    "no-unused-vars": 2,
+    "no-async-promise-executor": 2,
+    "prefer-promise-reject-errors": 0,
+    "no-param-reassign": 2,
+    "global-require": 2,
+    "func-names": 2,
+    "no-undef": 2,
+    "no-use-before-define": 2,
+    "max-len": 2,
+    "no-mixed-operators": 2,
+    "no-const-assign": 2,
+    "prefer-const": 2,
+    "no-unused-expressions": 2,
+    "camelcase": 0,
+    "consistent-return": 0,
+    "no-console": 0,
+    "no-shadow": 0,
+    "no-promise-executor-return": 0,
+    "linebreak-style": 0
+  }
+}

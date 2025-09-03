@@ -1,0 +1,231 @@
+{
+  "routes": {
+    "lovo__v1__teams__status___get": {
+      "provider_intent": "lovo__v1__teams__status___get",
+      "provider_alias_intent": "/v1/teams/status",
+      "provider_proxy_intent": "https://api.genny.lovo.ai/api/v1/teams/status",
+      "text": "Get team billing information",
+      "category": "Teams",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.genny.lovo.ai/reference/apikeyteaminformationcontroller_getusage",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Get team billing information",
+        "api_endpoint": "https://api.genny.lovo.ai/api/v1/teams/status",
+        "alias_endpoint": "/lovo/v1/teams/status"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "X-API-KEY",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "lovo__v1__speakers___get": {
+      "provider_intent": "lovo__v1__speakers___get",
+      "provider_alias_intent": "/v1/speakers",
+      "provider_proxy_intent": "https://api.genny.lovo.ai/api/v1/speakers",
+      "text": "Retrieve speakers",
+      "category": "Speakers",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "page": {
+          "text": "Number of pages to skip.",
+          "type": "string",
+          "required": true
+        },
+        "sort": {
+          "text": "Sort by given order. Available fields are displayName, locale, gender, speakerType, and ageRange. Example: 'displayName:1' (NO whitespace)",
+          "type": "string"
+        },
+        "limit": {
+          "text": "Number of speakers in each page.",
+          "type": "string"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.genny.lovo.ai/reference/retrieve-speakers",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Retrieve all speakers with filter. This API supports pagination.",
+        "api_endpoint": "https://api.genny.lovo.ai/api/v1/speakers",
+        "alias_endpoint": "/lovo/v1/speakers"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "X-API-KEY",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "lovo__v1__tts__sync___post": {
+      "provider_intent": "lovo__v1__tts__sync___post",
+      "provider_alias_intent": "/v1/tts/sync",
+      "provider_proxy_intent": "https://api.genny.lovo.ai/api/v1/tts/sync",
+      "text": "Sync TTS",
+      "category": "Text-To-Speech",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "text": {
+          "text": "Text to be converted to audio",
+          "type": "string",
+          "required": true
+        },
+        "speed": {
+          "text": "Speed of the audio to be generated",
+          "type": "number"
+        },
+        "speaker": {
+          "text": "Speaker ID. You can retrieve speaker ID with Retrieve Speakers /api/v1/speakers API.",
+          "type": "string",
+          "required": true
+        },
+        "speakerStyle": {
+          "text": "Speaker style id for the chosen speaker. You can retrieve speaker styles with /api/v1/speakers API. Only some of our speakers have multiple speaker styles.",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.genny.lovo.ai/reference/sync-tts",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Has a timeout of 90 seconds. If the process is not completed within that time, it will return a pending TTS Job just like the Async TTS.",
+        "api_endpoint": "https://api.genny.lovo.ai/api/v1/tts/sync",
+        "alias_endpoint": "/lovo/v1/tts/sync"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "X-API-KEY",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "lovo__v1__tts___post": {
+      "provider_intent": "lovo__v1__tts___post",
+      "provider_alias_intent": "/v1/tts",
+      "provider_proxy_intent": "https://api.genny.lovo.ai/api/v1/tts",
+      "text": "Async TTS",
+      "category": "Text-To-Speech",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "text": {
+          "text": "Text to be converted to audio",
+          "type": "string",
+          "required": true
+        },
+        "speed": {
+          "text": "Speed of the audio to be generated",
+          "type": "number"
+        },
+        "speaker": {
+          "text": "Speaker ID. You can retrieve speaker ID with Retrieve Speakers /api/v1/speakers API.",
+          "type": "string",
+          "required": true
+        },
+        "callbackUrls": {
+          "text": "Callback urls for any async job. Max size of callback urls is 4.The callback will be sent only once. It will be a POST request with the same data format as Async Retrieve Job /api/v1/tts/{jobId} API.Your endpoints should return 2xx status code and should not take more than 10 seconds to respond. Otherwise, the callback will be considered as failed.",
+          "type": "string"
+        },
+        "speakerStyle": {
+          "text": "Speaker style id for the chosen speaker. You can retrieve speaker styles with /api/v1/speakers API. Only some of our speakers have multiple speaker styles.",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.genny.lovo.ai/reference/async-tts",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Returns a TTS job. Check the job status with Async Retrieve Job /api/v1/tts/{jobId} API using the returned id.",
+        "api_endpoint": "https://api.genny.lovo.ai/api/v1/tts",
+        "alias_endpoint": "/lovo/v1/tts"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "X-API-KEY",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "lovo__v1__tts__jobid___get": {
+      "provider_intent": "lovo__v1__tts__jobid___get",
+      "provider_alias_intent": "/v1/tts/jobid",
+      "provider_proxy_intent": "https://api.genny.lovo.ai/api/v1/tts/{jobId}",
+      "text": "Async Retrieve Job",
+      "category": "Text-To-Speech",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "jobId": {
+          "text": "Job ID from Async TTS",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.genny.lovo.ai/reference/async-retrieve-job",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Retrieve job result. It will return generated audio urls if job is successfully completed.",
+        "api_endpoint": "https://api.genny.lovo.ai/api/v1/tts/{jobId}",
+        "alias_endpoint": "/lovo/v1/tts/jobid"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "X-API-KEY",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:39:14.000Z"
+    }
+  }
+}

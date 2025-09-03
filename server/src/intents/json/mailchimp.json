@@ -1,0 +1,3892 @@
+{
+  "routes": {
+    "mailchimp__api__1-0__messages__send___post": {
+      "provider_intent": "mailchimp__api__1-0__messages__send___post",
+      "provider_alias_intent": "/api/1.0/messages/send",
+      "text": "Send new message",
+      "category": "Messages",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "message": {
+          "type": "object",
+          "text": "Message object",
+          "required": true,
+          "examples": {
+            "subject": "",
+            "text": "",
+            "html": "",
+            "from_email": "",
+            "from_name": "",
+            "to": [
+              {
+                "name": "",
+                "email": "",
+                "type": "to"
+              },
+              {
+                "name": "",
+                "email": "",
+                "type": "cc"
+              },
+              {
+                "name": "",
+                "email": "",
+                "type": "bcc"
+              }
+            ]
+          }
+        },
+        "send_at": {
+          "type": "string",
+          "text": "UTC timestamp"
+        },
+        "ip_pool": {
+          "type": "string",
+          "text": "Name of the dedicated ip pool"
+        },
+        "async": {
+          "type": "boolean",
+          "text": "Enable a background sending mode that is optimized for bulk sending",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Send a new transactional message through the Transactional API",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/messages/send",
+        "alias_endpoint": "/mailchimp/api/1.0/messages/send",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/messages/send-new-message/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 1,
+      "featured": 1,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__messages__send-template___post": {
+      "provider_intent": "mailchimp__api__1-0__messages__send-template___post",
+      "provider_alias_intent": "/api/1.0/messages/send-template",
+      "text": "Send using message template",
+      "category": "Messages",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "template_name": {
+          "type": "string",
+          "text": "the immutable name or slug of a template that exists in the user's account",
+          "required": true
+        },
+        "template_content": {
+          "type": "object",
+          "text": "an array of template content to send",
+          "required": true
+        },
+        "message": {
+          "type": "object",
+          "text": "the other information on the message to send - same as /messages/send but without the html content",
+          "required": true
+        },
+        "async": {
+          "type": "boolean",
+          "text": "enable a background sending mode that is optimized for bulk sending.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "ip_pool": {
+          "type": "string",
+          "text": "the name of the dedicated ip pool that should be used to send the message"
+        },
+        "send_at": {
+          "type": "string",
+          "text": "when this message should be sent as a UTC timestamp"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Send a new transactional message through the Transactional API using a template",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/messages/send-template",
+        "alias_endpoint": "/mailchimp/api/1.0/messages/send-template",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/messages/send-using-message-template/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 1,
+      "featured": 1,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__messages__search____post": {
+      "provider_intent": "mailchimp__api__1-0__messages__search____post",
+      "provider_alias_intent": "/api/1.0/messages/search ",
+      "text": "Search messages by date",
+      "category": "Messages",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "query": {
+          "type": "string",
+          "text": "search terms to find matching messages"
+        },
+        "date_from": {
+          "type": "string",
+          "text": "start date"
+        },
+        "date_to": {
+          "type": "string",
+          "text": "end date"
+        },
+        "tags": {
+          "type": "string",
+          "text": "an array of tag names to narrow the search to will return messages that contain ANY of the tags"
+        },
+        "senders": {
+          "type": "string",
+          "text": "an array of sender addresses to narrow the search to will return messages sent by ANY of the senders"
+        },
+        "api_keys": {
+          "type": "string",
+          "text": "an array of API keys to narrow the search to will return messages sent by ANY of the keys"
+        },
+        "limit": {
+          "type": "number",
+          "text": "the maximum number of results to return defaults to 100 1000 is the maximum."
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Search messages by date",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/messages/search ",
+        "alias_endpoint": "/mailchimp/api/1.0/messages/search ",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/messages/search-messages-by-date/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__messages__search-time-series___post": {
+      "provider_intent": "mailchimp__api__1-0__messages__search-time-series___post",
+      "provider_alias_intent": "/api/1.0/messages/search-time-series",
+      "text": "Search messages by hour",
+      "category": "Messages",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "query": {
+          "type": "string",
+          "text": "the search terms to find matching messages for"
+        },
+        "date_from": {
+          "type": "string",
+          "text": "start date"
+        },
+        "date_to": {
+          "type": "string",
+          "text": "end date"
+        },
+        "tags": {
+          "type": "string",
+          "text": "an array of tag names to narrow the search to will return messages that contain ANY of the tags"
+        },
+        "senders": {
+          "type": "string",
+          "text": "an array of sender addresses to narrow the search to will return messages sent by ANY of the senders"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Search the content of recently sent messages and return the aggregated hourly stats for matching messages",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/messages/search-time-series",
+        "alias_endpoint": "/mailchimp/api/1.0/messages/search-time-series",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/messages/search-messages-by-hour/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__messages__info___get": {
+      "provider_intent": "mailchimp__api__1-0__messages__info___get",
+      "provider_alias_intent": "/api/1.0/messages/info",
+      "text": "Get message info",
+      "category": "Messages",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "the unique id of the message to get - passed as the \"_id\" field in webhooks send calls or search calls.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Get the information for a single recently sent message",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/messages/info",
+        "alias_endpoint": "/mailchimp/api/1.0/messages/info",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/messages/get-message-info/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__messages__content___post": {
+      "provider_intent": "mailchimp__api__1-0__messages__content___post",
+      "provider_alias_intent": "/api/1.0/messages/content",
+      "text": "Get message content",
+      "category": "Messages",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "id": {
+          "type": "string",
+          "text": "the unique id of the message to get - passed as the \"_id\" field in webhooks send calls or search calls.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Get the full content of a recently sent message",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/messages/content",
+        "alias_endpoint": "/mailchimp/api/1.0/messages/content",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/messages/get-message-content/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__messages__parse___post": {
+      "provider_intent": "mailchimp__api__1-0__messages__parse___post",
+      "provider_alias_intent": "/api/1.0/messages/parse",
+      "text": "Parse mime document",
+      "category": "Messages",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "raw_message": {
+          "type": "string",
+          "text": "the full MIME document of an email message.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Parse the full MIME document for an email message, returning the content of the message broken into its constituent pieces",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/messages/parse",
+        "alias_endpoint": "/mailchimp/api/1.0/messages/parse",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/messages/parse-mime-document/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__messages__send-raw___post": {
+      "provider_intent": "mailchimp__api__1-0__messages__send-raw___post",
+      "provider_alias_intent": "/api/1.0/messages/send-raw",
+      "text": "Send mime document Message",
+      "category": "Messages",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "raw_message": {
+          "type": "string",
+          "text": "the full MIME document of an email message",
+          "required": true
+        },
+        "from_email": {
+          "type": "string",
+          "text": "optionally define the sender address - otherwise we'll use the address found in the provided headers"
+        },
+        "from_name": {
+          "type": "string",
+          "text": "optionally define the sender alias"
+        },
+        "to": {
+          "type": "string",
+          "text": "optionally define the recipient to receive the message - otherwise we'll use the To Cc and Bcc headers provided in the document"
+        },
+        "async": {
+          "type": "boolean",
+          "text": "enable a background sending mode that is optimized for bulk sending",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "ip_pool": {
+          "type": "string",
+          "text": "the name of the dedicated ip pool that should be used to send the message"
+        },
+        "send_at": {
+          "type": "string",
+          "text": "when this message should be sent as a UTC timestamp"
+        },
+        "return_path_domain": {
+          "type": "string",
+          "text": "a custom domain to use for the messages's return-path."
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Take a raw MIME document for a message, and send it exactly as if it were sent through the Transactional API's SMTP servers",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/messages/send-raw",
+        "alias_endpoint": "/mailchimp/api/1.0/messages/send-raw",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/messages/send-mime-document/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__messages__list-scheduled___post": {
+      "provider_intent": "mailchimp__api__1-0__messages__list-scheduled___post",
+      "provider_alias_intent": "/api/1.0/messages/list-scheduled",
+      "text": "List scheduled emails",
+      "category": "Messages",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "to": {
+          "type": "string",
+          "text": "an optional recipient address to restrict results to"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Queries your scheduled emails",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/messages/list-scheduled",
+        "alias_endpoint": "/mailchimp/api/1.0/messages/list-scheduled",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/messages/list-scheduled-emails/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__messages__cancel-scheduled___post": {
+      "provider_intent": "mailchimp__api__1-0__messages__cancel-scheduled___post",
+      "provider_alias_intent": "/api/1.0/messages/cancel-scheduled",
+      "text": "Cancel scheduled email",
+      "category": "Messages",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "id": {
+          "type": "string",
+          "text": "a scheduled email id as returned by any of the messages/send calls or messages/list-scheduled.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Cancels a scheduled email",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/messages/cancel-scheduled",
+        "alias_endpoint": "/mailchimp/api/1.0/messages/cancel-scheduled",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/messages/cancel-scheduled-email/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__messages__reschedule___post": {
+      "provider_intent": "mailchimp__api__1-0__messages__reschedule___post",
+      "provider_alias_intent": "/api/1.0/messages/reschedule",
+      "text": "Reschedule email",
+      "category": "Messages",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "id": {
+          "type": "string",
+          "text": "a scheduled email id as returned by any of the messages/send calls or messages/list-scheduled",
+          "required": true
+        },
+        "send_at": {
+          "type": "string",
+          "text": "the new UTC timestamp when the message should sent.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Reschedules a scheduled email",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/messages/reschedule",
+        "alias_endpoint": "/mailchimp/api/1.0/messages/reschedule",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/messages/reschedule-email/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__allowlists__add___post": {
+      "provider_intent": "mailchimp__api__1-0__allowlists__add___post",
+      "provider_alias_intent": "/api/1.0/allowlists/add",
+      "text": "Add email to allowlist",
+      "category": "Allowlists",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "email": {
+          "type": "string",
+          "text": "an email address to add to the allowlist",
+          "required": true
+        },
+        "comment": {
+          "type": "string",
+          "text": "an optional description of why the email was added to the allowlist"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Add email to allowlist",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/allowlists/add",
+        "alias_endpoint": "/mailchimp/api/1.0/allowlists/add",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/allowlists/add-email-to-allowlist/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__allowlists__list___post": {
+      "provider_intent": "mailchimp__api__1-0__allowlists__list___post",
+      "provider_alias_intent": "/api/1.0/allowlists/list",
+      "text": "List allowlisted emails",
+      "category": "Allowlists",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "email": {
+          "type": "string",
+          "text": "an optional email address or prefix to search by."
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "List allowlisted emails",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/allowlists/list",
+        "alias_endpoint": "/mailchimp/api/1.0/allowlists/list",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/allowlists/list-allowlisted-emails/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__allowlists__delete___post": {
+      "provider_intent": "mailchimp__api__1-0__allowlists__delete___post",
+      "provider_alias_intent": "/api/1.0/allowlists/delete",
+      "text": "Remove email from allowlist",
+      "category": "Allowlists",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "email": {
+          "type": "string",
+          "text": "the email address to remove from the allowlist.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Remove email from allowlist",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/allowlists/delete",
+        "alias_endpoint": "/mailchimp/api/1.0/allowlists/delete",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/allowlists/remove-email-from-allowlist/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__exports__info___post": {
+      "provider_intent": "mailchimp__api__1-0__exports__info___post",
+      "provider_alias_intent": "/api/1.0/exports/info",
+      "text": "View export info",
+      "category": "Exports",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "ip": {
+          "type": "string",
+          "text": "an export job identifier.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "View export info",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/exports/info",
+        "alias_endpoint": "/mailchimp/api/1.0/exports/info",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/exports/view-export-info/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__exports__list___post": {
+      "provider_intent": "mailchimp__api__1-0__exports__list___post",
+      "provider_alias_intent": "/api/1.0/exports/list",
+      "text": "List exports",
+      "category": "Exports",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "key": {
+          "type": "string",
+          "text": "a valid api key",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "List exports",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/exports/list",
+        "alias_endpoint": "/mailchimp/api/1.0/exports/list",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/exports/list-exports/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__exports__rejects___post": {
+      "provider_intent": "mailchimp__api__1-0__exports__rejects___post",
+      "provider_alias_intent": "/api/1.0/exports/rejects",
+      "text": "Export denylist",
+      "category": "Exports",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "notify_email": {
+          "type": "string",
+          "text": "an optional email address to notify when the export job has finished."
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Export denylist",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/exports/rejects",
+        "alias_endpoint": "/mailchimp/api/1.0/exports/rejects",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/exports/export-denylist/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__exports__whitelist___post": {
+      "provider_intent": "mailchimp__api__1-0__exports__whitelist___post",
+      "provider_alias_intent": "/api/1.0/exports/whitelist",
+      "text": "Export Allowlist whitelist",
+      "category": "Exports",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "notify_email": {
+          "type": "string",
+          "text": "an optional email address to notify when the export job has finished."
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Export Allowlist whitelist",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/exports/whitelist",
+        "alias_endpoint": "/mailchimp/api/1.0/exports/whitelist",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/exports/export-allowlist/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__exports__allowlist___post": {
+      "provider_intent": "mailchimp__api__1-0__exports__allowlist___post",
+      "provider_alias_intent": "/api/1.0/exports/allowlist",
+      "text": "Export Allowlist",
+      "category": "Exports",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "notify_email": {
+          "type": "string",
+          "text": "an optional email address to notify when the export job has finished."
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Export Allowlist",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/exports/allowlist",
+        "alias_endpoint": "/mailchimp/api/1.0/exports/allowlist",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/exports/export-allowlist/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__exports__activity___post": {
+      "provider_intent": "mailchimp__api__1-0__exports__activity___post",
+      "provider_alias_intent": "/api/1.0/exports/activity",
+      "text": "Export activity history",
+      "category": "Exports",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "notify_email": {
+          "type": "string",
+          "text": "an optional email address to notify when the export job has finished"
+        },
+        "date_from": {
+          "type": "string",
+          "text": "start date as a UTC string in YYYY-MM-DD HH",
+          "enum": [
+            "MM"
+          ]
+        },
+        "date_to": {
+          "type": "string",
+          "text": "end date as a UTC string in YYYY-MM-DD HH",
+          "enum": [
+            "MM"
+          ]
+        },
+        "tags": {
+          "type": "string",
+          "text": "an array of tag names to narrow the export to; will match messages that contain ANY of the tags"
+        },
+        "senders": {
+          "type": "string",
+          "text": "an array of senders to narrow the export to"
+        },
+        "states": {
+          "type": "string",
+          "text": "an array of message states to narrow the export to; messages with ANY of the states will be included"
+        },
+        "api_keys": {
+          "type": "string",
+          "text": "an array of api keys to narrow the export to; messsagse sent with ANY of the keys will be included."
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Export activity history",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/exports/activity",
+        "alias_endpoint": "/mailchimp/api/1.0/exports/activity",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/exports/export-activity-history/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__ips__list___post": {
+      "provider_intent": "mailchimp__api__1-0__ips__list___post",
+      "provider_alias_intent": "/api/1.0/ips/list",
+      "text": "List ip addresses",
+      "category": "IPs",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "key": {
+          "type": "string",
+          "text": "a valid api key",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "List ip addresses",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/ips/list",
+        "alias_endpoint": "/mailchimp/api/1.0/ips/list",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/ips/list-ip-addresses/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__ips__info___post": {
+      "provider_intent": "mailchimp__api__1-0__ips__info___post",
+      "provider_alias_intent": "/api/1.0/ips/info",
+      "text": "Get ip info",
+      "category": "IPs",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "ip": {
+          "type": "string",
+          "text": "a dedicated IP address"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Get ip info",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/ips/info",
+        "alias_endpoint": "/mailchimp/api/1.0/ips/info",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/ips/get-ip-info/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__ips__provision___post": {
+      "provider_intent": "mailchimp__api__1-0__ips__provision___post",
+      "provider_alias_intent": "/api/1.0/ips/provision",
+      "text": "Request additional ip",
+      "category": "IPs",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "warmup": {
+          "type": "boolean",
+          "text": "whether to enable warmup mode for the ip",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "pool": {
+          "type": "string",
+          "text": "the id of the pool to add the dedicated ip to"
+        },
+        "key": {
+          "type": "string",
+          "text": "a valid api key",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Request additional ip",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/ips/provision",
+        "alias_endpoint": "/mailchimp/api/1.0/ips/provision",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/ips/request-additional-ip/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__ips__start-warmup___post": {
+      "provider_intent": "mailchimp__api__1-0__ips__start-warmup___post",
+      "provider_alias_intent": "/api/1.0/ips/start-warmup",
+      "text": "Start ip warmup",
+      "category": "IPs",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "ip": {
+          "type": "string",
+          "text": "a dedicated ip address",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Start ip warmup",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/ips/start-warmup",
+        "alias_endpoint": "/mailchimp/api/1.0/ips/start-warmup",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/ips/start-ip-warmup/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__ips__cancel-warmup___post": {
+      "provider_intent": "mailchimp__api__1-0__ips__cancel-warmup___post",
+      "provider_alias_intent": "/api/1.0/ips/cancel-warmup",
+      "text": "Cancel ip warmup",
+      "category": "IPs",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "ip": {
+          "type": "string",
+          "text": "a dedicated ip address",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Cancel ip warmup",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/ips/cancel-warmup",
+        "alias_endpoint": "/mailchimp/api/1.0/ips/cancel-warmup",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/ips/cancel-ip-warmup/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__ips__set-pool___post": {
+      "provider_intent": "mailchimp__api__1-0__ips__set-pool___post",
+      "provider_alias_intent": "/api/1.0/ips/set-pool",
+      "text": "Move ip to different pool",
+      "category": "IPs",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "kip": {
+          "type": "string",
+          "text": "a dedicated ip address",
+          "required": true
+        },
+        "pool": {
+          "type": "string",
+          "text": "the name of the new pool to add the dedicated ip to",
+          "required": true
+        },
+        "create_pool": {
+          "type": "boolean",
+          "text": "whether to create the pool if it does not exist; if false and the pool does not exist an Unknown_Pool will be thrown.",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Move ip to different pool",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/ips/set-pool",
+        "alias_endpoint": "/mailchimp/api/1.0/ips/set-pool",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/ips/move-ip-to-different-pool/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__ips__delete___post": {
+      "provider_intent": "mailchimp__api__1-0__ips__delete___post",
+      "provider_alias_intent": "/api/1.0/ips/delete",
+      "text": "Delete ip address",
+      "category": "IPs",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "ip": {
+          "type": "string",
+          "text": "the dedicated ip to remove from your account",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Delete ip address",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/ips/delete",
+        "alias_endpoint": "/mailchimp/api/1.0/ips/delete",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/ips/delete-ip-address/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__ips__list-pools____post": {
+      "provider_intent": "mailchimp__api__1-0__ips__list-pools____post",
+      "provider_alias_intent": "/api/1.0/ips/list-pools ",
+      "text": "List ip pools",
+      "category": "IPs",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "key": {
+          "type": "string",
+          "text": "a valid api key",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "List ip pools",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/ips/list-pools ",
+        "alias_endpoint": "/mailchimp/api/1.0/ips/list-pools ",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/ips/list-ip-pools/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__ips__pool-info___post": {
+      "provider_intent": "mailchimp__api__1-0__ips__pool-info___post",
+      "provider_alias_intent": "/api/1.0/ips/pool-info",
+      "text": "Get ip pool info",
+      "category": "IPs",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "pool": {
+          "type": "string",
+          "text": "a pool name",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Get ip pool info",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/ips/pool-info",
+        "alias_endpoint": "/mailchimp/api/1.0/ips/pool-info",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/ips/get-ip-pool-info/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__ips__create-pool___post": {
+      "provider_intent": "mailchimp__api__1-0__ips__create-pool___post",
+      "provider_alias_intent": "/api/1.0/ips/create-pool",
+      "text": "Add ip pool",
+      "category": "IPs",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "pool": {
+          "type": "string",
+          "text": "the name of a pool to create",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Add ip pool",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/ips/create-pool",
+        "alias_endpoint": "/mailchimp/api/1.0/ips/create-pool",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/ips/add-ip-pool/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__ips__delete-pool___post": {
+      "provider_intent": "mailchimp__api__1-0__ips__delete-pool___post",
+      "provider_alias_intent": "/api/1.0/ips/delete-pool",
+      "text": "Delete ip pool",
+      "category": "IPs",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "pool": {
+          "type": "string",
+          "text": "the name of the pool to delete.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Delete ip pool",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/ips/delete-pool",
+        "alias_endpoint": "/mailchimp/api/1.0/ips/delete-pool",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/ips/delete-ip-pool/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__ips__check-custom-dns___post": {
+      "provider_intent": "mailchimp__api__1-0__ips__check-custom-dns___post",
+      "provider_alias_intent": "/api/1.0/ips/check-custom-dns",
+      "text": "Test custom dns",
+      "category": "IPs",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "ip": {
+          "type": "string",
+          "text": "a dedicated ip address",
+          "required": true
+        },
+        "domain": {
+          "type": "string",
+          "text": "the domain name to test",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Test custom dns",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/ips/check-custom-dns",
+        "alias_endpoint": "/mailchimp/api/1.0/ips/check-custom-dns",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/ips/test-custom-dns/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__ips__set-custom-dns___post": {
+      "provider_intent": "mailchimp__api__1-0__ips__set-custom-dns___post",
+      "provider_alias_intent": "/api/1.0/ips/set-custom-dns",
+      "text": "Set custom dns",
+      "category": "IPs",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "ip": {
+          "type": "string",
+          "text": "a dedicated ip address",
+          "required": true
+        },
+        "domain": {
+          "type": "string",
+          "text": "a domain name to set as the dedicated IP's custom dns name.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Set custom dns",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/ips/set-custom-dns",
+        "alias_endpoint": "/mailchimp/api/1.0/ips/set-custom-dns",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/ips/set-custom-dns/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__inbound__domains___post": {
+      "provider_intent": "mailchimp__api__1-0__inbound__domains___post",
+      "provider_alias_intent": "/api/1.0/inbound/domains",
+      "text": "List inbound domains",
+      "category": "Inbound",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "key": {
+          "type": "string",
+          "text": "a valid api key",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "List the domains that have been configured for inbound delivery",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/inbound/domains",
+        "alias_endpoint": "/mailchimp/api/1.0/inbound/domains",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/inbound/list-inbound-domains/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__inbound__add-domain___post": {
+      "provider_intent": "mailchimp__api__1-0__inbound__add-domain___post",
+      "provider_alias_intent": "/api/1.0/inbound/add-domain",
+      "text": "Add inbound domain",
+      "category": "Inbound",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "domain": {
+          "type": "string",
+          "text": "a domain name; Validation- strip_tags.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Add an inbound domain to your account",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/inbound/add-domain",
+        "alias_endpoint": "/mailchimp/api/1.0/inbound/add-domain",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/inbound/add-inbound-domain/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__inbound__check-domain____post": {
+      "provider_intent": "mailchimp__api__1-0__inbound__check-domain____post",
+      "provider_alias_intent": "/api/1.0/inbound/check-domain ",
+      "text": "Check domain settings",
+      "category": "Inbound",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "domain": {
+          "type": "string",
+          "text": "an existing inbound domain.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Check the MX settings for an inbound domain",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/inbound/check-domain ",
+        "alias_endpoint": "/mailchimp/api/1.0/inbound/check-domain ",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/inbound/check-domain-settings/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__inbound__delete-domain___post": {
+      "provider_intent": "mailchimp__api__1-0__inbound__delete-domain___post",
+      "provider_alias_intent": "/api/1.0/inbound/delete-domain",
+      "text": "Delete inbound domain",
+      "category": "Inbound",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "domain": {
+          "type": "string",
+          "text": "an existing inbound domain.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Delete an inbound domain from the account",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/inbound/delete-domain",
+        "alias_endpoint": "/mailchimp/api/1.0/inbound/delete-domain",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/inbound/delete-inbound-domain/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__inbound__routes___post": {
+      "provider_intent": "mailchimp__api__1-0__inbound__routes___post",
+      "provider_alias_intent": "/api/1.0/inbound/routes",
+      "text": "List mailbox routes",
+      "category": "Inbound",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "domain": {
+          "type": "string",
+          "text": "the domain to check.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "List the mailbox routes defined for an inbound domain",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/inbound/routes",
+        "alias_endpoint": "/mailchimp/api/1.0/inbound/routes",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/inbound/list-mailbox-routes/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__inbound__add-route___post": {
+      "provider_intent": "mailchimp__api__1-0__inbound__add-route___post",
+      "provider_alias_intent": "/api/1.0/inbound/add-route",
+      "text": "Add mailbox route",
+      "category": "Inbound",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "domain": {
+          "type": "string",
+          "text": "an existing inbound domain",
+          "required": true
+        },
+        "pattern": {
+          "type": "string",
+          "text": "the search pattern that the mailbox name should match",
+          "required": true
+        },
+        "url": {
+          "type": "string",
+          "text": "the webhook URL where the inbound messages will be published.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Add a new mailbox route to an inbound domain",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/inbound/add-route",
+        "alias_endpoint": "/mailchimp/api/1.0/inbound/add-route",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/inbound/add-mailbox-route/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__inbound__update-route___post": {
+      "provider_intent": "mailchimp__api__1-0__inbound__update-route___post",
+      "provider_alias_intent": "/api/1.0/inbound/update-route",
+      "text": "Update mailbox route",
+      "category": "Inbound",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "id": {
+          "type": "string",
+          "text": "the unique identifier of an existing mailbox route",
+          "required": true
+        },
+        "pattern": {
+          "type": "string",
+          "text": "the search pattern that the mailbox name should match"
+        },
+        "url": {
+          "type": "string",
+          "text": "the webhook URL where the inbound messages will be published."
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Update the pattern or webhook of an existing inbound mailbox route",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/inbound/update-route",
+        "alias_endpoint": "/mailchimp/api/1.0/inbound/update-route",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/inbound/update-mailbox-route/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__inbound__delete-route___post": {
+      "provider_intent": "mailchimp__api__1-0__inbound__delete-route___post",
+      "provider_alias_intent": "/api/1.0/inbound/delete-route",
+      "text": "Delete mailbox route",
+      "category": "Inbound",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "id": {
+          "type": "string",
+          "text": "the unique identifier of an existing route.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Delete an existing inbound mailbox route",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/inbound/delete-route",
+        "alias_endpoint": "/mailchimp/api/1.0/inbound/delete-route",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/inbound/delete-mailbox-route/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__inbound__send-raw___post": {
+      "provider_intent": "mailchimp__api__1-0__inbound__send-raw___post",
+      "provider_alias_intent": "/api/1.0/inbound/send-raw",
+      "text": "Send mime document",
+      "category": "Inbound",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "raw_message": {
+          "type": "string",
+          "text": "the full MIME document of an email message",
+          "required": true
+        },
+        "to": {
+          "type": "string",
+          "text": "optionally define the recipients to receive the message - otherwise we'll use the To Cc and Bcc headers provided in the document"
+        },
+        "mail_from": {
+          "type": "string",
+          "text": "the address specified in the MAIL FROM stage of the SMTP conversation. Required for the SPF check"
+        },
+        "helo": {
+          "type": "string",
+          "text": "the identification provided by the client mta in the MTA state of the SMTP conversation"
+        },
+        "client_address": {
+          "type": "string",
+          "text": "the remote MTA's ip address."
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Take a raw MIME document destined for a domain with inbound domains set up, and send it to the inbound hook exactly as if it had been sent over SMTP",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/inbound/send-raw",
+        "alias_endpoint": "/mailchimp/api/1.0/inbound/send-raw",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/inbound/send-mime-document/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__metadata__list___post": {
+      "provider_intent": "mailchimp__api__1-0__metadata__list___post",
+      "provider_alias_intent": "/api/1.0/metadata/list",
+      "text": "List metadata fields",
+      "category": "Metadata",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "key": {
+          "type": "string",
+          "text": "a valid api key",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "List metadata fields",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/metadata/list",
+        "alias_endpoint": "/mailchimp/api/1.0/metadata/list",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/metadata/list-metadata-fields/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__metadata__add___post": {
+      "provider_intent": "mailchimp__api__1-0__metadata__add___post",
+      "provider_alias_intent": "/api/1.0/metadata/add",
+      "text": "Add metadata field",
+      "category": "Metadata",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "a unique identifier for the metadata field",
+          "required": true
+        },
+        "view_template": {
+          "type": "string",
+          "text": "Mustache template to control how the metadata is rendered in your activity log."
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Add metadata field",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/metadata/add",
+        "alias_endpoint": "/mailchimp/api/1.0/metadata/add",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/metadata/add-metadata-field/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__metadata__update___post": {
+      "provider_intent": "mailchimp__api__1-0__metadata__update___post",
+      "provider_alias_intent": "/api/1.0/metadata/update",
+      "text": "Update metadata field",
+      "category": "Metadata",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "the unique identifier of the metadata field to update",
+          "required": true
+        },
+        "view_template": {
+          "type": "string",
+          "text": "Mustache template to control how the metadata is rendered in your activity log.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Update metadata field",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/metadata/update",
+        "alias_endpoint": "/mailchimp/api/1.0/metadata/update",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/metadata/update-metadata-field/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__metadata__delete___post": {
+      "provider_intent": "mailchimp__api__1-0__metadata__delete___post",
+      "provider_alias_intent": "/api/1.0/metadata/delete",
+      "text": "Delete metadata field",
+      "category": "Metadata",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "the unique identifier of the metadata field to update.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Delete metadata field",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/metadata/delete",
+        "alias_endpoint": "/mailchimp/api/1.0/metadata/delete",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/metadata/delete-metadata-field/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__rejects__add___post": {
+      "provider_intent": "mailchimp__api__1-0__rejects__add___post",
+      "provider_alias_intent": "/api/1.0/rejects/add",
+      "text": "Add email to denylist",
+      "category": "Rejects",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "email": {
+          "type": "string",
+          "text": "an email address to block",
+          "required": true
+        },
+        "comment": {
+          "type": "string",
+          "text": "an optional comment describing the rejection"
+        },
+        "subaccount": {
+          "type": "string",
+          "text": "an optional unique identifier for the subaccount to limit the denylist entry."
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Add email to denylist",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/rejects/add",
+        "alias_endpoint": "/mailchimp/api/1.0/rejects/add",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/rejects/add-email-to-denylist/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__rejects__list___post": {
+      "provider_intent": "mailchimp__api__1-0__rejects__list___post",
+      "provider_alias_intent": "/api/1.0/rejects/list",
+      "text": "List denylisted emails",
+      "category": "Rejects",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "email": {
+          "type": "string",
+          "text": "an optional email address to search by"
+        },
+        "include_expired": {
+          "type": "boolean",
+          "text": "whether to include rejections that have already expired",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "subaccount": {
+          "type": "string",
+          "text": "an optional unique identifier for the subaccount to limit the denylist"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "List denylisted emails",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/rejects/list",
+        "alias_endpoint": "/mailchimp/api/1.0/rejects/list",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/rejects/list-denylisted-emails/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__rejects__delete___post": {
+      "provider_intent": "mailchimp__api__1-0__rejects__delete___post",
+      "provider_alias_intent": "/api/1.0/rejects/delete",
+      "text": "Delete email from denylist",
+      "category": "Rejects",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "email": {
+          "type": "string",
+          "text": "an email address",
+          "required": true
+        },
+        "subaccount": {
+          "type": "string",
+          "text": "an optional unique identifier for the subaccount to limit the denylist deletion."
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Delete email from denylist",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/rejects/delete",
+        "alias_endpoint": "/mailchimp/api/1.0/rejects/delete",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/rejects/delete-email-from-denylist/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__senders__list___post": {
+      "provider_intent": "mailchimp__api__1-0__senders__list___post",
+      "provider_alias_intent": "/api/1.0/senders/list",
+      "text": "List account senders",
+      "category": "Senders",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "key": {
+          "type": "string",
+          "text": "a valid api key",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "List account senders",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/senders/list",
+        "alias_endpoint": "/mailchimp/api/1.0/senders/list",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/senders/list-account-senders/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__senders__domains___post": {
+      "provider_intent": "mailchimp__api__1-0__senders__domains___post",
+      "provider_alias_intent": "/api/1.0/senders/domains",
+      "text": "List sender domains",
+      "category": "Senders",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "key": {
+          "type": "string",
+          "text": "a valid api key",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "List sender domains",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/senders/domains",
+        "alias_endpoint": "/mailchimp/api/1.0/senders/domains",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/senders/list-sender-domains/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__senders__add-domain___post": {
+      "provider_intent": "mailchimp__api__1-0__senders__add-domain___post",
+      "provider_alias_intent": "/api/1.0/senders/add-domain",
+      "text": "Add sender domain",
+      "category": "Senders",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "domain": {
+          "type": "string",
+          "text": "a domain name",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Add sender domain",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/senders/add-domain",
+        "alias_endpoint": "/mailchimp/api/1.0/senders/add-domain",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/senders/add-sender-domain/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__senders__check-domain___post": {
+      "provider_intent": "mailchimp__api__1-0__senders__check-domain___post",
+      "provider_alias_intent": "/api/1.0/senders/check-domain",
+      "text": "Check domain settings sender",
+      "category": "Senders",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "domain": {
+          "type": "string",
+          "text": "a domain name",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Check domain settings sender",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/senders/check-domain",
+        "alias_endpoint": "/mailchimp/api/1.0/senders/check-domain",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/senders/check-domain-settings/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__senders__verify-domain___post": {
+      "provider_intent": "mailchimp__api__1-0__senders__verify-domain___post",
+      "provider_alias_intent": "/api/1.0/senders/verify-domain",
+      "text": "Verify domain",
+      "category": "Senders",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "domain": {
+          "type": "string",
+          "text": "domain name at which you can receive email",
+          "required": true
+        },
+        "mailbox": {
+          "type": "string",
+          "text": "a mailbox at the domain where the verification email should be sent.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Verify domain",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/senders/verify-domain",
+        "alias_endpoint": "/mailchimp/api/1.0/senders/verify-domain",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/senders/verify-domain/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__senders__info___post": {
+      "provider_intent": "mailchimp__api__1-0__senders__info___post",
+      "provider_alias_intent": "/api/1.0/senders/info",
+      "text": "Get sender info",
+      "category": "Senders",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "address": {
+          "type": "string",
+          "text": "the email address of the sender.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Get sender info",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/senders/info",
+        "alias_endpoint": "/mailchimp/api/1.0/senders/info",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/senders/get-sender-info/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__senders__time-series___post": {
+      "provider_intent": "mailchimp__api__1-0__senders__time-series___post",
+      "provider_alias_intent": "/api/1.0/senders/time-series",
+      "text": "View sender history",
+      "category": "Senders",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "address": {
+          "type": "string",
+          "text": "the email address of the sender.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "View sender history",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/senders/time-series",
+        "alias_endpoint": "/mailchimp/api/1.0/senders/time-series",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/senders/view-sender-history/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__subaccounts__list___post": {
+      "provider_intent": "mailchimp__api__1-0__subaccounts__list___post",
+      "provider_alias_intent": "/api/1.0/subaccounts/list",
+      "text": "List subaccounts",
+      "category": "Subaccounts",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "q": {
+          "type": "string",
+          "text": "an optional prefix to filter the subaccounts' ids and names."
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "List subaccounts",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/subaccounts/list",
+        "alias_endpoint": "/mailchimp/api/1.0/subaccounts/list",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/subaccounts/list-subaccounts/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__subaccounts__add___post": {
+      "provider_intent": "mailchimp__api__1-0__subaccounts__add___post",
+      "provider_alias_intent": "/api/1.0/subaccounts/add",
+      "text": "Add subaccount",
+      "category": "Subaccounts",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "id": {
+          "type": "string",
+          "text": "a unique identifier for the subaccount to be used in sending calls",
+          "required": true
+        },
+        "name": {
+          "type": "string",
+          "text": "an optional display name to further identify the subaccount"
+        },
+        "notes": {
+          "type": "string",
+          "text": "optional extra text to associate with the subaccount"
+        },
+        "custom_quota": {
+          "type": "number",
+          "text": "an optional manual hourly quota for the subaccount. If not specified Mandrill will manage this based on reputation."
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Add subaccount",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/subaccounts/add",
+        "alias_endpoint": "/mailchimp/api/1.0/subaccounts/add",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/subaccounts/add-subaccount/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__subaccounts__info___post": {
+      "provider_intent": "mailchimp__api__1-0__subaccounts__info___post",
+      "provider_alias_intent": "/api/1.0/subaccounts/info",
+      "text": "Get subaccount info",
+      "category": "Subaccounts",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "id": {
+          "type": "string",
+          "text": "the unique identifier of the subaccount to query.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Get subaccount info",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/subaccounts/info",
+        "alias_endpoint": "/mailchimp/api/1.0/subaccounts/info",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/subaccounts/get-subaccount-info/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__subaccounts__update___post": {
+      "provider_intent": "mailchimp__api__1-0__subaccounts__update___post",
+      "provider_alias_intent": "/api/1.0/subaccounts/update",
+      "text": "Update subaccount",
+      "category": "Subaccounts",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "key": {
+          "type": "string",
+          "text": "a valid api key",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "text": "the unique identifier of the subaccount to update",
+          "required": true
+        },
+        "name": {
+          "type": "string",
+          "text": "an optional display name to further identify the subaccount"
+        },
+        "notes": {
+          "type": "string",
+          "text": "optional extra text to associate with the subaccount"
+        },
+        "custom_quota": {
+          "type": "number",
+          "text": "an optional manual hourly quota for the subaccount"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Update subaccount",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/subaccounts/update",
+        "alias_endpoint": "/mailchimp/api/1.0/subaccounts/update",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/subaccounts/update-subaccount/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__subaccounts__delete___post": {
+      "provider_intent": "mailchimp__api__1-0__subaccounts__delete___post",
+      "provider_alias_intent": "/api/1.0/subaccounts/delete",
+      "text": "Delete subaccount",
+      "category": "Subaccounts",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "id": {
+          "type": "string",
+          "text": "the unique identifier of the subaccount to delete.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Delete subaccount",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/subaccounts/delete",
+        "alias_endpoint": "/mailchimp/api/1.0/subaccounts/delete",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/subaccounts/delete-subaccount/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__subaccounts__pause___post": {
+      "provider_intent": "mailchimp__api__1-0__subaccounts__pause___post",
+      "provider_alias_intent": "/api/1.0/subaccounts/pause",
+      "text": "Pause subaccount",
+      "category": "Subaccounts",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "id": {
+          "type": "string",
+          "text": "the unique identifier of the subaccount to pause.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Pause subaccount",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/subaccounts/pause",
+        "alias_endpoint": "/mailchimp/api/1.0/subaccounts/pause",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/subaccounts/pause-subaccount/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__subaccounts__resume___post": {
+      "provider_intent": "mailchimp__api__1-0__subaccounts__resume___post",
+      "provider_alias_intent": "/api/1.0/subaccounts/resume",
+      "text": "Resume subaccount",
+      "category": "Subaccounts",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "id": {
+          "type": "string",
+          "text": "the unique identifier of the subaccount to resume.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Resume subaccount",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/subaccounts/resume",
+        "alias_endpoint": "/mailchimp/api/1.0/subaccounts/resume",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/subaccounts/resume-subaccount/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__tags__list___post": {
+      "provider_intent": "mailchimp__api__1-0__tags__list___post",
+      "provider_alias_intent": "/api/1.0/tags/list",
+      "text": "List tags",
+      "category": "Tags",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "key": {
+          "type": "string",
+          "text": "a valid api key",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "List tags",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/tags/list",
+        "alias_endpoint": "/mailchimp/api/1.0/tags/list",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/tags/list-tags/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__tags__delete___post": {
+      "provider_intent": "mailchimp__api__1-0__tags__delete___post",
+      "provider_alias_intent": "/api/1.0/tags/delete",
+      "text": "Delete tag",
+      "category": "Tags",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "tag": {
+          "type": "string",
+          "text": "a tag name",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Delete tag",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/tags/delete",
+        "alias_endpoint": "/mailchimp/api/1.0/tags/delete",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/tags/delete-tag/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__tags__info___post": {
+      "provider_intent": "mailchimp__api__1-0__tags__info___post",
+      "provider_alias_intent": "/api/1.0/tags/info",
+      "text": "Get tag info",
+      "category": "Tags",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "tag": {
+          "type": "string",
+          "text": "an existing tag name.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Get tag info",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/tags/info",
+        "alias_endpoint": "/mailchimp/api/1.0/tags/info",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/tags/get-tag-info/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__tags__time-series___post": {
+      "provider_intent": "mailchimp__api__1-0__tags__time-series___post",
+      "provider_alias_intent": "/api/1.0/tags/time-series",
+      "text": "View tag history",
+      "category": "Tags",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "tag": {
+          "type": "string",
+          "text": "an existing tag name.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "View tag history",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/tags/time-series",
+        "alias_endpoint": "/mailchimp/api/1.0/tags/time-series",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/tags/view-tag-history/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__tags__all-time-series____post": {
+      "provider_intent": "mailchimp__api__1-0__tags__all-time-series____post",
+      "provider_alias_intent": "/api/1.0/tags/all-time-series ",
+      "text": "View all tags history",
+      "category": "Tags",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "key": {
+          "type": "string",
+          "text": "a valid api key",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "View all tags history",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/tags/all-time-series ",
+        "alias_endpoint": "/mailchimp/api/1.0/tags/all-time-series ",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/tags/view-all-tags-history/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__templates__add___post": {
+      "provider_intent": "mailchimp__api__1-0__templates__add___post",
+      "provider_alias_intent": "/api/1.0/templates/add",
+      "text": "Add template",
+      "category": "Templates",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "the name for the new template - must be unique",
+          "required": true
+        },
+        "from_email": {
+          "type": "string",
+          "text": "a default sending address for emails sent using this template"
+        },
+        "from_name": {
+          "type": "string",
+          "text": "a default from name to be used"
+        },
+        "subject": {
+          "type": "string",
+          "text": "a default subject line to be used"
+        },
+        "code": {
+          "type": "string",
+          "text": "the HTML code for the template with mc",
+          "enum": [
+            "edit attributes for the editable elements"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "text": "a default text part to be used when sending with this template"
+        },
+        "publish": {
+          "type": "boolean",
+          "text": "set to false to add a draft template without publishing",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "labels": {
+          "type": "string",
+          "text": "an optional array of up to 10 labels to use for filtering templates."
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Add template",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/templates/add",
+        "alias_endpoint": "/mailchimp/api/1.0/templates/add",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/templates/add-template/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__templates__info___post": {
+      "provider_intent": "mailchimp__api__1-0__templates__info___post",
+      "provider_alias_intent": "/api/1.0/templates/info",
+      "text": "Get template info",
+      "category": "Templates",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "the immutable name of an existing template",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Get template info",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/templates/info",
+        "alias_endpoint": "/mailchimp/api/1.0/templates/info",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/templates/get-template-info/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__templates__update___post": {
+      "provider_intent": "mailchimp__api__1-0__templates__update___post",
+      "provider_alias_intent": "/api/1.0/templates/update",
+      "text": "Update template",
+      "category": "Templates",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "the immutable name of an existing template",
+          "required": true
+        },
+        "from_email": {
+          "type": "string",
+          "text": "the new default sending address"
+        },
+        "from_name": {
+          "type": "string",
+          "text": "the new default from name"
+        },
+        "subject": {
+          "type": "string",
+          "text": "the new default subject line"
+        },
+        "code": {
+          "type": "string",
+          "text": "the new code for the template"
+        },
+        "text": {
+          "type": "string",
+          "text": "the new default text part to be used"
+        },
+        "publish": {
+          "type": "boolean",
+          "text": "set to false to update the draft version of the template without publishing",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "labels": {
+          "type": "string",
+          "text": "an optional array of up to 10 labels to use for filtering templates."
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Update template",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/templates/update",
+        "alias_endpoint": "/mailchimp/api/1.0/templates/update",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/templates/update-template/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__templates__publish___post": {
+      "provider_intent": "mailchimp__api__1-0__templates__publish___post",
+      "provider_alias_intent": "/api/1.0/templates/publish",
+      "text": "Publish template content",
+      "category": "Templates",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "the immutable name of an existing template.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Publish template content",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/templates/publish",
+        "alias_endpoint": "/mailchimp/api/1.0/templates/publish",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/templates/publish-template-content/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__templates__delete___post": {
+      "provider_intent": "mailchimp__api__1-0__templates__delete___post",
+      "provider_alias_intent": "/api/1.0/templates/delete",
+      "text": "Delete template",
+      "category": "Templates",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "the immutable name of an existing template.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Delete template",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/templates/delete",
+        "alias_endpoint": "/mailchimp/api/1.0/templates/delete",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/templates/delete-template/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__templates__list___post": {
+      "provider_intent": "mailchimp__api__1-0__templates__list___post",
+      "provider_alias_intent": "/api/1.0/templates/list",
+      "text": "List templates",
+      "category": "Templates",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "label": {
+          "type": "string",
+          "text": "an optional label to filter the templates.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "List templates",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/templates/list",
+        "alias_endpoint": "/mailchimp/api/1.0/templates/list",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/templates/list-templates/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__templates__time-series___post": {
+      "provider_intent": "mailchimp__api__1-0__templates__time-series___post",
+      "provider_alias_intent": "/api/1.0/templates/time-series",
+      "text": "Get template history",
+      "category": "Templates",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "the name of an existing template.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Get template history",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/templates/time-series",
+        "alias_endpoint": "/mailchimp/api/1.0/templates/time-series",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/templates/get-template-history/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__templates__render___post": {
+      "provider_intent": "mailchimp__api__1-0__templates__render___post",
+      "provider_alias_intent": "/api/1.0/templates/render",
+      "text": "Render html template",
+      "category": "Templates",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "template_name": {
+          "type": "string",
+          "text": "the immutable name of a template that exists in the user's account",
+          "required": true
+        },
+        "template_content": {
+          "type": "object",
+          "text": "an array of template content to render.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Render html template",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/templates/render",
+        "alias_endpoint": "/mailchimp/api/1.0/templates/render",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/templates/render-html-template/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__urls__list___post": {
+      "provider_intent": "mailchimp__api__1-0__urls__list___post",
+      "provider_alias_intent": "/api/1.0/urls/list",
+      "text": "List most clicked urls",
+      "category": "URLs",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "key": {
+          "type": "string",
+          "text": "a valid api key",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "List most clicked urls",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/urls/list",
+        "alias_endpoint": "/mailchimp/api/1.0/urls/list",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/urls/list-most-clicked-urls/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__urls__search___post": {
+      "provider_intent": "mailchimp__api__1-0__urls__search___post",
+      "provider_alias_intent": "/api/1.0/urls/search",
+      "text": "Search most clicked urls",
+      "category": "URLs",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "q": {
+          "type": "string",
+          "text": "a search query",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Search most clicked urls",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/urls/search",
+        "alias_endpoint": "/mailchimp/api/1.0/urls/search",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/urls/search-most-clicked-urls/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__urls__time-series___post": {
+      "provider_intent": "mailchimp__api__1-0__urls__time-series___post",
+      "provider_alias_intent": "/api/1.0/urls/time-series",
+      "text": "Get url history",
+      "category": "URLs",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "url": {
+          "type": "string",
+          "text": "an existing URL",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Get url history",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/urls/time-series",
+        "alias_endpoint": "/mailchimp/api/1.0/urls/time-series",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/urls/get-url-history/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__urls__tracking-domains___post": {
+      "provider_intent": "mailchimp__api__1-0__urls__tracking-domains___post",
+      "provider_alias_intent": "/api/1.0/urls/tracking-domains",
+      "text": "List tracking domains",
+      "category": "URLs",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "key": {
+          "type": "string",
+          "text": "a valid api key",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Get the list of tracking domains set up for this account",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/urls/tracking-domains",
+        "alias_endpoint": "/mailchimp/api/1.0/urls/tracking-domains",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/urls/list-tracking-domains/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__urls__add-tracking-domain___post": {
+      "provider_intent": "mailchimp__api__1-0__urls__add-tracking-domain___post",
+      "provider_alias_intent": "/api/1.0/urls/add-tracking-domain",
+      "text": "Add tracking domains",
+      "category": "URLs",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "domain": {
+          "type": "string",
+          "text": "a domain name.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Add tracking domains",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/urls/add-tracking-domain",
+        "alias_endpoint": "/mailchimp/api/1.0/urls/add-tracking-domain",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/urls/add-tracking-domains/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__urls__check-tracking-domain___post": {
+      "provider_intent": "mailchimp__api__1-0__urls__check-tracking-domain___post",
+      "provider_alias_intent": "/api/1.0/urls/check-tracking-domain",
+      "text": "Check cname settings",
+      "category": "URLs",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "domain": {
+          "type": "string",
+          "text": "an existing tracking domain name.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Check cname settings",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/urls/check-tracking-domain",
+        "alias_endpoint": "/mailchimp/api/1.0/urls/check-tracking-domain",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/urls/check-cname-settings/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__users__info___post": {
+      "provider_intent": "mailchimp__api__1-0__users__info___post",
+      "provider_alias_intent": "/api/1.0/users/info",
+      "text": "Get user info",
+      "category": "Users",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "key": {
+          "type": "string",
+          "text": "a valid api key",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Get user info",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/users/info",
+        "alias_endpoint": "/mailchimp/api/1.0/users/info",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/users/get-user-info/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__users__ping___post": {
+      "provider_intent": "mailchimp__api__1-0__users__ping___post",
+      "provider_alias_intent": "/api/1.0/users/ping",
+      "text": "Ping",
+      "category": "Users",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "key": {
+          "type": "string",
+          "text": "a valid api key",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Ping",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/users/ping",
+        "alias_endpoint": "/mailchimp/api/1.0/users/ping",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/users/ping/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__users__ping2____post": {
+      "provider_intent": "mailchimp__api__1-0__users__ping2____post",
+      "provider_alias_intent": "/api/1.0/users/ping2 ",
+      "text": "Ping 2",
+      "category": "Users",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "key": {
+          "type": "string",
+          "text": "a valid api key",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Ping 2",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/users/ping2 ",
+        "alias_endpoint": "/mailchimp/api/1.0/users/ping2 ",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/users/ping-2/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__users__senders___post": {
+      "provider_intent": "mailchimp__api__1-0__users__senders___post",
+      "provider_alias_intent": "/api/1.0/users/senders",
+      "text": "List account senders user",
+      "category": "Users",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "key": {
+          "type": "string",
+          "text": "a valid api key",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "List account senders user",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/users/senders",
+        "alias_endpoint": "/mailchimp/api/1.0/users/senders",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/users/list-account-senders/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__webhooks__list___post": {
+      "provider_intent": "mailchimp__api__1-0__webhooks__list___post",
+      "provider_alias_intent": "/api/1.0/webhooks/list",
+      "text": "List webhooks",
+      "category": "Webhooks",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "key": {
+          "type": "string",
+          "text": "a valid api key",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "List webhooks",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/webhooks/list",
+        "alias_endpoint": "/mailchimp/api/1.0/webhooks/list",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/webhooks/list-webhooks/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__webhooks__add___post": {
+      "provider_intent": "mailchimp__api__1-0__webhooks__add___post",
+      "provider_alias_intent": "/api/1.0/webhooks/add",
+      "text": "Add webhook",
+      "category": "Webhooks",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "url": {
+          "type": "string",
+          "text": "the URL to POST batches of events",
+          "required": true
+        },
+        "description": {
+          "type": "string",
+          "text": "an optional description of the webhook"
+        },
+        "events": {
+          "type": "string",
+          "text": "an optional list of events that will be posted to the webhook."
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Add webhook",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/webhooks/add",
+        "alias_endpoint": "/mailchimp/api/1.0/webhooks/add",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/webhooks/add-webhook/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__webhooks__info___post": {
+      "provider_intent": "mailchimp__api__1-0__webhooks__info___post",
+      "provider_alias_intent": "/api/1.0/webhooks/info",
+      "text": "Get webhook info",
+      "category": "Webhooks",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "id": {
+          "type": "number",
+          "text": "the unique identifier of a webhook belonging to this account.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Get webhook info",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/webhooks/info",
+        "alias_endpoint": "/mailchimp/api/1.0/webhooks/info",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/webhooks/get-webhook-info/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__webhooks__update___post": {
+      "provider_intent": "mailchimp__api__1-0__webhooks__update___post",
+      "provider_alias_intent": "/api/1.0/webhooks/update",
+      "text": "Update webhook",
+      "category": "Webhooks",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "id": {
+          "type": "number",
+          "text": "the unique identifier of a webhook belonging to this account",
+          "required": true
+        },
+        "url": {
+          "type": "string",
+          "text": "the URL to POST batches of events. Requires webhook to exist",
+          "required": true
+        },
+        "description": {
+          "type": "string",
+          "text": "an optional description of the webhook"
+        },
+        "events": {
+          "type": "string",
+          "text": "an optional list of events that will be posted to the webhook."
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Update webhook",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/webhooks/update",
+        "alias_endpoint": "/mailchimp/api/1.0/webhooks/update",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/webhooks/update-webhook/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__webhooks__delete___post": {
+      "provider_intent": "mailchimp__api__1-0__webhooks__delete___post",
+      "provider_alias_intent": "/api/1.0/webhooks/delete",
+      "text": "Delete webhook",
+      "category": "Webhooks",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "id": {
+          "type": "number",
+          "text": "the unique identifier of a webhook belonging to this account.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Delete webhook",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/webhooks/delete",
+        "alias_endpoint": "/mailchimp/api/1.0/webhooks/delete",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/webhooks/delete-webhook/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__whitelists__add___post": {
+      "provider_intent": "mailchimp__api__1-0__whitelists__add___post",
+      "provider_alias_intent": "/api/1.0/whitelists/add",
+      "text": "Add email to allowlist Whitelists",
+      "category": "Whitelists",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "email": {
+          "type": "string",
+          "text": "an email address to add to the allowlist",
+          "required": true
+        },
+        "comment": {
+          "type": "string",
+          "text": "an optional description of why the email was added to the allowlist"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Add email to allowlist Whitelists",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/whitelists/add",
+        "alias_endpoint": "/mailchimp/api/1.0/whitelists/add",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/whitelists/add-email-to-allowlist/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__whitelists__list___post": {
+      "provider_intent": "mailchimp__api__1-0__whitelists__list___post",
+      "provider_alias_intent": "/api/1.0/whitelists/list",
+      "text": "List allowlisted emails Whitelists",
+      "category": "Whitelists",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "email": {
+          "type": "string",
+          "text": "an optional email address or prefix to search by.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "List allowlisted emails Whitelists",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/whitelists/list",
+        "alias_endpoint": "/mailchimp/api/1.0/whitelists/list",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/whitelists/list-allowlisted-emails/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "mailchimp__api__1-0__whitelists__delete___post": {
+      "provider_intent": "mailchimp__api__1-0__whitelists__delete___post",
+      "provider_alias_intent": "/api/1.0/whitelists/delete",
+      "text": "Remove email from allowlist Whitelists",
+      "category": "Whitelists",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "email": {
+          "type": "string",
+          "text": "the email address to remove from the allowlist.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "1.0",
+        "auth": [],
+        "description": "Remove email from allowlist Whitelists",
+        "rate_limit": [],
+        "api_endpoint": "https://mandrillapp.com/api/1.0/whitelists/delete",
+        "alias_endpoint": "/mailchimp/api/1.0/whitelists/delete",
+        "api_ref": "https://mailchimp.com/developer/transactional/api/whitelists/remove-email-from-allowlist/"
+      },
+      "auth": {
+        "body": {
+          "key": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

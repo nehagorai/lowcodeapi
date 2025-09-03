@@ -1,0 +1,84 @@
+{
+  "routes": {
+    "weatherunion_gw_weather_external_v0_get_weather_data_get": {
+      "provider_intent": "weatherunion_gw_weather_external_v0_get_weather_data_get",
+      "provider_alias_intent": "/gw/weather/external/v0/get_weather_data",
+      "text": "API for current weather data at a lat, long",
+      "category": "weather data",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "latitude": {
+          "type": "number",
+          "text": "Latitude"
+        },
+        "longitude": {
+          "type": "number",
+          "text": "Longitude"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v0",
+        "auth": [],
+        "description": "This API is for fetching weather data at a given latitude and longitude within 2 km radius of our weather device",
+        "rate_limit": [],
+        "api_endpoint": "https://www.weatherunion.com/gw/weather/external/v0/get_weather_data",
+        "alias_endpoint": "/weatherunion/gw/weather/external/v0/get_weather_data",
+        "api_ref": "https://b.zmtcdn.com/data/file_assets/915d4e8e95d067c47e1ae38d77d572b21715104204.pdf"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-zomato-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "weatherunion_gw_weather_external_v0_get_locality_weather_data_get": {
+      "provider_intent": "weatherunion_gw_weather_external_v0_get_locality_weather_data_get",
+      "provider_alias_intent": "/gw/weather/external/v0/get_locality_weather_data",
+      "text": "API for current weather data in a locality",
+      "category": "weather data",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "locality_id": {
+          "type": "string",
+          "text": "Locality Id"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v0",
+        "auth": [],
+        "description": "This API is for fetching current weather data for a given locality id.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.weatherunion.com/gw/weather/external/v0/get_locality_weather_data",
+        "alias_endpoint": "/weatherunion/gw/weather/external/v0/get_locality_weather_data",
+        "api_ref": "https://b.zmtcdn.com/data/file_assets/915d4e8e95d067c47e1ae38d77d572b21715104204.pdf"
+      },
+      "auth": {
+        "header": {
+          "headerName": "x-zomato-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

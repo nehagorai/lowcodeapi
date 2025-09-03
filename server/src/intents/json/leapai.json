@@ -1,0 +1,1008 @@
+{
+  "routes": {
+    "leapai__api__v1__images__models___post": {
+      "provider_intent": "leapai__api__v1__images__models___post",
+      "provider_alias_intent": "/api/v1/images/models",
+      "provider_proxy_intent": "https://api.tryleap.ai/api/v1/images/models",
+      "text": "Create Model",
+      "category": "Fine-Tuning",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "title": {
+          "text": "This is the name of the model. It will be used to identify the model",
+          "type": "string",
+          "required": true
+        },
+        "subjectType": {
+          "text": "The subject type - what the underlying model is learning",
+          "type": "string"
+        },
+        "subjectKeyword": {
+          "text": "This is the keyword you will use during inference to trigger the specific styles",
+          "type": "string",
+          "required": true
+        },
+        "subjectIdentifier": {
+          "text": "A random string that will replace the subject keyword at the time of inference. If not provided; a random string will be automatically generated",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": "",
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.tryleap.ai/reference/createmodel",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Create Model",
+        "api_endpoint": "https://api.tryleap.ai/api/v1/images/models",
+        "alias_endpoint": "/leapai/api/v1/images/models"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "leapai__api__v1__images__models__modelid__samples___post": {
+      "provider_intent": "leapai__api__v1__images__models__modelid__samples___post",
+      "provider_alias_intent": "/api/v1/images/models/modelId/samples",
+      "provider_proxy_intent": "https://api.tryleap.ai/api/v1/images/models/{modelId}/samples",
+      "text": "Upload Image Samples",
+      "category": "Fine-Tuning",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "modelId": {
+          "text": "The ID of the model to upload samples to",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": "",
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.tryleap.ai/reference/samplescontroller_create-1",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Upload Image Samples",
+        "api_endpoint": "https://api.tryleap.ai/api/v1/images/models/{modelId}/samples",
+        "alias_endpoint": "/leapai/api/v1/images/models/modelId/samples"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:35:56.000Z"
+    },
+    "leapai__api__v1__images__models__modelid__queue___post": {
+      "provider_intent": "leapai__api__v1__images__models__modelid__queue___post",
+      "provider_alias_intent": "/api/v1/images/models/modelId/queue",
+      "provider_proxy_intent": "https://api.tryleap.ai/api/v1/images/models/{modelId}/queue",
+      "text": "Queue Training Job",
+      "category": "Fine-Tuning",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "modelId": {
+          "text": "The ID of the model to queue",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "steps": {
+          "text": "The number of steps your model will be trained for",
+          "type": "number"
+        },
+        "webhookUrl": {
+          "text": "An optional webhook URL that will be called when the model is trained",
+          "type": "string"
+        },
+        "baseWeightsId": {
+          "text": "The ID of the weights to use for training - defaults to Stable Diffusion v1.5 weights",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": "",
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.tryleap.ai/reference/queuetrainingjob",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Queue Training Job",
+        "api_endpoint": "https://api.tryleap.ai/api/v1/images/models/{modelId}/queue",
+        "alias_endpoint": "/leapai/api/v1/images/models/modelId/queue"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:36:07.000Z"
+    },
+    "leapai__api__v1__images__models__modelid__samples___get": {
+      "provider_intent": "leapai__api__v1__images__models__modelid__samples___get",
+      "provider_alias_intent": "/api/v1/images/models/modelId/samples",
+      "provider_proxy_intent": "https://api.tryleap.ai/api/v1/images/models/{modelId}/samples",
+      "text": "List Image Samples",
+      "category": "Fine-Tuning",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "modelId": {
+          "text": "The ID of the model to retrieve.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": "",
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.tryleap.ai/reference/samplescontroller_findall-1",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "List Image Samples",
+        "api_endpoint": "https://api.tryleap.ai/api/v1/images/models/{modelId}/samples",
+        "alias_endpoint": "/leapai/api/v1/images/models/modelId/samples"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:36:16.000Z"
+    },
+    "leapai__api__v1__images__models__modelid___get": {
+      "provider_intent": "leapai__api__v1__images__models__modelid___get",
+      "provider_alias_intent": "/api/v1/images/models/modelId",
+      "provider_proxy_intent": "https://api.tryleap.ai/api/v1/images/models/{modelId}",
+      "text": "Retrieve a Single Model",
+      "category": "Fine-Tuning",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "modelId": {
+          "text": "The ID of the model to retrieve",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": "",
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.tryleap.ai/reference/retrievesinglemodel",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Retrieve a Single Model",
+        "api_endpoint": "https://api.tryleap.ai/api/v1/images/models/{modelId}",
+        "alias_endpoint": "/leapai/api/v1/images/models/modelId"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:36:25.000Z"
+    },
+    "leapai__api__v1__images__models__modelid__samples__sampleid___get": {
+      "provider_intent": "leapai__api__v1__images__models__modelid__samples__sampleid___get",
+      "provider_alias_intent": "/api/v1/images/models/modelId/samples/sampleId",
+      "provider_proxy_intent": "https://api.tryleap.ai/api/v1/images/models/{modelId}/samples/{sampleId}",
+      "text": "Get Image Sample",
+      "category": "Fine-Tuning",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "modelId": {
+          "text": "The ID of the model to retrieve",
+          "type": "string",
+          "required": true
+        },
+        "sampleId": {
+          "text": "The ID of the image sample to retrieve.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": "",
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.tryleap.ai/reference/samplescontroller_findone-1",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Get Image Sample",
+        "api_endpoint": "https://api.tryleap.ai/api/v1/images/models/{modelId}/samples/{sampleId}",
+        "alias_endpoint": "/leapai/api/v1/images/models/modelId/samples/sampleId"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:36:38.000Z"
+    },
+    "leapai__api__v1__images__models__modelid__samples__url___post": {
+      "provider_intent": "leapai__api__v1__images__models__modelid__samples__url___post",
+      "provider_alias_intent": "/api/v1/images/models/modelId/samples/url",
+      "provider_proxy_intent": "https://api.tryleap.ai/api/v1/images/models/{modelId}/samples/url",
+      "text": "Upload Image Samples Via Url",
+      "category": "Fine-Tuning",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "returnInObject": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "Whether to return the sample in the response as an object. Will return array if false.",
+          "type": "boolean"
+        }
+      },
+      "path": {
+        "modelId": {
+          "text": "The ID of the model to upload samples to.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "images": {
+          "text": "An array of strings containing the URLs of the images to upload",
+          "type": "array of strings",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": "",
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.tryleap.ai/reference/samplescontroller_createurl",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Upload Image Samples Via Url",
+        "api_endpoint": "https://api.tryleap.ai/api/v1/images/models/{modelId}/samples/url",
+        "alias_endpoint": "/leapai/api/v1/images/models/modelId/samples/url"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:37:09.000Z"
+    },
+    "leapai__api__v1__images__models___get": {
+      "provider_intent": "leapai__api__v1__images__models___get",
+      "provider_alias_intent": "/api/v1/images/models",
+      "provider_proxy_intent": "https://api.tryleap.ai/api/v1/images/models",
+      "text": "List All Models",
+      "category": "Fine-Tuning",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "returnInObject": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "Whether to return the sample in the response as an object",
+          "type": "boolean"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": "",
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.tryleap.ai/reference/listallmodels",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "List All Models",
+        "api_endpoint": "https://api.tryleap.ai/api/v1/images/models",
+        "alias_endpoint": "/leapai/api/v1/images/models"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "leapai__api__v1__images__models__modelid___delete": {
+      "provider_intent": "leapai__api__v1__images__models__modelid___delete",
+      "provider_alias_intent": "/api/v1/images/models/modelId",
+      "provider_proxy_intent": "https://api.tryleap.ai/api/v1/images/models/{modelId}",
+      "text": "Delete a Model",
+      "category": "Fine-Tuning",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "modelId": {
+          "text": "The ID of the model to delete",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": "",
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.tryleap.ai/reference/modelscontroller_remove",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Delete a Model",
+        "api_endpoint": "https://api.tryleap.ai/api/v1/images/models/{modelId}",
+        "alias_endpoint": "/leapai/api/v1/images/models/modelId"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:37:23.000Z"
+    },
+    "leapai__api__v1__images__models__modelid__samples__sampleid__archive___post": {
+      "provider_intent": "leapai__api__v1__images__models__modelid__samples__sampleid__archive___post",
+      "provider_alias_intent": "/api/v1/images/models/modelId/samples/sampleId/archive",
+      "provider_proxy_intent": "https://api.tryleap.ai/api/v1/images/models/{modelId}/samples/{sampleId}/archive",
+      "text": "Archive Image Sample",
+      "category": "Fine-Tuning",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "modelId": {
+          "text": "The ID of the model that contains the sample",
+          "type": "string",
+          "required": true
+        },
+        "sampleId": {
+          "text": "The ID of the image sample to archive",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": "",
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.tryleap.ai/reference/samplescontroller_remove",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Archive Image Sample",
+        "api_endpoint": "https://api.tryleap.ai/api/v1/images/models/{modelId}/samples/{sampleId}/archive",
+        "alias_endpoint": "/leapai/api/v1/images/models/modelId/samples/sampleId/archive"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:37:35.000Z"
+    },
+    "leapai__api__v1__images__models__modelid__versions___get": {
+      "provider_intent": "leapai__api__v1__images__models__modelid__versions___get",
+      "provider_alias_intent": "/api/v1/images/models/modelId/versions",
+      "provider_proxy_intent": "https://api.tryleap.ai/api/v1/images/models/{modelId}/versions",
+      "text": "List All Model Versions",
+      "category": "Fine-Tuning",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "modelId": {
+          "text": "The ID of the model to retrieve",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": "",
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.tryleap.ai/reference/versionscontroller_findall-1",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "List All Model Versions",
+        "api_endpoint": "https://api.tryleap.ai/api/v1/images/models/{modelId}/versions",
+        "alias_endpoint": "/leapai/api/v1/images/models/modelId/versions"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:37:49.000Z"
+    },
+    "leapai__api__v1__images__models__modelid__versions__versionid___get": {
+      "provider_intent": "leapai__api__v1__images__models__modelid__versions__versionid___get",
+      "provider_alias_intent": "/api/v1/images/models/modelId/versions/versionId",
+      "provider_proxy_intent": "https://api.tryleap.ai/api/v1/images/models/{modelId}/versions/{versionId}",
+      "text": "Get Model Version",
+      "category": "Fine-Tuning",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "modelId": {
+          "text": "The ID of the model to retrieve",
+          "type": "string",
+          "required": true
+        },
+        "versionId": {
+          "text": "The ID of the version to retrieve",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": "",
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.tryleap.ai/reference/versionscontroller_findone-1",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Get Model Version",
+        "api_endpoint": "https://api.tryleap.ai/api/v1/images/models/{modelId}/versions/{versionId}",
+        "alias_endpoint": "/leapai/api/v1/images/models/modelId/versions/versionId"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:38:07.000Z"
+    },
+    "leapai__api__v1__images__models__modelid__inferences___post": {
+      "provider_intent": "leapai__api__v1__images__models__modelid__inferences___post",
+      "provider_alias_intent": "/api/v1/images/models/modelId/inferences",
+      "provider_proxy_intent": "https://api.tryleap.ai/api/v1/images/models/{modelId}/inferences",
+      "text": "Generate an image using a text prompt",
+      "category": "Generate Images",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "modelId": {
+          "text": "The ID of the model to use to generate images.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "seed": {
+          "text": "The seed to use for the inference. Must be a positive integer.",
+          "type": "number"
+        },
+        "steps": {
+          "text": "The number of steps to use for the inference.",
+          "type": "number"
+        },
+        "width": {
+          "text": "The width of the image to use for the inference. Must be a multiple of 8.",
+          "type": "number"
+        },
+        "height": {
+          "text": "The height of the image to use for the inference. Must be a multiple of 8.",
+          "type": "number"
+        },
+        "prompt": {
+          "text": "The prompt to use for the inference. A photo of an astronaut riding a horse",
+          "type": "string",
+          "required": true
+        },
+        "sampler": {
+          "text": "Choose the sampler used for your inference.",
+          "type": "string"
+        },
+        "version": {
+          "text": "The version of the model to use for the inference. If not provided will default to latest.",
+          "type": "string"
+        },
+        "upscaleBy": {
+          "text": "Optionally upscale the generated images. This will make the images look more realistic. The default is x1 which means no upscaling. The maximum is x4.",
+          "type": "string"
+        },
+        "webhookUrl": {
+          "text": "An optional webhook URL that will be called when the model is trained.",
+          "type": "string"
+        },
+        "restoreFaces": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "Optionally apply face restoration to the generated images. This will make images of faces look more realistic.",
+          "type": "boolean"
+        },
+        "enhancePrompt": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "Optionally enhance your prompts automatically to generate better results.",
+          "type": "boolean"
+        },
+        "negativePrompt": {
+          "text": "Negative prompts to use for the inference.",
+          "type": "string"
+        },
+        "numberOfImages": {
+          "text": "The number of images to generate for the inference. Max batch size is 20.",
+          "type": "number"
+        },
+        "promptStrength": {
+          "text": "The higher the prompt strength the closer the generated image will be to the prompt. Must be between 0 and 30.",
+          "type": "number"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": "",
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.tryleap.ai/reference/inferencescontroller_create-1",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Generate an image using a text prompt. The model used to generate the image is determined by the modelId parameter. A job ID is returned that can be used to retrieve the generated image(s).",
+        "api_endpoint": "https://api.tryleap.ai/api/v1/images/models/{modelId}/inferences",
+        "alias_endpoint": "/leapai/api/v1/images/models/modelId/inferences"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:38:20.000Z"
+    },
+    "leapai__api__v1__images__models__modelid__inferences___get": {
+      "provider_intent": "leapai__api__v1__images__models__modelid__inferences___get",
+      "provider_alias_intent": "/api/v1/images/models/modelId/inferences",
+      "provider_proxy_intent": "https://api.tryleap.ai/api/v1/images/models/{modelId}/inferences",
+      "text": "Fetch a list of inference jobs for a particular model.",
+      "category": "Generate Images",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "page": {
+          "text": "The page to request",
+          "type": "number"
+        },
+        "pageSize": {
+          "text": "The number of items to return per page",
+          "type": "number"
+        },
+        "onlyFinished": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "If set to true; only finished inferences will be returned. If set to false or not set; all inference jobs will be returned",
+          "type": "boolean"
+        }
+      },
+      "path": {
+        "modelId": {
+          "text": "The ID of the model to retrieve inferences for",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": "",
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.tryleap.ai/reference/inferencescontroller_findall-1",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Fetch a list of inference jobs for a particular model.",
+        "api_endpoint": "https://api.tryleap.ai/api/v1/images/models/{modelId}/inferences",
+        "alias_endpoint": "/leapai/api/v1/images/models/modelId/inferences"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:38:38.000Z"
+    },
+    "leapai__api__v1__images__models__modelid__inferences__inferenceid___get": {
+      "provider_intent": "leapai__api__v1__images__models__modelid__inferences__inferenceid___get",
+      "provider_alias_intent": "/api/v1/images/models/modelId/inferences/inferenceId",
+      "provider_proxy_intent": "https://api.tryleap.ai/api/v1/images/models/{modelId}/inferences/{inferenceId}",
+      "text": "Get a single inference job",
+      "category": "Generate Images",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "modelId": {
+          "text": "The ID of the model to retrieve inferences for",
+          "type": "string",
+          "required": true
+        },
+        "inferenceId": {
+          "text": "The ID of the inference to retrieve",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": "",
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.tryleap.ai/reference/inferencescontroller_findone-1",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Get a single inference job",
+        "api_endpoint": "https://api.tryleap.ai/api/v1/images/models/{modelId}/inferences/{inferenceId}",
+        "alias_endpoint": "/leapai/api/v1/images/models/modelId/inferences/inferenceId"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:38:54.000Z"
+    },
+    "leapai__api__v1__images__models__modelid__inferences__inferenceid___delete": {
+      "provider_intent": "leapai__api__v1__images__models__modelid__inferences__inferenceid___delete",
+      "provider_alias_intent": "/api/v1/images/models/modelId/inferences/inferenceId",
+      "provider_proxy_intent": "https://api.tryleap.ai/api/v1/images/models/{modelId}/inferences/{inferenceId}",
+      "text": "Delete Inference",
+      "category": "Generate Images",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "modelId": {
+          "type": "string",
+          "required": true
+        },
+        "inferenceId": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": "",
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.tryleap.ai/reference/inferencescontroller_remove-1",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Delete Inference",
+        "api_endpoint": "https://api.tryleap.ai/api/v1/images/models/{modelId}/inferences/{inferenceId}",
+        "alias_endpoint": "/leapai/api/v1/images/models/modelId/inferences/inferenceId"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:39:05.000Z"
+    },
+    "leapai__api__v1__projects__projectid___delete": {
+      "provider_intent": "leapai__api__v1__projects__projectid___delete",
+      "provider_alias_intent": "/api/v1/projects/projectId",
+      "provider_proxy_intent": "https://api.tryleap.ai/api/v1/projects/{projectId}",
+      "text": "Delete a Project",
+      "category": "Projects",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "projectId": {
+          "text": "The ID of the project to delete.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": "",
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.tryleap.ai/reference/projectscontroller_remove",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Delete a Project",
+        "api_endpoint": "https://api.tryleap.ai/api/v1/projects/{projectId}",
+        "alias_endpoint": "/leapai/api/v1/projects/projectId"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:39:17.000Z"
+    },
+    "leapai__api__v1__images__models__modelid__remix__url___post": {
+      "provider_intent": "leapai__api__v1__images__models__modelid__remix__url___post",
+      "provider_alias_intent": "/api/v1/images/models/modelId/remix/url",
+      "provider_proxy_intent": "https://api.tryleap.ai/api/v1/images/models/{modelId}/remix/url",
+      "text": "Remix Image Via URL",
+      "category": "Remix Images",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "modelId": {
+          "text": "The ID of the model to use for the image generation",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "mode": {
+          "text": "The segmentation mode that should be used when generating the image",
+          "type": "string"
+        },
+        "seed": {
+          "text": "A random seed to use when generating the image",
+          "type": "number"
+        },
+        "steps": {
+          "text": "How many steps to perform - more steps will take longer; but may produce better results",
+          "type": "number"
+        },
+        "prompt": {
+          "text": "A text prompt to use when generating the image.",
+          "type": "string",
+          "required": true
+        },
+        "imageUrl": {
+          "text": "The URL of the image to use as the source image. Make sure the image is public",
+          "type": "string",
+          "required": true
+        },
+        "webhookUrl": {
+          "text": "This will include the generated images if the job was successful",
+          "type": "string"
+        },
+        "negativePrompt": {
+          "text": "The negative prompt instructs the model on things it should avoid doing",
+          "type": "string"
+        },
+        "numberOfImages": {
+          "text": "How many images to generate",
+          "type": "number"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": "",
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.tryleap.ai/reference/controlcontroller_createwithurl",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Remix Image Via URL",
+        "api_endpoint": "https://api.tryleap.ai/api/v1/images/models/{modelId}/remix/url",
+        "alias_endpoint": "/leapai/api/v1/images/models/modelId/remix/url"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:39:31.000Z"
+    },
+    "leapai__api__v1__images__models__modelid__remix___post": {
+      "provider_intent": "leapai__api__v1__images__models__modelid__remix___post",
+      "provider_alias_intent": "/api/v1/images/models/modelId/remix",
+      "provider_proxy_intent": "https://api.tryleap.ai/api/v1/images/models/{modelId}/remix",
+      "text": "Remix Image Via File Upload",
+      "category": "Remix Images",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "modelId": {
+          "text": "The ID of the model that the File upload to.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "mode": {
+          "text": "The segmentation mode that should be used when generating the image.",
+          "type": "string"
+        },
+        "seed": {
+          "text": "The seed to use for the random number generator",
+          "type": "number"
+        },
+        "files": {
+          "type": ""
+        },
+        "steps": {
+          "text": "How many steps to take",
+          "type": "number"
+        },
+        "prompt": {
+          "text": "A text prompt explaining what the generated image should look like",
+          "type": "string",
+          "required": true
+        },
+        "webhookUrl": {
+          "text": "An optional URL to ping with the status when the job is finished",
+          "type": "string"
+        },
+        "negativePrompt": {
+          "text": "A statement explaining what to avoid in the image",
+          "type": "string"
+        },
+        "numberOfImages": {
+          "text": "Number of images to generate",
+          "type": "number"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": "",
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.tryleap.ai/reference/controlcontroller_create",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Remix Image Via File Upload\n",
+        "api_endpoint": "https://api.tryleap.ai/api/v1/images/models/{modelId}/remix",
+        "alias_endpoint": "/leapai/api/v1/images/models/modelId/remix"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:39:40.000Z"
+    },
+    "leapai__api__v1__images__models__modelid__remix__remixid___get": {
+      "provider_intent": "leapai__api__v1__images__models__modelid__remix__remixid___get",
+      "provider_alias_intent": "/api/v1/images/models/modelId/remix/remixId",
+      "provider_proxy_intent": "https://api.tryleap.ai/api/v1/images/models/{modelId}/remix/{remixId}",
+      "text": "Get a Remix job by ID",
+      "category": "Remix Images",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "modelId": {
+          "text": "The ID of the model that the job belongs to.",
+          "type": "string",
+          "required": true
+        },
+        "remixId": {
+          "text": "The ID of the job to retrieve",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": "",
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.tryleap.ai/reference/controlcontroller_findone",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Get a Remix job by ID",
+        "api_endpoint": "https://api.tryleap.ai/api/v1/images/models/{modelId}/remix/{remixId}",
+        "alias_endpoint": "/leapai/api/v1/images/models/modelId/remix/remixId"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:39:52.000Z"
+    }
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "routes": {
+    "writerai__v1__models___get": {
+      "provider_intent": "writerai__v1__models___get",
+      "provider_alias_intent": "/v1/models",
+      "text": "List Models",
+      "category": "Writer API",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List Models",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/models",
+        "alias_endpoint": "/writerai/v1/models",
+        "api_ref": "https://dev.writer.com/api-guides/api-reference/list-models"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "writerai__v1__completions___post": {
+      "provider_intent": "writerai__v1__completions___post",
+      "provider_alias_intent": "/v1/completions",
+      "text": "Text Generation",
+      "category": "Writer API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "model": {
+          "type": "string",
+          "text": "The identifier of the model to be used for processing the request.",
+          "required": true
+        },
+        "prompt": {
+          "type": "string",
+          "text": "The input text that the model will process to generate a response.",
+          "required": true
+        },
+        "max_tokens": {
+          "type": "number",
+          "text": "The maximum number of tokens that the model can generate in the response."
+        },
+        "temperature": {
+          "type": "number",
+          "text": "Controls the randomness of the model's outputs. Higher values lead to more random outputs, while lower values make the model more deterministic."
+        },
+        "top_p": {
+          "type": "number",
+          "text": "Used to control the nucleus sampling, where only the most probable tokens with a cumulative probability of top_p are considered for sampling, providing a way to fine-tune the randomness of predictions."
+        },
+        "stop": {
+          "type": "array|string",
+          "text": "Specifies stopping conditions for the model's output generation. This can be an array of strings or a single string that the model will look for as a signal to stop generating further tokens."
+        },
+        "best_of": {
+          "type": "number",
+          "text": "Specifies the number of completions to generate and return the best one. Useful for generating multiple outputs and choosing the best based on some criteria."
+        },
+        "random_seed": {
+          "type": "number",
+          "text": "A seed used to initialize the random number generator for the model, ensuring reproducibility of the output when the same inputs are provided."
+        },
+        "stream": {
+          "type": "boolean",
+          "text": "Determines whether the model's output should be streamed. If true, the output is generated and sent incrementally, which can be useful for real-time applications.",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Text Generation",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/completions",
+        "alias_endpoint": "/writerai/v1/completions",
+        "api_ref": "https://dev.writer.com/api-guides/api-reference/text-generation"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "writerai__v1__chat___post": {
+      "provider_intent": "writerai__v1__chat___post",
+      "provider_alias_intent": "/v1/chat",
+      "text": "Chat Completion",
+      "category": "Writer API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "model": {
+          "type": "string",
+          "text": "Specifies the model to be used for generating responses. The chat model is always palmyra-x-002-32k for conversational use. default: palmyra-x-002-32k",
+          "required": true
+        },
+        "messages": {
+          "type": "array",
+          "text": "An array of message objects that form the conversation history or context for the model to respond to. The array must contain at least one message.",
+          "required": true
+        },
+        "max_tokens": {
+          "type": "number",
+          "text": "The maximum number of tokens that the model can generate in the response."
+        },
+        "temperature": {
+          "type": "number",
+          "text": "Controls the randomness or creativity of the model's responses. A higher temperature results in more varied and less predictable text, while a lower temperature produces more deterministic and conservative outputs. default: 1"
+        },
+        "top_p": {
+          "type": "number",
+          "text": "Sets the threshold for nucleus sampling, a technique to focus the model's token generation on the most likely subset of tokens. Only tokens with cumulative probability above this threshold are considered, controlling the trade-off between creativity and coherence."
+        },
+        "n": {
+          "type": "number",
+          "text": "Specifies the number of completions (responses) to generate from the model in a single request. This parameter allows multiple responses to be generated, offering a variety of potential replies from which to choose."
+        },
+        "stop": {
+          "type": "array|string",
+          "text": "A token or sequence of tokens that, when generated, will cause the model to stop producing further content. This can be a single token or an array of tokens, acting as a signal to end the output."
+        },
+        "stream": {
+          "type": "boolean",
+          "text": "Indicates whether the response should be streamed incrementally as it is generated or only returned once fully complete. Streaming can be useful for providing real-time feedback in interactive applications.",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Chat Completion",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/chat",
+        "alias_endpoint": "/writerai/v1/chat",
+        "api_ref": "https://dev.writer.com/api-guides/api-reference/chat-completion"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

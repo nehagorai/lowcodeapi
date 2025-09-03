@@ -1,0 +1,321 @@
+{
+  "routes": {
+    "unrealspeech__stream___post": {
+      "provider_intent": "unrealspeech__stream___post",
+      "provider_alias_intent": "/stream",
+      "text": "Stream",
+      "category": "Test to Speech",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "Text": {
+          "type": "string",
+          "text": "This is the text to be synthesized to audio. Up to 1000 characters.",
+          "default": "This is a test",
+          "required": true
+        },
+        "VoiceId": {
+          "type": "enum",
+          "text": "Dan: Young Male, Will: Mature Male, Scarlett: Young Female, Liv: Young Female, Amy: Mature Female",
+          "enum": [
+            "Scarlett",
+            "Dan",
+            "Liv",
+            "Will",
+            "Amy"
+          ],
+          "default": "Scarlett",
+          "required": true
+        },
+        "Bitrate": {
+          "type": "enum",
+          "text": "Use lower values for low bandwidth or to reduce the transferred file size. Use higher values for higher fidelity.",
+          "enum": [
+            "320k",
+            "256k",
+            "192k"
+          ],
+          "default": "192k"
+        },
+        "Speed": {
+          "type": "string",
+          "text": "0.5: makes the audio 50% faster (i.e. 60-second audio becomes 42 seconds), -0.5: makes the audio 50% slower (i.e. 60-second audio becomes 90 seconds)",
+          "default": "0"
+        },
+        "Pitch": {
+          "type": "string",
+          "text": "However, on the landing page, we default male voices to 0.92 as people tend to prefer lower/deeper male voices.",
+          "default": "1"
+        },
+        "Codec": {
+          "type": "enum",
+          "text": "Codec",
+          "enum": [
+            "libmp3lame",
+            "pcm_mulaw",
+            "pcm_s16le"
+          ],
+          "default": "libmp3lame"
+        },
+        "Temperature": {
+          "type": "number",
+          "text": "minimum Temperature 0.1 maximum Temperature 0.8",
+          "default": "0.25"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v7",
+        "auth": [],
+        "description": "Send up to 1000 characters and stream back audio data in 0.3 seconds. The is the endpoint to use for the fastest response.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.v7.unrealspeech.com/stream",
+        "alias_endpoint": "/unrealspeech/stream",
+        "api_ref": "https://docs.unrealspeech.com/reference/stream"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unrealspeech__speech___post": {
+      "provider_intent": "unrealspeech__speech___post",
+      "provider_alias_intent": "/speech",
+      "text": "Speech",
+      "category": "Test to Speech",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "Text": {
+          "type": "string",
+          "text": "This is the text to be synthesized to audio. Up to 3,000 characters.",
+          "default": "This is a test",
+          "required": true
+        },
+        "VoiceId": {
+          "type": "enum",
+          "text": "Dan: Young Male, Will: Mature Male, Scarlett: Young Female, Liv: Young Female, Amy: Mature Female",
+          "enum": [
+            "Scarlett",
+            "Dan",
+            "Liv",
+            "Will",
+            "Amy"
+          ],
+          "default": "Scarlett",
+          "required": true
+        },
+        "Bitrate": {
+          "type": "enum",
+          "text": "Use lower values for low bandwidth or to reduce the transferred file size. Use higher values for higher fidelity.",
+          "enum": [
+            "320k",
+            "256k",
+            "192k"
+          ],
+          "default": "192k"
+        },
+        "Speed": {
+          "type": "string",
+          "text": "0.5: makes the audio 50% faster (i.e. 60-second audio becomes 42 seconds), -0.5: makes the audio 50% slower (i.e. 60-second audio becomes 90 seconds)",
+          "default": "0"
+        },
+        "Pitch": {
+          "type": "string",
+          "text": "However, on the landing page, we default male voices to 0.92 as people tend to prefer lower/deeper male voices",
+          "default": "1"
+        },
+        "TimestampType": {
+          "type": "enum",
+          "text": "By default, the endpoint returns per-sentence timestamps. Use word to get per-word timestamps. The timestamp feature is currently not supported via the /stream endpoint.",
+          "enum": [
+            "word",
+            "sentence"
+          ],
+          "default": "sentence"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v7",
+        "auth": [],
+        "description": "Send up to 3,000 characters and synchronously receive an MP3 and JSON timestamp URLs.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.v7.unrealspeech.com/speech",
+        "alias_endpoint": "/unrealspeech/speech",
+        "api_ref": "https://docs.unrealspeech.com/reference/speech"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unrealspeech__synthesistasks___post": {
+      "provider_intent": "unrealspeech__synthesistasks___post",
+      "provider_alias_intent": "/synthesistasks",
+      "text": "SynthesisTasks",
+      "category": "Test to Speech",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "Text": {
+          "type": "string",
+          "text": "This is the text to be synthesized to audio. Up to 500,000 characters.",
+          "default": "This is a test",
+          "required": true
+        },
+        "VoiceId": {
+          "type": "enum",
+          "text": "Dan: Young Male, Will: Mature Male, Scarlett: Young Female, Liv: Young Female, Amy: Mature Female",
+          "enum": [
+            "Scarlett",
+            "Dan",
+            "Liv",
+            "Will",
+            "Amy"
+          ],
+          "default": "Scarlett",
+          "required": true
+        },
+        "Bitrate": {
+          "type": "enum",
+          "text": "Use lower values for low bandwidth or to reduce the transferred file size. Use higher values for higher fidelity.",
+          "enum": [
+            "320k",
+            "256k",
+            "192k"
+          ],
+          "default": "192k"
+        },
+        "Speed": {
+          "type": "string",
+          "text": "0.5: makes the audio 50% faster (i.e. 60-second audio becomes 42 seconds), -0.5: makes the audio 50% slower (i.e. 60-second audio becomes 90 seconds)",
+          "default": "0"
+        },
+        "Pitch": {
+          "type": "string",
+          "text": "However, on the landing page, we default male voices to 0.92 as people tend to prefer lower/deeper male voices.",
+          "default": "1"
+        },
+        "TimestampType": {
+          "type": "enum",
+          "text": "By default, the endpoint returns per-sentence timestamps. Use word to get per-word timestamps. The timestamp feature is currently not supported via the /stream endpoint.",
+          "enum": [
+            "word",
+            "sentence"
+          ],
+          "default": "sentence"
+        },
+        "CallbackUrl": {
+          "type": "string",
+          "text": "A callback URL to POST TaskId and TaskStatus"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v7",
+        "auth": [],
+        "description": "Send up to 500,000 characters and immediately receive a TaskId. GET TaskId to check the status. Optimized for cost savings and longer requests.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.v7.unrealspeech.com/synthesisTasks",
+        "alias_endpoint": "/unrealspeech/synthesistasks",
+        "api_ref": "https://docs.unrealspeech.com/reference/synthesistasks"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "unrealspeech__synthesistasks__taskid___get": {
+      "provider_intent": "unrealspeech__synthesistasks__taskid___get",
+      "provider_alias_intent": "/synthesistasks/taskid",
+      "text": "SynthesisTasks-Check",
+      "category": "Test to Speech",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "taskId": {
+          "type": "string",
+          "text": "",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "taskId": {
+          "type": "string",
+          "text": "",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "meta": {
+        "version": "v7",
+        "auth": [],
+        "description": "Check the status of a speech synthesis task.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://api.v7.unrealspeech.com/synthesisTasks/{taskId}",
+        "alias_endpoint": "/unrealspeech/synthesistasks/taskid",
+        "api_ref": "https://docs.unrealspeech.com/reference/synthesistasks-check"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

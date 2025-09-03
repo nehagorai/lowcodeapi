@@ -1,0 +1,1168 @@
+{
+  "routes": {
+    "textcortex__v1__codes___post": {
+      "provider_intent": "textcortex__v1__codes___post",
+      "provider_alias_intent": "/v1/codes",
+      "text": "Generate code",
+      "category": "TextCortex API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "max_tokens": {
+          "type": "number",
+          "text": "The maximum number of tokens to generate. Default: 2048"
+        },
+        "mode": {
+          "type": "string",
+          "text": "Code generation mode. This could be Python, Java, SQL, etc. Allowed values: python, java, javascript, go, php, js_regex",
+          "required": true
+        },
+        "model": {
+          "type": "string",
+          "text": "The language model to use. Allowed value: icortex-1. Default: icortex-1"
+        },
+        "n": {
+          "type": "number",
+          "text": "The number of outputs to generate. Default: 1"
+        },
+        "temperature": {
+          "type": "number",
+          "text": "The sampling temperature to be used in text generation. The higher the temperature, the higher the risk of the output to sound 'made up'. Default: null"
+        },
+        "text": {
+          "type": "string",
+          "text": "Instruction for the program.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Generate code for a given programming language",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/codes",
+        "alias_endpoint": "/textcortex/v1/codes",
+        "api_ref": "https://docs.textcortex.com/api/paths/codes/post"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "textcortex__v1__codes__queries___post": {
+      "provider_intent": "textcortex__v1__codes__queries___post",
+      "provider_alias_intent": "/v1/codes/queries",
+      "text": "Generate SQL queries",
+      "category": "TextCortex API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "context": {
+          "type": "object",
+          "text": "The tables to use in a SQL query."
+        },
+        "max_tokens": {
+          "type": "number",
+          "text": "The maximum number of tokens to generate. Default: 2048"
+        },
+        "model": {
+          "type": "string",
+          "text": "The language model to use. Allowed value: icortex-1. Default: icortex-1"
+        },
+        "n": {
+          "type": "number",
+          "text": "The number of outputs to generate. Default: 1"
+        },
+        "temperature": {
+          "type": "number",
+          "text": "The sampling temperature to be used in text generation. The higher the temperature, the higher the risk of the output to sound 'made up'. Default: null"
+        },
+        "text": {
+          "type": "string",
+          "text": "Instruction for the program.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Generate SQL queries given table descriptions",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/codes/queries",
+        "alias_endpoint": "/textcortex/v1/codes/queries",
+        "api_ref": "https://docs.textcortex.com/api/paths/codes-queries/post"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "textcortex__v1__texts__ads___post": {
+      "provider_intent": "textcortex__v1__texts__ads___post",
+      "provider_alias_intent": "/v1/texts/ads",
+      "text": "Create ad",
+      "category": "TextCortex API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "description": {
+          "type": "string",
+          "text": "The description of the product or service.",
+          "required": true
+        },
+        "formality": {
+          "type": "string",
+          "text": "The formality of the generated text, for languages that support it. Allowed values: default, more, less, prefer_more, prefer_less"
+        },
+        "keywords": {
+          "type": "array",
+          "text": "Keywords to include in the ad."
+        },
+        "max_tokens": {
+          "type": "number",
+          "text": "The maximum number of tokens to generate. Default: 2048"
+        },
+        "mode": {
+          "type": "string",
+          "text": "The platform, e.g. 'facebook' to generate a Facebook ad. Allowed values: general, facebook, linkedin"
+        },
+        "model": {
+          "type": "string",
+          "text": "The language model to use. Allowed values: sophos-1, chat-sophos-1, claude-haiku, claude-sonnet, claude-3-haiku, claude-3-sonnet, claude-3-5-sonnet, mistral-small, mistral-large. Default: claude-3-haiku"
+        },
+        "n": {
+          "type": "number",
+          "text": "The number of outputs to generate. Default: 1"
+        },
+        "name": {
+          "type": "string",
+          "text": "The name of the product or service.",
+          "required": true
+        },
+        "promotion": {
+          "type": "string",
+          "text": "The promotion for the product or service."
+        },
+        "source_lang": {
+          "type": "string",
+          "text": "The language of the source text. Available options are: 'en': English (Default), 'auto': The API will attempt to detect the language of the text and translate it, 'ar': Arabic, 'bg': Bulgarian, 'cs': Czech, 'da': Danish, 'de': German, 'el': Greek, 'es': Spanish, 'et': Estonian, 'fi': Finnish, 'fr': French, 'hu': Hungarian, 'id': Indonesian, 'it': Italian, 'ja': Japanese, 'ko': Korean, 'lt': Lithuanian, 'lv': Latvian, 'nb': Norwegian, 'nl': Dutch, 'pl': Polish, 'pt': Portuguese (all Portuguese varieties mixed), 'ro': Romanian, 'ru': Russian, 'sk': Slovak, 'sl': Slovenian, 'sv': Swedish, 'tr': Turkish, 'uk': Ukrainian, 'zh': Chinese"
+        },
+        "target_lang": {
+          "type": "string",
+          "text": "The language which the text should be generated in. Available options are: 'ar': Arabic, 'bg': Bulgarian, 'cs': Czech, 'da': Danish, 'de': German, 'el': Greek, 'en': Alias for en-us, 'en-gb': English (British), 'en-us': English (American), 'es': Spanish, 'et': Estonian, 'fi': Finnish, 'fr': French, 'hu': Hungarian, 'id': Indonesian, 'it': Italian, 'ja': Japanese, 'ko': Korean, 'lt': Lithuanian, 'lv': Latvian, 'nb': Norwegian, 'nl': Dutch, 'pl': Polish, 'pt': Alias for pt-pt, 'pt-br': Portuguese (Brazilian), 'pt-pt': Portuguese (all Portuguese varieties excluding Brazilian Portuguese), 'ro': Romanian, 'ru': Russian, 'sk': Slovak, 'sl': Slovenian, 'sv': Swedish, 'tr': Turkish, 'uk': Ukrainian, 'zh': Chinese (simplified)"
+        },
+        "temperature": {
+          "type": "number",
+          "text": "The sampling temperature to be used in text generation. The higher the temperature, the higher the risk of the output to sound 'made up'. Default: null"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create an ad for a product or service",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/texts/ads",
+        "alias_endpoint": "/textcortex/v1/texts/ads",
+        "api_ref": "https://docs.textcortex.com/api/paths/texts-ads/post"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "textcortex__v1__texts__blogs___post": {
+      "provider_intent": "textcortex__v1__texts__blogs___post",
+      "provider_alias_intent": "/v1/texts/blogs",
+      "text": "Create blog content",
+      "category": "TextCortex API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "context": {
+          "type": "string",
+          "text": "The topic of the blog post."
+        },
+        "formality": {
+          "type": "string",
+          "text": "The formality of the generated text, for languages that support it. Allowed values: default, more, less, prefer_more, prefer_less"
+        },
+        "keywords": {
+          "type": "array",
+          "text": "Keywords to use in the body."
+        },
+        "max_tokens": {
+          "type": "number",
+          "text": "The maximum number of tokens to generate. Default: 2048"
+        },
+        "model": {
+          "type": "string",
+          "text": "The language model to use. Allowed values: sophos-1, chat-sophos-1, claude-haiku, claude-sonnet, claude-3-haiku, claude-3-sonnet, claude-3-5-sonnet, mistral-small, mistral-large. Default: claude-3-haiku"
+        },
+        "n": {
+          "type": "number",
+          "text": "The number of outputs to generate. Default: 1"
+        },
+        "source_lang": {
+          "type": "string",
+          "text": "The language of the source text. Available options are: 'en': English (Default), 'auto': The API will attempt to detect the language of the text and translate it, 'ar': Arabic, 'bg': Bulgarian, 'cs': Czech, 'da': Danish, 'de': German, 'el': Greek, 'es': Spanish, 'et': Estonian, 'fi': Finnish, 'fr': French, 'hu': Hungarian, 'id': Indonesian, 'it': Italian, 'ja': Japanese, 'ko': Korean, 'lt': Lithuanian, 'lv': Latvian, 'nb': Norwegian, 'nl': Dutch, 'pl': Polish, 'pt': Portuguese (all Portuguese varieties mixed), 'ro': Romanian, 'ru': Russian, 'sk': Slovak, 'sl': Slovenian, 'sv': Swedish, 'tr': Turkish, 'uk': Ukrainian, 'zh': Chinese"
+        },
+        "target_lang": {
+          "type": "string",
+          "text": "The language which the text should be generated in. Available options are: 'ar': Arabic, 'bg': Bulgarian, 'cs': Czech, 'da': Danish, 'de': German, 'el': Greek, 'en': Alias for en-us, 'en-gb': English (British), 'en-us': English (American), 'es': Spanish, 'et': Estonian, 'fi': Finnish, 'fr': French, 'hu': Hungarian, 'id': Indonesian, 'it': Italian, 'ja': Japanese, 'ko': Korean, 'lt': Lithuanian, 'lv': Latvian, 'nb': Norwegian, 'nl': Dutch, 'pl': Polish, 'pt': Alias for pt-pt, 'pt-br': Portuguese (Brazilian), 'pt-pt': Portuguese (all Portuguese varieties excluding Brazilian Portuguese), 'ro': Romanian, 'ru': Russian, 'sk': Slovak, 'sl': Slovenian, 'sv': Swedish, 'tr': Turkish, 'uk': Ukrainian, 'zh': Chinese (simplified)"
+        },
+        "temperature": {
+          "type": "number",
+          "text": "The sampling temperature to be used in text generation. The higher the temperature, the higher the risk of the output to sound 'made up'. Default: null"
+        },
+        "title": {
+          "type": "string",
+          "text": "The title of the blog post."
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create blog content based on given title, topic and/or keywords",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/texts/blogs",
+        "alias_endpoint": "/textcortex/v1/texts/blogs",
+        "api_ref": "https://docs.textcortex.com/api/paths/texts-blogs/post"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "textcortex__v1__texts__completions___post": {
+      "provider_intent": "textcortex__v1__texts__completions___post",
+      "provider_alias_intent": "/v1/texts/completions",
+      "text": "Autocomplete",
+      "category": "TextCortex API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "formality": {
+          "type": "string",
+          "text": "The formality of the generated text, for languages that support it. Allowed values: default, more, less, prefer_more, prefer_less"
+        },
+        "max_tokens": {
+          "type": "number",
+          "text": "The maximum number of tokens to generate. Default: 2048"
+        },
+        "model": {
+          "type": "string",
+          "text": "The language model to use. Allowed values: sophos-1, chat-sophos-1, claude-haiku, claude-sonnet, claude-3-haiku, claude-3-sonnet, claude-3-5-sonnet, mistral-small, mistral-large. Default: claude-3-haiku"
+        },
+        "n": {
+          "type": "number",
+          "text": "The number of outputs to generate. Default: 1"
+        },
+        "source_lang": {
+          "type": "string",
+          "text": "The language of the source text. Available options are: 'en': English (Default), 'auto': The API will attempt to detect the language of the text and translate it, 'ar': Arabic, 'bg': Bulgarian, 'cs': Czech, 'da': Danish, 'de': German, 'el': Greek, 'es': Spanish, 'et': Estonian, 'fi': Finnish, 'fr': French, 'hu': Hungarian, 'id': Indonesian, 'it': Italian, 'ja': Japanese, 'ko': Korean, 'lt': Lithuanian, 'lv': Latvian, 'nb': Norwegian, 'nl': Dutch, 'pl': Polish, 'pt': Portuguese (all Portuguese varieties mixed), 'ro': Romanian, 'ru': Russian, 'sk': Slovak, 'sl': Slovenian, 'sv': Swedish, 'tr': Turkish, 'uk': Ukrainian, 'zh': Chinese"
+        },
+        "target_lang": {
+          "type": "string",
+          "text": "The language which the text should be generated in. Available options are: 'ar': Arabic, 'bg': Bulgarian, 'cs': Czech, 'da': Danish, 'de': German, 'el': Greek, 'en': Alias for en-us, 'en-gb': English (British), 'en-us': English (American), 'es': Spanish, 'et': Estonian, 'fi': Finnish, 'fr': French, 'hu': Hungarian, 'id': Indonesian, 'it': Italian, 'ja': Japanese, 'ko': Korean, 'lt': Lithuanian, 'lv': Latvian, 'nb': Norwegian, 'nl': Dutch, 'pl': Polish, 'pt': Alias for pt-pt, 'pt-br': Portuguese (Brazilian), 'pt-pt': Portuguese (all Portuguese varieties excluding Brazilian Portuguese), 'ro': Romanian, 'ru': Russian, 'sk': Slovak, 'sl': Slovenian, 'sv': Swedish, 'tr': Turkish, 'uk': Ukrainian, 'zh': Chinese (simplified)"
+        },
+        "temperature": {
+          "type": "number",
+          "text": "The sampling temperature to be used in text generation. The higher the temperature, the higher the risk of the output to sound 'made up'. Default: null"
+        },
+        "text": {
+          "type": "string",
+          "text": "The text to complete.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Generate a completion for rest of the text",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/texts/completions",
+        "alias_endpoint": "/textcortex/v1/texts/completions",
+        "api_ref": "https://docs.textcortex.com/api/paths/texts-completions/post"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "textcortex__v1__texts__emails___post": {
+      "provider_intent": "textcortex__v1__texts__emails___post",
+      "provider_alias_intent": "/v1/texts/emails",
+      "text": "Create email",
+      "category": "TextCortex API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "company_details": {
+          "type": "string",
+          "text": "Details regarding the company. Available when 'mode' = 'customer_support'"
+        },
+        "context": {
+          "type": "string",
+          "text": "Context of the email. For example, a summary, or a bullet point list."
+        },
+        "formality": {
+          "type": "string",
+          "text": "The formality of the generated text, for languages that support it. Allowed values: default, more, less, prefer_more, prefer_less"
+        },
+        "from": {
+          "type": "string",
+          "text": "The sender of the email."
+        },
+        "instructions": {
+          "type": "string",
+          "text": "Instructions for the email. Available when 'mode' = 'reply'"
+        },
+        "max_tokens": {
+          "type": "number",
+          "text": "The maximum number of tokens to generate. Default: 2048"
+        },
+        "mode": {
+          "type": "string",
+          "text": "The style or tone to be used when rewriting. Allowed values: reply, general, customer_support, cold, from_bullets"
+        },
+        "model": {
+          "type": "string",
+          "text": "The language model to use. Allowed values: sophos-1, chat-sophos-1, claude-haiku, claude-sonnet, claude-3-haiku, claude-3-sonnet, claude-3-5-sonnet, mistral-small, mistral-large. Default: claude-3-haiku"
+        },
+        "n": {
+          "type": "number",
+          "text": "The number of outputs to generate. Default: 1"
+        },
+        "purpose": {
+          "type": "string",
+          "text": "Purpose of the email. Available when 'mode' = 'cold'"
+        },
+        "received_email": {
+          "type": "string",
+          "text": "The email that is being replied to. Available when 'mode' = 'reply'"
+        },
+        "source_lang": {
+          "type": "string",
+          "text": "The language of the source text. Available options are: 'en': English (Default), 'auto': The API will attempt to detect the language of the text and translate it, 'ar': Arabic, 'bg': Bulgarian, 'cs': Czech, 'da': Danish, 'de': German, 'el': Greek, 'es': Spanish, 'et': Estonian, 'fi': Finnish, 'fr': French, 'hu': Hungarian, 'id': Indonesian, 'it': Italian, 'ja': Japanese, 'ko': Korean, 'lt': Lithuanian, 'lv': Latvian, 'nb': Norwegian, 'nl': Dutch, 'pl': Polish, 'pt': Portuguese (all Portuguese varieties mixed), 'ro': Romanian, 'ru': Russian, 'sk': Slovak, 'sl': Slovenian, 'sv': Swedish, 'tr': Turkish, 'uk': Ukrainian, 'zh': Chinese"
+        },
+        "target_lang": {
+          "type": "string",
+          "text": "The language which the text should be generated in. Available options are: 'ar': Arabic, 'bg': Bulgarian, 'cs': Czech, 'da': Danish, 'de': German, 'el': Greek, 'en': Alias for en-us, 'en-gb': English (British), 'en-us': English (American), 'es': Spanish, 'et': Estonian, 'fi': Finnish, 'fr': French, 'hu': Hungarian, 'id': Indonesian, 'it': Italian, 'ja': Japanese, 'ko': Korean, 'lt': Lithuanian, 'lv': Latvian, 'nb': Norwegian, 'nl': Dutch, 'pl': Polish, 'pt': Alias for pt-pt, 'pt-br': Portuguese (Brazilian), 'pt-pt': Portuguese (all Portuguese varieties excluding Brazilian Portuguese), 'ro': Romanian, 'ru': Russian, 'sk': Slovak, 'sl': Slovenian, 'sv': Swedish, 'tr': Turkish, 'uk': Ukrainian, 'zh': Chinese (simplified)"
+        },
+        "temperature": {
+          "type": "number",
+          "text": "The sampling temperature to be used in text generation. The higher the temperature, the higher the risk of the output to sound 'made up'. Default: null"
+        },
+        "to": {
+          "type": "string",
+          "text": "The recipient of the email."
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create different types of emails",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/texts/emails",
+        "alias_endpoint": "/textcortex/v1/texts/emails",
+        "api_ref": "https://docs.textcortex.com/api/paths/texts-emails/post"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "textcortex__v1__texts__expansions___post": {
+      "provider_intent": "textcortex__v1__texts__expansions___post",
+      "provider_alias_intent": "/v1/texts/expansions",
+      "text": "Expand",
+      "category": "TextCortex API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "formality": {
+          "type": "string",
+          "text": "The formality of the generated text, for languages that support it. Allowed values: default, more, less, prefer_more, prefer_less"
+        },
+        "max_tokens": {
+          "type": "number",
+          "text": "The maximum number of tokens to generate. Default: 2048"
+        },
+        "model": {
+          "type": "string",
+          "text": "The language model to use. Allowed values: sophos-1, chat-sophos-1, claude-haiku, claude-sonnet, claude-3-haiku, claude-3-sonnet, claude-3-5-sonnet, mistral-small, mistral-large. Default: claude-3-haiku"
+        },
+        "n": {
+          "type": "number",
+          "text": "The number of outputs to generate. Default: 1"
+        },
+        "source_lang": {
+          "type": "string",
+          "text": "The language of the source text. Available options are: 'en': English (Default), 'auto': The API will attempt to detect the language of the text and translate it, 'ar': Arabic, 'bg': Bulgarian, 'cs': Czech, 'da': Danish, 'de': German, 'el': Greek, 'es': Spanish, 'et': Estonian, 'fi': Finnish, 'fr': French, 'hu': Hungarian, 'id': Indonesian, 'it': Italian, 'ja': Japanese, 'ko': Korean, 'lt': Lithuanian, 'lv': Latvian, 'nb': Norwegian, 'nl': Dutch, 'pl': Polish, 'pt': Portuguese (all Portuguese varieties mixed), 'ro': Romanian, 'ru': Russian, 'sk': Slovak, 'sl': Slovenian, 'sv': Swedish, 'tr': Turkish, 'uk': Ukrainian, 'zh': Chinese"
+        },
+        "target_lang": {
+          "type": "string",
+          "text": "The language which the text should be generated in. Available options are: 'ar': Arabic, 'bg': Bulgarian, 'cs': Czech, 'da': Danish, 'de': German, 'el': Greek, 'en': Alias for en-us, 'en-gb': English (British), 'en-us': English (American), 'es': Spanish, 'et': Estonian, 'fi': Finnish, 'fr': French, 'hu': Hungarian, 'id': Indonesian, 'it': Italian, 'ja': Japanese, 'ko': Korean, 'lt': Lithuanian, 'lv': Latvian, 'nb': Norwegian, 'nl': Dutch, 'pl': Polish, 'pt': Alias for pt-pt, 'pt-br': Portuguese (Brazilian), 'pt-pt': Portuguese (all Portuguese varieties excluding Brazilian Portuguese), 'ro': Romanian, 'ru': Russian, 'sk': Slovak, 'sl': Slovenian, 'sv': Swedish, 'tr': Turkish, 'uk': Ukrainian, 'zh': Chinese (simplified)"
+        },
+        "temperature": {
+          "type": "number|null",
+          "text": "The sampling temperature to be used in text generation. The higher the temperature, the higher the risk of the output to sound 'made up'. Default: null"
+        },
+        "text": {
+          "type": "string",
+          "text": "The text to expand.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Elaborate given text with more details",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/texts/expansions",
+        "alias_endpoint": "/textcortex/v1/texts/expansions",
+        "api_ref": "https://docs.textcortex.com/api/paths/texts-expansions/post"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "textcortex__v1__texts__paraphrases___post": {
+      "provider_intent": "textcortex__v1__texts__paraphrases___post",
+      "provider_alias_intent": "/v1/texts/paraphrases",
+      "text": "Paraphrase",
+      "category": "TextCortex API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "file_id": {
+          "type": "string",
+          "text": "ID of the file to paraphrase."
+        },
+        "formality": {
+          "type": "string",
+          "text": "The formality of the generated text, for languages that support it. Allowed values: default, more, less, prefer_more, prefer_less"
+        },
+        "max_tokens": {
+          "type": "number",
+          "text": "The maximum number of tokens to generate. Default: 2048"
+        },
+        "mode": {
+          "type": "string",
+          "text": "Allowed values: default, embeddings"
+        },
+        "model": {
+          "type": "string",
+          "text": "The language model to use. Allowed values: sophos-1, chat-sophos-1, claude-haiku, claude-sonnet, claude-3-haiku, claude-3-sonnet, claude-3-5-sonnet, mistral-small, mistral-large. Default: claude-3-haiku"
+        },
+        "n": {
+          "type": "number",
+          "text": "The number of outputs to generate. Default: 1"
+        },
+        "source_lang": {
+          "type": "string",
+          "text": "The language of the source text. Available options are: 'en': English (Default), 'auto': The API will attempt to detect the language of the text and translate it, 'ar': Arabic, 'bg': Bulgarian, 'cs': Czech, 'da': Danish, 'de': German, 'el': Greek, 'es': Spanish, 'et': Estonian, 'fi': Finnish, 'fr': French, 'hu': Hungarian, 'id': Indonesian, 'it': Italian, 'ja': Japanese, 'ko': Korean, 'lt': Lithuanian, 'lv': Latvian, 'nb': Norwegian, 'nl': Dutch, 'pl': Polish, 'pt': Portuguese (all Portuguese varieties mixed), 'ro': Romanian, 'ru': Russian, 'sk': Slovak, 'sl': Slovenian, 'sv': Swedish, 'tr': Turkish, 'uk': Ukrainian, 'zh': Chinese"
+        },
+        "target_lang": {
+          "type": "string",
+          "text": "The language which the text should be generated in. Available options are: 'ar': Arabic, 'bg': Bulgarian, 'cs': Czech, 'da': Danish, 'de': German, 'el': Greek, 'en': Alias for en-us, 'en-gb': English (British), 'en-us': English (American), 'es': Spanish, 'et': Estonian, 'fi': Finnish, 'fr': French, 'hu': Hungarian, 'id': Indonesian, 'it': Italian, 'ja': Japanese, 'ko': Korean, 'lt': Lithuanian, 'lv': Latvian, 'nb': Norwegian, 'nl': Dutch, 'pl': Polish, 'pt': Alias for pt-pt, 'pt-br': Portuguese (Brazilian), 'pt-pt': Portuguese (all Portuguese varieties excluding Brazilian Portuguese), 'ro': Romanian, 'ru': Russian, 'sk': Slovak, 'sl': Slovenian, 'sv': Swedish, 'tr': Turkish, 'uk': Ukrainian, 'zh': Chinese (simplified)"
+        },
+        "temperature": {
+          "type": "number|null",
+          "text": "The sampling temperature to be used in text generation. The higher the temperature, the higher the risk of the output to sound 'made up'. Default: null"
+        },
+        "text": {
+          "type": "string",
+          "text": "The text to paraphrase."
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Rewrite given text without changing its meaning",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/texts/paraphrases",
+        "alias_endpoint": "/textcortex/v1/texts/paraphrases",
+        "api_ref": "https://docs.textcortex.com/api/paths/texts-paraphrases/post"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "textcortex__v1__texts__products__descriptions___post": {
+      "provider_intent": "textcortex__v1__texts__products__descriptions___post",
+      "provider_alias_intent": "/v1/texts/products/descriptions",
+      "text": "Create product description",
+      "category": "TextCortex API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "brand": {
+          "type": "string",
+          "text": "Brand of the product"
+        },
+        "category": {
+          "type": "string",
+          "text": "Category of the product"
+        },
+        "description": {
+          "type": "string",
+          "text": "Features of the product"
+        },
+        "formality": {
+          "type": "string",
+          "text": "The formality of the generated text, for languages that support it. Allowed values: default, more, less, prefer_more, prefer_less"
+        },
+        "keywords": {
+          "type": "array",
+          "text": "Keywords to include in the product description"
+        },
+        "max_tokens": {
+          "type": "number",
+          "text": "The maximum number of tokens to generate. Default: 2048"
+        },
+        "model": {
+          "type": "string",
+          "text": "The language model to use. Allowed values: sophos-1, chat-sophos-1, claude-haiku, claude-sonnet, claude-3-haiku, claude-3-sonnet, claude-3-5-sonnet, mistral-small, mistral-large. Default: claude-3-haiku"
+        },
+        "n": {
+          "type": "number",
+          "text": "The number of outputs to generate. Default: 1"
+        },
+        "name": {
+          "type": "string",
+          "text": "Name of the product"
+        },
+        "source_lang": {
+          "type": "string",
+          "text": "The language of the source text. Available options are: 'en': English (Default), 'auto': The API will attempt to detect the language of the text and translate it, and other language options"
+        },
+        "target_lang": {
+          "type": "string",
+          "text": "The language which the text should be generated in. Available options are: 'ar', 'bg', 'cs', 'da', 'de', 'el', 'en', 'en-gb', 'en-us', 'es', 'et', 'fi', 'fr', 'hu', 'id', 'it', 'ja', 'ko', 'lt', 'lv', 'nb', 'nl', 'pl', 'pt', 'pt-br', 'pt-pt', 'ro', 'ru', 'sk', 'sl', 'sv', 'tr', 'uk', 'zh'"
+        },
+        "temperature": {
+          "type": "number|null",
+          "text": "The sampling temperature to be used in text generation. The higher the temperature, the higher the risk of the output to sound 'made up'. Default: null"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a product description",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/texts/products/descriptions",
+        "alias_endpoint": "/textcortex/v1/texts/products/descriptions",
+        "api_ref": "https://docs.textcortex.com/api/paths/texts-products-descriptions/post"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "textcortex__v1__texts__products__titles___post": {
+      "provider_intent": "textcortex__v1__texts__products__titles___post",
+      "provider_alias_intent": "/v1/texts/products/titles",
+      "text": "Create product title",
+      "category": "TextCortex API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "brand": {
+          "type": "string",
+          "text": "Brand of the product"
+        },
+        "category": {
+          "type": "string",
+          "text": "Category of the product"
+        },
+        "description": {
+          "type": "string",
+          "text": "Features of the product"
+        },
+        "formality": {
+          "type": "string",
+          "text": "The formality of the generated text, for languages that support it. Allowed values: default, more, less, prefer_more, prefer_less"
+        },
+        "keywords": {
+          "type": "array",
+          "text": "Keywords to include in the product description"
+        },
+        "max_tokens": {
+          "type": "number",
+          "text": "The maximum number of tokens to generate. Default: 2048"
+        },
+        "model": {
+          "type": "string",
+          "text": "The language model to use. Allowed values: sophos-1, chat-sophos-1, claude-haiku, claude-sonnet, claude-3-haiku, claude-3-sonnet, claude-3-5-sonnet, mistral-small, mistral-large. Default: claude-3-haiku"
+        },
+        "n": {
+          "type": "number",
+          "text": "The number of outputs to generate. Default: 1"
+        },
+        "name": {
+          "type": "string",
+          "text": "Name of the product"
+        },
+        "source_lang": {
+          "type": "string",
+          "text": "The language of the source text. Available options are: 'en': English (Default), 'auto': The API will attempt to detect the language of the text and translate it, and other language options"
+        },
+        "target_lang": {
+          "type": "string",
+          "text": "The language which the text should be generated in. Available options are: 'ar', 'bg', 'cs', 'da', 'de', 'el', 'en', 'en-gb', 'en-us', 'es', 'et', 'fi', 'fr', 'hu', 'id', 'it', 'ja', 'ko', 'lt', 'lv', 'nb', 'nl', 'pl', 'pt', 'pt-br', 'pt-pt', 'ro', 'ru', 'sk', 'sl', 'sv', 'tr', 'uk', 'zh'"
+        },
+        "temperature": {
+          "type": "number|null",
+          "text": "The sampling temperature to be used in text generation. The higher the temperature, the higher the risk of the output to sound 'made up'. Default: null"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a product title or a title for a product description",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/texts/products/titles",
+        "alias_endpoint": "/textcortex/v1/texts/products/titles",
+        "api_ref": "https://docs.textcortex.com/api/paths/texts-products-titles/post"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "textcortex__v1__texts__rewritings___post": {
+      "provider_intent": "textcortex__v1__texts__rewritings___post",
+      "provider_alias_intent": "/v1/texts/rewritings",
+      "text": "Rewrite",
+      "category": "TextCortex API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "formality": {
+          "type": "string",
+          "text": "The formality of the generated text, for languages that support it. Allowed values: default, more, less, prefer_more, prefer_less"
+        },
+        "max_tokens": {
+          "type": "number",
+          "text": "The maximum number of tokens to generate. Default: 2048"
+        },
+        "mode": {
+          "type": "string",
+          "text": "The style or tone to be used when rewriting. Allowed values: voice_passive, voice_active, tone_cheerful, tone_decisive, tone_casual, tone_gentle, tone_friendly, tone_respectful, tone_warm, tone_blunt, tone_urgent, tone_excited, tone_professional, tone_encouraging, tone_funny, tone_dramatic, tone_witty, tone_formal, tone_informal, style_creative, style_fluent, style_detailed, style_concise",
+          "required": true
+        },
+        "model": {
+          "type": "string",
+          "text": "The language model to use. Allowed values: sophos-1, chat-sophos-1, claude-haiku, claude-sonnet, claude-3-haiku, claude-3-sonnet, claude-3-5-sonnet, mistral-small, mistral-large. Default: claude-3-haiku"
+        },
+        "n": {
+          "type": "number",
+          "text": "The number of outputs to generate. Default: 1"
+        },
+        "source_lang": {
+          "type": "string",
+          "text": "The language of the source text. Available options are: 'en': English (Default), 'auto': The API will attempt to detect the language of the text and translate it, and other language options"
+        },
+        "target_lang": {
+          "type": "string",
+          "text": "The language which the text should be generated in. Available options are: 'ar', 'bg', 'cs', 'da', 'de', 'el', 'en', 'en-gb', 'en-us', 'es', 'et', 'fi', 'fr', 'hu', 'id', 'it', 'ja', 'ko', 'lt', 'lv', 'nb', 'nl', 'pl', 'pt', 'pt-br', 'pt-pt', 'ro', 'ru', 'sk', 'sl', 'sv', 'tr', 'uk', 'zh'"
+        },
+        "temperature": {
+          "type": "number|null",
+          "text": "The sampling temperature to be used in text generation. The higher the temperature, the higher the risk of the output to sound 'made up'. Default: null"
+        },
+        "text": {
+          "type": "string",
+          "text": "The text to rewrite.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Rewrite given text according to given mode",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/texts/rewritings",
+        "alias_endpoint": "/textcortex/v1/texts/rewritings",
+        "api_ref": "https://docs.textcortex.com/api/paths/texts-rewritings/post"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "textcortex__v1__texts__simplifications___post": {
+      "provider_intent": "textcortex__v1__texts__simplifications___post",
+      "provider_alias_intent": "/v1/texts/simplifications",
+      "text": "Simplify",
+      "category": "TextCortex API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "formality": {
+          "type": "string",
+          "text": "The formality of the generated text, for languages that support it. Allowed values: default, more, less, prefer_more, prefer_less"
+        },
+        "max_tokens": {
+          "type": "number",
+          "text": "The maximum number of tokens to generate. Default: 2048"
+        },
+        "model": {
+          "type": "string",
+          "text": "The language model to use. Allowed values: sophos-1, chat-sophos-1, claude-haiku, claude-sonnet, claude-3-haiku, claude-3-sonnet, claude-3-5-sonnet, mistral-small, mistral-large. Default: claude-3-haiku"
+        },
+        "n": {
+          "type": "number",
+          "text": "The number of outputs to generate. Default: 1"
+        },
+        "source_lang": {
+          "type": "string",
+          "text": "The language of the source text. Available options are: 'en': English (Default), 'auto': The API will attempt to detect the language of the text and translate it, and other language options"
+        },
+        "target_lang": {
+          "type": "string",
+          "text": "The language which the text should be generated in. Available options are: 'ar', 'bg', 'cs', 'da', 'de', 'el', 'en', 'en-gb', 'en-us', 'es', 'et', 'fi', 'fr', 'hu', 'id', 'it', 'ja', 'ko', 'lt', 'lv', 'nb', 'nl', 'pl', 'pt', 'pt-br', 'pt-pt', 'ro', 'ru', 'sk', 'sl', 'sv', 'tr', 'uk', 'zh'"
+        },
+        "temperature": {
+          "type": "number or null",
+          "text": "The sampling temperature to be used in text generation. The higher the temperature, the higher the risk of the output to sound 'made up'. Default: null"
+        },
+        "text": {
+          "type": "string",
+          "text": "The text to simplify.",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Simplify given text",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/texts/simplifications",
+        "alias_endpoint": "/textcortex/v1/texts/simplifications",
+        "api_ref": "https://docs.textcortex.com/api/paths/texts-simplifications/post"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "textcortex__v1__texts__social-media-posts___post": {
+      "provider_intent": "textcortex__v1__texts__social-media-posts___post",
+      "provider_alias_intent": "/v1/texts/social-media-posts",
+      "text": "Create social media post",
+      "category": "TextCortex API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "context": {
+          "type": "string",
+          "text": "The context of the social media post.",
+          "required": true
+        },
+        "formality": {
+          "type": "string",
+          "text": "The formality of the generated text, for languages that support it. Allowed values: default, more, less, prefer_more, prefer_less"
+        },
+        "keywords": {
+          "type": "array",
+          "text": "Keywords to be included in the post."
+        },
+        "max_tokens": {
+          "type": "number",
+          "text": "The maximum number of tokens to generate. Default: 2048"
+        },
+        "mode": {
+          "type": "string",
+          "text": "The platform, e.g. 'twitter' to generate a Tweet. Allowed values: twitter, linkedin",
+          "required": true
+        },
+        "model": {
+          "type": "string",
+          "text": "The language model to use. Allowed values: sophos-1, chat-sophos-1, claude-haiku, claude-sonnet, claude-3-haiku, claude-3-sonnet, claude-3-5-sonnet, mistral-small, mistral-large. Default: claude-3-haiku"
+        },
+        "n": {
+          "type": "number",
+          "text": "The number of outputs to generate. Default: 1"
+        },
+        "source_lang": {
+          "type": "string",
+          "text": "The language of the source text. Available options are: 'en': English (Default), 'auto': The API will attempt to detect the language of the text and translate it, and other language options"
+        },
+        "target_lang": {
+          "type": "string",
+          "text": "The language which the text should be generated in. Available options are: 'ar', 'bg', 'cs', 'da', 'de', 'el', 'en', 'en-gb', 'en-us', 'es', 'et', 'fi', 'fr', 'hu', 'id', 'it', 'ja', 'ko', 'lt', 'lv', 'nb', 'nl', 'pl', 'pt', 'pt-br', 'pt-pt', 'ro', 'ru', 'sk', 'sl', 'sv', 'tr', 'uk', 'zh'"
+        },
+        "temperature": {
+          "type": "number|null",
+          "text": "The sampling temperature to be used in text generation. The higher the temperature, the higher the risk of the output to sound 'made up'. Default: null"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create social media posts for various platforms",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/texts/social-media-posts",
+        "alias_endpoint": "/textcortex/v1/texts/social-media-posts",
+        "api_ref": "https://docs.textcortex.com/api/paths/texts-social-media-posts/post"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "textcortex__v1__texts__summarizations___post": {
+      "provider_intent": "textcortex__v1__texts__summarizations___post",
+      "provider_alias_intent": "/v1/texts/summarizations",
+      "text": "Summarize",
+      "category": "TextCortex API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "file_id": {
+          "type": "string",
+          "text": "ID of the file to summarize"
+        },
+        "formality": {
+          "type": "string",
+          "text": "The formality of the generated text, for languages that support it. Allowed values: default, more, less, prefer_more, prefer_less"
+        },
+        "max_tokens": {
+          "type": "number",
+          "text": "The maximum number of tokens to generate. Default: 2048"
+        },
+        "mode": {
+          "type": "string",
+          "text": "Mode of operation. Allowed values: default, embeddings"
+        },
+        "model": {
+          "type": "string",
+          "text": "The language model to use. Allowed values: sophos-1, chat-sophos-1, claude-haiku, claude-sonnet, claude-3-haiku, claude-3-sonnet, claude-3-5-sonnet, mistral-small, mistral-large. Default: claude-3-haiku"
+        },
+        "n": {
+          "type": "number",
+          "text": "The number of outputs to generate. Default: 1"
+        },
+        "source_lang": {
+          "type": "string",
+          "text": "The language of the source text. Available options: 'en', 'auto', 'ar', 'bg', 'cs', 'da', 'de', 'el', 'es', 'et', 'fi', 'fr', 'hu', 'id', 'it', 'ja', 'ko', 'lt', 'lv', 'nb', 'nl', 'pl', 'pt', 'ro', 'ru', 'sk', 'sl', 'sv', 'tr', 'uk', 'zh'"
+        },
+        "target_lang": {
+          "type": "string",
+          "text": "The language in which the text should be generated. Available options: 'ar', 'bg', 'cs', 'da', 'de', 'el', 'en', 'en-gb', 'en-us', 'es', 'et', 'fi', 'fr', 'hu', 'id', 'it', 'ja', 'ko', 'lt', 'lv', 'nb', 'nl', 'pl', 'pt', 'pt-br', 'pt-pt', 'ro', 'ru', 'sk', 'sl', 'sv', 'tr', 'uk', 'zh'"
+        },
+        "temperature": {
+          "type": "number|null",
+          "text": "The sampling temperature to be used in text generation. Default: null"
+        },
+        "text": {
+          "type": "string",
+          "text": "The text to summarize"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Summarize given text",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/texts/summarizations",
+        "alias_endpoint": "/textcortex/v1/texts/summarizations",
+        "api_ref": "https://docs.textcortex.com/api/paths/texts-summarizations/post"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "textcortex__v1__texts__translations___post": {
+      "provider_intent": "textcortex__v1__texts__translations___post",
+      "provider_alias_intent": "/v1/texts/translations",
+      "text": "Translate",
+      "category": "TextCortex API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "formality": {
+          "type": "string",
+          "text": "The formality of the generated text. Allowed values: default, more, less, prefer_more, prefer_less"
+        },
+        "source_lang": {
+          "type": "string",
+          "text": "The language of the text to translate. Available options: 'en', 'auto', 'ar', 'bg', 'cs', 'da', 'de', 'el', 'es', 'et', 'fi', 'fr', 'hu', 'id', 'it', 'ja', 'ko', 'lt', 'lv', 'nb', 'nl', 'pl', 'pt', 'ro', 'ru', 'sk', 'sl', 'sv', 'tr', 'uk', 'zh'"
+        },
+        "target_lang": {
+          "type": "string",
+          "text": "The language to translate to. Available options: 'ar', 'bg', 'cs', 'da', 'de', 'el', 'en', 'en-gb', 'en-us', 'es', 'et', 'fi', 'fr', 'hu', 'id', 'it', 'ja', 'ko', 'lt', 'lv', 'nb', 'nl', 'pl', 'pt', 'pt-br', 'pt-pt', 'ro', 'ru', 'sk', 'sl', 'sv', 'tr', 'uk', 'zh'",
+          "required": true
+        },
+        "text": {
+          "type": "string",
+          "text": "The text to translate",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Translate given text into another language",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/texts/translations",
+        "alias_endpoint": "/textcortex/v1/texts/translations",
+        "api_ref": "https://docs.textcortex.com/api/paths/texts-translations/post"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "textcortex__v1__texts__videos__descriptions___post": {
+      "provider_intent": "textcortex__v1__texts__videos__descriptions___post",
+      "provider_alias_intent": "/v1/texts/videos/descriptions",
+      "text": "Create video description",
+      "category": "TextCortex API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "context": {
+          "type": "string",
+          "text": "Topic, target audience, etc. of the video",
+          "required": true
+        },
+        "formality": {
+          "type": "string",
+          "text": "The formality of the generated text. Allowed values: default, more, less, prefer_more, prefer_less"
+        },
+        "keywords": {
+          "type": "array",
+          "text": "Keywords to include in the description"
+        },
+        "max_tokens": {
+          "type": "number",
+          "text": "The maximum number of tokens to generate. Default: 2048"
+        },
+        "mode": {
+          "type": "string",
+          "text": "Mode of generation. Allowed value: youtube"
+        },
+        "model": {
+          "type": "string",
+          "text": "The language model to use. Allowed values: sophos-1, chat-sophos-1, claude-haiku, claude-sonnet, claude-3-haiku, claude-3-sonnet, claude-3-5-sonnet, mistral-small, mistral-large. Default: claude-3-haiku"
+        },
+        "n": {
+          "type": "number",
+          "text": "The number of outputs to generate. Default: 1"
+        },
+        "source_lang": {
+          "type": "string",
+          "text": "The language of the source text. Available options: 'en', 'auto', 'ar', 'bg', 'cs', 'da', 'de', 'el', 'es', 'et', 'fi', 'fr', 'hu', 'id', 'it', 'ja', 'ko', 'lt', 'lv', 'nb', 'nl', 'pl', 'pt', 'ro', 'ru', 'sk', 'sl', 'sv', 'tr', 'uk', 'zh'"
+        },
+        "target_lang": {
+          "type": "string",
+          "text": "The language in which the text should be generated. Available options: 'ar', 'bg', 'cs', 'da', 'de', 'el', 'en', 'en-gb', 'en-us', 'es', 'et', 'fi', 'fr', 'hu', 'id', 'it', 'ja', 'ko', 'lt', 'lv', 'nb', 'nl', 'pl', 'pt', 'pt-br', 'pt-pt', 'ro', 'ru', 'sk', 'sl', 'sv', 'tr', 'uk', 'zh'"
+        },
+        "temperature": {
+          "type": "number|null",
+          "text": "The sampling temperature to be used in text generation. Default: null"
+        },
+        "title": {
+          "type": "string",
+          "text": "Title of the video",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a video description",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/texts/videos/descriptions",
+        "alias_endpoint": "/textcortex/v1/texts/videos/descriptions",
+        "api_ref": "https://docs.textcortex.com/api/paths/texts-videos-descriptions/post"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

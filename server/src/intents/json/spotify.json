@@ -1,0 +1,3611 @@
+{
+  "app": {
+    "title": "Spotify API",
+    "description": "",
+    "api_base": "/spotify",
+    "copyright": "",
+    "copyright_year": "",
+    "contact_email": ""
+  },
+  "category": {
+    "All": ""
+  },
+  "routes": {
+    "get_an_album": {
+      "provider_intent": "get_an_album",
+      "provider_alias_intent": "/albums/{id}",
+      "text": "Get Album",
+      "category": "Albums",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "required": true
+        },
+        "market": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get Spotify catalog information for a single album.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/albums/{id}",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/albums/{id}",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/albums/{id}",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/albums/{id}",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_multiple_albums": {
+      "provider_intent": "get_multiple_albums",
+      "provider_alias_intent": "/albums",
+      "text": "Get Several Albums",
+      "category": "Albums",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "ids": {
+          "type": "string",
+          "required": true
+        },
+        "market": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get Spotify catalog information for multiple albums identified by their Spotify IDs.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/albums",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/albums",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/albums",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/albums",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_an_albums_tracks": {
+      "provider_intent": "get_an_albums_tracks",
+      "provider_alias_intent": "/albums/{id}/tracks",
+      "text": "Get Album Tracks",
+      "category": "Albums",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "required": true
+        },
+        "market": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "integer"
+        },
+        "offset": {
+          "type": "integer"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get Spotify catalog information about an album’s tracks.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/albums/{id}/tracks",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/albums/{id}/tracks",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/albums/{id}/tracks",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/albums/{id}/tracks",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_users_saved_albums": {
+      "provider_intent": "get_users_saved_albums",
+      "provider_alias_intent": "/me/albums",
+      "text": "Get User's Saved Albums",
+      "category": "Albums",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "limit": {
+          "type": "integer"
+        },
+        "offset": {
+          "type": "integer"
+        },
+        "market": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get a list of the albums saved in the current Spotify user's 'Your Music' library.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/albums",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/albums",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/albums",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/albums",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "save_albums_user": {
+      "provider_intent": "save_albums_user",
+      "provider_alias_intent": "/me/albums",
+      "text": "Save Albums for Current User",
+      "category": "Albums",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "ids": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "ids": {
+          "type": "array",
+          "text": "A JSON array of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids)"
+        }
+      },
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Save one or more albums to the current user's 'Your Music' library.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/albums",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/albums",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/albums",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/albums",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "remove_albums_user": {
+      "provider_intent": "remove_albums_user",
+      "provider_alias_intent": "/me/albums",
+      "text": "Remove Users' Saved Albums",
+      "category": "Albums",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "ids": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "ids": {
+          "type": "array",
+          "text": "A JSON array of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids)"
+        }
+      },
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Remove one or more albums from the current user's 'Your Music' library.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/albums",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/albums",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/albums",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/albums",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "check_users_saved_albums": {
+      "provider_intent": "check_users_saved_albums",
+      "provider_alias_intent": "/me/albums/contains",
+      "text": "Check User's Saved Albums",
+      "category": "Albums",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "ids": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Check if one or more albums is already saved in the current Spotify user's 'Your Music' library.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/albums/contains",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/albums/contains",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/albums/contains",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/albums/contains",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_new_releases": {
+      "provider_intent": "get_new_releases",
+      "provider_alias_intent": "/browse/new-releases",
+      "text": "Get New Releases",
+      "category": "Albums",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "country": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "integer"
+        },
+        "offset": {
+          "type": "integer"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get a list of new album releases featured in Spotify (shown for example on a Spotify player’s “Browse” tab).",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/browse/new-releases",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/browse/new-releases",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/browse/new-releases",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/browse/new-releases",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_an_artist": {
+      "provider_intent": "get_an_artist",
+      "provider_alias_intent": "/artists/{id}",
+      "text": "Get Artist",
+      "category": "Artists",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get Spotify catalog information for a single artist identified by their unique Spotify ID.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/artists/{id}",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/artists/{id}",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/artists/{id}",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/artists/{id}",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_multiple_artists": {
+      "provider_intent": "get_multiple_artists",
+      "provider_alias_intent": "/artists",
+      "text": "Get Several Artists",
+      "category": "Artists",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "ids": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get Spotify catalog information for several artists based on their Spotify IDs.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/artists",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/artists",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/artists",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/artists",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_an_artists_albums": {
+      "provider_intent": "get_an_artists_albums",
+      "provider_alias_intent": "/artists/{id}/albums",
+      "text": "Get Artist's Albums",
+      "category": "Artists",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "required": true
+        },
+        "include_groups": {
+          "type": "string"
+        },
+        "market": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "integer"
+        },
+        "offset": {
+          "type": "integer"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get Spotify catalog information about an artist's albums.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/artists/{id}/albums",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/artists/{id}/albums",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/artists/{id}/albums",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/artists/{id}/albums",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_an_artists_top_tracks": {
+      "provider_intent": "get_an_artists_top_tracks",
+      "provider_alias_intent": "/artists/{id}/top-tracks",
+      "text": "Get Artist's Top Tracks",
+      "category": "Artists",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "required": true
+        },
+        "market": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get Spotify catalog information about an artist's top tracks by country.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/artists/{id}/top-tracks",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/artists/{id}/top-tracks",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/artists/{id}/top-tracks",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/artists/{id}/top-tracks",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_an_artists_related_artists": {
+      "provider_intent": "get_an_artists_related_artists",
+      "provider_alias_intent": "/artists/{id}/related-artists",
+      "text": "Get Artist's Related Artists",
+      "category": "Artists",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get Spotify catalog information about artists similar to a given artist.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/artists/{id}/related-artists",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/artists/{id}/related-artists",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/artists/{id}/related-artists",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/artists/{id}/related-artists",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_an_audiobook": {
+      "provider_intent": "get_an_audiobook",
+      "provider_alias_intent": "/audiobooks/{id}",
+      "text": "Get an Audiobook",
+      "category": "Audiobooks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "required": true
+        },
+        "market": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get Spotify catalog information for a single audiobook.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/audiobooks/{id}",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/audiobooks/{id}",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/audiobooks/{id}",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/audiobooks/{id}",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_multiple_audiobooks": {
+      "provider_intent": "get_multiple_audiobooks",
+      "provider_alias_intent": "/audiobooks",
+      "text": "Get Several Audiobooks",
+      "category": "Audiobooks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "ids": {
+          "type": "string",
+          "required": true
+        },
+        "market": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get Spotify catalog information for several audiobooks identified by their Spotify IDs.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/audiobooks",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/audiobooks",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/audiobooks",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/audiobooks",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_audiobook_chapters": {
+      "provider_intent": "get_audiobook_chapters",
+      "provider_alias_intent": "/audiobooks/{id}/chapters",
+      "text": "Get Audiobook Chapters",
+      "category": "Audiobooks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "required": true
+        },
+        "market": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "integer"
+        },
+        "offset": {
+          "type": "integer"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get Spotify catalog information about an audiobook's chapters.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/audiobooks/{id}/chapters",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/audiobooks/{id}/chapters",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/audiobooks/{id}/chapters",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/audiobooks/{id}/chapters",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_users_saved_audiobooks": {
+      "provider_intent": "get_users_saved_audiobooks",
+      "provider_alias_intent": "/me/audiobooks",
+      "text": "Get User's Saved Audiobooks",
+      "category": "Audiobooks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "limit": {
+          "type": "integer"
+        },
+        "offset": {
+          "type": "integer"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get a list of the audiobooks saved in the current Spotify user's 'Your Music' library.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/audiobooks",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/audiobooks",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/audiobooks",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/audiobooks",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "save_audiobooks_user": {
+      "provider_intent": "save_audiobooks_user",
+      "provider_alias_intent": "/me/audiobooks",
+      "text": "Save Audiobooks for Current User",
+      "category": "Audiobooks",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "ids": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Save one or more audiobooks to the current Spotify user's library.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/audiobooks",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/audiobooks",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/audiobooks",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/audiobooks",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "remove_audiobooks_user": {
+      "provider_intent": "remove_audiobooks_user",
+      "provider_alias_intent": "/me/audiobooks",
+      "text": "Remove User's Saved Audiobooks",
+      "category": "Audiobooks",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "ids": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Remove one or more audiobooks from the Spotify user's library.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/audiobooks",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/audiobooks",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/audiobooks",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/audiobooks",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "check_users_saved_audiobooks": {
+      "provider_intent": "check_users_saved_audiobooks",
+      "provider_alias_intent": "/me/audiobooks/contains",
+      "text": "Check User's Saved Audiobooks",
+      "category": "Audiobooks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "ids": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Check if one or more audiobooks are already saved in the current Spotify user's library.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/audiobooks/contains",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/audiobooks/contains",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/audiobooks/contains",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/audiobooks/contains",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_categories": {
+      "provider_intent": "get_categories",
+      "provider_alias_intent": "/browse/categories",
+      "text": "Get Several Browse Categories",
+      "category": "Categories",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "country": {
+          "type": "string"
+        },
+        "locale": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "integer"
+        },
+        "offset": {
+          "type": "integer"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get a list of categories used to tag items in Spotify (on for example the Spotify player’s “Browse” tab).",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/browse/categories",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/browse/categories",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/browse/categories",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/browse/categories",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_a_category": {
+      "provider_intent": "get_a_category",
+      "provider_alias_intent": "/browse/categories/{category_id}",
+      "text": "Get Single Browse Category",
+      "category": "Categories",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "category_id": {
+          "type": "string",
+          "required": true
+        },
+        "country": {
+          "type": "string"
+        },
+        "locale": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "category_id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get a single category used to tag items in Spotify (on for example the Spotify player’s “Browse” tab).",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/browse/categories/{category_id}",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/browse/categories/{category_id}",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/browse/categories/{category_id}",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/browse/categories/{category_id}",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_a_chapter": {
+      "provider_intent": "get_a_chapter",
+      "provider_alias_intent": "/chapters/{id}",
+      "text": "Get a Chapter",
+      "category": "Chapters",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "required": true
+        },
+        "market": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get Spotify catalog information for a single chapter.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/chapters/{id}",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/chapters/{id}",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/chapters/{id}",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/chapters/{id}",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_several_chapters": {
+      "provider_intent": "get_several_chapters",
+      "provider_alias_intent": "/chapters",
+      "text": "Get Several Chapters",
+      "category": "Chapters",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "ids": {
+          "type": "string",
+          "required": true
+        },
+        "market": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get Spotify catalog information for several chapters identified by their Spotify IDs.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/chapters",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/chapters",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/chapters",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/chapters",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_an_episode": {
+      "provider_intent": "get_an_episode",
+      "provider_alias_intent": "/episodes/{id}",
+      "text": "Get Episode",
+      "category": "Episodes",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "required": true
+        },
+        "market": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get Spotify catalog information for a single episode identified by its\nunique Spotify ID.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/episodes/{id}",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/episodes/{id}",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/episodes/{id}",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/episodes/{id}",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_multiple_episodes": {
+      "provider_intent": "get_multiple_episodes",
+      "provider_alias_intent": "/episodes",
+      "text": "Get Several Episodes",
+      "category": "Episodes",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "ids": {
+          "type": "string",
+          "required": true
+        },
+        "market": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get Spotify catalog information for several episodes based on their Spotify IDs.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/episodes",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/episodes",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/episodes",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/episodes",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_users_saved_episodes": {
+      "provider_intent": "get_users_saved_episodes",
+      "provider_alias_intent": "/me/episodes",
+      "text": "Get User's Saved Episodes",
+      "category": "Episodes",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "market": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "integer"
+        },
+        "offset": {
+          "type": "integer"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get a list of the episodes saved in the current Spotify user's library.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/episodes",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/episodes",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/episodes",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/episodes",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "save_episodes_user": {
+      "provider_intent": "save_episodes_user",
+      "provider_alias_intent": "/me/episodes",
+      "text": "Save Episodes for Current User",
+      "category": "Episodes",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "ids": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "ids": {
+          "type": "array",
+          "text": "A JSON array of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids)"
+        }
+      },
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Save one or more episodes to the current user's library.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/episodes",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/episodes",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/episodes",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/episodes",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "remove_episodes_user": {
+      "provider_intent": "remove_episodes_user",
+      "provider_alias_intent": "/me/episodes",
+      "text": "Remove User's Saved Episodes",
+      "category": "Episodes",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "ids": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "ids": {
+          "type": "array",
+          "text": "A JSON array of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids)"
+        }
+      },
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Remove one or more episodes from the current user's library.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/episodes",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/episodes",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/episodes",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/episodes",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "check_users_saved_episodes": {
+      "provider_intent": "check_users_saved_episodes",
+      "provider_alias_intent": "/me/episodes/contains",
+      "text": "Check User's Saved Episodes",
+      "category": "Episodes",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "ids": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Check if one or more episodes is already saved in the current Spotify user's 'Your Episodes' library.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/episodes/contains",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/episodes/contains",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/episodes/contains",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/episodes/contains",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_recommendation_genres": {
+      "provider_intent": "get_recommendation_genres",
+      "provider_alias_intent": "/recommendations/available-genre-seeds",
+      "text": "Get Available Genre Seeds",
+      "category": "Genres",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Retrieve a list of available genres seed parameter values for [recommendations](/documentation/web-api/reference/get-recommendations).",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/recommendations/available-genre-seeds",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/recommendations/available-genre-seeds",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/recommendations/available-genre-seeds",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/recommendations/available-genre-seeds",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_available_markets": {
+      "provider_intent": "get_available_markets",
+      "provider_alias_intent": "/markets",
+      "text": "Get Available Markets",
+      "category": "Markets",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get the list of markets where Spotify is available.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/markets",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/markets",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/markets",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/markets",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_information_about_the_users_current_playback": {
+      "provider_intent": "get_information_about_the_users_current_playback",
+      "provider_alias_intent": "/me/player",
+      "text": "Get Playback State",
+      "category": "Player",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "market": {
+          "type": "string"
+        },
+        "additional_types": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get information about the user’s current playback state including track or episode progress and active device.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/player",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/player",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/player",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/player",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "transfer_a_users_playback": {
+      "provider_intent": "transfer_a_users_playback",
+      "provider_alias_intent": "/me/player",
+      "text": "Transfer Playback",
+      "category": "Player",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "device_ids": {
+          "type": "array",
+          "text": "A JSON array containing the ID of the device on which playback should be started/transferred",
+          "required": true
+        },
+        "play": {
+          "type": "boolean",
+          "text": "**true** ensure playback happens on new device",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Transfer playback to a new device and determine if it should start playing.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/player",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/player",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/player",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/player",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_a_users_available_devices": {
+      "provider_intent": "get_a_users_available_devices",
+      "provider_alias_intent": "/me/player/devices",
+      "text": "Get Available Devices",
+      "category": "Player",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get information about a user’s available devices.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/player/devices",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/player/devices",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/player/devices",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/player/devices",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_the_users_currently_playing_track": {
+      "provider_intent": "get_the_users_currently_playing_track",
+      "provider_alias_intent": "/me/player/currently-playing",
+      "text": "Get Currently Playing Track",
+      "category": "Player",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "market": {
+          "type": "string"
+        },
+        "additional_types": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get the object currently being played on the user's Spotify account.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/player/currently-playing",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/player/currently-playing",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/player/currently-playing",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/player/currently-playing",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "start_a_users_playback": {
+      "provider_intent": "start_a_users_playback",
+      "provider_alias_intent": "/me/player/play",
+      "text": "Start/Resume Playback",
+      "category": "Player",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "device_id": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "context_uri": {
+          "type": "string",
+          "text": "Optional"
+        },
+        "uris": {
+          "type": "array",
+          "text": "Optional"
+        },
+        "offset": {
+          "type": "object",
+          "text": "Optional"
+        },
+        "position_ms": {
+          "type": "integer",
+          "text": "integer"
+        }
+      },
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Start a new context or resume current playback on the user's active device.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/player/play",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/player/play",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/player/play",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/player/play",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "pause_a_users_playback": {
+      "provider_intent": "pause_a_users_playback",
+      "provider_alias_intent": "/me/player/pause",
+      "text": "Pause Playback",
+      "category": "Player",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "device_id": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Pause playback on the user's account.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/player/pause",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/player/pause",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/player/pause",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/player/pause",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "skip_users_playback_to_next_track": {
+      "provider_intent": "skip_users_playback_to_next_track",
+      "provider_alias_intent": "/me/player/next",
+      "text": "Skip To Next",
+      "category": "Player",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "device_id": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Skips to next track in the user’s queue.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/player/next",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/player/next",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/player/next",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/player/next",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "skip_users_playback_to_previous_track": {
+      "provider_intent": "skip_users_playback_to_previous_track",
+      "provider_alias_intent": "/me/player/previous",
+      "text": "Skip To Previous",
+      "category": "Player",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "device_id": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Skips to previous track in the user’s queue.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/player/previous",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/player/previous",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/player/previous",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/player/previous",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "seek_to_position_in_currently_playing_track": {
+      "provider_intent": "seek_to_position_in_currently_playing_track",
+      "provider_alias_intent": "/me/player/seek",
+      "text": "Seek To Position",
+      "category": "Player",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "position_ms": {
+          "type": "integer",
+          "required": true
+        },
+        "device_id": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Seeks to the given position in the user’s currently playing track.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/player/seek",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/player/seek",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/player/seek",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/player/seek",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "set_repeat_mode_on_users_playback": {
+      "provider_intent": "set_repeat_mode_on_users_playback",
+      "provider_alias_intent": "/me/player/repeat",
+      "text": "Set Repeat Mode",
+      "category": "Player",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "state": {
+          "type": "string",
+          "required": true
+        },
+        "device_id": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Set the repeat mode for the user's playback.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/player/repeat",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/player/repeat",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/player/repeat",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/player/repeat",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "set_volume_for_users_playback": {
+      "provider_intent": "set_volume_for_users_playback",
+      "provider_alias_intent": "/me/player/volume",
+      "text": "Set Playback Volume",
+      "category": "Player",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "volume_percent": {
+          "type": "integer",
+          "required": true
+        },
+        "device_id": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Set the volume for the user’s current playback device.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/player/volume",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/player/volume",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/player/volume",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/player/volume",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "toggle_shuffle_for_users_playback": {
+      "provider_intent": "toggle_shuffle_for_users_playback",
+      "provider_alias_intent": "/me/player/shuffle",
+      "text": "Toggle Playback Shuffle",
+      "category": "Player",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "state": {
+          "type": "boolean",
+          "required": true,
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "device_id": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Toggle shuffle on or off for user’s playback.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/player/shuffle",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/player/shuffle",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/player/shuffle",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/player/shuffle",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_recently_played": {
+      "provider_intent": "get_recently_played",
+      "provider_alias_intent": "/me/player/recently-played",
+      "text": "Get Recently Played Tracks",
+      "category": "Player",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "limit": {
+          "type": "integer"
+        },
+        "after": {
+          "type": "integer"
+        },
+        "before": {
+          "type": "integer"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get tracks from the current user's recently played tracks.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/player/recently-played",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/player/recently-played",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/player/recently-played",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/player/recently-played",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_queue": {
+      "provider_intent": "get_queue",
+      "provider_alias_intent": "/me/player/queue",
+      "text": "Get the User's Queue",
+      "category": "Player",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get the list of objects that make up the user's queue.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/player/queue",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/player/queue",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/player/queue",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/player/queue",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "add_to_queue": {
+      "provider_intent": "add_to_queue",
+      "provider_alias_intent": "/me/player/queue",
+      "text": "Add Item to Playback Queue",
+      "category": "Player",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "uri": {
+          "type": "string",
+          "required": true
+        },
+        "device_id": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Add an item to the end of the user's current playback queue.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/player/queue",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/player/queue",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/player/queue",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/player/queue",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_playlist": {
+      "provider_intent": "get_playlist",
+      "provider_alias_intent": "/playlists/{playlist_id}",
+      "text": "Get Playlist",
+      "category": "Playlists",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "playlist_id": {
+          "type": "string",
+          "required": true
+        },
+        "market": {
+          "type": "string"
+        },
+        "fields": {
+          "type": "string"
+        },
+        "additional_types": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "playlist_id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get a playlist owned by a Spotify user.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/playlists/{playlist_id}",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/playlists/{playlist_id}",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/playlists/{playlist_id}",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/playlists/{playlist_id}",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "change_playlist_details": {
+      "provider_intent": "change_playlist_details",
+      "provider_alias_intent": "/playlists/{playlist_id}",
+      "text": "Change Playlist Details",
+      "category": "Playlists",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "playlist_id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "The new name for the playlist for example `\"My New Playlist Title\"`"
+        },
+        "public": {
+          "type": "boolean",
+          "text": "If `true` the playlist will be public if `false` it will be private",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "collaborative": {
+          "type": "boolean",
+          "text": "If `true` the playlist will become collaborative and other users will be able to modify the playlist in their Spotify client",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "description": {
+          "type": "string",
+          "text": "Value for playlist description as displayed in Spotify Clients and in the Web API"
+        }
+      },
+      "path": {
+        "playlist_id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Change a playlist's name and public/private state.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/playlists/{playlist_id}",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/playlists/{playlist_id}",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/playlists/{playlist_id}",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/playlists/{playlist_id}",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_playlists_tracks": {
+      "provider_intent": "get_playlists_tracks",
+      "provider_alias_intent": "/playlists/{playlist_id}/tracks",
+      "text": "Get Playlist Items",
+      "category": "Playlists",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "playlist_id": {
+          "type": "string",
+          "required": true
+        },
+        "market": {
+          "type": "string"
+        },
+        "fields": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "integer"
+        },
+        "offset": {
+          "type": "integer"
+        },
+        "additional_types": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "playlist_id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get full details of the items of a playlist owned by a Spotify user.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/playlists/{playlist_id}/tracks",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/playlists/{playlist_id}/tracks",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/playlists/{playlist_id}/tracks",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/playlists/{playlist_id}/tracks",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "add_tracks_to_playlist": {
+      "provider_intent": "add_tracks_to_playlist",
+      "provider_alias_intent": "/playlists/{playlist_id}/tracks",
+      "text": "Add Items to Playlist",
+      "category": "Playlists",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "playlist_id": {
+          "type": "string",
+          "required": true
+        },
+        "position": {
+          "type": "integer"
+        },
+        "uris": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "uris": {
+          "type": "array",
+          "text": "A JSON array of the [Spotify URIs](/documentation/web-api/concepts/spotify-uris-ids) to add"
+        },
+        "position": {
+          "type": "integer",
+          "text": "The position to insert the items a zero-based index"
+        }
+      },
+      "path": {
+        "playlist_id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Add one or more items to a user's playlist.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/playlists/{playlist_id}/tracks",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/playlists/{playlist_id}/tracks",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/playlists/{playlist_id}/tracks",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/playlists/{playlist_id}/tracks",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "reorder_or_replace_playlists_tracks": {
+      "provider_intent": "reorder_or_replace_playlists_tracks",
+      "provider_alias_intent": "/playlists/{playlist_id}/tracks",
+      "text": "Update Playlist Items",
+      "category": "Playlists",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "playlist_id": {
+          "type": "string",
+          "required": true
+        },
+        "uris": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "uris": {
+          "type": "array"
+        },
+        "range_start": {
+          "type": "integer",
+          "text": "The position of the first item to be reordered"
+        },
+        "insert_before": {
+          "type": "integer",
+          "text": "The position where the items should be inserted"
+        },
+        "range_length": {
+          "type": "integer",
+          "text": "The amount of items to be reordered"
+        },
+        "snapshot_id": {
+          "type": "string",
+          "text": "The playlist's snapshot ID against which you want to make the changes"
+        }
+      },
+      "path": {
+        "playlist_id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Either reorder or replace items in a playlist depending on the request's parameters.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/playlists/{playlist_id}/tracks",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/playlists/{playlist_id}/tracks",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/playlists/{playlist_id}/tracks",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/playlists/{playlist_id}/tracks",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "remove_tracks_playlist": {
+      "provider_intent": "remove_tracks_playlist",
+      "provider_alias_intent": "/playlists/{playlist_id}/tracks",
+      "text": "Remove Playlist Items",
+      "category": "Playlists",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "playlist_id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "tracks": {
+          "type": "array",
+          "text": "An array of objects containing [Spotify URIs](/documentation/web-api/concepts/spotify-uris-ids) of the tracks or episodes to remove",
+          "required": true
+        },
+        "snapshot_id": {
+          "type": "string",
+          "text": "The playlist's snapshot ID against which you want to make the changes"
+        }
+      },
+      "path": {
+        "playlist_id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Remove one or more items from a user's playlist.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/playlists/{playlist_id}/tracks",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/playlists/{playlist_id}/tracks",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/playlists/{playlist_id}/tracks",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/playlists/{playlist_id}/tracks",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_a_list_of_current_users_playlists": {
+      "provider_intent": "get_a_list_of_current_users_playlists",
+      "provider_alias_intent": "/me/playlists",
+      "text": "Get Current User's Playlists",
+      "category": "Playlists",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "limit": {
+          "type": "integer"
+        },
+        "offset": {
+          "type": "integer"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get a list of the playlists owned or followed by the current Spotify\nuser.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/playlists",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/playlists",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/playlists",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/playlists",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_list_users_playlists": {
+      "provider_intent": "get_list_users_playlists",
+      "provider_alias_intent": "/users/{user_id}/playlists",
+      "text": "Get User's Playlists",
+      "category": "Playlists",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "user_id": {
+          "type": "string",
+          "required": true
+        },
+        "limit": {
+          "type": "integer"
+        },
+        "offset": {
+          "type": "integer"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "user_id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get a list of the playlists owned or followed by a Spotify user.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/users/{user_id}/playlists",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/users/{user_id}/playlists",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/users/{user_id}/playlists",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/users/{user_id}/playlists",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "create_playlist": {
+      "provider_intent": "create_playlist",
+      "provider_alias_intent": "/users/{user_id}/playlists",
+      "text": "Create Playlist",
+      "category": "Playlists",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "user_id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "The name for the new playlist for example `\"Your Coolest Playlist\"`",
+          "required": true
+        },
+        "public": {
+          "type": "boolean",
+          "text": "Defaults to `true`",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "collaborative": {
+          "type": "boolean",
+          "text": "Defaults to `false`",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "description": {
+          "type": "string",
+          "text": "value for playlist description as displayed in Spotify Clients and in the Web API"
+        }
+      },
+      "path": {
+        "user_id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Create a playlist for a Spotify user.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/users/{user_id}/playlists",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/users/{user_id}/playlists",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/users/{user_id}/playlists",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/users/{user_id}/playlists",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_featured_playlists": {
+      "provider_intent": "get_featured_playlists",
+      "provider_alias_intent": "/browse/featured-playlists",
+      "text": "Get Featured Playlists",
+      "category": "Playlists",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "country": {
+          "type": "string"
+        },
+        "locale": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "integer"
+        },
+        "offset": {
+          "type": "integer"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get a list of Spotify featured playlists (shown for example on a Spotify player's 'Browse' tab).",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/browse/featured-playlists",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/browse/featured-playlists",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/browse/featured-playlists",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/browse/featured-playlists",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_a_categories_playlists": {
+      "provider_intent": "get_a_categories_playlists",
+      "provider_alias_intent": "/browse/categories/{category_id}/playlists",
+      "text": "Get Category's Playlists",
+      "category": "Playlists",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "category_id": {
+          "type": "string",
+          "required": true
+        },
+        "country": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "integer"
+        },
+        "offset": {
+          "type": "integer"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "category_id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get a list of Spotify playlists tagged with a particular category.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/browse/categories/{category_id}/playlists",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/browse/categories/{category_id}/playlists",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/browse/categories/{category_id}/playlists",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/browse/categories/{category_id}/playlists",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_playlist_cover": {
+      "provider_intent": "get_playlist_cover",
+      "provider_alias_intent": "/playlists/{playlist_id}/images",
+      "text": "Get Playlist Cover Image",
+      "category": "Playlists",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "playlist_id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "playlist_id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get the current image associated with a specific playlist.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/playlists/{playlist_id}/images",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/playlists/{playlist_id}/images",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/playlists/{playlist_id}/images",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/playlists/{playlist_id}/images",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "upload_custom_playlist_cover": {
+      "provider_intent": "upload_custom_playlist_cover",
+      "provider_alias_intent": "/playlists/{playlist_id}/images",
+      "text": "Add Custom Playlist Cover Image",
+      "category": "Playlists",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "playlist_id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "playlist_id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Replace the image used to represent a specific playlist.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/playlists/{playlist_id}/images",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/playlists/{playlist_id}/images",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/playlists/{playlist_id}/images",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/playlists/{playlist_id}/images",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "search": {
+      "provider_intent": "search",
+      "provider_alias_intent": "/search",
+      "text": "Search for Item",
+      "category": "Search",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "q": {
+          "type": "string",
+          "required": true
+        },
+        "type": {
+          "type": "array",
+          "required": true
+        },
+        "market": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "integer"
+        },
+        "offset": {
+          "type": "integer"
+        },
+        "include_external": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get Spotify catalog information about albums artists playlists tracks shows episodes or audiobooks\nthat match a keyword string.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/search",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/search",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/search",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/search",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_a_show": {
+      "provider_intent": "get_a_show",
+      "provider_alias_intent": "/shows/{id}",
+      "text": "Get Show",
+      "category": "Shows",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "required": true
+        },
+        "market": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get Spotify catalog information for a single show identified by its\nunique Spotify ID.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/shows/{id}",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/shows/{id}",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/shows/{id}",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/shows/{id}",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_multiple_shows": {
+      "provider_intent": "get_multiple_shows",
+      "provider_alias_intent": "/shows",
+      "text": "Get Several Shows",
+      "category": "Shows",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "market": {
+          "type": "string"
+        },
+        "ids": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get Spotify catalog information for several shows based on their Spotify IDs.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/shows",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/shows",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/shows",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/shows",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_a_shows_episodes": {
+      "provider_intent": "get_a_shows_episodes",
+      "provider_alias_intent": "/shows/{id}/episodes",
+      "text": "Get Show Episodes",
+      "category": "Shows",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "required": true
+        },
+        "market": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "integer"
+        },
+        "offset": {
+          "type": "integer"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get Spotify catalog information about an show’s episodes.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/shows/{id}/episodes",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/shows/{id}/episodes",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/shows/{id}/episodes",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/shows/{id}/episodes",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_users_saved_shows": {
+      "provider_intent": "get_users_saved_shows",
+      "provider_alias_intent": "/me/shows",
+      "text": "Get User's Saved Shows",
+      "category": "Shows",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "limit": {
+          "type": "integer"
+        },
+        "offset": {
+          "type": "integer"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get a list of shows saved in the current Spotify user's library.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/shows",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/shows",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/shows",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/shows",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "save_shows_user": {
+      "provider_intent": "save_shows_user",
+      "provider_alias_intent": "/me/shows",
+      "text": "Save Shows for Current User",
+      "category": "Shows",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "ids": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Save one or more shows to current Spotify user's library.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/shows",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/shows",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/shows",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/shows",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "remove_shows_user": {
+      "provider_intent": "remove_shows_user",
+      "provider_alias_intent": "/me/shows",
+      "text": "Remove User's Saved Shows",
+      "category": "Shows",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "ids": {
+          "type": "string",
+          "required": true
+        },
+        "market": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Delete one or more shows from current Spotify user's library.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/shows",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/shows",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/shows",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/shows",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "check_users_saved_shows": {
+      "provider_intent": "check_users_saved_shows",
+      "provider_alias_intent": "/me/shows/contains",
+      "text": "Check User's Saved Shows",
+      "category": "Shows",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "ids": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Check if one or more shows is already saved in the current Spotify user's library.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/shows/contains",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/shows/contains",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/shows/contains",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/shows/contains",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_track": {
+      "provider_intent": "get_track",
+      "provider_alias_intent": "/tracks/{id}",
+      "text": "Get Track",
+      "category": "Tracks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "required": true
+        },
+        "market": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get Spotify catalog information for a single track identified by its\nunique Spotify ID.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/tracks/{id}",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/tracks/{id}",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/tracks/{id}",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/tracks/{id}",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_several_tracks": {
+      "provider_intent": "get_several_tracks",
+      "provider_alias_intent": "/tracks",
+      "text": "Get Several Tracks",
+      "category": "Tracks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "market": {
+          "type": "string"
+        },
+        "ids": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get Spotify catalog information for multiple tracks based on their Spotify IDs.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/tracks",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/tracks",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/tracks",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/tracks",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_users_saved_tracks": {
+      "provider_intent": "get_users_saved_tracks",
+      "provider_alias_intent": "/me/tracks",
+      "text": "Get User's Saved Tracks",
+      "category": "Tracks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "market": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "integer"
+        },
+        "offset": {
+          "type": "integer"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get a list of the songs saved in the current Spotify user's 'Your Music' library.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/tracks",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/tracks",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/tracks",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/tracks",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "save_tracks_user": {
+      "provider_intent": "save_tracks_user",
+      "provider_alias_intent": "/me/tracks",
+      "text": "Save Tracks for Current User",
+      "category": "Tracks",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "ids": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "ids": {
+          "type": "array",
+          "text": "A JSON array of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids)"
+        }
+      },
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Save one or more tracks to the current user's 'Your Music' library.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/tracks",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/tracks",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/tracks",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/tracks",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "remove_tracks_user": {
+      "provider_intent": "remove_tracks_user",
+      "provider_alias_intent": "/me/tracks",
+      "text": "Remove User's Saved Tracks",
+      "category": "Tracks",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "ids": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "ids": {
+          "type": "array",
+          "text": "A JSON array of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids)"
+        }
+      },
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Remove one or more tracks from the current user's 'Your Music' library.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/tracks",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/tracks",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/tracks",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/tracks",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "check_users_saved_tracks": {
+      "provider_intent": "check_users_saved_tracks",
+      "provider_alias_intent": "/me/tracks/contains",
+      "text": "Check User's Saved Tracks",
+      "category": "Tracks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "ids": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Check if one or more tracks is already saved in the current Spotify user's 'Your Music' library.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/tracks/contains",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/tracks/contains",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/tracks/contains",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/tracks/contains",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_several_audio_features": {
+      "provider_intent": "get_several_audio_features",
+      "provider_alias_intent": "/audio-features",
+      "text": "Get Tracks' Audio Features",
+      "category": "Tracks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "ids": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get audio features for multiple tracks based on their Spotify IDs.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/audio-features",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/audio-features",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/audio-features",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/audio-features",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_audio_features": {
+      "provider_intent": "get_audio_features",
+      "provider_alias_intent": "/audio-features/{id}",
+      "text": "Get Track's Audio Features",
+      "category": "Tracks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get audio feature information for a single track identified by its unique\nSpotify ID.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/audio-features/{id}",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/audio-features/{id}",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/audio-features/{id}",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/audio-features/{id}",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_audio_analysis": {
+      "provider_intent": "get_audio_analysis",
+      "provider_alias_intent": "/audio-analysis/{id}",
+      "text": "Get Track's Audio Analysis",
+      "category": "Tracks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get a low-level audio analysis for a track in the Spotify catalog.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/audio-analysis/{id}",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/audio-analysis/{id}",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/audio-analysis/{id}",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/audio-analysis/{id}",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_recommendations": {
+      "provider_intent": "get_recommendations",
+      "provider_alias_intent": "/recommendations",
+      "text": "Get Recommendations",
+      "category": "Tracks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "limit": {
+          "type": "integer"
+        },
+        "market": {
+          "type": "string"
+        },
+        "seed_artists": {
+          "type": "string",
+          "required": true
+        },
+        "seed_genres": {
+          "type": "string",
+          "required": true
+        },
+        "seed_tracks": {
+          "type": "string",
+          "required": true
+        },
+        "min_acousticness": {
+          "type": "number"
+        },
+        "max_acousticness": {
+          "type": "number"
+        },
+        "target_acousticness": {
+          "type": "number"
+        },
+        "min_danceability": {
+          "type": "number"
+        },
+        "max_danceability": {
+          "type": "number"
+        },
+        "target_danceability": {
+          "type": "number"
+        },
+        "min_duration_ms": {
+          "type": "integer"
+        },
+        "max_duration_ms": {
+          "type": "integer"
+        },
+        "target_duration_ms": {
+          "type": "integer"
+        },
+        "min_energy": {
+          "type": "number"
+        },
+        "max_energy": {
+          "type": "number"
+        },
+        "target_energy": {
+          "type": "number"
+        },
+        "min_instrumentalness": {
+          "type": "number"
+        },
+        "max_instrumentalness": {
+          "type": "number"
+        },
+        "target_instrumentalness": {
+          "type": "number"
+        },
+        "min_key": {
+          "type": "integer"
+        },
+        "max_key": {
+          "type": "integer"
+        },
+        "target_key": {
+          "type": "integer"
+        },
+        "min_liveness": {
+          "type": "number"
+        },
+        "max_liveness": {
+          "type": "number"
+        },
+        "target_liveness": {
+          "type": "number"
+        },
+        "min_loudness": {
+          "type": "number"
+        },
+        "max_loudness": {
+          "type": "number"
+        },
+        "target_loudness": {
+          "type": "number"
+        },
+        "min_mode": {
+          "type": "integer"
+        },
+        "max_mode": {
+          "type": "integer"
+        },
+        "target_mode": {
+          "type": "integer"
+        },
+        "min_popularity": {
+          "type": "integer"
+        },
+        "max_popularity": {
+          "type": "integer"
+        },
+        "target_popularity": {
+          "type": "integer"
+        },
+        "min_speechiness": {
+          "type": "number"
+        },
+        "max_speechiness": {
+          "type": "number"
+        },
+        "target_speechiness": {
+          "type": "number"
+        },
+        "min_tempo": {
+          "type": "number"
+        },
+        "max_tempo": {
+          "type": "number"
+        },
+        "target_tempo": {
+          "type": "number"
+        },
+        "min_time_signature": {
+          "type": "integer"
+        },
+        "max_time_signature": {
+          "type": "integer"
+        },
+        "target_time_signature": {
+          "type": "integer"
+        },
+        "min_valence": {
+          "type": "number"
+        },
+        "max_valence": {
+          "type": "number"
+        },
+        "target_valence": {
+          "type": "number"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Recommendations are generated based on the available information for a given seed entity and matched against similar artists and tracks.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/recommendations",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/recommendations",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/recommendations",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/recommendations",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_current_users_profile": {
+      "provider_intent": "get_current_users_profile",
+      "provider_alias_intent": "/me",
+      "text": "Get Current User's Profile",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get detailed profile information about the current user (including the\ncurrent user's username).",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_users_top_artists_and_tracks": {
+      "provider_intent": "get_users_top_artists_and_tracks",
+      "provider_alias_intent": "/me/top/{type}",
+      "text": "Get User's Top Items",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "type": {
+          "type": "string",
+          "required": true
+        },
+        "time_range": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "integer"
+        },
+        "offset": {
+          "type": "integer"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "type": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get the current user's top artists or tracks based on calculated affinity.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/top/{type}",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/top/{type}",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/top/{type}",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/top/{type}",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_users_profile": {
+      "provider_intent": "get_users_profile",
+      "provider_alias_intent": "/users/{user_id}",
+      "text": "Get User's Profile",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "user_id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "user_id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get public profile information about a Spotify user.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/users/{user_id}",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/users/{user_id}",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/users/{user_id}",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/users/{user_id}",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "follow_playlist": {
+      "provider_intent": "follow_playlist",
+      "provider_alias_intent": "/playlists/{playlist_id}/followers",
+      "text": "Follow Playlist",
+      "category": "Users",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "playlist_id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "public": {
+          "type": "boolean",
+          "text": "Defaults to `true`",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "playlist_id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Add the current user as a follower of a playlist.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/playlists/{playlist_id}/followers",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/playlists/{playlist_id}/followers",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/playlists/{playlist_id}/followers",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/playlists/{playlist_id}/followers",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "unfollow_playlist": {
+      "provider_intent": "unfollow_playlist",
+      "provider_alias_intent": "/playlists/{playlist_id}/followers",
+      "text": "Unfollow Playlist",
+      "category": "Users",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "playlist_id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "playlist_id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Remove the current user as a follower of a playlist.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/playlists/{playlist_id}/followers",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/playlists/{playlist_id}/followers",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/playlists/{playlist_id}/followers",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/playlists/{playlist_id}/followers",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "get_followed": {
+      "provider_intent": "get_followed",
+      "provider_alias_intent": "/me/following",
+      "text": "Get Followed Artists",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "type": {
+          "type": "string",
+          "required": true
+        },
+        "after": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "integer"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Get the current user's followed artists.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/following",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/following",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/following",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/following",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "follow_artists_users": {
+      "provider_intent": "follow_artists_users",
+      "provider_alias_intent": "/me/following",
+      "text": "Follow Artists or Users",
+      "category": "Users",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "type": {
+          "type": "string",
+          "required": true
+        },
+        "ids": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "ids": {
+          "type": "array",
+          "text": "A JSON array of the artist or user [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids)",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Add the current user as a follower of one or more artists or other Spotify users.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/following",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/following",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/following",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/following",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "unfollow_artists_users": {
+      "provider_intent": "unfollow_artists_users",
+      "provider_alias_intent": "/me/following",
+      "text": "Unfollow Artists or Users",
+      "category": "Users",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "type": {
+          "type": "string",
+          "required": true
+        },
+        "ids": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "ids": {
+          "type": "array",
+          "text": "A JSON array of the artist or user [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids)"
+        }
+      },
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Remove the current user as a follower of one or more artists or other Spotify users.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/following",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/following",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/following",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/following",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "check_current_user_follows": {
+      "provider_intent": "check_current_user_follows",
+      "provider_alias_intent": "/me/following/contains",
+      "text": "Check If User Follows Artists or Users",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "type": {
+          "type": "string",
+          "required": true
+        },
+        "ids": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Check to see if the current user is following one or more artists or other Spotify users.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/me/following/contains",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/me/following/contains",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/me/following/contains",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/me/following/contains",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    },
+    "check_if_user_follows_playlist": {
+      "provider_intent": "check_if_user_follows_playlist",
+      "provider_alias_intent": "/playlists/{playlist_id}/followers/contains",
+      "text": "Check if Users Follow Playlist",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "playlist_id": {
+          "type": "string",
+          "required": true
+        },
+        "ids": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "playlist_id": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": "{}",
+      "meta": {
+        "version": "1.0.0",
+        "auth": [],
+        "description": "Check to see if one or more Spotify users are following a specified playlist.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.spotify.com/v1/playlists/{playlist_id}/followers/contains",
+        "alias_endpoint": "https://api.lowcodeapi.com/spotify/playlists/{playlist_id}/followers/contains",
+        "api_ref": ""
+      },
+      "auth": [],
+      "web_url": "https://lowcodeapi.com/spotify/playlists/{playlist_id}/followers/contains",
+      "alias_web_url": "https://lowcodeapi.com/api.spotify.com/playlists/{playlist_id}/followers/contains",
+      "wip": 0,
+      "duplicate_check": "FALSE",
+      "payload_type": ""
+    }
+  }
+}

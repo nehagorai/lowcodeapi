@@ -1,0 +1,384 @@
+{
+  "routes": {
+    "letterdrop__v1__posts___post": {
+      "provider_intent": "letterdrop__v1__posts___post",
+      "provider_alias_intent": "/v1/posts",
+      "text": "List posts",
+      "category": "Letterdrop API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "query": {
+          "type": "string",
+          "text": "Search for posts containing these words"
+        },
+        "offset": {
+          "type": "number",
+          "text": "Index of first post to return"
+        },
+        "limit": {
+          "type": "number",
+          "text": "Number of postss to return"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get a summary of all your posts to be displayed on your home page",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/posts",
+        "alias_endpoint": "/letterdrop/v1/posts",
+        "api_ref": "https://docs.letterdrop.com/api#list-posts"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "letterdrop__v1__post__get__id___post": {
+      "provider_intent": "letterdrop__v1__post__get__id___post",
+      "provider_alias_intent": "/v1/post/get/id",
+      "text": "Get post",
+      "category": "Letterdrop API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The of the post",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The of the post",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get a single post",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/post/get/:{id}",
+        "alias_endpoint": "/letterdrop/v1/post/get/id",
+        "api_ref": "https://docs.letterdrop.com/api#get-post"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "letterdrop__v1__post__draft___post": {
+      "provider_intent": "letterdrop__v1__post__draft___post",
+      "provider_alias_intent": "/v1/post/draft",
+      "text": "Draft post",
+      "category": "Letterdrop API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "html": {
+          "type": "string",
+          "text": "Body of your post in HTML format"
+        },
+        "subtitle": {
+          "type": "string",
+          "text": "Subtitle of your post"
+        },
+        "title": {
+          "type": "string",
+          "text": "Title of your post"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Draft a post",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/post/draft",
+        "alias_endpoint": "/letterdrop/v1/post/draft",
+        "api_ref": "https://docs.letterdrop.com/api#draft-post"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "letterdrop__v1__project__get__id___post": {
+      "provider_intent": "letterdrop__v1__project__get__id___post",
+      "provider_alias_intent": "/v1/project/get/id",
+      "text": "Get project",
+      "category": "Letterdrop API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The of the project",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The of the project",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get project details",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/project/get/:{id}",
+        "alias_endpoint": "/letterdrop/v1/project/get/id",
+        "api_ref": "https://docs.letterdrop.com/api#get-project"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "letterdrop__v1__idea__new___post": {
+      "provider_intent": "letterdrop__v1__idea__new___post",
+      "provider_alias_intent": "/v1/idea/new",
+      "text": "Create idea",
+      "category": "Letterdrop API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "title": {
+          "type": "string",
+          "text": "Idea title",
+          "required": true
+        },
+        "suggestedBy": {
+          "type": "string",
+          "text": "Email address of the person who suggested the idea",
+          "required": true
+        },
+        "description": {
+          "type": "string",
+          "text": "Description of the idea. This is where your content brief goes."
+        },
+        "keyword": {
+          "type": "string",
+          "text": "Keyword associated with the idea"
+        },
+        "labels": {
+          "type": "array",
+          "text": "List of labels"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new idea",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/idea/new",
+        "alias_endpoint": "/letterdrop/v1/idea/new",
+        "api_ref": "https://docs.letterdrop.com/api#create-idea"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "letterdrop__v1__idea__assign___post": {
+      "provider_intent": "letterdrop__v1__idea__assign___post",
+      "provider_alias_intent": "/v1/idea/assign",
+      "text": "Assign idea",
+      "category": "Letterdrop API",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "id": {
+          "type": "string",
+          "text": "Idea ID",
+          "required": true
+        },
+        "publishOn": {
+          "type": "string",
+          "text": "Date you want to target publishing your content.",
+          "required": true
+        },
+        "assignedTo": {
+          "type": "string",
+          "text": "Email address of the user writing the content."
+        },
+        "approvers": {
+          "type": "array",
+          "text": "List of emails of approvers"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a project from an idea",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/idea/assign",
+        "alias_endpoint": "/letterdrop/v1/idea/assign",
+        "api_ref": "https://docs.letterdrop.com/api#assign-idea"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "letterdrop__v1__social-selling__like___post": {
+      "provider_intent": "letterdrop__v1__social-selling__like___post",
+      "provider_alias_intent": "/v1/social-selling/like",
+      "text": "Like a post or comment on LinkedIn",
+      "category": "LinkedIn Social Selling",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "url": {
+          "type": "string",
+          "text": "URL of LinkedIn post or comment",
+          "required": true
+        },
+        "groups": {
+          "type": "array",
+          "text": "Name of group to like from."
+        },
+        "reactionType": {
+          "type": "string",
+          "text": "One of 'like', 'celebrate', 'support', 'love', 'insightful' and 'funny'"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Automatically like LinkedIn post from connected accounts",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/social-selling/like",
+        "alias_endpoint": "/letterdrop/v1/social-selling/like",
+        "api_ref": "https://docs.letterdrop.com/social-selling/linkedin-social-selling#like-a-post-or-comment-on-linkedin"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "letterdrop__v1__social-selling__request-comment___post": {
+      "provider_intent": "letterdrop__v1__social-selling__request-comment___post",
+      "provider_alias_intent": "/v1/social-selling/request-comment",
+      "text": "Request a comment on a post or comment on LinkedIn",
+      "category": "LinkedIn Social Selling",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "url": {
+          "type": "string",
+          "text": "URL of LinkedIn post or comment",
+          "required": true
+        },
+        "groups": {
+          "type": "array",
+          "text": "Name of group to request a comment from. Eg: ['sales', 'execs']"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Automatically like LinkedIn post from connected accounts",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/social-selling/request-comment",
+        "alias_endpoint": "/letterdrop/v1/social-selling/request-comment",
+        "api_ref": "https://docs.letterdrop.com/social-selling/linkedin-social-selling#request-a-comment-on-a-post-or-comment-on-linkedin"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

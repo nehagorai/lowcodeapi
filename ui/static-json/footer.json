@@ -1,0 +1,39 @@
+{
+    "about": {
+        "about" : {
+            "title": "",
+            "list": [
+            ]
+        }
+    },
+    "backlinks": {
+        "product": {
+            "title": "",
+            "list": [],
+            "extra": {
+                "link": "",
+                "title": ""
+            }
+        },
+        "integrations": {
+            "title": "",
+            "list": [{
+                "name": "",
+                "link": "",
+                "active": false
+            }]
+        },
+        "aggregated": {
+            "title": "",
+            "list": []
+        },
+        "static": {
+            "title": "",
+            "list":[],
+            "extra": {
+                "link": "",
+                "title": ""
+            }
+        }
+    }
+}

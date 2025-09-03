@@ -1,0 +1,836 @@
+{
+  "routes": {
+    "yepicai__v1__assets___get": {
+      "provider_intent": "yepicai__v1__assets___get",
+      "provider_alias_intent": "/v1/assets",
+      "text": "Get All Assets",
+      "category": "Asset Endpoints",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "PageSize": {
+          "type": "number",
+          "text": "Page Size"
+        },
+        "Page": {
+          "type": "number",
+          "text": "The page number to retrieve"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieves details of all assets",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/assets",
+        "alias_endpoint": "/yepicai/v1/assets",
+        "api_ref": "https://docs.yepic.ai/reference/get_v1-assets"
+      },
+      "auth": {
+        "header": {
+          "headerName": "xi-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "yepicai__v1__avatars___get": {
+      "provider_intent": "yepicai__v1__avatars___get",
+      "provider_alias_intent": "/v1/avatars",
+      "text": "Get All Avatars",
+      "category": "Asset Endpoints",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "PageSize": {
+          "type": "number",
+          "text": "Page Size"
+        },
+        "Page": {
+          "type": "number",
+          "text": "The page number to retrieve"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieves a list of all avatars available",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/avatars",
+        "alias_endpoint": "/yepicai/v1/avatars",
+        "api_ref": "https://docs.yepic.ai/reference/get_v1-avatars"
+      },
+      "auth": {
+        "header": {
+          "headerName": "xi-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "yepicai__v1__assets__id___get": {
+      "provider_intent": "yepicai__v1__assets__id___get",
+      "provider_alias_intent": "/v1/assets/id",
+      "text": "Get a Single Asset",
+      "category": "Asset Endpoints",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieves details of a specific asset by its ID",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/assets/{id}",
+        "alias_endpoint": "/yepicai/v1/assets/id",
+        "api_ref": "https://docs.yepic.ai/reference/get_v1-assets-id"
+      },
+      "auth": {
+        "header": {
+          "headerName": "xi-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "yepicai__v1__assets__id___patch": {
+      "provider_intent": "yepicai__v1__assets__id___patch",
+      "provider_alias_intent": "/v1/assets/id",
+      "text": "Update an Asset Partially",
+      "category": "Asset Endpoints",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update a specific asset partially by providing a JSON patch document",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/assets/{id}",
+        "alias_endpoint": "/yepicai/v1/assets/id",
+        "api_ref": "https://docs.yepic.ai/reference/patch_v1-assets-id"
+      },
+      "auth": {
+        "header": {
+          "headerName": "xi-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "yepicai__v1__assets__id___delete": {
+      "provider_intent": "yepicai__v1__assets__id___delete",
+      "provider_alias_intent": "/v1/assets/id",
+      "text": "Delete an Asset",
+      "category": "Asset Endpoints",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a specific asset from the system",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/assets/{id}",
+        "alias_endpoint": "/yepicai/v1/assets/id",
+        "api_ref": "https://docs.yepic.ai/reference/delete_v1-assets-id"
+      },
+      "auth": {
+        "header": {
+          "headerName": "xi-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "yepicai__v1__assets__import__file___post": {
+      "provider_intent": "yepicai__v1__assets__import__file___post",
+      "provider_alias_intent": "/v1/assets/import/file",
+      "text": "Create a New Asset (HTML form file upload)",
+      "category": "Asset Endpoints",
+      "method": "POST",
+      "type": "UPLOAD",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "Name": {
+          "type": "string",
+          "text": "The name of the asset."
+        },
+        "File": {
+          "type": "file",
+          "text": "The HTML form file."
+        },
+        "Type": {
+          "type": "string",
+          "text": "The type of the asset."
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new asset by uploading a file using an HTML form",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/assets/import/file",
+        "alias_endpoint": "/yepicai/v1/assets/import/file",
+        "api_ref": "https://docs.yepic.ai/reference/post_v1-assets-import-file"
+      },
+      "auth": {
+        "header": {
+          "headerName": "xi-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "yepicai__v1__assets__import__json___post": {
+      "provider_intent": "yepicai__v1__assets__import__json___post",
+      "provider_alias_intent": "/v1/assets/import/json",
+      "text": "Create a New Asset (JSON base64 data)",
+      "category": "Asset Endpoints",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "The name of the asset."
+        },
+        "file": {
+          "type": "string",
+          "text": "The file data content base64 encoded."
+        },
+        "type": {
+          "type": "string",
+          "text": "The type of the asset."
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new asset by providing JSON data with base64 encoded file content",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/assets/import/json",
+        "alias_endpoint": "/yepicai/v1/assets/import/json",
+        "api_ref": "https://docs.yepic.ai/reference/post_v1-assets-import-json"
+      },
+      "auth": {
+        "header": {
+          "headerName": "xi-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "yepicai__v1__assets__import__url___post": {
+      "provider_intent": "yepicai__v1__assets__import__url___post",
+      "provider_alias_intent": "/v1/assets/import/url",
+      "text": "Create a New Asset (URL)",
+      "category": "Asset Endpoints",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "The name of the asset."
+        },
+        "fileUrl": {
+          "type": "string",
+          "text": "The file URL"
+        },
+        "type": {
+          "type": "string",
+          "text": "The type of the asset."
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new asset by providing a URL to the file",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/assets/import/url",
+        "alias_endpoint": "/yepicai/v1/assets/import/url",
+        "api_ref": "https://docs.yepic.ai/reference/post_v1-assets-import-url"
+      },
+      "auth": {
+        "header": {
+          "headerName": "xi-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "yepicai__v1__avatars___post": {
+      "provider_intent": "yepicai__v1__avatars___post",
+      "provider_alias_intent": "/v1/avatars",
+      "text": "Create an Avatar",
+      "category": "Avatar Endpoints",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Creates an avatar",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/avatars",
+        "alias_endpoint": "/yepicai/v1/avatars",
+        "api_ref": "https://docs.yepic.ai/reference/post_v1-avatars"
+      },
+      "auth": {
+        "header": {
+          "headerName": "xi-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "yepicai__v1__avatars__id___get": {
+      "provider_intent": "yepicai__v1__avatars__id___get",
+      "provider_alias_intent": "/v1/avatars/id",
+      "text": "Get Avatars",
+      "category": "Avatar Endpoints",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieves details of a specific avatar by its ID",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/avatars/{id}",
+        "alias_endpoint": "/yepicai/v1/avatars/id",
+        "api_ref": "https://docs.yepic.ai/reference/get_v1-avatars-id"
+      },
+      "auth": {
+        "header": {
+          "headerName": "xi-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "yepicai__v1__avatars__id___patch": {
+      "provider_intent": "yepicai__v1__avatars__id___patch",
+      "provider_alias_intent": "/v1/avatars/id",
+      "text": "Update an Avatar",
+      "category": "Avatar Endpoints",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Updates details of a specific avatar by its ID",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/avatars/{id}",
+        "alias_endpoint": "/yepicai/v1/avatars/id",
+        "api_ref": "https://docs.yepic.ai/reference/patch_v1-avatars-id"
+      },
+      "auth": {
+        "header": {
+          "headerName": "xi-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "yepicai__v1__talkingphotos___get": {
+      "provider_intent": "yepicai__v1__talkingphotos___get",
+      "provider_alias_intent": "/v1/talkingphotos",
+      "text": "Retrieve a studio pro video by ID",
+      "category": "Studio Pro Videos",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieves a studio pro video by its ID",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/talkingphotos",
+        "alias_endpoint": "/yepicai/v1/talkingphotos",
+        "api_ref": "https://docs.yepic.ai/reference/get_v1-videos-id"
+      },
+      "auth": {
+        "header": {
+          "headerName": "xi-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "yepicai__v1__talkingphotos___post": {
+      "provider_intent": "yepicai__v1__talkingphotos___post",
+      "provider_alias_intent": "/v1/talkingphotos",
+      "text": "Create a studio pro video",
+      "category": "Studio Pro Videos",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "parentId": {
+          "type": "string",
+          "text": "The parent request that this request belongs to"
+        },
+        "groupId": {
+          "type": "string",
+          "text": "The group of requests that this request belongs to. This is the ID of the root node"
+        },
+        "draft": {
+          "type": "boolean",
+          "text": "Whether this video request is a draft or not. Drafts will not be rendered. Draft video requests can be updated",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "videoUrl": {
+          "type": "string",
+          "text": "The Video URL"
+        },
+        "videoWatermarkedUrl": {
+          "type": "string",
+          "text": "The Watermarked Video URL"
+        },
+        "videoTitle": {
+          "type": "string",
+          "text": "The title of the Video."
+        },
+        "videoFormat": {
+          "type": "string",
+          "text": "The video format of the video. Defaults to mp4"
+        },
+        "videoHeight": {
+          "type": "number",
+          "text": "The height of the video in pixels."
+        },
+        "videoWidth": {
+          "type": "number",
+          "text": "The width of the video in pixels."
+        },
+        "slides": {
+          "type": "array",
+          "text": "Array of slide objects"
+        },
+        "callbackUrl": {
+          "type": "string",
+          "text": "Whether to use the full photo frame (i.e. talking photo) or crop to the face area (i.e. talking head). Default is true"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Creates a studio pro video",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/talkingphotos",
+        "alias_endpoint": "/yepicai/v1/talkingphotos",
+        "api_ref": "https://docs.yepic.ai/reference/post_v1-videos"
+      },
+      "auth": {
+        "header": {
+          "headerName": "xi-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "yepicai__v1__talkingphotos___patch": {
+      "provider_intent": "yepicai__v1__talkingphotos___patch",
+      "provider_alias_intent": "/v1/talkingphotos",
+      "text": "Update a studio pro video",
+      "category": "Studio Pro Videos",
+      "method": "PATCH",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Updates a studio pro video",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/talkingphotos",
+        "alias_endpoint": "/yepicai/v1/talkingphotos",
+        "api_ref": "https://docs.yepic.ai/reference/patch_v1-videos-id"
+      },
+      "auth": {
+        "header": {
+          "headerName": "xi-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "yepicai__v1__talkingphotos___delete": {
+      "provider_intent": "yepicai__v1__talkingphotos___delete",
+      "provider_alias_intent": "/v1/talkingphotos",
+      "text": "Delete a studio pro video",
+      "category": "Studio Pro Videos",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Deletes a studio pro video",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/talkingphotos",
+        "alias_endpoint": "/yepicai/v1/talkingphotos",
+        "api_ref": "https://docs.yepic.ai/reference/delete_v1-videos-id"
+      },
+      "auth": {
+        "header": {
+          "headerName": "xi-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "yepicai__v1__talkingphotos___put": {
+      "provider_intent": "yepicai__v1__talkingphotos___put",
+      "provider_alias_intent": "/v1/talkingphotos",
+      "text": "Replace a draft studio pro video",
+      "category": "Studio Pro Videos",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "parentId": {
+          "type": "string",
+          "text": "The parent request that this request belongs to"
+        },
+        "groupId": {
+          "type": "string",
+          "text": "The group of requests that this request belongs to. This is the ID of the root node"
+        },
+        "draft": {
+          "type": "boolean",
+          "text": "Whether this video request is a draft or not. Drafts will not be rendered. Draft video requests can be updated",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "videoUrl": {
+          "type": "string",
+          "text": "The Video URL"
+        },
+        "videoWatermarkedUrl": {
+          "type": "string",
+          "text": "The Watermarked Video URL"
+        },
+        "videoTitle": {
+          "type": "string",
+          "text": "The title of the Video."
+        },
+        "videoFormat": {
+          "type": "string",
+          "text": "The video format of the video. Defaults to mp4"
+        },
+        "videoHeight": {
+          "type": "number",
+          "text": "The height of the video in pixels."
+        },
+        "videoWidth": {
+          "type": "number",
+          "text": "The width of the video in pixels."
+        },
+        "slides": {
+          "type": "array",
+          "text": "Array of slide objects"
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Replaces a draft studio pro video",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/talkingphotos",
+        "alias_endpoint": "/yepicai/v1/talkingphotos",
+        "api_ref": "https://docs.yepic.ai/reference/delete_v1-videos-id"
+      },
+      "auth": {
+        "header": {
+          "headerName": "xi-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "yepicai__v1__videos__requeue__id___post": {
+      "provider_intent": "yepicai__v1__videos__requeue__id___post",
+      "provider_alias_intent": "/v1/videos/requeue/id",
+      "text": "Requeue a studio pro video by ID",
+      "category": "Studio Pro Videos",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Requeues a studio pro video by its ID",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/v1/videos/requeue/{id}",
+        "alias_endpoint": "/yepicai/v1/videos/requeue/id",
+        "api_ref": "https://docs.yepic.ai/reference/post_v1-videos-requeue-id"
+      },
+      "auth": {
+        "header": {
+          "headerName": "xi-api-key",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

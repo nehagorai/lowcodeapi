@@ -1,0 +1,1686 @@
+{
+  "routes": {
+    "strava_api_v3_activities_post": {
+      "provider_intent": "strava_api_v3_activities_post",
+      "provider_alias_intent": "/api/v3/activities",
+      "text": "Create an Activity",
+      "category": "Activities",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "The name of the activity",
+          "required": true
+        },
+        "type": {
+          "type": "string",
+          "text": "Type of activity. For example - Run, Ride etc"
+        },
+        "sport_type": {
+          "type": "string",
+          "text": "Sport type of activity. For example - Run, MountainBikeRide, Ride, etc",
+          "required": true
+        },
+        "start_date_local": {
+          "type": "string",
+          "text": "ISO 8601 formatted date time",
+          "required": true
+        },
+        "elapsed_time": {
+          "type": "number",
+          "text": "In seconds",
+          "required": true
+        },
+        "description": {
+          "type": "string",
+          "text": "Description of the activity"
+        },
+        "distance": {
+          "type": "number",
+          "text": "In meters"
+        },
+        "trainer": {
+          "type": "number",
+          "text": "Set to 1 to mark as a trainer activity"
+        },
+        "commute": {
+          "type": "number",
+          "text": "Set to 1 to mark as commute"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Creates a manual activity for an athlete, requires activity:write scope.",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/activities",
+        "alias_endpoint": "/strava/api/v3/activities",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Activities-createActivity"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_activities_id_get": {
+      "provider_intent": "strava_api_v3_activities_id_get",
+      "provider_alias_intent": "/api/v3/activities/id",
+      "text": "Get Activity",
+      "category": "Activities",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the activity",
+          "required": true
+        },
+        "include_all_efforts": {
+          "type": "boolean",
+          "text": "To include all segments efforts",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the activity",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns the given activity that is owned by the authenticated athlete. Requires activity:read for Everyone and Followers activities. Requires activity:read_all for Only Me activities.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/activities/{id}",
+        "alias_endpoint": "/strava/api/v3/activities/id",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Activities-getActivityById"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_activities_id_comments_get": {
+      "provider_intent": "strava_api_v3_activities_id_comments_get",
+      "provider_alias_intent": "/api/v3/activities/id/comments",
+      "text": "List Activity Comments",
+      "category": "Activities",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the activity",
+          "required": true
+        },
+        "page": {
+          "type": "number",
+          "text": "Deprecated. Prefer to use after_cursor"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Deprecated. Prefer to use page_size"
+        },
+        "page_size": {
+          "type": "number",
+          "text": "Number of items per page. Defaults to 30"
+        },
+        "after_cursor": {
+          "type": "string",
+          "text": "Cursor of the last item in the previous page of results, used to request the subsequent page of results. When omitted, the first page of results is fetched"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the activity",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns the comments on the given activity. Requires activity:read for Everyone and Followers activities. Requires activity:read_all for Only Me activities.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/activities/{id}/comments",
+        "alias_endpoint": "/strava/api/v3/activities/id/comments",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Activities-getCommentsByActivityId"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_activities_id_kudos_get": {
+      "provider_intent": "strava_api_v3_activities_id_kudos_get",
+      "provider_alias_intent": "/api/v3/activities/id/kudos",
+      "text": "List Activity Kudoers",
+      "category": "Activities",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the activity",
+          "required": true
+        },
+        "page": {
+          "type": "number",
+          "text": "Page number. Defaults to 1."
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Number of items per page. Defaults to 30"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the activity",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns the athletes who kudoed an activity identified by an identifier. Requires activity:read for Everyone and Followers activities. Requires activity:read_all for Only Me activities.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/activities/{id}/kudos",
+        "alias_endpoint": "/strava/api/v3/activities/id/kudos",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Activities-getKudoersByActivityId"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_activities_id_laps_get": {
+      "provider_intent": "strava_api_v3_activities_id_laps_get",
+      "provider_alias_intent": "/api/v3/activities/id/laps",
+      "text": "List Activity Laps",
+      "category": "Activities",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the activity",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the activity",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns the laps of an activity identified by an identifier. Requires activity:read for Everyone and Followers activities. Requires activity:read_all for Only Me activities.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/activities/{id}/laps",
+        "alias_endpoint": "/strava/api/v3/activities/id/laps",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Activities-getLapsByActivityId"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_athlete_activities_get": {
+      "provider_intent": "strava_api_v3_athlete_activities_get",
+      "provider_alias_intent": "/api/v3/athlete/activities",
+      "text": "List Athlete Activities",
+      "category": "Activities",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "before": {
+          "type": "number",
+          "text": "An epoch timestamp to use for filtering activities that have taken place before a certain time"
+        },
+        "after": {
+          "type": "number",
+          "text": "An epoch timestamp to use for filtering activities that have taken place after a certain time"
+        },
+        "page": {
+          "type": "number",
+          "text": "Page number"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Number of items per page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns the activities of an athlete for a specific identifier. Requires activity:read. Only Me activities will be filtered out unless requested by a token with activity:read_all.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/athlete/activities",
+        "alias_endpoint": "/strava/api/v3/athlete/activities",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Activities-getLoggedInAthleteActivities"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_activities_id_zones_get": {
+      "provider_intent": "strava_api_v3_activities_id_zones_get",
+      "provider_alias_intent": "/api/v3/activities/id/zones",
+      "text": "Get Activity Zones",
+      "category": "Activities",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the activity",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the activity",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Summit Feature. Returns the zones of a given activity. Requires activity:read for Everyone and Followers activities. Requires activity:read_all for Only Me activities.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/activities/{id}/zones",
+        "alias_endpoint": "/strava/api/v3/activities/id/zones",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Activities-getZonesByActivityId"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_activities_id_put": {
+      "provider_intent": "strava_api_v3_activities_id_put",
+      "provider_alias_intent": "/api/v3/activities/id",
+      "text": "Update Activity",
+      "category": "Activities",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the activity",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the activity",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Updates the given activity that is owned by the authenticated athlete. Requires activity:write. Also requires activity:read_all in order to update Only Me activities\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/activities/{id}",
+        "alias_endpoint": "/strava/api/v3/activities/id",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Activities-updateActivityById"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_athlete_get": {
+      "provider_intent": "strava_api_v3_athlete_get",
+      "provider_alias_intent": "/api/v3/athlete",
+      "text": "Get Authenticated Athlete",
+      "category": "Athletes",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns the currently authenticated athlete. Tokens with profile:read_all scope will receive a detailed athlete representation; all others will receive a summary representation.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/athlete",
+        "alias_endpoint": "/strava/api/v3/athlete",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Athletes-getLoggedInAthlete"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_athlete_zones_get": {
+      "provider_intent": "strava_api_v3_athlete_zones_get",
+      "provider_alias_intent": "/api/v3/athlete/zones",
+      "text": "Get Zones",
+      "category": "Athletes",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns the the authenticated athlete's heart rate and power zones. Requires profile:read_all.\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/athlete/zones",
+        "alias_endpoint": "/strava/api/v3/athlete/zones",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Athletes-getLoggedInAthleteZones"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "profile:read_all",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_athletes_id_stats_get": {
+      "provider_intent": "strava_api_v3_athletes_id_stats_get",
+      "provider_alias_intent": "/api/v3/athletes/id/stats",
+      "text": "Get Athlete Stats",
+      "category": "Athletes",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the athlete. Must match the authenticated athlete",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the athlete. Must match the authenticated athlete",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns the activity stats of an athlete. Only includes data from activities set to Everyone visibilty.\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/athletes/{id}/stats",
+        "alias_endpoint": "/strava/api/v3/athletes/id/stats",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Athletes-getStats"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_athlete_put": {
+      "provider_intent": "strava_api_v3_athlete_put",
+      "provider_alias_intent": "/api/v3/athlete",
+      "text": "Update Athlete",
+      "category": "Athletes",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "weight": {
+          "type": "number",
+          "text": "The weight of the athlete in kilograms",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "weight": {
+          "type": "number",
+          "text": "The weight of the athlete in kilograms",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Update the currently authenticated athlete. Requires profile:write scope.\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/athlete",
+        "alias_endpoint": "/strava/api/v3/athlete",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Athletes-updateLoggedInAthlete"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_clubs_id_activities_get": {
+      "provider_intent": "strava_api_v3_clubs_id_activities_get",
+      "provider_alias_intent": "/api/v3/clubs/id/activities",
+      "text": "List Club Activities",
+      "category": "Clubs",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the club",
+          "required": true
+        },
+        "page": {
+          "type": "number",
+          "text": "Page number"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Number of items per page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the club",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Retrieve recent activities from members of a specific club. The authenticated athlete must belong to the requested club in order to hit this endpoint. Pagination is supported. Athlete profile visibility is respected for all activities.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/clubs/{id}/activities",
+        "alias_endpoint": "/strava/api/v3/clubs/id/activities",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Clubs-getClubActivitiesById"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_clubs_id_admins_get": {
+      "provider_intent": "strava_api_v3_clubs_id_admins_get",
+      "provider_alias_intent": "/api/v3/clubs/id/admins",
+      "text": "List Club Administrators",
+      "category": "Clubs",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the club",
+          "required": true
+        },
+        "page": {
+          "type": "number",
+          "text": "Page number"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Number of items per page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the club",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns a list of the administrators of a given club.\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/clubs/{id}/admins",
+        "alias_endpoint": "/strava/api/v3/clubs/id/admins",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Clubs-getClubAdminsById"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_clubs_id_get": {
+      "provider_intent": "strava_api_v3_clubs_id_get",
+      "provider_alias_intent": "/api/v3/clubs/id",
+      "text": "Get Club",
+      "category": "Clubs",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the club",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the club",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns a given club using its identifier.\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/clubs/{id}",
+        "alias_endpoint": "/strava/api/v3/clubs/id",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Clubs-getClubById"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_clubs_id_members_get": {
+      "provider_intent": "strava_api_v3_clubs_id_members_get",
+      "provider_alias_intent": "/api/v3/clubs/id/members",
+      "text": "List Club Members",
+      "category": "Clubs",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the club",
+          "required": true
+        },
+        "page": {
+          "type": "number",
+          "text": "Page number"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Number of items per page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the club",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns a list of the athletes who are members of a given club.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/clubs/{id}/members",
+        "alias_endpoint": "/strava/api/v3/clubs/id/members",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Clubs-getClubMembersById"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_athlete_clubs_get": {
+      "provider_intent": "strava_api_v3_athlete_clubs_get",
+      "provider_alias_intent": "/api/v3/athlete/clubs",
+      "text": "List Athlete Clubs",
+      "category": "Clubs",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "number",
+          "text": "Page number"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Number of items per page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns a list of the clubs whose membership includes the authenticated athlete.\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/athlete/clubs",
+        "alias_endpoint": "/strava/api/v3/athlete/clubs",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Clubs-getLoggedInAthleteClubs"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_gear_id_get": {
+      "provider_intent": "strava_api_v3_gear_id_get",
+      "provider_alias_intent": "/api/v3/gear/id",
+      "text": "Get Equipment",
+      "category": "Gears",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the gear",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the gear",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns an equipment using its identifier.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/gear/{id}",
+        "alias_endpoint": "/strava/api/v3/gear/id",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Gears-getGearById"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_routes_id_export_gpx_get": {
+      "provider_intent": "strava_api_v3_routes_id_export_gpx_get",
+      "provider_alias_intent": "/api/v3/routes/id/export_gpx",
+      "text": "Export Route GPX",
+      "category": "Routes",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the route",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the route",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns a GPX file of the route. Requires read_all scope for private routes.\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/routes/{id}/export_gpx",
+        "alias_endpoint": "/strava/api/v3/routes/id/export_gpx",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Routes-getRouteAsGPX"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_routes_id_export_tcx_get": {
+      "provider_intent": "strava_api_v3_routes_id_export_tcx_get",
+      "provider_alias_intent": "/api/v3/routes/id/export_tcx",
+      "text": "Export Route TCX",
+      "category": "Routes",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the route",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the route",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns a TCX file of the route. Requires read_all scope for private routes.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/routes/{id}/export_tcx",
+        "alias_endpoint": "/strava/api/v3/routes/id/export_tcx",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Routes-getRouteAsTCX"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_routes_id_get": {
+      "provider_intent": "strava_api_v3_routes_id_get",
+      "provider_alias_intent": "/api/v3/routes/id",
+      "text": "Get Route",
+      "category": "Routes",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the route",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the route",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns a route using its identifier. Requires read_all scope for private routes.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/routes/{id}",
+        "alias_endpoint": "/strava/api/v3/routes/id",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Routes-getRouteById"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_athletes_id_routes_get": {
+      "provider_intent": "strava_api_v3_athletes_id_routes_get",
+      "provider_alias_intent": "/api/v3/athletes/id/routes",
+      "text": "List Athlete Routes",
+      "category": "Routes",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "number",
+          "text": "Page number"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Number of items per page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns a list of the routes created by the authenticated athlete. Private routes are filtered out unless requested by a token with read_all scope.\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/athletes/{id}/routes",
+        "alias_endpoint": "/strava/api/v3/athletes/id/routes",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Routes-getRoutesByAthleteId"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_segment_efforts_get": {
+      "provider_intent": "strava_api_v3_segment_efforts_get",
+      "provider_alias_intent": "/api/v3/segment_efforts",
+      "text": "List Segment Efforts",
+      "category": "SegmentEfforts",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "segment_id": {
+          "type": "number",
+          "text": "The identifier of the segment",
+          "required": true
+        },
+        "start_date_local": {
+          "type": "string",
+          "text": "ISO 8601 formatted date time"
+        },
+        "end_date_local": {
+          "type": "string",
+          "text": "ISO 8601 formatted date time"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Number of items per page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns a set of the authenticated athlete's segment efforts for a given segment. Requires subscription.\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/segment_efforts",
+        "alias_endpoint": "/strava/api/v3/segment_efforts",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-SegmentEfforts-getEffortsBySegmentId"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_segment_efforts_id_get": {
+      "provider_intent": "strava_api_v3_segment_efforts_id_get",
+      "provider_alias_intent": "/api/v3/segment_efforts/id",
+      "text": "Get Segment Efforts",
+      "category": "SegmentEfforts",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the segment effort",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the segment effort",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns a segment effort from an activity that is owned by the authenticated athlete. Requires subscription.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/segment_efforts/{id}",
+        "alias_endpoint": "/strava/api/v3/segment_efforts/id",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-SegmentEfforts-getSegmentEffortById"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_segments_explore_get": {
+      "provider_intent": "strava_api_v3_segments_explore_get",
+      "provider_alias_intent": "/api/v3/segments/explore",
+      "text": "Explore segments",
+      "category": "Segments",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "bounds": {
+          "type": "array",
+          "text": "The latitude and longitude for two points describing a rectangular boundary for the search: [southwest corner latitutde, southwest corner longitude, northeast corner latitude, northeast corner longitude]",
+          "required": true
+        },
+        "activity_type": {
+          "type": "enum",
+          "text": "Desired activity type. May take one of the following values: running, riding",
+          "enum": [
+            "running",
+            "riding"
+          ]
+        },
+        "min_cat": {
+          "type": "number",
+          "text": "The minimum climbing category"
+        },
+        "max_cat": {
+          "type": "number",
+          "text": "The maximum climbing category"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns the top 10 segments matching a specified query.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/segments/explore",
+        "alias_endpoint": "/strava/api/v3/segments/explore",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Segments-exploreSegments"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_segments_starred_get": {
+      "provider_intent": "strava_api_v3_segments_starred_get",
+      "provider_alias_intent": "/api/v3/segments/starred",
+      "text": "List Starred Segments",
+      "category": "Segments",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "number",
+          "text": "Page number"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Number of items per page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "List of the authenticated athlete's starred segments. Private segments are filtered out unless requested by a token with read_all scope.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/segments/starred",
+        "alias_endpoint": "/strava/api/v3/segments/starred",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Segments-getLoggedInAthleteStarredSegments"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_segments_id_get": {
+      "provider_intent": "strava_api_v3_segments_id_get",
+      "provider_alias_intent": "/api/v3/segments/id",
+      "text": "Get Segment",
+      "category": "Segments",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the segment",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the segment",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns the specified segment. read_all scope required in order to retrieve athlete-specific segment information, or to retrieve private segments.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/segments/{id}",
+        "alias_endpoint": "/strava/api/v3/segments/id",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Segments-getSegmentById"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_segments_id_starred_put": {
+      "provider_intent": "strava_api_v3_segments_id_starred_put",
+      "provider_alias_intent": "/api/v3/segments/id/starred",
+      "text": "Star Segment",
+      "category": "Segments",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the segment to star",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "starred": {
+          "type": "boolean",
+          "text": "If true, star the segment; if false, unstar the segment",
+          "required": true,
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the segment to star",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Stars/Unstars the given segment for the authenticated athlete. Requires profile:write scope.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/segments/{id}/starred",
+        "alias_endpoint": "/strava/api/v3/segments/id/starred",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Segments-starSegment"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_activities_id_streams_get": {
+      "provider_intent": "strava_api_v3_activities_id_streams_get",
+      "provider_alias_intent": "/api/v3/activities/id/streams",
+      "text": "Get Activity Streams",
+      "category": "Streams",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the activity",
+          "required": true
+        },
+        "keys": {
+          "type": "array",
+          "text": "Desired stream types",
+          "required": true
+        },
+        "key_by_type": {
+          "type": "boolean",
+          "text": "Must be true",
+          "required": true,
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the activity",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns the given activity's streams. Requires activity:read scope. Requires activity:read_all scope for Only Me activities.\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/activities/{id}/streams",
+        "alias_endpoint": "/strava/api/v3/activities/id/streams",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Streams-getActivityStreams"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_routes_id_streams_get": {
+      "provider_intent": "strava_api_v3_routes_id_streams_get",
+      "provider_alias_intent": "/api/v3/routes/id/streams",
+      "text": "Get Route Streams",
+      "category": "Streams",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the route",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the route",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns the given route's streams. Requires read_all scope for private routes.\n\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/routes/{id}/streams",
+        "alias_endpoint": "/strava/api/v3/routes/id/streams",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Streams-getRouteStreams"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_segment_efforts_id_streams_get": {
+      "provider_intent": "strava_api_v3_segment_efforts_id_streams_get",
+      "provider_alias_intent": "/api/v3/segment_efforts/id/streams",
+      "text": "Get Segment Effort Streams",
+      "category": "Streams",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the segment effort",
+          "required": true
+        },
+        "keys": {
+          "type": "array",
+          "text": "Desired stream types",
+          "required": true
+        },
+        "key_by_type": {
+          "type": "boolean",
+          "text": "Must be true",
+          "required": true,
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the segment effort",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns a set of streams for a segment effort completed by the authenticated athlete. Requires read_all scope.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/segment_efforts/{id}/streams",
+        "alias_endpoint": "/strava/api/v3/segment_efforts/id/streams",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Streams-getSegmentEffortStreams"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_segments_id_streams_get": {
+      "provider_intent": "strava_api_v3_segments_id_streams_get",
+      "provider_alias_intent": "/api/v3/segments/id/streams",
+      "text": "Get Segment Streams",
+      "category": "Streams",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the segment",
+          "required": true
+        },
+        "keys": {
+          "type": "array",
+          "text": "Desired stream types",
+          "required": true
+        },
+        "key_by_type": {
+          "type": "boolean",
+          "text": "Must be true",
+          "required": true,
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the segment",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns the given segment's streams. Requires read_all scope for private segments.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/segments/{id}/streams",
+        "alias_endpoint": "/strava/api/v3/segments/id/streams",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Streams-getSegmentStreams"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_uploads_post": {
+      "provider_intent": "strava_api_v3_uploads_post",
+      "provider_alias_intent": "/api/v3/uploads",
+      "text": "Upload Activity",
+      "category": "Uploads",
+      "method": "POST",
+      "type": "UPLOAD",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "file": {
+          "type": "file",
+          "text": "The uploaded file"
+        },
+        "name": {
+          "type": "string",
+          "text": "The desired name of the resulting activity"
+        },
+        "description": {
+          "type": "string",
+          "text": "The desired description of the resulting activity"
+        },
+        "trainer": {
+          "type": "string",
+          "text": "Whether the resulting activity should be marked as having been performed on a trainer"
+        },
+        "commute": {
+          "type": "string",
+          "text": "Whether the resulting activity should be tagged as a commute"
+        },
+        "data_type": {
+          "type": "enum",
+          "text": "The format of the uploaded file. May take one of the following values: fit, fit.gz, tcx, tcx.gz, gpx, gpx.g",
+          "enum": [
+            "fit",
+            "fit.gz",
+            "tcx",
+            "tcx.gz",
+            "gpx",
+            "gpx.g"
+          ]
+        },
+        "external_id": {
+          "type": "string",
+          "text": "The desired external identifier of the resulting activity"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Uploads a new data file to create an activity from. Requires activity:write scope.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/uploads",
+        "alias_endpoint": "/strava/api/v3/uploads",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Uploads"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "strava_api_v3_uploads_uploadid_get": {
+      "provider_intent": "strava_api_v3_uploads_uploadid_get",
+      "provider_alias_intent": "/api/v3/uploads/uploadid",
+      "text": "Get Upload",
+      "category": "Uploads",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the upload",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "The identifier of the upload",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns an upload for a given identifier. Requires activity:write scope.\n",
+        "rate_limit": [],
+        "api_endpoint": "https://www.strava.com/api/v3/uploads/{uploadId}",
+        "alias_endpoint": "/strava/api/v3/uploads/uploadid",
+        "api_ref": "https://developers.strava.com/docs/reference/#api-Uploads-getUploadById"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

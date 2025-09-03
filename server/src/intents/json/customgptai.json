@@ -1,0 +1,2146 @@
+{
+  "routes": {
+    "customgptai__api__v1__projects__project_id__citations__citation_id___get": {
+      "provider_intent": "customgptai__api__v1__projects__project_id__citations__citation_id___get",
+      "provider_alias_intent": "/api/v1/projects/project_id/citations/citation_id",
+      "text": "Get the Open Graph data for a citation",
+      "category": "Citations",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique project identifier",
+          "required": true
+        },
+        "citation_id": {
+          "type": "number",
+          "text": "The unique citation identifier",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique project identifier",
+          "required": true
+        },
+        "citation_id": {
+          "type": "number",
+          "text": "The unique citation identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve the Open Graph data for a citation",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}/citations/{citation_id}",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id/citations/citation_id",
+        "api_ref": "https://docs.customgpt.ai/reference/get_api-v1-projects-projectid-citations-citationid"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id__conversations___get": {
+      "provider_intent": "customgptai__api__v1__projects__project_id__conversations___get",
+      "provider_alias_intent": "/api/v1/projects/project_id/conversations",
+      "text": "List all conversations for a project",
+      "category": "Conversations",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The ID of the project to get the conversations for",
+          "required": true
+        },
+        "page": {
+          "type": "number",
+          "text": "Page number to return. Defaults to 1"
+        },
+        "order": {
+          "type": "string",
+          "text": "The order to sort the results in given direction. Defaults to desc"
+        },
+        "orderBy": {
+          "type": "string",
+          "text": "The orderBy to sort the results by given field. Defaults to id"
+        },
+        "userFilter": {
+          "type": "string",
+          "text": "Filter the results by the user that created the conversation. Defaults to all"
+        },
+        "name": {
+          "type": "string",
+          "text": "Filter the results by conversation name"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The ID of the project to get the conversations for",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve all conversations associated with a project",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}/conversations",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id/conversations",
+        "api_ref": "https://docs.customgpt.ai/reference/get_api-v1-projects-projectid-conversations"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id__conversations___post": {
+      "provider_intent": "customgptai__api__v1__projects__project_id__conversations___post",
+      "provider_alias_intent": "/api/v1/projects/project_id/conversations",
+      "text": "Create a new conversation",
+      "category": "Conversations",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique identifier of a project",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Conversation name"
+        }
+      },
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique identifier of a project",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new conversation for a project",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}/conversations",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id/conversations",
+        "api_ref": "https://docs.customgpt.ai/reference/post_api-v1-projects-projectid-conversations"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id__conversations__session_id___put": {
+      "provider_intent": "customgptai__api__v1__projects__project_id__conversations__session_id___put",
+      "provider_alias_intent": "/api/v1/projects/project_id/conversations/session_id",
+      "text": "Update a conversation",
+      "category": "Conversations",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique project identifier",
+          "required": true
+        },
+        "session_id": {
+          "type": "number",
+          "text": "The unique session identifier",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "The new name of the conversation"
+        }
+      },
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique project identifier",
+          "required": true
+        },
+        "session_id": {
+          "type": "number",
+          "text": "The unique session identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update a conversation within a project",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}/conversations/{session_id}",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id/conversations/session_id",
+        "api_ref": "https://docs.customgpt.ai/reference/put_api-v1-projects-projectid-conversations-sessionid"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id__conversations__session_id___delete": {
+      "provider_intent": "customgptai__api__v1__projects__project_id__conversations__session_id___delete",
+      "provider_alias_intent": "/api/v1/projects/project_id/conversations/session_id",
+      "text": "Delete a conversation",
+      "category": "Conversations",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique project identifier",
+          "required": true
+        },
+        "session_id": {
+          "type": "number",
+          "text": "The unique session identifier",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique project identifier",
+          "required": true
+        },
+        "session_id": {
+          "type": "number",
+          "text": "The unique session identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a conversation within a project",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}/conversations/{session_id}",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id/conversations/session_id",
+        "api_ref": "https://docs.customgpt.ai/reference/delete_api-v1-projects-projectid-conversations-sessionid"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id__conversations__session_id__messages___get": {
+      "provider_intent": "customgptai__api__v1__projects__project_id__conversations__session_id__messages___get",
+      "provider_alias_intent": "/api/v1/projects/project_id/conversations/session_id/messages",
+      "text": "Retrieve messages that have been sent in a conversation",
+      "category": "Conversations",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The ID of the project to get the messages for",
+          "required": true
+        },
+        "session_id": {
+          "type": "number",
+          "text": "The session ID of the converstaions to get the messages for",
+          "required": true
+        },
+        "page": {
+          "type": "number",
+          "text": "Defaults to 1. Page number to return"
+        },
+        "order": {
+          "type": "string",
+          "text": "Defaults to desc. The order to sort the results by"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The ID of the project to get the messages for",
+          "required": true
+        },
+        "session_id": {
+          "type": "number",
+          "text": "The session ID of the converstaions to get the messages for",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve all messages sent within a conversation of a project",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}/conversations/{session_id}/messages",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id/conversations/session_id/messages",
+        "api_ref": "https://docs.customgpt.ai/reference/get_api-v1-projects-projectid-conversations-sessionid-messages"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id__conversations__session_id__messages___post": {
+      "provider_intent": "customgptai__api__v1__projects__project_id__conversations__session_id__messages___post",
+      "provider_alias_intent": "/api/v1/projects/project_id/conversations/session_id/messages",
+      "text": "Send a message to a conversation",
+      "category": "Conversations",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The ID of the project to get the messages for",
+          "required": true
+        },
+        "session_id": {
+          "type": "number",
+          "text": "The session ID of the converstaions to get the messages for",
+          "required": true
+        },
+        "stream": {
+          "type": "boolean",
+          "text": "Whether to stream the response or not, if stream the responses will be sent as data-only server-sent events as they become available, with the stream terminated by a status: 'finish' message. Example Python code.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "lang": {
+          "type": "string",
+          "text": "Defaults to en. The language to use for the prompt"
+        },
+        "external_id": {
+          "type": "string",
+          "text": "The external ID of the prompt history."
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "prompt": {
+          "type": "string",
+          "text": "Prompt to send to OpenAI"
+        },
+        "custom_persona": {
+          "type": "string|null",
+          "text": "Custom persona to use for the conversation"
+        },
+        "chatbot_model": {
+          "type": "string|null",
+          "text": "Chatbot model to use for the conversation"
+        },
+        "response_source": {
+          "type": "string|null",
+          "text": "Defaults to default. By default, we ask ChatGPT to use only your content in its response (recommended). If you wish ChatGPT to improvise and use its own knowledgebase as well, you can set this to 'openai_content'."
+        }
+      },
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The ID of the project to get the messages for",
+          "required": true
+        },
+        "session_id": {
+          "type": "number",
+          "text": "The session ID of the converstaions to get the messages for",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Send a message to a conversation within a project",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}/conversations/{session_id}/messages",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id/conversations/session_id/messages",
+        "api_ref": "https://docs.customgpt.ai/reference/post_api-v1-projects-projectid-conversations-sessionid-messages"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id__pages___get": {
+      "provider_intent": "customgptai__api__v1__projects__project_id__pages___get",
+      "provider_alias_intent": "/api/v1/projects/project_id/pages",
+      "text": "List all pages that belong to a project",
+      "category": "Pages",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "number",
+          "text": "Page number to return"
+        },
+        "duration": {
+          "type": "number",
+          "text": "The duration of the projects to list. Defaults to 90 days."
+        },
+        "order": {
+          "type": "string",
+          "text": "The order of the projects to list. Defaults to desc."
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve a list of all pages associated with a project",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}/pages",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id/pages",
+        "api_ref": "https://docs.customgpt.ai/reference/get_api-v1-projects-projectid-pages"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id__pages__page_id___delete": {
+      "provider_intent": "customgptai__api__v1__projects__project_id__pages__page_id___delete",
+      "provider_alias_intent": "/api/v1/projects/project_id/pages/page_id",
+      "text": "Delete a certain page that belongs to a certain project",
+      "category": "Pages",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique project identifier",
+          "required": true
+        },
+        "page_id": {
+          "type": "number",
+          "text": "The page id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique project identifier",
+          "required": true
+        },
+        "page_id": {
+          "type": "number",
+          "text": "The page id",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a specific page within a project",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}/pages/{page_id}",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id/pages/page_id",
+        "api_ref": "https://docs.customgpt.ai/reference/delete_api-v1-projects-projectid-pages-pageid"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id__pages__page_id__reindex___post": {
+      "provider_intent": "customgptai__api__v1__projects__project_id__pages__page_id__reindex___post",
+      "provider_alias_intent": "/api/v1/projects/project_id/pages/page_id/reindex",
+      "text": "Reindex a certain page that belongs to a certain project",
+      "category": "Pages",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique project identifier",
+          "required": true
+        },
+        "page_id": {
+          "type": "number",
+          "text": "The page id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique project identifier",
+          "required": true
+        },
+        "page_id": {
+          "type": "number",
+          "text": "The page id",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Reindex a specific page within a project",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}/pages/{page_id}/reindex",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id/pages/page_id/reindex",
+        "api_ref": "https://docs.customgpt.ai/reference/post_api-v1-projects-projectid-pages-pageid-reindex"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__preview__id___get": {
+      "provider_intent": "customgptai__api__v1__preview__id___get",
+      "provider_alias_intent": "/api/v1/preview/id",
+      "text": "Preview file from a citation",
+      "category": "Pages",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "The unique identifier",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "The unique identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Preview a specific page within a project",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/preview/{id}",
+        "alias_endpoint": "/customgptai/api/v1/preview/id",
+        "api_ref": "https://docs.customgpt.ai/reference/get_api-v1-preview-id"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id__pages__page_id__metadata___get": {
+      "provider_intent": "customgptai__api__v1__projects__project_id__pages__page_id__metadata___get",
+      "provider_alias_intent": "/api/v1/projects/project_id/pages/page_id/metadata",
+      "text": "Get the Metadata for a certain page",
+      "category": "Pages Metadata",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique project identifier",
+          "required": true
+        },
+        "page_id": {
+          "type": "number",
+          "text": "The unique page identifier",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique project identifier",
+          "required": true
+        },
+        "page_id": {
+          "type": "number",
+          "text": "The unique page identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve the Metadata for a page",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}/pages/{page_id}/metadata",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id/pages/page_id/metadata",
+        "api_ref": "https://docs.customgpt.ai/reference/get_api-v1-projects-projectid-pages-pageid-metadata"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id__pages__page_id__metadata___put": {
+      "provider_intent": "customgptai__api__v1__projects__project_id__pages__page_id__metadata___put",
+      "provider_alias_intent": "/api/v1/projects/project_id/pages/page_id/metadata",
+      "text": "Update metadata for a certain page",
+      "category": "Pages Metadata",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The id of a project in which page is stored",
+          "required": true
+        },
+        "page_id": {
+          "type": "number",
+          "text": "The id of a page in which metadata will be updated",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "title": {
+          "type": "string|null",
+          "text": "The title of the page used in citations"
+        },
+        "url": {
+          "type": "string|null",
+          "text": "The URL of the page used in citations"
+        },
+        "description": {
+          "type": "string|null",
+          "text": "The description of the page used in citations"
+        },
+        "image": {
+          "type": "string|null",
+          "text": "The URL of the image used in citations"
+        }
+      },
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The id of a project in which page is stored",
+          "required": true
+        },
+        "page_id": {
+          "type": "number",
+          "text": "The id of a page in which metadata will be updated",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update the metadata for a specific page",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}/pages/{page_id}/metadata",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id/pages/page_id/metadata",
+        "api_ref": "https://docs.customgpt.ai/reference/put_api-v1-projects-projectid-pages-pageid-metadata"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id__plugins___get": {
+      "provider_intent": "customgptai__api__v1__projects__project_id__plugins___get",
+      "provider_alias_intent": "/api/v1/projects/project_id/plugins",
+      "text": "Show a certain project plugin",
+      "category": "Project Plugins",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique identifier of a project",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique identifier of a project",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve the plugin details associated with a project",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}/plugins",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id/plugins",
+        "api_ref": "https://docs.customgpt.ai/reference/get_api-v1-projects-projectid-plugins"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id__plugins___post": {
+      "provider_intent": "customgptai__api__v1__projects__project_id__plugins___post",
+      "provider_alias_intent": "/api/v1/projects/project_id/plugins",
+      "text": "Create a plugin",
+      "category": "Project Plugins",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The id of a project in which plugin will be stored",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "model_name": {
+          "type": "string",
+          "text": "Model Name"
+        },
+        "human_name": {
+          "type": "string",
+          "text": "Name For Human"
+        },
+        "keywords": {
+          "type": "string",
+          "text": "Keywords For Model"
+        },
+        "description": {
+          "type": "string",
+          "text": "Description For Human"
+        },
+        "is_active": {
+          "type": "boolean",
+          "text": "Whether the project plugin is active or not",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The id of a project in which plugin will be stored",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new plugin for a specific project",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}/plugins",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id/plugins",
+        "api_ref": "https://docs.customgpt.ai/reference/post_api-v1-projects-projectid-plugins"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id__plugins___put": {
+      "provider_intent": "customgptai__api__v1__projects__project_id__plugins___put",
+      "provider_alias_intent": "/api/v1/projects/project_id/plugins",
+      "text": "Update a plugin",
+      "category": "Project Plugins",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The id of a project in which plugin will be stored",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "model_name": {
+          "type": "string",
+          "text": "Model Name"
+        },
+        "human_name": {
+          "type": "string",
+          "text": "Name For Human"
+        },
+        "keywords": {
+          "type": "string",
+          "text": "Keywords For Model"
+        },
+        "description": {
+          "type": "string",
+          "text": "Description For Human"
+        },
+        "is_active": {
+          "type": "boolean",
+          "text": "Whether the project plugin is active or not",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The id of a project in which plugin will be stored",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update the plugin configuration for a specific project",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}/plugins",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id/plugins",
+        "api_ref": "https://docs.customgpt.ai/reference/put_api-v1-projects-projectid-plugins"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id__settings___get": {
+      "provider_intent": "customgptai__api__v1__projects__project_id__settings___get",
+      "provider_alias_intent": "/api/v1/projects/project_id/settings",
+      "text": "Get project settings",
+      "category": "Project Settings",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique identifier of a project",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique identifier of a project",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve the project settings for a specific project",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}/settings",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id/settings",
+        "api_ref": "https://docs.customgpt.ai/reference/get_api-v1-projects-projectid-settings"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id__settings___post": {
+      "provider_intent": "customgptai__api__v1__projects__project_id__settings___post",
+      "provider_alias_intent": "/api/v1/projects/project_id/settings",
+      "text": "Update project settings",
+      "category": "Project Settings",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique identifier of a project",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "chat_bot_avatar": {
+          "type": "file",
+          "text": "This is the avatar that is shown in the bot response. You can make it a profile picture or your company logo."
+        },
+        "chat_bot_bg": {
+          "type": "file",
+          "text": "This is the background image shown in the bot conversations widget. You can change it to a company logo or background image."
+        },
+        "default_prompt": {
+          "type": "string",
+          "text": "This is the default prompt shown to the user. You can customize this for your company or client."
+        },
+        "example_questions": {
+          "type": "array",
+          "text": "These are example questions shown to guide the bot users. You can create customized questions to suit your company or client needs."
+        },
+        "response_source": {
+          "type": "string",
+          "text": "By default, we ask ChatGPT to use only your content in its response (recommended). If you wish ChatGPT to improvise and use its own knowledgebase as well, you can select 'My Content + ChatGPT' "
+        },
+        "chatbot_msg_lang": {
+          "type": "string",
+          "text": "By default, the chatbot messages like 'Ask Me Anything' are in English. You can customize this to your preferred language. Please note: This setting does not control what language ChatGPT responds in. That is controlled by the user's question. So a user asking in Portuguese, will most likely get a response from ChatGPT in Portuguese."
+        },
+        "chatbot_color": {
+          "type": "string",
+          "text": "Color of the chatbot in hex format"
+        },
+        "chatbot_toolbar_color": {
+          "type": "string",
+          "text": "Color of the chatbot toolbar in hex format"
+        },
+        "persona_instructions": {
+          "type": "string|null",
+          "text": "Customize your chatbot behavior by adjusting the system parameter to control its personality traits and role."
+        },
+        "citations_answer_source_label_msg": {
+          "type": "string|null",
+          "text": "This is the message shown to indicate where the response came from. You can customize this message based on your business or language."
+        },
+        "citations_sources_label_msg": {
+          "type": "string|null",
+          "text": "This is the message shown for the Sources label. You can customize this message based on your business or language."
+        },
+        "hang_in_there_msg": {
+          "type": "string|null",
+          "text": "This is the message shown when the bot is thinking and waiting to answer. You can customize this message based on your tone, personality or language."
+        },
+        "chatbot_siesta_msg": {
+          "type": "string|null",
+          "text": "This is the message shown when the bot has encountered a problem or error. You can customize this message based on your tone, personality or language."
+        },
+        "is_loading_indicator_enabled": {
+          "type": "boolean|null",
+          "text": "Defaults to true. Show animated loading indicator while waiting for a response from the chatbot."
+        },
+        "enable_citations": {
+          "type": "boolean|null",
+          "text": "Defaults to true. Each chatbot response shows an option for the user to see the sources/citations from your content from which the response was generated."
+        },
+        "citations_view_type": {
+          "type": "string|null",
+          "text": "Defaults to user. Control how citations are shown. By default, the user can initiate to see the citations. You can choose to have it 'Auto Shown' or 'Auto Hide' "
+        },
+        "no_answer_message": {
+          "type": "string|null",
+          "text": "This is the message shown when the bot cannot answer. You can customize it to a message asking the user to contact customer support or leave their email / phone."
+        },
+        "ending_message": {
+          "type": "string|null",
+          "text": "You can instruct ChatGPT to end every response with some text like asking 'Please email us for further support' (Not recommended for most use cases)"
+        },
+        "remove_branding": {
+          "type": "boolean|null",
+          "text": "Controls what branding is shown at the bottom of the chatbot."
+        },
+        "enable_recaptcha_for_public_chatbots": {
+          "type": "boolean|null",
+          "text": "Should we check messages from guests with Recaptcha when your chatbot is publicly available (i.e. shared or embedded)."
+        },
+        "chatbot_model": {
+          "type": "number|null",
+          "text": "This is the model used by the chatbot. You can choose a different model to suit your needs."
+        },
+        "is_selling_enabled": {
+          "type": "boolean|null",
+          "text": "Enable selling of chatbot for monetization"
+        }
+      },
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique identifier of a project",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update the project settings for a specific project",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}/settings",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id/settings",
+        "api_ref": "https://docs.customgpt.ai/reference/post_api-v1-projects-projectid-settings"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects___get": {
+      "provider_intent": "customgptai__api__v1__projects___get",
+      "provider_alias_intent": "/api/v1/projects",
+      "text": "List all projects",
+      "category": "Projects",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "number",
+          "text": "Page number to return. Defaults to 1"
+        },
+        "duration": {
+          "type": "number",
+          "text": "The duration of the projects to list."
+        },
+        "order": {
+          "type": "string",
+          "text": "The order of the projects to list. Defaults to desc"
+        },
+        "orderBy": {
+          "type": "string",
+          "text": "The orderBy to sort the results by given field. Defaults to id"
+        },
+        "width": {
+          "type": "string",
+          "text": "The width of the embed code. Defaults to 100%"
+        },
+        "height": {
+          "type": "string",
+          "text": "The height of the embed code. Defaults to auto"
+        },
+        "name": {
+          "type": "string",
+          "text": "Filter the results by project name"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Returns a list of your projects",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects",
+        "alias_endpoint": "/customgptai/api/v1/projects",
+        "api_ref": "https://docs.customgpt.ai/reference/get_api-v1-projects"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects___post": {
+      "provider_intent": "customgptai__api__v1__projects___post",
+      "provider_alias_intent": "/api/v1/projects",
+      "text": "Create a new project",
+      "category": "Projects",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "project_name": {
+          "type": "string",
+          "text": "Project name"
+        },
+        "sitemap_path": {
+          "type": "string",
+          "text": "The sitemap path"
+        },
+        "file_data_retension": {
+          "type": "boolean",
+          "text": "File data retension",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "is_ocr_enabled": {
+          "type": "boolean",
+          "text": "OCR enabled",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "is_anonymized": {
+          "type": "boolean",
+          "text": "Anonymized",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "file": {
+          "type": "file",
+          "text": "The submitted file."
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new project by importing data either from a sitemap or an uploaded file",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects",
+        "alias_endpoint": "/customgptai/api/v1/projects",
+        "api_ref": "https://docs.customgpt.ai/reference/post_api-v1-projects"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id___get": {
+      "provider_intent": "customgptai__api__v1__projects__project_id___get",
+      "provider_alias_intent": "/api/v1/projects/project_id",
+      "text": "Show a certain project",
+      "category": "Projects",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique identifier of a project",
+          "required": true
+        },
+        "width": {
+          "type": "string",
+          "text": "The width of the embed code. Defaults to 100%"
+        },
+        "height": {
+          "type": "string",
+          "text": "The height of the embed code. Defaults to auto"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique identifier of a project",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve details of a project",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id",
+        "api_ref": "https://docs.customgpt.ai/reference/get_api-v1-projects-projectid"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id___post": {
+      "provider_intent": "customgptai__api__v1__projects__project_id___post",
+      "provider_alias_intent": "/api/v1/projects/project_id",
+      "text": "Update a certain project",
+      "category": "Projects",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique identifier of a project",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "project_name": {
+          "type": "string",
+          "text": "Project name"
+        },
+        "is_shared": {
+          "type": "boolean",
+          "text": "Whether the project is shared or not",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "sitemap_path": {
+          "type": "string",
+          "text": "The sitemap path"
+        },
+        "file_data_retension": {
+          "type": "boolean",
+          "text": "File data retension",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "is_ocr_enabled": {
+          "type": "boolean",
+          "text": "OCR enabled",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "is_anonymized": {
+          "type": "boolean",
+          "text": "Anonymized",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "file": {
+          "type": "file",
+          "text": "The submitted file."
+        }
+      },
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique identifier of a project",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update a project with specific details",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id",
+        "api_ref": "https://docs.customgpt.ai/reference/post_api-v1-projects-projectid"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id___delete": {
+      "provider_intent": "customgptai__api__v1__projects__project_id___delete",
+      "provider_alias_intent": "/api/v1/projects/project_id",
+      "text": "Delete a certain project",
+      "category": "Projects",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique identifier of a project",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique identifier of a project",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a project",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id",
+        "api_ref": "https://docs.customgpt.ai/reference/delete_api-v1-projects-projectid"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id__replicate___post": {
+      "provider_intent": "customgptai__api__v1__projects__project_id__replicate___post",
+      "provider_alias_intent": "/api/v1/projects/project_id/replicate",
+      "text": "Replicate project by given Project ID",
+      "category": "Projects",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique identifier of a project",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique identifier of a project",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a copy of project by replicating project info, settings, sitemap sources and uploaded files",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}/replicate",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id/replicate",
+        "api_ref": "https://docs.customgpt.ai/reference/post_api-v1-projects-projectid-replicate"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id__stats___get": {
+      "provider_intent": "customgptai__api__v1__projects__project_id__stats___get",
+      "provider_alias_intent": "/api/v1/projects/project_id/stats",
+      "text": "Get the stats for a certain project",
+      "category": "Projects",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique identifier of a project",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique identifier of a project",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve statistical data for a project",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}/stats",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id/stats",
+        "api_ref": "https://docs.customgpt.ai/reference/get_api-v1-projects-projectid-stats"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id__reports__traffic___get": {
+      "provider_intent": "customgptai__api__v1__projects__project_id__reports__traffic___get",
+      "provider_alias_intent": "/api/v1/projects/project_id/reports/traffic",
+      "text": "Provide summary of various metrics of users interactions with the application",
+      "category": "Reports & Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The ID of the project to get traffic for",
+          "required": true
+        },
+        "filters": {
+          "type": "array",
+          "text": "Filters to return traffic metrics for",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The ID of the project to get traffic for",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Provide summary of various metrics of users interactions with the application",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}/reports/traffic",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id/reports/traffic",
+        "api_ref": "https://docs.customgpt.ai/reference/get_api-v1-projects-projectid-reports-traffic"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id__reports__queries___get": {
+      "provider_intent": "customgptai__api__v1__projects__project_id__reports__queries___get",
+      "provider_alias_intent": "/api/v1/projects/project_id/reports/queries",
+      "text": "Provide summary of overall query metrics across all conversations",
+      "category": "Reports & Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The ID of the project to get queries for",
+          "required": true
+        },
+        "filters": {
+          "type": "array",
+          "text": "Filters to return queries metrics for",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The ID of the project to get queries for",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Provide summary of overall query metrics across all conversations",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}/reports/queries",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id/reports/queries",
+        "api_ref": "https://docs.customgpt.ai/reference/get_api-v1-projects-projectid-reports-queries"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id__reports__conversations___get": {
+      "provider_intent": "customgptai__api__v1__projects__project_id__reports__conversations___get",
+      "provider_alias_intent": "/api/v1/projects/project_id/reports/conversations",
+      "text": "Provide summary of overall conversation metrics",
+      "category": "Reports & Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The ID of the project to get conversations for",
+          "required": true
+        },
+        "filters": {
+          "type": "array",
+          "text": "Filters to return conversations metrics for",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The ID of the project to get conversations for",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Provide summary of overall conversation metrics",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}/reports/conversations",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id/reports/conversations",
+        "api_ref": "https://docs.customgpt.ai/reference/get_api-v1-projects-projectid-reports-conversations"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id__reports__analysis___get": {
+      "provider_intent": "customgptai__api__v1__projects__project_id__reports__analysis___get",
+      "provider_alias_intent": "/api/v1/projects/project_id/reports/analysis",
+      "text": "Provide graph-ready analysis data of various metrics",
+      "category": "Reports & Analytics",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The ID of the project to get analysis for",
+          "required": true
+        },
+        "filters": {
+          "type": "array",
+          "text": "Filters to return graph-ready analysis data for",
+          "required": true
+        },
+        "interval": {
+          "type": "string",
+          "text": "Defaults to weekly. Interval to return graph-ready analysis data inbetween"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The ID of the project to get analysis for",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Provide graph-ready analysis data of various metrics",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}/reports/analysis",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id/reports/analysis",
+        "api_ref": "https://docs.customgpt.ai/reference/get_api-v1-projects-projectid-reports-analysis"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id__sources___get": {
+      "provider_intent": "customgptai__api__v1__projects__project_id__sources___get",
+      "provider_alias_intent": "/api/v1/projects/project_id/sources",
+      "text": "List a certain project's sources",
+      "category": "Sources",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique identifier of a project",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique identifier of a project",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve a list of all sources associated with a given project",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}/sources",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id/sources",
+        "api_ref": "https://docs.customgpt.ai/reference/get_api-v1-projects-projectid-sources"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id__sources___post": {
+      "provider_intent": "customgptai__api__v1__projects__project_id__sources___post",
+      "provider_alias_intent": "/api/v1/projects/project_id/sources",
+      "text": "Create a new project source",
+      "category": "Sources",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique identifier of a project",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "sitemap_path": {
+          "type": "string",
+          "text": "The sitemap path"
+        },
+        "file_data_retension": {
+          "type": "boolean",
+          "text": "File data retention",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "is_ocr_enabled": {
+          "type": "boolean",
+          "text": "OCR enabled",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "is_anonymized": {
+          "type": "boolean",
+          "text": "Anonymized",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "file": {
+          "type": "file",
+          "text": "The submitted file."
+        }
+      },
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique identifier of a project",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new data source for a given project",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}/sources",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id/sources",
+        "api_ref": "https://docs.customgpt.ai/reference/post_api-v1-projects-projectid-sources"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id__sources__source_id___put": {
+      "provider_intent": "customgptai__api__v1__projects__project_id__sources__source_id___put",
+      "provider_alias_intent": "/api/v1/projects/project_id/sources/source_id",
+      "text": "Update project source settings",
+      "category": "Sources",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique project identifier",
+          "required": true
+        },
+        "source_id": {
+          "type": "number",
+          "text": "The unique source identifier",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "executive_js": {
+          "type": "boolean",
+          "text": "Defaults to true. Whether the project source should execute JavaScript",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "data_refresh_frequency": {
+          "type": "string",
+          "text": "Defaults to never. The project source data refresh frequency"
+        },
+        "create_new_pages": {
+          "type": "boolean",
+          "text": "Defaults to true. Add new pages to project automatically during refresh project source",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "remove_unexist_pages": {
+          "type": "boolean",
+          "text": "Defaults to true. Remove pages from project automatically during refresh project source",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "refresh_existing_pages": {
+          "type": "string",
+          "text": "Defaults to never. Refresh existing page during refresh project source"
+        },
+        "refresh_schedule": {
+          "type": "array|null",
+          "text": "Defaults to Custom schedule for advanced data frequency"
+        }
+      },
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique project identifier",
+          "required": true
+        },
+        "source_id": {
+          "type": "number",
+          "text": "The unique source identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update a data source settings to change additional settings",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}/sources/{source_id}",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id/sources/source_id",
+        "api_ref": "https://docs.customgpt.ai/reference/put_api-v1-projects-projectid-sources-sourceid"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id__sources__source_id___delete": {
+      "provider_intent": "customgptai__api__v1__projects__project_id__sources__source_id___delete",
+      "provider_alias_intent": "/api/v1/projects/project_id/sources/source_id",
+      "text": "Delete a project source",
+      "category": "Sources",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique project identifier",
+          "required": true
+        },
+        "source_id": {
+          "type": "number",
+          "text": "The unique source identifier",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique project identifier",
+          "required": true
+        },
+        "source_id": {
+          "type": "number",
+          "text": "The unique source identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a source for a given project",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}/sources/{source_id}",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id/sources/source_id",
+        "api_ref": "https://docs.customgpt.ai/reference/delete_api-v1-projects-projectid-sources-sourceid"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__projects__project_id__sources__source_id__instant-sync___put": {
+      "provider_intent": "customgptai__api__v1__projects__project_id__sources__source_id__instant-sync___put",
+      "provider_alias_intent": "/api/v1/projects/project_id/sources/source_id/instant-sync",
+      "text": "Instant sync the specified sitemap",
+      "category": "Sources",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique project identifier",
+          "required": true
+        },
+        "source_id": {
+          "type": "number",
+          "text": "The unique source identifier",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "project_id": {
+          "type": "number",
+          "text": "The unique project identifier",
+          "required": true
+        },
+        "source_id": {
+          "type": "number",
+          "text": "The unique source identifier",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Instant sync the specified sitemap",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/projects/{project_id}/sources/{source_id}/instant-sync",
+        "alias_endpoint": "/customgptai/api/v1/projects/project_id/sources/source_id/instant-sync",
+        "api_ref": "https://docs.customgpt.ai/reference/put_api-v1-projects-projectid-sources-sourceid-instant-sync"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__user___get": {
+      "provider_intent": "customgptai__api__v1__user___get",
+      "provider_alias_intent": "/api/v1/user",
+      "text": "Show the user's profile",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve the profile information of the current user",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/user",
+        "alias_endpoint": "/customgptai/api/v1/user",
+        "api_ref": "https://docs.customgpt.ai/reference/get_api-v1-user"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "customgptai__api__v1__user___post": {
+      "provider_intent": "customgptai__api__v1__user___post",
+      "provider_alias_intent": "/api/v1/user",
+      "text": "Update the user's profile",
+      "category": "Users",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "profile_photo": {
+          "type": "file",
+          "text": "User profile photo"
+        },
+        "name": {
+          "type": "string",
+          "text": "User name"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update the profile of the current user",
+        "rate_limit": [],
+        "api_endpoint": "https://app.customgpt.ai/api/v1/user",
+        "alias_endpoint": "/customgptai/api/v1/user",
+        "api_ref": "https://docs.customgpt.ai/reference/post_api-v1-user"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

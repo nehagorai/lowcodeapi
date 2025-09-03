@@ -1,0 +1,396 @@
+{
+  "routes": {
+    "zohosalesiq__api__v1__screenname__chats__chat_id___get": {
+      "provider_intent": "zohosalesiq__api__v1__screenname__chats__chat_id___get",
+      "provider_alias_intent": "/api/v1/screenname/chats/chat_id",
+      "text": "Get Chat",
+      "category": "Chat",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "screenname": {
+          "type": "string",
+          "text": "Screenname",
+          "required": true
+        },
+        "chat_id": {
+          "type": "string",
+          "text": "Chat Id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "screenname": {
+          "type": "string",
+          "text": "Screenname",
+          "required": true
+        },
+        "chat_id": {
+          "type": "string",
+          "text": "Chat Id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "You can get information about a specific chat in your department by providing the chat_id",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/<screenname>/chats/<chat_id>",
+        "alias_endpoint": "/zohosalesiq/api/v1/screenname/chats/chat_id",
+        "api_ref": "https://www.zoho.com/salesiq/help/developer-section/rest-api-chat-info.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohosalesiq__api__v1__screenname__chats___get": {
+      "provider_intent": "zohosalesiq__api__v1__screenname__chats___get",
+      "provider_alias_intent": "/api/v1/screenname/chats",
+      "text": "List all Chats",
+      "category": "Chat",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "screenname": {
+          "type": "string",
+          "text": "Screenname",
+          "required": true
+        },
+        "limit": {
+          "type": "number",
+          "text": "The Number of chats you would like to receive the default limit is 50"
+        },
+        "fromtime": {
+          "type": "number",
+          "text": "The Chats after the specified time will be retreived and displayed"
+        },
+        "totime": {
+          "type": "number",
+          "text": "The Chats before the specified time will be retreived and displayed"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "screenname": {
+          "type": "string",
+          "text": "Screenname",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "You can use this API to get the complete list of chats ",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/<screenname>/chats",
+        "alias_endpoint": "/zohosalesiq/api/v1/screenname/chats",
+        "api_ref": "https://www.zoho.com/salesiq/help/developer-section/rest-api-chat-list.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohosalesiq__api__v1__screenname__chats__chat_id__attachmenturl___get": {
+      "provider_intent": "zohosalesiq__api__v1__screenname__chats__chat_id__attachmenturl___get",
+      "provider_alias_intent": "/api/v1/screenname/chats/chat_id/attachmenturl",
+      "text": "Get the Attachment URL",
+      "category": "Chat",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "screenname": {
+          "type": "string",
+          "text": "Screenname",
+          "required": true
+        },
+        "chat_id": {
+          "type": "string",
+          "text": "Chat Id",
+          "required": true
+        },
+        "attachmenturl": {
+          "type": "string",
+          "text": "Attachmenturl",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "screenname": {
+          "type": "string",
+          "text": "Screenname",
+          "required": true
+        },
+        "chat_id": {
+          "type": "string",
+          "text": "Chat Id",
+          "required": true
+        },
+        "attachmenturl": {
+          "type": "string",
+          "text": "Attachmenturl",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To download a file attachment given the attachment URL",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/<screenname>/chats/<chat_id>/<attachmenturl>",
+        "alias_endpoint": "/zohosalesiq/api/v1/screenname/chats/chat_id/attachmenturl",
+        "api_ref": "https://www.zoho.com/salesiq/help/developer-section/rest-api-attachment.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohosalesiq__api__v1__screenname__chats__chat_id__transcript___get": {
+      "provider_intent": "zohosalesiq__api__v1__screenname__chats__chat_id__transcript___get",
+      "provider_alias_intent": "/api/v1/screenname/chats/chat_id/transcript",
+      "text": "Get Chat Messages",
+      "category": "Chat",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "screenname": {
+          "type": "string",
+          "text": "Screenname",
+          "required": true
+        },
+        "chat_id": {
+          "type": "string",
+          "text": "Chat Id",
+          "required": true
+        },
+        "limit": {
+          "type": "number",
+          "text": "The Number of chats you would like to receive (The default limit is 50.)"
+        },
+        "fromtime": {
+          "type": "number",
+          "text": "The Chats after the specified time will be retreived and displayed"
+        },
+        "totime": {
+          "type": "number",
+          "text": "The Chats before the specified time will be retreived and displayed"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "screenname": {
+          "type": "string",
+          "text": "Screenname",
+          "required": true
+        },
+        "chat_id": {
+          "type": "string",
+          "text": "Chat Id",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "You can get the transcript of a specific chat",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/<screenname>/chats/<chat_id>/transcript",
+        "alias_endpoint": "/zohosalesiq/api/v1/screenname/chats/chat_id/transcript",
+        "api_ref": "https://www.zoho.com/salesiq/help/developer-section/rest-api-chat-transcript.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohosalesiq__api__v1__screenname__visitorsview__viewid__visitors___get": {
+      "provider_intent": "zohosalesiq__api__v1__screenname__visitorsview__viewid__visitors___get",
+      "provider_alias_intent": "/api/v1/screenname/visitorsview/viewid/visitors",
+      "text": "Get Visitor Details",
+      "category": "Visitor",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "screenname": {
+          "type": "string",
+          "text": "Screenname",
+          "required": true
+        },
+        "viewid": {
+          "type": "string",
+          "text": "Viewid",
+          "required": true
+        },
+        "startkey": {
+          "type": "string",
+          "text": "The maximum number of visitors that can be present in a response JSON is 100"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "screenname": {
+          "type": "string",
+          "text": "Screenname",
+          "required": true
+        },
+        "viewid": {
+          "type": "string",
+          "text": "Viewid",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "You can use this API to get the visitors and their details for the given ViewID",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/<screenname>/visitorsview/<viewid>/visitors",
+        "alias_endpoint": "/zohosalesiq/api/v1/screenname/visitorsview/viewid/visitors",
+        "api_ref": "https://www.zoho.com/salesiq/help/developer-section/rest-api-visitor-details.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohosalesiq__api__v1__screenname__visitorsbyemail__email___post": {
+      "provider_intent": "zohosalesiq__api__v1__screenname__visitorsbyemail__email___post",
+      "provider_alias_intent": "/api/v1/screenname/visitorsbyemail/email",
+      "text": "Update Visitor Info",
+      "category": "Visitor",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "screenname": {
+          "type": "string",
+          "text": "Screenname",
+          "required": true
+        },
+        "email": {
+          "type": "string",
+          "text": "Email",
+          "required": true
+        },
+        "customerinfo ": {
+          "type": "object",
+          "text": "A JSON object containing the visitor information"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "screenname": {
+          "type": "string",
+          "text": "Screenname",
+          "required": true
+        },
+        "email": {
+          "type": "string",
+          "text": "Email",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "This API is used to update the custom visitor information",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/<screenname>/visitorsbyemail/<email>",
+        "alias_endpoint": "/zohosalesiq/api/v1/screenname/visitorsbyemail/email",
+        "api_ref": "https://www.zoho.com/salesiq/help/developer-section/rest-api-update-visitor-info.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

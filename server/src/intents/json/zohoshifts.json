@@ -1,0 +1,93 @@
+{
+  "app": {
+    "title": "zohoshifts API",
+    "description": "",
+    "api_base": "/zohoshifts",
+    "copyright": "",
+    "copyright_year": "",
+    "contact_email": ""
+  },
+  "category": {
+    "All": ""
+  },
+  "routes": {
+    "get_all_employees": {
+      "provider_intent": "get_all_employees",
+      "provider_alias_intent": "/api/v1/org_id/employees",
+      "text": "Get all employees",
+      "category": "Employees",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "List all employees in an organization",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/{org_id}/employees",
+        "alias_endpoint": "/zohoshifts/api/v1/org_id/employees",
+        "api_ref": "https://www.zoho.com/shifts/api/v1/employees-api/#get-all-employees"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoShifts.employees.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_all_time_entries": {
+      "provider_intent": "get_all_time_entries",
+      "provider_alias_intent": "/api/v1/org_id/timesheets",
+      "text": "Get all time entries",
+      "category": "Entries",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Get all time entries",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/{org_id}/timesheets",
+        "alias_endpoint": "/zohoshifts/api/v1/org_id/timesheets",
+        "api_ref": "https://www.zoho.com/shifts/api/v1/timesheets-api/#get-all-time-entries"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoShifts.timesheets.READ",
+      "subdomain": {},
+      "payload_type": ""
+    }
+  }
+}

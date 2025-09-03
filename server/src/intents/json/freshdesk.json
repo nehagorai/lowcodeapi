@@ -1,0 +1,110 @@
+{
+  "routes": {
+    "freshdesk__api__v2__account___get": {
+      "provider_intent": "freshdesk__api__v2__account___get",
+      "provider_alias_intent": "/api/v2/account",
+      "text": "View Account",
+      "category": "Account",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "subdomain": {
+          "type": "string",
+          "replace_key": "{subdomain}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "View Account",
+        "rate_limit": [],
+        "api_endpoint": "https://{subdomain}.freshdesk.com/api/v2/account",
+        "alias_endpoint": "/freshdesk/api/v2/account",
+        "api_ref": "https://developers.freshdesk.com/api/#view_account"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "api_key",
+          "password": "X"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "freshdesk__api__v2__skills__id___get": {
+      "provider_intent": "freshdesk__api__v2__skills__id___get",
+      "provider_alias_intent": "/api/v2/skills/id",
+      "text": "View a Skill",
+      "category": "Skill",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "subdomain": {
+          "type": "string",
+          "replace_key": "{subdomain}"
+        }
+      },
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "View a Skill",
+        "rate_limit": [],
+        "api_endpoint": "https://{subdomain}.freshdesk.com/api/v2/skills/[id]",
+        "alias_endpoint": "/freshdesk/api/v2/skills/id",
+        "api_ref": "https://developers.freshdesk.com/api/#view_skill"
+      },
+      "auth": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "freshdesk__api__v2__tickets___get": {
+      "provider_intent": "freshdesk__api__v2__tickets___get",
+      "provider_alias_intent": "/api/v2/tickets",
+      "text": "List All Tickets",
+      "category": "Tickets",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "subdomain": {
+          "type": "string",
+          "replace_key": "{subdomain}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List All Tickets",
+        "rate_limit": [],
+        "api_endpoint": "https://{subdomain}.freshdesk.com/api/v2/tickets",
+        "alias_endpoint": "/freshdesk/api/v2/tickets",
+        "api_ref": "https://developers.freshdesk.com/api/#list_all_tickets"
+      },
+      "auth": {
+        "basicauth": {
+          "username": "api_key",
+          "password": "X"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

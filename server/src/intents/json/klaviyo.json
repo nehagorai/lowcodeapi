@@ -1,0 +1,148 @@
+{
+  "routes": {
+    "klaviyo__api__accounts___get": {
+      "provider_intent": "klaviyo__api__accounts___get",
+      "provider_alias_intent": "/api/accounts",
+      "text": "Get Accounts",
+      "category": "Accounts",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Retrieve the account(s) associated with a given private API key.",
+        "rate_limit": [],
+        "api_endpoint": "https://a.klaviyo.com/api/accounts",
+        "alias_endpoint": "/klaviyo/api/accounts",
+        "api_ref": "https://developers.klaviyo.com/en/reference/get_accounts"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Klaviyo-API-Key",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": "",
+      "headers": {
+        "revision": "2023-12-15"
+      }
+    },
+    "klaviyo__api__campaigns___get": {
+      "provider_intent": "klaviyo__api__campaigns___get",
+      "provider_alias_intent": "/api/campaigns",
+      "text": "Get Campaigns",
+      "category": "Campaigns",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Returns some or all campaigns based on filters.",
+        "rate_limit": [],
+        "api_endpoint": "https://a.klaviyo.com/api/campaigns",
+        "alias_endpoint": "/klaviyo/api/campaigns",
+        "api_ref": "https://developers.klaviyo.com/en/reference/get_campaigns"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Klaviyo-API-Key",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": "",
+      "headers": {
+        "revision": "2023-12-15"
+      }
+    },
+    "klaviyo__api__catalog-items___get": {
+      "provider_intent": "klaviyo__api__catalog-items___get",
+      "provider_alias_intent": "/api/catalog-items",
+      "text": "Get Catalog Items",
+      "category": "Catalog ",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Get Catalog Items",
+        "rate_limit": [],
+        "api_endpoint": "https://a.klaviyo.com/api/catalog-items",
+        "alias_endpoint": "/klaviyo/api/catalog-items",
+        "api_ref": "https://developers.klaviyo.com/en/reference/get_catalog_items"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Klaviyo-API-Key",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": "",
+      "headers": {
+        "revision": "2023-12-15"
+      }
+    },
+    "klaviyo__api__coupons___get": {
+      "provider_intent": "klaviyo__api__coupons___get",
+      "provider_alias_intent": "/api/coupons",
+      "text": "Get Coupons",
+      "category": "Coupons",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Get all coupons in an account.",
+        "rate_limit": [],
+        "api_endpoint": "https://a.klaviyo.com/api/coupons",
+        "alias_endpoint": "/klaviyo/api/coupons",
+        "api_ref": "https://developers.klaviyo.com/en/reference/get_coupons"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Klaviyo-API-Key",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": "",
+      "headers": {
+        "revision": "2023-12-15"
+      }
+    }
+  }
+}

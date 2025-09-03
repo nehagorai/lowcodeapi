@@ -1,0 +1,153 @@
+{
+  "routes": {
+    "mailersend__v1__email___post": {
+      "provider_intent": "mailersend__v1__email___post",
+      "provider_alias_intent": "/v1/email",
+      "text": "Send an email",
+      "category": "Emails",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "from": {
+          "type": "object",
+          "text": "Not required if template_id is present and template has default sender set",
+          "required": true,
+          "examples": {
+            "email": "",
+            "name": ""
+          }
+        },
+        "to": {
+          "type": "object",
+          "text": "The name of the recipient",
+          "required": true,
+          "examples": [
+            {
+              "email": "",
+              "name": ""
+            }
+          ]
+        },
+        "cc": {
+          "type": "object",
+          "text": "The name of the CC recipient",
+          "required": true,
+          "examples": [
+            {
+              "email": "",
+              "name": ""
+            }
+          ]
+        },
+        "bcc": {
+          "type": "object",
+          "text": "The name of the BCC recipient",
+          "required": true,
+          "examples": [
+            {
+              "email": "",
+              "name": ""
+            }
+          ]
+        },
+        "reply_to": {
+          "type": "string",
+          "text": "Reply to",
+          "examples": {
+            "email": "",
+            "name": ""
+          }
+        },
+        "subject": {
+          "type": "string",
+          "text": "Not required if template_id is present and template has default subject set",
+          "required": true,
+          "examples": ""
+        },
+        "text": {
+          "type": "string",
+          "text": "Email represented in a text (text/plain) format",
+          "required": true,
+          "examples": ""
+        },
+        "html": {
+          "type": "string",
+          "text": "Email represented in HTML (text/html) format.",
+          "required": true,
+          "examples": ""
+        },
+        "attachments": {
+          "type": "object",
+          "text": "Base64 encoded content of the attachment"
+        },
+        "template_id": {
+          "type": "string",
+          "text": "Base64 encoded content of the attachment",
+          "required": true
+        },
+        "tags": {
+          "type": "string",
+          "text": "Limit is max 5 tags"
+        },
+        "personalization": {
+          "type": "object",
+          "text": "Allows using personalization in {{var}} syntax",
+          "examples": [
+            {
+              "email": ""
+            }
+          ]
+        },
+        "precedence_bulk": {
+          "type": "boolean",
+          "text": "This parameter will override domain's advanced settings",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "send_at": {
+          "type": "number",
+          "text": "Has to be a Unix timestamp"
+        },
+        "in_reply_to": {
+          "type": "string",
+          "text": "Alphanumeric which can contain _, -, @ and ."
+        },
+        "settings": {
+          "type": "object",
+          "text": "Settings"
+        },
+        "headers": {
+          "type": "object",
+          "text": "this feature is available to Enterprise accounts only"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Send an asynchronous email",
+        "rate_limit": [],
+        "api_endpoint": "https://api.mailersend.com/v1/email",
+        "alias_endpoint": "/mailersend/v1/email",
+        "api_ref": "https://developers.mailersend.com/api/v1/email.html#send-an-email"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

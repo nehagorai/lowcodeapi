@@ -1,0 +1,3263 @@
+{
+  "routes": {
+    "zohocontracts__api__v1__contracts__contract_api_name__collaborators___get": {
+      "provider_intent": "zohocontracts__api__v1__contracts__contract_api_name__collaborators___get",
+      "provider_alias_intent": "/api/v1/contracts/contract_api_name/collaborators",
+      "text": "Get Collaborators",
+      "category": "Collaborators",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "contract_api_name": {
+          "type": "string",
+          "text": "The name of the contract API",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "contract_api_name": {
+          "type": "string",
+          "text": "The name of the contract API",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the collaborators list and details",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/contracts/{contract_api_name}/collaborators",
+        "alias_endpoint": "/zohocontracts/api/v1/contracts/contract_api_name/collaborators",
+        "api_ref": "https://www.zoho.com/contracts/api/collaborators/get-collaborators.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.READ,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/contracts/{contractApiName}/collaborators",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__contracts__contract_api_name__collaborators___post": {
+      "provider_intent": "zohocontracts__api__v1__contracts__contract_api_name__collaborators___post",
+      "provider_alias_intent": "/api/v1/contracts/contract_api_name/collaborators",
+      "text": "Create Collaborators",
+      "category": "Collaborators",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "contract_api_name": {
+          "type": "string",
+          "text": "The name of the contract API",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "user": {
+          "type": "array",
+          "text": "Represents the list of collaborators to be added to the contract where each item contains the details of each collaborator"
+        },
+        "id": {
+          "type": "string",
+          "text": "Represents the unique ID of the collaborator."
+        },
+        "permissions": {
+          "type": "number",
+          "text": "Represents the collaborator's permission in the contract document. ( 7-Write, 11-Comment and Fill Fields, 9-Fill Fields Only, 3-Comment Only, 1-View Only) "
+        },
+        "message": {
+          "type": "string",
+          "text": "Represents the message to be included in the notification email sent to the collaborator"
+        },
+        "notify": {
+          "type": "boolean",
+          "text": "Represents whether to send an email notification upon addition",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "contract_api_name": {
+          "type": "string",
+          "text": "The name of the contract API",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Add collaborators to a contract",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/contracts/{contract_api_name}/collaborators",
+        "alias_endpoint": "/zohocontracts/api/v1/contracts/contract_api_name/collaborators",
+        "api_ref": "https://www.zoho.com/contracts/api/collaborators/create-collaborators.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.CREATE,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/contracts/{contractApiName}/collaborators",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__contracts__contract_api_name__collaborators___put": {
+      "provider_intent": "zohocontracts__api__v1__contracts__contract_api_name__collaborators___put",
+      "provider_alias_intent": "/api/v1/contracts/contract_api_name/collaborators",
+      "text": "Update Collaborators",
+      "category": "Collaborators",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "contract_api_name": {
+          "type": "string",
+          "text": "The name of the contract API",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "id": {
+          "type": "string",
+          "text": "Represents the unique ID of the collaborator."
+        },
+        "permissions": {
+          "type": "number",
+          "text": "Represents the collaborator's permission in the contract document. ( 7-Write, 11-Comment and Fill Fields, 9-Fill Fields Only, 3-Comment Only, 1-View Only) "
+        }
+      },
+      "path": {
+        "contract_api_name": {
+          "type": "string",
+          "text": "The name of the contract API",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update the permission of collaborators of a contract",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/contracts/{contract_api_name}/collaborators",
+        "alias_endpoint": "/zohocontracts/api/v1/contracts/contract_api_name/collaborators",
+        "api_ref": "https://www.zoho.com/contracts/api/collaborators/update-collaborators.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.UPDATE,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/contracts/{contractApiName}/collaborators",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__contracts__contract_api_name__users__user_id__collaborators___delete": {
+      "provider_intent": "zohocontracts__api__v1__contracts__contract_api_name__users__user_id__collaborators___delete",
+      "provider_alias_intent": "/api/v1/contracts/contract_api_name/users/user_id/collaborators",
+      "text": "Delete Collaborator",
+      "category": "Collaborators",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "contract_api_name": {
+          "type": "string",
+          "text": "The name of the contract API",
+          "required": true
+        },
+        "user_id": {
+          "type": "string",
+          "text": "The User ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "contract_api_name": {
+          "type": "string",
+          "text": "The name of the contract API",
+          "required": true
+        },
+        "user_id": {
+          "type": "string",
+          "text": "The User ID",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a collaborator of a contract",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/contracts/{contract_api_name}/users/{user_id}/collaborators",
+        "alias_endpoint": "/zohocontracts/api/v1/contracts/contract_api_name/users/user_id/collaborators",
+        "api_ref": "https://www.zoho.com/contracts/api/collaborators/delete-collaborator.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.DELETE,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/contracts/{contractApiName}/users/{user_id}/collaborators",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__contracttypes__api_name___get": {
+      "provider_intent": "zohocontracts__api__v1__contracttypes__api_name___get",
+      "provider_alias_intent": "/api/v1/contracttypes/api_name",
+      "text": "Get Contract Type",
+      "category": "Contract Types",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "api_name": {
+          "type": "string",
+          "text": "The name of the contract type in the API",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "api_name": {
+          "type": "string",
+          "text": "The name of the contract type in the API",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the details of a contract type",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/contracttypes/{api_name}",
+        "alias_endpoint": "/zohocontracts/api/v1/contracttypes/api_name",
+        "api_ref": "https://www.zoho.com/contracts/api/contract-type/get-contract-type.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.READ,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/contracttypes/{apiName}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__admin__contracttypes__api_name___get": {
+      "provider_intent": "zohocontracts__api__v1__admin__contracttypes__api_name___get",
+      "provider_alias_intent": "/api/v1/admin/contracttypes/api_name",
+      "text": "Get Contract Type using Admin privilege",
+      "category": "Contract Types",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "api_name": {
+          "type": "string",
+          "text": "The name of the contract type in the API",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "api_name": {
+          "type": "string",
+          "text": "The name of the contract type in the API",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the details of a contract type using Admin privilege",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/admin/contracttypes/{api_name}",
+        "alias_endpoint": "/zohocontracts/api/v1/admin/contracttypes/api_name",
+        "api_ref": "https://www.zoho.com/contracts/api/contract-type/get-contract-type-admin-privilege.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.meta.READ,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/admin/contracttypes/{apiName}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__contracttypes___get": {
+      "provider_intent": "zohocontracts__api__v1__contracttypes___get",
+      "provider_alias_intent": "/api/v1/contracttypes",
+      "text": "Get Contract Types List",
+      "category": "Contract Types",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the list of contract types",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/contracttypes",
+        "alias_endpoint": "/zohocontracts/api/v1/contracttypes",
+        "api_ref": "https://www.zoho.com/contracts/api/contract-type/get-contract-types-list.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.READ,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/contracttypes",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__admin__contracttypes___get": {
+      "provider_intent": "zohocontracts__api__v1__admin__contracttypes___get",
+      "provider_alias_intent": "/api/v1/admin/contracttypes",
+      "text": "Get Contract Types List using Admin privilege",
+      "category": "Contract Types",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the list of contract types using Admin privilege",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/admin/contracttypes",
+        "alias_endpoint": "/zohocontracts/api/v1/admin/contracttypes",
+        "api_ref": "https://www.zoho.com/contracts/api/contract-type/get-contract-types-list-admin-privilege.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.meta.READ,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/admin/contracttypes",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__admin__contracttypes__master-services-agreement__fields___get": {
+      "provider_intent": "zohocontracts__api__v1__admin__contracttypes__master-services-agreement__fields___get",
+      "provider_alias_intent": "/api/v1/admin/contracttypes/master-services-agreement/fields",
+      "text": "Get Contract Type Template Fields",
+      "category": "Contract Types",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the details of the fields present in the contract type template",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/admin/contracttypes/master-services-agreement/fields",
+        "alias_endpoint": "/zohocontracts/api/v1/admin/contracttypes/master-services-agreement/fields",
+        "api_ref": "https://www.zoho.com/contracts/api/get-contract-type-template-fields.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.meta.READ",
+      "api_endpoint_src": "{endpoint}/api/v1/admin/contracttypes/master-services-agreement/fields",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__admin__contracttypes___post": {
+      "provider_intent": "zohocontracts__api__v1__admin__contracttypes___post",
+      "provider_alias_intent": "/api/v1/admin/contracttypes",
+      "text": "Create Contract Type",
+      "category": "Contract Types",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Represents the name of the contract type"
+        },
+        "description": {
+          "type": "string",
+          "text": "Represents the description of the contract type"
+        },
+        "intent": {
+          "type": "number",
+          "text": "Represents the status of the contract type. Values : (0-Others, 1-Buy, 2-Sell)"
+        },
+        "partyA": {
+          "type": "number",
+          "text": "Represents the contracting party in a contract.  Values : (0-My Company, 1-Counterparty)"
+        },
+        "partyB": {
+          "type": "number",
+          "text": "Represents the contracting party in a contract. Values : (0-My Company, 1-Counterparty)"
+        },
+        "isCustom": {
+          "type": "boolean",
+          "text": "Represents whether the contract type is custom build.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "categories": {
+          "type": "string",
+          "text": "Represents the category of the contract type."
+        },
+        "approvalWorkflow": {
+          "type": "string",
+          "text": "Represents the approval workflow assigned to the contract type."
+        },
+        "state": {
+          "type": "number",
+          "text": "Represents the working status of the contract type template. Values : (0-Disabled, 1-Enabled)"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a contract type",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/admin/contracttypes",
+        "alias_endpoint": "/zohocontracts/api/v1/admin/contracttypes",
+        "api_ref": "https://www.zoho.com/contracts/api/contract-type/create-contract-type.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.meta.CREATE,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/admin/contracttypes",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__admin__contracttypes__api_name___put": {
+      "provider_intent": "zohocontracts__api__v1__admin__contracttypes__api_name___put",
+      "provider_alias_intent": "/api/v1/admin/contracttypes/api_name",
+      "text": "Update Contract Type",
+      "category": "Contract Types",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "api_name": {
+          "type": "string",
+          "text": "The name of the contract type in the API",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Represents the name of the contract type"
+        }
+      },
+      "path": {
+        "api_name": {
+          "type": "string",
+          "text": "The name of the contract type in the API",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update the details of a contract type",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/admin/contracttypes/{api_name}",
+        "alias_endpoint": "/zohocontracts/api/v1/admin/contracttypes/api_name",
+        "api_ref": "https://www.zoho.com/contracts/api/contract-type/update-contract-type.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.meta.UPDATE,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/admin/contracttypes/{apiName}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__admin__contracttypes__api_name___delete": {
+      "provider_intent": "zohocontracts__api__v1__admin__contracttypes__api_name___delete",
+      "provider_alias_intent": "/api/v1/admin/contracttypes/api_name",
+      "text": "Delete Contract Type",
+      "category": "Contract Types",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "api_name": {
+          "type": "string",
+          "text": "The name of the contract type in the API",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "api_name": {
+          "type": "string",
+          "text": "The name of the contract type in the API",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a contract type",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/admin/contracttypes/{api_name}",
+        "alias_endpoint": "/zohocontracts/api/v1/admin/contracttypes/api_name",
+        "api_ref": "https://www.zoho.com/contracts/api/contract-type/delete-contract-type.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.meta.DELETE,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/admin/contracttypes/{apiName}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__contracts__api_name___get": {
+      "provider_intent": "zohocontracts__api__v1__contracts__api_name___get",
+      "provider_alias_intent": "/api/v1/contracts/api_name",
+      "text": "Get Contract",
+      "category": "Contracts/Create and Manage",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "api_name": {
+          "type": "string",
+          "text": "The name of the organization in the API",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "api_name": {
+          "type": "string",
+          "text": "The name of the organization in the API",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the details of a contract",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/contracts/{api_name}",
+        "alias_endpoint": "/zohocontracts/api/v1/contracts/api_name",
+        "api_ref": "https://www.zoho.com/contracts/api/contract/get-contract.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.READ,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/contracts/{apiName}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__contracts___post": {
+      "provider_intent": "zohocontracts__api__v1__contracts___post",
+      "provider_alias_intent": "/api/v1/contracts",
+      "text": "Create Contract",
+      "category": "Contracts/Create and Manage",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "source": {
+          "type": "number",
+          "text": "Represents the origin of the contract"
+        },
+        "inputfields": {
+          "type": "array",
+          "text": "Represents all the fields used to create the contract"
+        },
+        "metaApiName": {
+          "type": "string",
+          "text": "Represents the API name of the field used to create a contract. The field can be a particular field or a field and its related fields"
+        },
+        "inputs": {
+          "type": "array",
+          "text": "The array represents the API names of the fields and its value used to create a contract"
+        },
+        "inputApiName": {
+          "type": "string",
+          "text": "Represents the API name of the field used to create a contract. Refer to the inputApiNames List below that lists all the values of the inputApiName key"
+        },
+        "inputValue": {
+          "type": "string",
+          "text": "Represents the value of a field used to create a contract. Regarding the data type, refer to the data type of each of the inputApiNames' values in the inputApiNames List below"
+        },
+        "clauseOverrides": {
+          "type": "array",
+          "text": "Represents the array of default clauses to deselect and the alternative languages of the selected clauses with their selection or deselection status"
+        },
+        "apiName": {
+          "type": "string",
+          "text": "Represents the API name of a clause or a clause's alternative language"
+        },
+        "alternatives": {
+          "type": "array",
+          "text": "Represents the array of the alternative languages of a clause where each item contains their API name and the selection or deselection status"
+        },
+        "action": {
+          "type": "number",
+          "text": "Represents the selection status of the clause to deselect and the alternative languages of a selected clause to select or deselect. Values : (0-Deselect, 1-Select)"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a contract",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/contracts",
+        "alias_endpoint": "/zohocontracts/api/v1/contracts",
+        "api_ref": "https://www.zoho.com/contracts/api/contract/create-contract.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.CREATE,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/contracts",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__createcontract___post": {
+      "provider_intent": "zohocontracts__api__v1__createcontract___post",
+      "provider_alias_intent": "/api/v1/createcontract",
+      "text": "Create Contract with Values for Document Fields",
+      "category": "Contracts/Create and Manage",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "source": {
+          "type": "number",
+          "text": "Represents the origin of the contract"
+        },
+        "inputfields": {
+          "type": "array",
+          "text": "Represents all the fields used to create the contract"
+        },
+        "metaApiName": {
+          "type": "string",
+          "text": "Represents the API name of the field used to create a contract. The field can be a particular field or a field and its related fields"
+        },
+        "inputs": {
+          "type": "array",
+          "text": "The array represents the API names of the fields and its value used to create a contract"
+        },
+        "inputApiName": {
+          "type": "string",
+          "text": "Represents the API name of the field used to create a contract. Refer to the inputApiNames List below that lists all the values of the inputApiName key"
+        },
+        "inputValue": {
+          "type": "string",
+          "text": "Represents the value of a field used to create a contract. Regarding the data type, refer to the data type of each of the inputApiNames' values in the inputApiNames List below"
+        },
+        "clauseOverrides": {
+          "type": "array",
+          "text": "Represents the array of default clauses to deselect and the alternative languages of the selected clauses with their selection or deselection status"
+        },
+        "apiName": {
+          "type": "string",
+          "text": "Represents the API name of a clause or a clause's alternative language"
+        },
+        "alternatives": {
+          "type": "array",
+          "text": "Represents the array of the alternative languages of a clause where each item contains their API name and the selection or deselection status"
+        },
+        "action": {
+          "type": "number",
+          "text": "Represents the selection status of the clause to deselect and the alternative languages of a selected clause to select or deselect. Values : (0-Deselect, 1-Select)"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a contract with values for document fields",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/createcontract",
+        "alias_endpoint": "/zohocontracts/api/v1/createcontract",
+        "api_ref": "https://www.zoho.com/contracts/api/create-contract-with-values-for-document-fields.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.CREATE,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/createcontract",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__contracts__api_name___put": {
+      "provider_intent": "zohocontracts__api__v1__contracts__api_name___put",
+      "provider_alias_intent": "/api/v1/contracts/api_name",
+      "text": "Update Contract",
+      "category": "Contracts/Create and Manage",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "api_name": {
+          "type": "string",
+          "text": "The API name of the contract",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "source": {
+          "type": "number",
+          "text": "Represents the origin of the contract. Values : (1-The contract was created within Zoho Contracts, 2-The contract was imported within Zoho Contracts, 3-The contract was created from an integrated application)"
+        },
+        "inputfields": {
+          "type": "array",
+          "text": "Represents all the fields used to create the contract"
+        },
+        "metaApiName": {
+          "type": "string",
+          "text": "Represents the API name of the field used to create a contract. The field can be a particular field or a field and its related fields"
+        },
+        "inputs": {
+          "type": "array",
+          "text": "The array represents the API names of the fields and its value used to create a contract"
+        },
+        "inputApiName": {
+          "type": "string",
+          "text": "Represents the API name of the field used to create a contract. Refer to the inputApiNames List below that lists all the values of the inputApiName key"
+        },
+        "inputValue": {
+          "type": "string",
+          "text": "Represents the value of a field used to create a contract. Regarding the data type, refer to the data type of each of the inputApiNames' values in the inputApiNames List below"
+        }
+      },
+      "path": {
+        "api_name": {
+          "type": "string",
+          "text": "The API name of the contract",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update the details of a contract.",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/contracts/{api_name}",
+        "alias_endpoint": "/zohocontracts/api/v1/contracts/api_name",
+        "api_ref": "https://www.zoho.com/contracts/api/contract/update-contract.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.UPDATE,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/contracts/{apiName}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__contracts__api_name___delete": {
+      "provider_intent": "zohocontracts__api__v1__contracts__api_name___delete",
+      "provider_alias_intent": "/api/v1/contracts/api_name",
+      "text": "Delete Contract",
+      "category": "Contracts/Create and Manage",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "api_name": {
+          "type": "string",
+          "text": "The API name of the contract",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "api_name": {
+          "type": "string",
+          "text": "The API name of the contract",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a contract",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/contracts/{api_name}",
+        "alias_endpoint": "/zohocontracts/api/v1/contracts/api_name",
+        "api_ref": "https://www.zoho.com/contracts/api/contract/delete-contract.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.DELETE,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/contracts/{apiName}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__contracts__contract_api_name__signers___get": {
+      "provider_intent": "zohocontracts__api__v1__contracts__contract_api_name__signers___get",
+      "provider_alias_intent": "/api/v1/contracts/contract_api_name/signers",
+      "text": "Get Signers List",
+      "category": "Contracts/Create and Manage",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "contract_api_name": {
+          "type": "string",
+          "text": "The name of the contract API",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "contract_api_name": {
+          "type": "string",
+          "text": "The name of the contract API",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the signers list and details of each signer of a contract",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/contracts/{contract_api_name}/signers",
+        "alias_endpoint": "/zohocontracts/api/v1/contracts/contract_api_name/signers",
+        "api_ref": "https://www.zoho.com/contracts/api/signature/get-signers-list.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.READ,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/contracts/{contractApiName}/signers",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__allcontracts___get": {
+      "provider_intent": "zohocontracts__api__v1__allcontracts___get",
+      "provider_alias_intent": "/api/v1/allcontracts",
+      "text": "Get All Contracts List",
+      "category": "Contracts/Listing",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the list of all the contracts",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/allcontracts",
+        "alias_endpoint": "/zohocontracts/api/v1/allcontracts",
+        "api_ref": "https://www.zoho.com/contracts/api/contract/get-all-contracts-list.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.GET,contracts.contracts.ALL\n",
+      "api_endpoint_src": "{endpoint}/api/v1/allcontracts",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__contracts___get": {
+      "provider_intent": "zohocontracts__api__v1__contracts___get",
+      "provider_alias_intent": "/api/v1/contracts",
+      "text": "Get Contracts List",
+      "category": "Contracts/Listing",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the list of contracts owned by the user.",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/contracts",
+        "alias_endpoint": "/zohocontracts/api/v1/contracts",
+        "api_ref": "https://www.zoho.com/contracts/api/contract/get-contracts-list.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.GET,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/contracts",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__sharedcontracts___get": {
+      "provider_intent": "zohocontracts__api__v1__sharedcontracts___get",
+      "provider_alias_intent": "/api/v1/sharedcontracts",
+      "text": "Get Shared Contracts List",
+      "category": "Contracts/Listing",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the list of contracts shared with the user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/sharedcontracts",
+        "alias_endpoint": "/zohocontracts/api/v1/sharedcontracts",
+        "api_ref": "https://www.zoho.com/contracts/api/contract/get-shared-contracts-list.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.GET,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/sharedcontracts",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__obligationcontracts___get": {
+      "provider_intent": "zohocontracts__api__v1__obligationcontracts___get",
+      "provider_alias_intent": "/api/v1/obligationcontracts",
+      "text": "Get Obligation Contracts List",
+      "category": "Contracts/Listing",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the list of contracts having obligations assigned to the user.",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/obligationcontracts",
+        "alias_endpoint": "/zohocontracts/api/v1/obligationcontracts",
+        "api_ref": "https://www.zoho.com/contracts/api/contract/get-obligation-contracts-list.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.GET,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/obligationcontracts",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__counterparties__organization_api_name___get": {
+      "provider_intent": "zohocontracts__api__v1__counterparties__organization_api_name___get",
+      "provider_alias_intent": "/api/v1/counterparties/organization_api_name",
+      "text": "Get Counterparty",
+      "category": "Counterparties",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "organization_api_name": {
+          "type": "string",
+          "text": "The name of the counterparty in the API",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "organization_api_name": {
+          "type": "string",
+          "text": "The name of the counterparty in the API",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the details of a counterparty",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/counterparties/{organization_api_name}",
+        "alias_endpoint": "/zohocontracts/api/v1/counterparties/organization_api_name",
+        "api_ref": "https://www.zoho.com/contracts/api/counterparty/get-counterparty.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.READ,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/counterparties/{organizationApiName}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__counterparties___get": {
+      "provider_intent": "zohocontracts__api__v1__counterparties___get",
+      "provider_alias_intent": "/api/v1/counterparties",
+      "text": "Get Counterparties List",
+      "category": "Counterparties",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the list of all counterparties",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/counterparties",
+        "alias_endpoint": "/zohocontracts/api/v1/counterparties",
+        "api_ref": "https://www.zoho.com/contracts/api/counterparty/get-counterparties-list.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.READ,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/counterparties",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__counterparties___post": {
+      "provider_intent": "zohocontracts__api__v1__counterparties___post",
+      "provider_alias_intent": "/api/v1/counterparties",
+      "text": "Create Counterparty",
+      "category": "Counterparties",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Represents the name of the counterparty."
+        },
+        "counterPartyType": {
+          "type": "number",
+          "text": "Represents the API name of the counterparty type."
+        },
+        "country": {
+          "type": "string",
+          "text": "Represents the country of the counterparty"
+        },
+        "city": {
+          "type": "string",
+          "text": "Represents the city of the counterparty"
+        },
+        "state": {
+          "type": "string",
+          "text": "Represents the state of the counterparty"
+        },
+        "address": {
+          "type": "string",
+          "text": "Represents the address of the counterparty"
+        },
+        "zipCode": {
+          "type": "string",
+          "text": "Represents the zipCode of the counterparty"
+        },
+        "buildingNumber": {
+          "type": "string",
+          "text": "Represents the buildingNumber of the counterparty"
+        },
+        "website": {
+          "type": "string",
+          "text": "Represents the website of the counterparty."
+        },
+        "users": {
+          "type": "Object",
+          "text": "Represents the counterparty contact details."
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a counterparty",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/counterparties",
+        "alias_endpoint": "/zohocontracts/api/v1/counterparties",
+        "api_ref": "https://www.zoho.com/contracts/api/counterparty/create-counterparty.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.CREATE,contracts.contracts.ALL\n",
+      "api_endpoint_src": "{endpoint}/api/v1/counterparties",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__counterparties__organization_api_name___put": {
+      "provider_intent": "zohocontracts__api__v1__counterparties__organization_api_name___put",
+      "provider_alias_intent": "/api/v1/counterparties/organization_api_name",
+      "text": "Update Counterparty",
+      "category": "Counterparties",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "organization_api_name": {
+          "type": "string",
+          "text": "The name of the counterparty in the API",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "counterPartyType": {
+          "type": "number",
+          "text": "Represents the API name of the counterparty type."
+        },
+        "country": {
+          "type": "string",
+          "text": "Represents the country of the counterparty"
+        },
+        "state": {
+          "type": "string",
+          "text": "Represents the state of the counterparty"
+        }
+      },
+      "path": {
+        "organization_api_name": {
+          "type": "string",
+          "text": "The name of the counterparty in the API",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update the details of a counterparty",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/counterparties/{organization_api_name}",
+        "alias_endpoint": "/zohocontracts/api/v1/counterparties/organization_api_name",
+        "api_ref": "https://www.zoho.com/contracts/api/counterparty/update-counterparty.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.UPDATE,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/counterparties/{organizationApiName}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__counterparties__organization_api_name___delete": {
+      "provider_intent": "zohocontracts__api__v1__counterparties__organization_api_name___delete",
+      "provider_alias_intent": "/api/v1/counterparties/organization_api_name",
+      "text": "Delete Counterparty",
+      "category": "Counterparties",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "organization_api_name": {
+          "type": "string",
+          "text": "The name of the counterparty in the API",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "organization_api_name": {
+          "type": "string",
+          "text": "The name of the counterparty in the API",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a counterparty",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/counterparties/{organization_api_name}",
+        "alias_endpoint": "/zohocontracts/api/v1/counterparties/organization_api_name",
+        "api_ref": "https://www.zoho.com/contracts/api/counterparty/delete-counterparty.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.DELETE,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/counterparties/{organizationApiName}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__counterparties__organization_api_name__counterpartyusers___get": {
+      "provider_intent": "zohocontracts__api__v1__counterparties__organization_api_name__counterpartyusers___get",
+      "provider_alias_intent": "/api/v1/counterparties/organization_api_name/counterpartyusers",
+      "text": "Get Counterparty Contacts",
+      "category": "Counterparty Contacts",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "organization_api_name": {
+          "type": "string",
+          "text": "The name of the counterparty in the API",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "organization_api_name": {
+          "type": "string",
+          "text": "The name of the counterparty in the API",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the contact list of a counterparty",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/counterparties/{organization_api_name}/counterpartyusers",
+        "alias_endpoint": "/zohocontracts/api/v1/counterparties/organization_api_name/counterpartyusers",
+        "api_ref": "https://www.zoho.com/contracts/api/counterparty-contact/get-counterparty-contacts.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.READ,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/counterparties/{organizationApiName}/counterpartyusers",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__counterparties__organization_api_name__counterpartyusers___post": {
+      "provider_intent": "zohocontracts__api__v1__counterparties__organization_api_name__counterpartyusers___post",
+      "provider_alias_intent": "/api/v1/counterparties/organization_api_name/counterpartyusers",
+      "text": "Create Counterparty Contact",
+      "category": "Counterparty Contacts",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "organization_api_name": {
+          "type": "string",
+          "text": "The name of the counterparty in the API",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "phoneNumber": {
+          "type": "string",
+          "text": "Represents the phone number of the counterparty contact"
+        },
+        "jobTitle": {
+          "type": "string",
+          "text": "Represents the job title of the counterparty contact."
+        },
+        "emailId": {
+          "type": "string",
+          "text": "Represents the email ID associated with the counterparty contact."
+        },
+        "displayName": {
+          "type": "string",
+          "text": "Represents the name of the counterparty contact."
+        }
+      },
+      "path": {
+        "organization_api_name": {
+          "type": "string",
+          "text": "The name of the counterparty in the API",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a counterparty contact",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/counterparties/{organization_api_name}/counterpartyusers",
+        "alias_endpoint": "/zohocontracts/api/v1/counterparties/organization_api_name/counterpartyusers",
+        "api_ref": "https://www.zoho.com/contracts/api/counterparty-contact/create-counterparty-contact.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.CREATE,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/counterparties/{organizationApiName}/counterpartyusers",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__counterparties__organization_api_name__counterpartyusers__email_id___put": {
+      "provider_intent": "zohocontracts__api__v1__counterparties__organization_api_name__counterpartyusers__email_id___put",
+      "provider_alias_intent": "/api/v1/counterparties/organization_api_name/counterpartyusers/email_id",
+      "text": "Update Counterparty Contact",
+      "category": "Counterparty Contacts",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "organization_api_name": {
+          "type": "string",
+          "text": "The name of the counterparty in the API",
+          "required": true
+        },
+        "email_id": {
+          "type": "string",
+          "text": "The email ID associated with the counterparty contact",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "emailId": {
+          "type": "string",
+          "text": "Represents the email ID associated with the counterparty contact."
+        },
+        "displayName": {
+          "type": "string",
+          "text": "Represents the name of the counterparty contact."
+        }
+      },
+      "path": {
+        "organization_api_name": {
+          "type": "string",
+          "text": "The name of the counterparty in the API",
+          "required": true
+        },
+        "email_id": {
+          "type": "string",
+          "text": "The email ID associated with the counterparty contact",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update the details of a counterparty contact",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/counterparties/{organization_api_name}/counterpartyusers/{email_id}",
+        "alias_endpoint": "/zohocontracts/api/v1/counterparties/organization_api_name/counterpartyusers/email_id",
+        "api_ref": "https://www.zoho.com/contracts/api/counterparty-contact/update-counterparty-contact.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.UPDATE,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/counterparties/{organizationApiName}/counterpartyusers/{emailId}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__counterparties__organization_api_name__counterpartyusers__email_id___delete": {
+      "provider_intent": "zohocontracts__api__v1__counterparties__organization_api_name__counterpartyusers__email_id___delete",
+      "provider_alias_intent": "/api/v1/counterparties/organization_api_name/counterpartyusers/email_id",
+      "text": "Delete Counterparty Contact",
+      "category": "Counterparty Contacts",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "organization_api_name": {
+          "type": "string",
+          "text": "The name of the counterparty in the API",
+          "required": true
+        },
+        "email_id": {
+          "type": "string",
+          "text": "The email ID associated with the counterparty contact",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "organization_api_name": {
+          "type": "string",
+          "text": "The name of the counterparty in the API",
+          "required": true
+        },
+        "email_id": {
+          "type": "string",
+          "text": "The email ID associated with the counterparty contact",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a counterparty contact",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/counterparties/{organization_api_name}/counterpartyusers/{email_id}",
+        "alias_endpoint": "/zohocontracts/api/v1/counterparties/organization_api_name/counterpartyusers/email_id",
+        "api_ref": "https://www.zoho.com/contracts/api/counterparty-contact/delete-counterparty-contact.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.DELETE,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/counterparties/{organizationApiName}/counterpartyusers/{emailId}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__counterpartytypes___get": {
+      "provider_intent": "zohocontracts__api__v1__counterpartytypes___get",
+      "provider_alias_intent": "/api/v1/counterpartytypes",
+      "text": "Get Counterparty Types List",
+      "category": "Counterparty Types",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the counterparty types list maintained in Choice Lists",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/counterpartytypes",
+        "alias_endpoint": "/zohocontracts/api/v1/counterpartytypes",
+        "api_ref": "https://www.zoho.com/contracts/api/counterparty-types/get-counterparty-types-list.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.READ,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/counterpartytypes",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__admin__counterpartytypes___get": {
+      "provider_intent": "zohocontracts__api__v1__admin__counterpartytypes___get",
+      "provider_alias_intent": "/api/v1/admin/counterpartytypes",
+      "text": "Get Counterparty Types List using Admin Privilege",
+      "category": "Counterparty Types",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the counterparty types list",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/admin/counterpartytypes",
+        "alias_endpoint": "/zohocontracts/api/v1/admin/counterpartytypes",
+        "api_ref": "https://www.zoho.com/contracts/api/counterparty-types/get-counterparty-types-list-admin-privilege.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.meta.READ,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/admin/counterpartytypes",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__admin__counterpartytypes___post": {
+      "provider_intent": "zohocontracts__api__v1__admin__counterpartytypes___post",
+      "provider_alias_intent": "/api/v1/admin/counterpartytypes",
+      "text": "Create Counterparty Type",
+      "category": "Counterparty Types",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Represents the name of the counterparty type."
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a counterparty type in Choice Lists",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/admin/counterpartytypes",
+        "alias_endpoint": "/zohocontracts/api/v1/admin/counterpartytypes",
+        "api_ref": "https://www.zoho.com/contracts/api/counterparty-types/create-counterparty-type.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.meta.CREATE,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/admin/counterpartytypes",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__admin__counterpartytypes__api_name___put": {
+      "provider_intent": "zohocontracts__api__v1__admin__counterpartytypes__api_name___put",
+      "provider_alias_intent": "/api/v1/admin/counterpartytypes/api_name",
+      "text": "Update Counterparty Type",
+      "category": "Counterparty Types",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "api_name": {
+          "type": "string",
+          "text": "The API name of the counterparty type. The API name will always be based on the initially created name",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Represents the name of the counterparty type."
+        }
+      },
+      "path": {
+        "api_name": {
+          "type": "string",
+          "text": "The API name of the counterparty type. The API name will always be based on the initially created name",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update a counterparty type's name",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/admin/counterpartytypes/{api_name}",
+        "alias_endpoint": "/zohocontracts/api/v1/admin/counterpartytypes/api_name",
+        "api_ref": "https://www.zoho.com/contracts/api/counterparty-types/update-counterparty-type.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.meta.UPDATE,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/admin/counterpartytypes/{apiName}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__admin__counterpartytypes__api_name___delete": {
+      "provider_intent": "zohocontracts__api__v1__admin__counterpartytypes__api_name___delete",
+      "provider_alias_intent": "/api/v1/admin/counterpartytypes/api_name",
+      "text": "Delete Counterparty Type",
+      "category": "Counterparty Types",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "api_name": {
+          "type": "string",
+          "text": "The API name of the deleted counterparty type",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "api_name": {
+          "type": "string",
+          "text": "The API name of the deleted counterparty type",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a counterparty type",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/admin/counterpartytypes/{api_name}",
+        "alias_endpoint": "/zohocontracts/api/v1/admin/counterpartytypes/api_name",
+        "api_ref": "https://www.zoho.com/contracts/api/counterparty-types/delete-counterparty-type.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.meta.DELETE, contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/admin/counterpartytypes/{apiName}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__departments___get": {
+      "provider_intent": "zohocontracts__api__v1__departments___get",
+      "provider_alias_intent": "/api/v1/departments",
+      "text": "Get Departments List",
+      "category": "Departments",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the departments list maintained in Choice Lists.",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/departments",
+        "alias_endpoint": "/zohocontracts/api/v1/departments",
+        "api_ref": "https://www.zoho.com/contracts/api/department/get-departments-list.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.READ,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/departments",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__admin__departments___get": {
+      "provider_intent": "zohocontracts__api__v1__admin__departments___get",
+      "provider_alias_intent": "/api/v1/admin/departments",
+      "text": "Get Departments List using Admin privilege",
+      "category": "Departments",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the departments list maintained in Choice Lists using Admin privilege",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/admin/departments",
+        "alias_endpoint": "/zohocontracts/api/v1/admin/departments",
+        "api_ref": "https://www.zoho.com/contracts/api/department/get-departments-list-admin-privilege.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.meta.READ,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/admin/departments",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__admin__departments___post": {
+      "provider_intent": "zohocontracts__api__v1__admin__departments___post",
+      "provider_alias_intent": "/api/v1/admin/departments",
+      "text": "Create Department",
+      "category": "Departments",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Represents the name of the Department"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a department in Choice Lists",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/admin/departments",
+        "alias_endpoint": "/zohocontracts/api/v1/admin/departments",
+        "api_ref": "https://www.zoho.com/contracts/api/department/create-department.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.meta.CREATE,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/admin/departments",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__admin__departments__api_name___put": {
+      "provider_intent": "zohocontracts__api__v1__admin__departments__api_name___put",
+      "provider_alias_intent": "/api/v1/admin/departments/api_name",
+      "text": "Update Department",
+      "category": "Departments",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "api_name": {
+          "type": "string",
+          "text": "The name of the department in the API",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Represents the name of the Department"
+        }
+      },
+      "path": {
+        "api_name": {
+          "type": "string",
+          "text": "The name of the department in the API",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update a department's name maintained in the Choice Lists",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/admin/departments/{api_name}",
+        "alias_endpoint": "/zohocontracts/api/v1/admin/departments/api_name",
+        "api_ref": "https://www.zoho.com/contracts/api/department/update-department.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.meta.UPDATE,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/admin/departments/{apiName}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__admin__departments__api_name___delete": {
+      "provider_intent": "zohocontracts__api__v1__admin__departments__api_name___delete",
+      "provider_alias_intent": "/api/v1/admin/departments/api_name",
+      "text": "Delete Department",
+      "category": "Departments",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "api_name": {
+          "type": "string",
+          "text": "The name of the department in the API",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "api_name": {
+          "type": "string",
+          "text": "The name of the department in the API",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a department maintained in the Choice Lists",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/admin/departments/{api_name}",
+        "alias_endpoint": "/zohocontracts/api/v1/admin/departments/api_name",
+        "api_ref": "https://www.zoho.com/contracts/api/department/delete-department.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.meta.DELETE,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/admin/departments/{apiName}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__obligationcategories___get": {
+      "provider_intent": "zohocontracts__api__v1__obligationcategories___get",
+      "provider_alias_intent": "/api/v1/obligationcategories",
+      "text": "Get Obligation Categories List",
+      "category": "Obligation Category",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the obligation categories list maintained in Choice Lists",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/obligationcategories",
+        "alias_endpoint": "/zohocontracts/api/v1/obligationcategories",
+        "api_ref": "https://www.zoho.com/contracts/api/obligation-category/get-obligation-categories-list.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.READ,contracts.contracts.ALL\n",
+      "api_endpoint_src": "{endpoint}/api/v1/obligationcategories",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__admin__obligationcategories___get": {
+      "provider_intent": "zohocontracts__api__v1__admin__obligationcategories___get",
+      "provider_alias_intent": "/api/v1/admin/obligationcategories",
+      "text": "Get Obligation Categories List using Admin privilege",
+      "category": "Obligation Category",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the obligation categories list maintained in Choice Lists using Admin privilege",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/admin/obligationcategories",
+        "alias_endpoint": "/zohocontracts/api/v1/admin/obligationcategories",
+        "api_ref": "https://www.zoho.com/contracts/api/obligation-category/get-obligation-categories-list-admin-privilege.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.READ,contracts.contracts.ALL\n",
+      "api_endpoint_src": "{endpoint}/api/v1/admin/obligationcategories",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__admin__obligationcategories___post": {
+      "provider_intent": "zohocontracts__api__v1__admin__obligationcategories___post",
+      "provider_alias_intent": "/api/v1/admin/obligationcategories",
+      "text": "Create Obligation Category",
+      "category": "Obligation Category",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "displayName": {
+          "type": "string",
+          "text": "Represents the name of the obligation category"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create an obligation category in Choice Lists",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/admin/obligationcategories",
+        "alias_endpoint": "/zohocontracts/api/v1/admin/obligationcategories",
+        "api_ref": "https://www.zoho.com/contracts/api/obligation-category/create-obligation-category.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.meta.CREATE,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/admin/obligationcategories",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__admin__obligationcategories__api_name___put": {
+      "provider_intent": "zohocontracts__api__v1__admin__obligationcategories__api_name___put",
+      "provider_alias_intent": "/api/v1/admin/obligationcategories/api_name",
+      "text": "Update Obligation Category",
+      "category": "Obligation Category",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "api_name": {
+          "type": "string",
+          "text": "The name of the obligation category in the API",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "displayName": {
+          "type": "string",
+          "text": "Represents the name of the obligation category"
+        }
+      },
+      "path": {
+        "api_name": {
+          "type": "string",
+          "text": "The name of the obligation category in the API",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update an obligation category name maintained in the Choice Lists",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/admin/obligationcategories/{api_name}",
+        "alias_endpoint": "/zohocontracts/api/v1/admin/obligationcategories/api_name",
+        "api_ref": "https://www.zoho.com/contracts/api/obligation-category/update-obligation-category.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.meta.UPDATE,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/admin/obligationcategories/{apiName}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__admin__obligationcategories__api_name___delete": {
+      "provider_intent": "zohocontracts__api__v1__admin__obligationcategories__api_name___delete",
+      "provider_alias_intent": "/api/v1/admin/obligationcategories/api_name",
+      "text": "Delete Obligation Category",
+      "category": "Obligation Category",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "api_name": {
+          "type": "string",
+          "text": "The name of the obligation category in the API",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "api_name": {
+          "type": "string",
+          "text": "The name of the obligation category in the API",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete an obligation category maintained in the Choice Lists",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/admin/obligationcategories/{api_name}",
+        "alias_endpoint": "/zohocontracts/api/v1/admin/obligationcategories/api_name",
+        "api_ref": "https://www.zoho.com/contracts/api/obligation-category/delete-obligation-category.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.meta.DELETE,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/admin/obligationcategories/{apiName}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontractsapi__v1__actions__contracts__api_name__obligations___get": {
+      "provider_intent": "zohocontractsapi__v1__actions__contracts__api_name__obligations___get",
+      "provider_alias_intent": "api/v1/actions/contracts/api_name/obligations",
+      "text": "Get Obligations List",
+      "category": "Obligations/Create and Manage",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "api_name": {
+          "type": "string",
+          "text": "The name of the obligation in the API",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "api_name": {
+          "type": "string",
+          "text": "The name of the obligation in the API",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the list of obligations",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}api/v1/actions/contracts/{api_name}/obligations",
+        "alias_endpoint": "/zohocontractsapi/v1/actions/contracts/api_name/obligations",
+        "api_ref": "https://www.zoho.com/contracts/api/obligations/get-obligations-list.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.READ,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}api/v1/actions/contracts/{apiName}/obligations",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__contracts__contract_api_name__obligations___post": {
+      "provider_intent": "zohocontracts__api__v1__contracts__contract_api_name__obligations___post",
+      "provider_alias_intent": "/api/v1/contracts/contract_api_name/obligations",
+      "text": "Create Obligation",
+      "category": "Obligations/Create and Manage",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "contract_api_name": {
+          "type": "string",
+          "text": "The name of the contract API",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Represents the name of the obligation"
+        },
+        "description": {
+          "type": "string",
+          "text": "Represents the obligation description"
+        },
+        "category": {
+          "type": "object",
+          "text": "Represents the category the obligation falls under"
+        },
+        "priority": {
+          "type": "number",
+          "text": "Represents the priority of the obligation. Values : (0-Low, 1-Medium, 2-High)"
+        },
+        "hasTask": {
+          "type": "boolean",
+          "text": "Represents whether the obligation is a task or not",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "taskOwners": {
+          "type": "object",
+          "text": "Represents the ID of the obligation's owner"
+        },
+        "recurring": {
+          "type": "array",
+          "text": "Represents whether the obligation task is of a recurring type"
+        },
+        "startsOn": {
+          "type": "number",
+          "text": "Represents whether the start date of the recurring obligation's first instance is on a specific date or on the contract effective date. Values : (1-Specific Date, 2-On Effective Date)"
+        },
+        "startDate": {
+          "type": "string",
+          "text": "Represents the start date in javascript milliseconds format"
+        },
+        "dueOnTermination": {
+          "type": "boolean",
+          "text": "Represents whether the recurring obligation ends with contract expiry or termination",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "timePeriod": {
+          "type": "number",
+          "text": "Represents whether the obligation's recurring task instance's due is by days, week, month, or year. Values : (0-Days, 1-Weeks, 2-Months, 3-Years)"
+        },
+        "frequency": {
+          "type": "number",
+          "text": "Represents whether the obligation's recurring task instance's due is by N days, weeks, months, or years based on the given timePeriod"
+        },
+        "days": {
+          "type": "number",
+          "text": "Represents the day in which the recurring task has to be repeated when timePeriod is days"
+        },
+        "weeks": {
+          "type": "number",
+          "text": "Represents the day of the week in which the recurring task has to be repeated when timePeriod is weeks. It applies only when the frequency value is 2 and above. Values : (0 to 6-Sunday to Monday, 7-First Day, 8-Last Day)"
+        },
+        "months": {
+          "type": "number",
+          "text": "Represents the day of the month in which the recurring task has to be repeated when timePeriod is months. It applies only when the frequency value is 2 and above. Values : (0 to 6-Sunday to Monday, 7-First Day, 8-Second Day, 9-Third Day, 10-Fourth Day, 11-Last, 1 to 28-1st to 28th, 29-Last Day, 30-One day before the last day, 31-Two days before the last day)"
+        },
+        "years": {
+          "type": "number",
+          "text": "Represents the day/month of the year in which the recurring task has to be repeated when timePeriod is years. It applies only when the frequency value is 2 and above. Values : (0 to 6-Sunday to Monday, 7-First Day, 8-Second Day, 9-Third Day, 10-Fourth Day, 11-Last, 1 to 28-1st to 28th, 29-Last Day, 30-One day before the last day, 31-Two days before the last day, 0 to 11-January to December)"
+        }
+      },
+      "path": {
+        "contract_api_name": {
+          "type": "string",
+          "text": "The name of the contract API",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create an obligation in a contract",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/contracts/{contract_api_name}/obligations",
+        "alias_endpoint": "/zohocontracts/api/v1/contracts/contract_api_name/obligations",
+        "api_ref": "https://www.zoho.com/contracts/api/obligations/create-obligation.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.CREATE,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/contracts/{contractApiName}/obligations",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__contracts__contract_api_name__obligations__api_name___put": {
+      "provider_intent": "zohocontracts__api__v1__contracts__contract_api_name__obligations__api_name___put",
+      "provider_alias_intent": "/api/v1/contracts/contract_api_name/obligations/api_name",
+      "text": "Update Obligation",
+      "category": "Obligations/Create and Manage",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "contract_api_name": {
+          "type": "string",
+          "text": "The name of the contract API",
+          "required": true
+        },
+        "api_name": {
+          "type": "string",
+          "text": "The name of the obligation in the API",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Represents the name of the obligation"
+        },
+        "recurring": {
+          "type": "array",
+          "text": "Represents whether the obligation's task is of a recurring type"
+        },
+        "exclude": {
+          "type": "object",
+          "text": "Represents the specific days of the week when the obligation's recurring task instance need not be considered for execution"
+        },
+        "startDate": {
+          "type": "number",
+          "text": "Represents the start date in javascript milliseconds format"
+        }
+      },
+      "path": {
+        "contract_api_name": {
+          "type": "string",
+          "text": "The name of the contract API",
+          "required": true
+        },
+        "api_name": {
+          "type": "string",
+          "text": "The name of the obligation in the API",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update an obligation",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/contracts/{contract_api_name}/obligations/{api_name}",
+        "alias_endpoint": "/zohocontracts/api/v1/contracts/contract_api_name/obligations/api_name",
+        "api_ref": "https://www.zoho.com/contracts/api/obligations/update-obligation.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.UPDATE,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/contracts/{apiName}/obligations/{apiName}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__actions__updatestatus__contracts__contract_api_name__obligations__api_name___put": {
+      "provider_intent": "zohocontracts__api__v1__actions__updatestatus__contracts__contract_api_name__obligations__api_name___put",
+      "provider_alias_intent": "/api/v1/actions/updatestatus/contracts/contract_api_name/obligations/api_name",
+      "text": "Update Obligation Status",
+      "category": "Obligations/Create and Manage",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "contract_api_name": {
+          "type": "string",
+          "text": "The name of the contract API",
+          "required": true
+        },
+        "api_name": {
+          "type": "string",
+          "text": "The name of the obligation in the API",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "instanceID": {
+          "type": "number",
+          "text": "Represents the unique ID of the instance of a task in an obligation"
+        },
+        "status": {
+          "type": "number",
+          "text": "Represents the status of an obligation. Values : (0-Deleted, 1-Active, 13-Paused, 14-Completed, 16-Yet to start, 17-Scheduled)"
+        }
+      },
+      "path": {
+        "contract_api_name": {
+          "type": "string",
+          "text": "The name of the contract API",
+          "required": true
+        },
+        "api_name": {
+          "type": "string",
+          "text": "The name of the obligation in the API",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update an obligation's status",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/actions/updatestatus/contracts/{contract_api_name}/obligations/{api_name}",
+        "alias_endpoint": "/zohocontracts/api/v1/actions/updatestatus/contracts/contract_api_name/obligations/api_name",
+        "api_ref": "https://www.zoho.com/contracts/api/obligation-status/update-obligation-status.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.UPDATE,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/actions/updatestatus/contracts/{contractApiName}/obligations/{apiName}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontractsapi__v1__contracts__contract_api_name__obligations__api_name___delete": {
+      "provider_intent": "zohocontractsapi__v1__contracts__contract_api_name__obligations__api_name___delete",
+      "provider_alias_intent": "api/v1/contracts/contract_api_name/obligations/api_name",
+      "text": "Delete Obligation",
+      "category": "Obligations/Create and Manage",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "contract_api_name": {
+          "type": "string",
+          "text": "The name of the contract API",
+          "required": true
+        },
+        "api_name": {
+          "type": "string",
+          "text": "The name of the obligation in the API",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "contract_api_name": {
+          "type": "string",
+          "text": "The name of the contract API",
+          "required": true
+        },
+        "api_name": {
+          "type": "string",
+          "text": "The name of the obligation in the API",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete an obligation",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}api/v1/contracts/{contract_api_name}/obligations/{api_name}",
+        "alias_endpoint": "/zohocontractsapi/v1/contracts/contract_api_name/obligations/api_name",
+        "api_ref": "https://www.zoho.com/contracts/api/obligations/delete-obligation.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.DELETE,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}api/v1/contracts/{apiName}/obligations/{apiName}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__myobligations___get": {
+      "provider_intent": "zohocontracts__api__v1__myobligations___get",
+      "provider_alias_intent": "/api/v1/myobligations",
+      "text": "Get All Obligations List",
+      "category": "Obligations/Obligation Owner",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the list of obligations owned by a user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/myobligations",
+        "alias_endpoint": "/zohocontracts/api/v1/myobligations",
+        "api_ref": "https://www.zoho.com/contracts/api/obligations/get-all-obligations-list.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.READ,contracts.contracts.ALL\n",
+      "api_endpoint_src": "{endpoint}/api/v1/myobligations",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__pendingobligations___get": {
+      "provider_intent": "zohocontracts__api__v1__pendingobligations___get",
+      "provider_alias_intent": "/api/v1/pendingobligations",
+      "text": "Get Pending Obligations List",
+      "category": "Obligations/Obligation Owner",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the list of all the pending obligations owned by the user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/pendingobligations",
+        "alias_endpoint": "/zohocontracts/api/v1/pendingobligations",
+        "api_ref": "https://www.zoho.com/contracts/api/obligations/get-pending-obligations-list.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.READ, contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/pendingobligations",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__myobligations__api_name__tasks___get": {
+      "provider_intent": "zohocontracts__api__v1__myobligations__api_name__tasks___get",
+      "provider_alias_intent": "/api/v1/myobligations/api_name/tasks",
+      "text": "Get Tasks List of an Obligation",
+      "category": "Obligations/Obligation Owner",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "api_name": {
+          "type": "string",
+          "text": "The name of the obligation in the API",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "api_name": {
+          "type": "string",
+          "text": "The name of the obligation in the API",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the list of all the tasks of an obligation owned by the user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/myobligations/{api_name}/tasks",
+        "alias_endpoint": "/zohocontracts/api/v1/myobligations/api_name/tasks",
+        "api_ref": "https://www.zoho.com/contracts/api/obligations/get-tasks-list-obligation.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.READ,contracts.contracts.ALL\n",
+      "api_endpoint_src": "{endpoint}/api/v1/myobligations/{apiName}/tasks",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__pendingobligations__api_name__tasks___get": {
+      "provider_intent": "zohocontracts__api__v1__pendingobligations__api_name__tasks___get",
+      "provider_alias_intent": "/api/v1/pendingobligations/api_name/tasks",
+      "text": "Get Tasks List of a Pending Obligation",
+      "category": "Obligations/Obligation Owner",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "api_name": {
+          "type": "string",
+          "text": "The name of the obligation in the API",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "api_name": {
+          "type": "string",
+          "text": "The name of the obligation in the API",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the list of all the tasks of a pending obligation owned by the user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/pendingobligations/{api_name}/tasks",
+        "alias_endpoint": "/zohocontracts/api/v1/pendingobligations/api_name/tasks",
+        "api_ref": "https://www.zoho.com/contracts/api/obligations/get-tasks-list-pending-obligation.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.contracts.READ,contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/pendingobligations/{apiName}/tasks",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__admin__orginfo___get": {
+      "provider_intent": "zohocontracts__api__v1__admin__orginfo___get",
+      "provider_alias_intent": "/api/v1/admin/orginfo",
+      "text": "Get Organization Info",
+      "category": "Organization",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the details of the organization.",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/admin/orginfo",
+        "alias_endpoint": "/zohocontracts/api/v1/admin/orginfo",
+        "api_ref": "https://www.zoho.com/contracts/api/organization/get-organization-info.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.meta.READ, contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/admin/orginfo",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__admin__orginfo__api_name___put": {
+      "provider_intent": "zohocontracts__api__v1__admin__orginfo__api_name___put",
+      "provider_alias_intent": "/api/v1/admin/orginfo/api_name",
+      "text": "Update Organization Info",
+      "category": "Organization",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "api_name": {
+          "type": "string",
+          "text": "The name of the organization in the API",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "text": "Represents the name of the organization"
+        },
+        "country": {
+          "type": "string",
+          "text": "Represents the country of the organization"
+        },
+        "city": {
+          "type": "string",
+          "text": "Represents the city of the organization"
+        },
+        "state": {
+          "type": "string",
+          "text": "Represents the state of the organization"
+        },
+        "address": {
+          "type": "string",
+          "text": "Represents the address of the organization"
+        },
+        "website": {
+          "type": "string",
+          "text": "Represents the website of the organization"
+        },
+        "phoneNumber": {
+          "type": "string",
+          "text": "Represents the phone number of the organization"
+        }
+      },
+      "path": {
+        "api_name": {
+          "type": "string",
+          "text": "The name of the organization in the API",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "update the details of the organization",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/admin/orginfo/{api_name}",
+        "alias_endpoint": "/zohocontracts/api/v1/admin/orginfo/api_name",
+        "api_ref": "https://www.zoho.com/contracts/api/organization/update-organization-info.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.meta.UPDATE, contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/admin/orginfo/{apiName}",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocontracts__api__v1__activeusers___get": {
+      "provider_intent": "zohocontracts__api__v1__activeusers___get",
+      "provider_alias_intent": "/api/v1/activeusers",
+      "text": "Get Active Users",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get active users in the organization and their details.",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1/activeusers",
+        "alias_endpoint": "/zohocontracts/api/v1/activeusers",
+        "api_ref": "https://www.zoho.com/contracts/api/users/get-active-users.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "contracts.meta.READ, contracts.contracts.ALL",
+      "api_endpoint_src": "{endpoint}/api/v1/activeusers",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

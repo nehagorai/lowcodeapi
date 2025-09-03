@@ -1,0 +1,561 @@
+{
+  "routes": {
+    "pexels__v1__collections__featured___get": {
+      "provider_intent": "pexels__v1__collections__featured___get",
+      "provider_alias_intent": "/v1/collections/featured",
+      "text": "Featured Collections",
+      "category": "Collection",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "number",
+          "text": " The page number you are requesting",
+          "enum": [
+            "1"
+          ]
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Results per page requested",
+          "enum": [
+            "15 Max"
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Featured Collections",
+        "rate_limit": [],
+        "api_endpoint": "https://api.pexels.com/v1/collections/featured",
+        "alias_endpoint": "/pexels/v1/collections/featured",
+        "api_ref": "https://www.pexels.com/api/documentation/#collections-featured"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "pexels__v1__collections___get": {
+      "provider_intent": "pexels__v1__collections___get",
+      "provider_alias_intent": "/v1/collections",
+      "text": "My Collections",
+      "category": "Collection",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "number",
+          "text": "The page number you are requesting",
+          "enum": [
+            "1"
+          ]
+        },
+        "per_page": {
+          "type": "number",
+          "text": " Results per page requested",
+          "enum": [
+            "15 Max"
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "My Collections",
+        "rate_limit": [],
+        "api_endpoint": "https://api.pexels.com/v1/collections",
+        "alias_endpoint": "/pexels/v1/collections",
+        "api_ref": "https://www.pexels.com/api/documentation/#collections-all"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "pexels__v1__collections__id___get": {
+      "provider_intent": "pexels__v1__collections__id___get",
+      "provider_alias_intent": "/v1/collections/id",
+      "text": "Collections Media",
+      "category": "Collection",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "ID",
+          "required": true
+        },
+        "type": {
+          "type": "enum",
+          "text": "Specify media type: photos or videos",
+          "enum": [
+            "videos",
+            "photos"
+          ]
+        },
+        "page": {
+          "type": "number",
+          "text": "The page number you are requesting",
+          "enum": [
+            "1"
+          ]
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Results per page requested",
+          "enum": [
+            "15 Max"
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Collections Media",
+        "rate_limit": [],
+        "api_endpoint": "https://api.pexels.com/v1/collections/:id",
+        "alias_endpoint": "/pexels/v1/collections/id",
+        "api_ref": "https://www.pexels.com/api/documentation/#collections-media"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "pexels__v1__search___get": {
+      "provider_intent": "pexels__v1__search___get",
+      "provider_alias_intent": "/v1/search",
+      "text": "Search for Photos",
+      "category": "Photos",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "query": {
+          "type": "string",
+          "text": "The search query",
+          "required": true
+        },
+        "orientation": {
+          "type": "enum",
+          "text": "Desired photo orientation",
+          "enum": [
+            "landscape",
+            "portrait",
+            "square"
+          ]
+        },
+        "size": {
+          "type": "string",
+          "text": "Minimum photo size"
+        },
+        "color": {
+          "type": "string",
+          "text": "Desired photo color"
+        },
+        "locale": {
+          "type": "enum",
+          "text": "The locale of the search you are performing",
+          "enum": [
+            "en-US",
+            "pt-BR",
+            "es-ES",
+            "ca-ES",
+            "de-DE",
+            "it-IT",
+            "fr-FR",
+            "sv-SE",
+            "id-ID",
+            "pl-PL",
+            "ja-JP",
+            "zh-TW",
+            "zh-CN",
+            "ko-KR",
+            "th-TH",
+            "nl-NL",
+            "hu-HU",
+            "vi-VN",
+            "cs-CZ",
+            "da-DK",
+            "fi-FI",
+            "uk-UA",
+            "el-GR",
+            "ro-RO",
+            "nb-NO",
+            "sk-SK",
+            "tr-TR",
+            "ru-RU"
+          ]
+        },
+        "page": {
+          "type": "number",
+          "text": "The page number you are requesting"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "The number of results you are requesting per page. Default"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Search for Photos",
+        "rate_limit": [],
+        "api_endpoint": "https://api.pexels.com/v1/search",
+        "alias_endpoint": "/pexels/v1/search",
+        "api_ref": "https://www.pexels.com/api/documentation/#photos-search"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "pexels__v1__curated___get": {
+      "provider_intent": "pexels__v1__curated___get",
+      "provider_alias_intent": "/v1/curated",
+      "text": "Curated Photos",
+      "category": "Photos",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "number",
+          "text": "The page number you are requesting",
+          "enum": [
+            "1"
+          ]
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Results per page requested",
+          "enum": [
+            "15 Max"
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Curated Photos",
+        "rate_limit": [],
+        "api_endpoint": "https://api.pexels.com/v1/curated",
+        "alias_endpoint": "/pexels/v1/curated",
+        "api_ref": "https://www.pexels.com/api/documentation/#photos-curated"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "pexels__v1__photos__id___get": {
+      "provider_intent": "pexels__v1__photos__id___get",
+      "provider_alias_intent": "/v1/photos/id",
+      "text": "Get a Photo",
+      "category": "Photos",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "The id of the photo you are requesting",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "The id of the photo you are requesting",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get a Photo",
+        "rate_limit": [],
+        "api_endpoint": "https://api.pexels.com/v1/photos/:id",
+        "alias_endpoint": "/pexels/v1/photos/id",
+        "api_ref": "https://www.pexels.com/api/documentation/#photos-show"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "pexels__videos__search___get": {
+      "provider_intent": "pexels__videos__search___get",
+      "provider_alias_intent": "/videos/search",
+      "text": "Search for Videos",
+      "category": "Videos",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "query": {
+          "type": "string",
+          "text": "The search query",
+          "required": true
+        },
+        "orientation": {
+          "type": "string",
+          "text": "Desired video orientation"
+        },
+        "size": {
+          "type": "enum",
+          "text": "Minimum video size",
+          "enum": [
+            "large(4K)",
+            "medium(Full HD)",
+            "small(HD)"
+          ]
+        },
+        "locale": {
+          "type": "enum",
+          "text": "The current supported locales are",
+          "enum": [
+            "en-US",
+            "pt-BR",
+            "es-ES",
+            "ca-ES",
+            "de-DE",
+            "it-IT",
+            "fr-FR",
+            "sv-SE",
+            "id-ID",
+            "pl-PL",
+            "ja-JP",
+            "zh-TW",
+            "zh-CN",
+            "ko-KR",
+            "th-TH",
+            "nl-NL",
+            "hu-HU",
+            "vi-VN",
+            "cs-CZ",
+            "da-DK",
+            "fi-FI",
+            "uk-UA",
+            "el-GR",
+            "ro-RO",
+            "nb-NO",
+            "sk-SK",
+            "tr-TR",
+            "ru-RU"
+          ]
+        },
+        "page": {
+          "type": "number",
+          "text": "Page number you are requesting"
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Number of results you are requesting per page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "-",
+        "auth": [],
+        "description": "Search for Videos",
+        "rate_limit": [],
+        "api_endpoint": "https://api.pexels.com/videos/search",
+        "alias_endpoint": "/pexels/videos/search",
+        "api_ref": "https://www.pexels.com/api/documentation/#videos-search"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "pexels__videos__popular___get": {
+      "provider_intent": "pexels__videos__popular___get",
+      "provider_alias_intent": "/videos/popular",
+      "text": "Popular Videos",
+      "category": "Videos",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "min_width": {
+          "type": "number",
+          "text": "Minimum video width returned in pixels"
+        },
+        "min_height": {
+          "type": "number",
+          "text": "Minimum video height in pixels requested"
+        },
+        "min_duration": {
+          "type": "number",
+          "text": "Minimum video duration in seconds requested"
+        },
+        "max_duration": {
+          "type": "number",
+          "text": "Maximum video duration in seconds"
+        },
+        "page": {
+          "type": "number",
+          "text": "The page number you are requesting",
+          "enum": [
+            "1"
+          ]
+        },
+        "per_page": {
+          "type": "number",
+          "text": "Specify results per page ",
+          "enum": [
+            "15 Max"
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "-",
+        "auth": [],
+        "description": "Popular Videos",
+        "rate_limit": [],
+        "api_endpoint": "https://api.pexels.com/videos/popular",
+        "alias_endpoint": "/pexels/videos/popular",
+        "api_ref": "https://www.pexels.com/api/documentation/#videos-popular"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "pexels__videos__videos__id___get": {
+      "provider_intent": "pexels__videos__videos__id___get",
+      "provider_alias_intent": "/videos/videos/id",
+      "text": "Get a Video",
+      "category": "Videos",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "number",
+          "text": "The id of the video you are requesting",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "number",
+          "text": "The id of the video you are requesting",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "-",
+        "auth": [],
+        "description": "Get a Video",
+        "rate_limit": [],
+        "api_endpoint": "https://api.pexels.com/videos/videos/:id",
+        "alias_endpoint": "/pexels/videos/videos/id",
+        "api_ref": "https://www.pexels.com/api/documentation/#videos-show"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

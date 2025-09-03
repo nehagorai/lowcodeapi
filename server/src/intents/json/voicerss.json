@@ -1,0 +1,85 @@
+{
+  "routes": {
+    "voicerss__api__v2__tts__stream___get": {
+      "provider_intent": "voicerss__api__v2__tts__stream___get",
+      "provider_alias_intent": "/api/v2/tts/stream",
+      "text": "Text to speech",
+      "category": "Text-To-Speech",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "key": {
+          "type": "string",
+          "text": "The API key",
+          "required": true
+        },
+        "src": {
+          "type": "string",
+          "text": "The textual content for converting to speech (length limited by 100KB).",
+          "required": true
+        },
+        "hl": {
+          "type": "string",
+          "text": "The textual content language. Allows values: see Languages.",
+          "required": true
+        },
+        "v": {
+          "type": "string",
+          "text": "The speech voice. Allows values: see Voices. Default value: depends on a language."
+        },
+        "r": {
+          "type": "number",
+          "text": "The speech rate (speed). Allows values: from -10 (slowest speed) up to 10 (fastest speed). Default value: 0 (normal speed)."
+        },
+        "c": {
+          "type": "string",
+          "text": "The speech audio codec. Allows values: see Audio Codecs. Default value: WAV."
+        },
+        "f": {
+          "type": "string",
+          "text": "The speech audio formats. Allows values: see Audio Formats. Default value: 8khz_8bit_mono."
+        },
+        "ssml": {
+          "type": "boolean",
+          "text": "The SSML textual content format (see SSML documentation). Allows values: true and false. Default value: false.",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "b64": {
+          "type": "boolean",
+          "text": "Defines output as a Base64 string format (for an internet browser playing). Allows values: true and false. Default value: false.",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "The Text-To-Speech API supports the following list of parameters. The parameters have name-value pair (NVP) format.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.voicerss.org",
+        "alias_endpoint": "/voicerss/api/v2/tts/stream",
+        "api_ref": "https://voicerss.org/api"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "TOKEN",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

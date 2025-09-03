@@ -1,0 +1,3026 @@
+{
+  "routes": {
+    "audiostackhttps____v2.api.audio__content__file__create-upload-url___post": {
+      "provider_intent": "audiostackhttps____v2.api.audio__content__file__create-upload-url___post",
+      "provider_alias_intent": "https//v2.api.audio/content/file/create-upload-url",
+      "text": "Creates a url for uploading a new file.",
+      "category": "File",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "tags": {
+          "text": "A list of tags in string format",
+          "type": "array",
+          "required": false
+        },
+        "source": {
+          "text": "By default this will be the client used to upload i.e. api, sdk",
+          "type": "string",
+          "required": false
+        },
+        "category": {
+          "text": "An arbitrary category for this file.",
+          "type": "string",
+          "required": false
+        },
+        "filePath": {
+          "text": "File path in the backend where the file will be created. Arbitrary folder paths are supported, and folders not yet created will be created.",
+          "type": "string",
+          "required": true
+        },
+        "metadata": {
+          "text": "Freeform object for representing metadata",
+          "type": "object",
+          "required": false
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/postfile",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "When uploading a file you should call this endpoint first. ",
+        "api_endpoint": "https://v2.api.audio/content/file/create-upload-url"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T09:29:31.000Z"
+    },
+    "audiostackhttps____v2.api.audio__content__file__transfer-file___put": {
+      "provider_intent": "audiostackhttps____v2.api.audio__content__file__transfer-file___put",
+      "provider_alias_intent": "https//v2.api.audio/content/file/transfer-file",
+      "text": "Transfers a file created in the audiostack api",
+      "category": "File",
+      "method": "PUT",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "url": {
+          "text": "A valid url in the format: https://v2.api.audio/file/..",
+          "type": "string",
+          "required": true
+        },
+        "tags": {
+          "text": "A list of tags in string format",
+          "type": "array",
+          "required": false
+        },
+        "category": {
+          "text": "An arbitrary category for this file.",
+          "type": "string",
+          "required": false
+        },
+        "filePath": {
+          "text": "File path in the backend where the file will be created. Arbitrary folder paths are supported, and folders not yet created will be created. There is no need to supply the extension on transferred files.",
+          "type": "string",
+          "required": true
+        },
+        "metadata": {
+          "text": "Freeform object for representing metadata",
+          "type": "object",
+          "required": false
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/postfiletransfer",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "the supplied url should be a valid url returned from any audiostack endpoint, i.e. tts, delivery and in the format ",
+        "api_endpoint": "https://v2.api.audio/content/file/transfer-file"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T09:29:47.000Z"
+    },
+    "audiostack__content__file__search___get": {
+      "provider_intent": "audiostack__content__file__search___get",
+      "provider_alias_intent": "/content/file/search",
+      "text": "Search for files.",
+      "category": "File",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "name": {
+          "text": "",
+          "type": "string",
+          "required": false
+        },
+        "path": {
+          "text": "",
+          "type": "string",
+          "required": false
+        },
+        "tags": {
+          "text": "",
+          "type": "array of strings",
+          "required": false
+        },
+        "source": {
+          "text": "",
+          "type": "string",
+          "required": false
+        },
+        "category": {
+          "text": "",
+          "type": "string",
+          "required": false
+        },
+        "fileType": {
+          "text": "",
+          "type": "string",
+          "required": false
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/searchfiles",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "List all uploaded files",
+        "api_endpoint": " https://v2.api.audio/content/file/search"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T09:30:02.000Z"
+    },
+    "audiostackhttps____v2.api.audio__content__file__id__fileid___get": {
+      "provider_intent": "audiostackhttps____v2.api.audio__content__file__id__fileid___get",
+      "provider_alias_intent": "https//v2.api.audio/content/file/id/fileid",
+      "text": "Get a file object and creates a url for downloading it.",
+      "category": "File",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "fileId": {
+          "text": "",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/getfileid",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Get a file object and creates a url for downloading it.",
+        "api_endpoint": "https://v2.api.audio/content/file/id/{fileId}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T09:30:30.000Z"
+    },
+    "audiostackhttps____v2.api.audio__content__file__id__fileid___delete": {
+      "provider_intent": "audiostackhttps____v2.api.audio__content__file__id__fileid___delete",
+      "provider_alias_intent": "https//v2.api.audio/content/file/id/fileid",
+      "text": "Deletes a file.",
+      "category": "File",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "fileId": {
+          "text": "",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/deletefileid",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Deletes a file.",
+        "api_endpoint": "https://v2.api.audio/content/file/id/{fileId}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T09:31:02.000Z"
+    },
+    "audiostackhttps____v2.api.audio__content__file__id__fileid___patch": {
+      "provider_intent": "audiostackhttps____v2.api.audio__content__file__id__fileid___patch",
+      "provider_alias_intent": "https//v2.api.audio/content/file/id/fileid",
+      "text": "Updates a file resource",
+      "category": "File",
+      "method": "PATCH",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "fileId": {
+          "text": "",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "tags": {
+          "text": "",
+          "type": "array",
+          "required": false
+        },
+        "category": {
+          "text": "",
+          "type": "string",
+          "required": false
+        },
+        "filePath": {
+          "text": "",
+          "type": "string",
+          "required": false
+        },
+        "metadata": {
+          "text": "",
+          "type": "object",
+          "required": false
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/patchfile",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "This endpoint allows you to update the supplied fields, filePath can be used to move the supplied file between folders",
+        "api_endpoint": "https://v2.api.audio/content/file/id/{fileId}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T09:32:48.000Z"
+    },
+    "audiostackhttps____v2.api.audio__content__folder___post": {
+      "provider_intent": "audiostackhttps____v2.api.audio__content__folder___post",
+      "provider_alias_intent": "https//v2.api.audio/content/folder",
+      "text": "Creates an empty folder",
+      "category": "Folder",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "folder": {
+          "text": "",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/createfolder",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Creates an empty folder",
+        "api_endpoint": "https://v2.api.audio/content/folder"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T09:27:36.000Z"
+    },
+    "audiostackhttps____v2.api.audio__content__folder___delete": {
+      "provider_intent": "audiostackhttps____v2.api.audio__content__folder___delete",
+      "provider_alias_intent": "https//v2.api.audio/content/folder",
+      "text": "Deletes a folder.",
+      "category": "Folder",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "folder": {
+          "text": "",
+          "type": "string",
+          "required": true
+        },
+        "forceDelete": {
+          "text": "",
+          "type": "string",
+          "required": false
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/deletefolder",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Deletes a folder and all files within it.",
+        "api_endpoint": "https://v2.api.audio/content/folder"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T09:38:19.000Z"
+    },
+    "audiostack__content__recommend__tag___post": {
+      "provider_intent": "audiostack__content__recommend__tag___post",
+      "provider_alias_intent": "/content/recommend/tag",
+      "text": "Get recommended tags from user-specified list",
+      "category": "Recommend",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "tags": {
+          "text": "User specified list of tags to use",
+          "type": "array of strings",
+          "required": true
+        },
+        "text": {
+          "text": "Text to get tags recommendations for.",
+          "type": "string",
+          "required": true
+        },
+        "category": {
+          "text": "User specified category.",
+          "type": "string",
+          "required": false
+        },
+        "number_of_results": {
+          "text": "Number of tags to get back.",
+          "type": "number",
+          "required": false
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/postrecommendtags",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "This endpoint allows the user to provide their own list of tags.",
+        "api_endpoint": " https://v2.api.audio/content/recommend/tag"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T09:44:42.000Z"
+    },
+    "audiostackhttps____v2.api.audio__content__recommend__tone___post": {
+      "provider_intent": "audiostackhttps____v2.api.audio__content__recommend__tone___post",
+      "provider_alias_intent": "https//v2.api.audio/content/recommend/tone",
+      "text": "Get recommended tones",
+      "category": "Recommend",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "text": {
+          "text": "Text to get tone recommendations for.",
+          "type": "string",
+          "required": true
+        },
+        "number_of_results": {
+          "text": "Number of tags to get back.",
+          "type": "integer",
+          "required": false
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/postrecommendtones",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "This endpoint recommends the best tone from AudioStack's curated list of available tones.",
+        "api_endpoint": "https://v2.api.audio/content/recommend/tone"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T09:44:14.000Z"
+    },
+    "audiostackhttps____v2.api.audio__content__recommend__mood___post": {
+      "provider_intent": "audiostackhttps____v2.api.audio__content__recommend__mood___post",
+      "provider_alias_intent": "https//v2.api.audio/content/recommend/mood",
+      "text": "Get recommended moods",
+      "category": "Recommend",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "text": {
+          "text": "Text to get mood recommendations for.",
+          "type": "string",
+          "required": true
+        },
+        "number_of_results": {
+          "text": "Number of tags to get back.",
+          "type": "integer",
+          "required": false
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/postrecommendmoods",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "This endpoint recommends the best mood from AudioStack's curated list of available tones.",
+        "api_endpoint": "https://v2.api.audio/content/recommend/mood"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T09:45:12.000Z"
+    },
+    "audiostack__content__recommend__iab_category___post": {
+      "provider_intent": "audiostack__content__recommend__iab_category___post",
+      "provider_alias_intent": "/content/recommend/iab_category",
+      "text": "Get recommended IAB category",
+      "category": "Recommend",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "text": {
+          "text": "Text to get IAB categories for.",
+          "type": "string",
+          "required": true
+        },
+        "language": {
+          "text": "2-letter language code for text - e.g. en",
+          "type": "string",
+          "required": false
+        },
+        "num_tags": {
+          "text": "Number of IAB tags to get back.",
+          "type": "integer",
+          "required": false
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/postrecommendiabcategory",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "This endpoint suggests IAB categories from the IAB's Official Content Taxonomy (version 3.0), with multiple tiers of granularity.",
+        "api_endpoint": " https://v2.api.audio/content/recommend/iab_category"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T09:46:22.000Z"
+    },
+    "audiostackhttps____v2.api.audio__content__script___post": {
+      "provider_intent": "audiostackhttps____v2.api.audio__content__script___post",
+      "provider_alias_intent": "https//v2.api.audio/content/script",
+      "text": "Create a Script resource.",
+      "category": "Script",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "moduleName": {
+          "text": "",
+          "type": "string"
+        },
+        "scriptName": {
+          "text": "",
+          "type": "string"
+        },
+        "scriptText": {
+          "text": "",
+          "type": "string",
+          "required": true
+        },
+        "projectName": {
+          "text": "",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/postscript",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Creates a new script resource.",
+        "api_endpoint": "https://v2.api.audio/content/script"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T10:15:38.000Z"
+    },
+    "audiostackhttps____v2.api.audio__content__script___put": {
+      "provider_intent": "audiostackhttps____v2.api.audio__content__script___put",
+      "provider_alias_intent": "https//v2.api.audio/content/script",
+      "text": "Updates a Script resource.",
+      "category": "Script",
+      "method": "PUT",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "version": {
+          "text": "By default this will update v0, however you can set this field to update/create an additional version of this scriptId",
+          "type": "string"
+        },
+        "scriptId": {
+          "text": "The scriptId of the resource to be updated.",
+          "type": "string",
+          "required": true
+        },
+        "scriptText": {
+          "text": "Script text to replace, or add to new version",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/putscript",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Updates an existing script resource.",
+        "api_endpoint": "https://v2.api.audio/content/script"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T10:20:11.000Z"
+    },
+    "audiostack__content__scripts___get": {
+      "provider_intent": "audiostack__content__scripts___get",
+      "provider_alias_intent": "/content/scripts",
+      "text": "Lists multiple script resources.",
+      "category": "Script",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "verbose": {
+          "text": "",
+          "type": "boolean"
+        },
+        "scriptId": {
+          "text": "",
+          "type": "string"
+        },
+        "moduleName": {
+          "text": "",
+          "type": "string"
+        },
+        "scriptName": {
+          "text": "",
+          "type": "string"
+        },
+        "projectName": {
+          "text": "",
+          "type": "string"
+        },
+        "paginationToken": {
+          "text": "",
+          "type": "string"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/listscripts",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "List all of the scripts stored.",
+        "api_endpoint": " https://v2.api.audio/content/scripts"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T10:25:53.000Z"
+    },
+    "audiostackhttps____v2.api.audio__content__script__scriptid___get": {
+      "provider_intent": "audiostackhttps____v2.api.audio__content__script__scriptid___get",
+      "provider_alias_intent": "https//v2.api.audio/content/script/scriptid",
+      "text": "Get a single script.",
+      "category": "Script",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "voice": {
+          "text": "Which TTS voice should be used to generate the preview, note that this required as different voices require different text correction processes.",
+          "type": "string"
+        },
+        "preview": {
+          "text": "Preview the effect of applying various text correction processes, normalisation and dictionary.",
+          "type": "string"
+        }
+      },
+      "path": {
+        "scriptId": {
+          "text": "",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/getscriptid",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Get a single script.",
+        "api_endpoint": "https://v2.api.audio/content/script/{scriptId}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T10:30:28.000Z"
+    },
+    "audiostackhttps____v2.api.audio__content__script__scriptid___delete": {
+      "provider_intent": "audiostackhttps____v2.api.audio__content__script__scriptid___delete",
+      "provider_alias_intent": "https//v2.api.audio/content/script/scriptid",
+      "text": "Deletes a script and all its versions (if applicable).",
+      "category": "Script",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "scriptId": {
+          "text": "",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/deletescriptid",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Deletes a script and all its versions (if applicable).",
+        "api_endpoint": "https://v2.api.audio/content/script/{scriptId}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T10:32:56.000Z"
+    },
+    "audiostackhttps____v2.api.audio__content__script__scriptid__version___get": {
+      "provider_intent": "audiostackhttps____v2.api.audio__content__script__scriptid__version___get",
+      "provider_alias_intent": "https//v2.api.audio/content/script/scriptid/version",
+      "text": "Get a single version of a script with a given scriptId.",
+      "category": "Script",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "voice": {
+          "text": "Which TTS voice should be used to generate the preview, note that this required as different voices require different text correction processes.",
+          "type": "string"
+        },
+        "preview": {
+          "text": "Preview the effect of applying various text correction processes, normalisation and dictionary.",
+          "type": "string"
+        }
+      },
+      "path": {
+        "version": {
+          "text": "",
+          "type": "string",
+          "required": true
+        },
+        "scriptId": {
+          "text": "",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/getscriptversion",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Get a single version of a script with a given scriptId.",
+        "api_endpoint": "https://v2.api.audio/content/script/{scriptId}/{version}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T10:36:44.000Z"
+    },
+    "audiostackhttps____v2.api.audio__content__script__scriptid__version___delete": {
+      "provider_intent": "audiostackhttps____v2.api.audio__content__script__scriptid__version___delete",
+      "provider_alias_intent": "https//v2.api.audio/content/script/scriptid/version",
+      "text": "Deletes a single version of a script.",
+      "category": "Script",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "version": {
+          "text": "",
+          "type": "string",
+          "required": true
+        },
+        "scriptId": {
+          "text": "",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/deletescriptversion",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Deletes a single version of a script.",
+        "api_endpoint": "https://v2.api.audio/content/script/{scriptId}/{version}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T10:38:35.000Z"
+    },
+    "audiostackhttps____v2.api.audio__content__list_projects___get": {
+      "provider_intent": "audiostackhttps____v2.api.audio__content__list_projects___get",
+      "provider_alias_intent": "https//v2.api.audio/content/list_projects",
+      "text": "Lists all projects that have been created.",
+      "category": "Script",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/listscriptprojects",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Lists all projects that have been created.",
+        "api_endpoint": "https://v2.api.audio/content/list_projects"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-28T14:58:43.000Z"
+    },
+    "audiostackhttps____v2.api.audio__content__generate__advert___post": {
+      "provider_intent": "audiostackhttps____v2.api.audio__content__generate__advert___post",
+      "provider_alias_intent": "https//v2.api.audio/content/generate/advert",
+      "text": "Generate an advert using AI based on a Productdescription.",
+      "category": "Script",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "mood": {
+          "text": "",
+          "type": "string"
+        },
+        "tone": {
+          "text": "",
+          "type": "string"
+        },
+        "adLength": {
+          "text": "",
+          "type": "number"
+        },
+        "productName": {
+          "text": "",
+          "type": "string",
+          "required": true
+        },
+        "thirdPerson": {
+          "text": "",
+          "type": "boolean"
+        },
+        "productDescription": {
+          "text": "",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/generateadvert",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Generate an advert using AI based on a Productdescription.",
+        "api_endpoint": "https://v2.api.audio/content/generate/advert"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T10:43:08.000Z"
+    },
+    "audiostackhttps____v2.api.audio__content__edit__advert___post": {
+      "provider_intent": "audiostackhttps____v2.api.audio__content__edit__advert___post",
+      "provider_alias_intent": "https//v2.api.audio/content/edit/advert",
+      "text": "Edit an advert.",
+      "category": "Script",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "voice": {
+          "text": "",
+          "type": "string"
+        },
+        "adText": {
+          "text": "",
+          "type": "string",
+          "required": true
+        },
+        "filters": {
+          "text": "",
+          "type": "object"
+        },
+        "adLength": {
+          "text": "",
+          "type": "number"
+        },
+        "instruction": {
+          "text": "",
+          "type": "string",
+          "required": true
+        },
+        "productName": {
+          "text": "",
+          "type": "string",
+          "required": true
+        },
+        "soundTemplate": {
+          "text": "",
+          "type": "string"
+        },
+        "productDescription": {
+          "text": "",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/editadvert",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Edit an advert.",
+        "api_endpoint": "https://v2.api.audio/content/edit/advert"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T10:48:37.000Z"
+    },
+    "audiostack__speech__voice___get": {
+      "provider_intent": "audiostack__speech__voice___get",
+      "provider_alias_intent": "/speech/voice",
+      "text": "List all available voices.",
+      "category": "Voice",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "page": {
+          "text": "Page number to be returned.",
+          "type": "number"
+        },
+        "sort": {
+          "text": "Sort order of items by an attribute.",
+          "type": "string"
+        },
+        "tags": {
+          "text": "Tags of the voice. Multiple tags separated by comma are accepted.",
+          "type": "string"
+        },
+        "accent": {
+          "text": "Accent of the voice.",
+          "type": "string"
+        },
+        "gender": {
+          "text": "Gender of the voice.",
+          "type": "string"
+        },
+        "language": {
+          "text": "Language of the voice.",
+          "type": "string"
+        },
+        "provider": {
+          "text": "Provider of the voice.",
+          "type": "string"
+        },
+        "pageLimit": {
+          "text": "Max. amount of items to be returned per page.",
+          "type": "number"
+        },
+        "ageBracket": {
+          "text": "Age bracket of the voice.",
+          "type": "string"
+        },
+        "languageCode": {
+          "text": "ISO language code of the voice, e.g. en-US",
+          "type": "string"
+        },
+        "timePerformance": {
+          "text": "Relative response time.",
+          "type": "string"
+        },
+        "industryExamples": {
+          "text": "Multiple tags separated by comma are accepted.",
+          "type": "string"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/listvoices",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Todo",
+        "api_endpoint": " https://v2.api.audio/speech/voice"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T11:04:03.000Z"
+    },
+    "audiostackhttps____v2.api.audio__speech__voice__parameter___get": {
+      "provider_intent": "audiostackhttps____v2.api.audio__speech__voice__parameter___get",
+      "provider_alias_intent": "https//v2.api.audio/speech/voice/parameter",
+      "text": "Lists voice parameters.",
+      "category": "Voice",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/listvoiceparameters",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Lists all the voice parameters used to describe and filter voices",
+        "api_endpoint": "https://v2.api.audio/speech/voice/parameter"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-28T15:05:50.000Z"
+    },
+    "audiostackhttps____v2.api.audio__speech__voice__name___get": {
+      "provider_intent": "audiostackhttps____v2.api.audio__speech__voice__name___get",
+      "provider_alias_intent": "https//v2.api.audio/speech/voice/name",
+      "text": "Get data for a single voice.",
+      "category": "Voice",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "name": {
+          "text": "Alias or original voice ID.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/getvoicename",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Get data for a single voice.",
+        "api_endpoint": "https://v2.api.audio/speech/voice/{name}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T11:06:26.000Z"
+    },
+    "audiostack__speech__voice__select___post": {
+      "provider_intent": "audiostack__speech__voice__select___post",
+      "provider_alias_intent": "/speech/voice/select",
+      "text": "Get a voice and speed recommendation for your content.",
+      "category": "Voice",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "tone": {
+          "text": "",
+          "type": "string"
+        },
+        "content": {
+          "text": "",
+          "type": "string",
+          "required": true
+        },
+        "filters": {
+          "text": "",
+          "type": "object"
+        },
+        "scriptId": {
+          "text": "",
+          "type": "string"
+        },
+        "targetLength": {
+          "text": "",
+          "type": "number"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/selectvoice",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Get a voice and speed recommendation for your content.",
+        "api_endpoint": " https://v2.api.audio/speech/voice/select"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T11:11:16.000Z"
+    },
+    "audiostack__speech__diction__custom__item___put": {
+      "provider_intent": "audiostack__speech__diction__custom__item___put",
+      "provider_alias_intent": "/speech/diction/custom/item",
+      "text": "Add word to a custom dictionary",
+      "category": "Dictionary",
+      "method": "PUT",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "lang": {
+          "text": "Language family, e.g. en or es.dictionary - use global to register a word globally (default).",
+          "type": "string"
+        },
+        "word": {
+          "text": "Word to be replaced.",
+          "type": "string",
+          "required": true
+        },
+        "contentType": {
+          "text": "The content type of the supplied replacement, can be either basic (default) or ipa for phonetic replacements.",
+          "type": "string"
+        },
+        "replacement": {
+          "text": "The replacement token. Can be either a plain string or a IPA token.",
+          "type": "string",
+          "required": true
+        },
+        "specialization": {
+          "text": "by default the supplied replacement will apply regardless of the supplied voice, language code or provider. However edge cases can be supplied, these can be either a valid; provider name, language code (i.e. en-gb) or voice name.",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/putwordindictionary",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "For each language, only a single word entry is permitted.",
+        "api_endpoint": " https://v2.api.audio/speech/diction/custom/item"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T11:18:05.000Z"
+    },
+    "audiostack__speech__diction__custom__item___delete": {
+      "provider_intent": "audiostack__speech__diction__custom__item___delete",
+      "provider_alias_intent": "/speech/diction/custom/item",
+      "text": "Deletes a word from a dictionary.",
+      "category": "Dictionary",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "lang": {
+          "text": "",
+          "type": "string",
+          "required": true
+        },
+        "word": {
+          "text": "",
+          "type": "string",
+          "required": true
+        },
+        "specialization": {
+          "text": "Delete a specific specialization",
+          "type": "string"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/deletewordindictionary",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "By default this will delete all specializations of the word, if you want to delete a specific specialization, supply this as a query parameter",
+        "api_endpoint": " https://v2.api.audio/speech/diction/custom/item"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T11:20:52.000Z"
+    },
+    "audiostack__speech__diction___get": {
+      "provider_intent": "audiostack__speech__diction___get",
+      "provider_alias_intent": "/speech/diction",
+      "text": "List dictionaries",
+      "category": "Dictionary",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/listdictionaries",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Lists all public dictionaries.",
+        "api_endpoint": " https://v2.api.audio/speech/diction"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-28T15:15:06.000Z"
+    },
+    "audiostackhttps____v2.api.audio__speech__diction__custom___get": {
+      "provider_intent": "audiostackhttps____v2.api.audio__speech__diction__custom___get",
+      "provider_alias_intent": "https//v2.api.audio/speech/diction/custom",
+      "text": "List dictionaries",
+      "category": "Dictionary",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/listcustomdictionaries",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Lists all custom dictionaries.",
+        "api_endpoint": "https://v2.api.audio/speech/diction/custom"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-28T15:17:29.000Z"
+    },
+    "audiostack__speech__diction__custom__items___get": {
+      "provider_intent": "audiostack__speech__diction__custom__items___get",
+      "provider_alias_intent": "/speech/diction/custom/items",
+      "text": "Lists all words within a custom dictionary.",
+      "category": "Dictionary",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "lang": {
+          "text": "",
+          "type": "string",
+          "required": true
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/listcustomwords",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Lists all words within a custom dictionary.",
+        "api_endpoint": " https://v2.api.audio/speech/diction/custom/items"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T11:22:56.000Z"
+    },
+    "audiostackhttps____v2.api.audio__speech__predict___post": {
+      "provider_intent": "audiostackhttps____v2.api.audio__speech__predict___post",
+      "provider_alias_intent": "https//v2.api.audio/speech/predict",
+      "text": "Predicts the resultant audio length of the given text content read by the supplied voice alias",
+      "category": "Predict",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "text": {
+          "text": "Text that will be read",
+          "type": "string",
+          "required": true
+        },
+        "voice": {
+          "text": "Name of the voice",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/postpredict",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Predicts the resultant length of a given voice alias",
+        "api_endpoint": "https://v2.api.audio/speech/predict"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T09:47:43.000Z"
+    },
+    "audiostack__speech__predict__voices___get": {
+      "provider_intent": "audiostack__speech__predict__voices___get",
+      "provider_alias_intent": "/speech/predict/voices",
+      "text": "Lists all voices that can be predict resultant audio length",
+      "category": "Predict",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/listpredictvoices",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Lists all voices that can be predict resultant audio length",
+        "api_endpoint": " https://v2.api.audio/speech/predict/voices"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T09:50:29.000Z"
+    },
+    "audiostackhttps____v2.api.audio__speech__voice-builder___post": {
+      "provider_intent": "audiostackhttps____v2.api.audio__speech__voice-builder___post",
+      "provider_alias_intent": "https//v2.api.audio/speech/voice-builder",
+      "text": "Clones a voice from a list of files.",
+      "category": "Voice Cloning",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "alias": {
+          "text": "Alias for the cloned voice. You'll be able to use this alias when requesting TTS. Has to be globally unique.",
+          "type": "string",
+          "required": true
+        },
+        "fileIds": {
+          "text": "List of fileIds to be used in cloning.",
+          "type": "array of strings",
+          "required": true
+        },
+        "metadata": {
+          "text": "Metadata for the cloned voice. It's recommended to include.",
+          "type": "object of strings"
+        },
+        "voiceEngine": {
+          "text": "Voice engine to be used in cloning.",
+          "type": "string",
+          "required": true
+        },
+        "consentFileId": {
+          "text": "FileId of the consent file, speaker stating they agree to have their voice cloned. Required for voice_engine_2.",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/voicebuilder",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Clones a voice from a list of files.",
+        "api_endpoint": "https://v2.api.audio/speech/voice-builder"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-14T04:00:58.000Z"
+    },
+    "audiostack__speech__voice-builder___get": {
+      "provider_intent": "audiostack__speech__voice-builder___get",
+      "provider_alias_intent": "/speech/voice-builder",
+      "text": "Lists all Voice Cloning jobs done within your organisation.",
+      "category": "Voice Cloning",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "alias": {
+          "text": "Alias of the cloned voice.",
+          "type": "string",
+          "required": false
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/listvoicebuilder",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Lists all Voice Cloning jobs done within your organisation.",
+        "api_endpoint": " https://v2.api.audio/speech/voice-builder"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-14T04:01:44.000Z"
+    },
+    "audiostackhttps____v2.api.audio__speech__tts___post": {
+      "provider_intent": "audiostackhttps____v2.api.audio__speech__tts___post",
+      "provider_alias_intent": "https//v2.api.audio/speech/tts",
+      "text": "Create a text-to-speech resource.",
+      "category": "Speech",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "speed": {
+          "text": "Scalar for speed manipulation, range 0.5-3.",
+          "type": "number"
+        },
+        "voice": {
+          "text": "Either alias or original (provider's) ID. Available voices are listed at https://library.audiostack.ai/",
+          "type": "string"
+        },
+        "public": {
+          "text": "Makes returned URLs publicly available",
+          "type": "boolean"
+        },
+        "audience": {
+          "text": "Object defining the values for Script parameters. E.g. for Script parameters in:",
+          "type": "object"
+        },
+        "scriptId": {
+          "text": "Reference to the Script that is to be synthesized, use /script to create and get it.",
+          "type": "string",
+          "required": true
+        },
+        "sections": {
+          "text": "Separate configurations for Script section. E.g. to specify a separate voice and speed for Script section intro the object would be.",
+          "type": "object"
+        },
+        "useAutofix": {
+          "text": "Flag to apply autofix",
+          "type": "boolean"
+        },
+        "useDenoiser": {
+          "text": "Flag to apply denoiser",
+          "type": "boolean"
+        },
+        "silencePadding": {
+          "text": "Amount of microseconds for silence padding. Half of the amount is inserted as silence at the beginning and at the end of each Speech file.",
+          "type": "string"
+        },
+        "voiceIntelligence": {
+          "text": "Flag to apply lexicographical text corrections",
+          "type": "boolean"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/postspeech",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "To create speech you need to supply the scriptId of the script you wish to generate, and the voice you would like to generate this request.",
+        "api_endpoint": "https://v2.api.audio/speech/tts"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T13:09:57.000Z"
+    },
+    "audiostackhttps____v2.api.audio__speech__tts___get": {
+      "provider_intent": "audiostackhttps____v2.api.audio__speech__tts___get",
+      "provider_alias_intent": "https//v2.api.audio/speech/tts",
+      "text": "Lists multiple text-to-speech resources.",
+      "category": "Speech",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "verbose": {
+          "text": "",
+          "type": "string"
+        },
+        "scriptId": {
+          "text": "",
+          "type": "string"
+        },
+        "moduleName": {
+          "text": "",
+          "type": "string"
+        },
+        "scriptName": {
+          "text": "",
+          "type": "string"
+        },
+        "projectName": {
+          "text": "",
+          "type": "string"
+        },
+        "paginationToken": {
+          "text": "",
+          "type": "string"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/listtts",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Returns a list of speech files that have been created.",
+        "api_endpoint": "https://v2.api.audio/speech/tts"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T13:12:49.000Z"
+    },
+    "audiostackhttps____v2.api.audio__speech__tts__section___post": {
+      "provider_intent": "audiostackhttps____v2.api.audio__speech__tts__section___post",
+      "provider_alias_intent": "https//v2.api.audio/speech/tts/section",
+      "text": "Create a single section of a text-to-speech resource.",
+      "category": "Speech",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "speed": {
+          "text": "Scalar for speed manipulation, range 0.5-3.",
+          "type": "number"
+        },
+        "voice": {
+          "text": "Either alias or original (provider's) ID. Available voices are listed at https://library.audiostack.ai/",
+          "type": "string"
+        },
+        "public": {
+          "text": "Makes returned URLs publicly available",
+          "type": "boolean"
+        },
+        "audience": {
+          "text": "Object defining the values for Script parameters. E.g. for Script parameters in:",
+          "type": "object"
+        },
+        "scriptId": {
+          "text": "Reference to the Script that is to be synthesized, use /script to create and get it.",
+          "type": "string",
+          "required": true
+        },
+        "sections": {
+          "text": "Separate configurations for Script section. E.g. to specify a separate voice and speed for Script section intro the object would be",
+          "type": "object"
+        },
+        "silencePadding": {
+          "text": "Amount of microseconds for silence padding. Half of the amount is inserted as silence at the beginning and at the end of each Speech file.",
+          "type": "string"
+        },
+        "sectionToProduce": {
+          "text": "The name of the script section to produce",
+          "type": "string",
+          "required": true
+        },
+        "voiceIntelligence": {
+          "text": "Flag to apply lexicographical text corrections",
+          "type": "boolean"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/postspeechsection",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "To create speech you need to supply the scriptId of the script you wish to generate, and the voice you would like to generate this request.",
+        "api_endpoint": "https://v2.api.audio/speech/tts/section"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T13:22:38.000Z"
+    },
+    "audiostackhttps____v2.api.audio__speech__tts__preview___post": {
+      "provider_intent": "audiostackhttps____v2.api.audio__speech__tts__preview___post",
+      "provider_alias_intent": "https//v2.api.audio/speech/tts/preview",
+      "text": "Create a fast preview of a given voice",
+      "category": "Speech",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "text": {
+          "text": "Text to synthesize.",
+          "type": "string"
+        },
+        "voice": {
+          "text": "Either alias or original (provider's) ID. Available voices are listed at https://library.audiostack.ai/",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/postspeechpreview",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "This route is limited to 6MB of audio response.",
+        "api_endpoint": "https://v2.api.audio/speech/tts/preview"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T13:24:47.000Z"
+    },
+    "audiostackhttps____v2.api.audio__speech__tts__speechid___get": {
+      "provider_intent": "audiostackhttps____v2.api.audio__speech__tts__speechid___get",
+      "provider_alias_intent": "https//v2.api.audio/speech/tts/speechid",
+      "text": "Retrieve a text-to-speech resource",
+      "category": "Speech",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "speechId": {
+          "text": "",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/getspeechid",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Retrieve a text-to-speech resource.",
+        "api_endpoint": "https://v2.api.audio/speech/tts/{speechId}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T13:26:34.000Z"
+    },
+    "audiostack__speech__tts__speechid___delete": {
+      "provider_intent": "audiostack__speech__tts__speechid___delete",
+      "provider_alias_intent": "/speech/tts/speechid",
+      "text": "Deletes a text-to-speech resource",
+      "category": "Speech",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "speechId": {
+          "text": "",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/deletespeechid",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Deletes a text-to-speech resource",
+        "api_endpoint": " https://v2.api.audio/speech/tts/{speechId}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T13:28:30.000Z"
+    },
+    "audiostackhttps____v2.api.audio__speech__tts__reduce___post": {
+      "provider_intent": "audiostackhttps____v2.api.audio__speech__tts__reduce___post",
+      "provider_alias_intent": "https//v2.api.audio/speech/tts/reduce",
+      "text": "Reduce length of speech to fit in a target using silence removal and time stretching with pitch preservationReduce length of speech to fit in a target using silence removal and time stretching with pitch preservation.Reduce length of speech to fit in a target using silence removal and time stretching with pitch preservation.",
+      "category": "Speech",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "speechId": {
+          "text": "speech id to reduce.",
+          "type": "string",
+          "required": true
+        },
+        "targetLength": {
+          "text": "Target length for duration of speech",
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/postreduce",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Reduce length of speech to fit in a target using silence removal and time stretching with pitch preservation.",
+        "api_endpoint": "https://v2.api.audio/speech/tts/reduce"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T13:34:16.000Z"
+    },
+    "audiostackhttps____v2.api.audio__speech__tts__remove_padding___post": {
+      "provider_intent": "audiostackhttps____v2.api.audio__speech__tts__remove_padding___post",
+      "provider_alias_intent": "https//v2.api.audio/speech/tts/remove_padding",
+      "text": "Remove silence of a file given the parameters below",
+      "category": "Speech",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "position": {
+          "text": "Where to remove silence 'end', 'start' or 'all' for all across the file. Default is 'end'",
+          "type": "string"
+        },
+        "speechId": {
+          "text": "speech id to remove padding from.",
+          "type": "string",
+          "required": true
+        },
+        "silenceThreshold": {
+          "text": "Amplitude threshold in % below which audio will be considered silence. Default is 0.1",
+          "type": "number"
+        },
+        "minSilenceDuration": {
+          "text": "How long a silent region must be to be considered removable silence. Default is 0.01",
+          "type": "number"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/postremovesilence",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Remove silence of a file given the parameters below.",
+        "api_endpoint": "https://v2.api.audio/speech/tts/remove_padding"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T13:39:29.000Z"
+    },
+    "audiostackhttps____v2.api.audio__speech__tts__annotate___post": {
+      "provider_intent": "audiostackhttps____v2.api.audio__speech__tts__annotate___post",
+      "provider_alias_intent": "https//v2.api.audio/speech/tts/annotate",
+      "text": "Returns time annotations for each word",
+      "category": "Speech",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "speechId": {
+          "text": "Speech ID for the speech file you want to annotate.",
+          "type": "string",
+          "required": true
+        },
+        "languageCode": {
+          "text": "languageCode (ISO 639-1 standard) of the speech file. If not provided, we try to detect the language.",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/annotate",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Returns timestamps, or time in seconds, when each word is spoken for a given generated speech file.",
+        "api_endpoint": "https://v2.api.audio/speech/tts/annotate"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T13:45:57.000Z"
+    },
+    "audiostackhttps____v2.api.audio__speech__sts__voices___get": {
+      "provider_intent": "audiostackhttps____v2.api.audio__speech__sts__voices___get",
+      "provider_alias_intent": "https//v2.api.audio/speech/sts/voices",
+      "text": "List available speech-to-speech compatible voices",
+      "category": "Speech",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/getspeechtospeechvoices",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "This endpoint returns the list of voices which you can use with STS - including any private voices for which you have permissions.",
+        "api_endpoint": "https://v2.api.audio/speech/sts/voices"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-28T17:11:02.000Z"
+    },
+    "audiostackhttps____v2.api.audio__speech__sts___post": {
+      "provider_intent": "audiostackhttps____v2.api.audio__speech__sts___post",
+      "provider_alias_intent": "https//v2.api.audio/speech/sts",
+      "text": "Submit a voice recording for speech-to-speech transformation into a different speaker",
+      "category": "Speech",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "alias": {
+          "text": "This is the voice you want the output to sound like. You can get a list of available voices from /speech/sts/voices and you can listen to samples in our voice library (https://platform.audiostack.ai/workflows/voice-library).",
+          "type": "string",
+          "required": true
+        },
+        "fileId": {
+          "text": "File ID of the voice recording you want to run through STS.",
+          "type": "string",
+          "required": true
+        },
+        "newFilePath": {
+          "text": "The path and name of the new file to be created in your Content area (https://platform.audiostack.ai/content).",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/postspeechtospeech",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "This endpoint allows the user to initiate an STS pipeline to transform their source recording.",
+        "api_endpoint": "https://v2.api.audio/speech/sts"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T13:51:04.000Z"
+    },
+    "audiostack__speech__sts__pipelineid___get": {
+      "provider_intent": "audiostack__speech__sts__pipelineid___get",
+      "provider_alias_intent": "/speech/sts/pipelineid",
+      "text": "Get speech-to-speech generation pipeline status updates",
+      "category": "Speech",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "pipelineId": {
+          "text": "",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/getspeechtospeechpipeline",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "This endpoint fetches the current status of your STS pipeline.",
+        "api_endpoint": " https://v2.api.audio/speech/sts/{pipelineId}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T13:52:25.000Z"
+    },
+    "audiostack__production__sound__template___post": {
+      "provider_intent": "audiostack__production__sound__template___post",
+      "provider_alias_intent": "/production/sound/template",
+      "text": "Create a sound template resource",
+      "category": "Sound Template",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "isElastic": {
+          "text": "Elastic templates are currently not available to self-serve customers",
+          "type": "boolean"
+        },
+        "description": {
+          "text": "Description of the template",
+          "type": "string"
+        },
+        "templateName": {
+          "text": "Name of the template",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/posttemplate",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "In order to integrate a custom audio file into a project, you need to upload it as a file and then create a sound template.",
+        "api_endpoint": " https://v2.api.audio/production/sound/template"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T13:57:29.000Z"
+    },
+    "audiostackhttps____v2.api.audio__production__sound__template___get": {
+      "provider_intent": "audiostackhttps____v2.api.audio__production__sound__template___get",
+      "provider_alias_intent": "https//v2.api.audio/production/sound/template",
+      "text": "Lists available sound templates",
+      "category": "Sound Template",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "page": {
+          "text": "Page number to be returned.",
+          "type": "number"
+        },
+        "moods": {
+          "text": "",
+          "type": "string"
+        },
+        "genres": {
+          "text": "",
+          "type": "string"
+        },
+        "pageLimit": {
+          "text": "Max. amount of items to be returned per page.",
+          "type": "number"
+        },
+        "collections": {
+          "text": "",
+          "type": "string"
+        },
+        "instruments": {
+          "text": "",
+          "type": "string"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/gettemplate",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Lists all of the available sound templates that can be used in your audio project.",
+        "api_endpoint": "https://v2.api.audio/production/sound/template"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T14:02:02.000Z"
+    },
+    "audiostackhttps____v2.api.audio__production__sound__template__name___delete": {
+      "provider_intent": "audiostackhttps____v2.api.audio__production__sound__template__name___delete",
+      "provider_alias_intent": "https//v2.api.audio/production/sound/template/name",
+      "text": "Deletes a sound template",
+      "category": "Sound Template",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "name": {
+          "text": "",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/deletetemplate",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Deletes a sound template",
+        "api_endpoint": "https://v2.api.audio/production/sound/template/{name}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T14:03:27.000Z"
+    },
+    "audiostack__production__sound__parameter___get": {
+      "provider_intent": "audiostack__production__sound__parameter___get",
+      "provider_alias_intent": "/production/sound/parameter",
+      "text": "Lists sound templates parameters",
+      "category": "Sound Template",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/gettemplateparameters",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Lists all the parameters used to describe and filter sound templates",
+        "api_endpoint": " https://v2.api.audio/production/sound/parameter"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-28T17:20:47.000Z"
+    },
+    "audiostack__production__sound__select___post": {
+      "provider_intent": "audiostack__production__sound__select___post",
+      "provider_alias_intent": "/production/sound/select",
+      "text": "Get a Sound Template recommendation for your content",
+      "category": "Sound Template",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "mood": {
+          "text": "",
+          "type": "string"
+        },
+        "content": {
+          "text": "",
+          "type": "string",
+          "required": true
+        },
+        "scriptId": {
+          "text": "",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/postselecttemplate",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Recommends a sound template for your audio project based on given script content and a provided mood.",
+        "api_endpoint": " https://v2.api.audio/production/sound/select"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T14:06:43.000Z"
+    },
+    "audiostackhttps____v2.api.audio__production__sound__atmospheres___get": {
+      "provider_intent": "audiostackhttps____v2.api.audio__production__sound__atmospheres___get",
+      "provider_alias_intent": "https//v2.api.audio/production/sound/atmospheres",
+      "text": "Lists available sound atmospheres",
+      "category": "Sound Atmospheres",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/getatmosphere",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Lists all of the available sound templates that can be used in your audio project.",
+        "api_endpoint": "https://v2.api.audio/production/sound/atmospheres"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-28T17:29:00.000Z"
+    },
+    "audiostackhttps____v2.api.audio__production__sound__segment___post": {
+      "provider_intent": "audiostackhttps____v2.api.audio__production__sound__segment___post",
+      "provider_alias_intent": "https//v2.api.audio/production/sound/segment",
+      "text": "Adds a sound segment to an existing sound template",
+      "category": "Sound Segment",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "mediaId": {
+          "text": "Id of the media file to transfer into a sound segment",
+          "type": "string",
+          "required": true
+        },
+        "segmentName": {
+          "text": "Name of the segment",
+          "type": "string",
+          "required": true
+        },
+        "templateName": {
+          "text": "Name of the template",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/postsegment",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "How to transfer sound segments from media",
+        "api_endpoint": "https://v2.api.audio/production/sound/segment"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T11:28:04.000Z"
+    },
+    "audiostack__production__suite__enhance___post": {
+      "provider_intent": "audiostack__production__suite__enhance___post",
+      "provider_alias_intent": "/production/suite/enhance",
+      "text": "Evaluate and enhance an audio file",
+      "category": "Suite",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "text": {
+          "text": "Text to compare the words read in the recording against.",
+          "type": "string"
+        },
+        "fileId": {
+          "text": "fileId",
+          "type": "string",
+          "required": true
+        },
+        "preset": {
+          "text": "Preset for strictness of the evaluation, available presets are low, medium, strict",
+          "type": "string"
+        },
+        "language": {
+          "text": "language code of choice, i.e. en-US",
+          "type": "string"
+        },
+        "scriptId": {
+          "text": "ScriptId for the text to check the words read in the recording against.",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/enhanceaudio",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Evaluate audio file given a fileId and enhance audio quality based on the results of this evaluation",
+        "api_endpoint": " https://v2.api.audio/production/suite/enhance"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T14:12:13.000Z"
+    },
+    "audiostackhttps____v2.api.audio__production__suite__denoise___post": {
+      "provider_intent": "audiostackhttps____v2.api.audio__production__suite__denoise___post",
+      "provider_alias_intent": "https//v2.api.audio/production/suite/denoise",
+      "text": "Denoise an audio file",
+      "category": "Suite",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "level": {
+          "text": "",
+          "type": "number"
+        },
+        "fileId": {
+          "text": "fileId",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/denoiseaudio",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Denoise an audio file in order to remove background noise.",
+        "api_endpoint": "https://v2.api.audio/production/suite/denoise"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T14:33:34.000Z"
+    },
+    "audiostackhttps____v2.api.audio__production__suite__speed-adjust___post": {
+      "provider_intent": "audiostackhttps____v2.api.audio__production__suite__speed-adjust___post",
+      "provider_alias_intent": "https//v2.api.audio/production/suite/speed-adjust",
+      "text": "Speed up an audio file",
+      "category": "Suite",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "ratio": {
+          "text": "The amount to speed up by whereby 1.0 is no affect",
+          "type": "number"
+        },
+        "fileId": {
+          "text": "fileId",
+          "type": "string",
+          "required": true
+        },
+        "maxLength": {
+          "text": "The max length that the file can be in seconds. Note this overrides ratio.",
+          "type": "number"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/speedadjustaudio",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Speeds up a supplied file (time stretch)",
+        "api_endpoint": "https://v2.api.audio/production/suite/speed-adjust"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T14:36:28.000Z"
+    },
+    "audiostackhttps____v2.api.audio__production__suite__silence-trim___post": {
+      "provider_intent": "audiostackhttps____v2.api.audio__production__suite__silence-trim___post",
+      "provider_alias_intent": "https//v2.api.audio/production/suite/silence-trim",
+      "text": "Trim an audio file",
+      "category": "Suite",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "fileId": {
+          "text": "fileId",
+          "type": "string",
+          "required": true
+        },
+        "trimType": {
+          "text": "valid options are 'all', 'start' or 'end'",
+          "type": "string"
+        },
+        "silenceThreshold": {
+          "text": "the threshold below which will be counted as silence. (default 0.01 = -36db)",
+          "type": "number"
+        },
+        "minSilenceDuration": {
+          "text": "The minimum of silence to remove (default 0.1)",
+          "type": "number"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/silencetrimaudio",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Trims silence from an audio file in order to shorten it.",
+        "api_endpoint": "https://v2.api.audio/production/suite/silence-trim"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T14:40:04.000Z"
+    },
+    "audiostackhttps____v2.api.audio__production__suite__separate___post": {
+      "provider_intent": "audiostackhttps____v2.api.audio__production__suite__separate___post",
+      "provider_alias_intent": "https//v2.api.audio/production/suite/separate",
+      "text": "Separate an audio file",
+      "category": "Suite",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "fileId": {
+          "text": "fileId",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/separateaudio",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Separates an audio file into its original audio components (tracks, or sources)",
+        "api_endpoint": "https://v2.api.audio/production/suite/separate"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T14:41:05.000Z"
+    },
+    "audiostackhttps____v2.api.audio__production__suite__transcribe___post": {
+      "provider_intent": "audiostackhttps____v2.api.audio__production__suite__transcribe___post",
+      "provider_alias_intent": "https//v2.api.audio/production/suite/transcribe",
+      "text": "Transcribe an audio file",
+      "category": "Suite",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "fileId": {
+          "text": "fileId",
+          "type": "string",
+          "required": true
+        },
+        "language": {
+          "text": "2-letter language code for audio - e.g. en",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/transcribeaudio",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Transcribes an audio file",
+        "api_endpoint": "https://v2.api.audio/production/suite/transcribe"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T14:42:48.000Z"
+    },
+    "audiostack__production__suite__file_to_video___post": {
+      "provider_intent": "audiostack__production__suite__file_to_video___post",
+      "provider_alias_intent": "/production/suite/file_to_video",
+      "text": "Create a video",
+      "category": "Suite",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "mode": {
+          "text": "Including the key 'settings' of possible values low or high",
+          "type": "string"
+        },
+        "fileId": {
+          "text": "fileId",
+          "type": "string",
+          "required": true
+        },
+        "videoFileId": {
+          "text": "Video file id",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/createvideo",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Generates a video using the provided fileId and an image or a fileId and videoFileId",
+        "api_endpoint": " https://v2.api.audio/production/suite/file_to_video"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T14:47:14.000Z"
+    },
+    "audiostackhttps____v2.api.audio__production__suite__pipeline__pipelineid___get": {
+      "provider_intent": "audiostackhttps____v2.api.audio__production__suite__pipeline__pipelineid___get",
+      "provider_alias_intent": "https//v2.api.audio/production/suite/pipeline/pipelineid",
+      "text": "Retrieve a pipeline resource",
+      "category": "Suite",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "pipelineId": {
+          "text": "",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/getpipelineid",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Retrieve a pipeline resource",
+        "api_endpoint": "https://v2.api.audio/production/suite/pipeline/{pipelineId}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T14:48:15.000Z"
+    },
+    "audiostackhttps____v2.api.audio__production__suite__videopipeline__pipelineid___get": {
+      "provider_intent": "audiostackhttps____v2.api.audio__production__suite__videopipeline__pipelineid___get",
+      "provider_alias_intent": "https//v2.api.audio/production/suite/videopipeline/pipelineid",
+      "text": "Retrieve a video pipeline resource",
+      "category": "Suite",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "pipelineId": {
+          "text": "",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/getvideopipelineid",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Retrieve a video pipeline resource",
+        "api_endpoint": "https://v2.api.audio/production/suite/videopipeline/{pipelineId}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T14:49:12.000Z"
+    },
+    "audiostack__production__mix___post": {
+      "provider_intent": "audiostack__production__mix___post",
+      "provider_alias_intent": "/production/mix",
+      "text": "Creates a mix of multiple audio resources",
+      "category": "Mixing ",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "public": {
+          "text": "Makes returned URLs publicly available",
+          "type": "boolean"
+        },
+        "fxFiles": {
+          "text": "List of fx files to be mixed with other audio resources",
+          "type": "object"
+        },
+        "speechId": {
+          "text": "Reference to the speechId that is to be mixed with other audio resources",
+          "type": "string",
+          "required": true
+        },
+        "mediaFiles": {
+          "text": "List of media files to be mixed with other audio resources",
+          "type": "object"
+        },
+        "soundLayer": {
+          "text": "(Beta) Which layer of the sound template should be used",
+          "type": "string"
+        },
+        "soundTemplate": {
+          "text": "Name of the sound template to be mixed with other audio resources",
+          "type": "string"
+        },
+        "masteringPreset": {
+          "text": "Mastering preset to use, for example heavyDucking.",
+          "type": "string"
+        },
+        "strictValidation": {
+          "text": "To bypass timeline protection set this to false. Results may vary and sound files might overlap",
+          "type": "boolean"
+        },
+        "sectionProperties": {
+          "text": "Section properties exposes the following properties for each section. Note that the properties apply to all sub-sections also.",
+          "type": "object"
+        },
+        "timelineProperties": {
+          "text": "Timeline properties exposes the following properties for each section. Note that the properties apply to all sub-sections also.",
+          "type": "object"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/postmix",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "todo",
+        "api_endpoint": " https://v2.api.audio/production/mix"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T15:13:22.000Z"
+    },
+    "audiostackhttps____v2.api.audio__production__validate___post": {
+      "provider_intent": "audiostackhttps____v2.api.audio__production__validate___post",
+      "provider_alias_intent": "https//v2.api.audio/production/validate",
+      "text": "Validates that the requested mastering request is valid",
+      "category": "Mixing ",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "public": {
+          "text": "Makes returned URLs publicly available",
+          "type": "boolean"
+        },
+        "fxFiles": {
+          "text": "List of fx files to be mixed with other audio resources",
+          "type": "object"
+        },
+        "speechId": {
+          "text": "Reference to the speechId that is to be mixed with other audio resources",
+          "type": "string",
+          "required": true
+        },
+        "mediaFiles": {
+          "text": "List of media files to be mixed with other audio resources",
+          "type": "object"
+        },
+        "soundLayer": {
+          "text": "(Beta) Which layer of the sound template should be used",
+          "type": "string"
+        },
+        "soundTemplate": {
+          "text": "Name of the sound template to be mixed with other audio resources",
+          "type": "string"
+        },
+        "masteringPreset": {
+          "text": "Mastering preset to use, for example heavyDucking.",
+          "type": "string"
+        },
+        "strictValidation": {
+          "text": "To bypass timeline protection set this to false. Results may vary and sound files might overlap",
+          "type": "boolean"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/validatemix",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "This route can be used to check that the requested mastering request is valid.",
+        "api_endpoint": "https://v2.api.audio/production/validate"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T15:20:05.000Z"
+    },
+    "audiostack__production__mixes___get": {
+      "provider_intent": "audiostack__production__mixes___get",
+      "provider_alias_intent": "/production/mixes",
+      "text": "Lists multiple mixed resources",
+      "category": "Mixing ",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "verbose": {
+          "text": "",
+          "type": "boolean"
+        },
+        "scriptId": {
+          "text": "",
+          "type": "string"
+        },
+        "moduleName": {
+          "text": "",
+          "type": "string"
+        },
+        "scriptName": {
+          "text": "",
+          "type": "string"
+        },
+        "projectName": {
+          "text": "",
+          "type": "string"
+        },
+        "paginationToken": {
+          "text": "",
+          "type": "string"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/listmixes",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Returns a list of mixed files that have been created.",
+        "api_endpoint": " https://v2.api.audio/production/mixes"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T15:23:33.000Z"
+    },
+    "audiostackhttps____v2.api.audio__production__mix__productionid___get": {
+      "provider_intent": "audiostackhttps____v2.api.audio__production__mix__productionid___get",
+      "provider_alias_intent": "https//v2.api.audio/production/mix/productionid",
+      "text": "Retrieve a mixed resource",
+      "category": "Mixing ",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "productionId": {
+          "text": "",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/getproductionid",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Retrieve a mixed resource",
+        "api_endpoint": "https://v2.api.audio/production/mix/{productionId}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T15:26:02.000Z"
+    },
+    "audiostack__production__mix__productionid___delete": {
+      "provider_intent": "audiostack__production__mix__productionid___delete",
+      "provider_alias_intent": "/production/mix/productionid",
+      "text": "Deletes a mixed resource",
+      "category": "Mixing ",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "productionId": {
+          "text": "",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/deleteproductionid",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Deletes a mixed resource",
+        "api_endpoint": " https://v2.api.audio/production/mix/{productionId}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T15:27:07.000Z"
+    },
+    "audiostack__production__mix__presets___get": {
+      "provider_intent": "audiostack__production__mix__presets___get",
+      "provider_alias_intent": "/production/mix/presets",
+      "text": "Lists available mastering presets",
+      "category": "Mixing ",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/listmasteringpresets",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Lists available mastering presets",
+        "api_endpoint": " https://v2.api.audio/production/mix/presets"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-28T17:53:02.000Z"
+    },
+    "audiostack__delivery__encoder___post": {
+      "provider_intent": "audiostack__delivery__encoder___post",
+      "provider_alias_intent": "/delivery/encoder",
+      "text": "Changes the audio encoding of a mixed audio file",
+      "category": "Encoder",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "format": {
+          "text": "Can be wav, mp3, flac or ogg",
+          "type": "string"
+        },
+        "preset": {
+          "text": "named preset to use or 'custom'. Available presets can be listed using '/delivery/encoder/presets'",
+          "type": "string"
+        },
+        "public": {
+          "text": "Make the output a publicly available URL",
+          "type": "boolean"
+        },
+        "bitRate": {
+          "text": "Can be between 0-9 for variable bit rates, or between 32 and 320 for constant bit rates",
+          "type": "string"
+        },
+        "bitDepth": {
+          "text": "Can be 16, 24, or 32",
+          "type": "number"
+        },
+        "channels": {
+          "text": "Supply 1 for mono or 2 for stereo",
+          "type": "number"
+        },
+        "sampleRate": {
+          "text": "Sample rate, should be between 24000 and 96000",
+          "type": ""
+        },
+        "bitRateType": {
+          "text": "Supplied value must be either 'constant' or 'variable",
+          "type": "string"
+        },
+        "productionId": {
+          "text": "Reference to the productionId that is to be encoded",
+          "type": "string",
+          "required": true
+        },
+        "loudnessPreset": {
+          "text": "Name of loudness preset to use for example 'podcast' or 'spotify'. Available presets can be listed using '/delivery/encoder/presets'",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/postencoder",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "For most use cases, the preset can be either custom or one of the values returned from the /encoder/presets list.",
+        "api_endpoint": " https://v2.api.audio/delivery/encoder"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T15:36:13.000Z"
+    },
+    "audiostack__delivery__encoder__presets___get": {
+      "provider_intent": "audiostack__delivery__encoder__presets___get",
+      "provider_alias_intent": "/delivery/encoder/presets",
+      "text": "Lists available encoder presets and loudness presets",
+      "category": "Encoder",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/listencoderpresets",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Lists available encoder presets and loudness presets",
+        "api_endpoint": " https://v2.api.audio/delivery/encoder/presets"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-28T18:01:59.000Z"
+    },
+    "audiostackhttps____v2.api.audio__delivery__video___get": {
+      "provider_intent": "audiostackhttps____v2.api.audio__delivery__video___get",
+      "provider_alias_intent": "https//v2.api.audio/delivery/video",
+      "text": "Create video",
+      "category": "Video",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "public": {
+          "text": "Make the output a publicly available URL",
+          "type": "boolean"
+        },
+        "productionId": {
+          "text": "Reference to the productionId that is to be encoded",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/postvideo",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Create a video for a given productionId.",
+        "api_endpoint": "https://v2.api.audio/delivery/video"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T11:30:30.000Z"
+    },
+    "audiostack__delivery__connectors__julep___post": {
+      "provider_intent": "audiostack__delivery__connectors__julep___post",
+      "provider_alias_intent": "/delivery/connectors/julep",
+      "text": "Sends a produced file to Julep connector",
+      "category": "Julep",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "notes": {
+          "text": "notes for the podcast",
+          "type": "string"
+        },
+        "title": {
+          "text": "Title of podcast",
+          "type": "string",
+          "required": true
+        },
+        "subtitle": {
+          "text": "Subtitle for podcast",
+          "type": "string"
+        },
+        "permalink": {
+          "text": "permalink for podcast",
+          "type": "string",
+          "required": true
+        },
+        "podcastId": {
+          "text": "Id of the podcast",
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "text": "podcast description",
+          "type": "string"
+        },
+        "publishedAt": {
+          "text": "Changes the date of publication. publishedAt parameter should be in YYYY-MM-DD HH:MM:SS format.",
+          "type": "string"
+        },
+        "productionId": {
+          "text": "Reference to the productionId that is to be delivered to the connector",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/postjulep",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Julep is a podcast hosting platform based in Germany.",
+        "api_endpoint": " https://v2.api.audio/delivery/connectors/julep"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T15:42:26.000Z"
+    },
+    "audiostack__delivery__connectors__authenticate-julep___put": {
+      "provider_intent": "audiostack__delivery__connectors__authenticate-julep___put",
+      "provider_alias_intent": "/delivery/connectors/authenticate-julep",
+      "text": "Authenticates with Julep",
+      "category": "Julep",
+      "method": "PUT",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "password": {
+          "text": "Julep password",
+          "type": "string",
+          "required": true
+        },
+        "username": {
+          "text": "Julep username",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/putjulepcredentials",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Authenticates with Julep",
+        "api_endpoint": " https://v2.api.audio/delivery/connectors/authenticate-julep"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T15:44:31.000Z"
+    },
+    "audiostack__delivery__connectors__status___get": {
+      "provider_intent": "audiostack__delivery__connectors__status___get",
+      "provider_alias_intent": "/delivery/connectors/status",
+      "text": "Lists all connected deliveries",
+      "category": "Connector",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/listconnectordeliveries",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Lists all connected deliveries",
+        "api_endpoint": " https://v2.api.audio/delivery/connectors/status"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-28T18:08:45.000Z"
+    },
+    "audiostackhttps____v2.api.audio__delivery__connectors__status__deliveryid___get": {
+      "provider_intent": "audiostackhttps____v2.api.audio__delivery__connectors__status__deliveryid___get",
+      "provider_alias_intent": "https//v2.api.audio/delivery/connectors/status/deliveryid",
+      "text": "Get a single delivery",
+      "category": "Connector",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "deliveryId": {
+          "text": "",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.audiostack.ai/reference/getconnectordelivery",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Get a single delivery.",
+        "api_endpoint": "https://v2.api.audio/delivery/connectors/status/{deliveryId}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-13T15:45:46.000Z"
+    }
+  }
+}

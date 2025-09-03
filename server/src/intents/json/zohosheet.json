@@ -1,0 +1,785 @@
+{
+  "routes": {
+    "zohosheet__api__v2__resource_id___post": {
+      "provider_intent": "zohosheet__api__v2__resource_id___post",
+      "provider_alias_intent": "/api/v2/resource_id",
+      "": "",
+      "text": "Delete worksheet",
+      "category": "Worksheet",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "resource_id": {
+          "type": "string",
+          "text": "Resource Id"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "method": {
+          "type": "string",
+          "text": "worksheet.delete"
+        },
+        "worksheet_name": {
+          "type": "string",
+          "text": "Name of the worksheet that needs to be deleted"
+        },
+        "worksheet_id": {
+          "type": "string",
+          "text": "Alternatively worksheet_id can be used instead of worksheet_name"
+        }
+      },
+      "path": {
+        "resource_id": {
+          "type": "string",
+          "text": "Resource Id"
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Delete worksheet",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/{resource_id}",
+        "alias_endpoint": "/zohosheet/api/v2/resource_id",
+        "api_ref": "https://www.zoho.com/sheet/help/api/v2/#WORKSHEET-Delete-worksheet"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSheet.dataAPI.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohosheet__api__v2__utils___post": {
+      "provider_intent": "zohosheet__api__v2__utils___post",
+      "provider_alias_intent": "/api/v2/utils",
+      "": "",
+      "text": "Convert Index to Range",
+      "category": "Utility API's",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "method": {
+          "type": "string",
+          "text": "range.address.get"
+        },
+        "start_row": {
+          "type": "number",
+          "text": "Start row index of the range"
+        },
+        "start_column": {
+          "type": "number",
+          "text": "Start column index of the range"
+        },
+        "end_row": {
+          "type": "number",
+          "text": "End row index of the range"
+        },
+        "end_column": {
+          "type": "number",
+          "text": "End column index of the range"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "used to convert start row, start column, end row, end column indexes respectively to a Range",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/utils",
+        "alias_endpoint": "/zohosheet/api/v2/utils",
+        "api_ref": "https://www.zoho.com/sheet/help/api/v2/#UTILITY-Convert-Index-to-Range"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSheet.dataAPI.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohosheet__api__v2__workbooks___post": {
+      "provider_intent": "zohosheet__api__v2__workbooks___post",
+      "provider_alias_intent": "/api/v2/workbooks",
+      "": "",
+      "text": "List all workbooks",
+      "category": "Workbook",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "method": {
+          "type": "string",
+          "text": "workbook.list"
+        },
+        "start_index": {
+          "type": "string",
+          "text": "This parameter can be used to get a few resources if there are too many"
+        },
+        "count": {
+          "type": "number",
+          "text": "It denotes the number of resources in response"
+        },
+        "sort_option": {
+          "type": "enum",
+          "text": "Supported options are 'recently_opened', 'recently_modified', 'recently_created', 'ascending', and 'descending'"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List all workbooks of the user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/workbooks",
+        "alias_endpoint": "/zohosheet/api/v2/workbooks",
+        "api_ref": "https://www.zoho.com/sheet/help/api/v2/#WORKBOOK-List-all-workbooks"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSheet.dataAPI.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohosheet__api__v2__templates___post": {
+      "provider_intent": "zohosheet__api__v2__templates___post",
+      "provider_alias_intent": "/api/v2/templates",
+      "": "",
+      "text": "List all templates",
+      "category": "Workbook",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "method": {
+          "type": "list",
+          "text": "template.list"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "List all templates of the user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/templates",
+        "alias_endpoint": "/zohosheet/api/v2/templates",
+        "api_ref": "https://www.zoho.com/sheet/help/api/v2/#WORKBOOK-List-all-templates"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSheet.dataAPI.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohosheet__api__v2__create___post": {
+      "provider_intent": "zohosheet__api__v2__create___post",
+      "provider_alias_intent": "/api/v2/create",
+      "": "",
+      "text": "Create workbook",
+      "category": "Workbook",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "method": {
+          "type": "string",
+          "text": "workbook.create"
+        },
+        "workbook_name": {
+          "type": "string",
+          "text": "Name of the new workbook"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Create workbook used to add a new workbook",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/create",
+        "alias_endpoint": "/zohosheet/api/v2/create",
+        "api_ref": "https://www.zoho.com/sheet/help/api/v2/#WORKBOOK-Create-workbook"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSheet.dataAPI.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohosheet__api__v2__createfromtemplate___post": {
+      "provider_intent": "zohosheet__api__v2__createfromtemplate___post",
+      "provider_alias_intent": "/api/v2/createfromtemplate",
+      "": "",
+      "text": "Create workbook from template",
+      "category": "Workbook",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "method": {
+          "type": "string",
+          "text": "workbook.createfromtemplate"
+        },
+        "resource_id": {
+          "type": "string",
+          "text": "The resource id of the template"
+        },
+        "workbook_name": {
+          "type": "string",
+          "text": "Name of the new workbook"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Create a new workbook from a template",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/createfromtemplate",
+        "alias_endpoint": "/zohosheet/api/v2/createfromtemplate",
+        "api_ref": "https://www.zoho.com/sheet/help/api/v2/#WORKBOOK-Create-workbook-from-template"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSheet.dataAPI.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohosheet__api__v2__upload___post": {
+      "provider_intent": "zohosheet__api__v2__upload___post",
+      "provider_alias_intent": "/api/v2/upload",
+      "": "",
+      "text": "Upload workbook",
+      "category": "Workbook",
+      "method": "POST",
+      "type": "UPLOAD",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "method": {
+          "type": "string",
+          "text": "workbook.upload"
+        },
+        "file": {
+          "type": "file",
+          "text": "Local file that needs to be uploaded"
+        },
+        "file_url": {
+          "type": "string",
+          "text": "If the user wants to upload file from a url this parameter can be used instead of file parameter"
+        },
+        "workbook_name": {
+          "type": "string",
+          "text": "Name of the new workbook"
+        },
+        "delimiter": {
+          "type": "file",
+          "text": "Optional parameter and it is used only for CSV file type"
+        },
+        "date_format": {
+          "type": "file",
+          "text": "Optional parameter and it is used only for CSV file type"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Upload workbook",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/upload",
+        "alias_endpoint": "/zohosheet/api/v2/upload",
+        "api_ref": "https://www.zoho.com/sheet/help/api/v2/#WORKBOOK-Upload-workbook"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSheet.dataAPI.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohosheet__api__v2__download__resource_id___post": {
+      "provider_intent": "zohosheet__api__v2__download__resource_id___post",
+      "provider_alias_intent": "/api/v2/download/resource_id",
+      "": "",
+      "text": "Download workbook",
+      "category": "Workbook",
+      "method": "POST",
+      "type": "UPLOAD",
+      "params": {
+        "resource_id": {
+          "type": "string",
+          "text": "Resource Id"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "method": {
+          "type": "string",
+          "text": "workbook.upload",
+          "examples": "workbook.download"
+        },
+        "format": {
+          "type": "enum",
+          "text": "Supported formats are xls, xlsx, csv, tsv, ods and pdf",
+          "enum": [
+            "xls",
+            "xlsx",
+            "csv",
+            "tsv",
+            "ods",
+            "pdf"
+          ],
+          "examples": "pdf"
+        },
+        "worksheet_name": {
+          "type": "string",
+          "text": "Name of the worksheet when a particular sheet needs to be downloaded",
+          "examples": "sheet1"
+        },
+        "workbook_name": {
+          "type": "string",
+          "text": "Name of the new workbook"
+        },
+        "range": {
+          "type": "file",
+          "text": "A particular range can also be downloaded in CSV, TSV and PDF file format",
+          "examples": "A1:E8"
+        },
+        "page_settings": {
+          "type": "file",
+          "text": "This is an optional parameter and can be used only with PDF file",
+          "examples": {
+            "print_type": "SHEET",
+            "margin_left": 0.5,
+            "margin_right": 0.5,
+            "page_order": "overDown",
+            "add_chart": true
+          }
+        }
+      },
+      "path": {
+        "resource_id": {
+          "type": "string",
+          "text": "Resource Id"
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Used to download an existing workbook",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/download/{resource_id}",
+        "alias_endpoint": "/zohosheet/api/v2/download/resource_id",
+        "api_ref": "https://www.zoho.com/sheet/help/api/v2/#WORKBOOK-Download-workbook"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSheet.dataAPI.READ",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohosheet__api__v2__insertimages___post": {
+      "provider_intent": "zohosheet__api__v2__insertimages___post",
+      "provider_alias_intent": "/api/v2/insertimages",
+      "": "",
+      "text": "Insert images",
+      "category": "Workbook",
+      "method": "POST",
+      "type": "UPLOAD",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "method": {
+          "type": "string",
+          "text": "workbook.images.insert"
+        },
+        "resource_id": {
+          "type": "string",
+          "text": "The resource id of the workbook where the images needs to be inserted"
+        },
+        "image_json": {
+          "type": "array",
+          "text": "JSON Array"
+        },
+        "imagefiles": {
+          "type": "file",
+          "text": "Local image files that needs to be uploaded"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Insert images into a workbook",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/insertimages",
+        "alias_endpoint": "/zohosheet/api/v2/insertimages",
+        "api_ref": "https://www.zoho.com/sheet/help/api/v2/#WORKBOOK-Insert-images"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSheet.dataAPI.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohosheet__api__v2__copy___post": {
+      "provider_intent": "zohosheet__api__v2__copy___post",
+      "provider_alias_intent": "/api/v2/copy",
+      "": "",
+      "text": "Copy workbook",
+      "category": "Workbook",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "method": {
+          "type": "string",
+          "text": "workbook.copy"
+        },
+        "resource_id": {
+          "type": "string",
+          "text": "The resource id of the workbook that needs to be copied"
+        },
+        "workbook_name": {
+          "type": "string",
+          "text": "Name of the copied workbook"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Used to make a new copy of an existing workbook",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/copy",
+        "alias_endpoint": "/zohosheet/api/v2/copy",
+        "api_ref": "https://www.zoho.com/sheet/help/api/v2/#WORKBOOK-Copy-workbook"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSheet.dataAPI.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohosheet__api__v2__share___post": {
+      "provider_intent": "zohosheet__api__v2__share___post",
+      "provider_alias_intent": "/api/v2/share",
+      "": "",
+      "text": "Share workbook",
+      "category": "Workbook",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "method": {
+          "type": "string",
+          "text": "workbook.share"
+        },
+        "resource_id": {
+          "type": "string",
+          "text": "The resource id of the workbook that needs to be shared"
+        },
+        "share_json": {
+          "type": "array",
+          "text": "JSON Array consisting of the user's email id and the access level with which the user will be able to view the shared workbook"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Used to share a workbook with a user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/share",
+        "alias_endpoint": "/zohosheet/api/v2/share",
+        "api_ref": "https://www.zoho.com/sheet/help/api/v2/#WORKBOOK-Share-workbook"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSheet.dataAPI.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohosheet__api__v2__trash___post": {
+      "provider_intent": "zohosheet__api__v2__trash___post",
+      "provider_alias_intent": "/api/v2/trash",
+      "": "",
+      "text": "Trash workbook",
+      "category": "Workbook",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "resource_id": {
+          "type": "string",
+          "text": "Resource Id"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "method": {
+          "type": "string",
+          "text": "workbook.version.create"
+        },
+        "version_description": {
+          "type": "string",
+          "text": "Name of the new version"
+        }
+      },
+      "path": {
+        "resource_id": {
+          "type": "string",
+          "text": "Resource Id"
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Used to create a new version",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/trash",
+        "alias_endpoint": "/zohosheet/api/v2/trash",
+        "api_ref": "https://www.zoho.com/sheet/help/api/v2/#WORKBOOK-Create-version"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSheet.dataAPI.UPDATE",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohosheet__api__v2__restore___post": {
+      "provider_intent": "zohosheet__api__v2__restore___post",
+      "provider_alias_intent": "/api/v2/restore",
+      "": "",
+      "text": "Restore workbook",
+      "category": "Workbook",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "resource_id": {
+          "type": "string",
+          "text": "Resource Id"
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "method": {
+          "type": "string",
+          "text": "workbook.version.revert"
+        },
+        "version_number": {
+          "type": "number",
+          "text": "Version_number of the version to be reverted"
+        }
+      },
+      "path": {
+        "resource_id": {
+          "type": "string",
+          "text": "Resource Id"
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Used to revert to an older version",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v2/restore",
+        "alias_endpoint": "/zohosheet/api/v2/restore",
+        "api_ref": "https://www.zoho.com/sheet/help/api/v2/#WORKBOOK-Revert-version"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSheet.dataAPI.UPDATE\n",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

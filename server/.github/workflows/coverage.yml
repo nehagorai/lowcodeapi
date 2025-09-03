@@ -1,0 +1,36 @@
+name: Test Coverage
+
+on:
+  push:
+    branches: [ testscov ]
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    env:
+      IP_LOGGING: true
+      IS_NODE_ENV_DEVELOPMENT: true
+      SESSION_EXPIRY: 3600
+      SESSION_SECRET_KEY: test_secret
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Jest Coverage
+        run: npm test
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage/ 

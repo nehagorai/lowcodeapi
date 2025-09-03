@@ -1,0 +1,164 @@
+{
+  "routes": {
+    "zohocrm__crm__v6__settings__modules__leads___get": {
+      "provider_intent": "zohocrm__crm__v6__settings__modules__leads___get",
+      "provider_alias_intent": "/crm/v6/settings/modules/Leads",
+      "text": "Get the metadata for a specific module",
+      "category": "Module Metadata",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v6",
+        "auth": [],
+        "description": "To get the metadata for a specific module",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/crm/v6/settings/modules/Leads",
+        "alias_endpoint": "/zohocrm/crm/v6/settings/modules/Leads",
+        "api_ref": "https://www.zoho.com/crm/developer/docs/api/v6/module-meta.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCRM.settings.ALL,ZohoCRM.settings.modulesALL",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocrm__crm__v6__settings__profiles___get": {
+      "provider_intent": "zohocrm__crm__v6__settings__profiles___get",
+      "provider_alias_intent": "/crm/v6/settings/profiles",
+      "text": "Get Profiles",
+      "category": "Profiles",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v6",
+        "auth": [],
+        "description": "To retrieve the data of profiles of your organizatio",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/crm/v6/settings/profiles",
+        "alias_endpoint": "/zohocrm/crm/v6/settings/profiles",
+        "api_ref": "https://www.zoho.com/crm/developer/docs/api/v6/get-profiles.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCRM.settings.profiles.ALL",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocrm__crm__v6__settings__profiles__profile_id___get": {
+      "provider_intent": "zohocrm__crm__v6__settings__profiles__profile_id___get",
+      "provider_alias_intent": "/crm/v6/settings/profiles/profile_id",
+      "text": "Get a specific profile",
+      "category": "Profiles",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v6",
+        "auth": [],
+        "description": "To Get a specific profile",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/crm/v6/settings/profiles/{profile_id}",
+        "alias_endpoint": "/zohocrm/crm/v6/settings/profiles/profile_id",
+        "api_ref": "https://www.zoho.com/crm/developer/docs/api/v6/get-profiles.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCRM.settings.profiles.ALL",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocrm__crm__v6__settings__roles___get": {
+      "provider_intent": "zohocrm__crm__v6__settings__roles___get",
+      "provider_alias_intent": "/crm/v6/settings/roles",
+      "text": "Get Roles",
+      "category": "Roles",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v6",
+        "auth": [],
+        "description": "To retrieve the details about roles in your organization.",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/crm/v6/settings/roles",
+        "alias_endpoint": "/zohocrm/crm/v6/settings/roles",
+        "api_ref": "https://www.zoho.com/crm/developer/docs/api/v6/get-roles.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCRM.settings.roles.ALL",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

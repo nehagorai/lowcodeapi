@@ -1,0 +1,2978 @@
+{
+  "routes": {
+    "elevenlabs__v1__audio-native___post": {
+      "provider_intent": "elevenlabs__v1__audio-native___post",
+      "provider_alias_intent": "/v1/audio-native",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/audio-native",
+      "text": "Creates Audionative Enabled Project.",
+      "category": "Audio-native",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "file": {
+          "text": "Either txt or HTML input file containing the article content. HTML should be formatted as follows '<html><body><div><p>Your content</p><h5>More of your content</h5><p>Some more of your content</p></div></body></html>'",
+          "type": "string"
+        },
+        "name": {
+          "text": "Project name.",
+          "type": "string",
+          "required": true
+        },
+        "image": {
+          "text": "Image URL used in the player. If not provided, default image set in the Player settings is used.",
+          "type": "string"
+        },
+        "small": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "Whether to use small player or not. If not provided, default value set in the Player settings is used.",
+          "type": "boolean"
+        },
+        "title": {
+          "text": "Title used in the player and inserted at the top of the uploaded article. If not provided, the default title set in the Player settings is used.",
+          "type": "string"
+        },
+        "author": {
+          "text": "Author used in the player and inserted at the start of the uploaded article. If not provided, the default author set in the Player settings is used.",
+          "type": "string"
+        },
+        "model_id": {
+          "text": "TTS Model ID used in the player. If not provided, default model ID set in the Player settings is used.",
+          "type": "string"
+        },
+        "voice_id": {
+          "text": "Voice ID used to voice the content. If not provided, default voice ID set in the Player settings is used.",
+          "type": "string"
+        },
+        "text_color": {
+          "text": "Text color used in the player. If not provided, default text color set in the Player settings is used.",
+          "type": "string"
+        },
+        "auto_convert": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "Whether to auto convert the project to audio or not.",
+          "type": "boolean"
+        },
+        "sessionization": {
+          "text": "Specifies for how many minutes to persist the session across page reloads. If not provided, default sessionization set in the Player settings is used.",
+          "type": "number"
+        },
+        "background_color": {
+          "text": "Background color used in the player. If not provided, default background color set in the Player settings is used.",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/creates-audionative-enabled-project",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Creates AudioNative enabled project, optionally starts conversion and returns project id and embeddable html snippet.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/audio-native",
+        "alias_endpoint": "/elevenlabs/v1/audio-native"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "elevenlabs__v1__dubbing___post": {
+      "provider_intent": "elevenlabs__v1__dubbing___post",
+      "provider_alias_intent": "/v1/dubbing",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/dubbing",
+      "text": "Dub A Video Or An Audio File",
+      "category": "Dubbing",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "file": {
+          "text": "A list of file paths to audio recordings intended for voice cloning",
+          "type": "string"
+        },
+        "mode": {
+          "text": "automatic or manual. Manual mode is only supported when creating a dubbing studio project",
+          "type": "string"
+        },
+        "name": {
+          "text": "Name of the dubbing project.",
+          "type": "string"
+        },
+        "csv_file": {
+          "text": "CSV file containing transcription/translation metadata",
+          "type": "string"
+        },
+        "end_time": {
+          "text": "End time of the source video/audio file.",
+          "type": "number"
+        },
+        "watermark": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "Whether to apply watermark to the output video.",
+          "type": "boolean"
+        },
+        "source_url": {
+          "text": "URL of the source video/audio file.",
+          "type": "string"
+        },
+        "start_time": {
+          "text": "Start time of the source video/audio file.",
+          "type": "number"
+        },
+        "source_lang": {
+          "text": "Source language.",
+          "type": "number"
+        },
+        "target_lang": {
+          "text": "The Target language to dub the content into. Can be none if dubbing studio editor is enabled and running manual mode",
+          "type": "string"
+        },
+        "num_speakers": {
+          "text": "Number of speakers to use for the dubbing. Set to 0 to automatically detect the number of speakers",
+          "type": "number"
+        },
+        "dubbing_studio": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "Whether to prepare dub for edits in dubbing studio.",
+          "type": "boolean"
+        },
+        "highest_resolution": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "Whether to use the highest resolution available.",
+          "type": "boolean"
+        },
+        "background_audio_file": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "For use only with csv input",
+          "type": "boolean"
+        },
+        "foreground_audio_file": {
+          "text": "For use only with csv input",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/create-dub",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Dubs provided audio or video file into given language.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/dubbing",
+        "alias_endpoint": "/elevenlabs/v1/dubbing"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "elevenlabs__v1__dubbing__dubbing_id___get": {
+      "provider_intent": "elevenlabs__v1__dubbing__dubbing_id___get",
+      "provider_alias_intent": "/v1/dubbing/dubbing_id",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/dubbing/{dubbing_id}",
+      "text": "Get Dubbing Project Metadata",
+      "category": "Dubbing",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "dubbing_id": {
+          "text": "ID of the dubbing project.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/get-dubbing-metadata",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Returns metadata about a dubbing project, including whether it’s still in progress or not",
+        "api_endpoint": "https://api.elevenlabs.io/v1/dubbing/{dubbing_id}",
+        "alias_endpoint": "/elevenlabs/v1/dubbing/dubbing_id"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:35:41.000Z"
+    },
+    "elevenlabs__v1__dubbing__dubbing_id___delete": {
+      "provider_intent": "elevenlabs__v1__dubbing__dubbing_id___delete",
+      "provider_alias_intent": "/v1/dubbing/dubbing_id",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/dubbing/{dubbing_id}",
+      "text": "Delete Dubbing Project",
+      "category": "Dubbing",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "dubbing_id": {
+          "text": "ID of the dubbing project.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/delete-dub",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Deletes a dubbing project.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/dubbing/{dubbing_id}",
+        "alias_endpoint": "/elevenlabs/v1/dubbing/dubbing_id"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:36:00.000Z"
+    },
+    "elevenlabs__v1__dubbing__dubbing_id__audio__language_code___get": {
+      "provider_intent": "elevenlabs__v1__dubbing__dubbing_id__audio__language_code___get",
+      "provider_alias_intent": "/v1/dubbing/dubbing_id/audio/language_code",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/dubbing/{dubbing_id}/audio/{language_code}",
+      "text": "Get Dubbed File",
+      "category": "Dubbing",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "dubbing_id": {
+          "text": "ID of the dubbing project.",
+          "type": "string",
+          "required": true
+        },
+        "language_code": {
+          "text": "ID of the language.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/get-dubbed-file",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Returns dubbed file as a streamed file. Videos will be returned in MP4 format and audio only dubs will be returned in MP3.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/dubbing/{dubbing_id}/audio/{language_code}",
+        "alias_endpoint": "/elevenlabs/v1/dubbing/dubbing_id/audio/language_code"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:36:16.000Z"
+    },
+    "elevenlabs__v1__history___get": {
+      "provider_intent": "elevenlabs__v1__history___get",
+      "provider_alias_intent": "/v1/history",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/history",
+      "text": "Get Generated Items",
+      "category": "History",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "voice_id": {
+          "text": "Voice ID to be filtered for, you can use GET https://api.elevenlabs.io/v1/voices to receive a list of voices and their IDs",
+          "type": "string"
+        },
+        "page_size": {
+          "text": "How many history items to return at maximum",
+          "type": "number"
+        },
+        "start_after_history_item_id": {
+          "text": "After which ID to start fetching, use this parameter to paginate across a large collection of history items. In case this parameter is not provided history items will be fetched starting from the most recently created one ordered descending by their creation date.",
+          "type": "string"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/get-generated-items",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Returns metadata about all your generated audio.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/history",
+        "alias_endpoint": "/elevenlabs/v1/history"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "elevenlabs__v1__history__history_item_id___get": {
+      "provider_intent": "elevenlabs__v1__history__history_item_id___get",
+      "provider_alias_intent": "/v1/history/history_item_id",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/history/{history_item_id}",
+      "text": "Get History Item By Id",
+      "category": "History",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "history_item_id": {
+          "text": "History item ID to be used, you can use GET https://api.elevenlabs.io/v1/history to receive a list of history items and their IDs.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/get-history-item-by-id",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Returns information about an history item by its ID.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/history/{history_item_id}",
+        "alias_endpoint": "/elevenlabs/v1/history/history_item_id"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:37:15.000Z"
+    },
+    "elevenlabs__v1__history__history_item_id___delete": {
+      "provider_intent": "elevenlabs__v1__history__history_item_id___delete",
+      "provider_alias_intent": "/v1/history/history_item_id",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/history/{history_item_id}",
+      "text": "Delete History Item",
+      "category": "History",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "history_item_id": {
+          "text": "History item ID to be used, you can use GET https://api.elevenlabs.io/v1/history to receive a list of history items and their IDs.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/delete-history-item",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Delete a history item by its ID",
+        "api_endpoint": "https://api.elevenlabs.io/v1/history/{history_item_id}",
+        "alias_endpoint": "/elevenlabs/v1/history/history_item_id"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:37:40.000Z"
+    },
+    "elevenlabs__v1__history__history_item_id__audio___get": {
+      "provider_intent": "elevenlabs__v1__history__history_item_id__audio___get",
+      "provider_alias_intent": "/v1/history/history_item_id/audio",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/history/{history_item_id}/audio",
+      "text": "Get Audio From History Item",
+      "category": "History",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "history_item_id": {
+          "text": "History item ID to be used, you can use GET https://api.elevenlabs.io/v1/history to receive a list of history items and their IDs.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/get-audio-from-history-item",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Returns the audio of an history item.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/history/{history_item_id}/audio",
+        "alias_endpoint": "/elevenlabs/v1/history/history_item_id/audio"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:37:58.000Z"
+    },
+    "elevenlabs__v1__models___get": {
+      "provider_intent": "elevenlabs__v1__models___get",
+      "provider_alias_intent": "/v1/models",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/models",
+      "text": "Get Models",
+      "category": "Models",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/get-models",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Gets a list of available models.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/models",
+        "alias_endpoint": "/elevenlabs/v1/models"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "elevenlabs__v1__projects___get": {
+      "provider_intent": "elevenlabs__v1__projects___get",
+      "provider_alias_intent": "/v1/projects",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/projects",
+      "text": "Get Projects",
+      "category": "Projects",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/get-projects",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Returns a list of your projects together and its metadata.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/projects",
+        "alias_endpoint": "/elevenlabs/v1/projects"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "elevenlabs__v1__history__download___post": {
+      "provider_intent": "elevenlabs__v1__history__download___post",
+      "provider_alias_intent": "/v1/history/download",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/history/download",
+      "text": "Download History Items",
+      "category": "History",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "output_format": {
+          "text": "Output format to transcode the audio file, can be wav or default.",
+          "type": "string"
+        },
+        "history_item_id": {
+          "text": "A list of history items to download, you can get IDs of history items and other metadata using the GET https://api.elevenlabs.io/v1/history endpoint.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/download-history-items",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Download one or more history items. If one history item ID is provided, we will return a single audio file. If more than one history item IDs are provided, we will provide the history items packed into a .zip file",
+        "api_endpoint": "https://api.elevenlabs.io/v1/history/download",
+        "alias_endpoint": "/elevenlabs/v1/history/download"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "elevenlabs__v1__projects__project_id___get": {
+      "provider_intent": "elevenlabs__v1__projects__project_id___get",
+      "provider_alias_intent": "/v1/projects/project_id",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/projects/{project_id}",
+      "text": "Get Projects By Id",
+      "category": "Projects",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "project_id": {
+          "text": "The project_id of the project, you can query GET https://api.elevenlabs.io/v1/projects to list all available projects.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/get-project-by-id",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Returns information about a specific project",
+        "api_endpoint": "https://api.elevenlabs.io/v1/projects/{project_id}",
+        "alias_endpoint": "/elevenlabs/v1/projects/project_id"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:38:48.000Z"
+    },
+    "elevenlabs__v1__projects__project_id___delete": {
+      "provider_intent": "elevenlabs__v1__projects__project_id___delete",
+      "provider_alias_intent": "/v1/projects/project_id",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/projects/{project_id}",
+      "text": "Delete Project",
+      "category": "Projects",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "project_id": {
+          "text": "The project_id of the project, you can query GET https://api.elevenlabs.io/v1/projects to list all available projects.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/delete-project",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Delete a project by its project_id.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/projects/{project_id}",
+        "alias_endpoint": "/elevenlabs/v1/projects/project_id"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:39:03.000Z"
+    },
+    "elevenlabs__v1__projects__project_id__snapshots___get": {
+      "provider_intent": "elevenlabs__v1__projects__project_id__snapshots___get",
+      "provider_alias_intent": "/v1/projects/project_id/snapshots",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/projects/{project_id}/snapshots",
+      "text": "Get Project Snapshots",
+      "category": "Projects",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "project_id": {
+          "text": "The project_id of the project, you can query GET https://api.elevenlabs.io/v1/projects to list all available projects.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/get-project-snapshots",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Gets the snapshots of a project.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/projects/{project_id}/snapshots",
+        "alias_endpoint": "/elevenlabs/v1/projects/project_id/snapshots"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:39:18.000Z"
+    },
+    "elevenlabs__v1__projects__project_id__convert___post": {
+      "provider_intent": "elevenlabs__v1__projects__project_id__convert___post",
+      "provider_alias_intent": "/v1/projects/project_id/convert",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/projects/{project_id}/convert",
+      "text": "Convert Project",
+      "category": "Projects",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "project_id": {
+          "text": "The project_id of the project, you can query GET https://api.elevenlabs.io/v1/projects to list all available projects.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/convert-project",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Starts conversion of a project and all of its chapters",
+        "api_endpoint": "https://api.elevenlabs.io/v1/projects/{project_id}/convert",
+        "alias_endpoint": "/elevenlabs/v1/projects/project_id/convert"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:39:34.000Z"
+    },
+    "elevenlabs__v1__projects__add___post": {
+      "provider_intent": "elevenlabs__v1__projects__add___post",
+      "provider_alias_intent": "/v1/projects/add",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/projects/add",
+      "text": "Add Project",
+      "category": "Projects",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "name": {
+          "text": "The name of the project, used for identification only.",
+          "type": "string",
+          "required": true
+        },
+        "title": {
+          "text": "An optional name of the author of the project, this will be added as metadata to the mp3 file on project / chapter download.",
+          "type": "string"
+        },
+        "author": {
+          "text": "An optional name of the author of the project, this will be added as metadata to the mp3 file on project / chapter download.",
+          "type": "string"
+        },
+        "from_url": {
+          "text": "An optional URL from which we will extract content to initialize the project. If this is set, 'from_url' must be null. If neither 'from_url' or 'from_document' are provided we will initialize the project as blank.",
+          "type": "string"
+        },
+        "isbn_number": {
+          "text": "An optional ISBN number of the project you want to create, this will be added as metadata to the mp3 file on project / chapter download.",
+          "type": "string"
+        },
+        "callback_url": {
+          "text": "A url that will be called by our service when the project is converted with a json containing the status of the conversion",
+          "type": "string"
+        },
+        "from_document": {
+          "text": "An optional .epub, .pdf, .txt or similar file can be provided. If provided, we will initialize the project with its content. If this is set, 'from_url' must be null. If neither 'from_url' or 'from_document' are provided we will initialize the project as blank.",
+          "type": "string"
+        },
+        "quality_preset": {
+          "text": "Output quality of the generated audio. Must be one of: standard - standard output format, 128kbps with 44.1kHz sample rate. high - high quality output format, 192kbps with 44.1kHz sample rate and major improvements on our side. Using this setting increases the character cost by 20%. ultra - ultra quality output format, 192kbps with 44.1kHz sample rate and highest improvements on our side. Using this setting increases the character cost by 50%. ultra lossless - ultra quality output format, 705.6kbps with 44.1kHz sample rate and highest improvements on our side in a fully lossless format. Using this setting increases the character cost by 100%.",
+          "type": "string"
+        },
+        "default_model_id": {
+          "text": "The model_id of the model to be used for this project, you can query GET https://api.elevenlabs.io/v1/models to list all available models.",
+          "type": "string",
+          "required": true
+        },
+        "volume_normalization": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "When the project is downloaded, should the returned audio have postprocessing in order to make it compliant with audiobook normalized volume requirements",
+          "type": "boolean"
+        },
+        "default_title_voice_id": {
+          "text": "The voice_id that corresponds to the default voice used for new titles",
+          "type": "string",
+          "required": true
+        },
+        "acx_volume_normalization": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "When the project is downloaded, should the returned audio have postprocessing in order to make it compliant with audiobook normalized volume requirements",
+          "type": "boolean"
+        },
+        "default_paragraph_voice_id": {
+          "text": "The voice_id that corresponds to the default voice used for new paragraph",
+          "type": "string",
+          "required": true
+        },
+        "pronunciation_dictionary_locators": {
+          "text": "A list of pronunciation dictionary locators (pronunciation_dictionary_id, version_id) encoded as a list of JSON strings for pronunciation dictionaries to be applied to the text. A list of json encoded strings is required as adding projects may occur through formData as opposed to jsonBody.",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/add-project",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Creates a new project, it can be either initialized as blank, from a document or from a URL.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/projects/add",
+        "alias_endpoint": "/elevenlabs/v1/projects/add"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "elevenlabs__v1__projects__project_id__chapters___get": {
+      "provider_intent": "elevenlabs__v1__projects__project_id__chapters___get",
+      "provider_alias_intent": "/v1/projects/project_id/chapters",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/projects/{project_id}/chapters",
+      "text": "Get Chapters",
+      "category": "Projects",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "project_id": {
+          "text": "The project_id of the project, you can query GET https://api.elevenlabs.io/v1/projects to list all available projects.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/get-chapters",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Returns a list of your chapters for a project together and its metadata",
+        "api_endpoint": "https://api.elevenlabs.io/v1/projects/{project_id}/chapters",
+        "alias_endpoint": "/elevenlabs/v1/projects/project_id/chapters"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:40:04.000Z"
+    },
+    "elevenlabs__v1__projects__project_id__snapshots__project_snapshot_id__stream___post": {
+      "provider_intent": "elevenlabs__v1__projects__project_id__snapshots__project_snapshot_id__stream___post",
+      "provider_alias_intent": "/v1/projects/project_id/snapshots/project_snapshot_id/stream",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/projects/{project_id}/snapshots/{project_snapshot_id}/stream",
+      "text": "Stream Project Audio",
+      "category": "Projects",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "project_id": {
+          "text": "The project_id of the project, you can query GET https://api.elevenlabs.io/v1/projects to list all available projects.",
+          "type": "string",
+          "required": true
+        },
+        "project_snapshot_id": {
+          "text": "The project_snapshot_id of the project snapshot. You can query GET /v1/projects/{project_id}/snapshots to list all available snapshots for a project.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "convert_to_mpeg": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "Whether to convert the audio to mpeg format.",
+          "type": "boolean"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/stream-project-audio",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Stream the audio from a project snapshot.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/projects/{project_id}/snapshots/{project_snapshot_id}/stream",
+        "alias_endpoint": "/elevenlabs/v1/projects/project_id/snapshots/project_snapshot_id/stream"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:40:31.000Z"
+    },
+    "elevenlabs__v1__projects__project_id__chapters__chapter_id___get": {
+      "provider_intent": "elevenlabs__v1__projects__project_id__chapters__chapter_id___get",
+      "provider_alias_intent": "/v1/projects/project_id/chapters/chapter_id",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/projects/{project_id}/chapters/{chapter_id}",
+      "text": "Get Chapters By Id",
+      "category": "Projects",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "chapter_id": {
+          "text": "The chapter_id of the chapter. You can query GET https://api.elevenlabs.io/v1/projects/{project_id}/chapters to list all available chapters for a project.",
+          "type": "string",
+          "required": true
+        },
+        "project_id": {
+          "text": "The project_id of the project, you can query GET https://api.elevenlabs.io/v1/projects to list all available projects.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/get-chapter-by-id",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Returns information about a specific chapter.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/projects/{project_id}/chapters/{chapter_id}",
+        "alias_endpoint": "/elevenlabs/v1/projects/project_id/chapters/chapter_id"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:40:48.000Z"
+    },
+    "elevenlabs__v1__projects__project_id__chapters__chapter_id___delete": {
+      "provider_intent": "elevenlabs__v1__projects__project_id__chapters__chapter_id___delete",
+      "provider_alias_intent": "/v1/projects/project_id/chapters/chapter_id",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/projects/{project_id}/chapters/{chapter_id}",
+      "text": "Delete Chapters",
+      "category": "Projects",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "chapter_id": {
+          "text": "The chapter_id of the chapter. You can query GET https://api.elevenlabs.io/v1/projects/{project_id}/chapters to list all available chapters for a project.",
+          "type": "string",
+          "required": true
+        },
+        "project_id": {
+          "text": "The project_id of the project, you can query GET https://api.elevenlabs.io/v1/projects to list all available projects.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/delete-chapter",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Delete a chapter by its chapter_id.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/projects/{project_id}/chapters/{chapter_id}",
+        "alias_endpoint": "/elevenlabs/v1/projects/project_id/chapters/chapter_id"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:41:08.000Z"
+    },
+    "elevenlabs__v1__projects__project_id__chapters__chapter_id__convert___post": {
+      "provider_intent": "elevenlabs__v1__projects__project_id__chapters__chapter_id__convert___post",
+      "provider_alias_intent": "/v1/projects/project_id/chapters/chapter_id/convert",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/projects/{project_id}/chapters/{chapter_id}/convert",
+      "text": "Convert Chapters",
+      "category": "Projects",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "chapter_id": {
+          "text": "The chapter_id of the chapter. You can query GET https://api.elevenlabs.io/v1/projects/{project_id}/chapters to list all available chapters for a project.",
+          "type": "string",
+          "required": true
+        },
+        "project_id": {
+          "text": "The project_id of the project, you can query GET https://api.elevenlabs.io/v1/projects to list all available projects.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/convert-chapter",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Starts conversion of a specific chapter.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/projects/{project_id}/chapters/{chapter_id}/convert",
+        "alias_endpoint": "/elevenlabs/v1/projects/project_id/chapters/chapter_id/convert"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:41:27.000Z"
+    },
+    "elevenlabs__v1__projects__project_id__chapters__chapter_id__snapshots___get": {
+      "provider_intent": "elevenlabs__v1__projects__project_id__chapters__chapter_id__snapshots___get",
+      "provider_alias_intent": "/v1/projects/project_id/chapters/chapter_id/snapshots",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/projects/{project_id}/chapters/{chapter_id}/snapshots",
+      "text": "Get Chapter Snapshorts",
+      "category": "Projects",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "chapter_id": {
+          "text": "The chapter_id of the chapter. You can query GET https://api.elevenlabs.io/v1/projects/{project_id}/chapters to list all available chapters for a project.",
+          "type": "string",
+          "required": true
+        },
+        "project_id": {
+          "text": "The project_id of the project, you can query GET https://api.elevenlabs.io/v1/projects to list all available projects.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/get-chapter-snapshots",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Gets information about all the snapshots of a chapter, each snapshot corresponds can be downloaded as audio. Whenever a chapter is converted a snapshot will be automatically created.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/projects/{project_id}/chapters/{chapter_id}/snapshots",
+        "alias_endpoint": "/elevenlabs/v1/projects/project_id/chapters/chapter_id/snapshots"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:41:44.000Z"
+    },
+    "elevenlabs__v1__projects__project_id__chapters__chapter_id__snapshots__chapter_snapshot_id__stream___post": {
+      "provider_intent": "elevenlabs__v1__projects__project_id__chapters__chapter_id__snapshots__chapter_snapshot_id__stream___post",
+      "provider_alias_intent": "/v1/projects/project_id/chapters/chapter_id/snapshots/chapter_snapshot_id/stream",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/projects/{project_id}/chapters/{chapter_id}/snapshots/{chapter_snapshot_id}/stream",
+      "text": "Stream Chapter Audio",
+      "category": "Projects",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "chapter_id": {
+          "text": "The chapter_id of the chapter. You can query GET https://api.elevenlabs.io/v1/projects/{project_id}/chapters to list all available chapters for a project.",
+          "type": "string",
+          "required": true
+        },
+        "project_id": {
+          "text": "The project_id of the project, you can query GET https://api.elevenlabs.io/v1/projects to list all available projects.",
+          "type": "string",
+          "required": true
+        },
+        "chapter_snapshot_id": {
+          "text": "The chapter_snapshot_id of the chapter snapshot. You can query GET /v1/projects/{project_id}/chapters/{chapter_id}/snapshots to the all available snapshots for a chapter.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "convert_to_mpeg": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "Whether to convert the audio to mpeg format.",
+          "type": "boolean"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/stream-chapter-audio",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Stream the audio from a chapter snapshot",
+        "api_endpoint": "https://api.elevenlabs.io/v1/projects/{project_id}/chapters/{chapter_id}/snapshots/{chapter_snapshot_id}/stream",
+        "alias_endpoint": "/elevenlabs/v1/projects/project_id/chapters/chapter_id/snapshots/chapter_snapshot_id/stream"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:41:59.000Z"
+    },
+    "elevenlabs__v1__pronunciation-dictionaries__add-from-file___post": {
+      "provider_intent": "elevenlabs__v1__pronunciation-dictionaries__add-from-file___post",
+      "provider_alias_intent": "/v1/pronunciation-dictionaries/add-from-file",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/pronunciation-dictionaries/add-from-file",
+      "text": "Add from file",
+      "category": "Pronunciation Dictionaries",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "file": {
+          "text": "A lexicon .pls file which we will use to initialize the project with.",
+          "type": "string"
+        },
+        "name": {
+          "text": "The name of the pronunciation dictionary, used for identification only.",
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "text": "A description of the pronunciation dictionary, used for identification only.",
+          "type": "string"
+        },
+        "workspace_access": {
+          "enum": [
+            "admin",
+            "editor",
+            "viewer"
+          ],
+          "text": "Should be one of 'editor' or 'viewer'. If not provided, defaults to no access.",
+          "type": "enum"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/pronunciation-dictionaries-add-from-file",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Creates a new pronunciation dictionary from a lexicon .PLS file",
+        "api_endpoint": "https://api.elevenlabs.io/v1/pronunciation-dictionaries/add-from-file",
+        "alias_endpoint": "/elevenlabs/v1/pronunciation-dictionaries/add-from-file"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "elevenlabs__v1__projects__project_id__update-pronunciation-dictionaries___post": {
+      "provider_intent": "elevenlabs__v1__projects__project_id__update-pronunciation-dictionaries___post",
+      "provider_alias_intent": "/v1/projects/project_id/update-pronunciation-dictionaries",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/projects/{project_id}/update-pronunciation-dictionaries",
+      "text": "Update Pronunciation Dictionaries",
+      "category": "Projects",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "project_id": {
+          "text": "The project_id of the project, you can query GET https://api.elevenlabs.io/v1/projects to list all available projects.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "pronunciation_dictionary_locators": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "A list of pronunciation dictionary locators (pronunciation_dictionary_id, version_id) encoded as a list of JSON strings for pronunciation dictionaries to be applied to the text. A list of json encoded strings is required as adding projects may occur through formData as opposed to jsonBody",
+          "type": "boolean",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/update-pronunciation-dictionaries",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Updates the set of pronunciation dictionaries acting on a project. This will automatically mark text within this project as requiring reconverting where the new dictionary would apply or the old one no longer does.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/projects/{project_id}/update-pronunciation-dictionaries",
+        "alias_endpoint": "/elevenlabs/v1/projects/project_id/update-pronunciation-dictionaries"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:42:14.000Z"
+    },
+    "elevenlabs__v1__pronunciation-dictionaries___get": {
+      "provider_intent": "elevenlabs__v1__pronunciation-dictionaries___get",
+      "provider_alias_intent": "/v1/pronunciation-dictionaries",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/pronunciation-dictionaries",
+      "text": "Get dictionaries",
+      "category": "Pronunciation Dictionaries",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "cursor": {
+          "text": "Used for fetching next page. Cursor is returned in the response",
+          "type": "string"
+        },
+        "page_size": {
+          "text": "How many pronunciation dictionaries to return at maximum. Can not exceed 100, defaults to 30.",
+          "type": "number"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/pronunciation-dictionaries-list",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Get a list of the pronunciation dictionaries you have access to and their metadata",
+        "api_endpoint": "https://api.elevenlabs.io/v1/pronunciation-dictionaries",
+        "alias_endpoint": "/elevenlabs/v1/pronunciation-dictionaries"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "elevenlabs__v1__pronunciation-dictionaries__pronunciation_dictionary_id___get": {
+      "provider_intent": "elevenlabs__v1__pronunciation-dictionaries__pronunciation_dictionary_id___get",
+      "provider_alias_intent": "/v1/pronunciation-dictionaries/pronunciation_dictionary_id",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/pronunciation-dictionaries/{pronunciation_dictionary_id}",
+      "text": "Get dictionaries by id",
+      "category": "Pronunciation Dictionaries",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "pronunciation_dictionary_id": {
+          "text": "The id of the pronunciation dictionary",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/pronunciation-dictionaries-id",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Get metadata for a pronunciation dictionary",
+        "api_endpoint": "https://api.elevenlabs.io/v1/pronunciation-dictionaries/{pronunciation_dictionary_id}",
+        "alias_endpoint": "/elevenlabs/v1/pronunciation-dictionaries/pronunciation_dictionary_id"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:42:52.000Z"
+    },
+    "elevenlabs__v1__speech-to-speech__voice_id___post": {
+      "provider_intent": "elevenlabs__v1__speech-to-speech__voice_id___post",
+      "provider_alias_intent": "/v1/speech-to-speech/voice_id",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/speech-to-speech/{voice_id}",
+      "text": "Speech To Speech",
+      "category": "Speech to Speech",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "output_format": {
+          "text": "Output format of the generated audio. Must be one of: mp3_22050_32 - output format, mp3 with 22.05kHz sample rate at 32kbps. mp3_44100_32 - output format, mp3 with 44.1kHz sample rate at 32kbps. mp3_44100_64 - output format, mp3 with 44.1kHz sample rate at 64kbps. mp3_44100_96 - output format, mp3 with 44.1kHz sample rate at 96kbps. mp3_44100_128 - default output format, mp3 with 44.1kHz sample rate at 128kbps. mp3_44100_192 - output format, mp3 with 44.1kHz sample rate at 192kbps. Requires you to be subscribed to Creator tier or above. pcm_16000 - PCM format (S16LE) with 16kHz sample rate. pcm_22050 - PCM format (S16LE) with 22.05kHz sample rate. pcm_24000 - PCM format (S16LE) with 24kHz sample rate. pcm_44100 - PCM format (S16LE) with 44.1kHz sample rate. Requires you to be subscribed to Pro tier or above. ulaw_8000 - μ-law format (sometimes written mu-law, often approximated as u-law) with 8kHz sample rate. Note that this format is commonly used for Twilio audio inputs.",
+          "type": "string"
+        },
+        "enable_logging": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "When enable_logging is set to false full privacy mode will be used for the request. This will mean history features are unavailable for this request, including request stitching. Full privacy mode may only be used by enterprise customers.",
+          "type": "boolean"
+        },
+        "optimize_streaming_latency": {
+          "text": "You can turn on latency optimizations at some cost of quality. The best possible final latency varies by model",
+          "type": "number"
+        }
+      },
+      "path": {
+        "voice_id": {
+          "text": "Voice ID to be used, you can use https://api.elevenlabs.io/v1/voices to list all the available voices.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "seed": {
+          "text": "If specified, our system will make a best effort to sample deterministically, such that repeated requests with the same seed and parameters should return the same result. Determinism is not guaranteed.",
+          "type": "number"
+        },
+        "audio": {
+          "text": "The audio file which holds the content and emotion that will control the generated speech.",
+          "type": "string",
+          "required": true
+        },
+        "model_id": {
+          "text": "Identifier of the model that will be used, you can query them using GET /v1/models. The model needs to have support for speech to speech, you can check this using the can_do_voice_conversion property.",
+          "type": "string"
+        },
+        "voice_settings": {
+          "text": "Voice settings overriding stored setttings for the given voice. They are applied only on the given request. Needs to be send as a JSON encoded string.",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/speech-to-speech",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Use Speech to Speech API to transform uploaded speech so it sounds like it was spoken by another voice",
+        "api_endpoint": "https://api.elevenlabs.io/v1/speech-to-speech/{voice_id}",
+        "alias_endpoint": "/elevenlabs/v1/speech-to-speech/voice_id"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:44:18.000Z"
+    },
+    "elevenlabs__v1__voices__voice_id__samples__sample_id___delete": {
+      "provider_intent": "elevenlabs__v1__voices__voice_id__samples__sample_id___delete",
+      "provider_alias_intent": "/v1/voices/voice_id/samples/sample_id",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/voices/{voice_id}/samples/{sample_id}",
+      "text": "Delete Sample",
+      "category": "Samples",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "voice_id": {
+          "text": "Voice ID to be used, you can use https://api.elevenlabs.io/v1/voices to list all the available voices.",
+          "type": "string",
+          "required": true
+        },
+        "sample_id": {
+          "text": "Sample ID to be used, you can use GET https://api.elevenlabs.io/v1/voices/{voice_id} to list all the available samples for a voice.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/delete-sample",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Removes a sample by its ID.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/voices/{voice_id}/samples/{sample_id}",
+        "alias_endpoint": "/elevenlabs/v1/voices/voice_id/samples/sample_id"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:45:04.000Z"
+    },
+    "elevenlabs__v1__pronunciation-dictionaries__dictionary_id__version_id__download___get": {
+      "provider_intent": "elevenlabs__v1__pronunciation-dictionaries__dictionary_id__version_id__download___get",
+      "provider_alias_intent": "/v1/pronunciation-dictionaries/dictionary_id/version_id/download",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/pronunciation-dictionaries/{dictionary_id}/{version_id}/download",
+      "text": "Download version by id",
+      "category": "Pronunciation Dictionaries",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "version_id": {
+          "text": "The id of the version of the pronunciation dictionary",
+          "type": "string",
+          "required": true
+        },
+        "dictionary_id": {
+          "text": "The id of the pronunciation dictionary",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/pronunciation-dictionaries-id-version_id-download",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Get PLS file with a pronunciation dictionary version rules",
+        "api_endpoint": "https://api.elevenlabs.io/v1/pronunciation-dictionaries/{dictionary_id}/{version_id}/download",
+        "alias_endpoint": "/elevenlabs/v1/pronunciation-dictionaries/dictionary_id/version_id/download"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:43:10.000Z"
+    },
+    "elevenlabs__v1__voices__voice_id__samples__sample_id__audio___get": {
+      "provider_intent": "elevenlabs__v1__voices__voice_id__samples__sample_id__audio___get",
+      "provider_alias_intent": "/v1/voices/voice_id/samples/sample_id/audio",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/voices/{voice_id}/samples/{sample_id}/audio",
+      "text": "Get Audio From Sample",
+      "category": "Samples",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "voice_id": {
+          "text": "Voice ID to be used, you can use https://api.elevenlabs.io/v1/voices to list all the available voices.",
+          "type": "string",
+          "required": true
+        },
+        "sample_id": {
+          "text": "Sample ID to be used, you can use GET https://api.elevenlabs.io/v1/voices/{voice_id} to list all the available samples for a voice.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/get-audio-from-sample",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Returns the audio corresponding to a sample attached to a voice.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/voices/{voice_id}/samples/{sample_id}/audio",
+        "alias_endpoint": "/elevenlabs/v1/voices/voice_id/samples/sample_id/audio"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:45:18.000Z"
+    },
+    "elevenlabs__v1__sound-generation___post": {
+      "provider_intent": "elevenlabs__v1__sound-generation___post",
+      "provider_alias_intent": "/v1/sound-generation",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/sound-generation",
+      "text": "Sound Generation",
+      "category": "Sound Effects",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "text": {
+          "text": "The text that will get converted into a sound effect.",
+          "type": "string",
+          "required": true
+        },
+        "duration_seconds": {
+          "text": "The duration of the sound which will be generated in seconds. Must be at least 0.5 and at most 22. If set to None we will guess the optimal duration using the prompt. Defaults to None.",
+          "type": "number"
+        },
+        "prompt_influence": {
+          "text": "A higher prompt influence makes your generation follow the prompt more closely while also making generations less variable. Must be a value between 0 and 1. Defaults to 0.3.",
+          "type": "number"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/sound-generation",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Create sound effects for your videos, voice-overs or video games.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/sound-generation",
+        "alias_endpoint": "/elevenlabs/v1/sound-generation"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "elevenlabs__v1__pronunciation-dictionaries__pronunciation_dictionary_id__add-rules___post": {
+      "provider_intent": "elevenlabs__v1__pronunciation-dictionaries__pronunciation_dictionary_id__add-rules___post",
+      "provider_alias_intent": "/v1/pronunciation-dictionaries/pronunciation_dictionary_id/add-rules",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/pronunciation-dictionaries/{pronunciation_dictionary_id}/add-rules",
+      "text": "Add rules",
+      "category": "Pronunciation Dictionaries",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "pronunciation_dictionary_id": {
+          "text": "The id of the pronunciation dictionary",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "rules": {
+          "text": "List of pronunciation rules. Rule can be either: an alias rule: {'string_to_replace': 'a', 'type': 'alias', 'alias': 'b', } or a phoneme rule: {'string_to_replace': 'a', 'type': 'phoneme', 'phoneme': 'b', 'alphabet': 'ipa' }",
+          "type": "object",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/pronunciation-dictionaries-id-add-rules",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Add rules to the pronunciation dictionary",
+        "api_endpoint": "https://api.elevenlabs.io/v1/pronunciation-dictionaries/{pronunciation_dictionary_id}/add-rules",
+        "alias_endpoint": "/elevenlabs/v1/pronunciation-dictionaries/pronunciation_dictionary_id/add-rules"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:43:27.000Z"
+    },
+    "elevenlabs__v1__pronunciation-dictionaries__pronunciation_dictionary_id__remove-rules___post": {
+      "provider_intent": "elevenlabs__v1__pronunciation-dictionaries__pronunciation_dictionary_id__remove-rules___post",
+      "provider_alias_intent": "/v1/pronunciation-dictionaries/pronunciation_dictionary_id/remove-rules",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/pronunciation-dictionaries/{pronunciation_dictionary_id}/remove-rules",
+      "text": "Remove Rules",
+      "category": "Pronunciation Dictionaries",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "pronunciation_dictionary_id": {
+          "text": "The id of the pronunciation dictionary",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "rule_strings": {
+          "text": "List of strings to remove from the pronunciation dictionary.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/pronunciation-dictionaries-id-remove-rules",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Remove rules from the pronunciation dictionary",
+        "api_endpoint": "https://api.elevenlabs.io/v1/pronunciation-dictionaries/{pronunciation_dictionary_id}/remove-rules",
+        "alias_endpoint": "/elevenlabs/v1/pronunciation-dictionaries/pronunciation_dictionary_id/remove-rules"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:43:41.000Z"
+    },
+    "elevenlabs__v1__speech-to-speech__voice_id__stream___post": {
+      "provider_intent": "elevenlabs__v1__speech-to-speech__voice_id__stream___post",
+      "provider_alias_intent": "/v1/speech-to-speech/voice_id/stream",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/speech-to-speech/{voice_id}/stream",
+      "text": "Streaming",
+      "category": "Speech to Speech",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "output_format": {
+          "text": "Output format of the generated audio. Must be one of: mp3_22050_32 - output format, mp3 with 22.05kHz sample rate at 32kbps. mp3_44100_32 - output format, mp3 with 44.1kHz sample rate at 32kbps. mp3_44100_64 - output format, mp3 with 44.1kHz sample rate at 64kbps. mp3_44100_96 - output format, mp3 with 44.1kHz sample rate at 96kbps. mp3_44100_128 - default output format, mp3 with 44.1kHz sample rate at 128kbps. mp3_44100_192 - output format, mp3 with 44.1kHz sample rate at 192kbps. Requires you to be subscribed to Creator tier or above. pcm_16000 - PCM format (S16LE) with 16kHz sample rate. pcm_22050 - PCM format (S16LE) with 22.05kHz sample rate. pcm_24000 - PCM format (S16LE) with 24kHz sample rate. pcm_44100 - PCM format (S16LE) with 44.1kHz sample rate. Requires you to be subscribed to Pro tier or above. ulaw_8000 - μ-law format (sometimes written mu-law, often approximated as u-law) with 8kHz sample rate. Note that this format is commonly used for Twilio audio inputs.",
+          "type": "string"
+        },
+        "enable_logging": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "When enable_logging is set to false full privacy mode will be used for the request. This will mean history features are unavailable for this request, including request stitching. Full privacy mode may only be used by enterprise customers.",
+          "type": "boolean"
+        },
+        "optimize_streaming_latency": {
+          "text": "You can turn on latency optimizations at some cost of quality. The best possible final latency varies by model",
+          "type": "number"
+        }
+      },
+      "path": {
+        "voice_id": {
+          "text": "Voice ID to be used, you can use https://api.elevenlabs.io/v1/voices to list all the available voices.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "seed": {
+          "text": "If specified, our system will make a best effort to sample deterministically, such that repeated requests with the same seed and parameters should return the same result. Determinism is not guaranteed.",
+          "type": "number"
+        },
+        "audio": {
+          "text": "The audio file which holds the content and emotion that will control the generated speech.",
+          "type": "string",
+          "required": true
+        },
+        "model_id": {
+          "text": "Identifier of the model that will be used, you can query them using GET /v1/models. The model needs to have support for speech to speech, you can check this using the can_do_voice_conversion property.",
+          "type": "string"
+        },
+        "voice_settings": {
+          "text": "Voice settings overriding stored setttings for the given voice. They are applied only on the given request. Needs to be send as a JSON encoded string.",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/speech-to-speech-streaming",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Create speech by combining the content and emotion of the uploaded audio with a voice of your choice and returns an audio stream.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/speech-to-speech/{voice_id}/stream",
+        "alias_endpoint": "/elevenlabs/v1/speech-to-speech/voice_id/stream"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:44:42.000Z"
+    },
+    "elevenlabs__v1__text-to-speech__voice_id___post": {
+      "provider_intent": "elevenlabs__v1__text-to-speech__voice_id___post",
+      "provider_alias_intent": "/v1/text-to-speech/voice_id",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/text-to-speech/{voice_id}",
+      "text": "Text To Speech",
+      "category": "Text To Speech",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "output_format": {
+          "text": "Output format of the generated audio. Must be one of: mp3_22050_32 - output format, mp3 with 22.05kHz sample rate at 32kbps. mp3_44100_32 - output format, mp3 with 44.1kHz sample rate at 32kbps. mp3_44100_64 - output format, mp3 with 44.1kHz sample rate at 64kbps. mp3_44100_96 - output format, mp3 with 44.1kHz sample rate at 96kbps. mp3_44100_128 - default output format, mp3 with 44.1kHz sample rate at 128kbps. mp3_44100_192 - output format, mp3 with 44.1kHz sample rate at 192kbps. Requires you to be subscribed to Creator tier or above. pcm_16000 - PCM format (S16LE) with 16kHz sample rate. pcm_22050 - PCM format (S16LE) with 22.05kHz sample rate. pcm_24000 - PCM format (S16LE) with 24kHz sample rate. pcm_44100 - PCM format (S16LE) with 44.1kHz sample rate. Requires you to be subscribed to Pro tier or above. ulaw_8000 - μ-law format (sometimes written mu-law, often approximated as u-law) with 8kHz sample rate. Note that this format is commonly used for Twilio audio inputs.",
+          "type": "string"
+        },
+        "enable_logging": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "When enable_logging is set to false full privacy mode will be used for the request. This will mean history features are unavailable for this request, including request stitching. Full privacy mode may only be used by enterprise customers.",
+          "type": "boolean"
+        },
+        "optimize_streaming_latency": {
+          "text": "You can turn on latency optimizations at some cost of quality. The best possible final latency varies by model",
+          "type": "number"
+        }
+      },
+      "path": {
+        "voice_id": {
+          "text": "Voice ID to be used, you can use https://api.elevenlabs.io/v1/voices to list all the available voices.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "seed": {
+          "text": "A list of pronunciation dictionary locators (id, version_id) to be applied to the text. They will be applied in order. You may have up to 3 locators per request",
+          "type": "number"
+        },
+        "text": {
+          "text": "The text that will get converted into speech",
+          "type": "string",
+          "required": true
+        },
+        "model_id": {
+          "text": "Identifier of the model that will be used, you can query them using GET /v1/models. The model needs to have support for text to speech, you can check this using the can_do_text_to_speech property",
+          "type": "string"
+        },
+        "next_text": {
+          "text": "The text that comes after the text of the current request. Can be used to improve the flow of prosody when concatenating together multiple generations or to influence the prosody in the current generation.",
+          "type": "string"
+        },
+        "previous_text": {
+          "text": "The text that came before the text of the current request. Can be used to improve the flow of prosody when concatenating together multiple generations or to influence the prosody in the current generation",
+          "type": "string"
+        },
+        "voice_settings": {
+          "text": "Voice settings overriding stored setttings for the given voice. They are applied only on the given reques",
+          "type": "object"
+        },
+        "next_request_ids": {
+          "text": "A list of request_id of the samples that were generated before this generation. Can be used to improve the flow of prosody when splitting up a large task into multiple requests. The results will be best when the same model is used across the generations. In case both next_text and next_request_ids is send, next_text will be ignored. A maximum of 3 request_ids can be send.",
+          "type": "string"
+        },
+        "previous_request_ids": {
+          "text": "A list of request_id of the samples that were generated before this generation. Can be used to improve the flow of prosody when splitting up a large task into multiple requests. The results will be best when the same model is used across the generations. In case both previous_text and previous_request_ids is send, previous_text will be ignored. A maximum of 3 request_ids can be send.",
+          "type": "string"
+        },
+        "pronunciation_dictionary_locators": {
+          "text": "A list of pronunciation dictionary locators (id, version_id) to be applied to the text. They will be applied in order. You may have up to 3 locators per request",
+          "type": "object"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/text-to-speech",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "API that converts text into lifelike speech with best-in-class latency & uses the most advanced AI audio model ever.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/text-to-speech/{voice_id}",
+        "alias_endpoint": "/elevenlabs/v1/text-to-speech/voice_id"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:45:51.000Z"
+    },
+    "elevenlabs__v1__text-to-speech__voice_id__with-timestamps___post": {
+      "provider_intent": "elevenlabs__v1__text-to-speech__voice_id__with-timestamps___post",
+      "provider_alias_intent": "/v1/text-to-speech/voice_id/with-timestamps",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/text-to-speech/{VOICE_ID}/with-timestamps",
+      "text": "Text To Speech With Timestamps",
+      "category": "Text To Speech",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "output_format": {
+          "text": "Output format of the generated audio. Must be one of: mp3_22050_32 - output format, mp3 with 22.05kHz sample rate at 32kbps. mp3_44100_32 - output format, mp3 with 44.1kHz sample rate at 32kbps. mp3_44100_64 - output format, mp3 with 44.1kHz sample rate at 64kbps. mp3_44100_96 - output format, mp3 with 44.1kHz sample rate at 96kbps. mp3_44100_128 - default output format, mp3 with 44.1kHz sample rate at 128kbps. mp3_44100_192 - output format, mp3 with 44.1kHz sample rate at 192kbps. Requires you to be subscribed to Creator tier or above. pcm_16000 - PCM format (S16LE) with 16kHz sample rate. pcm_22050 - PCM format (S16LE) with 22.05kHz sample rate. pcm_24000 - PCM format (S16LE) with 24kHz sample rate. pcm_44100 - PCM format (S16LE) with 44.1kHz sample rate. Requires you to be subscribed to Pro tier or above. ulaw_8000 - μ-law format (sometimes written mu-law, often approximated as u-law) with 8kHz sample rate. Note that this format is commonly used for Twilio audio inputs.",
+          "type": "string"
+        },
+        "enable_logging": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "When enable_logging is set to false full privacy mode will be used for the request. This will mean history features are unavailable for this request, including request stitching. Full privacy mode may only be used by enterprise customers.",
+          "type": "boolean"
+        },
+        "optimize_streaming_latency": {
+          "text": "You can turn on latency optimizations at some cost of quality. The best possible final latency varies by model",
+          "type": "number"
+        }
+      },
+      "path": {
+        "voice_id": {
+          "text": "Voice ID to be used, you can use https://api.elevenlabs.io/v1/voices to list all the available voices.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "seed": {
+          "text": "A list of pronunciation dictionary locators (id, version_id) to be applied to the text. They will be applied in order. You may have up to 3 locators per request",
+          "type": "number"
+        },
+        "text": {
+          "text": "The text that will get converted into speech",
+          "type": "string",
+          "required": true
+        },
+        "model_id": {
+          "text": "Identifier of the model that will be used, you can query them using GET /v1/models. The model needs to have support for text to speech, you can check this using the can_do_text_to_speech property",
+          "type": "string"
+        },
+        "next_text": {
+          "text": "The text that comes after the text of the current request. Can be used to improve the flow of prosody when concatenating together multiple generations or to influence the prosody in the current generation.",
+          "type": "string"
+        },
+        "previous_text": {
+          "text": "The text that came before the text of the current request. Can be used to improve the flow of prosody when concatenating together multiple generations or to influence the prosody in the current generation",
+          "type": "string"
+        },
+        "voice_settings": {
+          "text": "Voice settings overriding stored setttings for the given voice. They are applied only on the given reques",
+          "type": "object"
+        },
+        "next_request_ids": {
+          "text": "A list of request_id of the samples that were generated before this generation. Can be used to improve the flow of prosody when splitting up a large task into multiple requests. The results will be best when the same model is used across the generations. In case both next_text and next_request_ids is send, next_text will be ignored. A maximum of 3 request_ids can be send.",
+          "type": "string"
+        },
+        "previous_request_ids": {
+          "text": "A list of request_id of the samples that were generated before this generation. Can be used to improve the flow of prosody when splitting up a large task into multiple requests. The results will be best when the same model is used across the generations. In case both previous_text and previous_request_ids is send, previous_text will be ignored. A maximum of 3 request_ids can be send.",
+          "type": "string"
+        },
+        "pronunciation_dictionary_locators": {
+          "text": "A list of pronunciation dictionary locators (id, version_id) to be applied to the text. They will be applied in order. You may have up to 3 locators per request",
+          "type": "object"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/text-to-speech-with-timestamps",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Converts text into audio together with timestamps on when which word was spoken.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/text-to-speech/{VOICE_ID}/with-timestamps",
+        "alias_endpoint": "/elevenlabs/v1/text-to-speech/voice_id/with-timestamps"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:46:15.000Z"
+    },
+    "elevenlabs__v1__text-to-speech__voice_id__stream___post": {
+      "provider_intent": "elevenlabs__v1__text-to-speech__voice_id__stream___post",
+      "provider_alias_intent": "/v1/text-to-speech/voice_id/stream",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/text-to-speech/{voice_id}/stream",
+      "text": "Streaming",
+      "category": "Text To Speech",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "output_format": {
+          "text": "Output format of the generated audio. Must be one of: mp3_22050_32 - output format, mp3 with 22.05kHz sample rate at 32kbps. mp3_44100_32 - output format, mp3 with 44.1kHz sample rate at 32kbps. mp3_44100_64 - output format, mp3 with 44.1kHz sample rate at 64kbps. mp3_44100_96 - output format, mp3 with 44.1kHz sample rate at 96kbps. mp3_44100_128 - default output format, mp3 with 44.1kHz sample rate at 128kbps. mp3_44100_192 - output format, mp3 with 44.1kHz sample rate at 192kbps. Requires you to be subscribed to Creator tier or above. pcm_16000 - PCM format (S16LE) with 16kHz sample rate. pcm_22050 - PCM format (S16LE) with 22.05kHz sample rate. pcm_24000 - PCM format (S16LE) with 24kHz sample rate. pcm_44100 - PCM format (S16LE) with 44.1kHz sample rate. Requires you to be subscribed to Pro tier or above. ulaw_8000 - μ-law format (sometimes written mu-law, often approximated as u-law) with 8kHz sample rate. Note that this format is commonly used for Twilio audio inputs.",
+          "type": "string"
+        },
+        "enable_logging": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "When enable_logging is set to false full privacy mode will be used for the request. This will mean history features are unavailable for this request, including request stitching. Full privacy mode may only be used by enterprise customers.",
+          "type": "boolean"
+        },
+        "optimize_streaming_latency": {
+          "text": "You can turn on latency optimizations at some cost of quality. The best possible final latency varies by model",
+          "type": "number"
+        }
+      },
+      "path": {
+        "voice_id": {
+          "text": "Voice ID to be used, you can use https://api.elevenlabs.io/v1/voices to list all the available voices.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "seed": {
+          "text": "A list of pronunciation dictionary locators (id, version_id) to be applied to the text. They will be applied in order. You may have up to 3 locators per request",
+          "type": "number"
+        },
+        "text": {
+          "text": "The text that will get converted into speech",
+          "type": "string",
+          "required": true
+        },
+        "model_id": {
+          "text": "Identifier of the model that will be used, you can query them using GET /v1/models. The model needs to have support for text to speech, you can check this using the can_do_text_to_speech property",
+          "type": "string"
+        },
+        "next_text": {
+          "text": "The text that comes after the text of the current request. Can be used to improve the flow of prosody when concatenating together multiple generations or to influence the prosody in the current generation.",
+          "type": "string"
+        },
+        "previous_text": {
+          "text": "The text that came before the text of the current request. Can be used to improve the flow of prosody when concatenating together multiple generations or to influence the prosody in the current generation",
+          "type": "string"
+        },
+        "voice_settings": {
+          "text": "Voice settings overriding stored setttings for the given voice. They are applied only on the given reques",
+          "type": "object"
+        },
+        "next_request_ids": {
+          "text": "A list of request_id of the samples that were generated before this generation. Can be used to improve the flow of prosody when splitting up a large task into multiple requests. The results will be best when the same model is used across the generations. In case both next_text and next_request_ids is send, next_text will be ignored. A maximum of 3 request_ids can be send.",
+          "type": "string"
+        },
+        "previous_request_ids": {
+          "text": "A list of request_id of the samples that were generated before this generation. Can be used to improve the flow of prosody when splitting up a large task into multiple requests. The results will be best when the same model is used across the generations. In case both previous_text and previous_request_ids is send, previous_text will be ignored. A maximum of 3 request_ids can be send.",
+          "type": "string"
+        },
+        "pronunciation_dictionary_locators": {
+          "text": "A list of pronunciation dictionary locators (id, version_id) to be applied to the text. They will be applied in order. You may have up to 3 locators per request",
+          "type": "object"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/streaming",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Converts text into speech using a voice of your choice and returns audio as an audio stream",
+        "api_endpoint": "https://api.elevenlabs.io/v1/text-to-speech/{voice_id}/stream",
+        "alias_endpoint": "/elevenlabs/v1/text-to-speech/voice_id/stream"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:46:36.000Z"
+    },
+    "elevenlabs__v1__user___get": {
+      "provider_intent": "elevenlabs__v1__user___get",
+      "provider_alias_intent": "/v1/user",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/user",
+      "text": "Get User Info",
+      "category": "User",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/get-user-info",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Gets information about the user",
+        "api_endpoint": "https://api.elevenlabs.io/v1/user",
+        "alias_endpoint": "/elevenlabs/v1/user"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "elevenlabs__v1__user__subscription___get": {
+      "provider_intent": "elevenlabs__v1__user__subscription___get",
+      "provider_alias_intent": "/v1/user/subscription",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/user/subscription",
+      "text": "Get User Subscription Info",
+      "category": "User",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/get-user-subscription-info",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Gets extended information about the users subscription",
+        "api_endpoint": "https://api.elevenlabs.io/v1/user/subscription",
+        "alias_endpoint": "/elevenlabs/v1/user/subscription"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "elevenlabs__v1__text-to-speech__voice_id__stream__with-timestamps___post": {
+      "provider_intent": "elevenlabs__v1__text-to-speech__voice_id__stream__with-timestamps___post",
+      "provider_alias_intent": "/v1/text-to-speech/voice_id/stream/with-timestamps",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/text-to-speech/{VOICE_ID}/stream/with-timestamps",
+      "text": "Text To Speech Streaming With Timestamps",
+      "category": "Text To Speech",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "output_format": {
+          "text": "Output format of the generated audio. Must be one of: mp3_22050_32 - output format, mp3 with 22.05kHz sample rate at 32kbps. mp3_44100_32 - output format, mp3 with 44.1kHz sample rate at 32kbps. mp3_44100_64 - output format, mp3 with 44.1kHz sample rate at 64kbps. mp3_44100_96 - output format, mp3 with 44.1kHz sample rate at 96kbps. mp3_44100_128 - default output format, mp3 with 44.1kHz sample rate at 128kbps. mp3_44100_192 - output format, mp3 with 44.1kHz sample rate at 192kbps. Requires you to be subscribed to Creator tier or above. pcm_16000 - PCM format (S16LE) with 16kHz sample rate. pcm_22050 - PCM format (S16LE) with 22.05kHz sample rate. pcm_24000 - PCM format (S16LE) with 24kHz sample rate. pcm_44100 - PCM format (S16LE) with 44.1kHz sample rate. Requires you to be subscribed to Pro tier or above. ulaw_8000 - μ-law format (sometimes written mu-law, often approximated as u-law) with 8kHz sample rate. Note that this format is commonly used for Twilio audio inputs.",
+          "type": "string"
+        },
+        "enable_logging": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "When enable_logging is set to false full privacy mode will be used for the request. This will mean history features are unavailable for this request, including request stitching. Full privacy mode may only be used by enterprise customers.",
+          "type": "boolean"
+        },
+        "optimize_streaming_latency": {
+          "text": "You can turn on latency optimizations at some cost of quality. The best possible final latency varies by model",
+          "type": "number"
+        }
+      },
+      "path": {
+        "voice_id": {
+          "text": "Voice ID to be used, you can use https://api.elevenlabs.io/v1/voices to list all the available voices.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "seed": {
+          "text": "A list of pronunciation dictionary locators (id, version_id) to be applied to the text. They will be applied in order. You may have up to 3 locators per request",
+          "type": "number"
+        },
+        "text": {
+          "text": "The text that will get converted into speech",
+          "type": "string",
+          "required": true
+        },
+        "model_id": {
+          "text": "Identifier of the model that will be used, you can query them using GET /v1/models. The model needs to have support for text to speech, you can check this using the can_do_text_to_speech property",
+          "type": "string"
+        },
+        "next_text": {
+          "text": "The text that comes after the text of the current request. Can be used to improve the flow of prosody when concatenating together multiple generations or to influence the prosody in the current generation.",
+          "type": "string"
+        },
+        "previous_text": {
+          "text": "The text that came before the text of the current request. Can be used to improve the flow of prosody when concatenating together multiple generations or to influence the prosody in the current generation",
+          "type": "string"
+        },
+        "voice_settings": {
+          "text": "Voice settings overriding stored setttings for the given voice. They are applied only on the given reques",
+          "type": "object"
+        },
+        "next_request_ids": {
+          "text": "A list of request_id of the samples that were generated before this generation. Can be used to improve the flow of prosody when splitting up a large task into multiple requests. The results will be best when the same model is used across the generations. In case both next_text and next_request_ids is send, next_text will be ignored. A maximum of 3 request_ids can be send.",
+          "type": "string"
+        },
+        "previous_request_ids": {
+          "text": "A list of request_id of the samples that were generated before this generation. Can be used to improve the flow of prosody when splitting up a large task into multiple requests. The results will be best when the same model is used across the generations. In case both previous_text and previous_request_ids is send, previous_text will be ignored. A maximum of 3 request_ids can be send.",
+          "type": "string"
+        },
+        "pronunciation_dictionary_locators": {
+          "text": "A list of pronunciation dictionary locators (id, version_id) to be applied to the text. They will be applied in order. You may have up to 3 locators per request",
+          "type": "object"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/streaming-with-timestamps",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Converts text into audio together with timestamps on when which word was spoken in a streaming way.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/text-to-speech/{VOICE_ID}/stream/with-timestamps",
+        "alias_endpoint": "/elevenlabs/v1/text-to-speech/voice_id/stream/with-timestamps"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:46:54.000Z"
+    },
+    "elevenlabs__v1__voice-generation__generate-voice___post": {
+      "provider_intent": "elevenlabs__v1__voice-generation__generate-voice___post",
+      "provider_alias_intent": "/v1/voice-generation/generate-voice",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/voice-generation/generate-voice",
+      "text": "Generate A Random Voice",
+      "category": "Voice Generation",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "age": {
+          "enum": [
+            "young",
+            "middle_aged",
+            "old"
+          ],
+          "text": "Category code corresponding to the age of the generated voice. Possible values: young, middle_aged, old.",
+          "type": "enum",
+          "required": true
+        },
+        "text": {
+          "text": "Text to generate, text length has to be between 100 and 1000.",
+          "type": "string",
+          "required": true
+        },
+        "accent": {
+          "text": "Category code corresponding to the accent of the generated voice. Possible values: american, british, african, australian, indian",
+          "type": "string"
+        },
+        "gender": {
+          "enum": [
+            "female",
+            "male"
+          ],
+          "text": "Category code corresponding to the gender of the generated voice. Possible values: female, male.",
+          "type": "enum",
+          "required": true
+        },
+        "accent_strength": {
+          "text": "The strength of the accent of the generated voice. Has to be between 0.3 and 2.0.",
+          "type": "number",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/generate-voice",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Generate a random voice based on parameters",
+        "api_endpoint": "https://api.elevenlabs.io/v1/voice-generation/generate-voice",
+        "alias_endpoint": "/elevenlabs/v1/voice-generation/generate-voice"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "elevenlabs__v1__voice-generation__generate-voice__parameters___get": {
+      "provider_intent": "elevenlabs__v1__voice-generation__generate-voice__parameters___get",
+      "provider_alias_intent": "/v1/voice-generation/generate-voice/parameters",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/voice-generation/generate-voice/parameters",
+      "text": "Voice Generation Parameters",
+      "category": "Voice Generation",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/generate-voice-parameters",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Voice Generation Parameters",
+        "api_endpoint": "https://api.elevenlabs.io/v1/voice-generation/generate-voice/parameters",
+        "alias_endpoint": "/elevenlabs/v1/voice-generation/generate-voice/parameters"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "elevenlabs__v1__shared-voices___get": {
+      "provider_intent": "elevenlabs__v1__shared-voices___get",
+      "provider_alias_intent": "/v1/shared-voices",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/shared-voices",
+      "text": "Get voices",
+      "category": "Voice Library",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "age": {
+          "text": "age used for filtering",
+          "type": "string"
+        },
+        "page": {
+          "text": "page",
+          "type": "number"
+        },
+        "sort": {
+          "text": "sort criteria",
+          "type": "string"
+        },
+        "accent": {
+          "text": "accent used for filtering",
+          "type": "string"
+        },
+        "gender": {
+          "text": "gender used for filtering",
+          "type": "string"
+        },
+        "search": {
+          "text": "search term used for filtering",
+          "type": "string"
+        },
+        "category": {
+          "text": "voice category used for filtering",
+          "type": "string"
+        },
+        "featured": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "Filter featured voices",
+          "type": "boolean"
+        },
+        "language": {
+          "text": "language used for filtering",
+          "type": "string"
+        },
+        "owner_id": {
+          "text": "Filter voices by public owner ID",
+          "type": "string"
+        },
+        "page_size": {
+          "text": "How many shared voices to return at maximum. Can not exceed 100, defaults to 30.",
+          "type": "number"
+        },
+        "use_cases": {
+          "text": "use-case used for filtering",
+          "type": "string"
+        },
+        "descriptives": {
+          "text": "search term used for filtering",
+          "type": "string"
+        },
+        "reader_app_enabled": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "Filter voices that are enabled for the reader app",
+          "type": "boolean"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/query-library",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Gets a list of shared voices.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/shared-voices",
+        "alias_endpoint": "/elevenlabs/v1/shared-voices"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "elevenlabs__v1__voices__add__public_user_id__voice_id___post": {
+      "provider_intent": "elevenlabs__v1__voices__add__public_user_id__voice_id___post",
+      "provider_alias_intent": "/v1/voices/add/public_user_id/voice_id",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/voices/add/{public_user_id}/{voice_id}",
+      "text": "Add Sharing Voice",
+      "category": "Voice Library",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "voice_id": {
+          "text": "Voice ID to be used, you can use https://api.elevenlabs.io/v1/voices to list all the available voices.",
+          "type": "string",
+          "required": true
+        },
+        "public_user_id": {
+          "text": "Public user ID used to publicly identify ElevenLabs users.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "new_name": {
+          "text": "The name that identifies this voice. This will be displayed in the dropdown of the website.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/add-shared-voice",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Add a sharing voice to your collection of voices in VoiceLab.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/voices/add/{public_user_id}/{voice_id}",
+        "alias_endpoint": "/elevenlabs/v1/voices/add/public_user_id/voice_id"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:49:02.000Z"
+    },
+    "elevenlabs__v1__voices__voice_id__settings___get": {
+      "provider_intent": "elevenlabs__v1__voices__voice_id__settings___get",
+      "provider_alias_intent": "/v1/voices/voice_id/settings",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/voices/{voice_id}/settings",
+      "text": "Get Voice Settings",
+      "category": "Voices",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "voice_id": {
+          "text": "Voice ID to be used, you can use https://api.elevenlabs.io/v1/voices to list all the available voices.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/get-voice-settings",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Returns the settings for a specific voice.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/voices/{voice_id}/settings",
+        "alias_endpoint": "/elevenlabs/v1/voices/voice_id/settings"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:49:27.000Z"
+    },
+    "elevenlabs__v1__voices__settings__default___get": {
+      "provider_intent": "elevenlabs__v1__voices__settings__default___get",
+      "provider_alias_intent": "/v1/voices/settings/default",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/voices/settings/default",
+      "text": "Get Default Voice Settings.",
+      "category": "Voices",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/get-default-voice-settings",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Gets the default settings for voices.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/voices/settings/default",
+        "alias_endpoint": "/elevenlabs/v1/voices/settings/default"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "elevenlabs__v1__voices___get": {
+      "provider_intent": "elevenlabs__v1__voices___get",
+      "provider_alias_intent": "/v1/voices",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/voices",
+      "text": "Get Voices",
+      "category": "Voices",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/get-voices",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Gets a list of all available voices for a user.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/voices",
+        "alias_endpoint": "/elevenlabs/v1/voices"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "elevenlabs__v1__voices__voice_id___get": {
+      "provider_intent": "elevenlabs__v1__voices__voice_id___get",
+      "provider_alias_intent": "/v1/voices/voice_id",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/voices/{voice_id}",
+      "text": "Get Voice",
+      "category": "Voices",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "with_settings": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "If set will return settings information corresponding to the voice, requires authorization",
+          "type": "boolean"
+        }
+      },
+      "path": {
+        "voice_id": {
+          "text": "Voice ID to be used, you can use https://api.elevenlabs.io/v1/voices to list all the available voices.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/get-voice",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Returns metadata about a specific voice.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/voices/{voice_id}",
+        "alias_endpoint": "/elevenlabs/v1/voices/voice_id"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:49:58.000Z"
+    },
+    "elevenlabs__v1__voices__voice_id___delete": {
+      "provider_intent": "elevenlabs__v1__voices__voice_id___delete",
+      "provider_alias_intent": "/v1/voices/voice_id",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/voices/{voice_id}",
+      "text": "Delete Voice",
+      "category": "Voices",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "voice_id": {
+          "text": "Voice ID to be used, you can use https://api.elevenlabs.io/v1/voices to list all the available voices.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/delete-voice",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Deletes a voice by its ID.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/voices/{voice_id}",
+        "alias_endpoint": "/elevenlabs/v1/voices/voice_id"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:50:13.000Z"
+    },
+    "elevenlabs__v1__voices__add___post": {
+      "provider_intent": "elevenlabs__v1__voices__add___post",
+      "provider_alias_intent": "/v1/voices/add",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/voices/add",
+      "text": "Add Voice",
+      "category": "Voices",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "name": {
+          "text": "The name that identifies this voice. This will be displayed in the dropdown of the website.",
+          "type": "string",
+          "required": true
+        },
+        "files": {
+          "text": "A list of file paths to audio recordings intended for voice cloning",
+          "type": "string",
+          "required": true
+        },
+        "labels": {
+          "text": "Serialized labels dictionary for the voice.",
+          "type": "string"
+        },
+        "description": {
+          "text": "How would you describe the voice?",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/add-voice",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Add a new voice to your collection of voices in VoiceLab.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/voices/add",
+        "alias_endpoint": "/elevenlabs/v1/voices/add"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "elevenlabs__v1__workspace__invites___delete": {
+      "provider_intent": "elevenlabs__v1__workspace__invites___delete",
+      "provider_alias_intent": "/v1/workspace/invites",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/workspace/invites",
+      "text": "Delete Existing Invitation",
+      "category": "Workspace",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "email": {
+          "text": "Email of the target user.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/workspace-delete-invite",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Invalidates an existing email invitation. The invitation will still show up in the inbox it has been delivered to, but activating it to join the workspace won’t work. This endpoint may only be called by workspace administrators.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/workspace/invites",
+        "alias_endpoint": "/elevenlabs/v1/workspace/invites"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "elevenlabs__v1__voices__voice_id__settings__edit___post": {
+      "provider_intent": "elevenlabs__v1__voices__voice_id__settings__edit___post",
+      "provider_alias_intent": "/v1/voices/voice_id/settings/edit",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/voices/{voice_id}/settings/edit",
+      "text": "Edit Voice Settings",
+      "category": "Voices",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "voice_id": {
+          "text": "Voice ID to be used, you can use https://api.elevenlabs.io/v1/voices to list all the available voices.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "style": {
+          "text": "Style",
+          "type": "number"
+        },
+        "stability": {
+          "text": "Stability of the voice",
+          "type": "number",
+          "required": true
+        },
+        "similarity_boost": {
+          "text": "Similarity boost corresponds to Clarity  Similarity Enhancement",
+          "type": "number",
+          "required": true
+        },
+        "use_speaker_boost": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "Use speaker boost",
+          "type": "boolean"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/edit-voice-settings",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Edit your settings for a specific voice.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/voices/{voice_id}/settings/edit",
+        "alias_endpoint": "/elevenlabs/v1/voices/voice_id/settings/edit"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:50:33.000Z"
+    },
+    "elevenlabs__v1__workspace__invites__add___post": {
+      "provider_intent": "elevenlabs__v1__workspace__invites__add___post",
+      "provider_alias_intent": "/v1/workspace/invites/add",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/workspace/invites/add",
+      "text": "Invite User",
+      "category": "Workspace",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "email": {
+          "text": "Email of the target user.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/workspace-invite-user",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Sends an email invitation to join your workspace to the provided email",
+        "api_endpoint": "https://api.elevenlabs.io/v1/workspace/invites/add",
+        "alias_endpoint": "/elevenlabs/v1/workspace/invites/add"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "elevenlabs__v1__workspace__members___post": {
+      "provider_intent": "elevenlabs__v1__workspace__members___post",
+      "provider_alias_intent": "/v1/workspace/members",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/workspace/members",
+      "text": "Update Member",
+      "category": "Workspace",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "email": {
+          "text": "Email of the target user.",
+          "type": "string",
+          "required": true
+        },
+        "is_locked": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "Whether to lock or unlock the user account.",
+          "type": "boolean"
+        },
+        "language_code": {
+          "text": "ID of the language.",
+          "type": "string",
+          "required": true
+        },
+        "workspace_role": {
+          "enum": [
+            "workspace_admin",
+            "workspace_member"
+          ],
+          "text": "Role dictating permissions in the workspace.",
+          "type": "enum"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/workspace-update-member",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Updates attributes of a workspace member.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/workspace/members",
+        "alias_endpoint": "/elevenlabs/v1/workspace/members"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:13:04.000Z"
+    },
+    "elevenlabs__v1__voices__voice_id__edit___post": {
+      "provider_intent": "elevenlabs__v1__voices__voice_id__edit___post",
+      "provider_alias_intent": "/v1/voices/voice_id/edit",
+      "provider_proxy_intent": "https://api.elevenlabs.io/v1/voices/{voice_id}/edit",
+      "text": "Edit Voice",
+      "category": "Voices",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "voice_id": {
+          "text": "Voice ID to be used, you can use https://api.elevenlabs.io/v1/voices to list all the available voices.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "name": {
+          "text": "The name that identifies this voice. This will be displayed in the dropdown of the website.",
+          "type": "string",
+          "required": true
+        },
+        "files": {
+          "text": "A list of file paths to audio recordings intended for voice cloning",
+          "type": "string",
+          "required": true
+        },
+        "labels": {
+          "text": "Serialized labels dictionary for the voice.",
+          "type": "string"
+        },
+        "description": {
+          "text": "How would you describe the voice?",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://elevenlabs.io/docs/api-reference/edit-voice",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Edit a voice created by you.",
+        "api_endpoint": "https://api.elevenlabs.io/v1/voices/{voice_id}/edit",
+        "alias_endpoint": "/elevenlabs/v1/voices/voice_id/edit"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "xi-api-key",
+          "headerValue": ""
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T11:50:49.000Z"
+    }
+  }
+}

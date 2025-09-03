@@ -1,0 +1,908 @@
+{
+  "routes": {
+    "pictory__pictoryapis__v1__awsconnections___post": {
+      "provider_intent": "pictory__pictoryapis__v1__awsconnections___post",
+      "provider_alias_intent": "/pictoryapis/v1/awsconnections",
+      "text": "Create a new AWS connection",
+      "category": "Private AWS Connections API",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "name": {
+          "text": "The name of the AWS connection",
+          "type": "string",
+          "required": true
+        },
+        "enabled": {
+          "text": "Whether the connection is enabled",
+          "type": "boolean",
+          "required": true
+        },
+        "awsRegion": {
+          "text": "The AWS region (e.g., us-east-1)",
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "text": "The description of the AWS connection",
+          "type": "string"
+        },
+        "awsAccountId": {
+          "text": "The AWS account ID (12-digit numeric string)",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.pictory.ai/reference/createawsprivateconnection",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Create a new AWS connection to Access Private S3 Assets",
+        "api_endpoint": "https://api.pictory.ai/pictoryapis/v1/awsconnections"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-12T10:39:31.000Z"
+    },
+    "pictory__pictoryapis__v1__awsconnections___get": {
+      "provider_intent": "pictory__pictoryapis__v1__awsconnections___get",
+      "provider_alias_intent": "/pictoryapis/v1/awsconnections",
+      "text": "Get all AWS connections",
+      "category": "Private AWS Connections API",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "pageKey": {
+          "text": "Page identifier for the next set of results",
+          "type": "string"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.pictory.ai/reference/getawsprivateconnections",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Get all AWS connections\n",
+        "api_endpoint": "https://api.pictory.ai/pictoryapis/v1/awsconnections"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-12T09:47:49.000Z"
+    },
+    "pictory__pictoryapis__v1__awsconnections__connectionid___get": {
+      "provider_intent": "pictory__pictoryapis__v1__awsconnections__connectionid___get",
+      "provider_alias_intent": "/pictoryapis/v1/awsconnections/connectionid",
+      "text": "Get details of a specific AWS connection",
+      "category": "Private AWS Connections API",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "connectionid": {
+          "text": "The ID of the AWS connection",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.pictory.ai/reference/getawsprivateconnection",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Get details of a specific AWS connection",
+        "api_endpoint": "https://api.pictory.ai/pictoryapis/v1/awsconnections/{connectionid}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-12T09:55:21.000Z"
+    },
+    "pictory__pictoryapis__v1__awsconnections__connectionid___put": {
+      "provider_intent": "pictory__pictoryapis__v1__awsconnections__connectionid___put",
+      "provider_alias_intent": "/pictoryapis/v1/awsconnections/connectionid",
+      "text": "Update an existing AWS connection",
+      "category": "Private AWS Connections API",
+      "method": "PUT",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "connectionid": {
+          "text": "The ID of the AWS connection",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "name": {
+          "text": "The name of the AWS connection",
+          "type": "string"
+        },
+        "enabled": {
+          "text": "Whether the connection is enabled",
+          "type": "boolean"
+        },
+        "version": {
+          "text": "The version of the AWS connection",
+          "type": "number",
+          "required": true
+        },
+        "awsRegion": {
+          "text": "The AWS region (e.g., us-east-1)",
+          "type": "string"
+        },
+        "description": {
+          "text": "The description of the AWS connection",
+          "type": "string"
+        },
+        "awsAccountId": {
+          "text": "The AWS account ID (12-digit numeric string)",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.pictory.ai/reference/updateawsprivateconnection",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Update an existing AWS connection\n",
+        "api_endpoint": "https://api.pictory.ai/pictoryapis/v1/awsconnections/{connectionid}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-12T10:08:55.000Z"
+    },
+    "pictory__pictoryapis__v1__awsconnections__connectionid___delete": {
+      "provider_intent": "pictory__pictoryapis__v1__awsconnections__connectionid___delete",
+      "provider_alias_intent": "/pictoryapis/v1/awsconnections/connectionid",
+      "text": "Delete an AWS connection",
+      "category": "Private AWS Connections API",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "connectionid": {
+          "text": "The ID of the AWS connection",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.pictory.ai/reference/deleteawsprivateconnection",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Delete an AWS connection\n",
+        "api_endpoint": "https://api.pictory.ai/pictoryapis/v1/awsconnections/{connectionid}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-12T10:10:41.000Z"
+    },
+    "pictory__pictoryapis__v1__media__generateurl___post": {
+      "provider_intent": "pictory__pictoryapis__v1__media__generateurl___post",
+      "provider_alias_intent": "/pictoryapis/v1/media/generateurl",
+      "text": "Generate a signed URL for file upload",
+      "category": " Upload Media Files to Blob Storage",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "fileName": {
+          "text": "Name of the file to be uploaded",
+          "type": "string",
+          "required": true
+        },
+        "contentType": {
+          "text": "MIME type of the file",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.pictory.ai/reference/generateurl",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Generate a signed URL for file upload\n",
+        "api_endpoint": "https://api.pictory.ai/pictoryapis/v1/media/generateurl"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-12T10:14:13.000Z"
+    },
+    "pictory__pictoryapis__v1__voiceovers__tracks___get": {
+      "provider_intent": "pictory__pictoryapis__v1__voiceovers__tracks___get",
+      "provider_alias_intent": "/pictoryapis/v1/voiceovers/tracks",
+      "text": "Get voiceover tracks",
+      "category": "VoiceOvers API",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.pictory.ai/reference/getvoiceovertracks",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Retrieve a list of voiceover tracks with their metadata.\n\n",
+        "api_endpoint": "https://api.pictory.ai/pictoryapis/v1/voiceovers/tracks"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-28T14:44:06.000Z"
+    },
+    "pictory__pictoryapis__v1__voiceovers__tracks___post": {
+      "provider_intent": "pictory__pictoryapis__v1__voiceovers__tracks___post",
+      "provider_alias_intent": "/pictoryapis/v1/voiceovers/tracks",
+      "text": "Add a new voiceover track",
+      "category": "VoiceOvers API",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "age": {
+          "text": "Age of the voiceover artist.",
+          "type": "string",
+          "required": true
+        },
+        "name": {
+          "text": "Name of the voiceover track.",
+          "type": "string",
+          "required": true
+        },
+        "accent": {
+          "text": "Accent of the voiceover.",
+          "type": "string",
+          "required": true
+        },
+        "engine": {
+          "text": "Engine used for the voiceover. Must be one of the allowed values.",
+          "type": "string",
+          "required": true
+        },
+        "gender": {
+          "text": "Gender of the voiceover artist.",
+          "type": "string",
+          "required": true
+        },
+        "sample": {
+          "text": "URL to the sample voiceover.",
+          "type": "string"
+        },
+        "service": {
+          "text": "Service providing the voiceover. Must be one of the allowed values.",
+          "type": "string",
+          "required": true
+        },
+        "voiceId": {
+          "text": "ElevenLabs voice ID to be used from user's ElevenLabs account.",
+          "type": "string",
+          "required": true
+        },
+        "language": {
+          "text": "Language code of the voiceover.",
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "text": "Description of the voiceover track.",
+          "type": "string"
+        },
+        "publicUserId": {
+          "text": "Public user ID used to publicly identify ElevenLabs users. It is required for sharing a voice from user's ElevenLabs account to Pictory's account.",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.pictory.ai/reference/addvoiceovertrack",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Add new Voiceover API allows users to add Text-to-Speech",
+        "api_endpoint": "https://api.pictory.ai/pictoryapis/v1/voiceovers/tracks"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-12T11:02:02.000Z"
+    },
+    "pictory__pictoryapis__v1__video__storyboard___post": {
+      "provider_intent": "pictory__pictoryapis__v1__video__storyboard___post",
+      "provider_alias_intent": "/pictoryapis/v1/video/storyboard",
+      "text": "Storyboard",
+      "category": "Video Generation API",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "audio": {
+          "type": "object"
+        },
+        "scenes": {
+          "type": "array"
+        },
+        "webhook": {
+          "text": "The callback URL where storyboard job completion response is to be sent",
+          "type": "string"
+        },
+        "language": {
+          "text": "Pictory API supports 8 languages.",
+          "type": "string"
+        },
+        "brandLogo": {
+          "type": "object"
+        },
+        "videoName": {
+          "text": "Name of the Output Video File. It should be a valid text string that can be used to create a proper file on the computer.",
+          "type": "string"
+        },
+        "videoWidth": {
+          "text": "width of video resolution.",
+          "type": "string"
+        },
+        "videoHeight": {
+          "text": "Height of Video resolution.",
+          "type": "string"
+        },
+        "videoDescription": {
+          "text": "Description of Video. This is optional parameter and will be deprecated in future",
+          "type": "string"
+        },
+        "autoHighlightKeywords": {
+          "text": "This flag is used to highlight keywords for the subtitle text. To disable this feature use false in the Storyboard API request",
+          "type": "boolean"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.pictory.ai/reference/storyboard-api",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Storyboard API is first step in sequence of APIs which requests Pictory to generate Video Preview from text, audio or video. This is asynchronous REST API.",
+        "api_endpoint": "https://api.pictory.ai/pictoryapis/v1/video/storyboard"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-12T16:51:48.000Z"
+    },
+    "pictory__pictoryapis__v1__video__render___post": {
+      "provider_intent": "pictory__pictoryapis__v1__video__render___post",
+      "provider_alias_intent": "/pictoryapis/v1/video/render",
+      "text": "Render Video",
+      "category": "Video Generation API",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "audio": {
+          "text": "The audio settings which needs to be used in audio.",
+          "type": "object"
+        },
+        "output": {
+          "text": "The output settings of the video.",
+          "type": "object"
+        },
+        "scenes": {
+          "text": "Rendering parameter for each Scene",
+          "type": "array"
+        },
+        "webhook": {
+          "text": "The callback URL where render job completion response is to be sent.",
+          "type": "string"
+        },
+        "containsTextToImage": {
+          "type": "boolean"
+        },
+        "next_generation_video": {
+          "type": "boolean"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.pictory.ai/reference/video-rendering-api",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "This API requests Pictory Server to generate downloadable video link. This is asynchronous REST API.",
+        "api_endpoint": "https://api.pictory.ai/pictoryapis/v1/video/render"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-12T17:12:46.000Z"
+    },
+    "pictory__pictoryapis__v1__video__render__job_id___put": {
+      "provider_intent": "pictory__pictoryapis__v1__video__render__job_id___put",
+      "provider_alias_intent": "/pictoryapis/v1/video/render/job_id",
+      "text": "Render Video (PUT)",
+      "category": "Video Generation API",
+      "method": "PUT",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "job_id": {
+          "text": "Pass Job Id obtained from Storyboard API to generate the video",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "webhook": {
+          "text": "The callback URL where render job completion response is to be sent",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.pictory.ai/reference/render-video",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "This API requests Pictory Server to generate downloadable video link. This is asynchronous REST API.\n\n",
+        "api_endpoint": "https://api.pictory.ai/pictoryapis/v1/video/render/{job_id}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-12T11:26:20.000Z"
+    },
+    "pictory__pictoryapis__v2__transcription__highlights___post": {
+      "provider_intent": "pictory__pictoryapis__v2__transcription__highlights___post",
+      "provider_alias_intent": "/pictoryapis/v2/transcription/highlights",
+      "text": "Video-Summary",
+      "category": "Video Summary and Transcription API",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "webhook": {
+          "text": "Webhook URL where the text-summary object needs to be posted",
+          "type": "string"
+        },
+        "transcript": [
+          {}
+        ],
+        "highlight_duration": {
+          "text": "Duration of video summary required.",
+          "type": "number"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.pictory.ai/reference/text-summary-of-video",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Video-Summary",
+        "api_endpoint": "https://api.pictory.ai/pictoryapis/v2/transcription/highlights"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-12T17:19:47.000Z"
+    },
+    "pictory__pictoryapis__v2__transcription___post": {
+      "provider_intent": "pictory__pictoryapis__v2__transcription___post",
+      "provider_alias_intent": "/pictoryapis/v2/transcription",
+      "text": "Transcription API",
+      "category": "Video Summary and Transcription API",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "fileUrl": {
+          "text": "Public URL of the Video FIle. Please make sure that the video is accessible from public URL",
+          "type": "string"
+        },
+        "webhook": {
+          "text": "Webhook URL where transcription API response is to be sent.",
+          "type": "string"
+        },
+        "language": {
+          "text": "Audio Language used in Video File. List of acceptable parameter is mentioned below.",
+          "type": "string"
+        },
+        "highlight": [
+          {}
+        ],
+        "mediaType": {
+          "text": "Value of this parameter should be video",
+          "type": "string"
+        },
+        "transcript": [
+          {}
+        ]
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.pictory.ai/reference/transcription-api",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Transcription API",
+        "api_endpoint": "https://api.pictory.ai/pictoryapis/v2/transcription"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-12T17:24:54.000Z"
+    },
+    "pictory__pictoryapis__v1__templates___post": {
+      "provider_intent": "pictory__pictoryapis__v1__templates___post",
+      "provider_alias_intent": "/pictoryapis/v1/templates",
+      "text": "Create Template API",
+      "category": "Bulk Video Generation",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "pictoryprojectfile": {
+          "text": ".pictai file downloaded from the Pictory web app",
+          "type": "file"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.pictory.ai/reference/create-template-api",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Create Template API",
+        "api_endpoint": "https://api.pictory.ai/pictoryapis/v1/templates"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-12T11:31:18.000Z"
+    },
+    "pictory__pictoryapis__v1__video__from-template___post": {
+      "provider_intent": "pictory__pictoryapis__v1__video__from-template___post",
+      "provider_alias_intent": "/pictoryapis/v1/video/from-template",
+      "text": "Template Video-Preview API",
+      "category": "Bulk Video Generation",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "Authorization": {
+          "text": "Access Token obtained from Authentication API",
+          "type": "string"
+        },
+        "X-Pictory-User-Id": {
+          "text": "End User Identification in 3rd party (your) system. This can be used to identify 3rd party user data in Pictory system and come handy when 3rd Party System want to refer user’s data within Pictory.",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.pictory.ai/reference/update-variable-api",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Template Video-Preview API",
+        "api_endpoint": "https://api.pictory.ai/pictoryapis/v1/video/from-template"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-12T11:34:00.000Z"
+    },
+    "pictory__pictoryapis__v1__templates___get": {
+      "provider_intent": "pictory__pictoryapis__v1__templates___get",
+      "provider_alias_intent": "/pictoryapis/v1/templates",
+      "text": "Get All Template API",
+      "category": "Bulk Video Generation",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.pictory.ai/reference/get-template-api",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "This API returns All created templates associated with your account.\n\n",
+        "api_endpoint": "https://api.pictory.ai/pictoryapis/v1/templates"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-28T14:59:17.000Z"
+    },
+    "pictory__pictoryapis__v1__templates__templateid___put": {
+      "provider_intent": "pictory__pictoryapis__v1__templates__templateid___put",
+      "provider_alias_intent": "/pictoryapis/v1/templates/templateid",
+      "text": "Update Template API",
+      "category": "Bulk Video Generation",
+      "method": "PUT",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "templateId": {
+          "text": "Pass templateId for which scene object needs to be updated",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "scenes": [
+          {},
+          {}
+        ]
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.pictory.ai/reference/update-template-api-1",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "This API can be used to update the Template scene object.\n\n",
+        "api_endpoint": "https://api.pictory.ai/pictoryapis/v1/templates/{templateId}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-12T11:56:24.000Z"
+    },
+    "pictory__pictoryapis__v1__templates__templateid___get": {
+      "provider_intent": "pictory__pictoryapis__v1__templates__templateid___get",
+      "provider_alias_intent": "/pictoryapis/v1/templates/templateid",
+      "text": "Get Template by Id",
+      "category": "Bulk Video Generation",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "templateId": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.pictory.ai/reference/get-template-by-id",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Get Template by Id",
+        "api_endpoint": "https://api.pictory.ai/pictoryapis/v1/templates/{templateId}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-12T11:58:27.000Z"
+    },
+    "pictory__pictoryapis__v1__templates__templateid___delete": {
+      "provider_intent": "pictory__pictoryapis__v1__templates__templateid___delete",
+      "provider_alias_intent": "/pictoryapis/v1/templates/templateid",
+      "text": "Delete Template by Id",
+      "category": "Bulk Video Generation",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "templateId": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.pictory.ai/reference/delete-template-by-id",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Delete Template by Id",
+        "api_endpoint": "https://api.pictory.ai/pictoryapis/v1/templates/{templateId}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-12T11:59:07.000Z"
+    },
+    "pictory__pictoryapis__v1__brands__editvideo___post": {
+      "provider_intent": "pictory__pictoryapis__v1__brands__editvideo___post",
+      "provider_alias_intent": "/pictoryapis/v1/brands/editvideo",
+      "text": "Create Brand API",
+      "category": "Brand Kit APIs",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "name": {
+          "text": "Name of the Brand",
+          "type": "string"
+        },
+        "color": {},
+        "fonts": {},
+        "description": {
+          "text": "Description of Brand",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.pictory.ai/reference/create-brand-for-edit-video-page",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Create Brand API: Video Summary Whitelabel Page\n",
+        "api_endpoint": "https://api.pictory.ai/pictoryapis/v1/brands/editvideo"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-12T12:07:16.000Z"
+    },
+    "pictory__pictoryapis__v1__brands__editvideo___get": {
+      "provider_intent": "pictory__pictoryapis__v1__brands__editvideo___get",
+      "provider_alias_intent": "/pictoryapis/v1/brands/editvideo",
+      "text": "Get Brand API",
+      "category": "Brand Kit APIs",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.pictory.ai/reference/get-brand-api",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Get Brand API: Video Summary Whitelabel Page\n",
+        "api_endpoint": "https://api.pictory.ai/pictoryapis/v1/brands/editvideo"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-28T15:04:28.000Z"
+    },
+    "pictory__pictoryapis__brands__editvideo__brandid___get": {
+      "provider_intent": "pictory__pictoryapis__brands__editvideo__brandid___get",
+      "provider_alias_intent": "/pictoryapis/brands/editvideo/brandid",
+      "text": "Get Brand by Id",
+      "category": "Brand Kit APIs",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "brandId": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.pictory.ai/reference/get-brand-by-id",
+        "version": "",
+        "rate_limit": [],
+        "description": "Get Brand by Id: Video Summary Whitelabel Page\n",
+        "api_endpoint": "https://api.pictory.ai/pictoryapis/brands/editvideo/{brandId}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-12T12:08:41.000Z"
+    },
+    "pictory__pictoryapis__brands__editvideo__brandid___put": {
+      "provider_intent": "pictory__pictoryapis__brands__editvideo__brandid___put",
+      "provider_alias_intent": "/pictoryapis/brands/editvideo/brandid",
+      "text": "Update Brand",
+      "category": "Brand Kit APIs",
+      "method": "PUT",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "font": {},
+        "color": {}
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.pictory.ai/reference/update-brand",
+        "version": "",
+        "rate_limit": [],
+        "description": "Update Brand: Video Summary Whitelabel Page\n",
+        "api_endpoint": "https://api.pictory.ai/pictoryapis/brands/editvideo/{brandId}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-12T16:36:34.000Z"
+    },
+    "pictory__pictoryapis__brands__editvideo__brandid___delete": {
+      "provider_intent": "pictory__pictoryapis__brands__editvideo__brandid___delete",
+      "provider_alias_intent": "/pictoryapis/brands/editvideo/brandid",
+      "text": "Delete Brand By Id",
+      "category": "Brand Kit APIs",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "brandId": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://docs.pictory.ai/reference/delete-brand",
+        "version": "",
+        "rate_limit": [],
+        "description": "Delete Brand By Id: Video Summary Whitelabel Page\n",
+        "api_endpoint": "https://api.pictory.ai/pictoryapis/brands/editvideo/{brandId}"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2025-01-12T16:38:12.000Z"
+    }
+  }
+}

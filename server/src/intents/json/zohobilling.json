@@ -1,0 +1,5280 @@
+{
+  "app": {
+    "title": "zohobilling API",
+    "description": "",
+    "api_base": "/zohobilling",
+    "copyright": "",
+    "copyright_year": "",
+    "contact_email": ""
+  },
+  "category": {
+    "All": ""
+  },
+  "routes": {
+    "create_an_addon": {
+      "provider_intent": "create_an_addon",
+      "provider_alias_intent": "/billing/v1/addons",
+      "text": "Create an addon",
+      "category": "Addons",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new addon",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/addons",
+        "alias_endpoint": "/zohobilling/billing/v1/addons",
+        "api_ref": "https://www.zoho.com/billing/api/v1/addons/#create-an-addon"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.addons.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "list_all_addons": {
+      "provider_intent": "list_all_addons",
+      "provider_alias_intent": "/billing/v1/addons",
+      "text": "List all addons",
+      "category": "Addons",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List of all addons",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/addons",
+        "alias_endpoint": "/zohobilling/billing/v1/addons",
+        "api_ref": "https://www.zoho.com/billing/api/v1/addons/#list-all-addons"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.addons.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "update_an_addon": {
+      "provider_intent": "update_an_addon",
+      "provider_alias_intent": "/billing/v1/addons/email-basic",
+      "text": "Update an addon",
+      "category": "Addons",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update details of an existing addon",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/addons/Email-basic",
+        "alias_endpoint": "/zohobilling/billing/v1/addons/email-basic",
+        "api_ref": "https://www.zoho.com/billing/api/v1/addons/#update-an-addon"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.addons.UPDATE\r\n\r",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "retrieve_an_addon": {
+      "provider_intent": "retrieve_an_addon",
+      "provider_alias_intent": "/billing/v1/addons/email-basic",
+      "text": "Retrieve an addon",
+      "category": "Addons",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details for an existing Addon",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/addons/Email-basic",
+        "alias_endpoint": "/zohobilling/billing/v1/addons/email-basic",
+        "api_ref": "https://www.zoho.com/billing/api/v1/addons/#retrieve-an-addon"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.addons.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "delete_an_addon": {
+      "provider_intent": "delete_an_addon",
+      "provider_alias_intent": "/billing/v1/addons/email-basic",
+      "text": "Delete an addon",
+      "category": "Addons",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete an existing addon",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/addons/Email-basic",
+        "alias_endpoint": "/zohobilling/billing/v1/addons/email-basic",
+        "api_ref": "https://www.zoho.com/billing/api/v1/addons/#delete-an-addon"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.addons.DELETE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "mark_as_active": {
+      "provider_intent": "mark_as_active",
+      "provider_alias_intent": "/billing/v1/products/903000000045027/markasactive",
+      "text": "Mark as active",
+      "category": "Products",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "The product has been marked as active",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/products/903000000045027/markasactive",
+        "alias_endpoint": "/zohobilling/billing/v1/products/903000000045027/markasactive",
+        "api_ref": "https://www.zoho.com/billing/api/v1/products/#mark-as-active"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.products.CREATE\r\n\r",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "mark_as_inactive": {
+      "provider_intent": "mark_as_inactive",
+      "provider_alias_intent": "/billing/v1/products/903000000045027/markasinactive",
+      "text": "Mark as inactive",
+      "category": "Products",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "The product has been marked as inactive",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/products/903000000045027/markasinactive",
+        "alias_endpoint": "/zohobilling/billing/v1/products/903000000045027/markasinactive",
+        "api_ref": "https://www.zoho.com/billing/api/v1/products/#mark-as-inactive"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.products.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "retrieve_a_bank_account_information": {
+      "provider_intent": "retrieve_a_bank_account_information",
+      "provider_alias_intent": "/billing/v1/customers/9030000005664/bankaccounts/90300000079126",
+      "text": "Retrieve a bank account information",
+      "category": "Bank-Accounts",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details of an existing bank account",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/customers/9030000005664/bankaccounts/90300000079126",
+        "alias_endpoint": "/zohobilling/billing/v1/customers/9030000005664/bankaccounts/90300000079126",
+        "api_ref": "https://www.zoho.com/billing/api/v1/bank-account/#retrieve-a-bank-account-information"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.customers.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "retrieve_a_credit_card_information": {
+      "provider_intent": "retrieve_a_credit_card_information",
+      "provider_alias_intent": "/billing/v1/customers/9030000005664/cards/90300000079226",
+      "text": "Retrieve a credit card information",
+      "category": "Cards",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details of an existing credit card",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/customers/9030000005664/cards/90300000079226",
+        "alias_endpoint": "/zohobilling/billing/v1/customers/9030000005664/cards/90300000079226",
+        "api_ref": "https://www.zoho.com/billing/api/v1/cards/#retrieve-a-credit-card-information"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.customers.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "delete_a_credit_card": {
+      "provider_intent": "delete_a_credit_card",
+      "provider_alias_intent": "/billing/v1/customers/9030000005664/cards/90300000079226",
+      "text": "Delete a credit card",
+      "category": "Cards",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete an existing credit card",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/customers/9030000005664/cards/90300000079226",
+        "alias_endpoint": "/zohobilling/billing/v1/customers/9030000005664/cards/90300000079226",
+        "api_ref": "https://www.zoho.com/billing/api/v1/cards/#delete-a-credit-card"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.customers.DELETE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "list_all_active_credit_cards_of_a_customer": {
+      "provider_intent": "list_all_active_credit_cards_of_a_customer",
+      "provider_alias_intent": "/billing/v1/customers/9030000005664/card",
+      "text": "List all Active Credit Cards of a Customer",
+      "category": "Cards",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List of all the Active Credit Cards of a Customer",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/customers/9030000005664/card",
+        "alias_endpoint": "/zohobilling/billing/v1/customers/9030000005664/card",
+        "api_ref": "https://www.zoho.com/billing/api/v1/cards/#delete-a-credit-card"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.customers.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "create_a_contact_person": {
+      "provider_intent": "create_a_contact_person",
+      "provider_alias_intent": "/billing/v1/customers/903000000000099/contactpersons",
+      "text": "Create a contact person",
+      "category": "Contact-Persons",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new contact person",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/customers/903000000000099/contactpersons",
+        "alias_endpoint": "/zohobilling/billing/v1/customers/903000000000099/contactpersons",
+        "api_ref": "https://www.zoho.com/billing/api/v1/contact-persons/#create-a-contact-person"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.customers.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "list_of_all_contact_persons": {
+      "provider_intent": "list_of_all_contact_persons",
+      "provider_alias_intent": "/billing/v1/customers/903000000000099/contactpersons",
+      "text": "List of all contact persons",
+      "category": "Contact-Persons",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List of all contact persons of a customer",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/customers/903000000000099/contactpersons",
+        "alias_endpoint": "/zohobilling/billing/v1/customers/903000000000099/contactpersons",
+        "api_ref": "https://www.zoho.com/billing/api/v1/contact-persons/#list-of-all-contact-persons"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.customers.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "update_a_contact_person": {
+      "provider_intent": "update_a_contact_person",
+      "provider_alias_intent": "/billing/v1/customers/903000000000099/contactpersons/903000000053362",
+      "text": "Update a contact person",
+      "category": "Contact-Persons",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update the details of an existing contact person",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/customers/903000000000099/contactpersons/903000000053362",
+        "alias_endpoint": "/zohobilling/billing/v1/customers/903000000000099/contactpersons/903000000053362",
+        "api_ref": "https://www.zoho.com/billing/api/v1/contact-persons/#update-a-contact-person"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.customers.UPDATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "retrieve_a_contact_person": {
+      "provider_intent": "retrieve_a_contact_person",
+      "provider_alias_intent": "/billing/v1/customers/903000000000099/contactpersons/903000000053362 ",
+      "text": "Retrieve a contact person",
+      "category": "Contact-Persons",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details of an existing contact person",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/customers/903000000000099/contactpersons/903000000053362 ",
+        "alias_endpoint": "/zohobilling/billing/v1/customers/903000000000099/contactpersons/903000000053362 ",
+        "api_ref": "https://www.zoho.com/billing/api/v1/contact-persons/#retrieve-a-contact-person"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.customers.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "delete_a_contact_person": {
+      "provider_intent": "delete_a_contact_person",
+      "provider_alias_intent": "/billing/v1/customers/903000000000099/contactpersons/903000000053362 ",
+      "text": "Delete a contact person",
+      "category": "Contact-Persons",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete an existing contact person",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/customers/903000000000099/contactpersons/903000000053362 ",
+        "alias_endpoint": "/zohobilling/billing/v1/customers/903000000000099/contactpersons/903000000053362 ",
+        "api_ref": "https://www.zoho.com/billing/api/v1/contact-persons/#delete-a-contact-person"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.customers.DELETE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "create_an_coupon": {
+      "provider_intent": "create_an_coupon",
+      "provider_alias_intent": "/billing/v1/coupons",
+      "text": "Create an coupon",
+      "category": "Coupons",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new coupon",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/coupons",
+        "alias_endpoint": "/zohobilling/billing/v1/coupons",
+        "api_ref": "https://www.zoho.com/billing/api/v1/coupons/#create-an-coupon"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.coupons.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "list_all_coupons": {
+      "provider_intent": "list_all_coupons",
+      "provider_alias_intent": "/billing/v1/coupons",
+      "text": "List all coupons",
+      "category": "Coupons",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List of all coupons",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/coupons",
+        "alias_endpoint": "/zohobilling/billing/v1/coupons",
+        "api_ref": "https://www.zoho.com/billing/api/v1/coupons/#list-all-coupons"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.coupons.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "update_a_coupon": {
+      "provider_intent": "update_a_coupon",
+      "provider_alias_intent": "/billing/v1/coupons/thanksgiving20",
+      "text": "Update a coupon",
+      "category": "Coupons",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update details of an existing coupon",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/coupons/THANKSGIVING20",
+        "alias_endpoint": "/zohobilling/billing/v1/coupons/thanksgiving20",
+        "api_ref": "https://www.zoho.com/billing/api/v1/coupons/#update-a-coupon"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.coupons.UPDATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "retrieve_a_coupon": {
+      "provider_intent": "retrieve_a_coupon",
+      "provider_alias_intent": "/billing/v1/coupons/thanksgiving20",
+      "text": "Retrieve a coupon",
+      "category": "Coupons",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details of an existing coupon",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/coupons/THANKSGIVING20",
+        "alias_endpoint": "/zohobilling/billing/v1/coupons/thanksgiving20",
+        "api_ref": "https://www.zoho.com/billing/api/v1/coupons/#retrieve-a-coupon"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.coupons.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "delete_a_coupon": {
+      "provider_intent": "delete_a_coupon",
+      "provider_alias_intent": "/billing/v1/coupons/thanksgiving20",
+      "text": "Delete a coupon",
+      "category": "Coupons",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete an existing coupon",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/coupons/THANKSGIVING20",
+        "alias_endpoint": "/zohobilling/billing/v1/coupons/thanksgiving20",
+        "api_ref": "https://www.zoho.com/billing/api/v1/coupons/#delete-a-coupon"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.coupons.DELETE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "create_a_credit_note": {
+      "provider_intent": "create_a_credit_note",
+      "provider_alias_intent": "/billing/v1/creditnotes",
+      "text": "Create a credit note",
+      "category": "Credit-Notes",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details of an existing creditnote",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/creditnotes",
+        "alias_endpoint": "/zohobilling/billing/v1/creditnotes",
+        "api_ref": "https://www.zoho.com/billing/api/v1/credit-notes/#create-a-credit-note"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": " ZohoSubscriptions.creditnotes.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "retreive_a_credit_note": {
+      "provider_intent": "retreive_a_credit_note",
+      "provider_alias_intent": "/billing/v1/creditnotes/90300000072369",
+      "text": "Retreive a credit note",
+      "category": "Credit-Notes",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details of an existing creditnote",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/creditnotes/90300000072369",
+        "alias_endpoint": "/zohobilling/billing/v1/creditnotes/90300000072369",
+        "api_ref": "https://www.zoho.com/billing/api/v1/credit-notes/#retreive-a-credit-note"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.creditnotes.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "delete_a_credit_note": {
+      "provider_intent": "delete_a_credit_note",
+      "provider_alias_intent": "/billing/v1/creditnotes/90300000072369",
+      "text": "Delete a credit note",
+      "category": "Credit-Notes",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete an existing credit note",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/creditnotes/90300000072369",
+        "alias_endpoint": "/zohobilling/billing/v1/creditnotes/90300000072369",
+        "api_ref": "https://www.zoho.com/billing/api/v1/credit-notes/#delete-a-credit-note"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.creditnotes.DELETE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "email_a_credit_note": {
+      "provider_intent": "email_a_credit_note",
+      "provider_alias_intent": "/billing/v1/creditnotes/90300000072369/email",
+      "text": "Email a credit note",
+      "category": "Credit-Notes",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Email a credit note",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/creditnotes/90300000072369/email",
+        "alias_endpoint": "/zohobilling/billing/v1/creditnotes/90300000072369/email",
+        "api_ref": "https://www.zoho.com/billing/api/v1/credit-notes/#email-a-credit-note"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.creditnotes.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "void_a_credit_note": {
+      "provider_intent": "void_a_credit_note",
+      "provider_alias_intent": "/billing/v1/creditnotes/90300000072369/void",
+      "text": "Void a credit note",
+      "category": "Credit-Notes",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details of an existing creditnote",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/creditnotes/90300000072369/void",
+        "alias_endpoint": "/zohobilling/billing/v1/creditnotes/90300000072369/void",
+        "api_ref": "https://www.zoho.com/billing/api/v1/credit-notes/#void-a-credit-note"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.creditnotes.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "open_a_voided_credit_note": {
+      "provider_intent": "open_a_voided_credit_note",
+      "provider_alias_intent": "/billing/v1/creditnotes/90300000072369/converttoopen",
+      "text": "Open a voided credit note",
+      "category": "Credit-Notes",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Convert a voided credit note to open",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/creditnotes/90300000072369/converttoopen",
+        "alias_endpoint": "/zohobilling/billing/v1/creditnotes/90300000072369/converttoopen",
+        "api_ref": "https://www.zoho.com/billing/api/v1/credit-notes/#open-a-voided-credit-note"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.creditnotes.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "apply_credits_to_multiple_invoices": {
+      "provider_intent": "apply_credits_to_multiple_invoices",
+      "provider_alias_intent": "/billing/v1/creditnotes/90300000072369/invoices",
+      "text": "Apply Credits to Multiple Invoices",
+      "category": "Credit-Notes",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To associate a creditnote to multiple invoices",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/creditnotes/90300000072369/invoices",
+        "alias_endpoint": "/zohobilling/billing/v1/creditnotes/90300000072369/invoices",
+        "api_ref": "https://www.zoho.com/billing/api/v1/credit-notes/#void-a-credit-note"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.creditnotes.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "list_all_customers": {
+      "provider_intent": "list_all_customers",
+      "provider_alias_intent": "/billing/v1/customers",
+      "text": "List all customers",
+      "category": "Customers",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List of all customers",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/customers",
+        "alias_endpoint": "/zohobilling/billing/v1/customers",
+        "api_ref": "https://www.zoho.com/billing/api/v1/customers/#list-all-customers"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.customers.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "create_a_customer\r": {
+      "provider_intent": "create_a_customer\r",
+      "provider_alias_intent": "/billing/v1/customers",
+      "text": "Create a customer",
+      "category": "Customers",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "A new customer can a be created separately as well as at the time of creation of a new subscription",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/customers",
+        "alias_endpoint": "/zohobilling/billing/v1/customers",
+        "api_ref": "https://www.zoho.com/billing/api/v1/customers/#create-a-customer"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.customers.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "update_a_customer": {
+      "provider_intent": "update_a_customer",
+      "provider_alias_intent": "/billing/v1/customers/903000000000099",
+      "text": "Update a customer",
+      "category": "Customers",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update details of an existing customer",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/customers/903000000000099",
+        "alias_endpoint": "/zohobilling/billing/v1/customers/903000000000099",
+        "api_ref": "https://www.zoho.com/billing/api/v1/customers/#update-a-customer"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.customers.UPDATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "retrieve_a_customer": {
+      "provider_intent": "retrieve_a_customer",
+      "provider_alias_intent": "/billing/v1/customers/903000000000099",
+      "text": "Retrieve a customer",
+      "category": "Customers",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details of an existing customer",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/customers/903000000000099",
+        "alias_endpoint": "/zohobilling/billing/v1/customers/903000000000099",
+        "api_ref": "https://www.zoho.com/billing/api/v1/customers/#retrieve-a-customer"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.customers.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "delete_a_customer": {
+      "provider_intent": "delete_a_customer",
+      "provider_alias_intent": "/billing/v1/customers/903000000000099",
+      "text": "Delete a customer",
+      "category": "Customers",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete an existing customer",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/customers/903000000000099",
+        "alias_endpoint": "/zohobilling/billing/v1/customers/903000000000099",
+        "api_ref": "https://www.zoho.com/billing/api/v1/customers/#delete-a-customer"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.customers.DELETE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "retrieve_a_customer_using_crm_reference": {
+      "provider_intent": "retrieve_a_customer_using_crm_reference",
+      "provider_alias_intent": "/billing/v1/customers/reference/903000000021976",
+      "text": "Retrieve a customer Using CRM Reference",
+      "category": "Customers",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details of an existing customer using CRM Reference ID",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/customers/reference/903000000021976",
+        "alias_endpoint": "/zohobilling/billing/v1/customers/reference/903000000021976",
+        "api_ref": "https://www.zoho.com/billing/api/v1/customers/#retrieve-a-customer-using-crm-reference"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.customers.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "list_of_transactions": {
+      "provider_intent": "list_of_transactions",
+      "provider_alias_intent": "/billing/v1/transactions",
+      "text": "List of transactions",
+      "category": "Customers",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List of all transactions associated with a particular customer",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/transactions",
+        "alias_endpoint": "/zohobilling/billing/v1/transactions",
+        "api_ref": "https://www.zoho.com/billing/api/v1/customers/#list-of-transactions"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.customers.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "list_of_events": {
+      "provider_intent": "list_of_events",
+      "provider_alias_intent": "/billing/v1/events",
+      "text": "List of events",
+      "category": "Events",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List of all events",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/events",
+        "alias_endpoint": "/zohobilling/billing/v1/events",
+        "api_ref": "https://www.zoho.com/billing/api/v1/events/#list-of-events"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.webhooks.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "retrieve_an_event": {
+      "provider_intent": "retrieve_an_event",
+      "provider_alias_intent": "/billing/v1/events/90300000005337",
+      "text": "Retrieve an event",
+      "category": "Events",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details of an existing event",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/events/90300000005337",
+        "alias_endpoint": "/zohobilling/billing/v1/events/90300000005337",
+        "api_ref": "https://www.zoho.com/billing/api/v1/events/#retrieve-an-event"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.webhooks.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "retrieve_a_hosted_page": {
+      "provider_intent": "retrieve_a_hosted_page",
+      "provider_alias_intent": "/billing/v1/hostedpages/8c589071e7e26a8d28e8af081c373fb00bd6dc5366fd129eefd5c61c569da526",
+      "text": "Retrieve a hosted page",
+      "category": "Hosted-Pages",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details of a specific hosted page",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/hostedpages/8c589071e7e26a8d28e8af081c373fb00bd6dc5366fd129eefd5c61c569da526",
+        "alias_endpoint": "/zohobilling/billing/v1/hostedpages/8c589071e7e26a8d28e8af081c373fb00bd6dc5366fd129eefd5c61c569da526",
+        "api_ref": "https://www.zoho.com/billing/api/v1/hosted-pages/#overview"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.hostedpages.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "list_of_hostedpages": {
+      "provider_intent": "list_of_hostedpages",
+      "provider_alias_intent": "/billing/v1/hostedpages",
+      "text": "List of HostedPages",
+      "category": "Hosted-Pages",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve the list of all hosted pages",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/hostedpages",
+        "alias_endpoint": "/zohobilling/billing/v1/hostedpages",
+        "api_ref": "https://www.zoho.com/billing/api/v1/hosted-pages/#list-of-hostedpages"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.hostedpages.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "create_a_subscription\r": {
+      "provider_intent": "create_a_subscription\r",
+      "provider_alias_intent": "/billing/v1/hostedpages/newsubscription",
+      "text": "Create a subscription",
+      "category": "Hosted-Pages",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a hosted page for a new subscription",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/hostedpages/newsubscription",
+        "alias_endpoint": "/zohobilling/billing/v1/hostedpages/newsubscription",
+        "api_ref": "https://www.zoho.com/billing/api/v1/hosted-pages/#create-a-subscription"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.hostedpages.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "update_a_subscription": {
+      "provider_intent": "update_a_subscription",
+      "provider_alias_intent": "/billing/v1/subscriptions/90300000079200",
+      "text": "Update a subscription",
+      "category": "Subscriptions\r",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update details of an existing subscription",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/subscriptions/90300000079200",
+        "alias_endpoint": "/zohobilling/billing/v1/subscriptions/90300000079200",
+        "api_ref": "https://www.zoho.com/billing/api/v1/subscription/#update-a-subscription"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.subscriptions.UPDATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "update_card_for_a_subscription": {
+      "provider_intent": "update_card_for_a_subscription",
+      "provider_alias_intent": "/billing/v1/hostedpages/updatecard",
+      "text": "Update card for a subscription",
+      "category": "Hosted-Pages",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create hosted page for updating card information for a subscription",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/hostedpages/updatecard",
+        "alias_endpoint": "/zohobilling/billing/v1/hostedpages/updatecard",
+        "api_ref": "https://www.zoho.com/billing/api/v1/hosted-pages/#update-card-for-a-subscription"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.hostedpages.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "buy_one-time_addon_for_a_subscription": {
+      "provider_intent": "buy_one-time_addon_for_a_subscription",
+      "provider_alias_intent": "/billing/v1/hostedpages/buyonetimeaddon",
+      "text": "Buy one-time addon for a subscription",
+      "category": "Hosted-Pages",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create hosted page for buying a one-time addon for a subscription",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/hostedpages/buyonetimeaddon",
+        "alias_endpoint": "/zohobilling/billing/v1/hostedpages/buyonetimeaddon",
+        "api_ref": "https://www.zoho.com/billing/api/v1/hosted-pages/#buy-one-time-addon-for-a-subscription"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.hostedpages.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "list_all_invoices": {
+      "provider_intent": "list_all_invoices",
+      "provider_alias_intent": "/billing/v1/invoices",
+      "text": "List all invoices",
+      "category": "Invoices",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List of all invoices",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/invoices",
+        "alias_endpoint": "/zohobilling/billing/v1/invoices",
+        "api_ref": "https://www.zoho.com/billing/api/v1/invoices/#list-all-invoices"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.invoices.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "retrieve_an_invoice": {
+      "provider_intent": "retrieve_an_invoice",
+      "provider_alias_intent": "/billing/v1/invoices/903000000079426",
+      "text": "Retrieve an invoice",
+      "category": "Invoices",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details of an existing invoice",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/invoices/903000000079426",
+        "alias_endpoint": "/zohobilling/billing/v1/invoices/903000000079426",
+        "api_ref": "https://www.zoho.com/billing/api/v1/invoices/#retrieve-an-invoice"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.invoices.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "convert_to_open": {
+      "provider_intent": "convert_to_open",
+      "provider_alias_intent": "/billing/v1/invoices/903000000079426/converttoopen",
+      "text": "Convert to open",
+      "category": "Invoices",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Change the status of the invoice to open",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/invoices/903000000079426/converttoopen",
+        "alias_endpoint": "/zohobilling/billing/v1/invoices/903000000079426/converttoopen",
+        "api_ref": "https://www.zoho.com/billing/api/v1/invoices/#convert-to-open"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.invoices.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "void_an_invoice": {
+      "provider_intent": "void_an_invoice",
+      "provider_alias_intent": "/billing/v1/invoices/982000000567114/status/void",
+      "text": "Void an invoice",
+      "category": "Invoices",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Mark an invoice status as void",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/invoices/982000000567114/status/void",
+        "alias_endpoint": "/zohobilling/billing/v1/invoices/982000000567114/status/void",
+        "api_ref": "https://www.zoho.com/billing/api/v1/invoices/#void-an-invoice"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.invoices.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "email_an_invoice": {
+      "provider_intent": "email_an_invoice",
+      "provider_alias_intent": "/billing/v1/invoices/903000000079426/email",
+      "text": "Email an invoice",
+      "category": "Invoices",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Email an invoice",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/invoices/903000000079426/email",
+        "alias_endpoint": "/zohobilling/billing/v1/invoices/903000000079426/email",
+        "api_ref": "https://www.zoho.com/billing/api/v1/invoices/#email-an-invoice"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.invoices.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "collect_charge_via_bank_account_/_credit_card": {
+      "provider_intent": "collect_charge_via_bank_account_/_credit_card",
+      "provider_alias_intent": "/billing/v1/invoices/903000000079426/collect ",
+      "text": "Collect charge via bank account / credit card",
+      "category": "Invoices",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Charge a customer for an invoice using existing bank account",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/invoices/903000000079426/collect ",
+        "alias_endpoint": "/zohobilling/billing/v1/invoices/903000000079426/collect ",
+        "api_ref": "https://www.zoho.com/billing/api/v1/invoices/#collect-charge-via-bank-account-credit-card"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.invoices.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "write_off": {
+      "provider_intent": "write_off",
+      "provider_alias_intent": "/billing/v1/invoices/903000000079426/writeoff",
+      "text": "Write off",
+      "category": "Invoices",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Write off a invoice",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/invoices/903000000079426/writeoff",
+        "alias_endpoint": "/zohobilling/billing/v1/invoices/903000000079426/writeoff",
+        "api_ref": "https://www.zoho.com/billing/api/v1/invoices/#write-off"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.invoices.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "update_address": {
+      "provider_intent": "update_address",
+      "provider_alias_intent": "/billing/v1/invoices/903000000079426/address",
+      "text": "Update address",
+      "category": "Invoices",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update shipping and billing address of an invoice",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/invoices/903000000079426/address",
+        "alias_endpoint": "/zohobilling/billing/v1/invoices/903000000079426/address",
+        "api_ref": "https://www.zoho.com/billing/api/v1/invoices/#update-address"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.invoices.UPDATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "update_custom_fields": {
+      "provider_intent": "update_custom_fields",
+      "provider_alias_intent": "/billing/v1/subscriptions/90300000079200/customfields",
+      "text": "Update Custom Fields",
+      "category": "Subscriptions\r",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update the custom fields associated with a particular subscription",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/subscriptions/90300000079200/customfields",
+        "alias_endpoint": "/zohobilling/billing/v1/subscriptions/90300000079200/customfields",
+        "api_ref": "https://www.zoho.com/billing/api/v1/subscription/#update-custom-fields"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.subscriptions.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "apply_multiple_credits_to_invoice": {
+      "provider_intent": "apply_multiple_credits_to_invoice",
+      "provider_alias_intent": "/billing/v1/invoices/903000000079426/credits",
+      "text": "Apply Multiple Credits to Invoice",
+      "category": "Invoices",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To associate multiple creditnotes to a particular invoice",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/invoices/903000000079426/credits",
+        "alias_endpoint": "/zohobilling/billing/v1/invoices/903000000079426/credits",
+        "api_ref": "https://www.zoho.com/billing/api/v1/invoices/#apply-multiple-credits-to-invoice"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.invoices.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "add_items_to_a_pending_invoice": {
+      "provider_intent": "add_items_to_a_pending_invoice",
+      "provider_alias_intent": "/billing/v1/invoices/903000000079426/lineitems",
+      "text": "Add items to a pending invoice",
+      "category": "Invoices",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Editing a pending invoice to add usage charges",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/invoices/903000000079426/lineitems",
+        "alias_endpoint": "/zohobilling/billing/v1/invoices/903000000079426/lineitems",
+        "api_ref": "https://www.zoho.com/billing/api/v1/invoices/#add-items-to-a-pending-invoice"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.invoices.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "delete_items_from_a_pending_invoice": {
+      "provider_intent": "delete_items_from_a_pending_invoice",
+      "provider_alias_intent": "/billing/v1/invoices/903000000079426/lineitems/7000000079434",
+      "text": "Delete items from a pending invoice",
+      "category": "Invoices",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Deleting an item from pending invoice",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/invoices/903000000079426/lineitems/7000000079434",
+        "alias_endpoint": "/zohobilling/billing/v1/invoices/903000000079426/lineitems/7000000079434",
+        "api_ref": "https://www.zoho.com/billing/api/v1/invoices/#delete-items-from-a-pending-invoice"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.invoices.DELETE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "add_attachment_to_an_invoice": {
+      "provider_intent": "add_attachment_to_an_invoice",
+      "provider_alias_intent": "/billing/v1/invoices/903000000079426/attachment",
+      "text": "Add attachment to an invoice",
+      "category": "Invoices",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Attach a file to an invoice",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/invoices/903000000079426/attachment",
+        "alias_endpoint": "/zohobilling/billing/v1/invoices/903000000079426/attachment",
+        "api_ref": "https://www.zoho.com/billing/api/v1/invoices/#add-attachment-to-an-invoice"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.invoices.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "cancel_write_off": {
+      "provider_intent": "cancel_write_off",
+      "provider_alias_intent": "/billing/v1/invoices/982000000567114/writeoff/cancel",
+      "text": "Cancel write off",
+      "category": "Invoices",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Cancel the write off amount of an invoice",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/invoices/982000000567114/writeoff/cancel",
+        "alias_endpoint": "/zohobilling/billing/v1/invoices/982000000567114/writeoff/cancel",
+        "api_ref": "https://www.zoho.com/billing/api/v1/invoices/#cancel-write-off"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.invoices.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "create_a_payment": {
+      "provider_intent": "create_a_payment",
+      "provider_alias_intent": "/billing/v1/payments",
+      "text": "Create a payment",
+      "category": "Payments",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new payment",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/payments",
+        "alias_endpoint": "/zohobilling/billing/v1/payments",
+        "api_ref": "https://www.zoho.com/billing/api/v1/payments/#create-a-payment"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.payments.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "update_a_payment": {
+      "provider_intent": "update_a_payment",
+      "provider_alias_intent": "/billing/v1/payments/9030000079467",
+      "text": "Update a payment",
+      "category": "Payments",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update an existing payment information",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/payments/9030000079467",
+        "alias_endpoint": "/zohobilling/billing/v1/payments/9030000079467",
+        "api_ref": "https://www.zoho.com/billing/api/v1/payments/#update-a-payment"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.payments.UPDATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "retrieve_a_payment": {
+      "provider_intent": "retrieve_a_payment",
+      "provider_alias_intent": "/billing/v1/payments/9030000079467",
+      "text": "Retrieve a payment",
+      "category": "Payments",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details of an existing payment",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/payments/9030000079467",
+        "alias_endpoint": "/zohobilling/billing/v1/payments/9030000079467",
+        "api_ref": "https://www.zoho.com/billing/api/v1/payments/#retrieve-a-payment"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.payments.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "delete_a_payment": {
+      "provider_intent": "delete_a_payment",
+      "provider_alias_intent": "/billing/v1/payments/9030000079467",
+      "text": "Delete a payment",
+      "category": "Payments",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete an existing payment",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/payments/9030000079467",
+        "alias_endpoint": "/zohobilling/billing/v1/payments/9030000079467",
+        "api_ref": "https://www.zoho.com/billing/api/v1/payments/#delete-a-payment"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.payments.DELETE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "create_a_plan": {
+      "provider_intent": "create_a_plan",
+      "provider_alias_intent": "/billing/v1/plans",
+      "text": "Create a plan",
+      "category": "Plans",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new plan",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/plans",
+        "alias_endpoint": "/zohobilling/billing/v1/plans",
+        "api_ref": "https://www.zoho.com/billing/api/v1/plans/#create-a-plan"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.plans.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "list_all_plans": {
+      "provider_intent": "list_all_plans",
+      "provider_alias_intent": "/billing/v1/plans",
+      "text": "List all plans",
+      "category": "Plans",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List of all plans created",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/plans",
+        "alias_endpoint": "/zohobilling/billing/v1/plans",
+        "api_ref": "https://www.zoho.com/billing/api/v1/plans/#list-all-plans"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.plans.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "update_a_plan": {
+      "provider_intent": "update_a_plan",
+      "provider_alias_intent": "/billing/v1/plans/basic-monthly",
+      "text": "Update a plan",
+      "category": "Plans",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update details of an existing plan",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/plans/basic-monthly",
+        "alias_endpoint": "/zohobilling/billing/v1/plans/basic-monthly",
+        "api_ref": "https://www.zoho.com/billing/api/v1/plans/#update-a-plan"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.plans.UPDATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "retrieve_a_plan": {
+      "provider_intent": "retrieve_a_plan",
+      "provider_alias_intent": "/billing/v1/plans/basic-monthly",
+      "text": "Retrieve a plan",
+      "category": "Plans",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieve details of an existing plan",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/plans/basic-monthly",
+        "alias_endpoint": "/zohobilling/billing/v1/plans/basic-monthly",
+        "api_ref": "https://www.zoho.com/billing/api/v1/plans/#retrieve-a-plan"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.plans.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "delete_a_plan": {
+      "provider_intent": "delete_a_plan",
+      "provider_alias_intent": "/billing/v1/plans/basic-monthly",
+      "text": "Delete a plan",
+      "category": "Plans",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete an existing plan. A plan can only be deleted if it has no transactions associated with it",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/plans/basic-monthly",
+        "alias_endpoint": "/zohobilling/billing/v1/plans/basic-monthly",
+        "api_ref": "https://www.zoho.com/billing/api/v1/plans/#delete-a-plan"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.plans.DELETE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "list_of_all_products": {
+      "provider_intent": "list_of_all_products",
+      "provider_alias_intent": "/billing/v1/products",
+      "text": "List of all products",
+      "category": "Products",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List of all created products",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/products",
+        "alias_endpoint": "/zohobilling/billing/v1/products",
+        "api_ref": "https://www.zoho.com/billing/api/v1/products/#list-of-all-products"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.products.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "create_a_product": {
+      "provider_intent": "create_a_product",
+      "provider_alias_intent": "/billing/v1/products ",
+      "text": "Create a product",
+      "category": "Products",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new product",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/products ",
+        "alias_endpoint": "/zohobilling/billing/v1/products ",
+        "api_ref": "https://www.zoho.com/billing/api/v1/products/#create-a-product"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.products.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "update_a_product": {
+      "provider_intent": "update_a_product",
+      "provider_alias_intent": "/billing/v1/products/903000000045027",
+      "text": "Update a product",
+      "category": "Products",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update details of an existing product",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/products/903000000045027",
+        "alias_endpoint": "/zohobilling/billing/v1/products/903000000045027",
+        "api_ref": "oho.com/billing/api/v1/products/#update-a-product"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.products.UPDATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "retrieve_a_product": {
+      "provider_intent": "retrieve_a_product",
+      "provider_alias_intent": "/billing/v1/products/903000000045027",
+      "text": "Retrieve a product",
+      "category": "Products",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details of an existing product",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/products/903000000045027",
+        "alias_endpoint": "/zohobilling/billing/v1/products/903000000045027",
+        "api_ref": "https://www.zoho.com/billing/api/v1/products/#retrieve-a-product"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.products.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "delete_a_product": {
+      "provider_intent": "delete_a_product",
+      "provider_alias_intent": "/billing/v1/products/903000000045027",
+      "text": "Delete a product",
+      "category": "Products",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete an existing product",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/products/903000000045027",
+        "alias_endpoint": "/zohobilling/billing/v1/products/903000000045027",
+        "api_ref": "https://www.zoho.com/billing/api/v1/products/#delete-a-product"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.products.DELETE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "create_a_project": {
+      "provider_intent": "create_a_project",
+      "provider_alias_intent": "/billing/v1/projects",
+      "text": "Create a project",
+      "category": "Projects",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new project",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects",
+        "alias_endpoint": "/zohobilling/billing/v1/projects",
+        "api_ref": "https://www.zoho.com/billing/api/v1/projects/#create-a-project"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "list_projects": {
+      "provider_intent": "list_projects",
+      "provider_alias_intent": "/billing/v1/projects",
+      "text": "List projects",
+      "category": "Projects",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all projects with pagination",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects",
+        "alias_endpoint": "/zohobilling/billing/v1/projects",
+        "api_ref": "https://www.zoho.com/billing/api/v1/projects/#list-projects"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "update_a_project": {
+      "provider_intent": "update_a_project",
+      "provider_alias_intent": "/billing/v1/projects/460000000044019",
+      "text": "Update a project",
+      "category": "Projects",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update details of a project",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/460000000044019",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/460000000044019",
+        "api_ref": "https://www.zoho.com/billing/api/v1/projects/#update-a-project"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.UPDATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_a_project": {
+      "provider_intent": "get_a_project",
+      "provider_alias_intent": "/billing/v1/projects/460000000044019",
+      "text": "Get a project",
+      "category": "Projects",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the details of a project",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/460000000044019",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/460000000044019",
+        "api_ref": "https://www.zoho.com/billing/api/v1/projects/#get-a-project"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "delete_project": {
+      "provider_intent": "delete_project",
+      "provider_alias_intent": "/billing/v1/projects/460000000044019",
+      "text": "Delete project",
+      "category": "Projects",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Deleting a existing project",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/460000000044019",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/460000000044019",
+        "api_ref": "https://www.zoho.com/billing/api/v1/projects/#delete-project"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.DELETE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "activate_a_project": {
+      "provider_intent": "activate_a_project",
+      "provider_alias_intent": "/billing/v1/projects/460000000044019/active",
+      "text": "Activate a project",
+      "category": "Projects",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Mark project as active",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/460000000044019/active",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/460000000044019/active",
+        "api_ref": "https://www.zoho.com/billing/api/v1/projects/#activate-a-project"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "deactivate_a_project": {
+      "provider_intent": "deactivate_a_project",
+      "provider_alias_intent": "/billing/v1/projects/460000000044019/inactive",
+      "text": "Deactivate a project",
+      "category": "Projects",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Marking a project as inactive",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/460000000044019/inactive",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/460000000044019/inactive",
+        "api_ref": "https://www.zoho.com/billing/api/v1/projects/#activate-a-project"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "clone_a_project": {
+      "provider_intent": "clone_a_project",
+      "provider_alias_intent": "/billing/v1/projects/460000000044019/clone",
+      "text": "Clone a project",
+      "category": "Projects",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Cloning the settings of an existing project",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/460000000044019/clone",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/460000000044019/clone",
+        "api_ref": "https://www.zoho.com/billing/api/v1/projects/#activate-a-project"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "assign_users": {
+      "provider_intent": "assign_users",
+      "provider_alias_intent": "/billing/v1/projects/460000000044019/users",
+      "text": "Assign users",
+      "category": "Projects",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Assign a users to a project",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/460000000044019/users",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/460000000044019/users",
+        "api_ref": "https://www.zoho.com/billing/api/v1/projects/#assign-users"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "list_users___": {
+      "provider_intent": "list_users___",
+      "provider_alias_intent": "/billing/v1/projects/460000000044019/users",
+      "text": "List Users",
+      "category": "Projects",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get list of all users associated to a project",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/460000000044019/users",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/460000000044019/users",
+        "api_ref": "https://www.zoho.com/billing/api/v1/projects/#list-users"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "invite_user": {
+      "provider_intent": "invite_user",
+      "provider_alias_intent": "/billing/v1/projects/460000000044019/users/invite",
+      "text": "Invite user",
+      "category": "Projects",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Invite a user to the project",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/460000000044019/users/invite",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/460000000044019/users/invite",
+        "api_ref": "https://www.zoho.com/billing/api/v1/projects/#list-users"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "update_user": {
+      "provider_intent": "update_user",
+      "provider_alias_intent": "/billing/v1/projects/460000000044019/users/460000000024003",
+      "text": "Update user",
+      "category": "Projects",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update details of a user",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/460000000044019/users/460000000024003",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/460000000044019/users/460000000024003",
+        "api_ref": "https://www.zoho.com/billing/api/v1/projects/#update-user"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.UPDATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_a_user": {
+      "provider_intent": "get_a_user",
+      "provider_alias_intent": "/billing/v1/projects/460000000044019/users/460000000024003",
+      "text": "Get a User",
+      "category": "Projects",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get details of a user in project",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/460000000044019/users/460000000024003",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/460000000044019/users/460000000024003",
+        "api_ref": "https://www.zoho.com/billing/api/v1/projects/#get-a-user"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "delete_user": {
+      "provider_intent": "delete_user",
+      "provider_alias_intent": "/billing/v1/projects/460000000044019/users/460000000024003",
+      "text": "Delete user",
+      "category": "Projects",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Remove user from a project",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/460000000044019/users/460000000024003",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/460000000044019/users/460000000024003",
+        "api_ref": "https://www.zoho.com/billing/api/v1/projects/#get-a-user"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.DELETE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "post_comment": {
+      "provider_intent": "post_comment",
+      "provider_alias_intent": "/billing/v1/projects/460000000044019/comments",
+      "text": "Post comment",
+      "category": "Projects",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Post comment to a project",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/460000000044019/comments",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/460000000044019/comments",
+        "api_ref": "https://www.zoho.com/billing/api/v1/projects/#get-a-user"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "list_comments": {
+      "provider_intent": "list_comments",
+      "provider_alias_intent": "/billing/v1/projects/460000000044019/comments",
+      "text": "List comments",
+      "category": "Projects",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get comments for a project",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/460000000044019/comments",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/460000000044019/comments",
+        "api_ref": "https://www.zoho.com/billing/api/v1/projects/#list-comments"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "delete_comment": {
+      "provider_intent": "delete_comment",
+      "provider_alias_intent": "/billing/v1/projects/460000000044019/comments/460000000044027",
+      "text": "Delete comment",
+      "category": "Projects",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Deleting a comment",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/460000000044019/comments/460000000044027",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/460000000044019/comments/460000000044027",
+        "api_ref": "https://www.zoho.com/billing/api/v1/projects/#delete-comment"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.DELETE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "list_invoices": {
+      "provider_intent": "list_invoices",
+      "provider_alias_intent": "/billing/v1/projects/460000000044019/invoices",
+      "text": "List invoices",
+      "category": "Projects",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Lists invoices created for this project",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/460000000044019/invoices",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/460000000044019/invoices",
+        "api_ref": "https://www.zoho.com/billing/api/v1/projects/#list-invoices"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "refund_a_credit_note": {
+      "provider_intent": "refund_a_credit_note",
+      "provider_alias_intent": "/billing/v1/creditnotes/90300000081375/refunds",
+      "text": "Refund a credit note",
+      "category": "Refunds",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Refund is made on the credit note",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/creditnotes/90300000081375/refunds",
+        "alias_endpoint": "/zohobilling/billing/v1/creditnotes/90300000081375/refunds",
+        "api_ref": "https://www.zoho.com/billing/api/v1/refunds/#refund-a-credit-note"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.creditnotes.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "refund_a_payment": {
+      "provider_intent": "refund_a_payment",
+      "provider_alias_intent": "/billing/v1/payments//refunds",
+      "text": "Refund a payment",
+      "category": "Refunds",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "A new credit note is created for the amount to be refund",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/payments//refunds",
+        "alias_endpoint": "/zohobilling/billing/v1/payments//refunds",
+        "api_ref": "https://www.zoho.com/billing/api/v1/refunds/#refund-a-payment"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.payments.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "retrieve_refund_details": {
+      "provider_intent": "retrieve_refund_details",
+      "provider_alias_intent": "/billing/v1/creditnotes/refunds/90300000081385",
+      "text": "Retrieve refund details",
+      "category": "Refunds",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details of an existing refund",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/creditnotes/refunds/90300000081385",
+        "alias_endpoint": "/zohobilling/billing/v1/creditnotes/refunds/90300000081385",
+        "api_ref": "https://www.zoho.com/billing/api/v1/refunds/#retrieve-refund-details"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.creditnotes.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "retrieve_list_of_taxes": {
+      "provider_intent": "retrieve_list_of_taxes",
+      "provider_alias_intent": "/billing/v1/settings/taxes",
+      "text": "Retrieve list of taxes",
+      "category": "Settings",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieves the list of taxes along with their details",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/settings/taxes",
+        "alias_endpoint": "/zohobilling/billing/v1/settings/taxes",
+        "api_ref": "https://www.zoho.com/billing/api/v1/settings/#retrieve-list-of-taxes"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.settings.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "retrieve_list_of_tax_exemptions": {
+      "provider_intent": "retrieve_list_of_tax_exemptions",
+      "provider_alias_intent": "/billing/v1/settings/taxexemptions",
+      "text": "Retrieve list of tax Exemptions",
+      "category": "Settings",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieves the list of tax Exemptions",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/settings/taxexemptions",
+        "alias_endpoint": "/zohobilling/billing/v1/settings/taxexemptions",
+        "api_ref": "https://www.zoho.com/billing/api/v1/settings/#retrieve-list-of-tax-exemptions"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.settings.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "retrieve_list_of_tax_authorities": {
+      "provider_intent": "retrieve_list_of_tax_authorities",
+      "provider_alias_intent": "/billing/v1/settings/taxauthorities",
+      "text": "Retrieve list of tax Authorities",
+      "category": "Settings",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieves the list of tax Authorities",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/settings/taxauthorities",
+        "alias_endpoint": "/zohobilling/billing/v1/settings/taxauthorities",
+        "api_ref": "https://www.zoho.com/billing/api/v1/settings/#retrieve-list-of-tax-exemptions"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.settings.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "retrieve_churn_message_preferences": {
+      "provider_intent": "retrieve_churn_message_preferences",
+      "provider_alias_intent": "/billing/v1/settings/preferences/churnmessages",
+      "text": "Retrieve Churn Message preferences",
+      "category": "Settings",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Retrieves list of Advanced Churn Message preferences",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/settings/preferences/churnmessages",
+        "alias_endpoint": "/zohobilling/billing/v1/settings/preferences/churnmessages",
+        "api_ref": "https://www.zoho.com/billing/api/v1/settings/#retrieve-churn-message-preferences"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.settings.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "create_a_subscription": {
+      "provider_intent": "create_a_subscription",
+      "provider_alias_intent": "/billing/v1/subscriptions",
+      "text": "Create a subscription",
+      "category": "Subscriptions\r",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Create a new subscription",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/subscriptions",
+        "alias_endpoint": "/zohobilling/billing/v1/subscriptions",
+        "api_ref": "https://www.zoho.com/billing/api/v1/subscription/#create-a-subscription"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.subscriptions.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "list_all_subscriptions": {
+      "provider_intent": "list_all_subscriptions",
+      "provider_alias_intent": "/billing/v1/subscriptions",
+      "text": "List all subscriptions",
+      "category": "Subscriptions\r",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List of subscriptions that match the given subscription status",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/subscriptions",
+        "alias_endpoint": "/zohobilling/billing/v1/subscriptions",
+        "api_ref": "https://www.zoho.com/billing/api/v1/subscription/#list-all-subscriptions"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.subscriptions.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "retrieve_a_subscription": {
+      "provider_intent": "retrieve_a_subscription",
+      "provider_alias_intent": "/billing/v1/subscriptions/90300000079200",
+      "text": "Retrieve a subscription",
+      "category": "Subscriptions\r",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details of an existing subscription",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/subscriptions/90300000079200",
+        "alias_endpoint": "/zohobilling/billing/v1/subscriptions/90300000079200",
+        "api_ref": "https://www.zoho.com/billing/api/v1/subscription/#retrieve-a-subscription"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.subscriptions.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "delete_a_subscription": {
+      "provider_intent": "delete_a_subscription",
+      "provider_alias_intent": "/billing/v1/subscriptions/90300000079200",
+      "text": "Delete a subscription",
+      "category": "Subscriptions\r",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete an existing subscription",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/subscriptions/90300000079200",
+        "alias_endpoint": "/zohobilling/billing/v1/subscriptions/90300000079200",
+        "api_ref": "https://www.zoho.com/billing/api/v1/subscription/#delete-a-subscription"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.subscriptions.DELETE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "cancel_a_subscription": {
+      "provider_intent": "cancel_a_subscription",
+      "provider_alias_intent": "/billing/v1/subscriptions/90300000079200/cancel",
+      "text": "Cancel a subscription",
+      "category": "Subscriptions\r",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Your subscription can be either cancelled immediately or at the end of the current term based on the value of `cancel_at_end`",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/subscriptions/90300000079200/cancel",
+        "alias_endpoint": "/zohobilling/billing/v1/subscriptions/90300000079200/cancel",
+        "api_ref": "https://www.zoho.com/billing/api/v1/subscription/#delete-a-subscription"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.subscriptions.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "reactivate_subscription": {
+      "provider_intent": "reactivate_subscription",
+      "provider_alias_intent": "/billing/v1/subscriptions/90300000079200/reactivate",
+      "text": "Reactivate subscription",
+      "category": "Subscriptions\r",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Reactivate a subscription",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/subscriptions/90300000079200/reactivate",
+        "alias_endpoint": "/zohobilling/billing/v1/subscriptions/90300000079200/reactivate",
+        "api_ref": "https://www.zoho.com/billing/api/v1/subscription/#reactivate-subscription"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.subscriptions.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "view_scheduled_changes": {
+      "provider_intent": "view_scheduled_changes",
+      "provider_alias_intent": "/billing/v1/subscriptions/90300000079200/scheduledchanges",
+      "text": "View Scheduled Changes",
+      "category": "Subscriptions\r",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To view the End of Term changes",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/subscriptions/90300000079200/scheduledchanges",
+        "alias_endpoint": "/zohobilling/billing/v1/subscriptions/90300000079200/scheduledchanges",
+        "api_ref": "https://www.zoho.com/billing/api/v1/subscription/#view-scheduled-changes"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.subscriptions.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "subscription_activities": {
+      "provider_intent": "subscription_activities",
+      "provider_alias_intent": "/billing/v1/subscriptions/90300000079200/recentactivities",
+      "text": "Subscription Activities",
+      "category": "Subscriptions\r",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List of all the recent activities associated to a subscription",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/subscriptions/90300000079200/recentactivities",
+        "alias_endpoint": "/zohobilling/billing/v1/subscriptions/90300000079200/recentactivities",
+        "api_ref": "https://www.zoho.com/billing/api/v1/subscription/#subscription-activities"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.subscriptions.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "buy_one-time_addon": {
+      "provider_intent": "buy_one-time_addon",
+      "provider_alias_intent": "/billing/v1/subscriptions/90300000079200/buyonetimeaddon",
+      "text": "Buy one-time addon",
+      "category": "Subscriptions\r",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Include a one-time addon in the subscription",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/subscriptions/90300000079200/buyonetimeaddon",
+        "alias_endpoint": "/zohobilling/billing/v1/subscriptions/90300000079200/buyonetimeaddon",
+        "api_ref": "https://www.zoho.com/billing/api/v1/subscription/#buy-one-time-addon"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.subscriptions.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "associate_a_coupon": {
+      "provider_intent": "associate_a_coupon",
+      "provider_alias_intent": "/billing/v1/subscriptions/90300000079200/coupons/flat10",
+      "text": "Associate a coupon",
+      "category": "Subscriptions\r",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Apply a coupon to a subscription which has been already created",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/subscriptions/90300000079200/coupons/Flat10",
+        "alias_endpoint": "/zohobilling/billing/v1/subscriptions/90300000079200/coupons/flat10",
+        "api_ref": "https://www.zoho.com/billing/api/v1/subscription/#associate-a-coupon"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.subscriptions.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "remove_a_coupon": {
+      "provider_intent": "remove_a_coupon",
+      "provider_alias_intent": "/billing/v1/subscriptions/90300000079200/coupons",
+      "text": "Remove a coupon",
+      "category": "Subscriptions\r",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "To remove coupon associated with a subscription",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/subscriptions/90300000079200/coupons",
+        "alias_endpoint": "/zohobilling/billing/v1/subscriptions/90300000079200/coupons",
+        "api_ref": "https://www.zoho.com/billing/api/v1/subscription/#associate-a-coupon"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.subscriptions.DELETE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "update_card": {
+      "provider_intent": "update_card",
+      "provider_alias_intent": "/billing/v1/subscriptions/90300000079200/card",
+      "text": "Update Card",
+      "category": "Subscriptions\r",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update the card details of a customer. Once updated, the past card will no longer be charged",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/subscriptions/90300000079200/card",
+        "alias_endpoint": "/zohobilling/billing/v1/subscriptions/90300000079200/card",
+        "api_ref": "https://www.zoho.com/billing/api/v1/subscription/#associate-a-coupon"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.subscriptions.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "remove_card": {
+      "provider_intent": "remove_card",
+      "provider_alias_intent": "/billing/v1/subscriptions/90300000079200/card",
+      "text": "Remove Card",
+      "category": "Subscriptions\r",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a card associated with the subscription",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/subscriptions/90300000079200/card",
+        "alias_endpoint": "/zohobilling/billing/v1/subscriptions/90300000079200/card",
+        "api_ref": "https://www.zoho.com/billing/api/v1/subscription/#remove-card"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.subscriptions.DELETE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "add_charge": {
+      "provider_intent": "add_charge",
+      "provider_alias_intent": "/billing/v1/subscriptions/90300000079200/charge",
+      "text": "Add Charge",
+      "category": "Subscriptions\r",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Charge a one-time amount for the subscription",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/subscriptions/90300000079200/charge",
+        "alias_endpoint": "/zohobilling/billing/v1/subscriptions/90300000079200/charge",
+        "api_ref": "https://www.zoho.com/billing/api/v1/subscription/#remove-card"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.subscriptions.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "add_contact_person": {
+      "provider_intent": "add_contact_person",
+      "provider_alias_intent": "/billing/v1/subscriptions/90300000079200/contactpersons",
+      "text": "Add contact person",
+      "category": "Subscriptions\r",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Associate a contact person with the subscription",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/subscriptions/90300000079200/contactpersons",
+        "alias_endpoint": "/zohobilling/billing/v1/subscriptions/90300000079200/contactpersons",
+        "api_ref": "https://www.zoho.com/billing/api/v1/subscription/#add-contact-person"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.subscriptions.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "postpone_renewal": {
+      "provider_intent": "postpone_renewal",
+      "provider_alias_intent": "/billing/v1/subscriptions/90300000079200/postpone ",
+      "text": "Postpone renewal",
+      "category": "Subscriptions\r",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "A subscription renewal date (billing date) can be postponed thereby extending the subscription term",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/subscriptions/90300000079200/postpone ",
+        "alias_endpoint": "/zohobilling/billing/v1/subscriptions/90300000079200/postpone ",
+        "api_ref": "https://www.zoho.com/billing/api/v1/subscription/#postpone-renewal"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.subscriptions.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "add/edit_description_for_a_item_in_line_items_list": {
+      "provider_intent": "add/edit_description_for_a_item_in_line_items_list",
+      "provider_alias_intent": "/billing/v1/subscriptions/90300000079200/lineitems/%7bplan_or_addon_code%7d",
+      "text": "Add/Edit description for a item in line items list",
+      "category": "Subscriptions\r",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Add/Edit description to a particular plan or addon in the line items list",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/subscriptions/90300000079200/lineitems/%7Bplan_or_addon_code%7D",
+        "alias_endpoint": "/zohobilling/billing/v1/subscriptions/90300000079200/lineitems/%7bplan_or_addon_code%7d",
+        "api_ref": "https://www.zoho.com/billing/api/v1/subscription/#addedit-description-for-a-item-in-line-items-list"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.subscriptions.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "change_to_online/offline_mode": {
+      "provider_intent": "change_to_online/offline_mode",
+      "provider_alias_intent": "/billing/v1/subscriptions/90300000079200/autocollect",
+      "text": "Change to Online/Offline mode",
+      "category": "Subscriptions\r",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Change the status of a particular subscription to Online/Offline mode",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/subscriptions/90300000079200/autocollect",
+        "alias_endpoint": "/zohobilling/billing/v1/subscriptions/90300000079200/autocollect",
+        "api_ref": "https://www.zoho.com/billing/api/v1/subscription/#change-to-onlineoffline-mode"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.subscriptions.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "update_reference": {
+      "provider_intent": "update_reference",
+      "provider_alias_intent": "/billing/v1/subscriptions/90300000079200/reference",
+      "text": "Update Reference",
+      "category": "Subscriptions\r",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update reference id to easily identify and keep track of your subscription",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/subscriptions/90300000079200/reference",
+        "alias_endpoint": "/zohobilling/billing/v1/subscriptions/90300000079200/reference",
+        "api_ref": "https://www.zoho.com/billing/api/v1/subscription/#update-reference"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": " ZohoSubscriptions.subscriptions.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "update_sales_person": {
+      "provider_intent": "update_sales_person",
+      "provider_alias_intent": "/billing/v1/subscriptions/90300000079200/salesperson",
+      "text": "Update Sales Person",
+      "category": "Subscriptions\r",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update a sales person associated with a particular subscription",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/subscriptions/90300000079200/salesperson",
+        "alias_endpoint": "/zohobilling/billing/v1/subscriptions/90300000079200/salesperson",
+        "api_ref": "https://www.zoho.com/billing/api/v1/subscription/#update-sales-person"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.subscriptions.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "add_a_note": {
+      "provider_intent": "add_a_note",
+      "provider_alias_intent": "/billing/v1/subscriptions/90300000079200/notes",
+      "text": "Add a note",
+      "category": "Subscriptions\r",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Notes related to the subscription can be added by the user at anytime",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/subscriptions/90300000079200/notes",
+        "alias_endpoint": "/zohobilling/billing/v1/subscriptions/90300000079200/notes",
+        "api_ref": "https://www.zoho.com/billing/api/v1/subscription/#add-a-note"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.subscriptions.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "delete_a_note": {
+      "provider_intent": "delete_a_note",
+      "provider_alias_intent": "/billing/v1/subscriptions/90300000079200/notes/903000076543",
+      "text": "Delete a note",
+      "category": "Subscriptions\r",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a specific note",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/subscriptions/90300000079200/notes/903000076543",
+        "alias_endpoint": "/zohobilling/billing/v1/subscriptions/90300000079200/notes/903000076543",
+        "api_ref": "https://www.zoho.com/billing/api/v1/subscription/#delete-a-note"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.subscriptions.DELETE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "add_a_task": {
+      "provider_intent": "add_a_task",
+      "provider_alias_intent": "/billing/v1/projects/90300000072369/tasks",
+      "text": "Add a task",
+      "category": "Tasks",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Adding a new task to a project",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/90300000072369/tasks",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/90300000072369/tasks",
+        "api_ref": "https://www.zoho.com/billing/api/v1/tasks/#add-a-task"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "list_tasks": {
+      "provider_intent": "list_tasks",
+      "provider_alias_intent": "/billing/v1/projects/90300000072369/tasks",
+      "text": "List tasks",
+      "category": "Tasks",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get list of all the tasks added to a project",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/90300000072369/tasks",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/90300000072369/tasks",
+        "api_ref": "https://www.zoho.com/billing/api/v1/tasks/#list-tasks"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "update_a_task": {
+      "provider_intent": "update_a_task",
+      "provider_alias_intent": "/billing/v1/projects/90300000072369/tasks/90300000072369",
+      "text": "Update a task",
+      "category": "Tasks",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update the details of an existing task",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/90300000072369/tasks/90300000072369",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/90300000072369/tasks/90300000072369",
+        "api_ref": "https://www.zoho.com/billing/api/v1/tasks/#update-a-task"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.UPDATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_a_task": {
+      "provider_intent": "get_a_task",
+      "provider_alias_intent": "/billing/v1/projects/90300000072369/tasks/90300000072369",
+      "text": "Get a task",
+      "category": "Tasks",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get the details of a task",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/90300000072369/tasks/90300000072369",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/90300000072369/tasks/90300000072369",
+        "api_ref": "https://www.zoho.com/billing/api/v1/tasks/#get-a-task"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "delete_a_task": {
+      "provider_intent": "delete_a_task",
+      "provider_alias_intent": "/billing/v1/projects/90300000072369/tasks/90300000072369",
+      "text": "Delete a Task",
+      "category": "Tasks",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete a task added to a project",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/90300000072369/tasks/90300000072369",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/90300000072369/tasks/90300000072369",
+        "api_ref": "https://www.zoho.com/billing/api/v1/tasks/#delete-a-task"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.DELETE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "log_time_entries": {
+      "provider_intent": "log_time_entries",
+      "provider_alias_intent": "/billing/v1/projects/timeentries",
+      "text": "Log time entries",
+      "category": "Time Entries",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Logging time entries",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/timeentries",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/timeentries",
+        "api_ref": "https://www.zoho.com/billing/api/v1/time-entries/#log-time-entries"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "list_time_entries.": {
+      "provider_intent": "list_time_entries.",
+      "provider_alias_intent": "/billing/v1/projects/timeentries",
+      "text": "List time entries.",
+      "category": "Time Entries",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "List all time entries with pagination",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/timeentries",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/timeentries",
+        "api_ref": "https://www.zoho.com/billing/api/v1/time-entries/#list-time-entries"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "delete_time_entries": {
+      "provider_intent": "delete_time_entries",
+      "provider_alias_intent": "/billing/v1/projects/timeentries",
+      "text": "Delete time entries",
+      "category": "Time Entries",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Deleting time entries",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/timeentries",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/timeentries",
+        "api_ref": "https://www.zoho.com/billing/api/v1/time-entries/#delete-time-entries"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.DELETE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "update_time_entry": {
+      "provider_intent": "update_time_entry",
+      "provider_alias_intent": "com/billing/v1/projects/timeentries/460000000044021",
+      "text": "Update time entry",
+      "category": "Time Entries",
+      "method": "PUT",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Update logged time entry",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}com/billing/v1/projects/timeentries/460000000044021",
+        "alias_endpoint": "/zohobillingcom/billing/v1/projects/timeentries/460000000044021",
+        "api_ref": "https://www.zoho.com/billing/api/v1/time-entries/#delete-time-entries"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.UPDATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_a_time_entry": {
+      "provider_intent": "get_a_time_entry",
+      "provider_alias_intent": "/billing/v1/projects/timeentries/460000000044021",
+      "text": "Get a time entry",
+      "category": "Time Entries",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get details of a time entry",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/timeentries/460000000044021",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/timeentries/460000000044021",
+        "api_ref": "https://www.zoho.com/billing/api/v1/time-entries/#get-a-time-entry"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "delete_time_entry": {
+      "provider_intent": "delete_time_entry",
+      "provider_alias_intent": "/billing/v1/projects/timeentries/460000000044021",
+      "text": "Delete time entry",
+      "category": "Time Entries",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Deleting a logged time entry",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/timeentries/460000000044021",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/timeentries/460000000044021",
+        "api_ref": "https://www.zoho.com/billing/api/v1/time-entries/#delete-time-entry"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.DELETE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "start_timer": {
+      "provider_intent": "start_timer",
+      "provider_alias_intent": "/billing/v1/projects/timeentries/460000000044021/timer/start",
+      "text": "Start timer",
+      "category": "Time Entries",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Start tracking time spent",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/timeentries/460000000044021/timer/start",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/timeentries/460000000044021/timer/start",
+        "api_ref": "https://www.zoho.com/billing/api/v1/time-entries/#start-timer"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "stop_timer": {
+      "provider_intent": "stop_timer",
+      "provider_alias_intent": "/billing/v1/projects/timeentries/timer/stop",
+      "text": "Stop timer",
+      "category": "Time Entries",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Stop tracking time, say taking a break or leaving",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/timeentries/timer/stop",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/timeentries/timer/stop",
+        "api_ref": "https://www.zoho.com/billing/api/v1/time-entries/#stop-timer"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "get_timer": {
+      "provider_intent": "get_timer",
+      "provider_alias_intent": "/billing/v1/projects/timeentries/runningtimer/me",
+      "text": "Get timer",
+      "category": "Time Entries",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Get current running timer",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/projects/timeentries/runningtimer/me",
+        "alias_endpoint": "/zohobilling/billing/v1/projects/timeentries/runningtimer/me",
+        "api_ref": "https://www.zoho.com/billing/api/v1/time-entries/#get-timer"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.projects.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "retrieve_an_unbilled_charge": {
+      "provider_intent": "retrieve_an_unbilled_charge",
+      "provider_alias_intent": "/billing/v1/unbilledcharges/90300000079200 ",
+      "text": "Retrieve an unbilled charge",
+      "category": "Unbilled-Charges",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Details of an unbilled charge",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/unbilledcharges/90300000079200 ",
+        "alias_endpoint": "/zohobilling/billing/v1/unbilledcharges/90300000079200 ",
+        "api_ref": "https://www.zoho.com/billing/api/v1/unbilled-charges/#retrieve-an-unbilled-charge"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.invoices.READ",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "delete_unbilled_charge": {
+      "provider_intent": "delete_unbilled_charge",
+      "provider_alias_intent": "/billing/v1/unbilledcharges/90300000079200",
+      "text": "Delete unbilled charge",
+      "category": "Unbilled-Charges",
+      "method": "DELETE",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Delete the unbilled charge",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/unbilledcharges/90300000079200",
+        "alias_endpoint": "/zohobilling/billing/v1/unbilledcharges/90300000079200",
+        "api_ref": "https://www.zoho.com/billing/api/v1/unbilled-charges/#delete-unbilled-charge"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.invoices.DELETE",
+      "subdomain": {},
+      "payload_type": ""
+    },
+    "convert_unbilled_charge_to_invoice": {
+      "provider_intent": "convert_unbilled_charge_to_invoice",
+      "provider_alias_intent": "/billing/v1/unbilledcharges/90300000079200/createinvoice",
+      "text": "Convert unbilled charge to invoice",
+      "category": "Unbilled-Charges",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1",
+        "auth": [],
+        "description": "Convert unbilled charges to an invoice by manual intervention instead of waiting for next renewal",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/billing/v1/unbilledcharges/90300000079200/createinvoice",
+        "alias_endpoint": "/zohobilling/billing/v1/unbilledcharges/90300000079200/createinvoice",
+        "api_ref": "https://www.zoho.com/billing/api/v1/unbilled-charges/#delete-unbilled-charge"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoSubscriptions.invoices.CREATE",
+      "subdomain": {},
+      "payload_type": ""
+    }
+  }
+}

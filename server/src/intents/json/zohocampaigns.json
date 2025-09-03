@@ -1,0 +1,1936 @@
+{
+  "routes": {
+    "zohocampaigns__api__v1-1__getcampaigndetails___get": {
+      "provider_intent": "zohocampaigns__api__v1-1__getcampaigndetails___get",
+      "provider_alias_intent": "/api/v1.1/getcampaigndetails",
+      "text": "Campaign Details",
+      "category": "Campaign Management",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "resfmt": {
+          "type": "string",
+          "text": "XML (or) JSON"
+        },
+        "campaigntype": {
+          "type": "string",
+          "text": "abtesting",
+          "required": true
+        },
+        "campaignkey": {
+          "type": "string",
+          "text": "Get it from recentcampaigns response",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "Campaign details: data, status, sender, lists, reports",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/getcampaigndetails",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/getcampaigndetails",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/campaign-details.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "Zohocampaigns.campaign.READ",
+      "api_endpoint_src": "{endpoint}/api/v1.1/getcampaigndetails",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__createcampaign___post": {
+      "provider_intent": "zohocampaigns__api__v1-1__createcampaign___post",
+      "provider_alias_intent": "/api/v1.1/createcampaign",
+      "text": "Create Campaign",
+      "category": "Campaign Management",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "resfmt": {
+          "type": "string",
+          "text": "XML (or) JSON"
+        },
+        "campaignname": {
+          "type": "string",
+          "text": "A name to your campaign",
+          "required": true
+        },
+        "from_email": {
+          "type": "string",
+          "text": "Email address",
+          "required": true
+        },
+        "subject": {
+          "type": "string",
+          "text": "Subject line",
+          "required": true
+        },
+        "content_url": {
+          "type": "string",
+          "text": "A valid HTML URL for your campaign content"
+        },
+        "list_details": {
+          "type": "object",
+          "text": "Get list key and segment ID from getmailinglists API",
+          "required": true
+        },
+        "topicId": {
+          "type": "string",
+          "text": "Create a campaign with contacts that belong to this topic as recipients",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "Create a campaign",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/createCampaign",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/createcampaign",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/create-campaign.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.campaign.CREATE",
+      "api_endpoint_src": "{endpoint}/api/v1.1/createCampaign",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__sendcampaign___post": {
+      "provider_intent": "zohocampaigns__api__v1-1__sendcampaign___post",
+      "provider_alias_intent": "/api/v1.1/sendcampaign",
+      "text": "Schedule Campaign",
+      "category": "Campaign Management",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "resfmt": {
+          "type": "string",
+          "text": "XML (or) JSON"
+        },
+        "campaignkey": {
+          "type": "string",
+          "text": "Get it from the recent campaign response"
+        },
+        "scheduledate": {
+          "type": "string",
+          "text": "Provide a date to schedule campaign",
+          "required": true
+        },
+        "schedulehour": {
+          "type": "number",
+          "text": "Give a preferred time",
+          "required": true
+        },
+        "scheduleminute": {
+          "type": "number",
+          "text": "Give a preferred time",
+          "required": true
+        },
+        "am_pm": {
+          "type": "string",
+          "text": "Set am or pm",
+          "required": true
+        },
+        "istimewarp": {
+          "type": "boolean",
+          "text": "Set to sender's time zone",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "sendingTZ": {
+          "type": "string",
+          "text": "Set to recipient's time zone"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "Schedule sending time for campaigns",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/sendcampaign",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/sendcampaign",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/schedule-campaign.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.contact.UPDATE",
+      "api_endpoint_src": "{endpoint}/api/v1.1/sendcampaign",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__type__clonecampaign___post": {
+      "provider_intent": "zohocampaigns__api__v1-1__type__clonecampaign___post",
+      "provider_alias_intent": "/api/v1.1/type/clonecampaign",
+      "text": "Clone Campaign",
+      "category": "Campaign Management",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "resfmt": {
+          "type": "string",
+          "text": "XML (or) JSON"
+        },
+        "campaigninfo": {
+          "type": "object",
+          "text": "It contains these internal params are campaignname,subject,from_name,from_add,reply_to,oldcampaignkey,encode_type and encode_type",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "Clone campaigns",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/type/clonecampaign",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/type/clonecampaign",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/clone-campaign.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.campaign.CREATE",
+      "api_endpoint_src": "{endpoint}/api/v1.1/type/clonecampaign",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__campaignreports___get": {
+      "provider_intent": "zohocampaigns__api__v1-1__campaignreports___get",
+      "provider_alias_intent": "/api/v1.1/campaignreports",
+      "text": "Campaign Reports",
+      "category": "Campaign Management",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "resfmt": {
+          "type": "string",
+          "text": "XML (or) JSON"
+        },
+        "campaignkey": {
+          "type": "string",
+          "text": "Get it from recentcampaigns response",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "Schedule sending time for campaigns",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/campaignreports",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/campaignreports",
+        "api_ref": "https://zoho.com/campaigns/help/developers/campaign-reports.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.campaign.READ",
+      "api_endpoint_src": "{endpoint}/api/v1.1/campaignreports",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__recentcampaigns___get": {
+      "provider_intent": "zohocampaigns__api__v1-1__recentcampaigns___get",
+      "provider_alias_intent": "/api/v1.1/recentcampaigns",
+      "text": "Recent Campaigns",
+      "category": "Campaign Management",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "resfmt": {
+          "type": "string",
+          "text": "XML (or) JSON"
+        },
+        "sort": {
+          "type": "string",
+          "text": "asc/desc"
+        },
+        "fromindex": {
+          "type": "number",
+          "text": "Default value: 1"
+        },
+        "range": {
+          "type": "number",
+          "text": "number"
+        },
+        "status": {
+          "type": "string",
+          "text": "all|all campaigns|drafts|scheduled|inprogress|sent|stopped| canceled|tobereviewed|reviewed|paused|intesting"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "See the details of the five most recent campaigns",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/recentcampaigns",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/recentcampaigns",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/recent-campaign.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.campaign.READ",
+      "api_endpoint_src": "{endpoint}/api/v1.1/recentcampaigns",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__recentsentcampaigns___get": {
+      "provider_intent": "zohocampaigns__api__v1-1__recentsentcampaigns___get",
+      "provider_alias_intent": "/api/v1.1/recentsentcampaigns",
+      "text": "Recently Sent Campaigns",
+      "category": "Campaign Management",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "resfmt": {
+          "type": "string",
+          "text": "XML (or) JSON"
+        },
+        "version": {
+          "type": "string",
+          "text": "This will fetch responses based on the current API version"
+        },
+        "limit": {
+          "type": "number",
+          "text": "Limit to fetch Recent campaigns from campaigns list",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "View the email campaign that was recently sent",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/recentsentcampaigns",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/recentsentcampaigns",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/recently-sent-campaign.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.campaign.READ",
+      "api_endpoint_src": "{endpoint}/api/v1.1/recentsentcampaigns",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__getlastcampaignreport___post": {
+      "provider_intent": "zohocampaigns__api__v1-1__getlastcampaignreport___post",
+      "provider_alias_intent": "/api/v1.1/getlastcampaignreport",
+      "text": "Last Campaign Report",
+      "category": "Campaign Management",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "resfmt": {
+          "type": "string",
+          "text": "XML (or) JSON"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "View the report for the last sent campaign",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/getlastcampaignreport",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/getlastcampaignreport",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/last-campaign-report.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.campaign.READ",
+      "api_endpoint_src": "{endpoint}/api/v1.1/getlastcampaignreport",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__getcampaignrecipientsdata___post": {
+      "provider_intent": "zohocampaigns__api__v1-1__getcampaignrecipientsdata___post",
+      "provider_alias_intent": "/api/v1.1/getcampaignrecipientsdata",
+      "text": "Get Campaign Recipients Data",
+      "category": "Campaign Management",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "resfmt": {
+          "type": "string",
+          "text": "XML (or) JSON"
+        },
+        "campaignkey": {
+          "type": "string",
+          "text": "Get it from recentcampaigns response",
+          "required": true
+        },
+        "action": {
+          "type": "string",
+          "text": "[sentcontacts|openedcontacts|optoutcontacts|spamcontacts|unopenedcontacts|clickedcontacts|senthardbounce| sentsoftbounce|unsentcontacts]",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "Get the campaign recipients' data",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/getcampaignrecipientsdata",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/getcampaignrecipientsdata",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/campaign-recipient-data.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.campaign.READ",
+      "api_endpoint_src": "{endpoint}/api/v1.1/getcampaignrecipientsdata",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__coupon__coupondetails___get": {
+      "provider_intent": "zohocampaigns__api__v1-1__coupon__coupondetails___get",
+      "provider_alias_intent": "/api/v1.1/coupon/coupondetails",
+      "text": "View Coupon Details",
+      "category": "Campaign Management",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "type": {
+          "type": "string",
+          "text": "XML (or) JSON"
+        },
+        "couponCode": {
+          "type": "string",
+          "text": "Get it from recent coupon campaign",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "View the coupon details",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/coupon/coupondetails",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/coupon/coupondetails",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/view-coupon-details.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.campaign.READ",
+      "api_endpoint_src": "{endpoint}/api/v1.1/coupon/coupondetails",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__coupon__changestatus___post": {
+      "provider_intent": "zohocampaigns__api__v1-1__coupon__changestatus___post",
+      "provider_alias_intent": "/api/v1.1/coupon/changestatus",
+      "text": "Change Coupon Status",
+      "category": "Campaign Management",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "type": {
+          "type": "string",
+          "text": "XML (or) JSON"
+        },
+        "couponCode": {
+          "type": "string",
+          "text": "Get it from recent coupon campaign",
+          "required": true
+        },
+        "changeStatus": {
+          "type": "string",
+          "text": "Give the value to update the coupon status"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "Change the status of a coupon code",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/coupon/changestatus",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/coupon/changestatus",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/change-coupon-status.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaign.campaign.UPDATE",
+      "api_endpoint_src": "{endpoint}/api/v1.1/coupon/changestatus",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__deletecampaign___post": {
+      "provider_intent": "zohocampaigns__api__v1-1__deletecampaign___post",
+      "provider_alias_intent": "/api/v1.1/deletecampaign",
+      "text": "Delete Campaign",
+      "category": "Campaign Management",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "resfmt": {
+          "type": "string",
+          "text": "XML (or) JSON"
+        },
+        "campaignkey": {
+          "type": "string",
+          "text": "Get it from recentcampaigns response",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "Delete campaigns",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/deletecampaign",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/deletecampaign",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/delete-campaign.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.campaign.DELETE",
+      "api_endpoint_src": "{endpoint}/api/v1.1/deletecampaign",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__getlistadvanceddetails___get": {
+      "provider_intent": "zohocampaigns__api__v1-1__getlistadvanceddetails___get",
+      "provider_alias_intent": "/api/v1.1/getlistadvanceddetails",
+      "text": "Get List Advanced Details",
+      "category": "List Management",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "listkey": {
+          "type": "string",
+          "text": "List Key to send a subscription mail to contacts",
+          "required": true
+        },
+        "resfmt": {
+          "type": "string",
+          "text": "XML (or) JSON"
+        },
+        "filtertype": {
+          "type": "string",
+          "text": "sentcampaigns, scheduledcampaigns, recentcampaigns"
+        },
+        "fromindex": {
+          "type": "number",
+          "text": "values are in number"
+        },
+        "range": {
+          "type": "number",
+          "text": "values are in number"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "Fetch the list based advanced details",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/getlistadvanceddetails",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/getlistadvanceddetails",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/list-advanced-details.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.contact.READ",
+      "api_endpoint_src": "{endpoint}/api/v1.1/getlistadvanceddetails",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__getmailinglists___post": {
+      "provider_intent": "zohocampaigns__api__v1-1__getmailinglists___post",
+      "provider_alias_intent": "/api/v1.1/getmailinglists",
+      "text": "Get Mailing Lists",
+      "category": "List Management",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "resfmt": {
+          "type": "string",
+          "text": "XML (or) JSON"
+        },
+        "sort": {
+          "type": "string",
+          "text": "asc/desc"
+        },
+        "fromindex": {
+          "type": "number",
+          "text": "values are in number"
+        },
+        "range": {
+          "type": "number",
+          "text": "values are in number"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "Fetch the mailing list and list details",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/getmailinglists",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/getmailinglists",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/get-mailing-lists.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.contact.READ",
+      "api_endpoint_src": "{endpoint}/api/v1.1/getmailinglists",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__getlistsubscribers___get": {
+      "provider_intent": "zohocampaigns__api__v1-1__getlistsubscribers___get",
+      "provider_alias_intent": "/api/v1.1/getlistsubscribers",
+      "text": "Get List Contacts",
+      "category": "List Management",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "listkey": {
+          "type": "string",
+          "text": "List Key to send a subscription mail to contacts",
+          "required": true
+        },
+        "resfmt": {
+          "type": "string",
+          "text": "XML (or) JSON"
+        },
+        "sort": {
+          "type": "string",
+          "text": "asc/desc"
+        },
+        "fromindex": {
+          "type": "number",
+          "text": "values are in number"
+        },
+        "range": {
+          "type": "number",
+          "text": "values are in number"
+        },
+        "status": {
+          "type": "string",
+          "text": "active/ recent/ most recent/ unsub/ bounce"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "Get the contacts based on status",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/getlistsubscribers",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/getlistsubscribers",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/get-list-subscribers.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.contact.READ",
+      "api_endpoint_src": "{endpoint}/api/v1.1/getlistsubscribers",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__contact__allfields___post": {
+      "provider_intent": "zohocampaigns__api__v1-1__contact__allfields___post",
+      "provider_alias_intent": "/api/v1.1/contact/allfields",
+      "text": "Get All Contact Fields",
+      "category": "List Management",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "type": {
+          "type": "string",
+          "text": "XML (or) JSON",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "Fetch contact fields to get profile information of contacts",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/contact/allfields",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/contact/allfields",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/get-contact-fields.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.contact.READ",
+      "api_endpoint_src": "{endpoint}/api/v1.1/contact/allfields",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__getsegmentdetails___post": {
+      "provider_intent": "zohocampaigns__api__v1-1__getsegmentdetails___post",
+      "provider_alias_intent": "/api/v1.1/getsegmentdetails",
+      "text": "Get Segment Details",
+      "category": "List Management",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "listkey": {
+          "type": "string",
+          "text": "List Key to send a subscription mail to contacts",
+          "required": true
+        },
+        "resfmt": {
+          "type": "string",
+          "text": "XML (or) JSON"
+        },
+        "cvid": {
+          "type": "number",
+          "text": "You will get cvid from getmailinglists",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "Fetch the segment details",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/getsegmentdetails",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/getsegmentdetails",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/get-segment-details.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.contact.READ",
+      "api_endpoint_src": "{endpoint}/api/v1.1/getsegmentdetails",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__getsegmentcontact___get": {
+      "provider_intent": "zohocampaigns__api__v1-1__getsegmentcontact___get",
+      "provider_alias_intent": "/api/v1.1/getsegmentcontact",
+      "text": "Get Segment Contacts",
+      "category": "List Management",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "resfmt": {
+          "type": "string",
+          "text": "XML (or) JSON"
+        },
+        "cvid": {
+          "type": "number",
+          "text": "You will get cvid from getmailinglists",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "Fetch the segment contacts",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/getsegmentcontact",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/getsegmentcontact",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/get-segment-contacts.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.contact.READ",
+      "api_endpoint_src": "{endpoint}/api/v1.1/getsegmentcontact",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__updatelistdetails___get": {
+      "provider_intent": "zohocampaigns__api__v1-1__updatelistdetails___get",
+      "provider_alias_intent": "/api/v1.1/updatelistdetails",
+      "text": "Update List",
+      "category": "List Management",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "listkey": {
+          "type": "string",
+          "text": "List Key to send a subscription mail to contacts",
+          "required": true
+        },
+        "resfmt": {
+          "type": "string",
+          "text": "XML (or) JSON"
+        },
+        "newlistname": {
+          "type": "string",
+          "text": "Give list name",
+          "required": true
+        },
+        "signupform": {
+          "type": "string",
+          "text": "public/private",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "Edit mailing list's name and allow sign-up form",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/updatelistdetails",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/updatelistdetails",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/update-list.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.contact.UPDATE",
+      "api_endpoint_src": "{endpoint}/api/v1.1/updatelistdetails",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__deletemailinglist___post": {
+      "provider_intent": "zohocampaigns__api__v1-1__deletemailinglist___post",
+      "provider_alias_intent": "/api/v1.1/deletemailinglist",
+      "text": "Delete Mailing List",
+      "category": "List Management",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "listkey": {
+          "type": "string",
+          "text": "List Key to send a subscription mail to contacts",
+          "required": true
+        },
+        "resfmt": {
+          "type": "string",
+          "text": "XML (or) JSON"
+        },
+        "deletecontacts": {
+          "type": "string",
+          "text": "on/off"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "Delete the mailing list",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/deletemailinglist",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/deletemailinglist",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/delete-list.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.contact.DELETE",
+      "api_endpoint_src": "{endpoint}/api/v1.1/deletemailinglist",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__listsubscriberscount___get": {
+      "provider_intent": "zohocampaigns__api__v1-1__listsubscriberscount___get",
+      "provider_alias_intent": "/api/v1.1/listsubscriberscount",
+      "text": "Total Contacts",
+      "category": "List Management",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "listkey": {
+          "type": "string",
+          "text": "List Key to send a subscription mail to contacts",
+          "required": true
+        },
+        "resfmt": {
+          "type": "string",
+          "text": "XML (or) JSON"
+        },
+        "status": {
+          "type": "string",
+          "text": "[active| unsub| bounce| spam]"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "View all the contacts in a mailing list",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/listsubscriberscount",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/listsubscriberscount",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/view-total-contacts.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.contact.READ",
+      "api_endpoint_src": "{endpoint}/api/v1.1/listsubscriberscount",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__type__listsubscribe___post": {
+      "provider_intent": "zohocampaigns__api__v1-1__type__listsubscribe___post",
+      "provider_alias_intent": "/api/v1.1/type/listsubscribe",
+      "text": "Subscribe",
+      "category": "List Management",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "type": {
+          "type": "string",
+          "text": "XML (or) JSON",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "listkey": {
+          "type": "string",
+          "text": "List Key to send a subscription mail to contacts",
+          "required": true
+        },
+        "resfmt": {
+          "type": "string",
+          "text": "XML (or) JSON"
+        },
+        "contactinfo": {
+          "type": "object",
+          "text": "object",
+          "required": true
+        },
+        "source": {
+          "type": "string",
+          "text": "Contact source can be added"
+        },
+        "topic_id": {
+          "type": "string",
+          "text": "Topic ID for the topic created"
+        }
+      },
+      "path": {
+        "type": {
+          "type": "string",
+          "text": "XML (or) JSON",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "Add contacts and custom fields to a list",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/[type]/listsubscribe",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/type/listsubscribe",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/contact-subscribe.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.contact.UPDATE",
+      "api_endpoint_src": "{endpoint}/api/v1.1/[type]/listsubscribe",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__type__listunsubscribe___post": {
+      "provider_intent": "zohocampaigns__api__v1-1__type__listunsubscribe___post",
+      "provider_alias_intent": "/api/v1.1/type/listunsubscribe",
+      "text": "Unsubscribe",
+      "category": "List Management",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "type": {
+          "type": "string",
+          "text": "XML (or) JSON",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "listkey": {
+          "type": "string",
+          "text": "List Key to send a subscription mail to contacts",
+          "required": true
+        },
+        "resfmt": {
+          "type": "string",
+          "text": "XML (or) JSON"
+        },
+        "contactinfo": {
+          "type": "object",
+          "text": "object",
+          "required": true
+        },
+        "topic_id": {
+          "type": "string",
+          "text": "Topic ID for the topic created"
+        }
+      },
+      "path": {
+        "type": {
+          "type": "string",
+          "text": "XML (or) JSON",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "Unsubscribe the user from a list",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/[type]/listunsubscribe",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/type/listunsubscribe",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/contact-unsubscribe.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.contact.UPDATE",
+      "api_endpoint_src": "{endpoint}/api/v1.1/[type]/listunsubscribe",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__type__contactdonotmail___post": {
+      "provider_intent": "zohocampaigns__api__v1-1__type__contactdonotmail___post",
+      "provider_alias_intent": "/api/v1.1/type/contactdonotmail",
+      "text": "Move to Do-Not-Mail",
+      "category": "List Management",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "type": {
+          "type": "string",
+          "text": "XML (or) JSON",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "resfmt": {
+          "type": "string",
+          "text": "XML (or) JSON"
+        },
+        "contactinfo": {
+          "type": "object",
+          "text": "Provide email id to be moved to Do-Not-Mail registry",
+          "required": true
+        }
+      },
+      "path": {
+        "type": {
+          "type": "string",
+          "text": "XML (or) JSON",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "Move a contact to Do-Not-Mail registry",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/[type]/contactdonotmail",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/type/contactdonotmail",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/do-not-mail.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.contact.UPDATE",
+      "api_endpoint_src": "{endpoint}/api/v1.1/[type]/contactdonotmail",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__addlistsubscribersinbulk___post": {
+      "provider_intent": "zohocampaigns__api__v1-1__addlistsubscribersinbulk___post",
+      "provider_alias_intent": "/api/v1.1/addlistsubscribersinbulk",
+      "text": "Add Contacts in Existing List",
+      "category": "List Management",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "listkey": {
+          "type": "string",
+          "text": "List Key to send a subscription mail to contacts",
+          "required": true
+        },
+        "resfmt": {
+          "type": "string",
+          "text": "XML (or) JSON"
+        },
+        "emailids": {
+          "type": "object",
+          "text": "Provide maximum of ten (10) EMAILID's comma (,) separately",
+          "required": true
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "Add contacts in existing list",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/addlistsubscribersinbulk",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/addlistsubscribersinbulk",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/add-contacts-existing-list.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.contact.CREATE",
+      "api_endpoint_src": "{endpoint}/api/v1.1/addlistsubscribersinbulk",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__addlistandcontacts___post": {
+      "provider_intent": "zohocampaigns__api__v1-1__addlistandcontacts___post",
+      "provider_alias_intent": "/api/v1.1/addlistandcontacts",
+      "text": "Add New List and Contacts",
+      "category": "List Management",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "resfmt": {
+          "type": "string",
+          "text": "XML (or) JSON"
+        },
+        "emailids": {
+          "type": "object",
+          "text": "Provide maximum of ten (10) EMAILID's comma (,) separately",
+          "required": true
+        },
+        "listname": {
+          "type": "string",
+          "text": "Provide your list name",
+          "required": true
+        },
+        "signupform": {
+          "type": "string",
+          "text": "public/private",
+          "required": true
+        },
+        "mode": {
+          "type": "string",
+          "text": "newlist",
+          "required": true
+        },
+        "listdescription": {
+          "type": "string",
+          "text": "Provide a description for your list"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "Add new list and contacts in the list",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/addlistandcontacts",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/addlistandcontacts",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/add-new-list-contact.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.contact.CREATE",
+      "api_endpoint_src": "{endpoint}/api/v1.1/addlistandcontacts",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__custom__add___post": {
+      "provider_intent": "zohocampaigns__api__v1-1__custom__add___post",
+      "provider_alias_intent": "/api/v1.1/custom/add",
+      "text": "Create Custom Fields",
+      "category": "List Management",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "type": {
+          "type": "string",
+          "text": "XML (or) JSON",
+          "required": true
+        },
+        "fieldname": {
+          "type": "string",
+          "text": "Alphanumeric",
+          "required": true
+        },
+        "fieldtype": {
+          "type": "string",
+          "text": "[Text|Integer|Phone|Date|Picklist|Email|Checkbox|LongInteger|URL|textarea|RadioOption|Multiselect|DateTime|Decimal|Percent]",
+          "required": true
+        },
+        "fieldlength": {
+          "type": "number",
+          "text": "This lets you to set length of the field. Default value is 20"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "Create custom fields for contacts",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/custom/add",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/custom/add",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/create-custom-field.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.contact.CREATE",
+      "api_endpoint_src": "{endpoint}/api/v1.1/custom/add",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__merge__create___post": {
+      "provider_intent": "zohocampaigns__api__v1-1__merge__create___post",
+      "provider_alias_intent": "/api/v1.1/merge/create",
+      "text": "Create Merge Tags",
+      "category": "List Management",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "type": {
+          "type": "string",
+          "text": "XML (or) JSON",
+          "required": true
+        },
+        "fieldname": {
+          "type": "string",
+          "text": "Alphanumeric",
+          "required": true
+        },
+        "tagtype": {
+          "type": "string",
+          "text": "Custom",
+          "required": true
+        },
+        "fieldtype": {
+          "type": "string",
+          "text": "Field Type",
+          "required": true
+        },
+        "mailvalue": {
+          "type": "string",
+          "text": "Give a default value for the tag to be used in email content"
+        },
+        "socialvalue": {
+          "type": "string",
+          "text": "Give a default value for the tag to be used in email content of social campaigns"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "Create merge tags",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/merge/create",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/merge/create",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/merge-tags.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.campaign.CREATE",
+      "api_endpoint_src": "{endpoint}/api/v1.1/merge/create",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__topics___post": {
+      "provider_intent": "zohocampaigns__api__v1-1__topics___post",
+      "provider_alias_intent": "/api/v1.1/topics",
+      "text": "Create Topics",
+      "category": "Topic Management",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "topic_desc": {
+          "type": "string",
+          "text": "A description about the topic",
+          "required": true
+        },
+        "topic_name": {
+          "type": "string",
+          "text": "Name of the topic to be created",
+          "required": true
+        },
+        "product_id": {
+          "type": "string",
+          "text": "Product ID of the topic associated to contacts"
+        }
+      },
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "Create new topics ",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/topics",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/topics",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/create-topics.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.contact.CREATE ",
+      "api_endpoint_src": "{endpoint}/api/v1.1/topics",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__topics___get": {
+      "provider_intent": "zohocampaigns__api__v1-1__topics___get",
+      "provider_alias_intent": "/api/v1.1/topics",
+      "text": "Get Topics",
+      "category": "Topic Management",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "from_index": {
+          "type": "number",
+          "text": "Range of topics to be returned to the user"
+        },
+        "range": {
+          "type": "number",
+          "text": "Range of topics to be returned to the user"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "Get a list of all topics",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/topics",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/topics",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/get-topics.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.contact.READ",
+      "api_endpoint_src": "{endpoint}/api/v1.1/topics",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__topics__products___get": {
+      "provider_intent": "zohocampaigns__api__v1-1__topics__products___get",
+      "provider_alias_intent": "/api/v1.1/topics/products",
+      "text": "Get Product",
+      "category": "Topic Management",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "from_index": {
+          "type": "number",
+          "text": "Range of topics to be returned to the user"
+        },
+        "range": {
+          "type": "number",
+          "text": "Range of topics to be returned to the user"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "Get a list of products",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/topics/products",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/topics/products",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/get-product.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.contact.READ",
+      "api_endpoint_src": "{endpoint}/api/v1.1/topics/products",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__workflow___get": {
+      "provider_intent": "zohocampaigns__api__v1-1__workflow___get",
+      "provider_alias_intent": "/api/v1.1/workflow",
+      "text": "Get open custom workflows",
+      "category": "Workflow Management",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "details": {
+          "type": "string",
+          "text": "It is a JSON Object containing key-value data of the following details: page, limit, sort_order, user, trigger_type"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "List open custom organization workflows",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/workflow",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/workflow",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/get-open-custom-workflows.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.workflow.READ",
+      "api_endpoint_src": "{endpoint}/api/v1.1/workflow",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "zohocampaigns__api__v1-1__workflow__custom_workflow_key__action__trigger___post": {
+      "provider_intent": "zohocampaigns__api__v1-1__workflow__custom_workflow_key__action__trigger___post",
+      "provider_alias_intent": "/api/v1.1/workflow/custom_workflow_key/action/trigger",
+      "text": "Trigger contacts",
+      "category": "Workflow Management",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "custom_workflow_key": {
+          "type": "string",
+          "text": "Custom Workflow key",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "details": {
+          "type": "object",
+          "text": "It is a JSON Object containing key-value data of the following details: contact_email, triggerkey, triggerkey, lead_email"
+        }
+      },
+      "path": {
+        "custom_workflow_key": {
+          "type": "string",
+          "text": "Custom Workflow key",
+          "required": true
+        }
+      },
+      "domain_params": {
+        "endpoint": {
+          "type": "string",
+          "replace_key": "{endpoint}"
+        }
+      },
+      "meta": {
+        "version": "v1.1",
+        "auth": [],
+        "description": "Trigger/Add your contacts into custom workflows",
+        "rate_limit": [],
+        "api_endpoint": "{endpoint}/api/v1.1/workflow/[custom_workflow_key]/action/trigger",
+        "alias_endpoint": "/zohocampaigns/api/v1.1/workflow/custom_workflow_key/action/trigger",
+        "api_ref": "https://www.zoho.com/campaigns/help/developers/trigger-contacts.html"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Zoho-oauthtoken",
+          "authKey": "accessToken"
+        }
+      },
+      "response_type": "",
+      "wip": 0,
+      "scope": "ZohoCampaigns.workflow.CREATE",
+      "api_endpoint_src": "{endpoint}/api/v1.1/workflow/[custom workflowkey]/action/trigger",
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

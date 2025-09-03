@@ -1,0 +1,474 @@
+{
+  "routes": {
+    "olamaps__routing__v1__directions___post": {
+      "provider_intent": "olamaps__routing__v1__directions___post",
+      "provider_alias_intent": "/routing/v1/directions",
+      "text": "Provides routable path between two or more points",
+      "category": "Directions API",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "origin": {
+          "type": "string",
+          "text": "Destination coordinates in the format lat,lng e.g: 12.993103152916301,77.54332622119354",
+          "required": true
+        },
+        "destination": {
+          "type": "string",
+          "text": "Origin coordinates in the format lat,lng e.g: 12.972006793201695,77.5800850011884",
+          "required": true
+        },
+        "waypoints": {
+          "type": "string",
+          "text": "Waypoints joined by separator (currently '|'). supported as lat,lng pairs - 12.938399,77.632873|12.938041,77.628285"
+        },
+        "alternatives": {
+          "type": "boolean",
+          "text": "True if multiple routes are needed between source and destination. Default value : false",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "steps": {
+          "type": "boolean",
+          "text": "True if steps are needed between source and destination. Default value : true",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "overview": {
+          "type": "string",
+          "text": "Overview geometry either full, simplified or false according to highest zoom level it could be displayed on, or not at all. Default value : full"
+        },
+        "language": {
+          "type": "string",
+          "text": "Language in which the response is expected. At the moment following languages are supported - kn (Kannada), en (English) and hi (Hindi). Default value : en"
+        },
+        "traffic_metadata": {
+          "type": "boolean",
+          "text": "If this field is true, traffic metadata would be sent in the response which will contain type of congestion. (travel_advisory data will only come in response if overview is passed as 'full'). Default value : false",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Provides routable path between two or more points. Accepts coordinates in lat,long format",
+        "rate_limit": [],
+        "api_endpoint": "https://api.olamaps.io/routing/v1/directions",
+        "alias_endpoint": "/olamaps/routing/v1/directions",
+        "api_ref": "https://maps.olakrutrim.com/apidocs/routing"
+      },
+      "auth": {
+        "query": [
+          "api_key"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "olamaps__tiles__vector__v1__data__dataset_name-json___get": {
+      "provider_intent": "olamaps__tiles__vector__v1__data__dataset_name-json___get",
+      "provider_alias_intent": "/tiles/vector/v1/data/dataset_name.json",
+      "text": "List of all the data sets",
+      "category": "Map Tiles",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "dataset_name": {
+          "type": "string",
+          "text": "Name of the dataset",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "dataset_name": {
+          "type": "string",
+          "text": "Name of the dataset",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "List of all the data sets that are available for the tiling service",
+        "rate_limit": [],
+        "api_endpoint": "https://api.olamaps.io/tiles/vector/v1/data/{dataset_name}.json",
+        "alias_endpoint": "/olamaps/tiles/vector/v1/data/dataset_name.json",
+        "api_ref": "https://maps.olakrutrim.com/apidocs/tiles"
+      },
+      "auth": {
+        "query": [
+          "api_key"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "olamaps__tiles__vector__v1__data__dataset_name__tiles_zoom__tiles_column__tiles_row-pbf___get": {
+      "provider_intent": "olamaps__tiles__vector__v1__data__dataset_name__tiles_zoom__tiles_column__tiles_row-pbf___get",
+      "provider_alias_intent": "/tiles/vector/v1/data/dataset_name/tiles_zoom/tiles_column/tiles_row.pbf",
+      "text": "Returns the PBF file for data",
+      "category": "Map Tiles",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "dataset_name": {
+          "type": "string",
+          "text": "Name of the dataset",
+          "required": true
+        },
+        "tiles_zoom": {
+          "type": "number",
+          "text": "Mercator tiles's zoom level. Example : 14",
+          "required": true
+        },
+        "tiles_column": {
+          "type": "number",
+          "text": "Specifies the tile's column {x}, as described in the Slippy Map Tilenames specification. Example : 110",
+          "required": true
+        },
+        "tiles_row": {
+          "type": "number",
+          "text": "Specifies the tile's row {y}, as described in the Slippy Map Tilenames specification. Example : 1010",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "dataset_name": {
+          "type": "string",
+          "text": "Name of the dataset",
+          "required": true
+        },
+        "tiles_zoom": {
+          "type": "number",
+          "text": "Mercator tiles's zoom level. Example : 14",
+          "required": true
+        },
+        "tiles_column": {
+          "type": "number",
+          "text": "Specifies the tile's column {x}, as described in the Slippy Map Tilenames specification. Example : 110",
+          "required": true
+        },
+        "tiles_row": {
+          "type": "number",
+          "text": "Specifies the tile's row {y}, as described in the Slippy Map Tilenames specification. Example : 1010",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Returns the PBF file for data",
+        "rate_limit": [],
+        "api_endpoint": "https://api.olamaps.io/tiles/vector/v1/data/{dataset_name}/{tiles_zoom}/{tiles_column}/{tiles_row}.pbf",
+        "alias_endpoint": "/olamaps/tiles/vector/v1/data/dataset_name/tiles_zoom/tiles_column/tiles_row.pbf",
+        "api_ref": "https://maps.olakrutrim.com/apidocs/tiles"
+      },
+      "auth": {
+        "query": [
+          "api_key"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "olamaps__tiles__vector__v1__styles-json___get": {
+      "provider_intent": "olamaps__tiles__vector__v1__styles-json___get",
+      "provider_alias_intent": "/tiles/vector/v1/styles.json",
+      "text": "Provides array of objects for all styles",
+      "category": "Map Tiles",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Provides array of objects for all styles",
+        "rate_limit": [],
+        "api_endpoint": "https://api.olamaps.io/tiles/vector/v1/styles.json",
+        "alias_endpoint": "/olamaps/tiles/vector/v1/styles.json",
+        "api_ref": "https://maps.olakrutrim.com/apidocs/tiles"
+      },
+      "auth": {
+        "query": [
+          "api_key"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "olamaps__tiles__vector__v1__styles__style_name__style-json___get": {
+      "provider_intent": "olamaps__tiles__vector__v1__styles__style_name__style-json___get",
+      "provider_alias_intent": "/tiles/vector/v1/styles/style_name/style.json",
+      "text": "Get detail of a style",
+      "category": "Map Tiles",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "style_name": {
+          "type": "string",
+          "text": "Name of the style. Example : default-light-standard",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "style_name": {
+          "type": "string",
+          "text": "Name of the style. Example : default-light-standard",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Provides array of objects for all styles that clients (mapbox/leaflet/deck gl/maplibre) will consume for the styled layers",
+        "rate_limit": [],
+        "api_endpoint": "https://api.olamaps.io/tiles/vector/v1/styles/{style_name}/style.json",
+        "alias_endpoint": "/olamaps/tiles/vector/v1/styles/style_name/style.json",
+        "api_ref": "https://maps.olakrutrim.com/apidocs/tiles"
+      },
+      "auth": {
+        "query": [
+          "api_key"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "olamaps__tiles__vector__v1__fonts__fontstack__start_tile-end_tile-pbf___get": {
+      "provider_intent": "olamaps__tiles__vector__v1__fonts__fontstack__start_tile-end_tile-pbf___get",
+      "provider_alias_intent": "/tiles/vector/v1/fonts/fontstack/start_tile-end_tile.pbf",
+      "text": "Access font glyph ranges",
+      "category": "Map Tiles",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "fontstack": {
+          "type": "string",
+          "text": "Name of the Font Stack. Example : Noto%20Sans%20Bold",
+          "required": true
+        },
+        "start_tile": {
+          "type": "number",
+          "text": "Start tile number. Example : 0",
+          "required": true
+        },
+        "end_tile": {
+          "type": "number",
+          "text": "End tile number. Example : 0",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "fontstack": {
+          "type": "string",
+          "text": "Name of the Font Stack. Example : Noto%20Sans%20Bold",
+          "required": true
+        },
+        "start_tile": {
+          "type": "number",
+          "text": "Start tile number. Example : 0",
+          "required": true
+        },
+        "end_tile": {
+          "type": "number",
+          "text": "End tile number. Example : 0",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "To show fonts at a variety of scales and rotations",
+        "rate_limit": [],
+        "api_endpoint": "https://api.olamaps.io/tiles/vector/v1/fonts/{fontstack}/{start_tile}-{end_tile}.pbf",
+        "alias_endpoint": "/olamaps/tiles/vector/v1/fonts/fontstack/start_tile-end_tile.pbf",
+        "api_ref": "https://maps.olakrutrim.com/apidocs/tiles"
+      },
+      "auth": {
+        "query": [
+          "api_key"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "olamaps__places__v1__autocomplete___get": {
+      "provider_intent": "olamaps__places__v1__autocomplete___get",
+      "provider_alias_intent": "/places/v1/autocomplete",
+      "text": "Provides Autocomplete suggestions for a given substring",
+      "category": "Search API",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "input": {
+          "type": "string",
+          "text": "The text string on which to search. The Place Autocomplete service will return candidate matches based on this string and order results based on their perceived relevance. Example: kempe",
+          "required": true
+        },
+        "origin": {
+          "type": "string",
+          "text": "The origin point from which to calculate straight-line distance to the destination (returned as distance_meters). If this value is omitted, straight-line distance will be calculated from the provided user location. Must be specified as latitude,longitude. Example: 12.931316595874005,77.61649243443775"
+        },
+        "location": {
+          "type": "string",
+          "text": "The point around which to retrieve place information. This must be specified as latitude,longitude. Example: 12.931316595874005,77.61649243443775"
+        },
+        "radius": {
+          "type": "number",
+          "text": "Defines the distance (in meters) within which to return place results. This is obeyed when the param strictbounds is set to true"
+        },
+        "strictbounds": {
+          "type": "boolean",
+          "text": "Returns only those places that are strictly within the radius defined by location and radius. This is a restriction, rather than a bias, meaning that results outside this radius will not be returned even if they match the user input",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Provides Autocomplete suggestions for a given substring satisfying the given criteria",
+        "rate_limit": [],
+        "api_endpoint": "https://api.olamaps.io/places/v1/autocomplete",
+        "alias_endpoint": "/olamaps/places/v1/autocomplete",
+        "api_ref": "https://maps.olakrutrim.com/apidocs/places"
+      },
+      "auth": {
+        "query": [
+          "api_key"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "olamaps__places__v1__geocode___get": {
+      "provider_intent": "olamaps__places__v1__geocode___get",
+      "provider_alias_intent": "/places/v1/geocode",
+      "text": "Get geocoded address",
+      "category": "Search API",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "address": {
+          "type": "string",
+          "text": "The address to be geocoded. It cannot be empty.",
+          "required": true
+        },
+        "bounds": {
+          "type": "string",
+          "text": "Pipe ('|') separated lat,lng pairs of two corner points of a bounding box. Example: 12.905004590071838,77.60793990913315|12.90221233024448,77.60555810753645"
+        },
+        "language": {
+          "type": "string",
+          "text": "The language in which to return the results. Currently only accepts English. Default value: English"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Returns the geocoded address based on the provided parameters",
+        "rate_limit": [],
+        "api_endpoint": "https://api.olamaps.io/places/v1/geocode",
+        "alias_endpoint": "/olamaps/places/v1/geocode",
+        "api_ref": "https://maps.olakrutrim.com/apidocs/places"
+      },
+      "auth": {
+        "query": [
+          "api_key"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "olamaps__places__v1__reverse-geocode___get": {
+      "provider_intent": "olamaps__places__v1__reverse-geocode___get",
+      "provider_alias_intent": "/places/v1/reverse-geocode",
+      "text": "Provides information of a place based on the location provided",
+      "category": "Search API",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "latlng": {
+          "type": "string",
+          "text": "The coordinates of which you want to do the reverse geocoding to get the address. Example : 12.931316595874005,77.61649243443775.",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "{}",
+        "auth": [],
+        "description": "Provides information of a place based on the location provided satisfying the given criteria",
+        "rate_limit": [],
+        "api_endpoint": "https://api.olamaps.io/places/v1/reverse-geocode",
+        "alias_endpoint": "/olamaps/places/v1/reverse-geocode",
+        "api_ref": "https://maps.olakrutrim.com/apidocs/places"
+      },
+      "auth": {
+        "query": [
+          "api_key"
+        ]
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}

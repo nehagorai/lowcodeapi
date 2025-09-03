@@ -1,0 +1,1922 @@
+{
+  "routes": {
+    "lilt__v2__create___get": {
+      "provider_intent": "lilt__v2__create___get",
+      "provider_alias_intent": "/v2/create",
+      "text": "Get Lilt Create content",
+      "category": "Create",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Create/operation/getLiltCreateContent",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Get Lilt Create content",
+        "api_endpoint": "https://api.lilt.com/v2/create",
+        "alias_endpoint": "/lilt/v2/create"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__create___post": {
+      "provider_intent": "lilt__v2__create___post",
+      "provider_alias_intent": "/v2/create",
+      "text": "Generate new Lilt Create content",
+      "category": "Create",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "name": {
+          "text": "A name for the request content",
+          "type": "string"
+        },
+        "language": {
+          "text": "The language of the content",
+          "type": "string",
+          "required": true
+        },
+        "template": {
+          "text": "The template of the conten",
+          "type": "string",
+          "required": true
+        },
+        "preferences": {
+          "text": "The preferences of the content",
+          "type": "object"
+        },
+        "templateParams": {
+          "text": "The template parameters of the content",
+          "type": "object",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Create/operation/generateLiltCreateContent",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Generate new Lilt Create content",
+        "api_endpoint": "https://api.lilt.com/v2/create",
+        "alias_endpoint": "/lilt/v2/create"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__create__contentid___get": {
+      "provider_intent": "lilt__v2__create__contentid___get",
+      "provider_alias_intent": "/v2/create/contentid",
+      "text": "Get Lilt Create content by ID",
+      "category": "Create",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "contentId": {
+          "text": "The content ID",
+          "type": "number",
+          "required": true
+        }
+      },
+      "path": {
+        "contentId": {
+          "text": "The content ID",
+          "type": "number",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Create/operation/getLiltCreateById",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Get Lilt Create content by ID",
+        "api_endpoint": "https://api.lilt.com/v2/create/{contentId}",
+        "alias_endpoint": "/lilt/v2/create/contentid"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__create__terms-and-conditions___post": {
+      "provider_intent": "lilt__v2__create__terms-and-conditions___post",
+      "provider_alias_intent": "/v2/create/terms-and-conditions",
+      "text": "Sign the Lilt Create terms and conditions",
+      "category": "Create",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "signedAgreement": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "Signifies that the Organization has signed the agreement or not",
+          "type": "boolean",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Create/operation/signLiltCreateTerms",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Sign the Lilt Create terms and conditions",
+        "api_endpoint": "https://api.lilt.com/v2/create/terms-and-conditions",
+        "alias_endpoint": "/lilt/v2/create/terms-and-conditions"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__create__preferences___put": {
+      "provider_intent": "lilt__v2__create__preferences___put",
+      "provider_alias_intent": "/v2/create/preferences",
+      "text": "Update Lilt Create preferences",
+      "category": "Create",
+      "method": "PUT",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "id": {
+          "text": "A unique identifier for the generated content",
+          "type": "number"
+        },
+        "name": {
+          "text": "A name for the request content",
+          "type": "string"
+        },
+        "language": {
+          "text": "The language of the content",
+          "type": "string",
+          "required": true
+        },
+        "template": {
+          "text": "The template of the conten",
+          "type": "string",
+          "required": true
+        },
+        "preferences": {
+          "text": "The preferences of the content",
+          "type": "object"
+        },
+        "templateParams": {
+          "text": "The template parameters of the content",
+          "type": "object",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Create/operation/updateLiltCreatePreferences",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Update Lilt Create preferences",
+        "api_endpoint": "https://api.lilt.com/v2/create/preferences",
+        "alias_endpoint": "/lilt/v2/create/preferences"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__create__contentid___put": {
+      "provider_intent": "lilt__v2__create__contentid___put",
+      "provider_alias_intent": "/v2/create/contentid",
+      "text": "Update Lilt Create content",
+      "category": "Create",
+      "method": "PUT",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "contentId": {
+          "text": "The content ID",
+          "type": "number",
+          "required": true
+        }
+      },
+      "path": {
+        "contentId": {
+          "text": "The content ID",
+          "type": "number",
+          "required": true
+        }
+      },
+      "body": {
+        "id": {
+          "text": "A unique identifier for the generated content",
+          "type": "number"
+        },
+        "name": {
+          "text": "A name for the request content",
+          "type": "string"
+        },
+        "language": {
+          "text": "The language of the content",
+          "type": "string",
+          "required": true
+        },
+        "template": {
+          "text": "The template of the conten",
+          "type": "string",
+          "required": true
+        },
+        "preferences": {
+          "text": "The preferences of the content",
+          "type": "object"
+        },
+        "templateParams": {
+          "text": "The template parameters of the content",
+          "type": "object",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Create/operation/updateLiltCreateContent",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Update Lilt Create content",
+        "api_endpoint": "https://api.lilt.com/v2/create/{contentId}",
+        "alias_endpoint": "/lilt/v2/create/contentid"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__create__preferences___get": {
+      "provider_intent": "lilt__v2__create__preferences___get",
+      "provider_alias_intent": "/v2/create/preferences",
+      "text": "Get Lilt Create preferences",
+      "category": "Create",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Create/operation/getLiltCreatePreferences",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Get Lilt Create preferences",
+        "api_endpoint": "https://api.lilt.com/v2/create/preferences",
+        "alias_endpoint": "/lilt/v2/create/preferences"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__create__contentid__create___get": {
+      "provider_intent": "lilt__v2__create__contentid__create___get",
+      "provider_alias_intent": "/v2/create/contentid/create",
+      "text": "Regenerate Lilt Create content",
+      "category": "Create",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "contentId": {
+          "text": "The content ID",
+          "type": "number",
+          "required": true
+        }
+      },
+      "path": {
+        "contentId": {
+          "text": "The content ID",
+          "type": "number",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Create/operation/regenerateLiltCreateContent",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Regenerate Lilt Create content",
+        "api_endpoint": "https://api.lilt.com/v2/create/{contentId}/create",
+        "alias_endpoint": "/lilt/v2/create/contentid/create"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__create__contentid___delete": {
+      "provider_intent": "lilt__v2__create__contentid___delete",
+      "provider_alias_intent": "/v2/create/contentid",
+      "text": "Delete Lilt Create content",
+      "category": "Create",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "contentId": {
+          "text": "The content ID",
+          "type": "number",
+          "required": true
+        }
+      },
+      "path": {
+        "contentId": {
+          "text": "The content ID",
+          "type": "number",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Create/operation/deleteLiltCreateContent",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Delete Lilt Create content",
+        "api_endpoint": "https://api.lilt.com/v2/create/{contentId}",
+        "alias_endpoint": "/lilt/v2/create/contentid"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__documents__files___post": {
+      "provider_intent": "lilt__v2__documents__files___post",
+      "provider_alias_intent": "/v2/documents/files",
+      "text": "Upload a File",
+      "category": "Documents",
+      "method": "POST",
+      "type": "UPLOAD",
+      "request_type": "UPLOAD",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Documents/operation/uploadDocument",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Upload a File",
+        "api_endpoint": "https://api.lilt.com/v2/documents/files",
+        "alias_endpoint": "/lilt/v2/documents/files"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__files___post": {
+      "provider_intent": "lilt__v2__files___post",
+      "provider_alias_intent": "/v2/files",
+      "text": "Upload a File",
+      "category": "Files",
+      "method": "POST",
+      "type": "UPLOAD",
+      "request_type": "UPLOAD",
+      "params": {
+        "name": {
+          "text": "A file name",
+          "type": "string",
+          "required": true
+        },
+        "labels": {
+          "text": "Comma-separated list of labels to add to the uploaded document",
+          "type": "string"
+        },
+        "langId": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "Flag indicating whether to perform language detection on the uploaded file. Default is false",
+          "type": "boolean"
+        },
+        "category": {
+          "text": "The category of the file. The options are REFERENCE, or API. The default is API.",
+          "type": "string"
+        },
+        "file_hash": {
+          "text": "A hash value to associate with the file.",
+          "type": "string"
+        },
+        "project_id": {
+          "text": "The project to associate the uploaded file with",
+          "type": "number"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Files/operation/uploadFile",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Upload a File",
+        "api_endpoint": "https://api.lilt.com/v2/files",
+        "alias_endpoint": "/lilt/v2/files"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__files___get": {
+      "provider_intent": "lilt__v2__files___get",
+      "provider_alias_intent": "/v2/files",
+      "text": "Retrieve a File",
+      "category": "Files",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "id": {
+          "text": "A unique File identifier.",
+          "type": "number"
+        },
+        "labels": {
+          "text": "One or more labels. This will return the files which contain all of the given labels",
+          "type": "array"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Files/operation/getFiles",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Retrieve a File",
+        "api_endpoint": "https://api.lilt.com/v2/files",
+        "alias_endpoint": "/lilt/v2/files"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__documents__files___get": {
+      "provider_intent": "lilt__v2__documents__files___get",
+      "provider_alias_intent": "/v2/documents/files",
+      "text": "Download a Document",
+      "category": "Documents",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "id": {
+          "text": "A unique Project identifier.",
+          "type": "number",
+          "required": true
+        },
+        "is_xliff": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "Download the document in XLIFF 1.2 format,Default: true",
+          "type": "boolean"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Documents/operation/downloadDocument",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Download a Document",
+        "api_endpoint": "https://api.lilt.com/v2/documents/files",
+        "alias_endpoint": "/lilt/v2/documents/files"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__files___delete": {
+      "provider_intent": "lilt__v2__files___delete",
+      "provider_alias_intent": "/v2/files",
+      "text": "Delete a File",
+      "category": "Files",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "id": {
+          "text": "A unique File identifier",
+          "type": "number",
+          "required": true
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Files/operation/deleteFile",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Delete a File",
+        "api_endpoint": "https://api.lilt.com/v2/files",
+        "alias_endpoint": "/lilt/v2/files"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__files__download___get": {
+      "provider_intent": "lilt__v2__files__download___get",
+      "provider_alias_intent": "/v2/files/download",
+      "text": "Download file",
+      "category": "Files",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "id": {
+          "text": "A File id",
+          "type": "number",
+          "required": true
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Files/operation/download",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Download file",
+        "api_endpoint": "https://api.lilt.com/v2/files/download",
+        "alias_endpoint": "/lilt/v2/files/download"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__files__labels___post": {
+      "provider_intent": "lilt__v2__files__labels___post",
+      "provider_alias_intent": "/v2/files/labels",
+      "text": "Add Label to File",
+      "category": "Files",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "id": {
+          "text": "A File id",
+          "type": "string",
+          "required": true
+        }
+      },
+      "path": {},
+      "body": {
+        "name": {
+          "text": "The Label name",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Files/operation/addLabel",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Add Label to File",
+        "api_endpoint": "https://api.lilt.com/v2/files/labels",
+        "alias_endpoint": "/lilt/v2/files/labels"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__files__labels___delete": {
+      "provider_intent": "lilt__v2__files__labels___delete",
+      "provider_alias_intent": "/v2/files/labels",
+      "text": "Remove Label from File",
+      "category": "Files",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "id": {
+          "text": "A File id",
+          "type": "string",
+          "required": true
+        },
+        "name": {
+          "text": "A label name",
+          "type": "string",
+          "required": true
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Files/operation/removeLabel",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Remove Label from File",
+        "api_endpoint": "https://api.lilt.com/v2/files/labels",
+        "alias_endpoint": "/lilt/v2/files/labels"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__jobs___get": {
+      "provider_intent": "lilt__v2__jobs___get",
+      "provider_alias_intent": "/v2/jobs",
+      "text": "Retrieve all Jobs",
+      "category": "Jobs",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "limit": {
+          "text": "The maximum number of jobs to be returned",
+          "type": "number"
+        },
+        "offset": {
+          "text": "Return jobs starting at the offset row",
+          "type": "number"
+        },
+        "isArchived": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "Retrieves all jobs that are archived",
+          "type": "boolean"
+        },
+        "isDelivered": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "Retrieves all jobs that are delivered",
+          "type": "boolean"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Jobs/operation/retrieveAllJobs",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Retrieve all Jobs",
+        "api_endpoint": "https://api.lilt.com/v2/jobs",
+        "alias_endpoint": "/lilt/v2/jobs"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__jobs___post": {
+      "provider_intent": "lilt__v2__jobs___post",
+      "provider_alias_intent": "/v2/jobs",
+      "text": "Create a Job",
+      "category": "Jobs",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "due": {
+          "text": "An ISO string date representing job due date",
+          "type": "string"
+        },
+        "name": {
+          "text": "A name for the Job",
+          "type": "string",
+          "required": true
+        },
+        "fileIds": {
+          "text": "A list of file ids to upload to job creation",
+          "type": "array"
+        },
+        "srcLang": {
+          "text": "2-letter ISO source language code",
+          "type": "string",
+          "required": true
+        },
+        "isPlural": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "A boolean value representing if the files have plurals",
+          "type": "boolean"
+        },
+        "srcLocale": {
+          "text": "2-letter source language code",
+          "type": "string",
+          "required": true
+        },
+        "languagePairs": {
+          "text": "Language pairs is a set of one or more pairs that includes source language, source locale(optional), target language, target locale(optional), and memoryId.",
+          "type": "array",
+          "required": true
+        },
+        "workflowTemplateId": {
+          "text": "Identifier of the workflow template to be used when creating a job.",
+          "type": "number"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Jobs/operation/createJob",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Create a Job",
+        "api_endpoint": "https://api.lilt.com/v2/jobs",
+        "alias_endpoint": "/lilt/v2/jobs"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__jobs__jobid___get": {
+      "provider_intent": "lilt__v2__jobs__jobid___get",
+      "provider_alias_intent": "/v2/jobs/jobid",
+      "text": "Retrieve a Job",
+      "category": "Jobs",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "jobId": {
+          "text": "A job id",
+          "type": "number",
+          "required": true
+        }
+      },
+      "path": {
+        "jobId": {
+          "text": "A job id",
+          "type": "number",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Jobs/operation/getJob",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Retrieve a Job",
+        "api_endpoint": "https://api.lilt.com/v2/jobs/{jobId}",
+        "alias_endpoint": "/lilt/v2/jobs/jobid"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__jobs__jobid__stats___post": {
+      "provider_intent": "lilt__v2__jobs__jobid__stats___post",
+      "provider_alias_intent": "/v2/jobs/jobid/stats",
+      "text": "Retrieve Job Leverage Stats",
+      "category": "Jobs",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "jobId": {
+          "text": "A job id",
+          "type": "number",
+          "required": true
+        }
+      },
+      "path": {
+        "jobId": {
+          "text": "A job id",
+          "type": "number",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Jobs/operation/getJobLeverageStats",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Retrieve Job Leverage Stats",
+        "api_endpoint": "https://api.lilt.com/v2/jobs/{jobId}/stats",
+        "alias_endpoint": "/lilt/v2/jobs/jobid/stats"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__jobs__jobid___delete": {
+      "provider_intent": "lilt__v2__jobs__jobid___delete",
+      "provider_alias_intent": "/v2/jobs/jobid",
+      "text": "Delete a Job",
+      "category": "Jobs",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "jobId": {
+          "text": "A job id",
+          "type": "number",
+          "required": true
+        }
+      },
+      "path": {
+        "jobId": {
+          "text": "A job id",
+          "type": "number",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Jobs/operation/deleteJob",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Delete a Job",
+        "api_endpoint": "https://api.lilt.com/v2/jobs/{jobId}",
+        "alias_endpoint": "/lilt/v2/jobs/jobid"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__jobs__jobid__archive___post": {
+      "provider_intent": "lilt__v2__jobs__jobid__archive___post",
+      "provider_alias_intent": "/v2/jobs/jobid/archive",
+      "text": "Archive a Job",
+      "category": "Jobs",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "jobId": {
+          "text": "A job id",
+          "type": "number",
+          "required": true
+        }
+      },
+      "path": {
+        "jobId": {
+          "text": "A job id",
+          "type": "number",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Jobs/operation/archiveJob",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Archive a Job",
+        "api_endpoint": "https://api.lilt.com/v2/jobs/{jobId}/archive",
+        "alias_endpoint": "/lilt/v2/jobs/jobid/archive"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__jobs__jobid___put": {
+      "provider_intent": "lilt__v2__jobs__jobid___put",
+      "provider_alias_intent": "/v2/jobs/jobid",
+      "text": "Update a Job",
+      "category": "Jobs",
+      "method": "PUT",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "jobId": {
+          "text": "A job id",
+          "type": "number",
+          "required": true
+        }
+      },
+      "path": {
+        "jobId": {
+          "text": "A job id",
+          "type": "number",
+          "required": true
+        }
+      },
+      "body": {
+        "name": {
+          "text": "A name for the Job.",
+          "type": "string",
+          "required": true
+        },
+        "dueDate": {
+          "text": "An ISO string date",
+          "type": "number"
+        },
+        "isProcessing": {
+          "enum": [
+            "0",
+            "1",
+            "-2"
+          ],
+          "text": "The processing status of the job. Provide one of the following integers to indicate the status.",
+          "type": "enum"
+        },
+        "processingErrorMsg": {
+          "text": "The processing error message",
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Jobs/operation/updateJob",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Update a Job",
+        "api_endpoint": "https://api.lilt.com/v2/jobs/{jobId}",
+        "alias_endpoint": "/lilt/v2/jobs/jobid"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__jobs__jobid__unarchive___post": {
+      "provider_intent": "lilt__v2__jobs__jobid__unarchive___post",
+      "provider_alias_intent": "/v2/jobs/jobid/unarchive",
+      "text": "Unarchive a Job",
+      "category": "Jobs",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "jobId": {
+          "text": "A job id",
+          "type": "number",
+          "required": true
+        }
+      },
+      "path": {
+        "jobId": {
+          "text": "A job id",
+          "type": "number",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Jobs/operation/unarchiveJob",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Unarchive a Job",
+        "api_endpoint": "https://api.lilt.com/v2/jobs/{jobId}/unarchive",
+        "alias_endpoint": "/lilt/v2/jobs/jobid/unarchive"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__jobs__jobid__deliver___post": {
+      "provider_intent": "lilt__v2__jobs__jobid__deliver___post",
+      "provider_alias_intent": "/v2/jobs/jobid/deliver",
+      "text": "Deliver a Job",
+      "category": "Jobs",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "jobId": {
+          "text": "A job id",
+          "type": "number",
+          "required": true
+        }
+      },
+      "path": {
+        "jobId": {
+          "text": "A job id",
+          "type": "number",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Jobs/operation/deliverJob",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Deliver a Job",
+        "api_endpoint": "https://api.lilt.com/v2/jobs/{jobId}/deliver",
+        "alias_endpoint": "/lilt/v2/jobs/jobid/deliver"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__jobs__jobid__reactivate___post": {
+      "provider_intent": "lilt__v2__jobs__jobid__reactivate___post",
+      "provider_alias_intent": "/v2/jobs/jobid/reactivate",
+      "text": "Reactivate a Job",
+      "category": "Jobs",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "jobId": {
+          "text": "A job id",
+          "type": "number",
+          "required": true
+        }
+      },
+      "path": {
+        "jobId": {
+          "text": "A job id",
+          "type": "number",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Jobs/operation/reactivateJob",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Reactivate a Job",
+        "api_endpoint": "https://api.lilt.com/v2/jobs/{jobId}/reactivate",
+        "alias_endpoint": "/lilt/v2/jobs/jobid/reactivate"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__jobs__jobid__export___get": {
+      "provider_intent": "lilt__v2__jobs__jobid__export___get",
+      "provider_alias_intent": "/v2/jobs/jobid/export",
+      "text": "Export a Job",
+      "category": "Jobs",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "type": {
+          "text": "category for files and memory.",
+          "type": "string",
+          "required": true
+        },
+        "jobId": {
+          "text": "A job id",
+          "type": "number",
+          "required": true
+        }
+      },
+      "path": {
+        "jobId": {
+          "text": "A job id",
+          "type": "number",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Jobs/operation/exportJob",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Export a Job",
+        "api_endpoint": "https://api.lilt.com/v2/jobs/{jobId}/export",
+        "alias_endpoint": "/lilt/v2/jobs/jobid/export"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__jobs__jobid__downlod___get": {
+      "provider_intent": "lilt__v2__jobs__jobid__downlod___get",
+      "provider_alias_intent": "/v2/jobs/jobid/downlod",
+      "text": "Download a Job",
+      "category": "Jobs",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "jobId": {
+          "text": "A job id",
+          "type": "number",
+          "required": true
+        }
+      },
+      "path": {
+        "jobId": {
+          "text": "A job id",
+          "type": "number",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Jobs/operation/downloadJob",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Download a Job",
+        "api_endpoint": "https://api.lilt.com/v2/jobs/{jobId}/downlod",
+        "alias_endpoint": "/lilt/v2/jobs/jobid/downlod"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__memories___get": {
+      "provider_intent": "lilt__v2__memories___get",
+      "provider_alias_intent": "/v2/memories",
+      "text": "Retrieve a Memory",
+      "category": "Memories",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "id": {
+          "text": "An optional Memory identifier",
+          "type": "number",
+          "required": true
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Memories/operation/getMemory",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Retrieve a Memory",
+        "api_endpoint": "https://api.lilt.com/v2/memories",
+        "alias_endpoint": "/lilt/v2/memories"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__memories___post": {
+      "provider_intent": "lilt__v2__memories___post",
+      "provider_alias_intent": "/v2/memories",
+      "text": "Create a Memory",
+      "category": "Memories",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "name": {
+          "text": "The Memory name",
+          "type": "string",
+          "required": true
+        },
+        "srclang": {
+          "text": "An ISO 639-1 language identifier",
+          "type": "string",
+          "required": true
+        },
+        "trglang": {
+          "text": "An ISO 639-1 language identifier",
+          "type": "string",
+          "required": true
+        },
+        "srclocale": {
+          "text": "An ISO 3166-1 region name for language locales",
+          "type": "string",
+          "required": true
+        },
+        "trglocale": {
+          "text": "An ISO 3166-1 region name for language locales",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Memories/operation/createMemory",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Create a Memory",
+        "api_endpoint": "https://api.lilt.com/v2/memories",
+        "alias_endpoint": "/lilt/v2/memories"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__languages___get": {
+      "provider_intent": "lilt__v2__languages___get",
+      "provider_alias_intent": "/v2/languages",
+      "text": "Retrieve supported languages",
+      "category": "Languages",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Languages/operation/getLanguages",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Retrieve supported languages",
+        "api_endpoint": "https://api.lilt.com/v2/languages",
+        "alias_endpoint": "/lilt/v2/languages"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__memories___delete": {
+      "provider_intent": "lilt__v2__memories___delete",
+      "provider_alias_intent": "/v2/memories",
+      "text": "Delete a Memory",
+      "category": "Memories",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "id": {
+          "text": "A unique Memory identifier",
+          "type": "number",
+          "required": true
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Memories/operation/deleteMemory",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Delete a Memory",
+        "api_endpoint": "https://api.lilt.com/v2/memories",
+        "alias_endpoint": "/lilt/v2/memories"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__memories__query___get": {
+      "provider_intent": "lilt__v2__memories__query___get",
+      "provider_alias_intent": "/v2/memories/query",
+      "text": "Query a Memory",
+      "category": "Memories",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "n": {
+          "text": "Maximum number of results to return, Default: 10",
+          "type": "number",
+          "required": true
+        },
+        "id": {
+          "text": "A unique Memory identifier",
+          "type": "number",
+          "required": true
+        },
+        "query": {
+          "text": "A source query",
+          "type": "string",
+          "required": true
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Memories/operation/queryMemory",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Query a Memory",
+        "api_endpoint": "https://api.lilt.com/v2/memories/query",
+        "alias_endpoint": "/lilt/v2/memories/query"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__memories__import___post": {
+      "provider_intent": "lilt__v2__memories__import___post",
+      "provider_alias_intent": "/v2/memories/import",
+      "text": "File import for a Memory",
+      "category": "Memories",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Memories/operation/importMemoryFile",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "File import for a Memory",
+        "api_endpoint": "https://api.lilt.com/v2/memories/import",
+        "alias_endpoint": "/lilt/v2/memories/import"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__memories__termbase__export___post": {
+      "provider_intent": "lilt__v2__memories__termbase__export___post",
+      "provider_alias_intent": "/v2/memories/termbase/export",
+      "text": "Termbase export for a Memory",
+      "category": "Memories",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "\"text\"": {
+          "type": "\"A unique Memory identifier\""
+        },
+        "\"required\"": {
+          "type": "true\n    }\n}"
+        },
+        "{\n    \"id\"{\n        \"type\"": {
+          "type": "\"number\""
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Memories/operation/exportTermbase",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Termbase export for a Memory",
+        "api_endpoint": "https://api.lilt.com/v2/memories/termbase/export",
+        "alias_endpoint": "/lilt/v2/memories/termbase/export"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__memories___put": {
+      "provider_intent": "lilt__v2__memories___put",
+      "provider_alias_intent": "/v2/memories",
+      "text": "Update the name of a Memory",
+      "category": "Memories",
+      "method": "PUT",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "id": {
+          "text": "A unique Memory identifier",
+          "type": "number",
+          "required": true
+        },
+        "name": {
+          "text": "The Memory name",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Memories/operation/updateMemory",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Update the name of a Memory",
+        "api_endpoint": "https://api.lilt.com/v2/memories",
+        "alias_endpoint": "/lilt/v2/memories"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__memories__termbase__download___get": {
+      "provider_intent": "lilt__v2__memories__termbase__download___get",
+      "provider_alias_intent": "/v2/memories/termbase/download",
+      "text": "Termbase download for a Memory",
+      "category": "Memories",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "id": {
+          "text": "A unique Memory identifier",
+          "type": "number",
+          "required": true
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Memories/operation/downloadTermbase",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Termbase download for a Memory",
+        "api_endpoint": "https://api.lilt.com/v2/memories/termbase/download",
+        "alias_endpoint": "/lilt/v2/memories/termbase/download"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__memories__segment___delete": {
+      "provider_intent": "lilt__v2__memories__segment___delete",
+      "provider_alias_intent": "/v2/memories/segment",
+      "text": "Delete a segment from a memory",
+      "category": "Memories",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "id": {
+          "text": "A unique Memory identifier",
+          "type": "number",
+          "required": true
+        },
+        "segment_id": {
+          "text": "A unique Segment identifier",
+          "type": "number",
+          "required": true
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Memories/operation/deleteSegmentFromMemory",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Delete a segment from a memory",
+        "api_endpoint": "https://api.lilt.com/v2/memories/segment",
+        "alias_endpoint": "/lilt/v2/memories/segment"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__projects___get": {
+      "provider_intent": "lilt__v2__projects___get",
+      "provider_alias_intent": "/v2/projects",
+      "text": "Retrieve a Project",
+      "category": "Projects",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "id": {
+          "text": "A unique Project identifier",
+          "type": "number"
+        },
+        "state": {
+          "text": "A project state (backlog, inProgress, inReview, inQA, done)",
+          "type": "string"
+        },
+        "srclang": {
+          "text": "A unique Project identifier",
+          "type": "string"
+        },
+        "to_time": {
+          "text": "Unix time stamp (epoch, in seconds) of Projects with created_at less than the value",
+          "type": "number"
+        },
+        "trglang": {
+          "text": "A unique Project identifier",
+          "type": "string"
+        },
+        "archived": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "A flag that toggles whether to include archived projects in the response (the default is true)",
+          "type": "boolean"
+        },
+        "from_time": {
+          "text": "A unique Project identifier",
+          "type": "number"
+        },
+        "connector_id": {
+          "text": "A unique Connector identifier",
+          "type": "number"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Projects/operation/getProjects",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Retrieve a Project",
+        "api_endpoint": "https://api.lilt.com/v2/projects",
+        "alias_endpoint": "/lilt/v2/projects"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__projects___post": {
+      "provider_intent": "lilt__v2__projects___post",
+      "provider_alias_intent": "/v2/projects",
+      "text": "Create a Project",
+      "category": "Projects",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "name": {
+          "text": "A name for the Project",
+          "type": "number",
+          "required": true
+        },
+        "job_id": {
+          "text": "The Job to associate with this new Project",
+          "type": "number"
+        },
+        "due_date": {
+          "text": "The due date. Measured in seconds since the Unix epoch",
+          "type": "number"
+        },
+        "metadata": {
+          "text": "A JSON object of key/value string pairs",
+          "type": "object"
+        },
+        "memory_id": {
+          "text": "The Memory to associate with this new Project",
+          "type": "number",
+          "required": true
+        },
+        "workflowTemplateId": {
+          "text": "The workflow template used to create this project",
+          "type": "number"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Projects/operation/createProject",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Create a Project",
+        "api_endpoint": "https://api.lilt.com/v2/projects",
+        "alias_endpoint": "/lilt/v2/projects"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__translate___post": {
+      "provider_intent": "lilt__v2__translate___post",
+      "provider_alias_intent": "/v2/translate",
+      "text": "Translate a segment",
+      "category": "Translate",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "n": {
+          "text": "Return top n translations",
+          "type": "number"
+        },
+        "rich": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "Returns rich translation information .default:false",
+          "type": "boolean"
+        },
+        "prefix": {
+          "text": "A target prefix",
+          "type": "string"
+        },
+        "source": {
+          "text": "A unique Segment identifier.",
+          "type": "string"
+        },
+        "memory_id": {
+          "text": "A unique Memory identifier",
+          "type": "number",
+          "required": true
+        },
+        "tm_matches": {
+          "text": "Include translation memory fuzzy matches.",
+          "type": "boolen"
+        },
+        "source_hash": {
+          "text": "A source hash code",
+          "type": "number"
+        },
+        "project_tags": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "Default: false .Project tags",
+          "type": "boolean"
+        },
+        "containsICUData": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "Contains ICU data. If true then tags in the source following the ICU standard will be parsed and retained.Default: false",
+          "type": "boolean"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Translate/operation/translateSegmentPost",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Translate a segment",
+        "api_endpoint": "https://api.lilt.com/v2/translate",
+        "alias_endpoint": "/lilt/v2/translate"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__projects___delete": {
+      "provider_intent": "lilt__v2__projects___delete",
+      "provider_alias_intent": "/v2/projects",
+      "text": "Delete a Project",
+      "category": "Projects",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "id": {
+          "text": "A unique Project identifier.",
+          "type": "number"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Projects/operation/deleteProject",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Delete a Project",
+        "api_endpoint": "https://api.lilt.com/v2/projects",
+        "alias_endpoint": "/lilt/v2/projects"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__translate__file___post": {
+      "provider_intent": "lilt__v2__translate__file___post",
+      "provider_alias_intent": "/v2/translate/file",
+      "text": "Translate a File",
+      "category": "Translate",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "fileId": {
+          "text": "List of File ids to be translated, comma separated",
+          "type": "string",
+          "required": "true"
+        },
+        "withTM": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "An optional boolean parameter to toggle the use of Translation Memory in the translation of the file",
+          "type": "boolean"
+        },
+        "configId": {
+          "text": "An optional pararameter to specify an import configuration to be applied when extracting translatable content from this file",
+          "type": "number"
+        },
+        "memoryId": {
+          "text": "Id of Memory to use in translation",
+          "type": "string",
+          "required": "true"
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Translate/operation/batchTranslateFile",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Translate a File",
+        "api_endpoint": "https://api.lilt.com/v2/translate/file",
+        "alias_endpoint": "/lilt/v2/translate/file"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__translate__file___get": {
+      "provider_intent": "lilt__v2__translate__file___get",
+      "provider_alias_intent": "/v2/translate/file",
+      "text": "Monitor file translation",
+      "category": "Translate",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "status": {
+          "text": "One of the translation statuses - InProgress, Completed, Failed, ReadyForDownload",
+          "type": "string"
+        },
+        "toTime": {
+          "text": "Results before this time (exclusive) will be returned, specified as seconds since the Unix epoch",
+          "type": "number"
+        },
+        "fromTime": {
+          "text": "Results after this time (inclusive) will be returned, specified as seconds since the Unix ep",
+          "type": "number"
+        },
+        "translationIds": {
+          "text": "List of translation ids, comma separated",
+          "type": "string"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Translate/operation/monitorFileTranslation",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Monitor file translation",
+        "api_endpoint": "https://api.lilt.com/v2/translate/file",
+        "alias_endpoint": "/lilt/v2/translate/file"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__translate__files___delete": {
+      "provider_intent": "lilt__v2__translate__files___delete",
+      "provider_alias_intent": "/v2/translate/files",
+      "text": "Download translated file",
+      "category": "Translate",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "fileId": {
+          "text": "A translation id",
+          "type": "string",
+          "required": "true"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Translate/operation/downloadFile",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Download translated file",
+        "api_endpoint": "https://api.lilt.com/v2/translate/files",
+        "alias_endpoint": "/lilt/v2/translate/files"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-17T13:33:05.000Z"
+    },
+    "lilt__v2__workflows__templates___get": {
+      "provider_intent": "lilt__v2__workflows__templates___get",
+      "provider_alias_intent": "/v2/workflows/templates",
+      "text": "Retrieve workflow templates",
+      "category": "Workflows",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.lilt.com/api#tag/Workflows",
+        "version": "v2",
+        "rate_limit": [],
+        "description": "Get all of the possible Workflow Templates owned by the team. ",
+        "api_endpoint": "https://api.lilt.com/v2/workflows/templates"
+      },
+      "auth": [],
+      "response_format": {},
+      "updated_at": "2024-12-26T13:30:58.000Z"
+    }
+  }
+}

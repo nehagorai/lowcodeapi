@@ -1,0 +1,1059 @@
+{
+  "routes": {
+    "notion__v1__pages__page_id___patch": {
+      "provider_intent": "notion__v1__pages__page_id___patch",
+      "provider_alias_intent": "/v1/pages/page_id",
+      "provider_proxy_intent": "/v1/pages/{page_id}",
+      "text": "Update page properties including cover and icon",
+      "category": "Pages",
+      "method": "PATCH",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "page_id": {
+          "text": "Identifier for a Notion page.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "icon": {
+          "text": "Page icon for the new page",
+          "type": "json"
+        },
+        "cover": {
+          "text": "Page cover for the new page",
+          "type": "json"
+        },
+        "archived": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "Whether the page is archived (deleted). Set to true to archive a page. Set to false to un-archive (restore) a page.",
+          "type": "boolean"
+        },
+        "properties": {
+          "text": "Property values of this page. The keys are the names or IDs of the property and the values are property values",
+          "type": "json",
+          "required": true
+        }
+      },
+      "custom_headers": {
+        "Notion-Version": "2022-06-28"
+      },
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.notion.com/reference/patch-page",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "This API only updates the page properties, icon and cover.\n\nThe properties can only be update if the page belongs to database.\n\nArchieve or unarchive the page using `archived:true` or `archived:false`\n\nTo update page **content**, use the blocks object endpoints.",
+        "api_endpoint": "https://api.notion.com/v1/pages/{page_id}",
+        "alias_endpoint": "/notion/v1/pages/page_id"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-02T13:29:51.000Z"
+    },
+    "notion__v1__pages__page_id___get": {
+      "provider_intent": "notion__v1__pages__page_id___get",
+      "provider_alias_intent": "/v1/pages/page_id",
+      "provider_proxy_intent": "/v1/pages/{page_id}",
+      "text": "Retrieve a page properties and other information",
+      "category": "Pages",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "filter_properties": {
+          "enum": [
+            "?filter_properties=iAk8&filter_properties=b7dh."
+          ],
+          "text": "Limit response to specific page property values",
+          "type": "string"
+        }
+      },
+      "path": {
+        "page_id": {
+          "text": "Identifier for a Notion page",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {
+        "Notion-Version": "2022-06-28"
+      },
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.notion.com/reference/retrieve-a-page",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "This API retrieve the page properties and other information. \n\nIf the page belongs to database, it will return all the properties linked to the parent database.\n\nIf the page belongs to other page, only title property will be returned.\n\nTo retrieve the page content use blocks API, where `block_id` will be the `page_id`",
+        "api_endpoint": "https://api.notion.com/v1/pages/{page_id}",
+        "alias_endpoint": "/notion/v1/pages/page_id"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-02T13:30:32.000Z"
+    },
+    "notion__v1__pages__page_id__properties__property_id___get": {
+      "provider_intent": "notion__v1__pages__page_id__properties__property_id___get",
+      "provider_alias_intent": "/v1/pages/page_id/properties/property_id",
+      "provider_proxy_intent": "/v1/pages/{page_id}/properties/{property_id}",
+      "text": "Retrieve a page property item",
+      "category": "Pages",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "page_size": {
+          "text": "Default page size: 100 property items",
+          "type": "number"
+        },
+        "start_cursor": {
+          "text": "For paginated properties.",
+          "type": "string"
+        }
+      },
+      "path": {
+        "page_id": {
+          "text": "Identifier for a Notion page",
+          "type": "string",
+          "required": true
+        },
+        "property_id": {
+          "text": "Identifier for a page property",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {
+        "Notion-Version": "2022-06-28"
+      },
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.notion.com/reference/retrieve-a-page-property",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Retrieve a page property item",
+        "api_endpoint": "https://api.notion.com/v1/pages/{page_id}/properties/{property_id}",
+        "alias_endpoint": "/notion/v1/pages/page_id/properties/property_id"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-02T13:30:53.000Z"
+    },
+    "notion__v1__blocks__block_id___get": {
+      "provider_intent": "notion__v1__blocks__block_id___get",
+      "provider_alias_intent": "/v1/blocks/block_id",
+      "provider_proxy_intent": "/v1/blocks/{block_id}",
+      "text": "Retrieve a block",
+      "category": "Blocks",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "block_id": {
+          "text": "Identifier for a Notion block",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {
+        "Notion-Version": "2022-06-28"
+      },
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.notion.com/reference/retrieve-a-block",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Retrieve a block",
+        "api_endpoint": "https://api.notion.com/v1/blocks/{block_id}",
+        "alias_endpoint": "/notion/v1/blocks/block_id"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-02T13:31:51.000Z"
+    },
+    "notion__v1__blocks__block_id___patch": {
+      "provider_intent": "notion__v1__blocks__block_id___patch",
+      "provider_alias_intent": "/v1/blocks/block_id",
+      "provider_proxy_intent": "/v1/blocks/{block_id}",
+      "text": "Update a block",
+      "category": "Blocks",
+      "method": "PATCH",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "block_id": {
+          "text": "Identifier for a Notion block",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "archived": {
+          "enum": [
+            true,
+            false
+          ],
+          "text": "Set to true to delete a block. Set to false to restore a block.",
+          "type": "boolean"
+        }
+      },
+      "custom_headers": {
+        "Notion-Version": "2022-06-28"
+      },
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.notion.com/reference/update-a-block",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Update a block",
+        "api_endpoint": "https://api.notion.com/v1/blocks/{block_id}",
+        "alias_endpoint": "/notion/v1/blocks/block_id"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-02T13:32:10.000Z"
+    },
+    "notion__v1__pages___post": {
+      "provider_intent": "notion__v1__pages___post",
+      "provider_alias_intent": "/v1/pages",
+      "provider_proxy_intent": "/v1/pages",
+      "text": "Create a new page inside page or a database",
+      "category": "Pages",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "icon": {
+          "text": "Page icon for the new page",
+          "type": "json",
+          "examples": {
+            "type": "emoji || external",
+            "emoji": "😻",
+            "external": {
+              "url": ""
+            }
+          }
+        },
+        "cover": {
+          "text": "Page cover for the new page",
+          "type": "json",
+          "examples": {
+            "type": "external",
+            "external": {
+              "url": ""
+            }
+          }
+        },
+        "parent": {
+          "text": "A database parent or page parent",
+          "type": "json",
+          "examples": {
+            "page_id": "",
+            "database_id": ""
+          },
+          "required": true
+        },
+        "children": {
+          "text": "Page content for the new page as an array of block objects",
+          "type": "array",
+          "examples": []
+        },
+        "properties": {
+          "text": "Property values of this page. The keys are the names or IDs of the property and the values are property values",
+          "type": "json",
+          "examples": {
+            "Name": {
+              "title": [
+                {
+                  "text": {
+                    "content": "Tuscan Kale"
+                  }
+                }
+              ]
+            },
+            "title": [
+              {
+                "text": {
+                  "link": null,
+                  "content": "A page with an avocado icon"
+                },
+                "type": "text"
+              }
+            ]
+          },
+          "required": true
+        }
+      },
+      "custom_headers": {
+        "Notion-Version": "2022-06-28"
+      },
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.notion.com/reference/post-page",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Create new page inside a page or a database.\n\n**Note**: Notion API doesn't allow creating a root level page inside a workspace. Page can only be created inside another page or database.\n\n### Create a page where parent is also a page:\n\nWhen a new page is created inside a page, only `title` property is required.\n\n### Create a page where parent is a database:\n\nWhereas when a new page is created inside a database, page properties are interited from the database properties.\n\nWhile creating a new page, other fields like `icon`, `cover` or `children` can also be used.\n\n`icon` field is used for setting icon in a page, either we can set emoji or add our own image.\n\n`cover` field is used for setting cover in page. \n\n`children` field is used for adding content inside the page, represented using array of block objects.\n\n___\n\nThis API can take 10 different variation of payload for creating a page.",
+        "api_endpoint": "https://api.notion.com/v1/pages",
+        "alias_endpoint": "/notion/v1/pages"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:33:20.000Z"
+    },
+    "notion__v1__databases__database_id___get": {
+      "provider_intent": "notion__v1__databases__database_id___get",
+      "provider_alias_intent": "/v1/databases/database_id",
+      "provider_proxy_intent": "/v1/databases/{database_id}",
+      "text": "Retrieve database detail and it's properties",
+      "category": "Database",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "database_id": {
+          "text": "Identifier for a Notion database.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {
+        "Notion-Version": "2022-06-28"
+      },
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.notion.com/reference/retrieve-a-database",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "This API only retrieve a database info such as title, description and it's properties (column details), doesn't return the row data.\n\n\nTo retrieve the rows (data) of the database, use the database query api",
+        "api_endpoint": "https://api.notion.com/v1/databases/{database_id}",
+        "alias_endpoint": "/notion/v1/databases/database_id"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-02T13:30:57.000Z"
+    },
+    "notion__v1__databases__database_id__query___post": {
+      "provider_intent": "notion__v1__databases__database_id__query___post",
+      "provider_alias_intent": "/v1/databases/database_id/query",
+      "provider_proxy_intent": "/v1/databases/{database_id}/query",
+      "text": "Fetch rows of the Notion database using query",
+      "category": "Database",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "filter_properties": {
+          "text": "Filter response by specific page property IDs.",
+          "type": "string"
+        }
+      },
+      "path": {
+        "database_id": {
+          "text": "Identifier for a Notion database.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "sorts": {
+          "text": "When supplied orders the results based on the provided sort criteria.",
+          "type": "array",
+          "examples": []
+        },
+        "filter": {
+          "text": "When supplied limits which pages are returned based on the filter conditions.",
+          "type": "json",
+          "examples": {}
+        },
+        "page_size": {
+          "text": "The number of items from the full list desired in the response. Maximum - 100",
+          "type": "number",
+          "examples": 100
+        },
+        "start_cursor": {
+          "text": "When supplied returns a page of results starting after the cursor provided. If not supplied this endpoint will return the first page of results.",
+          "type": "string",
+          "examples": ""
+        }
+      },
+      "custom_headers": {
+        "Notion-Version": "2022-06-28"
+      },
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.notion.com/reference/post-database-query",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "This API is used for retrieving the rows (data) of the database, using `database_id` and query filter to match the records.",
+        "api_endpoint": "https://api.notion.com/v1/databases/{database_id}/query",
+        "alias_endpoint": "/notion/v1/databases/database_id/query"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-03T09:38:48.000Z"
+    },
+    "notion__v1__databases__database_id___patch": {
+      "provider_intent": "notion__v1__databases__database_id___patch",
+      "provider_alias_intent": "/v1/databases/database_id",
+      "provider_proxy_intent": "/v1/databases/{database_id}",
+      "text": "Update database details",
+      "category": "Database",
+      "method": "PATCH",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "database_id": {
+          "text": "Identifier for a Notion database.",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "title": {
+          "text": "An array of rich text objects that represents the title of the database that is displayed in the Notion UI. If omitted then the database title remains unchanged.",
+          "type": "array"
+        },
+        "properties": {
+          "text": "The properties of a database to be changed in the request in the form of a JSON object. If updating an existing property then the keys are the names or IDs of the properties as they appear in Notion and the values are property schema objects. If adding a new property then the key is the name of the new database property and the value is a property schema object.",
+          "type": "json"
+        },
+        "description": {
+          "text": "An array of rich text objects that represents the description of the database that is displayed in the Notion UI. If omitted then the database description remains unchanged.",
+          "type": "array"
+        }
+      },
+      "custom_headers": {
+        "Notion-Version": "2022-06-28"
+      },
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.notion.com/reference/update-a-database",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "This API is used for updating `title`, `description` and `properties` of the database, new property can be added, existing property can be updated or removed.\n\n\nTo update the row, use the page update API.",
+        "api_endpoint": "https://api.notion.com/v1/databases/{database_id}",
+        "alias_endpoint": "/notion/v1/databases/database_id"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-02T13:31:38.000Z"
+    },
+    "notion__v1__databases___post": {
+      "provider_intent": "notion__v1__databases___post",
+      "provider_alias_intent": "/v1/databases",
+      "provider_proxy_intent": "/v1/databases",
+      "text": "Create new database",
+      "category": "Database",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "title": {
+          "text": "Title of database as it appears in Notion. An array of rich text objects.",
+          "type": "array",
+          "examples": [
+            {
+              "text": {
+                "link": null,
+                "content": "Title here"
+              },
+              "type": "text"
+            }
+          ]
+        },
+        "parent": {
+          "text": "A page parent",
+          "type": "json",
+          "examples": {
+            "type": "page_id",
+            "page_id": ""
+          },
+          "required": true
+        },
+        "properties": {
+          "text": "Property schema of database. The keys are the names of properties as they appear in Notion and the values are property schema objects.",
+          "type": "json",
+          "examples": {
+            "Name": {
+              "title": {}
+            },
+            "Description": {
+              "rich_text": {}
+            }
+          },
+          "required": true
+        }
+      },
+      "custom_headers": {
+        "Notion-Version": "2022-06-28"
+      },
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.notion.com/reference/create-a-database",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "This API is used for creating new database, parent is always a page and has `page_id`.\n\nTo create the database `properties` is required,\n\nAPI also support `title`, `description`, `icon`, `cover`\n",
+        "api_endpoint": "https://api.notion.com/v1/databases",
+        "alias_endpoint": "/notion/v1/databases"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:33:20.000Z"
+    },
+    "notion__v1__blocks__block_id__children___get": {
+      "provider_intent": "notion__v1__blocks__block_id__children___get",
+      "provider_alias_intent": "/v1/blocks/block_id/children",
+      "provider_proxy_intent": "/v1/blocks/{block_id}/children",
+      "text": "Retrieve block children",
+      "category": "Blocks",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "page_size": {
+          "text": "Limit response to maximum 100 items",
+          "type": "number"
+        },
+        "start_cursor": {
+          "text": "Supply cursor for next page when available.",
+          "type": "string"
+        }
+      },
+      "path": {
+        "block_id": {
+          "text": "Identifier for a Notion block",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {
+        "Notion-Version": "2022-06-28"
+      },
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.notion.com/reference/get-block-children",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Retrieve block children",
+        "api_endpoint": "https://api.notion.com/v1/blocks/{block_id}/children",
+        "alias_endpoint": "/notion/v1/blocks/block_id/children"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-02T13:32:30.000Z"
+    },
+    "notion__v1__blocks__block_id__children___patch": {
+      "provider_intent": "notion__v1__blocks__block_id__children___patch",
+      "provider_alias_intent": "/v1/blocks/block_id/children",
+      "provider_proxy_intent": "/v1/blocks/{block_id}/children",
+      "text": "Append block children",
+      "category": "Blocks",
+      "method": "PATCH",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "block_id": {
+          "text": "Identifier for a Notion block",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {
+        "after": {
+          "text": "The ID of the existing block that the new block should be appended after",
+          "type": "string"
+        },
+        "children": {
+          "text": "Child content to append to a container block as an array of block objects",
+          "type": "array",
+          "required": true
+        }
+      },
+      "custom_headers": {
+        "Notion-Version": "2022-06-28"
+      },
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.notion.com/reference/patch-block-children",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Append block children",
+        "api_endpoint": "https://api.notion.com/v1/blocks/{block_id}/children",
+        "alias_endpoint": "/notion/v1/blocks/block_id/children"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-02T13:32:45.000Z"
+    },
+    "notion__v1__blocks__block_id___delete": {
+      "provider_intent": "notion__v1__blocks__block_id___delete",
+      "provider_alias_intent": "/v1/blocks/block_id",
+      "provider_proxy_intent": "/v1/blocks/{block_id}",
+      "text": "Delete a block",
+      "category": "Blocks",
+      "method": "DELETE",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "block_id": {
+          "text": "Identifier for a Notion block",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {
+        "Notion-Version": "2022-06-28"
+      },
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.notion.com/reference/delete-a-block",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Delete a block",
+        "api_endpoint": "https://api.notion.com/v1/blocks/{block_id}",
+        "alias_endpoint": "/notion/v1/blocks/block_id"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-02T13:32:57.000Z"
+    },
+    "notion__v1__comments___get": {
+      "provider_intent": "notion__v1__comments___get",
+      "provider_alias_intent": "/v1/comments",
+      "provider_proxy_intent": "/v1/comments",
+      "text": "Retrieve comments",
+      "category": "Comments",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "block_id": {
+          "text": "Identifier for a Notion block or page",
+          "type": "string",
+          "required": true
+        },
+        "page_size": {
+          "text": "Limit response to maximum of 100 items",
+          "type": "number"
+        },
+        "start_cursor": {
+          "text": "Return subsequent page results after provided cursor",
+          "type": "string"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {
+        "Notion-Version": "2022-06-28"
+      },
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.notion.com/reference/retrieve-a-comment",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Retrieve comments",
+        "api_endpoint": "https://api.notion.com/v1/comments",
+        "alias_endpoint": "/notion/v1/comments"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:33:20.000Z"
+    },
+    "notion__v1__comments___post": {
+      "provider_intent": "notion__v1__comments___post",
+      "provider_alias_intent": "/v1/comments",
+      "provider_proxy_intent": "/v1/comments",
+      "text": "Create comment",
+      "category": "Comments",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "parent": {
+          "text": "A page parent. Either this or a discussion_id is required (not both)",
+          "type": "json"
+        },
+        "rich_text": {
+          "text": "A rich text object",
+          "type": "json",
+          "required": true
+        },
+        "discussion_id": {
+          "text": "A UUID identifier for a discussion thread. Either this or a parent object is required (not both)",
+          "type": "string"
+        }
+      },
+      "custom_headers": {
+        "Notion-Version": "2022-06-28"
+      },
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.notion.com/reference/create-a-comment",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Create comment",
+        "api_endpoint": "https://api.notion.com/v1/comments",
+        "alias_endpoint": "/notion/v1/comments"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:33:20.000Z"
+    },
+    "notion__v1__search___post": {
+      "provider_intent": "notion__v1__search___post",
+      "provider_alias_intent": "/v1/search",
+      "provider_proxy_intent": "/v1/search",
+      "text": "Search",
+      "category": "Search",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "sort": {
+          "enum": [
+            "Currently only a single sort is allowed and is limited to last_edited_time. The default sort is by last_edited_time descending."
+          ],
+          "text": "When supplied sorts the results based on the provided criteria. Limitation",
+          "type": "object"
+        },
+        "query": {
+          "text": "When supplied limits which pages are returned by comparing the query to the page title.",
+          "type": "string"
+        },
+        "filter": {
+          "text": "When supplied filters the results based on the provided criteria.",
+          "type": "object"
+        },
+        "page_size": {
+          "text": "The number of items from the full list desired in the response. Maximum - 100.",
+          "type": "number"
+        },
+        "start_cursor": {
+          "text": "If supplied this endpoint will return a page of results starting after the cursor provided. If not supplied this endpoint will return the first page of results.",
+          "type": "string"
+        }
+      },
+      "custom_headers": {
+        "Notion-Version": "2022-06-28"
+      },
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.notion.com/reference/post-search",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Search",
+        "api_endpoint": "https://api.notion.com/v1/search",
+        "alias_endpoint": "/notion/v1/search"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:33:20.000Z"
+    },
+    "notion__v1__users__user_id___get": {
+      "provider_intent": "notion__v1__users__user_id___get",
+      "provider_alias_intent": "/v1/users/user_id",
+      "provider_proxy_intent": "/v1/users/{user_id}",
+      "text": "Retrieve a user",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {
+        "user_id": {
+          "text": "Identifier for a Notion user",
+          "type": "string",
+          "required": true
+        }
+      },
+      "body": {},
+      "custom_headers": {
+        "Notion-Version": "2022-06-28"
+      },
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.notion.com/reference/get-user",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Retrieve a user",
+        "api_endpoint": "https://api.notion.com/v1/users/{user_id}",
+        "alias_endpoint": "/notion/v1/users/user_id"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-03-02T13:31:11.000Z"
+    },
+    "notion__v1__users___get": {
+      "provider_intent": "notion__v1__users___get",
+      "provider_alias_intent": "/v1/users",
+      "provider_proxy_intent": "/v1/users",
+      "text": "List all users",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {
+        "page_size": {
+          "text": "Limit response to maximum 100 items",
+          "type": "number"
+        },
+        "start_cursor": {
+          "text": "Filter response by specific page property IDs",
+          "type": "string"
+        }
+      },
+      "path": {},
+      "body": {},
+      "custom_headers": {
+        "Notion-Version": "2022-06-28"
+      },
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.notion.com/reference/get-users",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "List all users",
+        "api_endpoint": "https://api.notion.com/v1/users",
+        "alias_endpoint": "/notion/v1/users"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:33:20.000Z"
+    },
+    "notion__v1__oauth__token___post": {
+      "provider_intent": "notion__v1__oauth__token___post",
+      "provider_alias_intent": "/v1/oauth/token",
+      "provider_proxy_intent": "/v1/oauth/token",
+      "text": "Create a token",
+      "category": "Authentication",
+      "method": "POST",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {
+        "code": {
+          "text": "A unique random code that Notion generates to authenticate with your service, generated when a user initiates the OAuth flow",
+          "type": "string",
+          "required": true
+        },
+        "grant_type": {
+          "text": "A constant string: 'authorization_code'",
+          "type": "string",
+          "required": true
+        },
+        "redirect_uri": {
+          "text": "The 'redirect_uri' that was provided in the OAuth Domain & URI section of the integration's Authorization settings",
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.notion.com/reference/create-a-token",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Access token that a third-party service can use to authenticate with Notion",
+        "api_endpoint": "https://api.notion.com/v1/oauth/token",
+        "alias_endpoint": ""
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:33:20.000Z"
+    },
+    "notion__v1__users__me___get": {
+      "provider_intent": "notion__v1__users__me___get",
+      "provider_alias_intent": "/v1/users/me",
+      "provider_proxy_intent": "/v1/users/me",
+      "text": "Fetch token user",
+      "category": "Users",
+      "method": "GET",
+      "type": "API",
+      "request_type": "API",
+      "params": {},
+      "path": {},
+      "body": {},
+      "custom_headers": {
+        "Notion-Version": "2022-06-28"
+      },
+      "domain_params": {},
+      "meta": {
+        "auth": [],
+        "api_ref": "https://developers.notion.com/reference/get-self",
+        "version": "v1",
+        "rate_limit": [],
+        "description": "Retrieve your token's bot user",
+        "api_endpoint": "https://api.notion.com/v1/users/me",
+        "alias_endpoint": "/notion/v1/users/me"
+      },
+      "auth": {
+        "header": {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": "Bearer"
+        }
+      },
+      "response_format": {},
+      "updated_at": "2025-02-18T13:33:20.000Z"
+    }
+  }
+}

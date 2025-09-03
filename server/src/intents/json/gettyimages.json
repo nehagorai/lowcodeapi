@@ -1,0 +1,3175 @@
+{
+  "app": {
+    "title": "Gettyimages API",
+    "description": "",
+    "api_base": "/gettyimages",
+    "copyright": "",
+    "copyright_year": "",
+    "contact_email": ""
+  },
+  "category": {
+    "All": ""
+  },
+  "routes": {
+    "get_affiliates_search_images": {
+      "provider_intent": "get_affiliates_search_images",
+      "provider_alias_intent": "/v3/affiliates/search/images",
+      "text": "",
+      "category": "AffiliateSearch",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "phrase": {
+          "type": "string",
+          "text": "Search images using a search phrase"
+        },
+        "style": {
+          "type": "string",
+          "text": "Filter based on graphical style of the image"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/affiliates/search/images",
+        "alias_endpoint": "/gettyimages/v3/affiliates/search/images",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_affiliates_search_videos": {
+      "provider_intent": "get_affiliates_search_videos",
+      "provider_alias_intent": "/v3/affiliates/search/videos",
+      "text": "",
+      "category": "AffiliateSearch",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "phrase": {
+          "type": "string"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/affiliates/search/videos",
+        "alias_endpoint": "/gettyimages/v3/affiliates/search/videos",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_artists_images": {
+      "provider_intent": "get_artists_images",
+      "provider_alias_intent": "/v3/artists/images",
+      "text": "Search for images by a photographer",
+      "category": "Artists",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "artist_name": {
+          "type": "string",
+          "text": "Name of artist for desired images"
+        },
+        "fields": {
+          "type": "array",
+          "text": "Comma separated list of fields"
+        },
+        "page": {
+          "type": "integer",
+          "text": "Identifies page to return"
+        },
+        "page_size": {
+          "type": "integer",
+          "text": "Specifies page size"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Search for images by a photographer.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/artists/images",
+        "alias_endpoint": "/gettyimages/v3/artists/images",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_artists_videos": {
+      "provider_intent": "get_artists_videos",
+      "provider_alias_intent": "/v3/artists/videos",
+      "text": "Search for videos by a photographer",
+      "category": "Artists",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "artist_name": {
+          "type": "string",
+          "text": "Name of artist for desired images"
+        },
+        "fields": {
+          "type": "array",
+          "text": "Comma separated list of fields"
+        },
+        "page": {
+          "type": "integer",
+          "text": "Identifies page to return"
+        },
+        "page_size": {
+          "type": "integer",
+          "text": "Specifies page size"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Search for videos by a photographer.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/artists/videos",
+        "alias_endpoint": "/gettyimages/v3/artists/videos",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "put_asset_changes_change_sets": {
+      "provider_intent": "put_asset_changes_change_sets",
+      "provider_alias_intent": "/v3/asset-changes/change-sets",
+      "text": "Get asset change notifications.",
+      "category": "AssetChanges",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "channel_id": {
+          "type": "integer",
+          "text": "Specifies the id of the channel for the asset data"
+        },
+        "batch_size": {
+          "type": "integer",
+          "text": "Specifies the number of assets to return"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get asset change notifications.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/asset-changes/change-sets",
+        "alias_endpoint": "/gettyimages/v3/asset-changes/change-sets",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "delete_asset_changes_change_sets_change_set_id": {
+      "provider_intent": "delete_asset_changes_change_sets_change_set_id",
+      "provider_alias_intent": "/v3/asset-changes/change-sets/change-set-id",
+      "text": "Confirm asset change notifications.",
+      "category": "AssetChanges",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "change-set-id": {
+          "type": "integer",
+          "text": "Specify the change-set-id associated with a transaction resource whose receipt you want to confirm",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "change-set-id": {
+          "type": "integer",
+          "text": "Specify the change-set-id associated with a transaction resource whose receipt you want to confirm",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Confirm asset change notifications.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/asset-changes/change-sets/{change-set-id}",
+        "alias_endpoint": "/gettyimages/v3/asset-changes/change-sets/change-set-id",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_asset_changes_channels": {
+      "provider_intent": "get_asset_changes_channels",
+      "provider_alias_intent": "/v3/asset-changes/channels",
+      "text": "Get a list of asset change notification channels.",
+      "category": "AssetChanges",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get a list of asset change notification channels.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/asset-changes/channels",
+        "alias_endpoint": "/gettyimages/v3/asset-changes/channels",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "post_asset_licensing_assetid": {
+      "provider_intent": "post_asset_licensing_assetid",
+      "provider_alias_intent": "/v3/asset-licensing/assetid",
+      "text": "Endpoint for acquiring extended licenses with iStock credits for an asset.",
+      "category": "AssetLicensing",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "assetId": {
+          "type": "string",
+          "text": "Getty Images assetId - examples 520621493 112301284",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "extended_licenses": {
+          "type": "array",
+          "required": true
+        },
+        "use_team_credits": {
+          "type": "boolean",
+          "text": "Defaults to false",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "assetId": {
+          "type": "string",
+          "text": "Getty Images assetId - examples 520621493 112301284",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Endpoint for acquiring extended licenses with iStock credits for an asset.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/asset-licensing/{assetId}",
+        "alias_endpoint": "/gettyimages/v3/asset-licensing/assetid",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_asset_management_assets_send_events": {
+      "provider_intent": "get_asset_management_assets_send_events",
+      "provider_alias_intent": "/v3/asset-management/assets/send-events",
+      "text": "",
+      "category": "AssetManagement",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "last_offset": {
+          "type": "string",
+          "text": "Specifies a date/time (with timezone information) for continuing retrieval of events"
+        },
+        "event_count": {
+          "type": "integer",
+          "text": "Specifies the number of events to return"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/asset-management/assets/send-events",
+        "alias_endpoint": "/gettyimages/v3/asset-management/assets/send-events",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_boards": {
+      "provider_intent": "get_boards",
+      "provider_alias_intent": "/v3/boards",
+      "text": "Get all boards that the user participates in",
+      "category": "Boards",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "page": {
+          "type": "integer",
+          "text": "Request results starting at a page number (default is 1)"
+        },
+        "board_relationship": {
+          "type": "string",
+          "text": "Search for boards the user owns or has been invited to as an editor"
+        },
+        "sort_order": {
+          "type": "string",
+          "text": "Sort the list of boards by last update date or name"
+        },
+        "pageSize": {
+          "type": "integer",
+          "text": "Request number of boards to return in each page"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get all boards that the user participates in.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/boards",
+        "alias_endpoint": "/gettyimages/v3/boards",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "post_boards": {
+      "provider_intent": "post_boards",
+      "provider_alias_intent": "/v3/boards",
+      "text": "Create a new board",
+      "category": "Boards",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Create a new board.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/boards",
+        "alias_endpoint": "/gettyimages/v3/boards",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_boards_board_id": {
+      "provider_intent": "get_boards_board_id",
+      "provider_alias_intent": "/v3/boards/board_id",
+      "text": "Get assets and metadata for a specific board",
+      "category": "Boards",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "board_id": {
+          "type": "string",
+          "text": "Retrieve details for a specific board",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "board_id": {
+          "type": "string",
+          "text": "Retrieve details for a specific board",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get assets and metadata for a specific board.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/boards/{board_id}",
+        "alias_endpoint": "/gettyimages/v3/boards/board_id",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "delete_boards_board_id": {
+      "provider_intent": "delete_boards_board_id",
+      "provider_alias_intent": "/v3/boards/board_id",
+      "text": "Delete a board",
+      "category": "Boards",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "board_id": {
+          "type": "string",
+          "text": "Specify the board to delete",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "board_id": {
+          "type": "string",
+          "text": "Specify the board to delete",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Delete a board.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/boards/{board_id}",
+        "alias_endpoint": "/gettyimages/v3/boards/board_id",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "put_boards_board_id": {
+      "provider_intent": "put_boards_board_id",
+      "provider_alias_intent": "/v3/boards/board_id",
+      "text": "Update a board",
+      "category": "Boards",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "board_id": {
+          "type": "string",
+          "text": "Specify the board to update",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "path": {
+        "board_id": {
+          "type": "string",
+          "text": "Specify the board to update",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Update a board.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/boards/{board_id}",
+        "alias_endpoint": "/gettyimages/v3/boards/board_id",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "put_boards_board_id_assets": {
+      "provider_intent": "put_boards_board_id_assets",
+      "provider_alias_intent": "/v3/boards/board_id/assets",
+      "text": "Add assets to a board",
+      "category": "Boards",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "board_id": {
+          "type": "string",
+          "text": "Specify the board to add assets to",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "board_id": {
+          "type": "string",
+          "text": "Specify the board to add assets to",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Add assets to a board.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/boards/{board_id}/assets",
+        "alias_endpoint": "/gettyimages/v3/boards/board_id/assets",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "delete_boards_board_id_assets": {
+      "provider_intent": "delete_boards_board_id_assets",
+      "provider_alias_intent": "/v3/boards/board_id/assets",
+      "text": "Remove assets from a board",
+      "category": "Boards",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "board_id": {
+          "type": "string",
+          "text": "Specify the board to remove assets from",
+          "required": true
+        },
+        "asset_ids": {
+          "type": "array",
+          "text": "List the assets to be removed from the board"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "board_id": {
+          "type": "string",
+          "text": "Specify the board to remove assets from",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Remove assets from a board.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/boards/{board_id}/assets",
+        "alias_endpoint": "/gettyimages/v3/boards/board_id/assets",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "put_boards_board_id_assets_asset_id": {
+      "provider_intent": "put_boards_board_id_assets_asset_id",
+      "provider_alias_intent": "/v3/boards/board_id/assets/asset_id",
+      "text": "Add an asset to a board",
+      "category": "Boards",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "board_id": {
+          "type": "string",
+          "text": "Specify the board to add an asset to",
+          "required": true
+        },
+        "asset_id": {
+          "type": "string",
+          "text": "Specify the asset to add to the board",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "board_id": {
+          "type": "string",
+          "text": "Specify the board to add an asset to",
+          "required": true
+        },
+        "asset_id": {
+          "type": "string",
+          "text": "Specify the asset to add to the board",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Add an asset to a board.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/boards/{board_id}/assets/{asset_id}",
+        "alias_endpoint": "/gettyimages/v3/boards/board_id/assets/asset_id",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "delete_boards_board_id_assets_asset_id": {
+      "provider_intent": "delete_boards_board_id_assets_asset_id",
+      "provider_alias_intent": "/v3/boards/board_id/assets/asset_id",
+      "text": "Remove an asset from a board",
+      "category": "Boards",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "board_id": {
+          "type": "string",
+          "text": "Specify the board to remove an asset from",
+          "required": true
+        },
+        "asset_id": {
+          "type": "string",
+          "text": "Specify the asset to remove from the board",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "board_id": {
+          "type": "string",
+          "text": "Specify the board to remove an asset from",
+          "required": true
+        },
+        "asset_id": {
+          "type": "string",
+          "text": "Specify the asset to remove from the board",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Remove an asset from a board.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/boards/{board_id}/assets/{asset_id}",
+        "alias_endpoint": "/gettyimages/v3/boards/board_id/assets/asset_id",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_boards_board_id_comments": {
+      "provider_intent": "get_boards_board_id_comments",
+      "provider_alias_intent": "/v3/boards/board_id/comments",
+      "text": "Get comments from a board",
+      "category": "Boards",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "board_id": {
+          "type": "string",
+          "text": "Specify the board to retrieve comments from",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "board_id": {
+          "type": "string",
+          "text": "Specify the board to retrieve comments from",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get comments from a board.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/boards/{board_id}/comments",
+        "alias_endpoint": "/gettyimages/v3/boards/board_id/comments",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "post_boards_board_id_comments": {
+      "provider_intent": "post_boards_board_id_comments",
+      "provider_alias_intent": "/v3/boards/board_id/comments",
+      "text": "Add a comment to a board",
+      "category": "Boards",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "board_id": {
+          "type": "string",
+          "text": "Specify the board to add a comment to",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "text": {
+          "type": "string"
+        }
+      },
+      "path": {
+        "board_id": {
+          "type": "string",
+          "text": "Specify the board to add a comment to",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Add a comment to a board.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/boards/{board_id}/comments",
+        "alias_endpoint": "/gettyimages/v3/boards/board_id/comments",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "delete_boards_board_id_comments_comment_id": {
+      "provider_intent": "delete_boards_board_id_comments_comment_id",
+      "provider_alias_intent": "/v3/boards/board_id/comments/comment_id",
+      "text": "Delete a comment from a board",
+      "category": "Boards",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "board_id": {
+          "type": "string",
+          "text": "Specify the board containing the comment to delete",
+          "required": true
+        },
+        "comment_id": {
+          "type": "string",
+          "text": "Specify the comment to delete",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "board_id": {
+          "type": "string",
+          "text": "Specify the board containing the comment to delete",
+          "required": true
+        },
+        "comment_id": {
+          "type": "string",
+          "text": "Specify the comment to delete",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Delete a comment from a board.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/boards/{board_id}/comments/{comment_id}",
+        "alias_endpoint": "/gettyimages/v3/boards/board_id/comments/comment_id",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_collections": {
+      "provider_intent": "get_collections",
+      "provider_alias_intent": "/v3/collections",
+      "text": "Gets collections applicable for the customer.",
+      "category": "Collections",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Gets collections applicable for the customer.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/collections",
+        "alias_endpoint": "/gettyimages/v3/collections",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_countries": {
+      "provider_intent": "get_countries",
+      "provider_alias_intent": "/v3/countries",
+      "text": "Gets countries codes and names.",
+      "category": "Countries",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Gets countries codes and names.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/countries",
+        "alias_endpoint": "/gettyimages/v3/countries",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_customers_current": {
+      "provider_intent": "get_customers_current",
+      "provider_alias_intent": "/v3/customers/current",
+      "text": "Returns information about the current user.",
+      "category": "Customers",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns information about the current user.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/customers/current",
+        "alias_endpoint": "/gettyimages/v3/customers/current",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_downloads": {
+      "provider_intent": "get_downloads",
+      "provider_alias_intent": "/v3/downloads",
+      "text": "Returns information about a customer's downloaded assets.",
+      "category": "Downloads",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "date_from": {
+          "type": "string",
+          "text": "If specified selects assets downloaded on or after this date"
+        },
+        "date_to": {
+          "type": "string",
+          "text": "If specified selects assets downloaded on or before this date"
+        },
+        "use_time": {
+          "type": "boolean",
+          "text": "If specified time values provided with date_to or date_from will be used",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "page": {
+          "type": "integer",
+          "text": "Identifies page to return"
+        },
+        "page_size": {
+          "type": "integer",
+          "text": "Specifies page size"
+        },
+        "product_type": {
+          "type": "string",
+          "text": "Specifies product type to be included in the previous download results"
+        },
+        "company_downloads": {
+          "type": "boolean",
+          "text": "If specified returns the list of previously downloaded images for all users in your company",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns information about a customer's downloaded assets.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/downloads",
+        "alias_endpoint": "/gettyimages/v3/downloads",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "post_downloads_images_id": {
+      "provider_intent": "post_downloads_images_id",
+      "provider_alias_intent": "/v3/downloads/images/id",
+      "text": "Download an image",
+      "category": "Downloads",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "<remarks>\r\n                    Id of image to download",
+          "required": true
+        },
+        "auto_download": {
+          "type": "boolean",
+          "text": "Specifies whether to auto-download the image",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "file_type": {
+          "type": "string",
+          "text": "File Type expressed with three character file extension"
+        },
+        "height": {
+          "type": "string",
+          "text": "<remarks>Specifies the pixel height of the particular image to download"
+        },
+        "product_id": {
+          "type": "integer",
+          "text": "<remarks>Identifier of the instance for the selected product offering type"
+        },
+        "product_type": {
+          "type": "string",
+          "text": "<remarks> Product types easyaccess editorialsubscription imagepack and premiumaccess are for GettyImages API keys"
+        },
+        "use_team_credits": {
+          "type": "boolean",
+          "text": "Specifies whether to download the image with iStock Team Credits",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "download_notes": {
+          "type": "string"
+        },
+        "project_code": {
+          "type": "string"
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "<remarks>\r\n                    Id of image to download",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Download an image.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/downloads/images/{id}",
+        "alias_endpoint": "/gettyimages/v3/downloads/images/id",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "post_downloads_videos_id": {
+      "provider_intent": "post_downloads_videos_id",
+      "provider_alias_intent": "/v3/downloads/videos/id",
+      "text": "Download a video",
+      "category": "Downloads",
+      "method": "POST",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "<remarks>\r\n                    Id of video to download",
+          "required": true
+        },
+        "auto_download": {
+          "type": "boolean",
+          "text": "<remarks>\r\n                    Specifies whether to auto-download the video",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "size": {
+          "type": "string",
+          "text": "Specifies the size to be downloaded"
+        },
+        "product_id": {
+          "type": "integer",
+          "text": "<remarks>\r\n                    Identifier of the instance for the selected product offering type"
+        },
+        "product_type": {
+          "type": "string",
+          "text": "<remarks>\r\n                    Product types easyaccess editorialsubscription imagepack and premiumaccess are for GettyImages API keys"
+        },
+        "use_team_credits": {
+          "type": "boolean",
+          "text": "Specifies whether to download the image with iStock Team Credits",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "download_notes": {
+          "type": "string"
+        },
+        "project_code": {
+          "type": "string"
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "<remarks>\r\n                    Id of video to download",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Download a video.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/downloads/videos/{id}",
+        "alias_endpoint": "/gettyimages/v3/downloads/videos/id",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_events": {
+      "provider_intent": "get_events",
+      "provider_alias_intent": "/v3/events",
+      "text": "Get metadata for multiple events",
+      "category": "Events",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "ids": {
+          "type": "array",
+          "text": "A comma separated list of event ids"
+        },
+        "fields": {
+          "type": "array",
+          "text": "A comma separated list of fields to return in the response"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get metadata for multiple events.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/events",
+        "alias_endpoint": "/gettyimages/v3/events",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_events_id": {
+      "provider_intent": "get_events_id",
+      "provider_alias_intent": "/v3/events/id",
+      "text": "Get metadata for a single event",
+      "category": "Events",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "integer",
+          "text": "An event id",
+          "required": true
+        },
+        "fields": {
+          "type": "array",
+          "text": "A comma separated list of fields to return in the response"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "integer",
+          "text": "An event id",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get metadata for a single event.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/events/{id}",
+        "alias_endpoint": "/gettyimages/v3/events/id",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_images": {
+      "provider_intent": "get_images",
+      "provider_alias_intent": "/v3/images",
+      "text": "Get metadata for multiple images by supplying multiple image ids",
+      "category": "Images",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "ids": {
+          "type": "array",
+          "text": "Specifies one or more image ids to return"
+        },
+        "fields": {
+          "type": "array",
+          "text": "Specifies fields to return"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get metadata for multiple images by supplying multiple image ids.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/images",
+        "alias_endpoint": "/gettyimages/v3/images",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_images_id": {
+      "provider_intent": "get_images_id",
+      "provider_alias_intent": "/v3/images/id",
+      "text": "Get metadata for a single image by supplying one image id",
+      "category": "Images",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "An image id",
+          "required": true
+        },
+        "fields": {
+          "type": "array",
+          "text": "Specifies fields to return"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "An image id",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get metadata for a single image by supplying one image id.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/images/{id}",
+        "alias_endpoint": "/gettyimages/v3/images/id",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_images_id_downloadhistory": {
+      "provider_intent": "get_images_id_downloadhistory",
+      "provider_alias_intent": "/v3/images/id/downloadhistory",
+      "text": "Returns information about a customer's download history for a specific asset",
+      "category": "Images",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "An image id",
+          "required": true
+        },
+        "company_downloads": {
+          "type": "boolean",
+          "text": "If specified returns the list of previously downloaded images for all users in your company",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "An image id",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns information about a customer's download history for a specific asset.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/images/{id}/downloadhistory",
+        "alias_endpoint": "/gettyimages/v3/images/id/downloadhistory",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_images_id_same_series": {
+      "provider_intent": "get_images_id_same_series",
+      "provider_alias_intent": "/v3/images/id/same-series",
+      "text": "Retrieve creative images from the same series",
+      "category": "Images",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Identifies an existing image",
+          "required": true
+        },
+        "fields": {
+          "type": "array",
+          "text": "Specifies fields to return"
+        },
+        "page": {
+          "type": "integer",
+          "text": "Identifies page to return"
+        },
+        "page_size": {
+          "type": "integer",
+          "text": "Specifies page size"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Identifies an existing image",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Retrieve creative images from the same series.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/images/{id}/same-series",
+        "alias_endpoint": "/gettyimages/v3/images/id/same-series",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_images_id_similar": {
+      "provider_intent": "get_images_id_similar",
+      "provider_alias_intent": "/v3/images/id/similar",
+      "text": "Retrieve similar images",
+      "category": "Images",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Identifies an existing image",
+          "required": true
+        },
+        "fields": {
+          "type": "array",
+          "text": "Specifies fields to return"
+        },
+        "page": {
+          "type": "integer",
+          "text": "Identifies page to return"
+        },
+        "page_size": {
+          "type": "integer",
+          "text": "Specifies page size"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Identifies an existing image",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Retrieve similar images.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/images/{id}/similar",
+        "alias_endpoint": "/gettyimages/v3/images/id/similar",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_orders_id": {
+      "provider_intent": "get_orders_id",
+      "provider_alias_intent": "/v3/orders/id",
+      "text": "Get order metadata",
+      "category": "Orders",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "integer",
+          "text": "An order id",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "integer",
+          "text": "An order id",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get order metadata.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/orders/{id}",
+        "alias_endpoint": "/gettyimages/v3/orders/id",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_products": {
+      "provider_intent": "get_products",
+      "provider_alias_intent": "/v3/products",
+      "text": "Get Products",
+      "category": "Products",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "fields": {
+          "type": "array",
+          "text": "Comma separated list of fields"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get Products.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/products",
+        "alias_endpoint": "/gettyimages/v3/products",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_purchased_assets": {
+      "provider_intent": "get_purchased_assets",
+      "provider_alias_intent": "/v3/purchased-assets",
+      "text": "Get Previously Purchased Images and Video",
+      "category": "Purchases",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "date_to": {
+          "type": "string",
+          "text": "If specified retrieves previous purchases on or before this date"
+        },
+        "page": {
+          "type": "integer",
+          "text": "Identifies page to return"
+        },
+        "page_size": {
+          "type": "integer",
+          "text": "Specifies page size"
+        },
+        "date_from": {
+          "type": "string",
+          "text": "If specified retrieves previous purchases on or after this date"
+        },
+        "company_purchases": {
+          "type": "boolean",
+          "text": "If specified returns the list of previously purchased assets for all users in your company",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get Previously Purchased Images and Video.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/purchased-assets",
+        "alias_endpoint": "/gettyimages/v3/purchased-assets",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_search_events": {
+      "provider_intent": "get_search_events",
+      "provider_alias_intent": "/v3/search/events",
+      "text": "Search for events",
+      "category": "Search",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "editorial_segment": {
+          "type": "string",
+          "text": "Filters to events with a matching editorial segment"
+        },
+        "date_from": {
+          "type": "string",
+          "text": "Filters to events that start on or after this date"
+        },
+        "date_to": {
+          "type": "string",
+          "text": "Filters to events that start on or before this date"
+        },
+        "fields": {
+          "type": "array",
+          "text": "Specifies fields to return"
+        },
+        "page": {
+          "type": "integer",
+          "text": "Request results starting at a page number (default is 1 maximum is 50)"
+        },
+        "page_size": {
+          "type": "integer",
+          "text": "Request number of events to return in each page"
+        },
+        "phrase": {
+          "type": "string",
+          "text": "Filters to events related to this phrase"
+        },
+        "sort_order": {
+          "type": "string",
+          "text": "Specifies the order in which to sort the results"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Search for events.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/search/events",
+        "alias_endpoint": "/gettyimages/v3/search/events",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_search_images_creative": {
+      "provider_intent": "get_search_images_creative",
+      "provider_alias_intent": "/v3/search/images/creative",
+      "text": "Search for creative images only",
+      "category": "Search",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "age_of_people": {
+          "type": "array",
+          "text": "Filter based on the age of individuals in an image"
+        },
+        "artists": {
+          "type": "string",
+          "text": "Search for images by specific artists (free-text comma-separated list of artists)"
+        },
+        "collection_codes": {
+          "type": "array",
+          "text": "Filter by collection codes (comma-separated list)"
+        },
+        "collections_filter_type": {
+          "type": "string",
+          "text": "Use to include or exclude collections from search"
+        },
+        "color": {
+          "type": "string",
+          "text": "Filter based on predominant color in an image"
+        },
+        "compositions": {
+          "type": "array",
+          "text": "Filter based on image composition"
+        },
+        "download_product": {
+          "type": "string",
+          "text": "Filters based on which product the asset will download against"
+        },
+        "embed_content_only": {
+          "type": "boolean",
+          "text": "Restrict search results to embeddable images",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "ethnicity": {
+          "type": "array",
+          "text": "Filter search results based on the ethnicity of individuals in an image"
+        },
+        "exclude_keyword_ids": {
+          "type": "array",
+          "text": "Return only images not tagged with specific keyword(s)"
+        },
+        "exclude_nudity": {
+          "type": "boolean",
+          "text": "Excludes images containing nudity",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "exclude_editorial_use_only": {
+          "type": "boolean",
+          "text": "Exclude images that are only available for editorial (non-commercial) use",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "fields": {
+          "type": "array",
+          "text": "Specifies fields to return"
+        },
+        "file_types": {
+          "type": "array",
+          "text": "Return only images having a specific file type"
+        },
+        "graphical_styles": {
+          "type": "array",
+          "text": "Filter based on graphical style of the image"
+        },
+        "graphical_styles_filter_type": {
+          "type": "string",
+          "text": "Provides searching based on specified graphical style(s)"
+        },
+        "include_related_searches": {
+          "type": "boolean",
+          "text": "Specifies whether or not to include related searches in the response",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "keyword_ids": {
+          "type": "array",
+          "text": "Return only images tagged with specific keyword(s)"
+        },
+        "minimum_size": {
+          "type": "string",
+          "text": "Filter based on minimum size requested"
+        },
+        "number_of_people": {
+          "type": "array",
+          "text": "Filter based on the number of people in the image"
+        },
+        "orientations": {
+          "type": "array",
+          "text": "Return only images with selected aspect ratios"
+        },
+        "page": {
+          "type": "integer",
+          "text": "Request results starting at a page number (default is 1)"
+        },
+        "page_size": {
+          "type": "integer",
+          "text": "Request number of images to return in each page"
+        },
+        "phrase": {
+          "type": "string",
+          "text": "Search images using a search phrase"
+        },
+        "safe_search": {
+          "type": "boolean",
+          "text": "Setting safe_search to \"true\" excludes images containing nudity death profanity drugs and alcohol suggestive content and graphic content from the result set",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "sort_order": {
+          "type": "string",
+          "text": "Select sort order of results"
+        },
+        "facet_fields": {
+          "type": "array",
+          "text": "Specifies the facets to return in the response"
+        },
+        "include_facets": {
+          "type": "boolean",
+          "text": "Specifies whether or not to include facets in the result set",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "facet_max_count": {
+          "type": "integer",
+          "text": "Specifies the maximum number of facets to return per type"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Search for creative images only.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/search/images/creative",
+        "alias_endpoint": "/gettyimages/v3/search/images/creative",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_search_images_creative_by_image": {
+      "provider_intent": "get_search_images_creative_by_image",
+      "provider_alias_intent": "/v3/search/images/creative/by-image",
+      "text": "Search for creative images based on url",
+      "category": "Search",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "asset_id": {
+          "type": "string",
+          "text": "Specifies the Getty image id to use in the search"
+        },
+        "exclude_editorial_use_only": {
+          "type": "boolean",
+          "text": "Exclude images that are only available for editorial (non-commercial) use",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "facet_fields": {
+          "type": "array",
+          "text": "Specifies the facets to return in the response"
+        },
+        "facet_max_count": {
+          "type": "integer",
+          "text": "Specifies the maximum number of facets to return per type"
+        },
+        "fields": {
+          "type": "array",
+          "text": "Specifies fields to return"
+        },
+        "image_url": {
+          "type": "string",
+          "text": "Specifies the location of the image to use in the search"
+        },
+        "include_facets": {
+          "type": "boolean",
+          "text": "Specifies whether or not to include facets in the result set",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "page": {
+          "type": "integer",
+          "text": "Request results starting at a page number (default is 1)"
+        },
+        "page_size": {
+          "type": "integer",
+          "text": "Request number of images to return in each page"
+        },
+        "product_types": {
+          "type": "array",
+          "text": "Filter images to those from one of your product types"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Search for creative images based on url.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/search/images/creative/by-image",
+        "alias_endpoint": "/gettyimages/v3/search/images/creative/by-image",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_search_images_editorial": {
+      "provider_intent": "get_search_images_editorial",
+      "provider_alias_intent": "/v3/search/images/editorial",
+      "text": "Search for editorial images only",
+      "category": "Search",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "age_of_people": {
+          "type": "array",
+          "text": "Filter based on the age of individuals in an image"
+        },
+        "artists": {
+          "type": "string",
+          "text": "Search for images by specific artists (free-text comma-separated list of artists)"
+        },
+        "collection_codes": {
+          "type": "array",
+          "text": "Filter by collections (comma-separated list of collection codes)"
+        },
+        "collections_filter_type": {
+          "type": "string",
+          "text": "Use to include or exclude collections from search"
+        },
+        "compositions": {
+          "type": "array",
+          "text": "Filter based on image composition"
+        },
+        "date_from": {
+          "type": "string",
+          "text": "Return only images that are created on or after this date"
+        },
+        "date_to": {
+          "type": "string",
+          "text": "Return only images that are created on or before this date"
+        },
+        "download_product": {
+          "type": "string",
+          "text": "Filters based on which product the asset will download against"
+        },
+        "editorial_segments": {
+          "type": "array",
+          "text": "Return only events with a matching editorial segment"
+        },
+        "embed_content_only": {
+          "type": "boolean",
+          "text": "Restrict search results to embeddable images",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "ethnicity": {
+          "type": "array",
+          "text": "Filter search results based on the ethnicity of individuals in an image"
+        },
+        "event_ids": {
+          "type": "array",
+          "text": "Filter based on specific events"
+        },
+        "exclude_keyword_ids": {
+          "type": "array",
+          "text": "Return only images not tagged with specific keyword(s)"
+        },
+        "fields": {
+          "type": "array",
+          "text": "Specifies fields to return"
+        },
+        "file_types": {
+          "type": "array",
+          "text": "Return only images having a specific file type"
+        },
+        "graphical_styles": {
+          "type": "array",
+          "text": "Filter based on graphical style of the image"
+        },
+        "graphical_styles_filter_type": {
+          "type": "string",
+          "text": "Provides searching based on specified graphical style(s)"
+        },
+        "include_related_searches": {
+          "type": "boolean",
+          "text": "Specifies whether or not to include related searches in the response",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "keyword_ids": {
+          "type": "array",
+          "text": "Return only images tagged with specific keyword(s)"
+        },
+        "minimum_size": {
+          "type": "string",
+          "text": "Filter based on minimum size requested"
+        },
+        "number_of_people": {
+          "type": "array",
+          "text": "Filter based on the number of people in the image"
+        },
+        "orientations": {
+          "type": "array",
+          "text": "Return only images with selected aspect ratios"
+        },
+        "page": {
+          "type": "integer",
+          "text": "Request results starting at a page number (default is 1)"
+        },
+        "page_size": {
+          "type": "integer",
+          "text": "Request number of images to return in each page"
+        },
+        "phrase": {
+          "type": "string",
+          "text": "Search images using a search phrase"
+        },
+        "sort_order": {
+          "type": "string",
+          "text": "Select sort order of results"
+        },
+        "specific_people": {
+          "type": "array",
+          "text": "Return only images associated with specific people (using a comma-delimited list)"
+        },
+        "minimum_quality_rank": {
+          "type": "integer",
+          "text": "Filter search results based on minimum quality ranking"
+        },
+        "facet_fields": {
+          "type": "array",
+          "text": "Specifies the facets to return in the response"
+        },
+        "include_facets": {
+          "type": "boolean",
+          "text": "Specifies whether or not to include facets in the result set",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "facet_max_count": {
+          "type": "integer",
+          "text": "Specifies the maximum number of facets to return per type"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Search for editorial images only.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/search/images/editorial",
+        "alias_endpoint": "/gettyimages/v3/search/images/editorial",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_search_videos_creative": {
+      "provider_intent": "get_search_videos_creative",
+      "provider_alias_intent": "/v3/search/videos/creative",
+      "text": "Search for creative videos",
+      "category": "Search",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "age_of_people": {
+          "type": "array",
+          "text": "Provides filtering according to the age of individuals in a video"
+        },
+        "artists": {
+          "type": "string",
+          "text": "Search for videos by specific artists (free-text comma-separated list of artists)"
+        },
+        "aspect_ratios": {
+          "type": "array",
+          "text": "Search for videos by specific aspect ratios"
+        },
+        "collection_codes": {
+          "type": "array",
+          "text": "Provides filtering by collection code"
+        },
+        "collections_filter_type": {
+          "type": "string",
+          "text": "Use to include or exclude collections from search"
+        },
+        "compositions": {
+          "type": "array",
+          "text": "Filter based on video composition"
+        },
+        "download_product": {
+          "type": "string",
+          "text": "Filters based on which product the asset will download against"
+        },
+        "exclude_nudity": {
+          "type": "boolean",
+          "text": "Excludes videos containing nudity",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "exclude_editorial_use_only": {
+          "type": "boolean",
+          "text": "Exclude videos that are only available for editorial (non-commercial) use",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "exclude_keyword_ids": {
+          "type": "array",
+          "text": "Return only videos not tagged with specific keyword(s)"
+        },
+        "fields": {
+          "type": "array",
+          "text": "Specifies fields to return"
+        },
+        "format_available": {
+          "type": "string",
+          "text": "Filters according to the digital video format available on a film asset"
+        },
+        "frame_rates": {
+          "type": "array",
+          "text": "Provides filtering by video frame rate (frames/second)"
+        },
+        "image_techniques": {
+          "type": "array",
+          "text": "Filter based on image technique"
+        },
+        "include_related_searches": {
+          "type": "boolean",
+          "text": "Specifies whether or not to include related searches in the response",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "keyword_ids": {
+          "type": "array",
+          "text": "Return only videos tagged with specific keyword(s)"
+        },
+        "license_models": {
+          "type": "array",
+          "text": "Specifies the video licensing model(s)"
+        },
+        "orientations": {
+          "type": "array",
+          "text": "Return only videos with selected orientations"
+        },
+        "min_clip_length": {
+          "type": "integer",
+          "text": "Provides filtering by minimum length of video clip in seconds"
+        },
+        "max_clip_length": {
+          "type": "integer",
+          "text": "Provides filtering by maximum length of video in seconds"
+        },
+        "page": {
+          "type": "integer",
+          "text": "Identifies page to return"
+        },
+        "page_size": {
+          "type": "integer",
+          "text": "Specifies page size"
+        },
+        "phrase": {
+          "type": "string",
+          "text": "Free-text search query"
+        },
+        "safe_search": {
+          "type": "boolean",
+          "text": "Setting safe_search to \"true\" excludes images containing nudity death profanity drugs and alcohol suggestive content and graphic content from the result set",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "sort_order": {
+          "type": "string",
+          "text": "Select sort order of results"
+        },
+        "release_status": {
+          "type": "string",
+          "text": "Allows filtering by type of model release"
+        },
+        "facet_fields": {
+          "type": "array",
+          "text": "Specifies the facets to return in the response"
+        },
+        "facet_max_count": {
+          "type": "integer",
+          "text": "Specifies the maximum number of facets to return per type"
+        },
+        "include_facets": {
+          "type": "boolean",
+          "text": "Specifies whether or not to include facets in the result set",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "viewpoints": {
+          "type": "array",
+          "text": "Filter based on viewpoint"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Search for creative videos.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/search/videos/creative",
+        "alias_endpoint": "/gettyimages/v3/search/videos/creative",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_search_videos_creative_by_image": {
+      "provider_intent": "get_search_videos_creative_by_image",
+      "provider_alias_intent": "/v3/search/videos/creative/by-image",
+      "text": "Search for creative videos based on url",
+      "category": "Search",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "asset_id": {
+          "type": "string",
+          "text": "Specifies the Getty video id to use in the search"
+        },
+        "exclude_editorial_use_only": {
+          "type": "boolean",
+          "text": "Exclude videos that are only available for editorial (non-commercial) use",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "facet_fields": {
+          "type": "array",
+          "text": "Specifies the facets to return in the response"
+        },
+        "facet_max_count": {
+          "type": "integer",
+          "text": "Specifies the maximum number of facets to return per type"
+        },
+        "fields": {
+          "type": "array",
+          "text": "Specifies fields to return"
+        },
+        "image_url": {
+          "type": "string",
+          "text": "Specifies the location of the image to use in the search"
+        },
+        "include_facets": {
+          "type": "boolean",
+          "text": "Specifies whether or not to include facets in the result set",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "page": {
+          "type": "integer",
+          "text": "Request results starting at a page number (default is 1)"
+        },
+        "page_size": {
+          "type": "integer",
+          "text": "Request number of images to return in each page"
+        },
+        "product_types": {
+          "type": "array",
+          "text": "Filter images to those from one of your product types"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Search for creative videos based on url.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/search/videos/creative/by-image",
+        "alias_endpoint": "/gettyimages/v3/search/videos/creative/by-image",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_search_videos_editorial": {
+      "provider_intent": "get_search_videos_editorial",
+      "provider_alias_intent": "/v3/search/videos/editorial",
+      "text": "Search for editorial videos",
+      "category": "Search",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "age_of_people": {
+          "type": "array",
+          "text": "Provides filtering according to the age of individuals in a video"
+        },
+        "artists": {
+          "type": "string",
+          "text": "Search for videos by specific artists (free-text comma-separated list of artists)"
+        },
+        "aspect_ratios": {
+          "type": "array",
+          "text": "Search for videos by specific aspect ratios"
+        },
+        "collection_codes": {
+          "type": "array",
+          "text": "Provides filtering by collection code"
+        },
+        "collections_filter_type": {
+          "type": "string",
+          "text": "Use to include or exclude collections from search"
+        },
+        "compositions": {
+          "type": "array",
+          "text": "Filter based on video composition"
+        },
+        "date_from": {
+          "type": "string",
+          "text": "Return only images that are created on or after this date"
+        },
+        "date_to": {
+          "type": "string",
+          "text": "Return only images that are created on or before this date"
+        },
+        "download_product": {
+          "type": "string",
+          "text": "Filters based on which product the asset will download against"
+        },
+        "editorial_video_types": {
+          "type": "array",
+          "text": "Allows filtering by types of video"
+        },
+        "fields": {
+          "type": "array",
+          "text": "Specifies fields to return"
+        },
+        "format_available": {
+          "type": "string",
+          "text": "Filters according to the digital video format available on a film asset"
+        },
+        "frame_rates": {
+          "type": "array",
+          "text": "Provides filtering by video frame rate (frames/second)"
+        },
+        "image_techniques": {
+          "type": "array",
+          "text": "Filter based on image technique"
+        },
+        "include_related_searches": {
+          "type": "boolean",
+          "text": "Specifies whether or not to include related searches in the response",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "keyword_ids": {
+          "type": "array",
+          "text": "Return only videos tagged with specific keyword(s)"
+        },
+        "min_clip_length": {
+          "type": "integer",
+          "text": "Provides filtering by minimum length of video clip in seconds"
+        },
+        "max_clip_length": {
+          "type": "integer",
+          "text": "Provides filtering by maximum length of video clip in seconds"
+        },
+        "orientations": {
+          "type": "array",
+          "text": "Return only videos with selected orientations"
+        },
+        "page": {
+          "type": "integer",
+          "text": "Identifies page to return"
+        },
+        "page_size": {
+          "type": "integer",
+          "text": "Specifies page size"
+        },
+        "phrase": {
+          "type": "string",
+          "text": "Free-text search query"
+        },
+        "sort_order": {
+          "type": "string",
+          "text": "Select sort order of results"
+        },
+        "specific_people": {
+          "type": "array",
+          "text": "Allows filtering by specific peoples' names"
+        },
+        "release_status": {
+          "type": "string",
+          "text": "Allows filtering by type of model release"
+        },
+        "facet_fields": {
+          "type": "array",
+          "text": "Specifies the facets to return in the response"
+        },
+        "include_facets": {
+          "type": "boolean",
+          "text": "Specifies whether or not to include facets in the result set",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "facet_max_count": {
+          "type": "integer",
+          "text": "Specifies the maximum number of facets to return per type"
+        },
+        "viewpoints": {
+          "type": "array",
+          "text": "Filter based on viewpoint"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Search for editorial videos.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/search/videos/editorial",
+        "alias_endpoint": "/gettyimages/v3/search/videos/editorial",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "put_search_by_image_uploads_file_name": {
+      "provider_intent": "put_search_by_image_uploads_file_name",
+      "provider_alias_intent": "/v3/search/by-image/uploads/file-name",
+      "text": "Upload image for use by the search creative images/videos operations",
+      "category": "Search",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "file-name": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "file-name": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Upload image for use by the search creative images/videos operations.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/search/by-image/uploads/{file-name}",
+        "alias_endpoint": "/gettyimages/v3/search/by-image/uploads/file-name",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_search_images": {
+      "provider_intent": "get_search_images",
+      "provider_alias_intent": "/v3/search/images",
+      "text": "Search for both creative and editorial images - *** DEPRECATED ***",
+      "category": "Search",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "age_of_people": {
+          "type": "array",
+          "text": "Filter based on the age of individuals in an image"
+        },
+        "artists": {
+          "type": "string",
+          "text": "Search for images by specific artists (free-text comma-separated list of artists)"
+        },
+        "collection_codes": {
+          "type": "array",
+          "text": "Filter by collection codes (comma-separated list)"
+        },
+        "collections_filter_type": {
+          "type": "string",
+          "text": "Provides searching based on specified collection(s)"
+        },
+        "color": {
+          "type": "string",
+          "text": "Filter based on predominant color in an image"
+        },
+        "compositions": {
+          "type": "array",
+          "text": "Filter based on image composition"
+        },
+        "download_product": {
+          "type": "string",
+          "text": "Filters based on which product the asset will download against"
+        },
+        "embed_content_only": {
+          "type": "boolean",
+          "text": "Restrict search results to embeddable images",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "event_ids": {
+          "type": "array",
+          "text": "Filter based on specific events"
+        },
+        "ethnicity": {
+          "type": "array",
+          "text": "Filter search results based on the ethnicity of individuals in an image"
+        },
+        "exclude_nudity": {
+          "type": "boolean",
+          "text": "Excludes images containing nudity",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "fields": {
+          "type": "array",
+          "text": "Specifies fields to return"
+        },
+        "file_types": {
+          "type": "array",
+          "text": "Return only images having a specific file type"
+        },
+        "graphical_styles": {
+          "type": "array",
+          "text": "Filter based on graphical style of the image"
+        },
+        "graphical_styles_filter_type": {
+          "type": "string",
+          "text": "Provides searching based on specified graphical style(s)"
+        },
+        "include_related_searches": {
+          "type": "boolean",
+          "text": "Specifies whether or not to include related searches in the response",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "keyword_ids": {
+          "type": "array",
+          "text": "Return only images tagged with specific keyword(s)"
+        },
+        "minimum_size": {
+          "type": "string",
+          "text": "Filter based on minimum size requested"
+        },
+        "number_of_people": {
+          "type": "array",
+          "text": "Filter based on the number of people in the image"
+        },
+        "orientations": {
+          "type": "array",
+          "text": "Return only images with selected aspect ratios"
+        },
+        "page": {
+          "type": "integer",
+          "text": "Request results starting at a page number (default is 1)"
+        },
+        "page_size": {
+          "type": "integer",
+          "text": "Request number of images to return in each page"
+        },
+        "phrase": {
+          "type": "string",
+          "text": "Search images using a search phrase"
+        },
+        "sort_order": {
+          "type": "string",
+          "text": "Select sort order of results"
+        },
+        "specific_people": {
+          "type": "array",
+          "text": "Return only images associated with specific people (using a comma-delimited list)"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Search for both creative and editorial images - *** DEPRECATED ***.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/search/images",
+        "alias_endpoint": "/gettyimages/v3/search/images",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "put_usage_batches_id": {
+      "provider_intent": "put_usage_batches_id",
+      "provider_alias_intent": "/v3/usage-batches/id",
+      "text": "Report usage of assets via a batch format.",
+      "category": "Usage",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Specifies a unique batch transaction id to identify the report",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "asset_usages": {
+          "type": "array",
+          "text": "Identifies the list of asset id usage count and date of usage combinations to record"
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Specifies a unique batch transaction id to identify the report",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Report usage of assets via a batch format.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/usage-batches/{id}",
+        "alias_endpoint": "/gettyimages/v3/usage-batches/id",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_videos": {
+      "provider_intent": "get_videos",
+      "provider_alias_intent": "/v3/videos",
+      "text": "Get metadata for multiple videos by supplying multiple video ids",
+      "category": "Videos",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "ids": {
+          "type": "array",
+          "text": "Specifies one or more video ids to return"
+        },
+        "fields": {
+          "type": "array",
+          "text": "Specifies fields to return"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get metadata for multiple videos by supplying multiple video ids.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/videos",
+        "alias_endpoint": "/gettyimages/v3/videos",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_videos_id": {
+      "provider_intent": "get_videos_id",
+      "provider_alias_intent": "/v3/videos/id",
+      "text": "Get metadata for a single video by supplying one video id",
+      "category": "Videos",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "A video id",
+          "required": true
+        },
+        "fields": {
+          "type": "array",
+          "text": "Specifies fields to return"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "A video id",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Get metadata for a single video by supplying one video id.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/videos/{id}",
+        "alias_endpoint": "/gettyimages/v3/videos/id",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_videos_id_downloadhistory": {
+      "provider_intent": "get_videos_id_downloadhistory",
+      "provider_alias_intent": "/v3/videos/id/downloadhistory",
+      "text": "Returns information about a customer's download history for a specific asset",
+      "category": "Videos",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "A video id",
+          "required": true
+        },
+        "company_downloads": {
+          "type": "boolean",
+          "text": "If specified returns the list of previously downloaded videos for all users in your company",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "A video id",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Returns information about a customer's download history for a specific asset.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/videos/{id}/downloadhistory",
+        "alias_endpoint": "/gettyimages/v3/videos/id/downloadhistory",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_videos_id_same_series": {
+      "provider_intent": "get_videos_id_same_series",
+      "provider_alias_intent": "/v3/videos/id/same-series",
+      "text": "Retrieve creative videos from the same series",
+      "category": "Videos",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "Identifies an existing video",
+          "required": true
+        },
+        "fields": {
+          "type": "array",
+          "text": "Specifies fields to return"
+        },
+        "page": {
+          "type": "integer",
+          "text": "Identifies page to return"
+        },
+        "page_size": {
+          "type": "integer",
+          "text": "Specifies page size"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "Identifies an existing video",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Retrieve creative videos from the same series.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/videos/{id}/same-series",
+        "alias_endpoint": "/gettyimages/v3/videos/id/same-series",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    },
+    "get_videos_id_similar": {
+      "provider_intent": "get_videos_id_similar",
+      "provider_alias_intent": "/v3/videos/id/similar",
+      "text": "Retrieve similar videos",
+      "category": "Videos",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "A video id",
+          "required": true
+        },
+        "fields": {
+          "type": "array",
+          "text": "Specifies fields to return"
+        },
+        "page": {
+          "type": "integer",
+          "text": "Identifies page to return"
+        },
+        "page_size": {
+          "type": "integer",
+          "text": "Specifies page size"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "A video id",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v3",
+        "auth": [],
+        "description": "Retrieve similar videos.",
+        "rate_limit": [],
+        "api_endpoint": "https://api.gettyimages.com/v3/videos/{id}/similar",
+        "alias_endpoint": "/gettyimages/v3/videos/id/similar",
+        "api_ref": ""
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "accessToken"
+        }
+      },
+      "subdomain": {},
+      "wip": 0,
+      "payload_type": ""
+    }
+  }
+}

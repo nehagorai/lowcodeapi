@@ -1,0 +1,887 @@
+{
+  "routes": {
+    "squadcast_v2_organizations_get": {
+      "provider_intent": "squadcast_v2_organizations_get",
+      "provider_alias_intent": "/v2/organizations",
+      "text": "Get Organization ID",
+      "category": "Organization",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve all sessions",
+        "rate_limit": [],
+        "api_endpoint": "https://api.squadcast.fm/v2/organizations",
+        "alias_endpoint": "/squadcast/v2/organizations",
+        "api_ref": "https://developers.squadcast.fm/reference/get_v2-organizations"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "squadcast_v2_organizations_balance_get": {
+      "provider_intent": "squadcast_v2_organizations_balance_get",
+      "provider_alias_intent": "/v2/organizations/balance",
+      "text": "Get Balance",
+      "category": "Organization",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve all sessions",
+        "rate_limit": [],
+        "api_endpoint": "https://api.squadcast.fm/v2/organizations/balance",
+        "alias_endpoint": "/squadcast/v2/organizations/balance",
+        "api_ref": "https://developers.squadcast.fm/reference/get_v2-organizations-balance"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "squadcast_v2_organizations_team_get": {
+      "provider_intent": "squadcast_v2_organizations_team_get",
+      "provider_alias_intent": "/v2/organizations/team",
+      "text": "Get all Team Members",
+      "category": "Organization",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve all sessions",
+        "rate_limit": [],
+        "api_endpoint": "https://api.squadcast.fm/v2/organizations/team",
+        "alias_endpoint": "/squadcast/v2/organizations/team",
+        "api_ref": "https://developers.squadcast.fm/reference/get_v2-organizations-team"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "squadcast_v2_sessions_get": {
+      "provider_intent": "squadcast_v2_sessions_get",
+      "provider_alias_intent": "/v2/sessions",
+      "text": "Get all Sessions",
+      "category": "Sessions",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "showid": {
+          "type": "string",
+          "text": "Show ID"
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve all sessions",
+        "rate_limit": [],
+        "api_endpoint": "https://api.squadcast.fm/v2/sessions",
+        "alias_endpoint": "/squadcast/v2/sessions",
+        "api_ref": "https://developers.squadcast.fm/reference/get_v2-sessions"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "squadcast_v2_sessions_post": {
+      "provider_intent": "squadcast_v2_sessions_post",
+      "provider_alias_intent": "/v2/sessions",
+      "text": "Create new Session",
+      "category": "Sessions",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {
+        "sessionTitle": {
+          "type": "string",
+          "text": "Title your Session",
+          "required": true
+        },
+        "date": {
+          "type": "string",
+          "text": "A Date to Schedule your Session in YYYY-MM-DD format",
+          "required": true
+        },
+        "timeZone": {
+          "type": "string",
+          "text": "A specific timezone for your Session"
+        },
+        "startTime": {
+          "type": "string",
+          "text": "A Start Time for your Session in hh:mm A format",
+          "required": true
+        },
+        "endTime": {
+          "type": "string",
+          "text": "A End Time for your Session in hh:mm A format",
+          "required": true
+        },
+        "stage": {
+          "type": "string",
+          "text": "Invite Email for on stage for your Session"
+        },
+        "viewer": {
+          "type": "string",
+          "text": "Invite Email for backstage for your Session"
+        },
+        "videoEnabled": {
+          "type": "boolean",
+          "text": "Enable Video Recording for your Session",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "favorite": {
+          "type": "boolean",
+          "text": "Add this Session to your favorites",
+          "enum": [
+            true,
+            false
+          ]
+        },
+        "showID": {
+          "type": "boolean",
+          "text": "Show ID",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Add a session",
+        "rate_limit": [],
+        "api_endpoint": "https://api.squadcast.fm/v2/sessions",
+        "alias_endpoint": "/squadcast/v2/sessions",
+        "api_ref": "https://developers.squadcast.fm/reference/post_v2-sessions"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "squadcast_v2_sessions_id_get": {
+      "provider_intent": "squadcast_v2_sessions_id_get",
+      "provider_alias_intent": "/v2/sessions/id",
+      "text": "Get a Session",
+      "category": "Sessions",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve one session",
+        "rate_limit": [],
+        "api_endpoint": "https://api.squadcast.fm/v2/sessions/{id}",
+        "alias_endpoint": "/squadcast/v2/sessions/id",
+        "api_ref": "https://developers.squadcast.fm/reference/get_v2-sessions-id"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "squadcast_v2_sessions_id_put": {
+      "provider_intent": "squadcast_v2_sessions_id_put",
+      "provider_alias_intent": "/v2/sessions/id",
+      "text": "Update a Session",
+      "category": "Sessions",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {
+        "sessionTitle": {
+          "type": "string",
+          "text": "Title your Session",
+          "required": true
+        },
+        "date": {
+          "type": "string",
+          "text": "A Date to Schedule your Session in YYYY-MM-DD format",
+          "required": true
+        },
+        "timeZone": {
+          "type": "string",
+          "text": "A specific timezone for your Session"
+        },
+        "startTime": {
+          "type": "string",
+          "text": "A Start Time for your Session in hh:mm A format",
+          "required": true
+        },
+        "endTime": {
+          "type": "string",
+          "text": "A End Time for your Session in hh:mm A format",
+          "required": true
+        },
+        "stage": {
+          "type": "string",
+          "text": "Invite Email for on stage for your Session"
+        },
+        "viewer": {
+          "type": "string",
+          "text": "Invite Email for backstage for your Session"
+        },
+        "favorite": {
+          "type": "boolean",
+          "text": "Add this Session to your favorites",
+          "enum": [
+            true,
+            false
+          ]
+        }
+      },
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Update a session",
+        "rate_limit": [],
+        "api_endpoint": "https://api.squadcast.fm/v2/sessions/{id}",
+        "alias_endpoint": "/squadcast/v2/sessions/id",
+        "api_ref": "https://developers.squadcast.fm/reference/put_v2-sessions-id"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "squadcast_v2_sessions_id_delete": {
+      "provider_intent": "squadcast_v2_sessions_id_delete",
+      "provider_alias_intent": "/v2/sessions/id",
+      "text": "Delete a Session",
+      "category": "Sessions",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Delete a session",
+        "rate_limit": [],
+        "api_endpoint": "https://api.squadcast.fm/v2/sessions/{id}",
+        "alias_endpoint": "/squadcast/v2/sessions/id",
+        "api_ref": "https://developers.squadcast.fm/reference/delete_v2-sessions-id"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "squadcast_v2_sessions_id_recordings_get": {
+      "provider_intent": "squadcast_v2_sessions_id_recordings_get",
+      "provider_alias_intent": "/v2/sessions/id/recordings",
+      "text": "Get All Recordings from Session",
+      "category": "Sessions",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve one session",
+        "rate_limit": [],
+        "api_endpoint": "https://api.squadcast.fm/v2/sessions/{id}/recordings",
+        "alias_endpoint": "/squadcast/v2/sessions/id/recordings",
+        "api_ref": "https://developers.squadcast.fm/reference/get_v2-sessions-id-recordings"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "squadcast_v2_sessions_id_recordings_recordingid_get": {
+      "provider_intent": "squadcast_v2_sessions_id_recordings_recordingid_get",
+      "provider_alias_intent": "/v2/sessions/id/recordings/recordingid",
+      "text": "Get A Recording from Session",
+      "category": "Sessions",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        },
+        "recordingID": {
+          "type": "string",
+          "text": "Recording ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        },
+        "recordingID": {
+          "type": "string",
+          "text": "Recording ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve one session",
+        "rate_limit": [],
+        "api_endpoint": "https://api.squadcast.fm/v2/sessions/{id}/recordings/{recordingID}",
+        "alias_endpoint": "/squadcast/v2/sessions/id/recordings/recordingid",
+        "api_ref": "https://developers.squadcast.fm/reference/get_v2-sessions-id-recordings-recordingid"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "squadcast_v2_sessions_id_invitelink_get": {
+      "provider_intent": "squadcast_v2_sessions_id_invitelink_get",
+      "provider_alias_intent": "/v2/sessions/id/invitelink",
+      "text": "Get InviteLinks from Session",
+      "category": "Sessions",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve one session",
+        "rate_limit": [],
+        "api_endpoint": "https://api.squadcast.fm/v2/sessions/{id}/invitelink",
+        "alias_endpoint": "/squadcast/v2/sessions/id/invitelink",
+        "api_ref": "https://developers.squadcast.fm/reference/get_v2-sessions-id-invitelink"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "squadcast_v2_shows_get": {
+      "provider_intent": "squadcast_v2_shows_get",
+      "provider_alias_intent": "/v2/shows",
+      "text": "Get all Shows",
+      "category": "Shows",
+      "method": "GET",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve all sessions",
+        "rate_limit": [],
+        "api_endpoint": "https://api.squadcast.fm/v2/shows",
+        "alias_endpoint": "/squadcast/v2/shows",
+        "api_ref": "https://developers.squadcast.fm/reference/get_v2-shows"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "squadcast_v2_shows_id_get": {
+      "provider_intent": "squadcast_v2_shows_id_get",
+      "provider_alias_intent": "/v2/shows/id",
+      "text": "Get a Show",
+      "category": "Shows",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve one session",
+        "rate_limit": [],
+        "api_endpoint": "https://api.squadcast.fm/v2/shows/{id}",
+        "alias_endpoint": "/squadcast/v2/shows/id",
+        "api_ref": "https://developers.squadcast.fm/reference/get_v2-shows-id"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "squadcast_v2_shows_id_team_get": {
+      "provider_intent": "squadcast_v2_shows_id_team_get",
+      "provider_alias_intent": "/v2/shows/id/team",
+      "text": "Get Team",
+      "category": "Shows",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Update a session",
+        "rate_limit": [],
+        "api_endpoint": "https://api.squadcast.fm/v2/shows/{id}/team",
+        "alias_endpoint": "/squadcast/v2/shows/id/team",
+        "api_ref": "https://developers.squadcast.fm/reference/get_v2-shows-id-team"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "squadcast_v2_webhooks_get": {
+      "provider_intent": "squadcast_v2_webhooks_get",
+      "provider_alias_intent": "/v2/webhooks",
+      "text": "Get all Webhooks",
+      "category": "Webhooks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "url": {
+          "type": "string",
+          "text": "url",
+          "required": true
+        },
+        "events": {
+          "type": "string",
+          "text": "Events",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve all sessions",
+        "rate_limit": [],
+        "api_endpoint": "https://api.squadcast.fm/v2/webhooks",
+        "alias_endpoint": "/squadcast/v2/webhooks",
+        "api_ref": "https://developers.squadcast.fm/reference/get_v2-webhooks"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "squadcast_v2_webhooks_post": {
+      "provider_intent": "squadcast_v2_webhooks_post",
+      "provider_alias_intent": "/v2/webhooks",
+      "text": "Create a Webhook",
+      "category": "Webhooks",
+      "method": "POST",
+      "type": "API",
+      "params": {},
+      "custom_headers": {},
+      "body": {},
+      "path": {},
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve all sessions",
+        "rate_limit": [],
+        "api_endpoint": "https://api.squadcast.fm/v2/webhooks",
+        "alias_endpoint": "/squadcast/v2/webhooks",
+        "api_ref": "https://developers.squadcast.fm/reference/post_v2-webhooks"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "squadcast_v2_webhooks_id_get": {
+      "provider_intent": "squadcast_v2_webhooks_id_get",
+      "provider_alias_intent": "/v2/webhooks/id",
+      "text": "Get specific Webhook",
+      "category": "Webhooks",
+      "method": "GET",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve all sessions",
+        "rate_limit": [],
+        "api_endpoint": "https://api.squadcast.fm/v2/webhooks/{id}",
+        "alias_endpoint": "/squadcast/v2/webhooks/id",
+        "api_ref": "https://developers.squadcast.fm/reference/get_v2-webhooks-id"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "squadcast_v2_webhooks_id_delete": {
+      "provider_intent": "squadcast_v2_webhooks_id_delete",
+      "provider_alias_intent": "/v2/webhooks/id",
+      "text": "Delete specific Webhook",
+      "category": "Webhooks",
+      "method": "DELETE",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve all sessions",
+        "rate_limit": [],
+        "api_endpoint": "https://api.squadcast.fm/v2/webhooks/{id}",
+        "alias_endpoint": "/squadcast/v2/webhooks/id",
+        "api_ref": "https://developers.squadcast.fm/reference/delete_v2-webhooks-id"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    },
+    "squadcast_v2_webhooks_id_put": {
+      "provider_intent": "squadcast_v2_webhooks_id_put",
+      "provider_alias_intent": "/v2/webhooks/id",
+      "text": "Update specific Webhook",
+      "category": "Webhooks",
+      "method": "PUT",
+      "type": "API",
+      "params": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "custom_headers": {},
+      "body": {},
+      "path": {
+        "id": {
+          "type": "string",
+          "text": "ID",
+          "required": true
+        }
+      },
+      "domain_params": {},
+      "meta": {
+        "version": "v2",
+        "auth": [],
+        "description": "Retrieve all sessions",
+        "rate_limit": [],
+        "api_endpoint": "https://api.squadcast.fm/v2/webhooks/{id}",
+        "alias_endpoint": "/squadcast/v2/webhooks/id",
+        "api_ref": "https://developers.squadcast.fm/reference/put_v2-webhooks-id"
+      },
+      "auth": {
+        "header": {
+          "headerName": "Authorization",
+          "headerValue": "Bearer",
+          "authKey": "api_key"
+        }
+      },
+      "wip": 0,
+      "pinned": 0,
+      "featured": 0,
+      "payload_type": ""
+    }
+  }
+}
