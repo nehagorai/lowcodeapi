@@ -57,7 +57,13 @@ const refreshUrl = (provider: string, obj: { [key: string]: any }) => {
   }
 };
 
-const refreshToken = async ({ provider, authObj, credsObj }: { [key: string]: any; }) => {
+interface RefreshTokenParams {
+  provider: string;
+  authObj: { [key: string]: any };
+  credsObj: { [key: string]: any };
+}
+
+const refreshToken = async ({ provider, authObj, credsObj }: RefreshTokenParams) => {
   if (
     authObj.refreshToken
         && authObj.CLIENT_ID

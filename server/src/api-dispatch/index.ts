@@ -15,10 +15,71 @@ import refreshToken from './refresh-token';
 
 const METHODS = ['POST', 'PUT', 'DELETE', 'PATCH'];
 
-const getReplacePattern = (key: string) => [`{${key}}`, `:${key}`, `<${key}>`];
+const getKeyPatternList = (key: string) => [`{${key}}`, `:${key}`, `<${key}>`];
 
 interface AccessReturn {
   [key: string]: any; // define the type of the user object
+}
+
+interface PathParam {
+  replace_key?: string;
+  replace?: string; // legacy
+  key_alias?: string;
+}
+
+interface SubdomainParam {
+  replace?: string;
+}
+
+interface AuthHeader {
+  headerName: string;
+  headerValue?: string;
+  authKey: string;
+}
+
+interface BasicAuth {
+  username: string;
+  password: string;
+}
+
+interface AuthConfig {
+  header?: AuthHeader | AuthHeader[];
+  basicauth?: BasicAuth;
+  query?: string[];
+  queryMap?: { [key: string]: string };
+  path?: { [key: string]: string };
+  body?: { [key: string]: string };
+}
+
+interface TargetMeta {
+  contentType?: string;
+  api_endpoint: string;
+}
+
+interface Target {
+  method: string;
+  meta: TargetMeta;
+  path?: { [key: string]: PathParam };
+  subdomain?: { [key: string]: SubdomainParam };
+  domain_params?: { [key: string]: SubdomainParam };
+  auth?: AuthConfig;
+  headers?: { [key: string]: string };
+  custom_headers?: { [key: string]: string };
+  payload_type?: 'formdata' | 'urlencoded' | 'json';
+  type?: string;
+}
+
+interface AuthToken {
+  [key: string]: any; // Flexible structure for different auth token properties
+  accessToken?: string;
+  refreshToken?: string;
+  CLIENT_ID?: string;
+  CLIENT_SECRET?: string;
+}
+
+interface CredsObj {
+  oauth_data?: { [key: string]: any } | null;
+  authToken: AuthToken;
 }
 
 async function access({
@@ -27,7 +88,10 @@ async function access({
   payload,
   credsObj,
 }: {
-  [key: string]: any;
+  provider: any;
+  target: Target;
+  payload: any;
+  credsObj: CredsObj;
 }): Promise<AccessReturn> {
   const {
     method,
@@ -77,12 +141,12 @@ async function access({
         const replace_key = obj.replace_key || obj.replace; // obj.replace is legacy
         if (replace_key && !obj.key_alias) { // to be replaced from query params
           const replace = obj.replace || obj.replace_key;
-          if (params[pathParamKey]) {
+          if (params[pathParamKey] && replace) {
             url = url.replace(replace, params[pathParamKey]);
           }
         } else {
           const value_key = obj.key_alias || pathParamKey;
-          const replacePattern = getReplacePattern(pathParamKey);
+          const replacePattern = getKeyPatternList(pathParamKey);
           let found = false;
           replacePattern.forEach((replace) => {
             if (found) return;
@@ -111,7 +175,7 @@ async function access({
   let sub_domain: { [key: string]: any } = {};
   if (subdomain && Object.keys(subdomain).length) {
     sub_domain = subdomain;
-  } else if (Object.keys(domain_params).length) {
+  } else if (domain_params && Object.keys(domain_params).length) {
     sub_domain = domain_params;
   }
   if (sub_domain) {
@@ -121,9 +185,9 @@ async function access({
         const obj = sub_domain[key];
         if (sub_domain[key]) {
           if (obj.replace) {
-            url = url.replace(obj.replace, sub_domain[key]);
+            url = url.replace(obj.replace, sub_domain[key] || '');
           } else {
-            const replacePattern = getReplacePattern(key);
+            const replacePattern = getKeyPatternList(key);
             let found = false;
             replacePattern.forEach((replace) => {
               if (found) return;
@@ -217,7 +281,7 @@ async function access({
     keys.forEach((key) => {
       const value = authObj[path[key]];
       if (value) {
-        const replacePattern = getReplacePattern(key);
+        const replacePattern = getKeyPatternList(key);
         let found = false;
         // FIX: Improve this loop;
         replacePattern.forEach((replace) => {
@@ -324,8 +388,10 @@ async function access({
     // Note: this was handled for Google OAuth services and for other services it may differ.
     if (status === 401) {
       const tokenObj = await refreshToken({ provider, authObj, credsObj });
-      if (tokenObj) {
-        return access({ target, payload, ...tokenObj });
+      if (tokenObj && tokenObj.credsObj) {
+        return access({
+          provider, target, payload, credsObj: tokenObj.credsObj,
+        });
       }
     }
     loggerService.error(`Request failed for ${provider} API endpoint`, url, data);
