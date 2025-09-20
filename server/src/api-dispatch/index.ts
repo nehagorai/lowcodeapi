@@ -82,143 +82,30 @@ interface CredsObj {
   authToken: AuthToken;
 }
 
-async function access({
-  provider,
-  target,
-  payload,
-  credsObj,
+interface AuthResult {
+  url: string;
+  options: { [key: string]: any };
+  requestHeaders: { [key: string]: any };
+  body: { [key: string]: any };
+}
+
+function applyAuthentication({
+  authDefault,
+  authObj,
+  url,
+  requestHeaders,
+  body,
 }: {
-  provider: any;
-  target: Target;
-  payload: any;
-  credsObj: CredsObj;
-}): Promise<AccessReturn> {
-  const {
-    method,
-    meta,
-    path,
-    subdomain,
-    domain_params,
-    auth,
-    headers: defaultHeaders,
-    custom_headers: customHeaders,
-    payload_type,
-  } = target; // intent
-
-  // Migration Phase, auth to be removed from intent / target;
-  const authDefault = provider.auth || auth;
-
-  const { contentType, api_endpoint } = meta;
-  const {
-    params = {}, body, file,
-  } = payload;
-  const { oauth_data = null, authToken: authObj } = credsObj;
-  let url = api_endpoint;
-  let requestHeaders: { [key: string]: any } = {
-    'content-type': 'application/json',
-  };
-
-  if (defaultHeaders && Object.keys(defaultHeaders).length) {
-    requestHeaders = {
-      ...requestHeaders,
-      ...defaultHeaders,
-    };
-  }
-
-  if (customHeaders && Object.keys(customHeaders).length) {
-    requestHeaders = {
-      ...requestHeaders,
-      ...customHeaders,
-    };
-  }
-  const localParams = { ...params };
-  if (path) {
-    const pathParamsKeys = Object.keys(path);
-    if (params) {
-      pathParamsKeys.forEach((pathParamKey: string) => {
-        const obj = path[pathParamKey];
-
-        const replace_key = obj.replace_key || obj.replace; // obj.replace is legacy
-        if (replace_key && !obj.key_alias) { // to be replaced from query params
-          const replace = obj.replace || obj.replace_key;
-          if (params[pathParamKey] && replace) {
-            url = url.replace(replace, params[pathParamKey]);
-          }
-        } else {
-          const value_key = obj.key_alias || pathParamKey;
-          const replacePattern = getKeyPatternList(pathParamKey);
-          let found = false;
-          replacePattern.forEach((replace) => {
-            if (found) return;
-            if (new RegExp(replace).test(url)) {
-              let value = null;
-
-              if (oauth_data && oauth_data[value_key]) {
-                value = oauth_data[value_key]; // prefilled key with oauth data
-              } else if (authObj && authObj[value_key]) {
-                value = authObj[value_key]; // prefilled key with configured data
-              }
-
-              if (params[pathParamKey]) {
-                value = params[pathParamKey]; // override incase of passed in query params
-              }
-              url = url.replace(replace, value);
-              found = true;
-            }
-          });
-        }
-        localParams[pathParamKey] = undefined;
-      });
-    }
-  }
-
-  let sub_domain: { [key: string]: any } = {};
-  if (subdomain && Object.keys(subdomain).length) {
-    sub_domain = subdomain;
-  } else if (domain_params && Object.keys(domain_params).length) {
-    sub_domain = domain_params;
-  }
-  if (sub_domain) {
-    const keys = Object.keys(sub_domain);
-    if (sub_domain) {
-      keys.forEach((key: string) => {
-        const obj = sub_domain[key];
-        if (sub_domain[key]) {
-          if (obj.replace) {
-            url = url.replace(obj.replace, sub_domain[key] || '');
-          } else {
-            const replacePattern = getKeyPatternList(key);
-            let found = false;
-            replacePattern.forEach((replace) => {
-              if (found) return;
-              if (new RegExp(replace).test(url)) {
-                let value = null;
-                if (oauth_data && oauth_data[key]) {
-                  value = oauth_data[key]; // prefilled key with oauth data
-                } else if (authObj && authObj[key]) {
-                  value = authObj[key]; // prefilled key with configured data
-                }
-
-                url = url.replace(replace, value);
-                found = true;
-              }
-            });
-          }
-          localParams[key] = undefined;
-        }
-      });
-    }
-  }
-
-  if (contentType) {
-    requestHeaders['content-type'] = contentType;
-  }
-
+  authDefault: AuthConfig | undefined;
+  authObj: AuthToken;
+  url: string;
+  requestHeaders: { [key: string]: any };
+  body: { [key: string]: any };
+}): AuthResult {
   const options: { [key: string]: any } = {
-    method,
+    method: '',
     headers: {},
   };
-  // Add custom header if exist
 
   if (authDefault && authDefault.header) {
     // converting object to array of object to support multiple custom headers.
@@ -307,6 +194,200 @@ async function access({
     error.code = 401;
     throw error;
   }
+
+  return { url, options, requestHeaders, body };
+}
+
+interface SubdomainResult {
+  url: string;
+  localParams: { [key: string]: any };
+}
+
+function processSubdomain({
+  subdomain,
+  domain_params,
+  url,
+  localParams,
+  oauth_data,
+  authObj,
+}: {
+  subdomain?: { [key: string]: SubdomainParam };
+  domain_params?: { [key: string]: SubdomainParam };
+  url: string;
+  localParams: { [key: string]: any };
+  oauth_data: { [key: string]: any } | null;
+  authObj: AuthToken;
+}): SubdomainResult {
+  let localSubDomain: { [key: string]: any } = {};
+  if (subdomain && Object.keys(subdomain).length) {
+    localSubDomain = subdomain;
+  } else if (domain_params && Object.keys(domain_params).length) {
+    localSubDomain = domain_params;
+  }
+  
+  if (localSubDomain) {
+    const subDomainKeys = Object.keys(localSubDomain);
+    if (subDomainKeys.length) {
+      subDomainKeys.forEach((key: string) => {
+        const obj = localSubDomain[key];
+        if (localSubDomain[key]) {
+          if (obj.replace) {
+            url = url.replace(obj.replace, localSubDomain[key] || '');
+          } else {
+            const replacePattern = getKeyPatternList(key);
+            let found = false;
+            replacePattern.forEach((replace) => {
+              if (found) return;
+              if (new RegExp(replace).test(url)) {
+                let value = null;
+                if (oauth_data && oauth_data[key]) {
+                  value = oauth_data[key]; // prefilled key with oauth data
+                } else if (authObj && authObj[key]) {
+                  value = authObj[key]; // prefilled key with configured data
+                }
+
+                url = url.replace(replace, value);
+                found = true;
+              }
+            });
+          }
+          localParams[key] = undefined;
+        }
+      });
+    }
+  }
+
+  return { url, localParams };
+}
+
+async function access({
+  provider,
+  target,
+  payload,
+  credsObj,
+}: {
+  provider: any;
+  target: Target;
+  payload: any;
+  credsObj: CredsObj;
+}): Promise<AccessReturn> {
+  const {
+    method,
+    meta,
+    path,
+    subdomain,
+    domain_params,
+    auth,
+    headers: defaultHeaders,
+    custom_headers: customHeaders,
+    payload_type,
+  } = target; // intent
+
+  // Migration Phase, auth to be removed from intent / target;
+  const authDefault = provider.auth || auth;
+
+  const { contentType, api_endpoint } = meta;
+  const {
+    params = {}, body: originalBody, file,
+  } = payload;
+  let body = originalBody;
+  const { oauth_data = null, authToken: authObj } = credsObj;
+  let url = api_endpoint;
+  let requestHeaders: { [key: string]: any } = {
+    'content-type': 'application/json',
+  };
+
+  if (defaultHeaders && Object.keys(defaultHeaders).length) {
+    requestHeaders = {
+      ...requestHeaders,
+      ...defaultHeaders,
+    };
+  }
+
+  if (customHeaders && Object.keys(customHeaders).length) {
+    requestHeaders = {
+      ...requestHeaders,
+      ...customHeaders,
+    };
+  }
+
+  if (contentType) {
+    requestHeaders['content-type'] = contentType;
+  }
+  
+  // Query Params
+  let localParams = { ...params };
+  if (path) {
+    const pathParamsKeys = Object.keys(path);
+    if (params) {
+      pathParamsKeys.forEach((pathParamKey: string) => {
+        const obj = path[pathParamKey];
+
+        const replace_key = obj.replace_key || obj.replace; // obj.replace is legacy
+        if (replace_key && !obj.key_alias) { // to be replaced from query params
+          const replace = obj.replace || obj.replace_key;
+          if (params[pathParamKey] && replace) {
+            url = url.replace(replace, params[pathParamKey]);
+          }
+        } else {
+          const value_key = obj.key_alias || pathParamKey;
+          const replacePattern = getKeyPatternList(pathParamKey);
+          let found = false;
+          replacePattern.forEach((replace) => {
+            if (found) return;
+            if (new RegExp(replace).test(url)) {
+              let value = null;
+
+              if (oauth_data && oauth_data[value_key]) {
+                value = oauth_data[value_key]; // prefilled key with oauth data
+              } else if (authObj && authObj[value_key]) {
+                value = authObj[value_key]; // prefilled key with configured data
+              }
+
+              if (params[pathParamKey]) {
+                value = params[pathParamKey]; // override incase of passed in query params
+              }
+              url = url.replace(replace, value);
+              found = true;
+            }
+          });
+        }
+        localParams[pathParamKey] = undefined;
+      });
+    }
+  }
+
+  // Process subdomain parameters
+  const subdomainResult = processSubdomain({
+    subdomain,
+    domain_params,
+    url,
+    localParams,
+    oauth_data,
+    authObj,
+  });
+  
+  url = subdomainResult.url;
+  localParams = subdomainResult.localParams;
+
+  // Apply authentication
+  const authResult = applyAuthentication({
+    authDefault,
+    authObj,
+    url,
+    requestHeaders,
+    body,
+  });
+
+  const options: { [key: string]: any } = {
+    method,
+    headers: {},
+    ...authResult.options,
+  };
+  // Update url, requestHeaders, and body
+  url = authResult.url;
+  requestHeaders = authResult.requestHeaders;
+  body = authResult.body;
 
   // Query Params
   if (localParams && Object.keys(localParams).length) {
