@@ -9,11 +9,13 @@ const awsses: Function = async (url: string, { method, body }: {
     method: string;
     body: { [key: string]: any };
 }, creds: { [key: string]: any }) => {
+
+  const { region, accessKeyId, secretAccessKey } = creds;
+
   const credentials = {
-    accessKeyId: creds.accessKeyId,
-    secretAccessKey: creds.secretAccessKey,
+    accessKeyId,
+    secretAccessKey,
   };
-  const { region } = creds;
 
   const { protocol, pathname, host } = new URL(url);
   const httpRequest = new HttpRequest({
