@@ -57,7 +57,6 @@
     "passport-trello": "^1.1.0",
     "pm2": "^5.4.3",
     "qs": "^6.11.0",
-    "query-string": "^7.1.1",
     "randomatic": "^3.1.1",
     "randomize": "^0.0.4",
     "redis": "^3.0.2",

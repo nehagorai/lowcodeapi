@@ -4,7 +4,6 @@ import qs from 'qs';
 import { parseStringPromise } from 'xml2js';
 import {
   sendRequest,
-  urlParams,
   safePromise,
   loggerService,
 } from '../utilities';
@@ -391,7 +390,7 @@ async function access({
 
   // Query Params
   if (localParams && Object.keys(localParams).length) {
-    const str = urlParams(localParams);
+    const str = qs.stringify(params);
     if (str) {
       if (/\?/.test(url)) {
         url = `${url}&${str}`;
