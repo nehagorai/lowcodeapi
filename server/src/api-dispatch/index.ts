@@ -265,7 +265,7 @@ async function access({
   payload,
   credsObj,
 }: {
-  provider: any;
+  provider: string;
   target: Target;
   payload: any;
   credsObj: CredsObj;
@@ -283,7 +283,7 @@ async function access({
   } = target; // intent
 
   // Migration Phase, auth to be removed from intent / target;
-  const authDefault = provider.auth || auth;
+  const authDefault = auth;
 
   const { contentType, api_endpoint } = meta;
   const {
