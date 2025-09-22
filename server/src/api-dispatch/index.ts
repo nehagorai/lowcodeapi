@@ -24,7 +24,7 @@ const METHODS = ['POST', 'PUT', 'DELETE', 'PATCH'];
 
 const getKeyPatternList = (key: string) => [`{${key}}`, `:${key}`, `<${key}>`];
 
-function applyAuthentication({
+function prepareAuthForDispatch({
   authDefault,
   authObj,
   url,
@@ -127,9 +127,8 @@ function applyAuthentication({
   return { url, options, requestHeaders, body };
 }
 
-function processSubdomain({
+function getSubdomainEndpoint({
   subdomain,
-  domain_params,
   url,
   localParams,
   oauth_data,
@@ -138,8 +137,6 @@ function processSubdomain({
   let localSubDomain: { [key: string]: any } = {};
   if (subdomain && Object.keys(subdomain).length) {
     localSubDomain = subdomain;
-  } else if (domain_params && Object.keys(domain_params).length) {
-    localSubDomain = domain_params;
   }
   
   if (localSubDomain) {
@@ -174,10 +171,10 @@ function processSubdomain({
     }
   }
 
-  return { url, localParams };
+  return { url, localParams: { ...localParams } };
 }
 
-async function access({
+async function dispatchRequest({
   provider,
   target,
   payload,
@@ -269,20 +266,21 @@ async function access({
   }
 
   // Process subdomain parameters
-  const subdomainResult = processSubdomain({
-    subdomain,
-    domain_params,
-    url,
-    localParams,
-    oauth_data,
-    authObj,
-  });
-  
-  url = subdomainResult.url;
-  localParams = subdomainResult.localParams;
-
+  const localSubdomainObj = subdomain || domain_params || null;
+  if (localSubdomainObj && Object.keys(localSubdomainObj).length) {
+    const subdomainResult = getSubdomainEndpoint({
+      subdomain: localSubdomainObj,
+      url,
+      localParams,
+      oauth_data,
+      authObj,
+    });
+    
+    url = subdomainResult.url;
+    localParams = subdomainResult.localParams;
+  }
   // Apply authentication
-  const authResult = applyAuthentication({
+  const authResult = prepareAuthForDispatch({
     authDefault,
     authObj,
     url,
@@ -381,7 +379,7 @@ async function access({
     if (status === 401) {
       const tokenObj = await refreshToken({ provider, authObj, credsObj });
       if (tokenObj && tokenObj.credsObj) {
-        return access({
+        return dispatchRequest({
           provider, target, payload, credsObj: tokenObj.credsObj,
         });
       }
@@ -432,4 +430,4 @@ async function access({
   return { data: responseData, headers };
 }
 
-export default access;
+export default dispatchRequest;
