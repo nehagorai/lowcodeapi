@@ -136,7 +136,7 @@ async function getHandlerWithApiToken(req: any) {
     throw error;
   }
 
-  const payloadOptions : {[key:string]: any } = {
+  const payloadOptions = {
     provider: PROVIDER,
     target,
     payload: {
@@ -144,6 +144,7 @@ async function getHandlerWithApiToken(req: any) {
         spreadsheetId: sheet_id,
         range: tab,
       },
+      body: {} as any,
     },
     credsObj: {
       authToken: {
@@ -158,6 +159,7 @@ async function getHandlerWithApiToken(req: any) {
     payloadOptions.payload = {
       params: {
         spreadsheetId: sheet_id,
+        range: null
       },
       body:
           {

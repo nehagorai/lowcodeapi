@@ -31,19 +31,20 @@ async function next(
     }
   });
 
-  let options : {[key: string]: any} = {
-    app,
-    authToken: app.authToken,
-    routeMap: {
-      ...route,
-      provider_key: getProviderKey(query) || getProviderKey(body) || '',
-      provider_config: providerConfig,
-      data: body,
-      body,
-      query,
-    },
-  };
+  // let options : {[key: string]: any} = {
+  //   app,
+  //   authToken: app.authToken,
+  //   routeMap: {
+  //     ...route,
+  //     provider_key: getProviderKey(query) || getProviderKey(body) || '',
+  //     provider_config: providerConfig,
+  //     data: body,
+  //     body,
+  //     query,
+  //   },
+  // };
 
+  let options: any = null;
   let selectedProviderEngine = null;
 
   if (!selectedProviderEngine && intents[provider]) {
@@ -57,7 +58,7 @@ async function next(
         body,
         headers: clientHeaders,
       },
-      authObj: app.authToken,
+      // authObj: app.authToken,
       credsObj: app.credsObj,
     };
     if (file) {

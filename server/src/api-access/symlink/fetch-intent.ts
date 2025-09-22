@@ -29,19 +29,20 @@ async function next(
     }
   });
 
-  let options : {[key: string]: any} = {
-    app,
-    authToken: app.authToken,
-    routeMap: {
-      ...route,
-      provider_key: getProviderKey(query),
-      provider_config: providerConfig,
-    },
-    query,
-    params,
-  };
+  // let options : {[key: string]: any} = {
+  //   app,
+  //   authToken: app.authToken,
+  //   routeMap: {
+  //     ...route,
+  //     provider_key: getProviderKey(query),
+  //     provider_config: providerConfig,
+  //   },
+  //   query,
+  //   params,
+  // };
 
   let selectedProviderEngine = null;
+  let options: any = null;
 
   if (!selectedProviderEngine && intents[provider]) {
     selectedProviderEngine = generic;
@@ -53,7 +54,7 @@ async function next(
         params: { ...query, ...params, api_token: undefined },
         headers: clientHeaders,
       },
-      authObj: app.authToken,
+      // authObj: app.authToken,
       credsObj: app.credsObj,
     };
     // loggerService.info(`No custom implementation for ${provider}`);
