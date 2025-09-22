@@ -11,82 +11,18 @@ import {
 import prepare from './prepare';
 import errorHandler from './error-handler';
 import refreshToken from './refresh-token';
+import {
+  AccessReturn,
+  AuthResult,
+  SubdomainResult,
+  ProcessSubdomainParams,
+  ApplyAuthenticationParams,
+  AccessParams,
+} from './types';
 
 const METHODS = ['POST', 'PUT', 'DELETE', 'PATCH'];
 
 const getKeyPatternList = (key: string) => [`{${key}}`, `:${key}`, `<${key}>`];
-
-interface AccessReturn {
-  [key: string]: any; // define the type of the user object
-}
-
-interface PathParam {
-  replace_key?: string;
-  replace?: string; // legacy
-  key_alias?: string;
-}
-
-interface SubdomainParam {
-  replace?: string;
-}
-
-interface AuthHeader {
-  headerName: string;
-  headerValue?: string;
-  authKey: string;
-}
-
-interface BasicAuth {
-  username: string;
-  password: string;
-}
-
-interface AuthConfig {
-  header?: AuthHeader | AuthHeader[];
-  basicauth?: BasicAuth;
-  query?: string[];
-  queryMap?: { [key: string]: string };
-  path?: { [key: string]: string };
-  body?: { [key: string]: string };
-}
-
-interface TargetMeta {
-  contentType?: string;
-  api_endpoint: string;
-}
-
-interface Target {
-  method: string;
-  meta: TargetMeta;
-  path?: { [key: string]: PathParam };
-  subdomain?: { [key: string]: SubdomainParam };
-  domain_params?: { [key: string]: SubdomainParam };
-  auth?: AuthConfig;
-  headers?: { [key: string]: string };
-  custom_headers?: { [key: string]: string };
-  payload_type?: 'formdata' | 'urlencoded' | 'json';
-  type?: string;
-}
-
-interface AuthToken {
-  [key: string]: any; // Flexible structure for different auth token properties
-  accessToken?: string;
-  refreshToken?: string;
-  CLIENT_ID?: string;
-  CLIENT_SECRET?: string;
-}
-
-interface CredsObj {
-  oauth_data?: { [key: string]: any } | null;
-  authToken: AuthToken;
-}
-
-interface AuthResult {
-  url: string;
-  options: { [key: string]: any };
-  requestHeaders: { [key: string]: any };
-  body: { [key: string]: any };
-}
 
 function applyAuthentication({
   authDefault,
@@ -94,13 +30,7 @@ function applyAuthentication({
   url,
   requestHeaders,
   body,
-}: {
-  authDefault: AuthConfig | undefined;
-  authObj: AuthToken;
-  url: string;
-  requestHeaders: { [key: string]: any };
-  body: { [key: string]: any };
-}): AuthResult {
+}: ApplyAuthenticationParams): AuthResult {
   const options: { [key: string]: any } = {
     method: '',
     headers: {},
@@ -197,11 +127,6 @@ function applyAuthentication({
   return { url, options, requestHeaders, body };
 }
 
-interface SubdomainResult {
-  url: string;
-  localParams: { [key: string]: any };
-}
-
 function processSubdomain({
   subdomain,
   domain_params,
@@ -209,14 +134,7 @@ function processSubdomain({
   localParams,
   oauth_data,
   authObj,
-}: {
-  subdomain?: { [key: string]: SubdomainParam };
-  domain_params?: { [key: string]: SubdomainParam };
-  url: string;
-  localParams: { [key: string]: any };
-  oauth_data: { [key: string]: any } | null;
-  authObj: AuthToken;
-}): SubdomainResult {
+}: ProcessSubdomainParams): SubdomainResult {
   let localSubDomain: { [key: string]: any } = {};
   if (subdomain && Object.keys(subdomain).length) {
     localSubDomain = subdomain;
@@ -264,12 +182,7 @@ async function access({
   target,
   payload,
   credsObj,
-}: {
-  provider: string;
-  target: Target;
-  payload: any;
-  credsObj: CredsObj;
-}): Promise<AccessReturn> {
+}: AccessParams): Promise<AccessReturn> {
   const {
     method,
     meta,
@@ -282,7 +195,6 @@ async function access({
     payload_type,
   } = target; // intent
 
-  // Migration Phase, auth to be removed from intent / target;
   const authDefault = auth;
 
   const { contentType, api_endpoint } = meta;
