@@ -5,9 +5,9 @@ import {
   safePromise,
 } from '../utilities';
 
-import providersJsonFile from './providers.json';
+import connectorJsonFile from './providers.json';
 
-const providerJson: { [key: string]: any } = { ...providersJsonFile };
+const connectorJson: { [key: string]: any } = { ...connectorJsonFile };
 
 const fallbackRefreshTokenUrl: { [key: string]: Function } = {
   airtable: () => 'https://airtable.com/oauth2/v1/token',
@@ -44,7 +44,7 @@ const fallbackRefreshTokenUrl: { [key: string]: Function } = {
 
 const refreshUrl = (provider: string, obj: { [key: string]: any }) => {
   if (provider) {
-    const { REFRESH_TOKEN_URL = '' } = providerJson[provider.toUpperCase()] || {};
+    const { REFRESH_TOKEN_URL = '' } = connectorJson[provider.toUpperCase()] || {};
     let url = REFRESH_TOKEN_URL.trim()
       .replace('{auth_endpoint}', obj.auth_endpoint)
       .replace('{endpoint}', obj.endpoint)
@@ -64,11 +64,7 @@ interface RefreshTokenParams {
 }
 
 const refreshToken = async ({ provider, authObj, credsObj }: RefreshTokenParams) => {
-  if (
-    authObj.refreshToken
-        && authObj.CLIENT_ID
-        && authObj.CLIENT_SECRET
-  ) {
+  if (authObj.refreshToken && authObj.CLIENT_ID && authObj.CLIENT_SECRET) {
     if (provider) {
       const url = refreshUrl(provider, { ...credsObj });
       // const url = authAndRefreshTokenUrl[provider]({ ...credsObj });

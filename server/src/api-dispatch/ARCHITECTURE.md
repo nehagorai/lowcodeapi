@@ -5,7 +5,7 @@
 ```mermaid
 graph TB
     subgraph "API Dispatch Module"
-        A[access() Function] --> B[Request Processing]
+        A["access() Function"] --> B[Request Processing]
         B --> C[Path Parameter Processing]
         B --> D[Subdomain Processing]
         B --> E[Authentication Processing]
