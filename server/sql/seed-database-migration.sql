@@ -198,6 +198,7 @@ CREATE TABLE IF NOT EXISTS `users_providers_saved_intents` (
   `provider` varchar(25) NOT NULL,
   `method` varchar(10) NOT NULL,
   `intent` varchar(255) NOT NULL,
+  `path` varchar(255) NOT NULL,
   `saved_mode` varchar(10) NOT NULL DEFAULT "fav",
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
