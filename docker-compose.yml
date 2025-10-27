@@ -10,9 +10,9 @@ services:
     image: mysql:8.0
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD:-rootpassword}
-      - MYSQL_DATABASE=${MYSQL_DATABASE:-lowcodeapi}
-      - MYSQL_USER=${MYSQL_USER:-lowcodeapi}
-      - MYSQL_PASSWORD=${MYSQL_PASSWORD:-lowcodeapi}
+      - MYSQL_DATABASE=${MYSQL_DATABASE:-testdb}
+      - MYSQL_USER=${MYSQL_USER:-testuser}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD:-testpwd}
     ports:
       - "3306:3306"
     volumes:
@@ -23,18 +23,9 @@ services:
     build:
       context: ./server
       dockerfile: Dockerfile
-    environment:
-      - NODE_ENV=production
-      - REDIS_HOST=redis
-      - REDIS_PORT=6379
-      - MYSQL_HOST=mysql
-      - MYSQL_PORT=3306
-      - MYSQL_DATABASE=${MYSQL_DATABASE:-lowcodeapi}
-      - MYSQL_USER=${MYSQL_USER:-lowcodeapi}
-      - MYSQL_PASSWORD=${MYSQL_PASSWORD:-lowcodeapi}
     env_file:
-      - .env
       - ./server/.env
+      - .env
     ports:
       - ${SERVER_PORT:-3001}:${SERVER_PORT:-3001}
     depends_on:
