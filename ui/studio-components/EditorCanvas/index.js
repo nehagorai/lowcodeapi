@@ -196,7 +196,7 @@ const EditorCanvas = ({ selected = {}, permaCategory = {}, integrated, paneView 
     const [categoryMap, setCategoryMap] = useState({});
     const [ activeCategory, setActiveCategory ] = useState(null);
     const [imgFallback, setImgFallback] = useState({});
-    const [providersView, setProvidersView] = useState(null);
+    const [providersView, setProvidersView] = useState(true);
     const [sdkLibrary, setSDKLibrary] = useState('');
     useEffect(() => {
         if (Object.keys(apiList).length) {
@@ -313,7 +313,7 @@ const EditorCanvas = ({ selected = {}, permaCategory = {}, integrated, paneView 
                         />
                     </Link>
                     <div className='flex flex-col items-center justify-center mt-4 mx-auto '>
-                        <button title={`Click to view all providers`} onClick={() =>onClickSetProvidersView(true)} className={`${providersView ? 'text-green-600' : 'text-gray-600'}`}>
+                        {/* <button title={`Click to view all providers`} onClick={() =>onClickSetProvidersView(true)} className={`${providersView ? 'text-green-600' : 'text-gray-600'}`}>
                             <IconPack name="list" />
                         </button>
                         {
@@ -321,7 +321,7 @@ const EditorCanvas = ({ selected = {}, permaCategory = {}, integrated, paneView 
                             <button title={`Click to view all providers`} onClick={() => onClickSetProvidersView(false)} className={`text-gray-600 mt-2`}>
                                 <IconPack name="close" />
                             </button> : null
-                        }
+                        } */}
                     </div>
                 </div>
                 <div className='mt-2 mx-auto w-full'>
@@ -394,51 +394,56 @@ const EditorCanvas = ({ selected = {}, permaCategory = {}, integrated, paneView 
                     </div>: null
                 }
             </div>
-            <div className=" md:w-12 md:mx-auto border-l border-gray-200 h-screen overflow-y-scroll relative">
-                {
-                    selected && selected.id && (selected.id !== 'lowcodeapi') && (selected.alias !== 'lowcodeapi') ? <>
-                        <div>
-                            <Image src={getLogoUrl(selected.logo_path || imgFallback[selected.id] || selected.alias || selected.id)}
-                                className={`mx-auto my-2 border border-gray-200 rounded-md`}
-                                alt={selected.name || ''}
-                                title={`${selected.name}`}
-                                width={32}
-                                height={32}
-                                onError={(e) => onError(e, selected.id)}
-                            />
-                            {
-                                integrated ? <span className='absolute top-0 right-0 mr-1 mt-1'><BadgeUI className="w-2 h-2 " /></span> : null
-                            }
-                        </div>
-                        <div className='flex flex-col items-center justify-center mx-auto  mt-4  '>
-                            <button className={`p-1  ${activeView === 'setup' ? 'text-gray-400 text-green-700' : 'text-gray-400 text-gray-600'}`} onClick={() => setView('setup')}>
-                                <IconPack name="setup" />
-                            </button>   
-                        
-                        </div>
-
+            {
+                !providersView ?
+                    <div className={`md:w-12 md:mx-auto border-l border-gray-200 h-screen overflow-y-scroll relative`}>
                         {
-                            sdkLibrary ? (<div className='mx-auto mt-4 flex justify-center'>
-                                <a href={window.URL.createObjectURL(new Blob([sdkLibrary]))} target="_blank" download={`${selected.id}-lowcodeapi.js`} className="w-4 h-4" title={`${selected.name} JavaScript client library`}>
-                                    <IconPack name='download' />
-                                </a>
-                            </div>) : null
+                            selected && selected.id && (selected.id !== 'lowcodeapi') && (selected.alias !== 'lowcodeapi') ? <>
+                                <div>
+                                    <Image src={getLogoUrl(selected.logo_path || imgFallback[selected.id] || selected.alias || selected.id)}
+                                        className={`mx-auto my-2 border border-gray-200 rounded-md`}
+                                        alt={selected.name || ''}
+                                        title={`${selected.name}`}
+                                        width={32}
+                                        height={32}
+                                        onError={(e) => onError(e, selected.id)}
+                                    />
+                                    {
+                                        integrated ? <span className='absolute top-0 right-0 mr-1 mt-1'><BadgeUI className="w-2 h-2 " /></span> : null
+                                    }
+                                </div>
+                                <div className='flex flex-col items-center justify-center mx-auto  mt-4  '>
+                                    <button className={`p-1  ${activeView === 'setup' ? 'text-gray-400 text-green-700' : 'text-gray-400 text-gray-600'}`} onClick={() => setView('setup')}>
+                                        <IconPack name="setup" />
+                                    </button>   
+                                
+                                </div>
+                                {
+                                /*
+                                    sdkLibrary ? (<div className='mx-auto mt-4 flex justify-center'>
+                                        <a href={window.URL.createObjectURL(new Blob([sdkLibrary]))} target="_blank" download={`${selected.id}-lowcodeapi.js`} className="w-4 h-4" title={`${selected.name} JavaScript client library`}>
+                                            <IconPack name='download' />
+                                        </a>
+                                    </div>) : null
+                                */
+                                }
+                            </> : <>
+                                {/* {providers.map((item) => (
+                                    <Link href={`/${item.id}`} target='_blank'>
+                                        <Image src={item.logo_url}
+                                            className={`w-8 h-8 mx-auto my-2 border border-gray-200 rounded-md`}
+                                            alt={item.name || ''}
+                                            title={`${item.name}`}
+                                            width={32}
+                                            height={32}
+                                        />
+                                    </Link>
+                                ))} */}
+                            </>
                         }
-                    </> : <>
-                        {/* {providers.map((item) => (
-                            <Link href={`/${item.id}`} target='_blank'>
-                                <Image src={item.logo_url}
-                                    className={`w-8 h-8 mx-auto my-2 border border-gray-200 rounded-md`}
-                                    alt={item.name || ''}
-                                    title={`${item.name}`}
-                                    width={32}
-                                    height={32}
-                                />
-                            </Link>
-                        ))} */}
-                    </>
-                }
-            </div>
+                    </div>
+                : null
+            }
         </div>
     </>)
 };
