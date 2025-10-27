@@ -4,7 +4,7 @@ A unified API connector that abstracts third-party service integrations through 
 
 ## 🏗️ Project Overview
 
-LowCodeAPI is a comprehensive platform consisting of two main components:
+LowCodeAPI consisting of two main components:
 
 - **[🚀 Server](./server/README.md)** - Backend with unified API gateway
 - **[🎨 UI](./ui/README.md)** - Frontend
@@ -25,19 +25,24 @@ LowCodeAPI is a comprehensive platform consisting of two main components:
 └─────────────────┘    └─────────────────┘    └─────────────────┘
 ```
 
+### Contributors
+
+<a href="https://github.com/samal/lowcodeapi/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=samal/lowcodeapi" />
+</a>
+
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md) for details.
+Please see our [Contributing Guide](./CONTRIBUTING.md).
 
 ### Development Workflow
 
-
 ## 📄 License
 
-See the [LICENSE](./LICENSE) file for details.
+See [LICENSE](./LICENSE) for more information.
 
 ## 🆘 Support
 
-- **Issues**: [GitHub Issues](https://github.com/your-repo/lowcodeapi/issues)
+- **Issues**: [GitHub Issues](https://github.com/samal/lowcodeapi/issues)
 - **Documentation**: [Server](./server/README.md) | [UI](./ui/README.md)
 - **Contributing**: [CONTRIBUTING.md](./CONTRIBUTING.md)
