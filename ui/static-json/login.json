@@ -17,6 +17,17 @@
         "required": true,
         "className": "",
         "message": ""
+      },
+      {
+        "label": "",
+        "hide_label": "Yes",
+        "name": "password",
+        "field": "input",
+        "type": "password",
+        "placeholder": "Password",
+        "required": true,
+        "className": "",
+        "message": ""
       }
     ]
   },
