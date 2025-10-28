@@ -50,11 +50,11 @@ export default function UserView({ i18n, info = {}, enable = {}, form, intent, l
                                     onSubmit={onSubmit}
                                   />
                               </div>
-                              {
+                              {/* {
                                 altLink && enable.alternate && !enable.alternate.disable_email ? <div className='flex justify-end'>
                                   <Link href={altLink.href} className="underline text-sm">{altLink.text}</Link>
                                 </div> : null
-                              }
+                              } */}
 
                           </>
                         ) : ( <>
