@@ -89,8 +89,9 @@ export function User({ i18n, info= {}, api_endpoints ={}, user, config, provider
     }
 
     if(freshToken || token) {
+      console.log('.........', freshToken, formLength, email.fields.length);
       setToken(freshToken || token);
-      if (formLength !== email.fields.length) {
+      if (formLength !== email.fields.length || freshToken) {
         ;(async () => {
           window.location.href = BASE_PATH || BASE_PATH_FALLBACK;
         })();

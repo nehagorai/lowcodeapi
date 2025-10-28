@@ -8,7 +8,7 @@ import React from 'react';
 
 import FormUI from '../FormUI';
 
-function UserLoginUI({ i18n, form, intent, message, lock, onSubmit }) {
+function UserLoginUI({ i18n, form, intent, message, endpoint, lock, onSubmit }) {
   return (
     <>
       <div className="flex flex-col justify-center pb-4 sm:rounded-lg">
@@ -17,6 +17,7 @@ function UserLoginUI({ i18n, form, intent, message, lock, onSubmit }) {
               i18n={i18n}
               onChange={() => {}}
               {...form.email}
+              endpoint={endpoint}
               submitLock={lock}
               onSubmit={onSubmit}
             >

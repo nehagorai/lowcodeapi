@@ -9,7 +9,6 @@ const logo = {
 }
   
 export default function UserView({ i18n, info = {}, enable = {}, form, intent, lock, message, onSubmit, endpoint, authProvider, providers = [], altLink = { href: '/login', text: 'Login'} }) {
-
     const onClick = (url) => {
       if (url && window) {
         window.location.href = url;
@@ -47,6 +46,7 @@ export default function UserView({ i18n, info = {}, enable = {}, form, intent, l
                                     onChange={() => {}}
                                     form={form}
                                     lock={lock}
+                                    endpoint={endpoint}
                                     onSubmit={onSubmit}
                                   />
                               </div>

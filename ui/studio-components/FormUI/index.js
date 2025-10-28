@@ -7,6 +7,7 @@ const FormGenerator = props => {
   const {
     fields,
     meta,
+    endpoint,
     dataSource = null,
     submitLock,
     submitted,
@@ -68,7 +69,7 @@ const FormGenerator = props => {
       {loading ? (
         <div>Loading form</div>
       ) : (
-        <form onSubmit={onSubmit} {...meta.form} className="">
+        <form  {...meta.form} action={`${endpoint}/account/login`} method='POST'>
           {fields.map(item => (
             <React.Fragment key={item.name}>
               {FieldMap[item.field] ? (
