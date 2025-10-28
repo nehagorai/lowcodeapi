@@ -307,26 +307,7 @@ CREATE TABLE IF NOT EXISTS `providers_intent_default_payloads` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- =====================================================
--- 7. SAMPLE DATA INSERTION
--- =====================================================
-
--- Insert sample provider
-INSERT INTO `providers` (`ref_id`, `provider_identifier`, `provider_name`, `category`, `auth_type`, `active`, `hidden`) VALUES
-('prov_001', 'google', 'Google', 'productivity', 'oauth2', 1, 0),
-('prov_002', 'slack', 'Slack', 'communication', 'oauth2', 1, 0),
-('prov_003', 'trello', 'Trello', 'project_management', 'oauth2', 1, 0);
-
--- Insert sample user
-INSERT INTO `users` (`ref_id`, `email`, `username`, `first_name`, `last_name`, `email_verified`, `active`, `country_code`) VALUES
-('user_001', 'admin@lowcodeapi.com', 'admin', 'Admin', 'User', 1, 1, 'US'),
-('user_002', 'demo@lowcodeapi.com', 'demo', 'Demo', 'User', 1, 1, 'US');
-
--- Insert sample API token
-INSERT INTO `users_api_tokens` (`ref_id`, `user_ref_id`, `api_token`, `active`) VALUES
-('token_001', 'user_001', 'demo_api_token_12345', 1);
-
--- =====================================================
--- 8. FINAL CONFIGURATION
+-- 7. FINAL CONFIGURATION
 -- =====================================================
 
 -- Re-enable foreign key checks
