@@ -5,6 +5,7 @@ import passport from 'passport';
 import { Strategy } from 'passport-google-oauth20';
 
 import moment from 'moment';
+import { Op } from 'sequelize';
 
 import config from '../config';
 import endpoint from '../core/utilities/endpoint';
@@ -91,9 +92,14 @@ export default (app: Application): void => {
     let userData = null;
     let findWhere = {};
     if (req.session && req.session.user) {
+      const { ref_id } = req.session.user;
       findWhere = {
         where: {
-          ref_id: req.session.user.ref_id,
+          // ref_id: req.session.user.ref_id,
+          [Op.or]: [
+            { ref_id },
+            { email },
+          ],
         },
       };
     } else {
