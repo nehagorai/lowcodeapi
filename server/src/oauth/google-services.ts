@@ -13,6 +13,7 @@ import {
 } from '../core/services/user';
 
 import db from '../core/db';
+import middlewares from '../core/middlewares';
 import { cryptograper, loggerService } from '../utilities';
 
 const { User, ProvidersCredentialAndToken } = db.models;
@@ -183,6 +184,7 @@ export default (app: Application): void => {
 
     app.get(
       `${GOOGLE_AUTH_PATH}`,
+      middlewares.isAuthorized,
       async (req, res, next) => {
         if (req.session && req.session.user) {
           loggerService.info(req.session, provider, 'login intent');

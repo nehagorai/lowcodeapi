@@ -15,7 +15,7 @@ import {
   findUser, userLoginIntent, userService, tokenService,
 } from '../../services/user';
 
-const { getFullName } = modules;
+const { getFullName, jwt } = modules;
 const { generateApiToken } = random;
 const { isAuthorized } = Middlewares;
 
@@ -56,6 +56,12 @@ const rateLimitConfigForToken = rateLimit({
   } seconds.`,
   standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
   legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+});
+
+router.get('/login', (req, res) => {
+  const { token } = jwt.generateJwtToken(req.session.user);
+  const redirect = endpoint.redirectToUIPage(token);
+  return res.redirect(redirect);
 });
 
 router.post('/login', rateLimitConfigForToken, async (req, res) => {
@@ -109,9 +115,10 @@ router.post('/login', rateLimitConfigForToken, async (req, res) => {
       });
     }
 
-    return res.json({
-      token: loginIntent.jwt.token,
-    });
+    // return res.json({
+    //   token: loginIntent.jwt.token,
+    // });
+    return res.redirect(`/account/login?token=${loginIntent.jwt.token}`);
   }
 
   if (!userDataObj.email) {
