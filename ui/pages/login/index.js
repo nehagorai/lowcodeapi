@@ -238,7 +238,7 @@ export function User({ i18n, info= {}, api_endpoints ={}, user, config, provider
               authProvider={authProvider}
               onSubmit={onSubmit}
               providers={providers}
-              altLink={{}}
+              altLink={{ href :'/signup', text: 'Signup'}}
             />
           }
           {
