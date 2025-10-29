@@ -58,11 +58,20 @@ docker compose up
 
 ### Contributors
 
-<a href="https://github.com/samal/lowcodeapi/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=samal/lowcodeapi" />
-</a>
-
-## 🤝 Contributing
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <a href="https://github.com/Samal" title="Samal">
+    <img src="https://avatars.githubusercontent.com/Samal" 
+         width="50" 
+         style="border-radius: 50%;" 
+         alt="Samal" />
+  </a>
+  <a href="https://github.com/NehaGorai" title="Neha Gorai">
+    <img src="https://avatars.githubusercontent.com/NehaGorai" 
+         width="50" 
+         style="border-radius: 50%;" 
+         alt="Neha Gorai" />
+  </a>
+</div>
 
 Please see our [Contributing Guide](./CONTRIBUTING.md).
 
