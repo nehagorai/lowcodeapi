@@ -3,9 +3,6 @@ import cors, { CorsOptions } from 'cors';
 
 import { loggerService } from '../utilities';
 
-// import cors from './cors';
-// import plugIpLogging from './ip-logging';
-
 const plugCors = (app: Application): void => {
   const corsOptions: CorsOptions = {
     credentials: true,
