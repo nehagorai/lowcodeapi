@@ -13,7 +13,8 @@
     "format": "prettier --write \"src/**/*.{js,ts,json,md}\"",
     "format:check": "prettier --check \"src/**/*.{js,ts,json,md}\"",
     "test": "jest --coverage",
-    "create": "node setup/create-user.js"
+    "create": "node setup/create-user.js",
+    "env": "node setup/env-seed.js"
   },
   "dependencies": {
     "@aws-crypto/sha256-js": "^4.0.0",
