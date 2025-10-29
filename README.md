@@ -58,17 +58,17 @@ docker compose up
 
 ### Contributors
 
-<div style="display: flex; flex-wrap: wrap; gap: 12px;">
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
   <a href="https://github.com/Samal" title="Samal">
     <img src="https://avatars.githubusercontent.com/Samal" 
          width="50" 
-         style="border-radius: 50%;" 
+         style="clip-path: circle(50% at center);"
          alt="Samal" />
   </a>
   <a href="https://github.com/NehaGorai" title="Neha Gorai">
     <img src="https://avatars.githubusercontent.com/NehaGorai" 
          width="50" 
-         style="border-radius: 50%;" 
+         style="clip-path: circle(50% at center);"
          alt="Neha Gorai" />
   </a>
 </div>
