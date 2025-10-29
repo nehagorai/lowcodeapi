@@ -58,7 +58,7 @@ docker compose up
 
 ### Contributors
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+<div style="display: flex; flex-wrap: wrap; gap: 12px;">
   <a href="https://github.com/Samal" title="Samal">
     <img src="https://avatars.githubusercontent.com/Samal" 
          width="50" 
