@@ -1,8 +1,8 @@
 # LowCodeAPI
 
-A unified API connector that abstracts third-party service integrations through a single, standardized interface. Build, deploy, and manage your integrations with ease.
+A unified API connector for third-party service integrations.
 
-## 🏗️ Project Overview
+## 🏗️ Overview
 
 LowCodeAPI consisting of two main components:
 
@@ -11,8 +11,8 @@ LowCodeAPI consisting of two main components:
 
 ## 📚 Documentation
 
-- **[Server Documentation](./server/README.md)** - Backend setup, API endpoints, and development
-- **[UI Documentation](./ui/README.md)** - Frontend development, components, and deployment
+- **[Server](./server/README.md)** - Backend setup, API endpoints, and development
+- **[UI](./ui/README.md)** - Frontend development, components, and deployment
 - **[Contributing Guide](./CONTRIBUTING.md)** - How to contribute to the project
 
 ## 🏛️ Architecture
@@ -23,6 +23,37 @@ LowCodeAPI consisting of two main components:
 │   (Next.js)     │◄──►│   (Node.js)     │◄──►│   Services      │
 │   Port: 3000    │    │   Port: 3001    │    │                 │
 └─────────────────┘    └─────────────────┘    └─────────────────┘
+```
+
+## Getting started
+
+### Server
+
+Copy `.env.example` to `.env` and set the desired value or run `npm run env` to generate the `.env`.
+
+### UI
+
+Create a `.env` inside ui directory and copy the following values
+
+```
+
+DATA_ENDPOINT=http://localhost:3456
+APP_URL=http://localhost:3456
+API_URL=http://localhost:3456
+NAME=LowCodeAPI
+
+```
+
+Run a docker instance for MySQL database and Redis
+
+```bash
+
+docker compose -f docker-compose.dev.yml up
+
+or
+
+docker compose up
+
 ```
 
 ### Contributors
@@ -44,5 +75,3 @@ See [LICENSE](./LICENSE) for more information.
 ## 🆘 Support
 
 - **Issues**: [GitHub Issues](https://github.com/samal/lowcodeapi/issues)
-- **Documentation**: [Server](./server/README.md) | [UI](./ui/README.md)
-- **Contributing**: [CONTRIBUTING.md](./CONTRIBUTING.md)
