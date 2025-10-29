@@ -60,7 +60,6 @@ function prepareAuthForDispatch({
   body,
 }: ApplyAuthenticationParams): AuthResult {
   const options: { [key: string]: any } = {
-    method: '',
     headers: {},
   };
 
@@ -263,7 +262,6 @@ async function dispatchRequest({
   } = target; // intent
 
   const authDefault = auth;
-
   // Extract metadata and payload components
   const { contentType, api_endpoint } = meta;
   const {
@@ -272,7 +270,7 @@ async function dispatchRequest({
   let body = originalBody;
   const { oauth_data = null, authToken: authObj } = credsObj;
   let url = api_endpoint;
-  
+
   // Initialize request headers with default content type
   let requestHeaders: { [key: string]: any } = {
     'content-type': 'application/json',
@@ -298,7 +296,7 @@ async function dispatchRequest({
   if (contentType) {
     requestHeaders['content-type'] = contentType;
   }
-  
+
   // Process path parameters and URL substitution
   let localParams = { ...params };
   if (path) {
@@ -314,7 +312,7 @@ async function dispatchRequest({
           if (params[pathParamKey] && replace) {
             url = url.replace(replace, params[pathParamKey]);
           }
-        } 
+        }
         // Handle parameter-based substitution
         else {
           const value_key = obj.key_alias || pathParamKey;
@@ -360,7 +358,7 @@ async function dispatchRequest({
     url = subdomainResult.url;
     localParams = subdomainResult.localParams;
   }
-  
+
   // Apply authentication based on configured method
   const authResult = prepareAuthForDispatch({
     authDefault,
@@ -376,7 +374,7 @@ async function dispatchRequest({
     headers: {},
     ...authResult.options,
   };
-  
+
   // Update url, requestHeaders, and body from authentication result
   url = authResult.url;
   requestHeaders = authResult.requestHeaders;
@@ -396,7 +394,7 @@ async function dispatchRequest({
 
   // Determine if this is a file upload request
   const isUpload = target.type && ['file', 'upload'].includes(target.type.toLowerCase());
-  
+
   // Process request body for methods that support it
   if (METHODS.includes(method.toUpperCase())) {
     if (body && typeof body === 'object') {
@@ -421,7 +419,7 @@ async function dispatchRequest({
         data.append(file.fieldname, fs.createReadStream(filePath));
         options.data = data;
         options.headers = { ...options.headers, ...data.getHeaders() };
-      } 
+      }
       // Handle form data requests
       else if (payload_type === 'formdata') {
         const data = new FormData();
@@ -432,13 +430,13 @@ async function dispatchRequest({
         });
         options.data = data;
         options.headers = { ...options.headers, ...data.getHeaders() };
-      } 
+      }
       // Handle URL-encoded form data
       else if (payload_type === 'urlencoded') {
         const data = qs.stringify(body);
         options.data = data;
         options.headers['content-type'] = 'application/x-www-form-urlencoded';
-      } 
+      }
       // Default to JSON body
       else {
         options.data = body;
@@ -460,7 +458,7 @@ async function dispatchRequest({
   }
 
   loggerService.info('API request', url, options);
-  
+
   // Execute the API request
   const {
     error: err,
@@ -473,7 +471,7 @@ async function dispatchRequest({
   // Handle request errors
   if (err) {
     const { data = { message: err.message }, headers, status } = err.response || err;
-    
+
     // Handle 401 Unauthorized - attempt token refresh for OAuth2
     if (status === 401) {
       const tokenObj = await refreshToken({ provider, authObj, credsObj });
@@ -484,10 +482,10 @@ async function dispatchRequest({
         });
       }
     }
-    
+
     loggerService.error(`Request failed for ${provider} API endpoint`, url, data);
     let error: { [key: string]: any } = {};
-    
+
     // Use provider-specific error handler if available
     if (errorHandler[provider]) {
       error = errorHandler[provider](err, provider);
