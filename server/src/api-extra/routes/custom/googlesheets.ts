@@ -14,7 +14,7 @@ import creds from '../../../auth-middleware';
 
 const { CAHCE_KEY_EXPIRY_VALUE } = config;
 
-const { DEFAULT_API_DATA_LIMIT } = config.OAUTH.GOOGLESHEETS;
+const DEFAULT_API_DATA_LIMIT = 1000;
 
 const router: Router = express.Router();
 

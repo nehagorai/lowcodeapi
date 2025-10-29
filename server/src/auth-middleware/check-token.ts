@@ -1,5 +1,4 @@
 import getProviderCredsUsingApiTokenFn from '../core/services/providers/api-token-fn';
-import getProviderCredsViaAPI from './verify-token-using-api';
 
 import {
   safePromise,
@@ -10,13 +9,10 @@ import {
 
 const {
   ACCEPT_CLIENT_CREDENTIALS_USERS,
-  MICROSERVICE_ENABLED,
   CACHE_PROVIDER_CREDS_EXPIRY_TIME = 120,
 } = process.env;
 
-const verifyTokenAndGetCreds = MICROSERVICE_ENABLED
-  ? getProviderCredsViaAPI
-  : getProviderCredsUsingApiTokenFn;
+const verifyTokenAndGetCreds = getProviderCredsUsingApiTokenFn;
 
 let CLIENT_CREDENTIALS_USERS: string[] = [];
 try {

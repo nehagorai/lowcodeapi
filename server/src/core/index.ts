@@ -5,7 +5,6 @@ import config from '../config';
 import boot from './boot';
 
 import loadDashboardModule from './routes/dashboard';
-import loadInternalModule from './routes/internal';
 import loadUnifiedSettings from './routes/unified_settings';
 
 const {
@@ -23,9 +22,6 @@ if (PROTOCOL && HTTP_PROTOCOL.includes(PROTOCOL) && UI_DOMAIN && APP_DOMAIN) {
 
 export default (app: Application) : void => {
   boot(app);
-
-  // For cloud instance only
-  loadInternalModule(app);
 
   loadDashboardModule(app, { MOUNT_POINT });
   loadUnifiedSettings(app, { MOUNT_POINT });
