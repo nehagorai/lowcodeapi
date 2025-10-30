@@ -413,7 +413,7 @@ export default function Home({
               }
               </div>
             </div>
-            {
+            {/* {
               !(user && user.name) ? <div className='col-span-2 flex justify-end items-center'>
                 <div className='w-40 text-xs text-gray-600 p-1 bg-gray-600/30 rounded-md'>
                   <a href={`${endpoint.ENDPOINT}/auth/google`} className="w-full flex items-center justify-center p-1 pr-3 pl-1 bg-white border border-gray-300 rounded-md">
@@ -422,7 +422,7 @@ export default function Home({
                   </a>
                 </div>
               </div>: null
-            }
+            } */}
           </div>
         </div>
         {
