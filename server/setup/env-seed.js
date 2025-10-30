@@ -53,8 +53,8 @@ GOOGLE_CLIENT_SECRET=
 `;
 
 const envTemplateUI = `
-DATA_ENDPOINT=http://localhost:3456
-API_URL=http://localhost:3456
+DATA_ENDPOINT=http://localhost:3456 # Only required for development instance
+APP_URL=http://localhost:3456
 NAME=LowCodeAPI
 
 # Generated on ${moment().format('YYYY-MM-DD HH:mm:ss')}
