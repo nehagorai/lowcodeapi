@@ -65,11 +65,20 @@ Pending
 
 ### Contributors
 
-<a href="https://github.com/samal/lowcodeapi/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=samal/lowcodeapi" />
-</a>
-
-## Contributing
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <a href="https://github.com/Samal" title="Samal">
+    <img src="https://avatars.githubusercontent.com/samal" 
+         width="50" 
+         style="clip-path: circle(50% at center);"
+         alt="Samal" />
+  </a>
+  <a href="https://github.com/NehaGorai" title="Neha Gorai">
+    <img src="https://avatars.githubusercontent.com/nehagorai" 
+         width="50" 
+         style="clip-path: circle(50% at center);"
+         alt="Neha Gorai" />
+  </a>
+</div>
 
 Please see our [Contributing Guide](./CONTRIBUTING.md).
 
