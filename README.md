@@ -4,7 +4,7 @@ A unified API connector for third-party service integrations.
 
 ## 🏗️ Overview
 
-LowCodeAPI consisting of two main components:
+LowCodeAPI has two main components:
 
 - **[🚀 Server](./server/README.md)** - Backend with unified API gateway
 - **[🎨 UI](./ui/README.md)** - Frontend
@@ -21,7 +21,7 @@ LowCodeAPI consisting of two main components:
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │   Frontend UI   │    │  Backend API    │    │ Third-party     │
 │   (Next.js)     │◄──►│   (Node.js)     │◄──►│   Services      │
-│   Port: 3000    │    │   Port: 3001    │    │                 │
+│   Port: 3000    │    │   Port: 3456    │    │                 │
 └─────────────────┘    └─────────────────┘    └─────────────────┘
 ```
 
