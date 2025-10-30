@@ -16,7 +16,7 @@ declare module 'express-session' {
 }
 const client: RedisClientType = redisClient();
 export default (app: Application): void => {
-  const { SESSION_SECRET_KEY, SESSION_EXPIRY, SESSION_STORE_IN_REDIS = true } = config;
+  const { SESSION_SECRET_KEY, SESSION_EXPIRY, SESSION_STORE_IN_REDIS = false } = config;
 
   if (!SESSION_EXPIRY || typeof SESSION_EXPIRY !== 'string') {
     throw new Error('Missing "SESSION_EXPIRY" in config file');
