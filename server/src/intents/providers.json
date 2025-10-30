@@ -436,7 +436,7 @@
     "credential_link": "https://app.cal.com/settings/developer/api-keys"
   },
   {
-    "id": "cloudflarer2",
+    "id": "cloudflare-r2",
     "name": "Cloudflare R2",
     "description": "Custom made Object Storage APIs for Cloudflare R2.",
     "logo_url": "cloudflarer2.svg",

@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import IconPack from '@/studio-components/IconPack';
+import IconPack from '@/components/IconPack';
 
-import IntentAction from '@/studio-components/ProviderPage/IntentAction';
-import IntentMetrics from '@/studio-components/ProviderPage/IntentMetrics';
+import IntentAction from '@/components/ProviderPage/IntentAction';
+import IntentMetrics from '@/components/ProviderPage/IntentMetrics';
 
 function IntentHead({ children, userAuthorized, view, selected, metrics, activeCategory, activePath, total_providers, api_endpoints, intentAction, uriLocation = '', bookmark=true, pin=true, onClickTab, onSaveAction = () => {}, onDeleteAction = () =>{} }) {
 

@@ -11,9 +11,8 @@ import response from '../../utilities/response';
 import creds from '../../auth-middleware';
 
 import providers, { providerMap } from '../../intents';
-import { fetchIntent, postIntent } from '../symlink';
-
-// loggerService.info('Loading Providers:', Object.keys(providers));
+import fetchIntent from './fetch-intent';
+import postIntent from './post-intent';
 
 const router: any = express.Router();
 

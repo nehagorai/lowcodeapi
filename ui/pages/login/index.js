@@ -12,8 +12,8 @@ import getBuildContext from '@/utils/get-context';
 
 import SEO from '../../components/seo';
 
-import Layout from '../../studio-components/Layout';
-import UserView from '../../studio-components/UserLoginUI/view';
+import Layout from '../../components/Layout';
+import UserView from '../../components/UserLoginUI/view';
 
 import form from '../../static-json/login';
 

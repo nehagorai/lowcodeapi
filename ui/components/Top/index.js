@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Link from 'next/link';
-import ProfileTab from '@/studio-components/ProfileTab';
+import ProfileTab from '@/components/ProfileTab';
 
 import userAvatar from '@/public/avatar.svg';
 import google from '@/public/assets/google-login.svg';

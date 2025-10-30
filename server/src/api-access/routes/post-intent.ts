@@ -8,7 +8,7 @@ const getProviderKey = (query: { spreadsheetId: any; documentId: any; }) => {
   return key;
 };
 
-async function next(
+async function postIntent(
   route: { provider_intent: string | number, text: string },
   keys: { [key: string]: any },
 ) {
@@ -103,4 +103,4 @@ async function next(
   };
 }
 
-export default next;
+export default postIntent;

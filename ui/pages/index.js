@@ -10,13 +10,13 @@ import getBuildContext from '@/utils/get-context';
 
 import i18n from '@/static-json/i18n.json';
 
-import ExplorerViewNew from '@/studio-components/ExplorerView';
-import { IntentTab, ConnectorStatus, IntentHead } from '@/studio-components/ProviderPage';
-import APIRequestLogs from '@/studio-components/ExplorerView/APIRequestLogs';
-import APIResponse from '@/studio-components/ExplorerView/APIResponse';
+import ExplorerViewNew from '@/components/ExplorerView';
+import { IntentTab, ConnectorStatus, IntentHead } from '@/components/ProviderPage';
+import APIRequestLogs from '@/components/ExplorerView/APIRequestLogs';
+import APIResponse from '@/components/ExplorerView/APIResponse';
 import SEO from '@/components/seo';
-import Layout from '@/studio-components/EditorLayout';
-import EditorCanvas from '@/studio-components/EditorCanvas';
+import Layout from '@/components/EditorLayout';
+import EditorCanvas from '@/components/EditorCanvas';
 import processPath from '@/utils/process-path';
 
 export default function Home({
@@ -413,7 +413,7 @@ export default function Home({
               }
               </div>
             </div>
-            {
+            {/* {
               !(user && user.name) ? <div className='col-span-2 flex justify-end items-center'>
                 <div className='w-40 text-xs text-gray-600 p-1 bg-gray-600/30 rounded-md'>
                   <a href={`${endpoint.ENDPOINT}/auth/google`} className="w-full flex items-center justify-center p-1 pr-3 pl-1 bg-white border border-gray-300 rounded-md">
@@ -422,7 +422,7 @@ export default function Home({
                   </a>
                 </div>
               </div>: null
-            }
+            } */}
           </div>
         </div>
         {

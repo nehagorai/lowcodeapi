@@ -2,8 +2,8 @@ import React, { useRef, useEffect} from 'react';
 
 import Image from 'next/image';
 
-import HTTPMethodLabel from '@/studio-components/HTTPMethodLabel';
-import IconPack from '@/studio-components/IconPack';
+import HTTPMethodLabel from '@/components/HTTPMethodLabel';
+import IconPack from '@/components/IconPack';
 import getLogoUrl from '@/utils/logo-url';
 
 const classHelper = (tabView, ative, renderingWait) => {

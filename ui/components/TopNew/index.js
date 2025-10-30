@@ -12,7 +12,7 @@ const Bar = ({ children, info = {}, config = {} , home , BASE_PATH = '', BASE_PA
   // const homeLink = home || BASE_PATH || BASE_PATH_FALLBACK;
   // const completeRegistration = `${BASE_PATH}/pending-action`;
   // const signupLink = `${BASE_PATH}/signup`;
-  // const loginLink = `${BASE_PATH}/login`;
+  const loginLink = `${BASE_PATH}/login`;
   
   const [href, setHref] = useState(''); 
   useEffect(() => {
@@ -43,12 +43,13 @@ const Bar = ({ children, info = {}, config = {} , home , BASE_PATH = '', BASE_PA
                 {
                   account_config.signup || account_config.login ? <>
                       <div className='flex flex-col items-center justify-center text-xs text-gray-600'>
-                        {/* {
+                         {
                           account_config.login ? <Link href={loginLink} className='underline my-2'>
                               Login
                             </Link>
                             : null
                         }
+                        {/*
                         {
                           account_config.signup ? <>
                             <Link href={signupLink} className='underline'>

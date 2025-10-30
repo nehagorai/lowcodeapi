@@ -2,20 +2,20 @@
 
 A unified API connector for third-party service integrations.
 
-## 🏗️ Overview
+## Overview
 
 LowCodeAPI has two main components:
 
 - **[🚀 Server](./server/README.md)** - Backend with unified API gateway
 - **[🎨 UI](./ui/README.md)** - Frontend
 
-## 📚 Documentation
+## Documentation
 
 - **[Server](./server/README.md)** - Backend setup, API endpoints, and development
 - **[UI](./ui/README.md)** - Frontend development, components, and deployment
 - **[Contributing Guide](./CONTRIBUTING.md)** - How to contribute to the project
 
-## 🏛️ Architecture
+## Architecture
 
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
@@ -26,6 +26,8 @@ LowCodeAPI has two main components:
 ```
 
 ## Getting started
+
+Local instance runs Frontend and Backend seperately. Both requires seperate `.env` to run.
 
 ### Server
 
@@ -47,6 +49,7 @@ NAME=LowCodeAPI
 Run a docker instance for MySQL database and Redis
 
 ```bash
+cd docker
 
 docker compose -f docker-compose.dev.yml up
 
@@ -56,17 +59,21 @@ docker compose up
 
 ```
 
+### Bundled Instance
+
+Pending
+
 ### Contributors
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
   <a href="https://github.com/Samal" title="Samal">
-    <img src="https://avatars.githubusercontent.com/Samal" 
+    <img src="https://avatars.githubusercontent.com/samal" 
          width="50" 
          style="clip-path: circle(50% at center);"
          alt="Samal" />
   </a>
   <a href="https://github.com/NehaGorai" title="Neha Gorai">
-    <img src="https://avatars.githubusercontent.com/NehaGorai" 
+    <img src="https://avatars.githubusercontent.com/nehagorai" 
          width="50" 
          style="clip-path: circle(50% at center);"
          alt="Neha Gorai" />
@@ -75,12 +82,10 @@ docker compose up
 
 Please see our [Contributing Guide](./CONTRIBUTING.md).
 
-### Development Workflow
-
-## 📄 License
+## License
 
 See [LICENSE](./LICENSE) for more information.
 
-## 🆘 Support
+## Support
 
 - **Issues**: [GitHub Issues](https://github.com/samal/lowcodeapi/issues)

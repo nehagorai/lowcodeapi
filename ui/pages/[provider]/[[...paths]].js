@@ -11,19 +11,19 @@ import processPath from '@/utils/process-path';
 
 import SEO from '@/components/seo';
 
-import Layout from '@/studio-components/EditorLayout';
-import ExplorerViewNew from '@/studio-components/ExplorerView';
-import APIRequestLogs from '@/studio-components/ExplorerView/APIRequestLogs';
-import APIResponse from '@/studio-components/ExplorerView/APIResponse';
-import ProviderSetup from '@/studio-components/ExplorerView/Configure';
-import EditorCanvas from '@/studio-components/EditorCanvas';
+import Layout from '@/components/EditorLayout';
+import ExplorerViewNew from '@/components/ExplorerView';
+import APIRequestLogs from '@/components/ExplorerView/APIRequestLogs';
+import APIResponse from '@/components/ExplorerView/APIResponse';
+import ProviderSetup from '@/components/ExplorerView/Configure';
+import EditorCanvas from '@/components/EditorCanvas';
 
-import { IntentTab , ConnectorSteps, ConnectorStatus, IntentAction, IntentHead } from '@/studio-components/ProviderPage';
+import { IntentTab , ConnectorSteps, ConnectorStatus, IntentAction, IntentHead } from '@/components/ProviderPage';
 
 import providerTabs from '@/static-json/provider-tabs.json';
 
 import i18nText from '@/static-json/i18n.json';
-import IconPack from '@/studio-components/IconPack';
+import IconPack from '@/components/IconPack';
 
 const { customTabs, defaultTabs } = providerTabs;
 
@@ -813,7 +813,7 @@ export function Explorer({
                         <>
                             <div className='p-4 md:pt-0  pb-2 bg-gray-50'>
                                 <div className='grid grid-cols-10 gap-2'>
-                                    <div className={`${user && user.name ? 'col-span-10' : 'col-span-8'} overflow-x-scroll `}>
+                                    <div className={`${user && user.name ? 'col-span-10' : 'col-span-10'} overflow-x-scroll `}>
                                         <div className='flex items-center border-b border-gray-100 overflow-scroll'>
                                         {
                                             apiViewList.map((item) => (
@@ -837,7 +837,7 @@ export function Explorer({
                                         }
                                         </div>
                                     </div>
-                                    {
+                                    {/* {
                                     !(user && user.name) ? <div className='col-span-2 flex justify-end items-center'>
                                         <div className='w-40 text-xs text-gray-600 p-1 bg-gray-600/30 rounded-md'>
                                         <a href={`${endpoint.ENDPOINT}/auth/google`} className="w-full flex items-center justify-center p-1 pr-3 pl-1 bg-white border border-gray-300 rounded-md">
@@ -846,7 +846,7 @@ export function Explorer({
                                         </a>
                                         </div>
                                     </div>: null
-                                    }
+                                    } */}
                                 </div>
                             </div>
                             <div className='relative'>

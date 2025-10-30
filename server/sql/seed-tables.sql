@@ -1,11 +1,3 @@
--- =====================================================
--- LowCodeAPI Seed Database Migration
--- =====================================================
--- This file creates a complete seed database with all tables
--- Created: 2024-12-19
--- Purpose: Initialize a fresh database for development/testing
--- =====================================================
-
 -- Set MySQL configuration
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
@@ -325,11 +317,3 @@ FROM information_schema.TABLES
 WHERE TABLE_SCHEMA = DATABASE() 
 ORDER BY TABLE_NAME;
 
--- =====================================================
--- Migration completed successfully!
--- =====================================================
--- Tables created: 12
--- Users table columns: 28 (including avatars, extra, username)
--- Sample data inserted: 3 providers, 2 users, 1 API token
--- Database ready for development/testing
--- =====================================================

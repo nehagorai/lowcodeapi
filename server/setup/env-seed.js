@@ -1,6 +1,7 @@
 require('dotenv').config();
 
 const fs = require('fs');
+const path = require('path');
 const crypto = require('crypto');
 const lodash = require('lodash');
 const moment = require('moment');
@@ -48,6 +49,15 @@ SESSION_SECRET_KEY={{SESSION_SECRET_KEY}}
 GOOGLE_CLIENT_ID=
 GOOGLE_CLIENT_SECRET=
 
+# Generated on ${moment().format('YYYY-MM-DD HH:mm:ss')}
+`;
+
+const envTemplateUI = `
+DATA_ENDPOINT=http://localhost:3456 # Only required for development instance
+APP_URL=http://localhost:3456
+NAME=LowCodeAPI
+
+# Generated on ${moment().format('YYYY-MM-DD HH:mm:ss')}
 `;
 function genToken(num) {
   return crypto.randomBytes(num || 16).toString('hex');
@@ -57,6 +67,13 @@ const prepare = async () => {
   try {
     fs.cpSync('.env', `.env.bkp-${moment().format('YYYY-MM-DD-HH-mm-ss')}`);
     fs.rmSync('.env');
+  } catch (e) {
+    console.log(e);
+  }
+
+  try {
+    fs.cpSync(path.resolve('../', 'ui', '.env'), path.resolve('../', 'ui', `.env.bkp-${moment().format('YYYY-MM-DD-HH-mm-ss')}`));
+    fs.rmSync(path.resolve('../', 'ui', '.env'));
   } catch (e) {
     console.log(e);
   }
@@ -77,6 +94,9 @@ const prepare = async () => {
   };
   const envFile = lodash.template(envTemplate)(templObj);
   fs.writeFileSync('.env', envFile, 'utf8');
+
+  const envFileUI = lodash.template(envTemplateUI)({});
+  fs.writeFileSync(path.resolve('../', 'ui', '.env'), envFileUI, 'utf8');
 };
 
 (async () => {
