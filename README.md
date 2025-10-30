@@ -27,6 +27,8 @@ LowCodeAPI has two main components:
 
 ## Getting started
 
+Local instance runs Frontend and Backend seperately. Both requires seperate `.env` to run.
+
 ### Server
 
 Copy `.env.example` to `.env` and set the desired value or run `npm run env` to generate the `.env`.
@@ -56,6 +58,10 @@ or
 docker compose up
 
 ```
+
+### Bundled Instance
+
+Pending
 
 ### Contributors
 
