@@ -68,14 +68,14 @@ const prepare = async () => {
     fs.cpSync('.env', `.env.bkp-${moment().format('YYYY-MM-DD-HH-mm-ss')}`);
     fs.rmSync('.env');
   } catch (e) {
-    console.log(e);
+    console.log('.env not found, ignoring');
   }
 
   try {
     fs.cpSync(path.resolve('../', 'ui', '.env'), path.resolve('../', 'ui', `.env.bkp-${moment().format('YYYY-MM-DD-HH-mm-ss')}`));
     fs.rmSync(path.resolve('../', 'ui', '.env'));
   } catch (e) {
-    console.log(e);
+    console.log('.env not found, ignoring');
   }
 
   const {
