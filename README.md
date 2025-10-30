@@ -1,4 +1,11 @@
-# LowCodeAPI
+<!-- PROJECT LOGO -->
+<p align="center">
+  <a href="https://github.com/samal/lowcodeapi">
+   <img src="guide/images/lowcodeapi.png" alt="Logo">
+  </a>
+  <h3 align="center">LowCodeAPI</h3>
+
+</p>
 
 A unified API connector for third-party service integrations.
 
