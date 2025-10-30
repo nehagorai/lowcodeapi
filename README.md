@@ -2,20 +2,20 @@
 
 A unified API connector for third-party service integrations.
 
-## 🏗️ Overview
+## Overview
 
 LowCodeAPI has two main components:
 
 - **[🚀 Server](./server/README.md)** - Backend with unified API gateway
 - **[🎨 UI](./ui/README.md)** - Frontend
 
-## 📚 Documentation
+## Documentation
 
 - **[Server](./server/README.md)** - Backend setup, API endpoints, and development
 - **[UI](./ui/README.md)** - Frontend development, components, and deployment
 - **[Contributing Guide](./CONTRIBUTING.md)** - How to contribute to the project
 
-## 🏛️ Architecture
+## Architecture
 
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
@@ -47,6 +47,7 @@ NAME=LowCodeAPI
 Run a docker instance for MySQL database and Redis
 
 ```bash
+cd docker
 
 docker compose -f docker-compose.dev.yml up
 
@@ -62,16 +63,14 @@ docker compose up
   <img src="https://contrib.rocks/image?repo=samal/lowcodeapi" />
 </a>
 
-## 🤝 Contributing
+## Contributing
 
 Please see our [Contributing Guide](./CONTRIBUTING.md).
 
-### Development Workflow
-
-## 📄 License
+## License
 
 See [LICENSE](./LICENSE) for more information.
 
-## 🆘 Support
+## Support
 
 - **Issues**: [GitHub Issues](https://github.com/samal/lowcodeapi/issues)
