@@ -9,8 +9,6 @@ A user interface for the LowCodeAPI.
 1. **Install dependencies:**
 ```bash
 cd lowcodeapi/ui
-npm install
-# or
 yarn install
 ```
 
@@ -45,6 +43,4 @@ npm run dev          # Start development server
 npm run build        # Build for production
 npm run start        # Start production server
 
-# Code Quality
-npm run lint         # Run ESLint
 ```

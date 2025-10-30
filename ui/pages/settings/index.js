@@ -10,9 +10,9 @@ import { isAuthenticated } from '@/utils/auth';
 
 import getBuildContext from '@/utils/get-context';
 
-import Layout from '@/studio-components/Layout';
-import IconPack from '@/studio-components/IconPack';
-import Clipbaord from '@/studio-components/Clipbaord';
+import Layout from '@/components/Layout';
+import IconPack from '@/components/IconPack';
+import Clipbaord from '@/components/Clipbaord';
 
 export function APIKeysPage({ info ={}, api_endpoints ={}, user: userSession, config:configProps }) {
   const { ACCOUNT_API, PROVIDER_LIST_API, APP_CONFIG_API, INTEGRATIONS_API} = api_endpoints;

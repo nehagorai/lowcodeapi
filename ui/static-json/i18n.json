@@ -50,9 +50,7 @@
       "card_subscribing_btn_txt": "Subscribing..."
     },
     "routes":{ "account": "/account" }, 
-    "navbar" : {
-      
-    },
+    "navbar" : {},
     "dashboard": {
       "request_logs_txt" : "Request Logs",
       "api_request_status_txt": "API Request Status",
@@ -61,107 +59,9 @@
       "bandwidth_usage_txt": "Bandwidth",
       "credit_usage_txt": "API Credits"
     },
-    "services_list": {
-      
-    },
-    "service_workspace": {
-      "title": "",
-      "description": "",
-      "settings": {},
-      "total_endpoint_txt": "APIs",
-      "new_endpoint_btn_txt": "New Endpoint",
-      "loading_workspace_txt": "Loading Workspace",
-      "empty_workspace_txt": "Workspace is empty",
-      "delete_endpoint_active_txt": "Deleting..",
-      "clear_cache_btn_txt": "Clear cache",
-      "clear_all_cache_btn_txt": "Clear All Cache"
-    },
-    "collection": {
-      "title": "Collection",
-      "description": "",
-      "collection_loading_txt": "Loading all the available collection",
-      "collection_list_empty_txt": "No collection found",
-      "use_collection_button_txt": "Use this",
-      "use_collection_button_active_txt": "Setting up"
-    },
     "api_keys": {
       "title": "API Tokens",
       "description": ""
     },
-    "address": {
-        "physical_address_main_label_txt": "Address Line 1",
-        "physical_address_info_txt": "",
-        "physical_address_street_label_txt": "Street / Address Line 2",
-        "physical_address_city_label_txt":"City",
-        "physical_address_state_label_txt": "State",
-        "physical_address_zipcode_label_txt": "Zipcode",
-        "physical_address_country_label_txt": "Country",
-        "select_countries_txt": "Country List",
-        "physical_address_update_btn_txt":"",
-        "physical_address_add_btn_txt": ""
-    },
-    "card": {
-        "card_details_txt": "Card"
-    },
-    "plans": {
-      "header": "Plans",
-      "title": "Plans",
-      "user_type_prompt_txt": "Are you an Indian user or an entity registered in India?",
-      "user_type_yes_prompt_txt": "Yes",
-      "user_type_no_prompt_txt": "No",
-      "user_type_detail_txt": "We operate out of India and as per law of India, an Indian user or an Indian entity can only be billed in INR (₹).",
-      "user_type_pending_txt": "Pending Confirmation",
-      "loading_billing_details": "",
-      "address": {
-        "physical_address_main_label_txt": "Address Line 1",
-        "physical_address_info_txt": "",
-        "physical_address_street_label_txt": "Street / Address Line 2",
-        "physical_address_city_label_txt":"City",
-        "physical_address_state_label_txt": "State",
-        "physical_address_zipcode_label_txt": "Zipcode",
-        "physical_address_country_label_txt": "Country",
-        "select_countries_txt": "Country List",
-        "physical_address_update_btn_txt":"",
-        "physical_address_add_btn_txt": ""
-      },
-      "card": {
-        "card_details_txt": "Card"
-      },
-      "curent_plan_txt": "Current Plan"
-    },
-    "billing": {
-      "header": "Plans",
-      "title": "Plans",
-      "user_type_prompt_txt": "Are you an Indian user or an entity registered in India?",
-      "user_type_yes_prompt_txt": "Yes",
-      "user_type_no_prompt_txt": "No",
-      "user_type_detail_txt": "We operate out of India and as per law of India, an Indian user or an Indian entity can only be billed in INR (₹).",
-      "user_type_pending_txt": "Pending Confirmation",
-      "loading_billing_details": "",
-      "address": {
-        "physical_address_main_label_txt": "Address Line 1",
-        "physical_address_info_txt": "",
-        "physical_address_street_label_txt": "Street / Address Line 2",
-        "physical_address_city_label_txt":"City",
-        "physical_address_state_label_txt": "State",
-        "physical_address_zipcode_label_txt": "Zipcode",
-        "physical_address_country_label_txt": "Country",
-        "select_countries_txt": "Country List",
-        "physical_address_update_btn_txt":"",
-        "physical_address_add_btn_txt": ""
-      },
-      "card": {
-        "card_details_txt": "Card"
-      },
-      "curent_plan_txt": "Current Plan"
-    },
-    "provider" : {
-      "title" : "Provider",
-      "credentials_found_text_head": "Your credential is encrypted and securly stored in our database.",
-      "credentials_found_text": "While making an API request this credential will be used on your behalf.",
-      "no_credentials_found_text": "No OAuth setup instructions found for this provider"
-    },
-    "integrations": {
-
-    }
+    "integrations": {}
   }

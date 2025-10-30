@@ -1,6 +1,6 @@
 import React from 'react';
-import Footer from '@/studio-components/Footer';
-import Top from '@/studio-components/Top';
+import Footer from '@/components/Footer';
+import Top from '@/components/Top';
 
 import onLogout from '@/utils/logout';
 

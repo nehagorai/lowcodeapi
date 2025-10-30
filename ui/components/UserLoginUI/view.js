@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import google from '@/public/assets/google-login.svg';
 
-import UserLoginUI from '../UserLoginUI';
+import UserLoginUI from '.';
 
 const logo = {
     google: google.src

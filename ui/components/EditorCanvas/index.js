@@ -9,11 +9,11 @@ import { Tooltip } from 'react-tooltip'
 import getLogoUrl from '@/utils/logo-url';
 import onLogout from '@/utils/logout';
 
-import Footer from '@/studio-components/Footer';
-import UsersNav from '@/studio-components/TopNew';
-import NavRight from '@/studio-components/NavRight';
-import IconPack from '@/studio-components/IconPack';
-import HTTPMethodLabel from '@/studio-components/HTTPMethodLabel';
+import Footer from '@/components/Footer';
+import UsersNav from '@/components/TopNew';
+import NavRight from '@/components/NavRight';
+import IconPack from '@/components/IconPack';
+import HTTPMethodLabel from '@/components/HTTPMethodLabel';
 import BadgeUI from '../BadgeUI';
 import sdk from '../ExplorerView/lang/sdk';
 

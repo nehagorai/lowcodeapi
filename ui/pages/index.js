@@ -10,13 +10,13 @@ import getBuildContext from '@/utils/get-context';
 
 import i18n from '@/static-json/i18n.json';
 
-import ExplorerViewNew from '@/studio-components/ExplorerView';
-import { IntentTab, ConnectorStatus, IntentHead } from '@/studio-components/ProviderPage';
-import APIRequestLogs from '@/studio-components/ExplorerView/APIRequestLogs';
-import APIResponse from '@/studio-components/ExplorerView/APIResponse';
+import ExplorerViewNew from '@/components/ExplorerView';
+import { IntentTab, ConnectorStatus, IntentHead } from '@/components/ProviderPage';
+import APIRequestLogs from '@/components/ExplorerView/APIRequestLogs';
+import APIResponse from '@/components/ExplorerView/APIResponse';
 import SEO from '@/components/seo';
-import Layout from '@/studio-components/EditorLayout';
-import EditorCanvas from '@/studio-components/EditorCanvas';
+import Layout from '@/components/EditorLayout';
+import EditorCanvas from '@/components/EditorCanvas';
 import processPath from '@/utils/process-path';
 
 export default function Home({

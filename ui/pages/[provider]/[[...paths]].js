@@ -11,19 +11,19 @@ import processPath from '@/utils/process-path';
 
 import SEO from '@/components/seo';
 
-import Layout from '@/studio-components/EditorLayout';
-import ExplorerViewNew from '@/studio-components/ExplorerView';
-import APIRequestLogs from '@/studio-components/ExplorerView/APIRequestLogs';
-import APIResponse from '@/studio-components/ExplorerView/APIResponse';
-import ProviderSetup from '@/studio-components/ExplorerView/Configure';
-import EditorCanvas from '@/studio-components/EditorCanvas';
+import Layout from '@/components/EditorLayout';
+import ExplorerViewNew from '@/components/ExplorerView';
+import APIRequestLogs from '@/components/ExplorerView/APIRequestLogs';
+import APIResponse from '@/components/ExplorerView/APIResponse';
+import ProviderSetup from '@/components/ExplorerView/Configure';
+import EditorCanvas from '@/components/EditorCanvas';
 
-import { IntentTab , ConnectorSteps, ConnectorStatus, IntentAction, IntentHead } from '@/studio-components/ProviderPage';
+import { IntentTab , ConnectorSteps, ConnectorStatus, IntentAction, IntentHead } from '@/components/ProviderPage';
 
 import providerTabs from '@/static-json/provider-tabs.json';
 
 import i18nText from '@/static-json/i18n.json';
-import IconPack from '@/studio-components/IconPack';
+import IconPack from '@/components/IconPack';
 
 const { customTabs, defaultTabs } = providerTabs;
 

@@ -11,7 +11,7 @@ import getLogoUrl from '../../utils/logo-url';
 
 import SEO from '../../components/seo';
 
-import Layout from '../../studio-components/Layout';
+import Layout from '../../components/Layout';
 
 
 export default function Studio({ info= {}, api_endpoints ={}, user: userSession, config:configProps, sidebar,  providers: released, upcoming, tba, categories: cl, categoryIndex }) {

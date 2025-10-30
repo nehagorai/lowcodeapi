@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import CredentialFormUI from '@/studio-components/ExplorerView/CredentialFormUI';
-import IconPack from '@/studio-components/IconPack';
-import Clipbaord from '@/studio-components/Clipbaord';
+import CredentialFormUI from '@/components/ExplorerView/CredentialFormUI';
+import IconPack from '@/components/IconPack';
+import Clipbaord from '@/components/Clipbaord';
 import getLogoUrl from '@/utils/logo-url';
 
 const meta = {

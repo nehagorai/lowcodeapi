@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import queryString from 'query-string';
 
-import IconPack from '@/studio-components/IconPack';
+import IconPack from '@/components/IconPack';
 import apiRequest from '@/utils/request';
 
 export function IntentAction({ bookmark= true, pin = true, provider, view, intentAction, api_endpoints, onSaveAction = () =>{} , onDeleteAction = () =>{} }) {
