@@ -27,41 +27,13 @@ LowCodeAPI has two main components:
 
 ## Getting started
 
-Local instance runs Frontend and Backend seperately. Both requires seperate `.env` to run.
+Local instance runs Frontend and Backend seperately. Both requires seperate `.env` to run at moment.
 
-### Server
+You can generate `.env` using `npm run env`, this will create `.env` file inside `server` as well as `ui` directory.
 
-Copy `.env.example` to `.env` and set the desired value or run `npm run env` to generate the `.env`.
+If you want to manually create `.env`, copy `.env.example` to `.env` in thier respective directory and fill the desired value.
 
-### UI
-
-Create a `.env` inside ui directory and copy the following values
-
-```
-
-DATA_ENDPOINT=http://localhost:3456
-APP_URL=http://localhost:3456
-API_URL=http://localhost:3456
-NAME=LowCodeAPI
-
-```
-
-Run a docker instance for MySQL database and Redis
-
-```bash
-cd docker
-
-docker compose -f docker-compose.dev.yml up
-
-or
-
-docker compose up
-
-```
-
-### Bundled Instance
-
-Pending
+You can follow [How to start](./guide/how-to-start.md) here.
 
 ### Contributors
 
