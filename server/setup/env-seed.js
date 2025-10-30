@@ -11,6 +11,12 @@ lodash.templateSettings = {
 };
 
 const envTemplate = `
+# WARNING: Encription key is used to encrypt and decrypt 3rd party credentials, do not change it once you have started the application.
+# Make sure to set a strong encryption key and has a backup of it.
+
+ENCRYPTION_KEY={{ENCRYPTION_KEY}}
+
+####
 RATE_LIMIT_WINDOW_IN_MS=60000
 RATE_LIMIT_MAX_REQUEST=2
 
@@ -41,7 +47,6 @@ JWT_EXPIRES=7d
 SESSION_EXPIRY=8640000
 CACHE_ENABLED=1
 CAHCE_KEY_EXPIRY_VALUE=30
-ENCRYPTION_KEY={{ENCRYPTION_KEY}}
 JWT_SECRET={{JWT_SECRET}}
 SESSION_SECRET_KEY={{SESSION_SECRET_KEY}}
 
