@@ -1,4 +1,4 @@
-# 🚀 LowCodeAPI — Local Setup Guide
+# 🚀 LowCodeAPI — Local Setup
 
 How to Run LowCodeAPI on Your Local Machine
 
@@ -9,7 +9,7 @@ How to Run LowCodeAPI on Your Local Machine
 Make sure you have:
 
 - Node.js **18+**
-- **npm** or **yarn**
+- **npm** 
 - **Docker** & **Docker Compose**
 - **MySQL client** (`mysql` CLI)
 
@@ -32,15 +32,23 @@ docker compose -f docker-compose.dev.yml up
 
 ### 3️⃣ Install dependencies
 ```bash
-cd ../server && npm install
-cd ../ui && yarn  # or npm install
+npm installl
 ```
 
-### 4️⃣ Import the seed database
+### 4️⃣ Import the database
 ```bash
-# From server/sql folder
+# From setup/sql folder
 mysql -h 127.0.0.1 -P 3306 -u lowcodeapi -p lowcodeapi < seed-tables.sql
 ```
+
+## 👤 Create a Login User
+```bash
+cd server
+EMAIL=you@example.com PASSWORD=your_password npm run create
+```
+For login.
+
+---
 
 ### 5️⃣ Create .env files (server & UI)
 
@@ -57,28 +65,15 @@ npm run env
 ### 6️⃣ Run both server & UI together
 ```bash
 # Start the server
-cd server
-npm run dev
-
-# In a new terminal, start the UI
-cd ui
-npm run dev
+npm run server/dev
+# Start the UI
+npm run web/dev
 ```
 
 Now open your browser:
 
 - **App UI →** [http://localhost:3000](http://localhost:3000)  
 - **Login Page →** [http://localhost:3000/login](http://localhost:3000/login)
-
----
-
-## 👤 Create a Login User
-```bash
-cd server
-EMAIL=you@example.com PASSWORD=your_password npm run create
-```
-Refresh the server folder (npm run dev).
-Then log in using your new credentials.
 
 ---
 
