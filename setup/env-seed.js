@@ -60,6 +60,7 @@ GOOGLE_CLIENT_SECRET=
 const envTemplateUI = `
 DATA_ENDPOINT=http://localhost:3456 # Only required for development instance
 APP_URL=http://localhost:3456
+API_URL=http://localhost:3456
 NAME=LowCodeAPI
 
 # Generated on ${moment().format('YYYY-MM-DD HH:mm:ss')}
@@ -73,14 +74,14 @@ const prepare = async () => {
     fs.cpSync('.env', `.env.bkp-${moment().format('YYYY-MM-DD-HH-mm-ss')}`);
     fs.rmSync('.env');
   } catch (e) {
-    console.log('.env not found, ignoring');
+    console.log('Server .env not found, ignoring');
   }
 
   try {
-    fs.cpSync(path.resolve('../', 'ui', '.env'), path.resolve('../', 'ui', `.env.bkp-${moment().format('YYYY-MM-DD-HH-mm-ss')}`));
-    fs.rmSync(path.resolve('../', 'ui', '.env'));
+    fs.cpSync(path.resolve('ui', '.env'), path.resolve('ui', `.env.bkp-${moment().format('YYYY-MM-DD-HH-mm-ss')}`));
+    fs.rmSync(path.resolve('ui', '.env'));
   } catch (e) {
-    console.log('.env not found, ignoring');
+    console.log('Nextjs .env not found, ignoring');
   }
 
   const {
@@ -101,7 +102,7 @@ const prepare = async () => {
   fs.writeFileSync('.env', envFile, 'utf8');
 
   const envFileUI = lodash.template(envTemplateUI)({});
-  fs.writeFileSync(path.resolve('../', 'ui', '.env'), envFileUI, 'utf8');
+  fs.writeFileSync(path.resolve('ui', '.env'), envFileUI, 'utf8');
 };
 
 (async () => {

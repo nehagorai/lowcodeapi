@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 import Highlight from 'react-highlight'
 import Clipbaord from '../Clipbaord';
-import('../../node_modules/highlight.js/styles/vs2015.css');
+import('../../../node_modules/highlight.js/styles/vs2015.css');
 
 export default function GeneratorSnippet({ language, codeMap, query, onLanguageSelect, readOnly= false }) {
     const languages = Object.keys(codeMap);

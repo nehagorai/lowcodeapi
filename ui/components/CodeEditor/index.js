@@ -2,8 +2,8 @@ import dynamic from 'next/dynamic';
 
 //This is I figured out, after I added async block it worked otherwise it was not working.
 const CodeMirror = dynamic(async () => {
-    import('../../node_modules/codemirror/lib/codemirror.css'),
-    import('../../node_modules/codemirror/theme/nord.css'),
+    import('../../../node_modules/codemirror/lib/codemirror.css'),
+    import('../../../node_modules/codemirror/theme/nord.css'),
     import('codemirror/mode/shell/shell'),
     import('codemirror/mode/go/go'),
     import('codemirror/mode/php/php'),
