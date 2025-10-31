@@ -32,7 +32,7 @@ docker compose -f docker-compose.dev.yml up
 
 ### 3️⃣ Install dependencies
 ```bash
-npm installl
+npm install
 ```
 
 ### 4️⃣ Import the database
@@ -43,7 +43,6 @@ mysql -h 127.0.0.1 -P 3306 -u lowcodeapi -p lowcodeapi < seed-tables.sql
 
 ## 👤 Create a Login User
 ```bash
-cd server
 EMAIL=you@example.com PASSWORD=your_password npm run create
 ```
 For login.
