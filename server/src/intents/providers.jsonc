@@ -1,0 +1,2130 @@
+// [
+//     {
+//       "id": "crelate",
+//       "name": "Crelate",
+//       "description": "",
+//       "logo_url": "crelate.svg",
+//       "auth_type": "TOKEN",
+//       "auth": {
+//         "header": {
+//           "authKey": "api_key",
+//           "headerName": "X-Api-Key",
+//           "headerValue": ""
+//         }
+//       },
+//       "auth_config": [
+//         {
+//           "name": "api_key",
+//           "type": "input",
+//           "field": "input",
+//           "label": "API Key",
+//           "message": "This API key will be used for accessing APIs.",
+//           "required": true,
+//           "className": "",
+//           "placeholder": ""
+//         }
+//       ],
+//       "headers": {},
+//       "api_endpoint": "https://app.crelate.com",
+//       "released": 1,
+//       "updated_at": "2024-12-22T07:17:15.000Z",
+//       "website": "https://www.crelate.com/",
+//       "api_link_ref": "https://app.crelate.com/api3/docs/index.html",
+//       "total_api": 4,
+//       "credential_link": ""
+//     },
+//     {
+//       "id": "oneai",
+//       "name": "One AI",
+//       "description": "OneAI transforms websites into intelligent platforms with custom GPT agents, designed to engage and understand visitors in real-time. Our solution seamlessly integrates into any website, providing personalized interactions based on content directly from your site. With easy embedding, advanced analytics, and a customizable interface, OneAI not only enhances user experience but also drives engagement and sales. Elevate your digital presence with a GPT agent that's always in sync with your business needs.",
+//       "logo_url": "oneai.svg",
+//       "auth_type": "TOKEN",
+//       "auth": {},
+//       "auth_config": {},
+//       "headers": {},
+//       "api_endpoint": "https://api.oneai.com",
+//       "released": 1,
+//       "updated_at": "2025-01-04T04:26:20.000Z",
+//       "website": "https://oneai.com/",
+//       "api_link_ref": "https://docs.oneai.com/reference/create_agent_v1_create_post",
+//       "total_api": 25,
+//       "credential_link": ""
+//     },
+//     {
+//       "id": "voicegainai",
+//       "name": "VoiceGain AI",
+//       "description": "",
+//       "logo_url": "voicegainai.svg",
+//       "auth_type": "TOKEN",
+//       "auth": {},
+//       "auth_config": {},
+//       "headers": {},
+//       "api_endpoint": "https://api.voicegain.ai",
+//       "released": 1,
+//       "updated_at": "2025-01-04T04:26:20.000Z",
+//       "website": "https://www.voicegain.ai/",
+//       "api_link_ref": "https://console.voicegain.ai/api/v1/index.html#tag/transcribe",
+//       "total_api": 26,
+//       "credential_link": ""
+//     },
+//     ,
+//   {
+//     "id": "zohoanalytics",
+//     "name": "Zoho Analytics",
+//     "description": "",
+//     "logo_url": "zohoanalytics.svg",
+//     "auth_type": "OAUTH2.0",
+//     "auth": {
+//       "header": {
+//         "authKey": "accessToken",
+//         "headerName": "Authorization",
+//         "headerValue": "Zoho-oauthtoken"
+//       }
+//     },
+//     "auth_config": {
+//       "setup": [
+//         {
+//           "name": "auth_endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Auth Region",
+//           "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://accounts.zoho.in"
+//         },
+//         {
+//           "name": "endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Region",
+//           "message": "Enter Zoho Region, https://analyticsapi.zoho.in, https://analyticsapi.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://analyticsapi.zoho.in"
+//         },
+//         {
+//           "name": "client_id",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client ID",
+//           "message": "Zoho Analytics's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Analytics's OAuth2.0 Client ID"
+//         },
+//         {
+//           "name": "client_secret",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client Secret",
+//           "message": "Zoho Analytics's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Analytics's OAuth2.0 Client Secret"
+//         },
+//         {
+//           "name": "selected_scopes",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Scopes",
+//           "message": "Add comma seperated scopes for accessing Zoho Analytics's api endpoints",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Analytics's OAuth2.0 Scopes"
+//         }
+//       ],
+//       "auth_link": "/auth/zohoanalytics"
+//     },
+//     "headers": {},
+//     "api_endpoint": "{endpoint}",
+//     "released": 1,
+//     "updated_at": "2024-12-22T10:29:10.000Z",
+//     "website": "https://www.zoho.com/analytics",
+//     "api_link_ref": "https://www.zoho.com/analytics/api/v2/introduction.html",
+//     "total_api": 121,
+//     "credential_link": "https://accounts.zoho.com/developerconsole"
+//   },
+//   {
+//     "id": "zohoassist",
+//     "name": "Zoho Assist",
+//     "description": "",
+//     "logo_url": "zohoassist.svg",
+//     "auth_type": "OAUTH2.0",
+//     "auth": {
+//       "header": {
+//         "authKey": "accessToken",
+//         "headerName": "Authorization",
+//         "headerValue": "Zoho-oauthtoken"
+//       }
+//     },
+//     "auth_config": {
+//       "setup": [
+//         {
+//           "name": "auth_endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Auth Region",
+//           "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://accounts.zoho.in"
+//         },
+//         {
+//           "name": "endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Region",
+//           "message": "Enter Zoho Region, https://assist.zoho.in, https://assist.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://assist.zoho.in"
+//         },
+//         {
+//           "name": "client_id",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client ID",
+//           "message": "Zoho Assist's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Assist's OAuth2.0 Client ID"
+//         },
+//         {
+//           "name": "client_secret",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client Secret",
+//           "message": "Zoho Assist's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Assist's OAuth2.0 Client Secret"
+//         },
+//         {
+//           "name": "selected_scopes",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Scopes",
+//           "message": "Add comma seperated scopes for accessing Zoho Assist's api endpoints",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Assist's OAuth2.0 Scopes"
+//         }
+//       ],
+//       "auth_link": "/auth/zohoassist"
+//     },
+//     "headers": {},
+//     "api_endpoint": "{endpoint}",
+//     "released": 1,
+//     "updated_at": "2024-12-22T10:26:04.000Z",
+//     "website": "https://www.zoho.com/assist",
+//     "api_link_ref": "https://www.zoho.com/assist/api/introduction.html",
+//     "total_api": 13,
+//     "credential_link": "https://accounts.zoho.com/developerconsole"
+//   },
+//   {
+//     "id": "zohobookings",
+//     "name": "Zoho Bookings",
+//     "description": "",
+//     "logo_url": "zohobookings.svg",
+//     "auth_type": "OAUTH2.0",
+//     "auth": {
+//       "header": {
+//         "authKey": "accessToken",
+//         "headerName": "Authorization",
+//         "headerValue": "Zoho-oauthtoken"
+//       }
+//     },
+//     "auth_config": {
+//       "setup": [
+//         {
+//           "name": "auth_endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Auth Region",
+//           "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://accounts.zoho.in"
+//         },
+//         {
+//           "name": "endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Region",
+//           "message": "Enter Zoho Region, https://www.zohoapis.in, https://www.zohoapis.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://www.zohoapis.in"
+//         },
+//         {
+//           "name": "client_id",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client ID",
+//           "message": "Zoho Bookings's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Bookings's OAuth2.0 Client ID"
+//         },
+//         {
+//           "name": "client_secret",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client Secret",
+//           "message": "Zoho Bookings's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Bookings's OAuth2.0 Client Secret"
+//         },
+//         {
+//           "name": "selected_scopes",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Scopes",
+//           "message": "Add comma seperated scopes for accessing Zoho Bookings's api endpoints",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Bookings's OAuth2.0 Scopes"
+//         }
+//       ],
+//       "auth_link": "/auth/zohobookings"
+//     },
+//     "headers": {},
+//     "api_endpoint": "{endpoint}",
+//     "released": 1,
+//     "updated_at": "2024-12-22T10:23:31.000Z",
+//     "website": "https://www.zoho.com/bookings",
+//     "api_link_ref": "https://www.zoho.com/bookings/help/api/v1/generate-accesstoken.html",
+//     "total_api": 10,
+//     "credential_link": "https://accounts.zoho.com/developerconsole"
+//   },
+//   {
+//     "id": "zohobugtracker",
+//     "name": "Zoho Bug Tracker",
+//     "description": "",
+//     "logo_url": "zohobugtracker.svg",
+//     "auth_type": "OAUTH2.0",
+//     "auth": {
+//       "header": {
+//         "authKey": "accessToken",
+//         "headerName": "Authorization",
+//         "headerValue": "Zoho-oauthtoken"
+//       }
+//     },
+//     "auth_config": {
+//       "setup": [
+//         {
+//           "name": "auth_endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Auth Region",
+//           "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://accounts.zoho.in"
+//         },
+//         {
+//           "name": "endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Region",
+//           "message": "Enter Zoho Region, https://projectsapi.zoho.com, https://projectsapi.zoho.in, accounts.zoho.eu,accounts.zoho.com.au, accounts.zoho.com.cn, accounts.zoho.jp",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://projectsapi.zoho.in"
+//         },
+//         {
+//           "name": "client_id",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client ID",
+//           "message": "Zoho Bug Tracker's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Bug Tracker's OAuth2.0 Client ID"
+//         },
+//         {
+//           "name": "client_secret",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client Secret",
+//           "message": "Zoho Bug Tracker's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Bug Tracker's OAuth2.0 Client Secret"
+//         },
+//         {
+//           "name": "selected_scopes",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Scopes",
+//           "message": "Add comma seperated scopes for accessing Zoho Bug Tracker's api endpoints",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Bug Tracker's OAuth2.0 Scopes"
+//         }
+//       ],
+//       "auth_link": "/auth/zohobugtracker"
+//     },
+//     "headers": {},
+//     "api_endpoint": "{endpoint}",
+//     "released": 1,
+//     "updated_at": "2024-12-22T10:16:52.000Z",
+//     "website": "https://www.zoho.com/bugtracker",
+//     "api_link_ref": "https://www.zoho.com/projects/help/rest-api/bugtracker-portal-api.html",
+//     "total_api": 84,
+//     "credential_link": "https://accounts.zoho.com/developerconsole"
+//   },
+//   {
+//     "id": "zohocalendar",
+//     "name": "Zoho Calendar",
+//     "description": "",
+//     "logo_url": "zohocalendar.svg",
+//     "auth_type": "OAUTH2.0",
+//     "auth": {
+//       "header": {
+//         "authKey": "accessToken",
+//         "headerName": "Authorization",
+//         "headerValue": "Zoho-oauthtoken"
+//       }
+//     },
+//     "auth_config": {
+//       "setup": [
+//         {
+//           "name": "auth_endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Auth Region",
+//           "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://accounts.zoho.in"
+//         },
+//         {
+//           "name": "endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Region",
+//           "message": "Enter Zoho Region, https://calendar.zoho.com, https://calendar.zoho.in",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://calendar.zoho.in"
+//         },
+//         {
+//           "name": "client_id",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client ID",
+//           "message": "zohocalendar's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter zohocalendar's OAuth2.0 Client ID"
+//         },
+//         {
+//           "name": "client_secret",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client Secret",
+//           "message": "zohocalendar's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter zohocalendar's OAuth2.0 Client Secret"
+//         },
+//         {
+//           "name": "selected_scopes",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Scopes",
+//           "message": "Add comma seperated scopes for accessing zohocalendar's api endpoints",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter zohocalendar's OAuth2.0 Scopes"
+//         }
+//       ],
+//       "auth_link": "/auth/zohocalendar"
+//     },
+//     "headers": {},
+//     "api_endpoint": "{endpoint}",
+//     "released": 1,
+//     "updated_at": "2024-12-22T10:13:07.000Z",
+//     "website": "https://www.zoho.com/calendar",
+//     "api_link_ref": "https://www.zoho.com/calendar/help/api/introduction.html",
+//     "total_api": 28,
+//     "credential_link": " https://accounts.zoho.com/developerconsole"
+//   },
+//   {
+//     "id": "zohocampaigns",
+//     "name": "Zoho Campaigns",
+//     "description": "",
+//     "logo_url": "zohocampaigns.svg",
+//     "auth_type": "OAUTH2.0",
+//     "auth": {
+//       "header": {
+//         "authKey": "accessToken",
+//         "headerName": "Authorization",
+//         "headerValue": "Zoho-oauthtoken"
+//       }
+//     },
+//     "auth_config": {
+//       "setup": [
+//         {
+//           "name": "auth_endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Auth Region",
+//           "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://accounts.zoho.in"
+//         },
+//         {
+//           "name": "endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Region",
+//           "message": "Enter Zoho Region, https://campaigns.zoho.in, https://campaigns.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://campaigns.zoho.in"
+//         },
+//         {
+//           "name": "client_id",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client ID",
+//           "message": "Zoho Campaigns's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Campaigns's OAuth2.0 Client ID"
+//         },
+//         {
+//           "name": "client_secret",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client Secret",
+//           "message": "Zoho Campaigns's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Campaigns's OAuth2.0 Client Secret"
+//         },
+//         {
+//           "name": "selected_scopes",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Scopes",
+//           "message": "Add comma seperated scopes for accessing Zoho Campaigns's api endpoints",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Campaigns's OAuth2.0 Scopes"
+//         }
+//       ],
+//       "auth_link": "/auth/zohocampaigns"
+//     },
+//     "headers": {},
+//     "api_endpoint": "{endpoint}",
+//     "released": 1,
+//     "updated_at": "2024-12-22T10:11:26.000Z",
+//     "website": "https://www.zoho.com/campaigns",
+//     "api_link_ref": "https://www.zoho.com/campaigns/help/developers/",
+//     "total_api": 33,
+//     "credential_link": "https://accounts.zoho.com/developerconsole"
+//   },
+//   {
+//     "id": "zohocommerce",
+//     "name": "Zoho Commerce",
+//     "description": "",
+//     "logo_url": "zohocommerce.svg",
+//     "auth_type": "OAUTH2.0",
+//     "auth": {
+//       "header": {
+//         "authKey": "accessToken",
+//         "headerName": "Authorization",
+//         "headerValue": "Zoho-oauthtoken"
+//       }
+//     },
+//     "auth_config": {
+//       "setup": [
+//         {
+//           "name": "auth_endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Auth Region",
+//           "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://accounts.zoho.in"
+//         },
+//         {
+//           "name": "endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Region",
+//           "message": "Enter Zoho Region, https://commerce.zoho.in, https://commerce.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://commerce.zoho.in"
+//         },
+//         {
+//           "name": "client_id",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client ID",
+//           "message": "Zoho Commerce's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Commerce's OAuth2.0 Client ID"
+//         },
+//         {
+//           "name": "client_secret",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client Secret",
+//           "message": "Zoho Commerce's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Commerce's OAuth2.0 Client Secret"
+//         },
+//         {
+//           "name": "selected_scopes",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Scopes",
+//           "message": "Add comma seperated scopes for accessing Zoho Commerce's api endpoints",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Commerce's OAuth2.0 Scopes"
+//         }
+//       ],
+//       "auth_link": "/auth/zohocommerce"
+//     },
+//     "headers": {},
+//     "api_endpoint": "{endpoint}",
+//     "released": 1,
+//     "updated_at": "2024-12-22T10:09:25.000Z",
+//     "website": "https://www.zoho.com/commerce",
+//     "api_link_ref": "https://www.zoho.com/commerce/api/introduction.html",
+//     "total_api": 78,
+//     "credential_link": "https://accounts.zoho.com/developerconsole"
+//   },
+//   {
+//     "id": "zohoconnect",
+//     "name": "Zoho Connect",
+//     "description": "",
+//     "logo_url": "zohoconnect.svg",
+//     "auth_type": "OAUTH2.0",
+//     "auth": {
+//       "header": {
+//         "authKey": "accessToken",
+//         "headerName": "Authorization",
+//         "headerValue": "Zoho-oauthtoken"
+//       }
+//     },
+//     "auth_config": {
+//       "setup": [
+//         {
+//           "name": "auth_endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Auth Region",
+//           "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://accounts.zoho.in"
+//         },
+//         {
+//           "name": "endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Region",
+//           "message": "Enter Zoho Region, https://connect.zoho.in, https://connect.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://connect.zoho.in"
+//         },
+//         {
+//           "name": "client_id",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client ID",
+//           "message": "Zoho Connect's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Connect's OAuth2.0 Client ID"
+//         },
+//         {
+//           "name": "client_secret",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client Secret",
+//           "message": "Zoho Connect's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Connect's OAuth2.0 Client Secret"
+//         },
+//         {
+//           "name": "selected_scopes",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Scopes",
+//           "message": "Add comma seperated scopes for accessing Zoho Connect's api endpoints",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Connect's OAuth2.0 Scopes"
+//         }
+//       ],
+//       "auth_link": "/auth/zohoconnect"
+//     },
+//     "headers": {},
+//     "api_endpoint": "{endpoint}",
+//     "released": 1,
+//     "updated_at": "2024-12-22T10:08:04.000Z",
+//     "website": "https://www.zoho.com/connect",
+//     "api_link_ref": "https://www.zoho.com/connect/api/intro.html",
+//     "total_api": 61,
+//     "credential_link": "https://accounts.zoho.com/developerconsole"
+//   },
+//   {
+//     "id": "zohocontracts",
+//     "name": "Zoho Contracts",
+//     "description": "",
+//     "logo_url": "zohocontracts.svg",
+//     "auth_type": "OAUTH2.0",
+//     "auth": {
+//       "header": {
+//         "authKey": "accessToken",
+//         "headerName": "Authorization",
+//         "headerValue": "Zoho-oauthtoken"
+//       }
+//     },
+//     "auth_config": {
+//       "setup": [
+//         {
+//           "name": "auth_endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Auth Region",
+//           "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://accounts.zoho.in"
+//         },
+//         {
+//           "name": "endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Region",
+//           "message": "Enter Zoho Region, https://contracts.zoho.in, https://contracts.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://contracts.zoho.in"
+//         },
+//         {
+//           "name": "client_id",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client ID",
+//           "message": "Zoho Contracts's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Contracts's OAuth2.0 Client ID"
+//         },
+//         {
+//           "name": "client_secret",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client Secret",
+//           "message": "Zoho Contracts's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Contracts's OAuth2.0 Client Secret"
+//         },
+//         {
+//           "name": "selected_scopes",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Scopes",
+//           "message": "Add comma seperated scopes for accessing Zoho Contracts's api endpoints",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Contracts's OAuth2.0 Scopes"
+//         }
+//       ],
+//       "auth_link": "/auth/zohocontracts"
+//     },
+//     "headers": {},
+//     "api_endpoint": "{endpoint}",
+//     "released": 1,
+//     "updated_at": "2024-12-22T10:05:32.000Z",
+//     "website": "https://www.zoho.com/contract",
+//     "api_link_ref": "https://www.zoho.com/contracts/api/introduction.html",
+//     "total_api": 58,
+//     "credential_link": "https://accounts.zoho.com/developerconsole"
+//   },
+//   {
+//     "id": "zohocrm",
+//     "name": "Zoho CRM",
+//     "description": "",
+//     "logo_url": "zohocrm.svg",
+//     "auth_type": "OAUTH2.0",
+//     "auth": {
+//       "header": {
+//         "authKey": "accessToken",
+//         "headerName": "Authorization",
+//         "headerValue": "Zoho-oauthtoken"
+//       }
+//     },
+//     "auth_config": {
+//       "setup": [
+//         {
+//           "name": "auth_endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Auth Region",
+//           "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://accounts.zoho.in"
+//         },
+//         {
+//           "name": "endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Region",
+//           "message": "Enter Zoho Region, https://www.zohoapis.in, https://www.zohoapis.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://www.zohoapis.in"
+//         },
+//         {
+//           "name": "client_id",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client ID",
+//           "message": "Zoho CRM's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho CRM's OAuth2.0 Client ID"
+//         },
+//         {
+//           "name": "client_secret",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client Secret",
+//           "message": "Zoho CRM's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho CRM's OAuth2.0 Client Secret"
+//         },
+//         {
+//           "name": "selected_scopes",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Scopes",
+//           "message": "Add comma seperated scopes for accessing Zoho CRM's api endpoints",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho CRM's OAuth2.0 Scopes"
+//         }
+//       ],
+//       "auth_link": "/auth/zohocrm"
+//     },
+//     "headers": {},
+//     "api_endpoint": "{endpoint}",
+//     "released": 1,
+//     "updated_at": "2024-12-22T10:05:45.000Z",
+//     "website": "https://www.zoho.com/crm",
+//     "api_link_ref": "https://www.zoho.com/crm/developer/docs/api/v6/",
+//     "total_api": 4,
+//     "credential_link": "https://accounts.zoho.com/developerconsole"
+//   },
+//   {
+//     "id": "zohoexpense",
+//     "name": "Zoho Expense",
+//     "description": "",
+//     "logo_url": "zohoexpense.svg",
+//     "auth_type": "OAUTH2.0",
+//     "auth": {
+//       "header": {
+//         "authKey": "accessToken",
+//         "headerName": "Authorization",
+//         "headerValue": "Zoho-oauthtoken"
+//       }
+//     },
+//     "auth_config": {
+//       "setup": [
+//         {
+//           "name": "auth_endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Auth Region",
+//           "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://accounts.zoho.in"
+//         },
+//         {
+//           "name": "endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Region",
+//           "message": "Enter Zoho Region, https://www.zohoapis.in, https://www.zohoapis.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://www.zohoapis.in"
+//         },
+//         {
+//           "name": "client_id",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client ID",
+//           "message": "Zoho Expense's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Expense's OAuth2.0 Client ID"
+//         },
+//         {
+//           "name": "client_secret",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client Secret",
+//           "message": "Zoho Expense's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Expense's OAuth2.0 Client Secret"
+//         },
+//         {
+//           "name": "selected_scopes",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Scopes",
+//           "message": "Add comma seperated scopes for accessing Zoho Expense's api endpoints",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Expense's OAuth2.0 Scopes"
+//         }
+//       ],
+//       "auth_link": "/auth/zohoexpense"
+//     },
+//     "headers": {},
+//     "api_endpoint": "{endpoint}",
+//     "released": 1,
+//     "updated_at": "2025-03-12T03:19:32.000Z",
+//     "website": "https://www.zoho.com/in/expense",
+//     "api_link_ref": "https://www.zoho.com/expense/api/v1/introduction",
+//     "total_api": 59,
+//     "credential_link": "https://accounts.zoho.com/developerconsole"
+//   },
+//   {
+//     "id": "zohofsm",
+//     "name": "Zoho FSM",
+//     "description": "",
+//     "logo_url": "zohofsm.svg",
+//     "auth_type": "OAUTH2.0",
+//     "auth": {
+//       "header": {
+//         "authKey": "accessToken",
+//         "headerName": "Authorization",
+//         "headerValue": "Zoho-oauthtoken"
+//       }
+//     },
+//     "auth_config": {
+//       "setup": [
+//         {
+//           "name": "auth_endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Auth Region",
+//           "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://accounts.zoho.in"
+//         },
+//         {
+//           "name": "endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Region",
+//           "message": "Enter Zoho Region, https://fsm.zoho.in, https://fsm.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://fsm.zoho.in"
+//         },
+//         {
+//           "name": "client_id",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client ID",
+//           "message": "Zoho FSM's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho FSM's OAuth2.0 Client ID"
+//         },
+//         {
+//           "name": "client_secret",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client Secret",
+//           "message": "Zoho FSM's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho FSM's OAuth2.0 Client Secret"
+//         },
+//         {
+//           "name": "selected_scopes",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Scopes",
+//           "message": "Add comma seperated scopes for accessing Zoho FSM's api endpoints",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho FSM's OAuth2.0 Scopes"
+//         }
+//       ],
+//       "auth_link": "/auth/zohofsm"
+//     },
+//     "headers": {},
+//     "api_endpoint": "{endpoint}",
+//     "released": 1,
+//     "updated_at": "2024-12-22T09:54:14.000Z",
+//     "website": "https://www.zoho.com/fsm",
+//     "api_link_ref": "https://www.zoho.com/fsm/developer/help/api",
+//     "total_api": 72,
+//     "credential_link": "https://accounts.zoho.com/developerconsole"
+//   },
+//   {
+//     "id": "zohoinventory",
+//     "name": "Zoho Inventory",
+//     "description": "",
+//     "logo_url": "zohoinventory.svg",
+//     "auth_type": "OAUTH2.0",
+//     "auth": {
+//       "header": {
+//         "authKey": "accessToken",
+//         "headerName": "Authorization",
+//         "headerValue": "Zoho-oauthtoken"
+//       }
+//     },
+//     "auth_config": {
+//       "setup": [
+//         {
+//           "name": "auth_endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Auth Region",
+//           "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://accounts.zoho.in"
+//         },
+//         {
+//           "name": "endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Region",
+//           "message": "Enter Zoho Region, https://www.zohoapis.in, https://www.zohoapis.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://www.zohoapis.in"
+//         },
+//         {
+//           "name": "client_id",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client ID",
+//           "message": "Zoho Inventory's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Inventory's OAuth2.0 Client ID"
+//         },
+//         {
+//           "name": "client_secret",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client Secret",
+//           "message": "Zoho Inventory's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Inventory's OAuth2.0 Client Secret"
+//         },
+//         {
+//           "name": "selected_scopes",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Scopes",
+//           "message": "Add comma seperated scopes for accessing Zoho Inventory's api endpoints",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Inventory's OAuth2.0 Scopes"
+//         }
+//       ],
+//       "auth_link": "/auth/zohoinventory"
+//     },
+//     "headers": {},
+//     "api_endpoint": "{endpoint}",
+//     "released": 1,
+//     "updated_at": "2024-12-22T09:52:29.000Z",
+//     "website": "https://www.zoho.com/in/inventory",
+//     "api_link_ref": "https://www.zoho.com/inventory/api/v1",
+//     "total_api": 263,
+//     "credential_link": "https://accounts.zoho.com/developerconsole"
+//   },
+//   {
+//     "id": "zohoinvoice",
+//     "name": "Zoho Invoice",
+//     "description": "",
+//     "logo_url": "zohoinvoice.svg",
+//     "auth_type": "",
+//     "auth": {
+//       "header": {
+//         "authKey": "accessToken",
+//         "headerName": "Authorization",
+//         "headerValue": "Zoho-oauthtoken"
+//       }
+//     },
+//     "auth_config": {},
+//     "headers": {},
+//     "api_endpoint": "{endpoint}",
+//     "released": 1,
+//     "updated_at": "2024-12-22T09:49:50.000Z",
+//     "website": "https://www.zoho.com/invoice",
+//     "api_link_ref": "https://www.zoho.com/invoice/api/v3/introduction",
+//     "total_api": 258,
+//     "credential_link": "https://accounts.zoho.com/developerconsole"
+//   },
+//   {
+//     "id": "zoholens",
+//     "name": "Zoho Lens",
+//     "description": "",
+//     "logo_url": "zoholens.svg",
+//     "auth_type": "OAUTH2.0",
+//     "auth": {
+//       "header": {
+//         "authKey": "accessToken",
+//         "headerName": "Authorization",
+//         "headerValue": "Zoho-oauthtoken"
+//       }
+//     },
+//     "auth_config": {
+//       "setup": [
+//         {
+//           "name": "auth_endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Auth Region",
+//           "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://accounts.zoho.in"
+//         },
+//         {
+//           "name": "endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Region",
+//           "message": "Enter Zoho Region, https://lens.zoho.in, https://lens.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://lens.zoho.in"
+//         },
+//         {
+//           "name": "client_id",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client ID",
+//           "message": "zoholens's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter zoholens's OAuth2.0 Client ID"
+//         },
+//         {
+//           "name": "client_secret",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client Secret",
+//           "message": "zoholens's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter zoholens's OAuth2.0 Client Secret"
+//         },
+//         {
+//           "name": "selected_scopes",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Scopes",
+//           "message": "Add comma seperated scopes for accessing zoholens's api endpoints",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter zoholens's OAuth2.0 Scopes"
+//         }
+//       ],
+//       "auth_link": "/auth/zoholens"
+//     },
+//     "headers": {},
+//     "api_endpoint": "{endpoint}",
+//     "released": 1,
+//     "updated_at": "2024-12-22T09:47:07.000Z",
+//     "website": "https://www.zoho.com/lens",
+//     "api_link_ref": "https://www.zoho.com/lens/resources/api/introduction.html",
+//     "total_api": 2,
+//     "credential_link": "https://accounts.zoho.com/developerconsole"
+//   },
+//   {
+//     "id": "zohomail",
+//     "name": "Zoho Mail",
+//     "description": "",
+//     "logo_url": "zohomail.svg",
+//     "auth_type": "OAUTH2.0",
+//     "auth": {
+//       "header": {
+//         "authKey": "accessToken",
+//         "headerName": "Authorization",
+//         "headerValue": "Zoho-oauthtoken"
+//       }
+//     },
+//     "auth_config": {
+//       "setup": [
+//         {
+//           "name": "auth_endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Auth Region",
+//           "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://accounts.zoho.in"
+//         },
+//         {
+//           "name": "endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Region",
+//           "message": "Enter Zoho Region, https://mail.zoho.com, https://mail.zoho.in ",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://mail.zoho.in"
+//         },
+//         {
+//           "name": "client_id",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client ID",
+//           "message": "Zoho Mail's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Mail's OAuth2.0 Client ID"
+//         },
+//         {
+//           "name": "client_secret",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client Secret",
+//           "message": "Zoho Mail's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Mail's OAuth2.0 Client Secret"
+//         },
+//         {
+//           "name": "selected_scopes",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Scopes",
+//           "message": "Add comma seperated scopes for accessing Zoho Mail's api endpoints",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Mail's OAuth2.0 Scopes"
+//         }
+//       ],
+//       "auth_link": "/auth/zohomail"
+//     },
+//     "headers": {},
+//     "api_endpoint": "{endpoint}",
+//     "released": 1,
+//     "updated_at": "2024-12-22T09:43:35.000Z",
+//     "website": "https://www.zoho.com/mail",
+//     "api_link_ref": "https://www.zoho.com/mail/help/api/overview.html",
+//     "total_api": 133,
+//     "credential_link": "https://accounts.zoho.com/developerconsole"
+//   },
+//   {
+//     "id": "zohomarketing",
+//     "name": "Zoho Marketing ",
+//     "description": "",
+//     "logo_url": "zohomarketing.svg",
+//     "auth_type": "OAUTH2.0",
+//     "auth": {
+//       "header": {
+//         "authKey": "accessToken",
+//         "headerName": "Authorization",
+//         "headerValue": "Zoho-oauthtoken"
+//       }
+//     },
+//     "auth_config": {
+//       "setup": [
+//         {
+//           "name": "auth_endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Auth Region",
+//           "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://accounts.zoho.in"
+//         },
+//         {
+//           "name": "endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Region",
+//           "message": "Enter Zoho Region, https://marketingautomation.zoho.in, https://marketingautomation.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://marketingautomation.zoho.in"
+//         },
+//         {
+//           "name": "client_id",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client ID",
+//           "message": "Zoho Marketing 's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Marketing 's OAuth2.0 Client ID"
+//         },
+//         {
+//           "name": "client_secret",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client Secret",
+//           "message": "Zoho Marketing 's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Marketing 's OAuth2.0 Client Secret"
+//         },
+//         {
+//           "name": "selected_scopes",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Scopes",
+//           "message": "Add comma seperated scopes for accessing Zoho Marketing 's api endpoints",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Marketing 's OAuth2.0 Scopes"
+//         }
+//       ],
+//       "auth_link": "/auth/zohomarketing"
+//     },
+//     "headers": {},
+//     "api_endpoint": "https://marketingautomation.zoho.in",
+//     "released": 1,
+//     "updated_at": "2024-12-22T09:39:28.000Z",
+//     "website": "https://www.zoho.com/marketingplus",
+//     "api_link_ref": "https://www.zoho.com/marketingautomation/help/developers/v1",
+//     "total_api": 46,
+//     "credential_link": "https://accounts.zoho.com/developerconsole"
+//   },
+//   {
+//     "id": "zohopeople",
+//     "name": "Zoho People",
+//     "description": "",
+//     "logo_url": "zohopeople.svg",
+//     "auth_type": "OAUTH2.0",
+//     "auth": {
+//       "header": {
+//         "authKey": "accessToken",
+//         "headerName": "Authorization",
+//         "headerValue": "Zoho-oauthtoken"
+//       }
+//     },
+//     "auth_config": {
+//       "setup": [
+//         {
+//           "name": "auth_endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Auth Region",
+//           "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://accounts.zoho.in"
+//         },
+//         {
+//           "name": "endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Region",
+//           "message": "Enter Zoho Region, https://people.zoho.in, https://people.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://people.zoho.in"
+//         },
+//         {
+//           "name": "client_id",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client ID",
+//           "message": "Zoho People's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho People's OAuth2.0 Client ID"
+//         },
+//         {
+//           "name": "client_secret",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client Secret",
+//           "message": "Zoho People's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho People's OAuth2.0 Client Secret"
+//         },
+//         {
+//           "name": "selected_scopes",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Scopes",
+//           "message": "Add comma seperated scopes for accessing Zoho People's api endpoints",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho People's OAuth2.0 Scopes"
+//         }
+//       ],
+//       "auth_link": "/auth/zohopeople"
+//     },
+//     "headers": {},
+//     "api_endpoint": "{endpoint}",
+//     "released": 1,
+//     "updated_at": "2024-12-22T09:34:36.000Z",
+//     "website": "https://www.zoho.com/people",
+//     "api_link_ref": "https://www.zoho.com/people/api/overview.html",
+//     "total_api": 189,
+//     "credential_link": "https://accounts.zoho.com/developerconsole"
+//   },
+//   {
+//     "id": "zohoprojects",
+//     "name": "Zoho Projects",
+//     "description": "",
+//     "logo_url": "zohoprojects.svg",
+//     "auth_type": "OAUTH2.0",
+//     "auth": {
+//       "header": {
+//         "authKey": "accessToken",
+//         "headerName": "Authorization",
+//         "headerValue": "Zoho-oauthtoken"
+//       }
+//     },
+//     "auth_config": {
+//       "setup": [
+//         {
+//           "name": "endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Region",
+//           "message": "Enter Zoho Region ",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://projectsapi.zoho.in"
+//         },
+//         {
+//           "name": "client_id",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client ID",
+//           "message": "zohoprojects's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter zohoprojects's OAuth2.0 Client ID"
+//         },
+//         {
+//           "name": "client_secret",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client Secret",
+//           "message": "zohoprojects's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter zohoprojects's OAuth2.0 Client Secret"
+//         },
+//         {
+//           "name": "selected_scopes",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Scopes",
+//           "message": "Add comma seperated scopes for accessing zohoprojects's api endpoints",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter zohoprojects's OAuth2.0 Scopes"
+//         }
+//       ],
+//       "auth_link": "/auth/zohoprojects"
+//     },
+//     "headers": {},
+//     "api_endpoint": "{endpoint}",
+//     "released": 1,
+//     "updated_at": "2024-12-22T09:33:04.000Z",
+//     "website": "https://www.zoho.com/projects",
+//     "api_link_ref": "https://www.zoho.com/projects/help/rest-api/zohoprojectsapi.html",
+//     "total_api": 15,
+//     "credential_link": "https://accounts.zoho.com/developerconsole"
+//   },
+//   {
+//     "id": "zohosalesiq",
+//     "name": "Zoho SalesIQ",
+//     "description": "",
+//     "logo_url": "zohosalesiq.svg",
+//     "auth_type": "OAUTH2.0",
+//     "auth": {
+//       "header": {
+//         "authKey": "accessToken",
+//         "headerName": "Authorization",
+//         "headerValue": "Zoho-oauthtoken"
+//       }
+//     },
+//     "auth_config": {
+//       "setup": [
+//         {
+//           "name": "auth_endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Auth Region",
+//           "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://accounts.zoho.in"
+//         },
+//         {
+//           "name": "endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Region",
+//           "message": "Enter Zoho Region, https://salesiq.zoho.in, https://salesiq.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://salesiq.zoho.in"
+//         },
+//         {
+//           "name": "client_id",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client ID",
+//           "message": "Zoho SalesIQ's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho SalesIQ's OAuth2.0 Client ID"
+//         },
+//         {
+//           "name": "client_secret",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client Secret",
+//           "message": "Zoho SalesIQ's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho SalesIQ's OAuth2.0 Client Secret"
+//         },
+//         {
+//           "name": "selected_scopes",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Scopes",
+//           "message": "Add comma seperated scopes for accessing Zoho SalesIQ's api endpoints",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho SalesIQ's OAuth2.0 Scopes"
+//         }
+//       ],
+//       "auth_link": "/auth/zohosalesiq"
+//     },
+//     "headers": {},
+//     "api_endpoint": "{endpoint}",
+//     "released": 1,
+//     "updated_at": "2024-12-22T09:30:25.000Z",
+//     "website": "https://www.zoho.com/salesiq",
+//     "api_link_ref": "https://www.zoho.com/salesiq/help/developer-section/rest-api-new.html",
+//     "total_api": 6,
+//     "credential_link": "https://accounts.zoho.com/developerconsole"
+//   },
+//   {
+//     "id": "zohosheet",
+//     "name": "Zoho Sheet",
+//     "description": "",
+//     "logo_url": "zohosheet.svg",
+//     "auth_type": "OAUTH2.0",
+//     "auth": {
+//       "header": {
+//         "authKey": "accessToken",
+//         "headerName": "Authorization",
+//         "headerValue": "Zoho-oauthtoken"
+//       }
+//     },
+//     "auth_config": {
+//       "setup": [
+//         {
+//           "name": "auth_endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Auth Region",
+//           "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://accounts.zoho.in"
+//         },
+//         {
+//           "name": "endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Region",
+//           "message": "Enter Zoho Region, https://sheet.zoho.in, https://sheet.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://sheet.zoho.in"
+//         },
+//         {
+//           "name": "client_id",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client ID",
+//           "message": "Zoho Sheet's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Sheet's OAuth2.0 Client ID"
+//         },
+//         {
+//           "name": "client_secret",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client Secret",
+//           "message": "Zoho Sheet's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Sheet's OAuth2.0 Client Secret"
+//         },
+//         {
+//           "name": "selected_scopes",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Scopes",
+//           "message": "Add comma seperated scopes for accessing Zoho Sheet's api endpoints",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Sheet's OAuth2.0 Scopes"
+//         }
+//       ],
+//       "auth_link": "/auth/zohosheet"
+//     },
+//     "headers": {},
+//     "api_endpoint": "{endpoint}",
+//     "released": 1,
+//     "updated_at": "2024-12-22T09:25:41.000Z",
+//     "website": "https://www.zoho.com/sheet",
+//     "api_link_ref": "https://www.zoho.com/sheet/help/api/v2/",
+//     "total_api": 11,
+//     "credential_link": "https://accounts.zoho.com/developerconsole"
+//   },
+//   {
+//     "id": "zohosign",
+//     "name": "Zoho Sign",
+//     "description": "",
+//     "logo_url": "zohosign.svg",
+//     "auth_type": "OAUTH2.0",
+//     "auth": {
+//       "header": {
+//         "authKey": "accessToken",
+//         "headerName": "Authorization",
+//         "headerValue": "Zoho-oauthtoken"
+//       }
+//     },
+//     "auth_config": {
+//       "setup": [
+//         {
+//           "name": "auth_endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Auth Region",
+//           "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://accounts.zoho.in"
+//         },
+//         {
+//           "name": "endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Region",
+//           "message": "Enter Zoho Region, https://sign.zoho.com, https://sign.zoho.in",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://sign.zoho.in"
+//         },
+//         {
+//           "name": "client_id",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client ID",
+//           "message": "Zoho Sign's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Sign's OAuth2.0 Client ID"
+//         },
+//         {
+//           "name": "client_secret",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client Secret",
+//           "message": "Zoho Sign's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Sign's OAuth2.0 Client Secret"
+//         },
+//         {
+//           "name": "selected_scopes",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Scopes",
+//           "message": "Add comma seperated scopes for accessing Zoho Sign's api endpoints",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Sign's OAuth2.0 Scopes"
+//         }
+//       ],
+//       "auth_link": "/auth/zohosign"
+//     },
+//     "headers": {},
+//     "api_endpoint": "{endpoint}",
+//     "released": 1,
+//     "updated_at": "2024-12-22T09:21:08.000Z",
+//     "website": "https://www.zoho.com/en-in/sign",
+//     "api_link_ref": "https://www.zoho.com/sign/api/",
+//     "total_api": 4,
+//     "credential_link": "https://accounts.zoho.com/developerconsole"
+//   },
+//   {
+//     "id": "zohotables",
+//     "name": "Zoho Tables",
+//     "description": "",
+//     "logo_url": "zohotables.svg",
+//     "auth_type": "OAUTH2.0",
+//     "auth": {
+//       "header": {
+//         "authKey": "accessToken",
+//         "headerName": "Authorization",
+//         "headerValue": "Zoho-oauthtoken"
+//       }
+//     },
+//     "auth_config": {
+//       "setup": [
+//         {
+//           "name": "auth_endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Auth Region",
+//           "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://accounts.zoho.in"
+//         },
+//         {
+//           "name": "endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Region",
+//           "message": "Enter Zoho Region, https://tables.zoho.in, https://tables.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://tables.zoho.in"
+//         },
+//         {
+//           "name": "client_id",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client ID",
+//           "message": "Zoho Tables's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Tables's OAuth2.0 Client ID"
+//         },
+//         {
+//           "name": "client_secret",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client Secret",
+//           "message": "Zoho Tables's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Tables's OAuth2.0 Client Secret"
+//         },
+//         {
+//           "name": "selected_scopes",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Scopes",
+//           "message": "Add comma seperated scopes for accessing Zoho Tables's api endpoints",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Tables's OAuth2.0 Scopes"
+//         }
+//       ],
+//       "auth_link": "/auth/zohotables"
+//     },
+//     "headers": {},
+//     "api_endpoint": "{endpoint}",
+//     "released": 1,
+//     "updated_at": "2024-12-22T09:16:29.000Z",
+//     "website": "https://www.zoho.com/tables",
+//     "api_link_ref": "https://tables.zoho.com/help/api/v1",
+//     "total_api": 32,
+//     "credential_link": "https://accounts.zoho.com/developerconsole"
+//   },
+//   {
+//     "id": "zohowebinar",
+//     "name": "Zoho Webinar",
+//     "description": "",
+//     "logo_url": "zohowebinar.svg",
+//     "auth_type": "OAUTH2.0",
+//     "auth": {
+//       "header": {
+//         "authKey": "accessToken",
+//         "headerName": "Authorization",
+//         "headerValue": "Zoho-oauthtoken"
+//       }
+//     },
+//     "auth_config": {
+//       "setup": [
+//         {
+//           "name": "auth_endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Auth Region",
+//           "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://accounts.zoho.in"
+//         },
+//         {
+//           "name": "endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Region",
+//           "message": "Enter Zoho Region, https://meeting.zoho.in, https://meeting.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://meeting.zoho.in"
+//         },
+//         {
+//           "name": "client_id",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client ID",
+//           "message": "Zoho Webinar's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Webinar's OAuth2.0 Client ID"
+//         },
+//         {
+//           "name": "client_secret",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client Secret",
+//           "message": "Zoho Webinar's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Webinar's OAuth2.0 Client Secret"
+//         },
+//         {
+//           "name": "selected_scopes",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Scopes",
+//           "message": "Add comma seperated scopes for accessing Zoho Webinar's api endpoints",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Webinar's OAuth2.0 Scopes"
+//         }
+//       ],
+//       "auth_link": "/auth/zohowebinar"
+//     },
+//     "headers": {},
+//     "api_endpoint": "{endpoint}",
+//     "released": 1,
+//     "updated_at": "2024-12-22T09:12:46.000Z",
+//     "website": "https://www.zoho.com/webinar",
+//     "api_link_ref": "https://www.zoho.com/meeting/api-integration/webinar-api.html",
+//     "total_api": 10,
+//     "credential_link": "https://accounts.zoho.com/developerconsole"
+//   },
+//   {
+//     "id": "zohoworkdrive",
+//     "name": "Zoho WorkDrive",
+//     "description": "",
+//     "logo_url": "zohoworkdrive.svg",
+//     "auth_type": "OAUTH2.0",
+//     "auth": {
+//       "header": {
+//         "authKey": "accessToken",
+//         "headerName": "Authorization",
+//         "headerValue": "Zoho-oauthtoken"
+//       }
+//     },
+//     "auth_config": {
+//       "setup": [
+//         {
+//           "name": "auth_endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Auth Region",
+//           "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://accounts.zoho.in"
+//         },
+//         {
+//           "name": "endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Region",
+//           "message": "Enter Zoho Region, https://www.zohoapis.in, https://www.zohoapis.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://www.zohoapis.in"
+//         },
+//         {
+//           "name": "client_id",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client ID",
+//           "message": "Zoho WorkDrive's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho WorkDrive's OAuth2.0 Client ID"
+//         },
+//         {
+//           "name": "client_secret",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client Secret",
+//           "message": "Zoho WorkDrive's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho WorkDrive's OAuth2.0 Client Secret"
+//         },
+//         {
+//           "name": "selected_scopes",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Scopes",
+//           "message": "Add comma seperated scopes for accessing Zoho WorkDrive's api endpoints",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho WorkDrive's OAuth2.0 Scopes"
+//         }
+//       ],
+//       "auth_link": "/auth/zohoworkdrive"
+//     },
+//     "headers": {},
+//     "api_endpoint": "{endpoint}",
+//     "released": 1,
+//     "updated_at": "2024-12-22T09:09:02.000Z",
+//     "website": "https://www.zoho.com/workdrive",
+//     "api_link_ref": "https://workdrive.zoho.com/apidocs/v1/overview",
+//     "total_api": 138,
+//     "credential_link": "https://accounts.zoho.com/developerconsole"
+//   },
+//   {
+//     "id": "zohoworkely",
+//     "name": "Zoho Workely",
+//     "description": "",
+//     "logo_url": "zohoworkely.svg",
+//     "auth_type": "OAUTH2.0",
+//     "auth": {
+//       "header": {
+//         "authKey": "accessToken",
+//         "headerName": "Authorization",
+//         "headerValue": "Zoho-oauthtoken"
+//       }
+//     },
+//     "auth_config": {
+//       "setup": [
+//         {
+//           "name": "auth_endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Auth Region",
+//           "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://accounts.zoho.in"
+//         },
+//         {
+//           "name": "endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Region",
+//           "message": "Enter Zoho Region, https://workerly.zoho.in, https://workerly.zoho.in",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://workerly.zoho.in"
+//         },
+//         {
+//           "name": "client_id",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client ID",
+//           "message": "Zoho Workely's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Workely's OAuth2.0 Client ID"
+//         },
+//         {
+//           "name": "client_secret",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client Secret",
+//           "message": "Zoho Workely's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Workely's OAuth2.0 Client Secret"
+//         },
+//         {
+//           "name": "selected_scopes",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Scopes",
+//           "message": "Add comma seperated scopes for accessing Zoho Workely's api endpoints",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Workely's OAuth2.0 Scopes"
+//         }
+//       ],
+//       "auth_link": "/auth/zohoworkely"
+//     },
+//     "headers": {},
+//     "api_endpoint": "{endpoint}",
+//     "released": 1,
+//     "updated_at": "2024-12-22T09:06:04.000Z",
+//     "website": "https://www.zoho.com/workerly/",
+//     "api_link_ref": "https://www.zoho.com/workerly/developer-guide/whats-new.html",
+//     "total_api": 10,
+//     "credential_link": "https://accounts.zoho.com/developerconsole"
+//   },
+//   {
+//     "id": "zohowriter",
+//     "name": "Zoho Writer",
+//     "description": "",
+//     "logo_url": "zohowriter.svg",
+//     "auth_type": "OAUTH2.0",
+//     "auth": {
+//       "header": {
+//         "authKey": "accessToken",
+//         "headerName": "Authorization",
+//         "headerValue": "Zoho-oauthtoken"
+//       }
+//     },
+//     "auth_config": {
+//       "setup": [
+//         {
+//           "name": "auth_endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Auth Region",
+//           "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://accounts.zoho.in"
+//         },
+//         {
+//           "name": "endpoint",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Zoho Region",
+//           "message": "Enter Zoho Region, https://www.zohoapis.in, https://www.zohoapis.com",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "https://www.zohoapis.com"
+//         },
+//         {
+//           "name": "client_id",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client ID",
+//           "message": "Zoho Writer's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Writer's OAuth2.0 Client ID"
+//         },
+//         {
+//           "name": "client_secret",
+//           "type": "input",
+//           "field": "input",
+//           "label": "OAuth2.0 Client Secret",
+//           "message": "Zoho Writer's OAuth2.0 Client Secret",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Writer's OAuth2.0 Client Secret"
+//         },
+//         {
+//           "name": "selected_scopes",
+//           "type": "input",
+//           "field": "input",
+//           "label": "Scopes",
+//           "message": "Add comma seperated scopes for accessing Zoho Writer's api endpoints",
+//           "required": true,
+//           "className": "",
+//           "placeholder": "Enter Zoho Writer's OAuth2.0 Scopes"
+//         }
+//       ],
+//       "auth_link": "/auth/zohowriter"
+//     },
+//     "headers": {},
+//     "api_endpoint": "{endpoint}",
+//     "released": 1,
+//     "updated_at": "2024-12-22T09:01:18.000Z",
+//     "website": "https://www.zoho.com/writer",
+//     "api_link_ref": "https://www.zoho.com/writer/help/api/v1/getting-started.html",
+//     "total_api": 42,
+//     "credential_link": "https://accounts.zoho.com/developerconsole"
+//   },
+//   {
+//     "id": "zohozeptomail",
+//     "name": "Zoho Zeptomail",
+//     "description": "",
+//     "logo_url": "zohozeptomail.svg",
+//     "auth_type": "TOKEN",
+//     "auth": {
+//       "header": {
+//         "authKey": "api_key",
+//         "headerName": "Authorization",
+//         "headerValue": "Zoho-enczapikey"
+//       }
+//     },
+//     "auth_config": [
+//       {
+//         "name": "api_key",
+//         "type": "input",
+//         "field": "input",
+//         "label": "API Key",
+//         "message": "Zeptomail API key is used for sending email",
+//         "required": true,
+//         "className": "",
+//         "placeholder": ""
+//       },
+//       {
+//         "name": "endpoint",
+//         "type": "input",
+//         "field": "input",
+//         "label": "Zeptomail Region",
+//         "message": "Enter Zeptomail Region, https://api.zeptomail.in, https://api.zeptomail.com",
+//         "required": true,
+//         "className": "",
+//         "placeholder": "https://api.zeptomail.in"
+//       }
+//     ],
+//     "headers": {},
+//     "api_endpoint": "{endpoint}",
+//     "released": 1,
+//     "updated_at": "2024-12-22T09:00:13.000Z",
+//     "website": "https://www.zoho.com/zeptomail",
+//     "api_link_ref": "https://www.zoho.com/zeptomail/email-api.html",
+//     "total_api": 10,
+//     "credential_link": "https://accounts.zoho.com/developerconsole"
+//   }
+//   ]
