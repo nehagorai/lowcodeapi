@@ -1,8 +1,10 @@
+'use client';
+
 import React, { useEffect, useState, useRef } from 'react';
 
 import Link from 'next/link';
 import Image from 'next/image';
-import SplitPane from 'react-split-pane';
+import SplitPane from 'react-split';
 import humanFormat from 'human-format';
 import { Tooltip } from 'react-tooltip'
 
@@ -29,8 +31,18 @@ const PaneView = ({ paneView = true, children, activeCategory, categoryMap = {},
     }, [splitPaneRef, providersAll]);
 
     return (<>
-        <SplitPane split="vertical" defaultSize={255} minSize={255} maxSize={300}>
-            <div className="md:block md:flex-none h-screen bg-gray-100 overflow-y-scroll">
+        <SplitPane 
+            className='flex'
+            sizes={[20, 80]}
+            minSize={100}
+            gutterSize={10}
+            gutterAlign="center"
+            snapOffset={30}
+            dragInterval={1}
+            direction="horizontal"
+            cursor="col-resize"
+        >
+            <div className="md:block md:flex-none h-screen bg-gray-100 overflow-y-scroll w-[250px]">
                 <div className=''>
                     {
                         providersAll.map((itemMap) => (
