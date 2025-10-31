@@ -9,8 +9,8 @@ Thank you for your interest in contributing! We welcome all kinds of contributio
 
 2. **Clone Your Fork**  
    ```sh
-   git clone https://github.com/your-username/your-repo.git
-   cd your-repo
+   git clone https://github.com/samal/lowcodeapi.git
+   cd lowcodeapi
    ```
 
 3. **Create a Branch**  
@@ -46,7 +46,7 @@ Please read and follow our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Reporting Issues
 
-- Use [GitHub Issues](https://github.com/your-username/your-repo/issues) to report bugs or request features.
+- Use [GitHub Issues](https://github.com/samal/lowcodeapi/issues) to report bugs or request features.
 - Please provide as much detail as possible.
 
 ## Style Guide
