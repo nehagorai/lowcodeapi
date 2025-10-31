@@ -4,7 +4,7 @@ import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 
 import dynamic from 'next/dynamic';
-const JsonView = dynamic(() => import('react-json-view'), { ssr: false });
+const JsonView = dynamic(() => import('@microlink/react-json-view'), { ssr: false });
 
 
 const IMAGE_CONTENT_TYPES = ['image/png', 'image/jpeg', 'image/jpg', 'image/webp'];
