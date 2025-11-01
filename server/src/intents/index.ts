@@ -76,7 +76,6 @@ finalConnectorsList.forEach((provider: any) => {
 
 const connectorListExport : any = [...finalConnectorsList];
 
-console.log(Object.keys(connectorMap).join(','));
 export default connectorMapIntents;
 
 export {

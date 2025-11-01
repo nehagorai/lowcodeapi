@@ -10,6 +10,7 @@ lodash.templateSettings = {
   interpolate: /\{\{(.+?)\}\}/g,
 };
 
+const ENCRYPTION_KEY = genToken(50);
 const envTemplate = `
 # WARNING: Encription key is used to encrypt and decrypt 3rd party credentials, do not change it once you have started the application.
 # Make sure to set a strong encryption key and has a backup of it.
@@ -54,6 +55,21 @@ SESSION_SECRET_KEY={{SESSION_SECRET_KEY}}
 GOOGLE_CLIENT_ID=
 GOOGLE_CLIENT_SECRET=
 
+# Select only specific connectors to be enabled or disabled, comma separated values
+
+# Providers list
+# anthropic,assemblyai,awss3,awsses,cal,cloudflare-r2,cohere,colossyan,convertkit,copyai,customgptai,deepseek,descript,discord,dropbox,elevenlabs,freshdesk,github,gmail,googlecalendar,googledocs,googledrive,googleforms,googlesheets,gorgias,gumroad,heygen,hive,hubspot,humeai,jasper,klaviyo,leapai,letterdrop,lilt,linguix,lovo,mailchimp,mailersend,mailgun,mailjet,mistralai,name,namecheap,nanonets,notion,olamaps,openai,perplexityai,pexels,pixabay,playht,porkbun,postmark,razorpay,replicate,resembleai,resend,rossum,rows,runwayml,scenario,sendfox,sendgrid,shopify,smallestai,spaceship,squadcast,stabilityai,strava,stripe,telegram,textcortex,trello,twelvelabs,twitter,unrealspeech,unsplash,voicemaker,voicerss,weatherunion,whatsapp,wordpress,writerai,xero,yepicai,zendesk,zohoanalytics,zohoassist,zohobookings,zohobugtracker,zohocalendar,zohocampaigns,zohocommerce,zohoconnect,zohocontracts,zohocrm,zohoexpense,zohofsm,zohoinventory,zohoinvoice,zoholens,zohomail,zohomarketing,zohopeople,zohoprojects,zohosalesiq,zohosheet,zohosign,zohotables,zohowebinar,zohoworkdrive,zohoworkely,zohowriter,zohozeptomail
+
+# To enable googlesheets and openai connectors only, uncomment the line below and comment the DISABLE_SELECTED_CONNECTORS line
+# Example: 
+# ENABLE_SELECTED_CONNECTORS=
+DISABLE_SELECTED_CONNECTORS=whatsapp,wordpress,writerai,xero,yepicai,zendesk,zohoanalytics,zohoassist,zohobookings,zohobugtracker,zohocalendar,zohocampaigns,zohocommerce,zohoconnect,zohocontracts,zohocrm,zohoexpense,zohofsm,zohoinventory,zohoinvoice,zoholens,zohomail,zohomarketing,zohopeople,zohoprojects,zohosalesiq,zohosheet,zohosign,zohotables,zohowebinar,zohoworkdrive,zohoworkely,zohowriter,zohozeptomail
+
+# To disable googlesheets and openai connectors, uncomment the line below and comment the ENABLE_SELECTED_CONNECTORS line
+# Example:
+# ENABLE_SELECTED_CONNECTORS=
+# DISABLE_SELECTED_CONNECTORS=googlesheets,openai
+
 # Generated on ${moment().format('YYYY-MM-DD HH:mm:ss')}
 `;
 
@@ -94,7 +110,7 @@ const prepare = async () => {
     PROTOCOL,
     PORT,
     APP_DOMAIN: APP_DOMAIN || `localhost:${PORT}`,
-    ENCRYPTION_KEY: genToken(44),
+    ENCRYPTION_KEY,
     JWT_SECRET: genToken(29),
     SESSION_SECRET_KEY: genToken(21),
   };
@@ -107,9 +123,13 @@ const prepare = async () => {
 
 (async () => {
   await prepare();
-  console.log('.env created');
-  console.log('Now run,');
+  console.log('.env generated successfully');
+  console.log('\n----------START: ENCRYPTION KEY-----------\n');
+  console.log(ENCRYPTION_KEY);
+  console.log('\n----------END: ENCRYPTION KEY-----------');
+  console.log('\nMake sure to save the encryption key shown above, it will be required to decrypt any 3rd party credentials stored in the database.');
+  console.log('\nCreate user by running the following command with desired EMAIL, PASSWORD, FIRST_NAME and LAST_NAME');
   console.log('`EMAIL= PASSWORD= FIRST_NAME= LAST_NAME= npm run create`');
-  console.log('to create user, email and password will be used for login in the UI');
+  console.log('to create user, email and password will be used for login in the UI\n');
   process.exit();
 })();
