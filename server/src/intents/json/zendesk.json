@@ -1,4 +1,52 @@
 {
+  "config": {
+    "id": "zendesk",
+    "name": "Zendesk",
+    "description": "",
+    "logo_url": "zendesk.svg",
+    "auth_type": "TOKEN",
+    "auth": {},
+    "auth_config": [
+      {
+        "name": "subdomain",
+        "type": "input",
+        "field": "input",
+        "label": "zendesk domain / subdomain",
+        "message": "Your zendesk domain / subdomain",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "email_address",
+        "type": "input",
+        "field": "input",
+        "label": "zendesk login email",
+        "message": "Your zendesk email",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "api_token",
+        "type": "input",
+        "field": "input",
+        "label": "API Token",
+        "message": "This API Token will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://{subdomain}.gorgias.com",
+    "released": 1,
+    "updated_at": "2024-12-22T11:29:29.000Z",
+    "website": "https://zendesk.com",
+    "api_link_ref": "https://developer.zendesk.com/documentation",
+    "total_api": 2,
+    "credential_link": ""
+  },
   "routes": {
     "zendesk__api__v2__tickets__ticket_id___get": {
       "provider_intent": "zendesk__api__v2__tickets__ticket_id___get",

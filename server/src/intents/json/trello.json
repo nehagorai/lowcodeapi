@@ -1,4 +1,49 @@
 {
+  "config": {
+    "id": "trello",
+    "name": "Trello",
+    "description": "",
+    "logo_url": "trello.svg",
+    "auth_type": "OAUTH1.0",
+    "auth": {
+      "query": [
+        "key",
+        "token"
+      ]
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "api_key",
+          "type": "input",
+          "field": "input",
+          "label": "API Key",
+          "message": "Trello OAuth1.0 API Key",
+          "required": true,
+          "className": "",
+          "placeholder": "xxxxxxxxxxxxxx"
+        },
+        {
+          "name": "api_secret",
+          "type": "input",
+          "field": "input",
+          "label": "API Secret",
+          "message": "Trello OAuth1.0 API Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "xxxxxxxxxxxxx"
+        }
+      ]
+    },
+    "headers": {},
+    "api_endpoint": "https://api.trello.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:59:32.000Z",
+    "website": "https://trello.com",
+    "api_link_ref": "https://developer.atlassian.com/cloud/trello/res",
+    "total_api": 244,
+    "credential_link": "https://trello.com/power-ups/admin"
+  },
   "routes": {
     "getBoardsMemberships": {
       "provider_intent": "getBoardsMemberships",

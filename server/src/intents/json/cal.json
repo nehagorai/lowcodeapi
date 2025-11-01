@@ -1,4 +1,46 @@
 {
+  "config": {
+    "id": "cal",
+    "name": "Cal",
+    "description": "",
+    "logo_url": "cal.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "query": [
+        "apiKey"
+      ]
+    },
+    "auth_config": [
+      {
+        "name": "endpoint",
+        "type": "input",
+        "field": "input",
+        "label": "API Endpoint",
+        "message": "Enter your cal endpoint, for saas add https://api.cal.com",
+        "required": true,
+        "className": "",
+        "placeholder": "https://api.cal.com"
+      },
+      {
+        "name": "apiKey",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.cal.com",
+    "released": 1,
+    "updated_at": "2024-12-22T08:04:41.000Z",
+    "website": "https://cal.com",
+    "api_link_ref": "https://cal.com/docs/api-reference/v1/introduction",
+    "total_api": 67,
+    "credential_link": "https://app.cal.com/settings/developer/api-keys"
+  },
   "routes": {
     "cal__v1__attendees___get": {
       "provider_intent": "cal__v1__attendees___get",

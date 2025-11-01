@@ -1,4 +1,38 @@
 {
+  "config": {
+    "id": "mailersend",
+    "name": "Mailer send",
+    "description": "",
+    "logo_url": "mailersend.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.mailersend.com",
+    "released": 1,
+    "updated_at": "2024-12-22T11:23:06.000Z",
+    "website": "https://www.mailersend.com",
+    "api_link_ref": "https://developers.mailersend.com",
+    "total_api": 1,
+    "credential_link": "https://app.mailersend.com/api-tokens"
+  },
   "routes": {
     "mailersend__v1__email___post": {
       "provider_intent": "mailersend__v1__email___post",

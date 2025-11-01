@@ -1,4 +1,55 @@
 {
+  "config": {
+    "id": "bullhorn",
+    "name": "Bullhorn",
+    "description": "",
+    "logo_url": "bullhorn.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {},
+    "auth_config": {
+      "setup": [
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Bullhorn's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Bullhorn's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Bullhorn's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Bullhorn's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Bullhorn's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Bullhorn's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/bullhorn"
+    },
+    "headers": {},
+    "api_endpoint": "https://rest.bullhornstaffing.com",
+    "released": 1,
+    "updated_at": "2024-12-22T06:10:51.000Z",
+    "website": "https://www.bullhorn.com/",
+    "api_link_ref": "https://bullhorn.github.io/rest-api-docs/index.html#general-conventions",
+    "total_api": 3,
+    "credential_link": ""
+  },
   "routes": {
     "bullhorn__rest-services__corptoken__entity__entitytype__entityid___get": {
       "provider_intent": "bullhorn__rest-services__corptoken__entity__entitytype__entityid___get",

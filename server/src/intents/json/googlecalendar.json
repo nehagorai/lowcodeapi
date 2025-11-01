@@ -1,4 +1,148 @@
 {
+  "config": {
+    "id": "googlecalendar",
+    "name": "Google Calendar",
+    "description": "",
+    "logo_url": "googlecalendar.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": {
+      "scope": [
+        {
+          "name": "https://www.googleapis.com/auth/auth/calendar.app.created",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/auth/calendar.calendarlist.readonly",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/auth/calendar.events.freebusy",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/auth/calendar.events.public.readonly",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/auth/calendar.settings.readonly",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/auth/calendar.freebusy",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/calendar",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/calendar.acls",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/calendar.acsl.readonly",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/calendar.readonly",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/calendar.calendarlist",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/calendar.calendars",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/calendar.calendars.readonly",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/calendar.events",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/calendar.events.owned",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/calendar.events.owned.readonly",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/calendar.events.readonly",
+          "role": "",
+          "label": ""
+        }
+      ],
+      "setup": [
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Google Calendar's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Google Calendar's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Google Calendar's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Google Calendar's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Google Calendar's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Google Calendar's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/googlecalendar"
+    },
+    "headers": {},
+    "api_endpoint": "https://www.googleapis.com",
+    "released": 1,
+    "updated_at": "2024-12-22T09:28:16.000Z",
+    "website": "https://calendar.google.com/",
+    "api_link_ref": "https://developers.google.com/calendar/api/v3/reference",
+    "total_api": 37,
+    "credential_link": "https://console.cloud.google.com/apis/credentials"
+  },
   "routes": {
     "googlecalendar__calendar__v3__calendars__calendarid__acl__ruleid___put": {
       "provider_intent": "googlecalendar__calendar__v3__calendars__calendarid__acl__ruleid___put",

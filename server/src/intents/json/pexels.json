@@ -1,4 +1,38 @@
 {
+  "config": {
+    "id": "pexels",
+    "name": "Pexels",
+    "description": "",
+    "logo_url": "pexels.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": ""
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.pexels.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:26:00.000Z",
+    "website": "https://www.pexels.com/",
+    "api_link_ref": "https://www.pexels.com/api/documentation/#authorization",
+    "total_api": 9,
+    "credential_link": "https://www.pexels.com/api/new/"
+  },
   "routes": {
     "pexels__v1__collections__featured___get": {
       "provider_intent": "pexels__v1__collections__featured___get",

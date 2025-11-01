@@ -1,4 +1,21 @@
 {
+  "config": {
+    "id": "voicegainai",
+    "name": "VoiceGain AI",
+    "description": "",
+    "logo_url": "voicegainai.svg",
+    "auth_type": "TOKEN",
+    "auth": {},
+    "auth_config": {},
+    "headers": {},
+    "api_endpoint": "https://api.voicegain.ai",
+    "released": 1,
+    "updated_at": "2025-01-04T04:26:20.000Z",
+    "website": "https://www.voicegain.ai/",
+    "api_link_ref": "https://console.voicegain.ai/api/v1/index.html#tag/transcribe",
+    "total_api": 26,
+    "credential_link": ""
+  },
   "routes": {
     "voicegainai__v1__asr__transcribe___get": {
       "provider_intent": "voicegainai__v1__asr__transcribe___get",

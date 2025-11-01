@@ -1,4 +1,38 @@
 {
+  "config": {
+    "id": "assemblyai",
+    "name": "AssemblyAI",
+    "description": "",
+    "logo_url": "assemblyai.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing the service.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.assemblyai.com",
+    "released": 1,
+    "updated_at": "2024-12-23T06:26:04.000Z",
+    "website": "https://www.assemblyai.com",
+    "api_link_ref": "https://www.assemblyai.com/docs/api-reference/overview",
+    "total_api": 19,
+    "credential_link": "https://www.assemblyai.com/app/account"
+  },
   "routes": {
     "assemblyai__v2__transcript__id___delete": {
       "provider_intent": "assemblyai__v2__transcript__id___delete",

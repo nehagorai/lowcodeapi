@@ -1,4 +1,38 @@
 {
+  "config": {
+    "id": "klaviyo",
+    "name": "Klaviyo",
+    "description": "",
+    "logo_url": "klaviyo.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Klaviyo-API-Key"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://a.klaviyo.com",
+    "released": 1,
+    "updated_at": "2024-12-22T09:48:44.000Z",
+    "website": "https://www.klaviyo.com/",
+    "api_link_ref": "https://developers.klaviyo.com/en/docs/authenticate_#private-key-authentication",
+    "total_api": 4,
+    "credential_link": ""
+  },
   "routes": {
     "klaviyo__api__accounts___get": {
       "provider_intent": "klaviyo__api__accounts___get",

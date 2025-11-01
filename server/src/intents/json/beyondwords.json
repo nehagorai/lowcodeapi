@@ -1,4 +1,21 @@
 {
+  "config": {
+    "id": "beyondwords",
+    "name": "BeyondWords ",
+    "description": "",
+    "logo_url": "beyondwords.svg",
+    "auth_type": "",
+    "auth": {},
+    "auth_config": {},
+    "headers": {},
+    "api_endpoint": "https://api.beyondwords.io",
+    "released": 1,
+    "updated_at": "2024-12-22T08:04:29.000Z",
+    "website": "https://beyondwords.io/",
+    "api_link_ref": "https://developers.beyondwords.io/reference/api-overview",
+    "total_api": 75,
+    "credential_link": "https://dash.beyondwords.io/dashboard"
+  },
   "routes": {
     "beyondwords__v1__projects__project_id__ads___get": {
       "provider_intent": "beyondwords__v1__projects__project_id__ads___get",

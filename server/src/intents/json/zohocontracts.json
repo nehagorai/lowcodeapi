@@ -1,4 +1,81 @@
 {
+  "config": {
+    "id": "zohocontracts",
+    "name": "Zoho Contracts",
+    "description": "",
+    "logo_url": "zohocontracts.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://contracts.zoho.in, https://contracts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://contracts.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho Contracts's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Contracts's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho Contracts's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Contracts's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho Contracts's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Contracts's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohocontracts"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T10:05:32.000Z",
+    "website": "https://www.zoho.com/contract",
+    "api_link_ref": "https://www.zoho.com/contracts/api/introduction.html",
+    "total_api": 58,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
   "routes": {
     "zohocontracts__api__v1__contracts__contract_api_name__collaborators___get": {
       "provider_intent": "zohocontracts__api__v1__contracts__contract_api_name__collaborators___get",

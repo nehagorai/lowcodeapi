@@ -1,4 +1,51 @@
 {
+  "config": {
+    "id": "convertkit",
+    "name": "ConvertKit",
+    "description": "",
+    "logo_url": "convertkit.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "body": {
+        "api_key": "api_key",
+        "api_secret": "api_secret"
+      },
+      "queryMap": {
+        "api_key": "api_key",
+        "api_secret": "api_secret"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "api_secret",
+        "type": "input",
+        "field": "input",
+        "label": "API Secret",
+        "message": "API Secret is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.kit.com",
+    "released": 1,
+    "updated_at": "2024-12-22T06:59:40.000Z",
+    "website": "https://kit.com/",
+    "api_link_ref": "https://developers.kit.com/v4#introduction",
+    "total_api": 33,
+    "credential_link": "https://app.convertkit.com/account_settings/advanced_settings"
+  },
   "routes": {
     "convertkit__v3__account___get": {
       "provider_intent": "convertkit__v3__account___get",

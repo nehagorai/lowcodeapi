@@ -1,4 +1,47 @@
 {
+  "config": {
+    "id": "name",
+    "name": "Name.com",
+    "description": "",
+    "logo_url": "name.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "basicauth": {
+        "password": "token",
+        "username": "username"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "username",
+        "type": "input",
+        "field": "input",
+        "label": "Username",
+        "message": "Username along with token is used for authenticating the API request.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "token",
+        "type": "input",
+        "field": "input",
+        "label": "API token",
+        "message": "Token is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.name.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:14:52.000Z",
+    "website": "https://www.name.com",
+    "api_link_ref": "https://www.name.com/api-docs",
+    "total_api": 49,
+    "credential_link": "https://www.name.com/account/settings/api"
+  },
   "routes": {
     "name__v4__domains__domainname__records___get": {
       "provider_intent": "name__v4__domains__domainname__records___get",

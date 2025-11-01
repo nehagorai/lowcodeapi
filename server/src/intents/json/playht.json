@@ -1,4 +1,55 @@
 {
+  "config": {
+    "id": "playht",
+    "name": "PlayHT",
+    "description": "",
+    "logo_url": "playht.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": [
+        {
+          "authKey": "api_key",
+          "headerName": "Authorization",
+          "headerValue": ""
+        },
+        {
+          "authKey": "user_id",
+          "headerName": "X-USER-ID",
+          "headerValue": ""
+        }
+      ]
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "user_id",
+        "type": "input",
+        "field": "input",
+        "label": "User ID",
+        "message": "User ID of the API Key",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.play.ht",
+    "released": 1,
+    "updated_at": "2024-12-22T10:32:56.000Z",
+    "website": "https://play.ht/",
+    "api_link_ref": "https://docs.play.ht/reference/api-getting-started",
+    "total_api": 7,
+    "credential_link": "https://play.ht/studio/api-access"
+  },
   "routes": {
     "playht__api__v2__tts___post": {
       "provider_intent": "playht__api__v2__tts___post",

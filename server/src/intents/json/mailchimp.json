@@ -1,4 +1,36 @@
 {
+  "config": {
+    "id": "mailchimp",
+    "name": "Mailchimp",
+    "description": "",
+    "logo_url": "mailchimp.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "body": {
+        "key": "api_key"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://mandrillapp.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:05:01.000Z",
+    "website": "https://mailchimp.com/",
+    "api_link_ref": "https://mailchimp.com/developer/transactional/api/",
+    "total_api": 94,
+    "credential_link": "https://mailchimp.com/help/about-api-keys/#Generate_an_API_key"
+  },
   "routes": {
     "mailchimp__api__1-0__messages__send___post": {
       "provider_intent": "mailchimp__api__1-0__messages__send___post",

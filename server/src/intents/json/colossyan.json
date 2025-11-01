@@ -1,4 +1,38 @@
 {
+  "config": {
+    "id": "colossyan",
+    "name": "Colossyan",
+    "description": "",
+    "logo_url": "colossyan.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "token",
+        "headerName": "authorizationtoken",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://app.colossyan.com/api",
+    "released": 1,
+    "updated_at": "2024-12-22T06:48:36.000Z",
+    "website": "https://www.colossyan.com/",
+    "api_link_ref": "https://docs.colossyan.com/",
+    "total_api": 6,
+    "credential_link": ""
+  },
   "routes": {
     "colossyan__assets__actors___get": {
       "provider_intent": "colossyan__assets__actors___get",

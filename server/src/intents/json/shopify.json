@@ -1,4 +1,71 @@
 {
+  "config": {
+    "id": "shopify",
+    "name": "Shopify",
+    "description": "",
+    "logo_url": "shopify.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "subdomain",
+          "type": "input",
+          "field": "input",
+          "label": "Shopify's store name",
+          "message": "Add your Shopify's store name, https://{store_name}.myshopify.com",
+          "required": true,
+          "className": "",
+          "placeholder": "store_name"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Shopify's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Shopify's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Shopify's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Shopify's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Shopify's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Shopify's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/shopify"
+    },
+    "headers": {},
+    "api_endpoint": "https://api.spotify.com",
+    "released": 1,
+    "updated_at": "2024-12-22T11:12:20.000Z",
+    "website": "https://www.shopify.com/in",
+    "api_link_ref": "https://shopify.dev/docs/api/admin-rest",
+    "total_api": 310,
+    "credential_link": "https://www.shopify.com/in/partners/blog/17056443-how-to-generate-a-shopify-api-token"
+  },
   "routes": {
     "shopify__admin__oauth__access_scopes.json___get": {
       "provider_intent": "shopify__admin__oauth__access_scopes.json___get",

@@ -1,4 +1,38 @@
 {
+  "config": {
+    "id": "descript",
+    "name": "Descript",
+    "description": "",
+    "logo_url": "descript.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://descriptapi.com",
+    "released": 1,
+    "updated_at": "2024-12-22T08:51:01.000Z",
+    "website": "https://www.descript.com/",
+    "api_link_ref": "https://docs.descriptapi.com/#section/Authentication",
+    "total_api": 4,
+    "credential_link": "https://app.squadcast.fm/account/developers"
+  },
   "routes": {
     "descript__v1__edit_in_descript__schema___post": {
       "provider_intent": "descript__v1__edit_in_descript__schema___post",

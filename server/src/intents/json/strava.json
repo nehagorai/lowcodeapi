@@ -1,4 +1,61 @@
 {
+  "config": {
+    "id": "strava",
+    "name": "Strava",
+    "description": "",
+    "logo_url": "strava.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Strava's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Strava's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Strava's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Strava's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Strava's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Strava's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/strava"
+    },
+    "headers": {},
+    "api_endpoint": "https://www.strava.com",
+    "released": 1,
+    "updated_at": "2024-12-22T11:06:33.000Z",
+    "website": "https://strava.com",
+    "api_link_ref": "https://developers.strava.com/docs/reference",
+    "total_api": 34,
+    "credential_link": "https://www.strava.com/settings/api"
+  },
   "routes": {
     "strava_api_v3_activities_post": {
       "provider_intent": "strava_api_v3_activities_post",

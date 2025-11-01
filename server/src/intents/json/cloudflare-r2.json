@@ -1,4 +1,57 @@
 {
+  "config": {
+    "id": "cloudflare-r2",
+    "name": "Cloudflare R2",
+    "description": "Custom made Object Storage APIs for Cloudflare R2.",
+    "logo_url": "cloudflarer2.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "subdomain": [
+        "region",
+        "bucket"
+      ]
+    },
+    "auth_config": [
+      {
+        "name": "endpoint",
+        "type": "input",
+        "field": "input",
+        "label": "Cloudflare R2 Endpoint",
+        "message": "",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "accessKeyId",
+        "type": "input",
+        "field": "input",
+        "label": "Access Key Id",
+        "message": "This Access key will be used for accessing R2",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "secretAccessKey",
+        "type": "input",
+        "field": "input",
+        "label": "Secret Access Key",
+        "message": "This key will be used for accessing R2",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "",
+    "released": 1,
+    "updated_at": "2025-03-12T02:06:14.000Z",
+    "website": "https://developers.cloudflare.com/r2",
+    "api_link_ref": "https://developers.cloudflare.com/r2/api",
+    "total_api": 3,
+    "credential_link": "https://dash.cloudflare.com/"
+  },
   "routes": {
     "cloudflare-r2__signed-url___get": {
       "provider_intent": "cloudflare-r2__signed-url___get",

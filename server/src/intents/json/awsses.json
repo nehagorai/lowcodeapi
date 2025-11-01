@@ -1,4 +1,60 @@
 {
+  "config": {
+    "id": "awsses",
+    "name": "AWS SES",
+    "description": "",
+    "logo_url": "awsses.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {},
+      "subdomain": "region"
+    },
+    "auth_config": [
+      {
+        "name": "accessKeyId",
+        "type": "input",
+        "field": "input",
+        "label": "AWS Access Key Id",
+        "message": "This Access key will be used for accessing AWS SES service",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "secretAccessKey",
+        "type": "input",
+        "field": "input",
+        "label": "AWS Secret Access Key",
+        "message": "This key will be used for accessing AWS SES service",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "enum": [
+          "us-east-1",
+          "us-east-2",
+          "us-west-1"
+        ],
+        "name": "region",
+        "type": "input",
+        "field": "input",
+        "label": "AWS Region",
+        "message": "AWS Regions: us-east-1, us-east-2,us-west-1",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://email.{region}.amazonaws.com",
+    "released": 1,
+    "updated_at": "2024-12-22T05:52:31.000Z",
+    "website": "https://aws.amazon.com/",
+    "api_link_ref": "https://docs.aws.amazon.com/AmazonS3/latest/API/Type_API_Reference.html",
+    "total_api": 2,
+    "credential_link": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html"
+  },
   "routes": {
     "awsses__v2__email__outbound-emails___post": {
       "provider_intent": "awsses__v2__email__outbound-emails___post",

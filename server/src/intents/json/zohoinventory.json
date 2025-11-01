@@ -1,4 +1,81 @@
 {
+  "config": {
+    "id": "zohoinventory",
+    "name": "Zoho Inventory",
+    "description": "",
+    "logo_url": "zohoinventory.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://www.zohoapis.in, https://www.zohoapis.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://www.zohoapis.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho Inventory's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Inventory's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho Inventory's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Inventory's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho Inventory's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Inventory's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohoinventory"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T09:52:29.000Z",
+    "website": "https://www.zoho.com/in/inventory",
+    "api_link_ref": "https://www.zoho.com/inventory/api/v1",
+    "total_api": 263,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
   "routes": {
     "zohoinventory__inventory__v1__bills___post": {
       "provider_intent": "zohoinventory__inventory__v1__bills___post",

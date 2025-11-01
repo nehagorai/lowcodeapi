@@ -1,4 +1,21 @@
 {
+  "config": {
+    "id": "whatsapp",
+    "name": "WhatsApp (v22.0)",
+    "description": "",
+    "logo_url": "whatsapp.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {},
+    "auth_config": {},
+    "headers": {},
+    "api_endpoint": "https://graph.facebook.com",
+    "released": 1,
+    "updated_at": "2025-03-12T03:43:25.000Z",
+    "website": "https://meta.com",
+    "api_link_ref": "https://developers.facebook.com/docs/whatsapp/cloud-api/reference",
+    "total_api": 10,
+    "credential_link": "https://developers.facebook.com/docs/whatsapp"
+  },
   "app": {
     "title": "WhatsApp Business API",
     "description": "",

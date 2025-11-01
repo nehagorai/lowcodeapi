@@ -1,4 +1,37 @@
 {
+  "config": {
+    "id": "ashbyhq",
+    "name": "Ashby",
+    "description": "",
+    "logo_url": "ashbyhq.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "basicauth": {
+        "password": "",
+        "username": "api_key"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.ashbyhq.com",
+    "released": 0,
+    "updated_at": "2024-12-22T06:58:45.000Z",
+    "website": "https://www.ashbyhq.com",
+    "api_link_ref": "https://developers.ashbyhq.com/reference/introduction",
+    "total_api": 2,
+    "credential_link": ""
+  },
   "app": {
     "title": "Ashby API",
     "description": "",

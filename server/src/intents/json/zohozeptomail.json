@@ -1,4 +1,48 @@
 {
+  "config": {
+    "id": "zohozeptomail",
+    "name": "Zoho Zeptomail",
+    "description": "",
+    "logo_url": "zohozeptomail.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-enczapikey"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "Zeptomail API key is used for sending email",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "endpoint",
+        "type": "input",
+        "field": "input",
+        "label": "Zeptomail Region",
+        "message": "Enter Zeptomail Region, https://api.zeptomail.in, https://api.zeptomail.com",
+        "required": true,
+        "className": "",
+        "placeholder": "https://api.zeptomail.in"
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T09:00:13.000Z",
+    "website": "https://www.zoho.com/zeptomail",
+    "api_link_ref": "https://www.zoho.com/zeptomail/email-api.html",
+    "total_api": 10,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
   "routes": {
     "zohozeptomail__v1-1__email__batch___post": {
       "provider_intent": "zohozeptomail__v1-1__email__batch___post",

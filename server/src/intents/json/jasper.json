@@ -1,4 +1,38 @@
 {
+  "config": {
+    "id": "jasper",
+    "name": "Jasper",
+    "description": "",
+    "logo_url": "jasper.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "x-api-key",
+        "headerValue": ""
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.jasper.ai",
+    "released": 1,
+    "updated_at": "2024-12-22T09:46:27.000Z",
+    "website": "https://www.jasper.ai/",
+    "api_link_ref": "https://developers.jasper.ai/reference/command-3",
+    "total_api": 19,
+    "credential_link": ""
+  },
   "routes": {
     "jasper__v1__command___post": {
       "provider_intent": "jasper__v1__command___post",

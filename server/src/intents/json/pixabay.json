@@ -1,4 +1,36 @@
 {
+  "config": {
+    "id": "pixabay",
+    "name": "Pixabay",
+    "description": "",
+    "logo_url": "pixabay.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "queryMap": {
+        "key": "api_key"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://pixabay.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:31:31.000Z",
+    "website": "https://pixabay.com/",
+    "api_link_ref": "https://pixabay.com/api/docs/",
+    "total_api": 2,
+    "credential_link": "https://pixabay.com/api/docs/"
+  },
   "routes": {
     "pixabay__api___get": {
       "provider_intent": "pixabay__api___get",

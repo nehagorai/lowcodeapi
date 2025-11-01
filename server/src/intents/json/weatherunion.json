@@ -1,4 +1,38 @@
 {
+  "config": {
+    "id": "weatherunion",
+    "name": "Weather Union",
+    "description": "",
+    "logo_url": "weatherunion.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "x-zomato-api-key",
+        "headerValue": ""
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://www.weatherunion.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:28:20.000Z",
+    "website": "https://www.weatherunion.com",
+    "api_link_ref": "https://b.zmtcdn.com/data/file_assets/915d4e8e95d067c47e1ae38d77d572b21715104204.pdf",
+    "total_api": 2,
+    "credential_link": "https://www.weatherunion.com/"
+  },
   "routes": {
     "weatherunion_gw_weather_external_v0_get_weather_data_get": {
       "provider_intent": "weatherunion_gw_weather_external_v0_get_weather_data_get",

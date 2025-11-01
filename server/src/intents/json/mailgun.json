@@ -1,4 +1,57 @@
 {
+  "config": {
+    "id": "mailgun",
+    "name": "Mailgun",
+    "description": "",
+    "logo_url": "mailgun.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "basicauth": {
+        "password": "api_key",
+        "username": "api"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "domain_name",
+        "type": "input",
+        "field": "input",
+        "label": "Sending Domain Name",
+        "message": "We will use this domain to send email on your behalf.",
+        "required": false,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "from",
+        "type": "input",
+        "field": "input",
+        "label": "From Email",
+        "message": "We will use this email address to send email on your behalf.",
+        "required": false,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.mailgun.net",
+    "released": 1,
+    "updated_at": "2024-12-22T10:08:14.000Z",
+    "website": "https://www.mailgun.com/",
+    "api_link_ref": "https://documentation.mailgun.com/docs/mailgun/api-reference/intro/",
+    "total_api": 120,
+    "credential_link": "https://help.mailgun.com/hc/en-us/articles/203380100-Where-can-I-find-my-API-keys-and-SMTP-credentials#h_01HVM3GKEPNTB5TR11JGDHY367"
+  },
   "routes": {
     "mailgun__v3__domain_name__messages___post": {
       "provider_intent": "mailgun__v3__domain_name__messages___post",

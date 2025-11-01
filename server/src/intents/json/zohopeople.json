@@ -1,4 +1,81 @@
 {
+  "config": {
+    "id": "zohopeople",
+    "name": "Zoho People",
+    "description": "",
+    "logo_url": "zohopeople.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://people.zoho.in, https://people.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://people.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho People's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho People's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho People's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho People's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho People's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho People's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohopeople"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T09:34:36.000Z",
+    "website": "https://www.zoho.com/people",
+    "api_link_ref": "https://www.zoho.com/people/api/overview.html",
+    "total_api": 189,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
   "routes": {
     "zohopeople__api__files__editfile___post": {
       "provider_intent": "zohopeople__api__files__editfile___post",

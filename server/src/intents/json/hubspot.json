@@ -1,4 +1,61 @@
 {
+  "config": {
+    "id": "hubspot",
+    "name": "HubSpot",
+    "description": "",
+    "logo_url": "hubspot.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "HubSpot's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter HubSpot's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "HubSpot's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter HubSpot's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing HubSpot's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter HubSpot's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/hubspot"
+    },
+    "headers": {},
+    "api_endpoint": "https://api.hubapi.com",
+    "released": 1,
+    "updated_at": "2024-12-22T09:42:44.000Z",
+    "website": "https://hubspot.com",
+    "api_link_ref": "https://developers.hubspot.com",
+    "total_api": 488,
+    "credential_link": "https://developers.hubspot.com/docs/api/working-with-oauth"
+  },
   "routes": {
     "hubspot__automation__v4__flows__flowid___get": {
       "provider_intent": "hubspot__automation__v4__flows__flowid___get",

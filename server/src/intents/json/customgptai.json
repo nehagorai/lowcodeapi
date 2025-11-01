@@ -1,4 +1,38 @@
 {
+  "config": {
+    "id": "customgptai",
+    "name": "CustomGPT.ai",
+    "description": "",
+    "logo_url": "customgptai.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://app.customgpt.ai",
+    "released": 1,
+    "updated_at": "2024-12-22T08:48:49.000Z",
+    "website": "https://customgpt.ai/",
+    "api_link_ref": "https://docs.customgpt.ai/reference/i-api-homepage",
+    "total_api": 36,
+    "credential_link": ""
+  },
   "routes": {
     "customgptai__api__v1__projects__project_id__citations__citation_id___get": {
       "provider_intent": "customgptai__api__v1__projects__project_id__citations__citation_id___get",

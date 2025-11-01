@@ -1,4 +1,38 @@
 {
+  "config": {
+    "id": "textcortex",
+    "name": "TextCortex",
+    "description": "",
+    "logo_url": "textcortex.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.textcortex.com/v1",
+    "released": 1,
+    "updated_at": "2024-12-22T11:01:44.000Z",
+    "website": "https://textcortex.com",
+    "api_link_ref": "https://docs.textcortex.com/api",
+    "total_api": 35,
+    "credential_link": "https://app.textcortex.com/user/dashboard/settings/api-key"
+  },
   "routes": {
     "textcortex__v1__codes___post": {
       "provider_intent": "textcortex__v1__codes___post",

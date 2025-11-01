@@ -1,4 +1,21 @@
 {
+  "config": {
+    "id": "twitter",
+    "name": "Twitter v1.1",
+    "description": "",
+    "logo_url": "twitter.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {},
+    "auth_config": {},
+    "headers": {},
+    "api_endpoint": "https://api.twitter.com",
+    "released": 1,
+    "updated_at": "2025-03-12T06:54:55.000Z",
+    "website": "",
+    "api_link_ref": "",
+    "total_api": 129,
+    "credential_link": ""
+  },
   "app": {
     "title": "Twitter API",
     "description": "",

@@ -1,4 +1,55 @@
 {
+  "config": {
+    "id": "spaceship",
+    "name": "Spaceship",
+    "description": "ICANN-accredited registrar.",
+    "logo_url": "spaceship.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": [
+        {
+          "authKey": "api_key",
+          "headerName": "X-Api-Key",
+          "headerValue": ""
+        },
+        {
+          "authKey": "api_secret",
+          "headerName": "X-Api-Secret",
+          "headerValue": ""
+        }
+      ]
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "api_secret",
+        "type": "input",
+        "field": "input",
+        "label": "API Secret",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://spaceship.dev/api",
+    "released": 1,
+    "updated_at": "2025-02-06T09:47:05.000Z",
+    "website": "https://www.spaceship.com",
+    "api_link_ref": "https://docs.spaceship.dev",
+    "total_api": 22,
+    "credential_link": "https://www.spaceship.com/application/api-manager"
+  },
   "routes": {
     "spaceship__v1__domains___get": {
       "provider_intent": "spaceship__v1__domains___get",

@@ -1,4 +1,38 @@
 {
+  "config": {
+    "id": "crelate",
+    "name": "Crelate",
+    "description": "",
+    "logo_url": "crelate.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "X-Api-Key",
+        "headerValue": ""
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://app.crelate.com",
+    "released": 1,
+    "updated_at": "2024-12-22T07:17:15.000Z",
+    "website": "https://www.crelate.com/",
+    "api_link_ref": "https://app.crelate.com/api3/docs/index.html",
+    "total_api": 4,
+    "credential_link": ""
+  },
   "routes": {
     "crelate__api3__emails__id___get": {
       "provider_intent": "crelate__api3__emails__id___get",

@@ -1,4 +1,52 @@
 {
+  "config": {
+    "id": "scenario",
+    "name": "Scenario",
+    "description": "",
+    "logo_url": "scenario.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "mode": "base64",
+        "authKey": [
+          "api_key",
+          "api_secret"
+        ],
+        "headerName": "Authorization",
+        "headerValue": "Basic"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing service.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "api_secret",
+        "type": "input",
+        "field": "input",
+        "label": "API Secret",
+        "message": "This API key will be used for accessing service.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.cloud.scenario.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:26:56.000Z",
+    "website": "https://scenario.com",
+    "api_link_ref": "https://docs.scenario.com/docs/getting-started",
+    "total_api": 28,
+    "credential_link": "https://app.scenario.com/team"
+  },
   "routes": {
     "scenario__v1__images__erase-background___put": {
       "provider_intent": "scenario__v1__images__erase-background___put",

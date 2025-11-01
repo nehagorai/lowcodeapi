@@ -1,4 +1,69 @@
 {
+  "config": {
+    "id": "namecheap",
+    "name": "Namecheap",
+    "description": "",
+    "logo_url": "namecheap.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "queryMap": {
+        "ApiKey": "ApiKey",
+        "APIUser": "APIUser",
+        "ClientIP": "ClientIP",
+        "UserName": "UserName"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "APIUser",
+        "type": "input",
+        "field": "input",
+        "label": "API User",
+        "message": "This API user will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "UserName",
+        "type": "input",
+        "field": "input",
+        "label": "Namecheap Username",
+        "message": "This username will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "ApiKey",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "ClientIP",
+        "type": "input",
+        "field": "input",
+        "label": "Whitelisted Client IP",
+        "message": "Whitelisted Client IP configured on Namecheap's dashboard",
+        "required": true,
+        "className": "",
+        "placeholder": "123.456.654.321"
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.namecheap.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:16:17.000Z",
+    "website": "https://www.namecheap.com/",
+    "api_link_ref": "https://www.namecheap.com/support/api/intro/",
+    "total_api": 59,
+    "credential_link": "https://ap.www.namecheap.com/settings/tools/apiaccess/"
+  },
   "routes": {
     "namecheap__users.address.create___get": {
       "provider_intent": "namecheap__users.address.create___get",

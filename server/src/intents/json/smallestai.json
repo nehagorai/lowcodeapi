@@ -1,4 +1,38 @@
 {
+  "config": {
+    "id": "smallestai",
+    "name": "Smallest AI",
+    "description": "",
+    "logo_url": "smallestai.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "token",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "token",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.smallest.ai",
+    "released": 1,
+    "updated_at": "2024-12-22T11:17:14.000Z",
+    "website": "https://smallest.ai/",
+    "api_link_ref": "https://awaaz-docs.smallest.ai/introduction",
+    "total_api": 2,
+    "credential_link": "https://smallest.ai/acount"
+  },
   "routes": {
     "smallestai__awaaz__get_server_state___post": {
       "provider_intent": "smallestai__awaaz__get_server_state___post",

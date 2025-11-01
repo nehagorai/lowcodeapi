@@ -1,4 +1,81 @@
 {
+  "config": {
+    "id": "zohobookings",
+    "name": "Zoho Bookings",
+    "description": "",
+    "logo_url": "zohobookings.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://www.zohoapis.in, https://www.zohoapis.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://www.zohoapis.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho Bookings's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Bookings's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho Bookings's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Bookings's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho Bookings's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Bookings's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohobookings"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T10:23:31.000Z",
+    "website": "https://www.zoho.com/bookings",
+    "api_link_ref": "https://www.zoho.com/bookings/help/api/v1/generate-accesstoken.html",
+    "total_api": 10,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
   "routes": {
     "zohobookings__bookings__v1__json__appointment___post": {
       "provider_intent": "zohobookings__bookings__v1__json__appointment___post",

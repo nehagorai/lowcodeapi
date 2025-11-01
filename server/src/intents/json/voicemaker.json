@@ -1,4 +1,38 @@
 {
+  "config": {
+    "id": "voicemaker",
+    "name": "Voicemaker",
+    "description": "",
+    "logo_url": "voicemaker.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "Voicemaker API Key",
+        "message": "API Key is used for accessing the Voicemaker API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://developer.voicemaker.in",
+    "released": 1,
+    "updated_at": "2024-12-22T10:49:15.000Z",
+    "website": "https://www.voicemaker.in",
+    "api_link_ref": "https://www.developer.voicemaker.in/apidocs",
+    "total_api": 2,
+    "credential_link": "https://developer.voicemaker.in/"
+  },
   "routes": {
     "voicemaker__voice__api___post": {
       "provider_intent": "voicemaker__voice__api___post",

@@ -1,4 +1,103 @@
 {
+  "config": {
+    "id": "gmail",
+    "name": "Gmail",
+    "description": "",
+    "logo_url": "gmail.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": {
+      "scope": [
+        {
+          "name": "https://www.googleapis.com/auth/gmail.modify",
+          "role": "Read, compose, and send emails from your Gmail account"
+        },
+        {
+          "name": "https://www.googleapis.com/auth/gmail.send",
+          "role": "Send email on your behalf"
+        },
+        {
+          "name": "https://www.googleapis.com/auth/gmail.readonly",
+          "role": "View your email messages and settings"
+        },
+        {
+          "name": "https://www.googleapis.com/auth/gmail.metadata",
+          "role": "View your email message metadata such as labels and headers, but not the email body"
+        },
+        {
+          "name": "https://www.googleapis.com/auth/gmail.labels",
+          "role": "See and edit your email labels"
+        },
+        {
+          "name": "https://www.googleapis.com/auth/gmail.insert",
+          "role": "Add emails into your Gmail mailbox"
+        },
+        {
+          "name": "https://www.googleapis.com/auth/gmail.compose",
+          "role": "Manage drafts and send emails"
+        },
+        {
+          "name": "https://mail.google.com/",
+          "role": "Read, compose, send, and permanently delete all your email from Gmail [Full Access]"
+        },
+        {
+          "name": "https://www.googleapis.com/auth/gmail.settings.basic",
+          "role": "See, edit, create, or change your email settings and filters in Gmail"
+        },
+        {
+          "name": "https://www.googleapis.com/auth/gmail.settings.sharing",
+          "role": "Manage your sensitive mail settings, including who can manage your mail"
+        }
+      ],
+      "setup": [
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Gmail's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Gmail's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Gmail's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Gmail's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Gmail's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Gmail's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/gmail"
+    },
+    "headers": {},
+    "api_endpoint": "https://gmail.googleapis.com",
+    "released": 1,
+    "updated_at": "2025-03-12T07:12:31.000Z",
+    "website": "https://developers.google.com/gmail",
+    "api_link_ref": "https://developers.google.com/gmail",
+    "total_api": 68,
+    "credential_link": "https://console.cloud.google.com/apis/credentials"
+  },
   "routes": {
     "gmail__v1__users__userid__messages__send___post": {
       "provider_intent": "gmail__v1__users__userid__messages__send___post",

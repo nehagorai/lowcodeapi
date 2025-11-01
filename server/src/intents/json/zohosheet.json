@@ -1,4 +1,81 @@
 {
+  "config": {
+    "id": "zohosheet",
+    "name": "Zoho Sheet",
+    "description": "",
+    "logo_url": "zohosheet.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://sheet.zoho.in, https://sheet.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://sheet.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho Sheet's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Sheet's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho Sheet's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Sheet's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho Sheet's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Sheet's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohosheet"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T09:25:41.000Z",
+    "website": "https://www.zoho.com/sheet",
+    "api_link_ref": "https://www.zoho.com/sheet/help/api/v2/",
+    "total_api": 11,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
   "routes": {
     "zohosheet__api__v2__resource_id___post": {
       "provider_intent": "zohosheet__api__v2__resource_id___post",

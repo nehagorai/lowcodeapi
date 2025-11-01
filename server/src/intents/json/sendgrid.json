@@ -1,4 +1,38 @@
 {
+  "config": {
+    "id": "sendgrid",
+    "name": "Sendgrid",
+    "description": "",
+    "logo_url": "sendgrid.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.sendgrid.com",
+    "released": 1,
+    "updated_at": "2024-12-22T11:15:50.000Z",
+    "website": "https://sendgrid.com/en-us",
+    "api_link_ref": "https://www.twilio.com/docs/sendgrid/api-reference",
+    "total_api": 351,
+    "credential_link": "https://app.sendgrid.com/settings/api_keys"
+  },
   "routes": {
     "sendgrid__v3__mail__send___post": {
       "provider_intent": "sendgrid__v3__mail__send___post",

@@ -1,4 +1,38 @@
 {
+  "config": {
+    "id": "heygen",
+    "name": "Heygen AI",
+    "description": "",
+    "logo_url": "heygen.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "x-api-key",
+        "headerValue": ""
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.heygen.com",
+    "released": 1,
+    "updated_at": "2024-12-22T09:40:11.000Z",
+    "website": "https://www.heygen.com/",
+    "api_link_ref": "https://docs.heygen.com/reference/authentication",
+    "total_api": 48,
+    "credential_link": "https://app.heygen.com/settings?nav=API"
+  },
   "routes": {
     "heygen__v2__avatars___get": {
       "provider_intent": "heygen__v2__avatars___get",

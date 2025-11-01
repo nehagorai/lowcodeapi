@@ -1,4 +1,38 @@
 {
+  "config": {
+    "id": "copyai",
+    "name": "Copy AI",
+    "description": "",
+    "logo_url": "copyai.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "x-copy-ai-api-key",
+        "headerValue": ""
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.copy.ai/api",
+    "released": 1,
+    "updated_at": "2024-12-22T07:13:27.000Z",
+    "website": "https://www.copy.ai/",
+    "api_link_ref": "https://docs.copy.ai/reference/authentication",
+    "total_api": 7,
+    "credential_link": ""
+  },
   "routes": {
     "copyai__webhook___post": {
       "provider_intent": "copyai__webhook___post",

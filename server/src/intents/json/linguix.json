@@ -1,4 +1,38 @@
 {
+  "config": {
+    "id": "linguix",
+    "name": "Linguix",
+    "description": "",
+    "logo_url": "linguix.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.linguix.com/api",
+    "released": 1,
+    "updated_at": "2024-12-22T10:00:26.000Z",
+    "website": "https://linguix.com/",
+    "api_link_ref": "https://help.linguix.com/docs/linguix-api/linguix-checker-rest-api/",
+    "total_api": 1,
+    "credential_link": "https://help.linguix.com/docs/linguix-api/linguix-checker-rest-api/"
+  },
   "routes": {
     "linguix__v1__projects___post": {
       "provider_intent": "linguix__v1__projects___post",

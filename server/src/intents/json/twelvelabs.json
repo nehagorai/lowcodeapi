@@ -1,4 +1,38 @@
 {
+  "config": {
+    "id": "twelvelabs",
+    "name": "Twelve Labs",
+    "description": "",
+    "logo_url": "twelvelabs.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "x-api-key",
+        "headerValue": ""
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.twelvelabs.io",
+    "released": 1,
+    "updated_at": "2024-12-22T10:56:37.000Z",
+    "website": "https://www.twelvelabs.io",
+    "api_link_ref": "https://docs.twelvelabs.io/reference/api-reference",
+    "total_api": 38,
+    "credential_link": "https://dashboard.twelvelabs.io/home"
+  },
   "routes": {
     "twelvelabs__v1-2__search-v22___post": {
       "provider_intent": "twelvelabs__v1-2__search-v22___post",

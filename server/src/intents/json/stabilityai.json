@@ -1,4 +1,38 @@
 {
+  "config": {
+    "id": "stabilityai",
+    "name": "Stability AI",
+    "description": "",
+    "logo_url": "stabilityai.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": ""
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing the service.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.stability.ai",
+    "released": 1,
+    "updated_at": "2024-12-22T11:09:59.000Z",
+    "website": "https://stability.ai",
+    "api_link_ref": "https://platform.stability.ai/docs/getting-started",
+    "total_api": 35,
+    "credential_link": "https://next.platform.stability.ai/account/keys"
+  },
   "routes": {
     "stabilityai__v1__engines__list___get": {
       "provider_intent": "stabilityai__v1__engines__list___get",

@@ -1,4 +1,38 @@
 {
+  "config": {
+    "id": "resembleai",
+    "name": "Resemble AI",
+    "description": "",
+    "logo_url": "resembleai.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://app.resemble.ai/api",
+    "released": 1,
+    "updated_at": "2024-12-22T10:37:40.000Z",
+    "website": "https://www.resemble.ai/",
+    "api_link_ref": "https://docs.app.resemble.ai/docs/getting_started/quick_start",
+    "total_api": 39,
+    "credential_link": "https://app.resemble.ai/account/api"
+  },
   "routes": {
     "resembleai__v2__voices__voice_uuid__recordings___get": {
       "provider_intent": "resembleai__v2__voices__voice_uuid__recordings___get",

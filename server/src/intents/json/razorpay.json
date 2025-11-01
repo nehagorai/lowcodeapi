@@ -1,4 +1,47 @@
 {
+  "config": {
+    "id": "razorpay",
+    "name": "Razorpay",
+    "description": "",
+    "logo_url": "razorpay.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "basicauth": {
+        "password": "api_secret",
+        "username": "api_key"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "api_secret",
+        "type": "input",
+        "field": "input",
+        "label": "API Secret",
+        "message": "This API secret will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.razorpay.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:19:07.000Z",
+    "website": "https://razorpay.com",
+    "api_link_ref": "https://razorpay.com/docs",
+    "total_api": 178,
+    "credential_link": "https://razorpay.com/docs/payments/dashboard/account-settings/api-keys"
+  },
   "routes": {
     "razorpay__v1__customers___post": {
       "provider_intent": "razorpay__v1__customers___post",

@@ -1,4 +1,83 @@
 {
+  "config":   {
+    "id": "googlesheets",
+    "name": "Google Sheets",
+    "description": "Google Sheets",
+    "logo_url": "googlesheets.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": {
+      "scope": [
+        {
+          "name": "https://www.googleapis.com/auth/spreadsheets.readonly",
+          "role": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/spreadsheets",
+          "role": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.readonly",
+          "role": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.file",
+          "role": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive",
+          "role": ""
+        }
+      ],
+      "setup": [
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Googlesheets's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Googlesheets's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Googlesheets's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Googlesheets's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Googlesheets's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Googlesheets's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/googlesheets"
+    },
+    "headers": {},
+    "api_endpoint": "https://sheets.googleapis.com",
+    "released": 1,
+    "updated_at": "2025-03-10T04:59:35.000Z",
+    "website": "https://developers.google.com/sheets",
+    "api_link_ref": "https://developers.google.com/sheets/api/reference/rest",
+    "total_api": 22,
+    "credential_link": "https://console.cloud.google.com/apis/credentials"
+  },
   "routes": {
     "googlesheets__spreadsheetid__update___post": {
       "provider_intent": "googlesheets__spreadsheetid__update___post",

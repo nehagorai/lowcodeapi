@@ -1,4 +1,61 @@
 {
+  "config": {
+    "id": "xero",
+    "name": "Xero",
+    "description": "",
+    "logo_url": "xero.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Xero's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Xero's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Xero's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Xero's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Xero's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Xero's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/xero"
+    },
+    "headers": {},
+    "api_endpoint": "https://api.xero.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:42:11.000Z",
+    "website": "https://www.xero.com",
+    "api_link_ref": "https://developer.xero.com/documentation/api/accounting/overview",
+    "total_api": 4,
+    "credential_link": ""
+  },
   "routes": {
     "xero__api-xro__2-0__accounts___get": {
       "provider_intent": "xero__api-xro__2-0__accounts___get",

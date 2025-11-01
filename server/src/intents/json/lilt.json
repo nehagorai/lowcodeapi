@@ -1,4 +1,47 @@
 {
+  "config": {
+    "id": "lilt",
+    "name": "LILT",
+    "description": "",
+    "logo_url": "lilt.svg",
+    "auth_type": "",
+    "auth": {
+      "basicauth": {
+        "password": "token",
+        "username": "id"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "id",
+        "type": "input",
+        "field": "input",
+        "label": "ID",
+        "message": "This will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "auth_token",
+        "type": "input",
+        "field": "input",
+        "label": "Token",
+        "message": "This will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.lilt.com",
+    "released": 1,
+    "updated_at": "2024-12-22T09:58:50.000Z",
+    "website": "https://lilt.com/",
+    "api_link_ref": "https://developers.lilt.com/api",
+    "total_api": 47,
+    "credential_link": ""
+  },
   "routes": {
     "lilt__v2__create___get": {
       "provider_intent": "lilt__v2__create___get",

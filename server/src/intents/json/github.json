@@ -1,4 +1,21 @@
 {
+  "config": {
+    "id": "github",
+    "name": "Github",
+    "description": "",
+    "logo_url": "github.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {},
+    "auth_config": {},
+    "headers": {},
+    "api_endpoint": "",
+    "released": 1,
+    "updated_at": "2025-03-12T03:28:59.000Z",
+    "website": "https://github.com",
+    "api_link_ref": "",
+    "total_api": 889,
+    "credential_link": ""
+  },
   "app": {
     "title": "GitHub API",
     "description": "",

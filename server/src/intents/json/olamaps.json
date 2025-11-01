@@ -1,4 +1,36 @@
 {
+  "config": {
+    "id": "olamaps",
+    "name": "OLA Maps",
+    "description": "",
+    "logo_url": "olamaps.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "query": [
+        "api_key"
+      ]
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.olamaps.io",
+    "released": 1,
+    "updated_at": "2024-12-22T10:21:02.000Z",
+    "website": "https://maps.olakrutrim.com/",
+    "api_link_ref": "https://maps.olakrutrim.com/apidocs",
+    "total_api": 9,
+    "credential_link": "https://maps.olakrutrim.com/dashboard/projects"
+  },
   "routes": {
     "olamaps__routing__v1__directions___post": {
       "provider_intent": "olamaps__routing__v1__directions___post",

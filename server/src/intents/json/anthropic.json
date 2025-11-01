@@ -1,4 +1,40 @@
 {
+  "config": {
+    "id": "anthropic",
+    "name": "Anthropic",
+    "description": "",
+    "logo_url": "anthropic.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "x-api-key",
+        "headerValue": ""
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {
+      "anthropic-version": "2023-06-01"
+    },
+    "api_endpoint": "https://api.anthropic.com",
+    "released": 1,
+    "updated_at": "2024-12-22T03:01:13.000Z",
+    "website": "https://www.anthropic.com",
+    "api_link_ref": "https://docs.anthropic.com/en/home",
+    "total_api": 32,
+    "credential_link": "https://console.anthropic.com/settings/keys"
+  },
   "routes": {
     "anthropic__v1__messages___post": {
       "provider_intent": "anthropic__v1__messages___post",

@@ -1,4 +1,38 @@
 {
+  "config": {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "description": "",
+    "logo_url": "elevenlabs.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "xi-api-key",
+        "headerValue": ""
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.elevenlabs.io",
+    "released": 1,
+    "updated_at": "2024-12-22T09:22:48.000Z",
+    "website": "https://elevenlabs.io/",
+    "api_link_ref": "https://elevenlabs.io/docs/api-reference/introduction",
+    "total_api": 118,
+    "credential_link": "https://elevenlabs.io/app/speech-synthesis"
+  },
   "routes": {
     "elevenlabs__v1__audio-native___post": {
       "provider_intent": "elevenlabs__v1__audio-native___post",

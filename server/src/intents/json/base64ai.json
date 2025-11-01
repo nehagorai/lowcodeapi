@@ -1,4 +1,38 @@
 {
+  "config": {
+    "id": "base64ai",
+    "name": "Base64 AI",
+    "description": "",
+    "logo_url": "base64ai.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://base64.ai",
+    "released": 1,
+    "updated_at": "2024-12-22T06:01:39.000Z",
+    "website": "https://base64.ai/",
+    "api_link_ref": "https://documenter.getpostman.com/view/10132588/SWT5hfdz",
+    "total_api": 17,
+    "credential_link": ""
+  },
   "app": {
     "title": "Base64 AI API",
     "description": "",

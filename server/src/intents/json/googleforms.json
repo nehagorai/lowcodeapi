@@ -1,4 +1,83 @@
 {
+  "config": {
+    "id": "googleforms",
+    "name": "Google Forms",
+    "description": "",
+    "logo_url": "googleforms.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": {
+      "scope": [
+        {
+          "name": "https://www.googleapis.com/auth/forms.body",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/forms.body.readonly",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/forms.responses.readonly",
+          "role": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.file",
+          "role": "",
+          "label": ""
+        }
+      ],
+      "setup": [
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Google Forms's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Google Forms's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Google Forms's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Google Forms's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Google Forms's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Google Forms's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/googleforms"
+    },
+    "headers": {},
+    "api_endpoint": "https://forms.googleapis.com",
+    "released": 1,
+    "updated_at": "2024-12-22T09:33:38.000Z",
+    "website": "https://docs.google.com/forms",
+    "api_link_ref": "https://developers.google.com/forms/api/reference/rest",
+    "total_api": 9,
+    "credential_link": "https://console.cloud.google.com/apis/credentials"
+  },
   "routes": {
     "googleforms__v1__forms___post": {
       "provider_intent": "googleforms__v1__forms___post",

@@ -1,4 +1,21 @@
 {
+  "config": {
+    "id": "humeai",
+    "name": "Hume AI",
+    "description": "",
+    "logo_url": "humeai.svg",
+    "auth_type": "",
+    "auth": {},
+    "auth_config": {},
+    "headers": {},
+    "api_endpoint": "https://api.hume.ai",
+    "released": 1,
+    "updated_at": "2024-12-22T09:44:52.000Z",
+    "website": "https://www.hume.ai/",
+    "api_link_ref": "https://dev.hume.ai/reference/empathic-voice-interface-evi/tools/list-tools",
+    "total_api": 63,
+    "credential_link": "https://beta.hume.ai/settings/keys"
+  },
   "routes": {
     "humeai__v0__batch__jobs___get": {
       "provider_intent": "humeai__v0__batch__jobs___get",

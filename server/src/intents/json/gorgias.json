@@ -1,4 +1,57 @@
 {
+  "config": {
+    "id": "gorgias",
+    "name": "Gorgias",
+    "description": "",
+    "logo_url": "gorgias.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "basicauth": {
+        "password": "api_key",
+        "username": "email"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "subdomain",
+        "type": "input",
+        "field": "input",
+        "label": "Gorgias domain / subdomain",
+        "message": "Your Gorgias domain / subdomain",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "email",
+        "type": "input",
+        "field": "input",
+        "label": "Gorgias login email",
+        "message": "Your Gorgias email",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://{subdomain}.gorgias.com",
+    "released": 1,
+    "updated_at": "2024-12-22T09:22:51.000Z",
+    "website": "https://gorgias.com",
+    "api_link_ref": "https://developers.gorgias.com/docs",
+    "total_api": 2,
+    "credential_link": "https://developers.gorgias.com/docs/access-tokens-api-keys"
+  },
   "routes": {
     "gorgias__api__account___get": {
       "provider_intent": "gorgias__api__account___get",

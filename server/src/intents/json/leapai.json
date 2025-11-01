@@ -1,4 +1,38 @@
 {
+  "config": {
+    "id": "leapai",
+    "name": "Leap AI",
+    "description": "",
+    "logo_url": "leapai.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.tryleap.ai",
+    "released": 1,
+    "updated_at": "2024-12-22T09:50:42.000Z",
+    "website": "https://www.tryleap.ai/",
+    "api_link_ref": "https://docs.tryleap.ai/api-reference/getting-started",
+    "total_api": 20,
+    "credential_link": "https://www.tryleap.ai/projects"
+  },
   "routes": {
     "leapai__api__v1__images__models___post": {
       "provider_intent": "leapai__api__v1__images__models___post",

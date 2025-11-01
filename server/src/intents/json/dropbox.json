@@ -1,4 +1,55 @@
 {
+  "config": {
+    "id": "dropbox",
+    "name": "Dropbox",
+    "description": "",
+    "logo_url": "dropbox.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {},
+    "auth_config": {
+      "setup": [
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Dropbox's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Dropbox's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Dropbox's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Dropbox's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Dropbox's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Dropbox's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/dropbox"
+    },
+    "headers": {},
+    "api_endpoint": "https://api.dropboxapi.com",
+    "released": 1,
+    "updated_at": "2024-12-22T09:21:16.000Z",
+    "website": "https://www.dropbox.com/",
+    "api_link_ref": "https://dropbox.github.io/dropbox-api-v2-explorer/",
+    "total_api": 189,
+    "credential_link": "https://www.dropbox.com/developers/apps"
+  },
   "routes": {
     "dropbox__2__account__set_profile_photo___post": {
       "provider_intent": "dropbox__2__account__set_profile_photo___post",

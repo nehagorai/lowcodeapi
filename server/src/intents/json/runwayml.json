@@ -1,4 +1,40 @@
 {
+  "config": {
+    "id": "runwayml",
+    "name": "runwayml",
+    "description": "General-purpose multimodal simulators of the world.",
+    "logo_url": "runwayml.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing the service.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {
+      "X-Runway-Version": "2024-11-06"
+    },
+    "api_endpoint": "https://api.dev.runwayml.com",
+    "released": 1,
+    "updated_at": "2025-01-04T04:26:21.000Z",
+    "website": "https://runwayml.com",
+    "api_link_ref": "https://docs.dev.runwayml.com/api",
+    "total_api": 3,
+    "credential_link": "https://dev.runwayml.com/organization/3143d26a-fb91-4372-9de3-cee667139314/api-keys"
+  },
   "routes": {
     "runwayml__v1__image_to_video___post": {
       "provider_intent": "runwayml__v1__image_to_video___post",

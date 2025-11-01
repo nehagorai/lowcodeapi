@@ -1,4 +1,81 @@
 {
+  "config": {
+    "id": "zohoassist",
+    "name": "Zoho Assist",
+    "description": "",
+    "logo_url": "zohoassist.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://assist.zoho.in, https://assist.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://assist.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho Assist's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Assist's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho Assist's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Assist's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho Assist's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Assist's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohoassist"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T10:26:04.000Z",
+    "website": "https://www.zoho.com/assist",
+    "api_link_ref": "https://www.zoho.com/assist/api/introduction.html",
+    "total_api": 13,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
   "routes": {
     "zohoassist__api__v2__devices__resource_id___get": {
       "provider_intent": "zohoassist__api__v2__devices__resource_id___get",

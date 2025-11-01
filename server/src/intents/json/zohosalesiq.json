@@ -1,4 +1,81 @@
 {
+  "config": {
+    "id": "zohosalesiq",
+    "name": "Zoho SalesIQ",
+    "description": "",
+    "logo_url": "zohosalesiq.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://salesiq.zoho.in, https://salesiq.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://salesiq.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho SalesIQ's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho SalesIQ's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho SalesIQ's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho SalesIQ's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho SalesIQ's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho SalesIQ's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohosalesiq"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T09:30:25.000Z",
+    "website": "https://www.zoho.com/salesiq",
+    "api_link_ref": "https://www.zoho.com/salesiq/help/developer-section/rest-api-new.html",
+    "total_api": 6,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
   "routes": {
     "zohosalesiq__api__v1__screenname__chats__chat_id___get": {
       "provider_intent": "zohosalesiq__api__v1__screenname__chats__chat_id___get",

@@ -1,4 +1,36 @@
 {
+  "config": {
+    "id": "telegram",
+    "name": "Telegram",
+    "description": "Telegram",
+    "logo_url": "telegram.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "path": {
+        "token": "api_key"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "Telegram bot API Key",
+        "message": "Telegram bot API Key will be used for sending text, images, audio, video, poll.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.telegram.org",
+    "released": 1,
+    "updated_at": "2025-03-10T09:47:58.000Z",
+    "website": "https://telegram.org",
+    "api_link_ref": "https://core.telegram.org/api",
+    "total_api": 32,
+    "credential_link": "https://telegram.me/botfather"
+  },
   "routes": {
     "telegram__bottoken__sendmessage___post": {
       "provider_intent": "telegram__bottoken__sendmessage___post",

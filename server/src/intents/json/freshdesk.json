@@ -1,4 +1,47 @@
 {
+  "config": {
+    "id": "freshdesk",
+    "name": "FreshDesk",
+    "description": "",
+    "logo_url": "freshdesk.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "basicauth": {
+        "password": "X",
+        "username": "api_key"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "subdomain",
+        "type": "input",
+        "field": "input",
+        "label": "Freshdesk domain / subdomain",
+        "message": "Your freshdesk domain / subdomain",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "This API key will be used for accessing APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://{subdomain}.freshdesk.com",
+    "released": 1,
+    "updated_at": "2025-02-26T12:33:27.000Z",
+    "website": "https://www.freshworks.com/freshdesk",
+    "api_link_ref": "https://developers.freshdesk.com/api",
+    "total_api": 3,
+    "credential_link": "https://support.freshdesk.com/en/support/solutions/articles/215517-how-to-find-your-api-key"
+  },
   "routes": {
     "freshdesk__api__v2__account___get": {
       "provider_intent": "freshdesk__api__v2__account___get",

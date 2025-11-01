@@ -1,4 +1,38 @@
 {
+  "config": {
+    "id": "hive",
+    "name": "Hive",
+    "description": "",
+    "logo_url": "hive.svg",
+    "auth_type": "",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "YOUR_API_KEY"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://app.hive.com",
+    "released": 1,
+    "updated_at": "2024-12-28T09:13:18.000Z",
+    "website": "https://hive.com/",
+    "api_link_ref": "https://developers.hive.com/reference/introduction",
+    "total_api": 14,
+    "credential_link": ""
+  },
   "routes": {
     "hive__v2__task__sync___post": {
       "provider_intent": "hive__v2__task__sync___post",

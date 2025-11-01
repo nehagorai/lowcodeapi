@@ -1,4 +1,81 @@
 {
+  "config": {
+    "id": "zohomarketing",
+    "name": "Zoho Marketing ",
+    "description": "",
+    "logo_url": "zohomarketing.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://marketingautomation.zoho.in, https://marketingautomation.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://marketingautomation.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho Marketing 's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Marketing 's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho Marketing 's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Marketing 's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho Marketing 's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Marketing 's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohomarketing"
+    },
+    "headers": {},
+    "api_endpoint": "https://marketingautomation.zoho.in",
+    "released": 1,
+    "updated_at": "2024-12-22T09:39:28.000Z",
+    "website": "https://www.zoho.com/marketingplus",
+    "api_link_ref": "https://www.zoho.com/marketingautomation/help/developers/v1",
+    "total_api": 46,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
   "routes": {
     "zohomarketing__api__v1__getcampaigndetails___get": {
       "provider_intent": "zohomarketing__api__v1__getcampaigndetails___get",

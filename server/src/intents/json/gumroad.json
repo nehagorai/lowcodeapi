@@ -1,4 +1,61 @@
 {
+  "config": {
+    "id": "gumroad",
+    "name": "Gumroad",
+    "description": "",
+    "logo_url": "gumroad.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Gumroad's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Gumroad's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Gumroad's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Gumroad's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Gumroad's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Gumroad's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/gumroad"
+    },
+    "headers": {},
+    "api_endpoint": "https://api.gumroad.com",
+    "released": 1,
+    "updated_at": "2024-12-22T09:24:27.000Z",
+    "website": "https://gumroad.com",
+    "api_link_ref": "https://app.gumroad.com/api",
+    "total_api": 38,
+    "credential_link": "https://app.gumroad.com/settings/advanced"
+  },
   "routes": {
     "gumroad__v2__products__product_id__custom_fields___get": {
       "provider_intent": "gumroad__v2__products__product_id__custom_fields___get",

@@ -1,4 +1,83 @@
 {
+  "config": {
+    "id": "googledocs",
+    "name": "Google Docs",
+    "description": "",
+    "logo_url": "googledocs.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": {
+      "scope": [
+        {
+          "name": "https://www.googleapis.com/auth/documents.readonly",
+          "role": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/documents",
+          "role": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.readonly",
+          "role": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.file",
+          "role": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive",
+          "role": ""
+        }
+      ],
+      "setup": [
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Google Docs's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Google Docs's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Google Docs's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Google Docs's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Google Docs's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Google Docs's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/googledocs"
+    },
+    "headers": {},
+    "api_endpoint": "https://docs.googleapis.com",
+    "released": 1,
+    "updated_at": "2024-12-22T09:30:03.000Z",
+    "website": "https://docs.google.com/",
+    "api_link_ref": "https://developers.google.com/docs/api/reference/rest",
+    "total_api": 4,
+    "credential_link": "https://console.cloud.google.com/apis/credentials"
+  },
   "routes": {
     "googledocs__v1__documents__documentid___get": {
       "provider_intent": "googledocs__v1__documents__documentid___get",

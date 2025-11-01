@@ -1,4 +1,81 @@
 {
+  "config": {
+    "id": "zohowebinar",
+    "name": "Zoho Webinar",
+    "description": "",
+    "logo_url": "zohowebinar.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://meeting.zoho.in, https://meeting.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://meeting.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho Webinar's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Webinar's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho Webinar's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Webinar's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho Webinar's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Webinar's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohowebinar"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T09:12:46.000Z",
+    "website": "https://www.zoho.com/webinar",
+    "api_link_ref": "https://www.zoho.com/meeting/api-integration/webinar-api.html",
+    "total_api": 10,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
   "routes": {
     "zohowebinar__api__v2__zso_id__sessions__meeting_key-json___get": {
       "provider_intent": "zohowebinar__api__v2__zso_id__sessions__meeting_key-json___get",

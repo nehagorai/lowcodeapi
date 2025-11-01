@@ -1,4 +1,81 @@
 {
+  "config": {
+    "id": "zoholens",
+    "name": "Zoho Lens",
+    "description": "",
+    "logo_url": "zoholens.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://lens.zoho.in, https://lens.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://lens.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "zoholens's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter zoholens's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "zoholens's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter zoholens's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing zoholens's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter zoholens's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zoholens"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T09:47:07.000Z",
+    "website": "https://www.zoho.com/lens",
+    "api_link_ref": "https://www.zoho.com/lens/resources/api/introduction.html",
+    "total_api": 2,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
   "app": {
     "title": "zoholens API",
     "description": "",

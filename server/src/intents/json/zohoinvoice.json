@@ -1,4 +1,27 @@
 {
+  "config": {
+    "id": "zohoinvoice",
+    "name": "Zoho Invoice",
+    "description": "",
+    "logo_url": "zohoinvoice.svg",
+    "auth_type": "",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {},
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T09:49:50.000Z",
+    "website": "https://www.zoho.com/invoice",
+    "api_link_ref": "https://www.zoho.com/invoice/api/v3/introduction",
+    "total_api": 258,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
   "routes": {
     "zohoinvoice__invoice__v3__contacts__contactpersons___post": {
       "provider_intent": "zohoinvoice__invoice__v3__contacts__contactpersons___post",

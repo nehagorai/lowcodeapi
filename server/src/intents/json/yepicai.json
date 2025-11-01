@@ -1,4 +1,38 @@
 {
+  "config": {
+    "id": "yepicai",
+    "name": "Yepic AI",
+    "description": "",
+    "logo_url": "yepicai.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "xi-api-key",
+        "headerValue": ""
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T10:21:09.000Z",
+    "website": "https://yepic.ai",
+    "api_link_ref": "https://docs.yepic.ai",
+    "total_api": 17,
+    "credential_link": "https://studio.yepic.ai"
+  },
   "routes": {
     "yepicai__v1__assets___get": {
       "provider_intent": "yepicai__v1__assets___get",

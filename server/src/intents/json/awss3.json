@@ -1,4 +1,58 @@
 {
+  "config": {
+    "id": "awss3",
+    "name": "AWS S3",
+    "description": "",
+    "logo_url": "awss3.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {},
+      "subdomain": [
+        "region",
+        "bucket"
+      ]
+    },
+    "auth_config": [
+      {
+        "name": "accessKeyId",
+        "type": "input",
+        "field": "input",
+        "label": "AWS Access Key Id",
+        "message": "This Access key will be used for accessing AWS S3 service",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "secretAccessKey",
+        "type": "input",
+        "field": "input",
+        "label": "AWS Secret Access Key",
+        "message": "This key will be used for accessing AWS S3 service",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "region",
+        "type": "input",
+        "field": "input",
+        "label": "AWS Region",
+        "message": "us-east-1, us-east-2",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://{bucket}.s3.{region}.amazonaws.com",
+    "released": 1,
+    "updated_at": "2024-12-22T05:47:54.000Z",
+    "website": "https://aws.amazon.com/",
+    "api_link_ref": "https://docs.aws.amazon.com/AmazonS3/latest/API/Type_API_Reference.html",
+    "total_api": 3,
+    "credential_link": "https://aws.amazon.com/"
+  },
   "routes": {
     "awss3__signed-url___get": {
       "provider_intent": "awss3__signed-url___get",

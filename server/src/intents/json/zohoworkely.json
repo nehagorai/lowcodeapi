@@ -1,4 +1,81 @@
 {
+  "config": {
+    "id": "zohoworkely",
+    "name": "Zoho Workely",
+    "description": "",
+    "logo_url": "zohoworkely.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://workerly.zoho.in, https://workerly.zoho.in",
+          "required": true,
+          "className": "",
+          "placeholder": "https://workerly.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho Workely's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Workely's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho Workely's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Workely's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho Workely's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Workely's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohoworkely"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T09:06:04.000Z",
+    "website": "https://www.zoho.com/workerly/",
+    "api_link_ref": "https://www.zoho.com/workerly/developer-guide/whats-new.html",
+    "total_api": 10,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
   "routes": {
     "zohoworkely__workelry__v2__settings__fields___get": {
       "provider_intent": "zohoworkely__workelry__v2__settings__fields___get",

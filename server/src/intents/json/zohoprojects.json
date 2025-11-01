@@ -1,4 +1,71 @@
 {
+  "config": {
+    "id": "zohoprojects",
+    "name": "Zoho Projects",
+    "description": "",
+    "logo_url": "zohoprojects.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region ",
+          "required": true,
+          "className": "",
+          "placeholder": "https://projectsapi.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "zohoprojects's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter zohoprojects's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "zohoprojects's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter zohoprojects's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing zohoprojects's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter zohoprojects's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohoprojects"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T09:33:04.000Z",
+    "website": "https://www.zoho.com/projects",
+    "api_link_ref": "https://www.zoho.com/projects/help/rest-api/zohoprojectsapi.html",
+    "total_api": 15,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
   "app": {
     "title": "zohoprojects API",
     "description": "",

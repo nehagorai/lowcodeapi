@@ -1,4 +1,81 @@
 {
+  "config": {
+    "id": "zohomail",
+    "name": "Zoho Mail",
+    "description": "",
+    "logo_url": "zohomail.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Zoho-oauthtoken"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "auth_endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Auth Region",
+          "message": "Enter Zoho Auth Region https://accounts.zoho.in, https://accounts.zoho.com",
+          "required": true,
+          "className": "",
+          "placeholder": "https://accounts.zoho.in"
+        },
+        {
+          "name": "endpoint",
+          "type": "input",
+          "field": "input",
+          "label": "Zoho Region",
+          "message": "Enter Zoho Region, https://mail.zoho.com, https://mail.zoho.in ",
+          "required": true,
+          "className": "",
+          "placeholder": "https://mail.zoho.in"
+        },
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Zoho Mail's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Mail's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Zoho Mail's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Mail's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Zoho Mail's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Zoho Mail's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/zohomail"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2024-12-22T09:43:35.000Z",
+    "website": "https://www.zoho.com/mail",
+    "api_link_ref": "https://www.zoho.com/mail/help/api/overview.html",
+    "total_api": 133,
+    "credential_link": "https://accounts.zoho.com/developerconsole"
+  },
   "routes": {
     "zohomail__api__accounts__account_id___get": {
       "provider_intent": "zohomail__api__accounts__account_id___get",

@@ -1,4 +1,21 @@
 {
+  "config": {
+    "id": "oneai",
+    "name": "One AI",
+    "description": "OneAI transforms websites into intelligent platforms with custom GPT agents, designed to engage and understand visitors in real-time. Our solution seamlessly integrates into any website, providing personalized interactions based on content directly from your site. With easy embedding, advanced analytics, and a customizable interface, OneAI not only enhances user experience but also drives engagement and sales. Elevate your digital presence with a GPT agent that's always in sync with your business needs.",
+    "logo_url": "oneai.svg",
+    "auth_type": "TOKEN",
+    "auth": {},
+    "auth_config": {},
+    "headers": {},
+    "api_endpoint": "https://api.oneai.com",
+    "released": 1,
+    "updated_at": "2025-01-04T04:26:20.000Z",
+    "website": "https://oneai.com/",
+    "api_link_ref": "https://docs.oneai.com/reference/create_agent_v1_create_post",
+    "total_api": 25,
+    "credential_link": ""
+  },
   "routes": {
     "oneai__agent__v1__create___post": {
       "provider_intent": "oneai__agent__v1__create___post",

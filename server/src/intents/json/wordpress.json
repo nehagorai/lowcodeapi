@@ -1,4 +1,61 @@
 {
+  "config": {
+    "id": "wordpress",
+    "name": "Wordpress - Org",
+    "description": "Wordpress - A Cloud Based Blogging Platform ",
+    "logo_url": "wordpress.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": {
+      "setup": [
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Wordpress's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Wordpress's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Wordpress's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Wordpress's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Wordpress's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Wordpress's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/wordpress"
+    },
+    "headers": {},
+    "api_endpoint": "{endpoint}",
+    "released": 1,
+    "updated_at": "2025-03-05T16:23:48.000Z",
+    "website": "https://wordpress.org",
+    "api_link_ref": "https://developer.wordpress.org/docs",
+    "total_api": 68,
+    "credential_link": "https://developer.wordpress.org/apps"
+  },
   "routes": {
     "wordpress__rest__v1.3__batch___get": {
       "provider_intent": "wordpress__rest__v1.3__batch___get",

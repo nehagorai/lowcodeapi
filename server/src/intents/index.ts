@@ -2,53 +2,14 @@ import fs from 'fs';
 import path from 'path';
 import { loggerService } from '../utilities';
 
-import providerListFull from './providers.json';
-
 const dirPath = `${__dirname}/json`;
 
-const { AVAILABLE_PROVIDERS_CONFIG = '', DISABLED_PROVIDERS_CONFIG = '' } = process.env;
+const { ENABLE_SELECTED_CONNECTORS = '', DISABLE_SELECTED_CONNECTORS = '' } = process.env;
 
-let providerList : any = [];
+const providerList : any = [];
 
-let AVAILABLE_PRODVIDERS_LIST : any = [];
-let DISABLED_PROVIDRERS_LIST : any = [];
-
-try {
-  DISABLED_PROVIDRERS_LIST = DISABLED_PROVIDERS_CONFIG.trim().split(',').map((i) => i.toString().trim().toLowerCase());
-  if (DISABLED_PROVIDRERS_LIST.length) {
-    providerList = providerListFull
-      .filter((item : any) => !DISABLED_PROVIDRERS_LIST.includes(item.id));
-    // console.log('providerList', providerList);
-    // console.log('providerListFull', providerListFull);
-  }
-} catch (e) {
-  console.log('DISABLED_PROVIDRERS_LIST', e);
-}
-
-if (!DISABLED_PROVIDERS_CONFIG) {
-  try {
-    AVAILABLE_PRODVIDERS_LIST = AVAILABLE_PROVIDERS_CONFIG.trim().split(',').map((i) => i.toString().trim().toLowerCase());
-
-    if (AVAILABLE_PRODVIDERS_LIST.length) {
-      providerList = providerListFull
-        .filter((item : any) => AVAILABLE_PRODVIDERS_LIST.includes(item.id));
-    }
-  } catch (e) {
-    console.log('AVAILABLE_PRODVIDERS_LIST', e);
-  }
-}
-
-if (!providerList.length) {
-  providerList = providerListFull;
-}
-
-providerList = providerList.filter((item: any) => item.released);
-
-const providerMap : {[ key: string]: any} = {};
-
-providerList.forEach((provider: any) => {
-  providerMap[provider.id] = provider;
-});
+let AVAILABLE_CONNECTORS : any = [];
+let DISABLED_CONNECTORS : any = [];
 
 const load = () => {
   const list = fs.readdirSync(dirPath);
@@ -56,33 +17,69 @@ const load = () => {
 
   try {
     list.forEach((item) => {
-      const provider_name = item.split('.')[0];
-      const found = providerList.filter((provider : any) => provider_name === provider.id);
-      if (!found.length) return;
+      const [provider_name, extension] = item.split('.');
+      if (extension !== 'json') return;
       const filePath = path.resolve(__dirname, `./json/${item}`);
-      const name = item.split('.')[0];
-      json[name] = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+      const jsonData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+      if (jsonData.config) {
+        providerList.push({ ...jsonData.config });
+        json[provider_name] = jsonData;
+      }
     });
-  } catch (e) {
-    loggerService.error(e);
+  } catch (e : any) {
+    loggerService.error('Error loading json files for intents', e.message);
     throw e;
   }
 
-  const providers : { [ key: string ]: any } = {
-    ...json,
-  };
-
-  return providers;
+  return json;
 };
 
-const providers = () => load();
+const providersJson : {[ key: string]: any} = load();
 
-const providerListExport : any = [...providerList];
+let finalConnectorsList : any = [];
 
-export default load();
+try {
+  DISABLED_CONNECTORS = DISABLE_SELECTED_CONNECTORS.trim().split(',').map((i) => i.toString().trim().toLowerCase());
+  if (DISABLED_CONNECTORS.length) {
+    finalConnectorsList = providerList
+      .filter((item : any) => !DISABLED_CONNECTORS.includes(item.id));
+  }
+} catch (e) {
+  console.log('DISABLE_SELECTED_CONNECTORS', e);
+}
+
+if (!DISABLE_SELECTED_CONNECTORS.trim()) {
+  try {
+    AVAILABLE_CONNECTORS = ENABLE_SELECTED_CONNECTORS.trim().split(',').map((i) => i.toString().trim().toLowerCase());
+    if (AVAILABLE_CONNECTORS.length) {
+      finalConnectorsList = providerList
+        .filter((item : any) => AVAILABLE_CONNECTORS.includes(item.id));
+    }
+  } catch (e) {
+    console.log('AVAILABLE_CONNECTORS', e);
+  }
+}
+
+if (!finalConnectorsList.length) {
+  finalConnectorsList = providerList;
+}
+
+finalConnectorsList = finalConnectorsList.filter((item: any) => item.released);
+
+const connectorMap : {[ key: string]: any} = {};
+const connectorMapIntents : {[ key: string]: any} = {};
+
+finalConnectorsList.forEach((provider: any) => {
+  connectorMap[provider.id] = provider;
+  connectorMapIntents[provider.id] = providersJson[provider.id];
+});
+
+const connectorListExport : any = [...finalConnectorsList];
+
+console.log(Object.keys(connectorMap).join(','));
+export default connectorMapIntents;
 
 export {
-  providers,
-  providerListExport as providerList,
-  providerMap,
+  connectorListExport as providerList,
+  connectorMap as providerMap,
 };

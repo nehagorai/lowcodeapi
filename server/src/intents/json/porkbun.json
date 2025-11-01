@@ -1,4 +1,47 @@
 {
+  "config": {
+    "id": "porkbun",
+    "name": "Porkbun",
+    "description": "",
+    "logo_url": "porkbun.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "body": {
+        "apikey": "apikey",
+        "secretapikey": "secretapikey"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "apikey",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "secretapikey",
+        "type": "input",
+        "field": "input",
+        "label": "API Secret",
+        "message": "API Secret is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.porkbun.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:18:19.000Z",
+    "website": "https://porkbun.com",
+    "api_link_ref": "https://porkbun.com/api/json/v3/documentation",
+    "total_api": 14,
+    "credential_link": ""
+  },
   "routes": {
     "porkbun__api__json__v3__dns__create__domain___post": {
       "provider_intent": "porkbun__api__json__v3__dns__create__domain___post",

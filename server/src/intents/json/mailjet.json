@@ -1,4 +1,51 @@
 {
+  "config": {
+    "id": "mailjet",
+    "name": "Mailjet",
+    "description": "",
+    "logo_url": "mailjet.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "body": {
+        "api_key": "api_key",
+        "api_secret": "api_secret"
+      },
+      "queryMap": {
+        "api_key": "api_key",
+        "api_secret": "api_secret"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "API Key",
+        "message": "API Key is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      },
+      {
+        "name": "api_secret",
+        "type": "input",
+        "field": "input",
+        "label": "API Secret",
+        "message": "API Secret is used for accessing the API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.mailjet.com",
+    "released": 1,
+    "updated_at": "2024-12-22T10:10:12.000Z",
+    "website": "https://www.mailjet.com/",
+    "api_link_ref": "https://dev.mailjet.com/email/reference/",
+    "total_api": 2,
+    "credential_link": "https://app.mailjet.com/account/apikeys"
+  },
   "routes": {
     "mailjet__v3__send___post": {
       "provider_intent": "mailjet__v3__send___post",

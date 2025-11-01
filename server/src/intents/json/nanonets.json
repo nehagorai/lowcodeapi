@@ -1,4 +1,38 @@
 {
+  "config": {
+    "id": "nanonets",
+    "name": "Nanonets",
+    "description": "",
+    "logo_url": "nanonets.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": ""
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "Nanonets  API Key",
+        "message": "This API key will be used for accessing Nanonets  APIs.",
+        "required": true,
+        "className": "",
+        "placeholder": "sk-xxxxx"
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://app.nanonets.com",
+    "released": 1,
+    "updated_at": "2024-12-22T11:23:22.000Z",
+    "website": "https://nanonets.com/",
+    "api_link_ref": "https://nanonets.com/documentation/#section/Authentication",
+    "total_api": 19,
+    "credential_link": "https://app.nanonets.com/#/keys"
+  },
   "routes": {
     "nanonets__api__v2__ocr__fulltext___get": {
       "provider_intent": "nanonets__api__v2__ocr__fulltext___get",

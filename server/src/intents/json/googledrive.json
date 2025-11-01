@@ -1,4 +1,153 @@
 {
+  "config": {
+    "id": "googledrive",
+    "name": "Google Drive",
+    "description": "",
+    "logo_url": "googledrive.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {
+      "header": {
+        "authKey": "accessToken",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": {
+      "scope": [
+        {
+          "name": "https://www.googleapis.com/auth/drive.admin.labels.readonly",
+          "role": "",
+          "type": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.appdata",
+          "role": "",
+          "type": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.file",
+          "role": "",
+          "type": "",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.install",
+          "role": "",
+          "type": "Sensitive Scope",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.labels",
+          "role": "",
+          "type": "Sensitive Scope",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.labels.readonly",
+          "role": "",
+          "type": "Sensitive Scope",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.admin.labels",
+          "role": "",
+          "type": "Sensitive Scope",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/docs",
+          "role": "",
+          "type": "Sensitive Scope",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.photos.readonly",
+          "role": "",
+          "type": "Sensitive Scope",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.apps.readonly",
+          "role": "",
+          "type": "Sensitive Scope",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.apps",
+          "role": "",
+          "type": "Sensitive Scope",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/activity",
+          "role": "",
+          "type": "Sensitive Scope",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive",
+          "role": "",
+          "type": "Restricted scope",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.metadata",
+          "role": "",
+          "type": "Restricted scope",
+          "label": ""
+        },
+        {
+          "name": "https://www.googleapis.com/auth/drive.metadata.readonly",
+          "role": "",
+          "type": "Restricted scope",
+          "label": ""
+        }
+      ],
+      "setup": [
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Google Drive's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Google Drive's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Google Drive's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Google Drive's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Google Drive's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Google Drive's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/googledrive"
+    },
+    "headers": {},
+    "api_endpoint": "https://www.googleapis.com",
+    "released": 1,
+    "updated_at": "2024-12-22T09:31:48.000Z",
+    "website": "https://drive.google.com/",
+    "api_link_ref": "https://developers.google.com/drive/api/reference/rest/v3",
+    "total_api": 45,
+    "credential_link": "https://console.cloud.google.com/apis/credentials"
+  },
   "routes": {
     "googledrive__drive__v3__about___get": {
       "provider_intent": "googledrive__drive__v3__about___get",

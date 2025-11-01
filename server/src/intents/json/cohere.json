@@ -1,4 +1,38 @@
 {
+  "config": {
+    "id": "cohere",
+    "name": "Cohere",
+    "description": "",
+    "logo_url": "cohere.svg",
+    "auth_type": "TOKEN",
+    "auth": {
+      "header": {
+        "authKey": "api_key",
+        "headerName": "Authorization",
+        "headerValue": "Bearer"
+      }
+    },
+    "auth_config": [
+      {
+        "name": "api_key",
+        "type": "input",
+        "field": "input",
+        "label": "Cohere API Key",
+        "message": "API Key is used for accessing the Cohere API.",
+        "required": true,
+        "className": "",
+        "placeholder": ""
+      }
+    ],
+    "headers": {},
+    "api_endpoint": "https://api.cohere.com",
+    "released": 1,
+    "updated_at": "2024-12-22T06:34:15.000Z",
+    "website": "https://cohere.com/",
+    "api_link_ref": "https://docs.cohere.com/reference/about",
+    "total_api": 31,
+    "credential_link": "https://dashboard.cohere.com/api-keys"
+  },
   "routes": {
     "cohere__v1__chat___post": {
       "provider_intent": "cohere__v1__chat___post",

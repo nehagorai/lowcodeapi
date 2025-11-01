@@ -1,4 +1,61 @@
 {
+  "config": {
+    "id": "discord",
+    "name": "Discord",
+    "description": "",
+    "logo_url": "discord.svg",
+    "auth_type": "OAUTH2.0",
+    "auth": {},
+    "auth_config": {
+      "scope": [
+        {
+          "name": "",
+          "role": ""
+        }
+      ],
+      "setup": [
+        {
+          "name": "client_id",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client ID",
+          "message": "Discord's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Discord's OAuth2.0 Client ID"
+        },
+        {
+          "name": "client_secret",
+          "type": "input",
+          "field": "input",
+          "label": "OAuth2.0 Client Secret",
+          "message": "Discord's OAuth2.0 Client Secret",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Discord's OAuth2.0 Client Secret"
+        },
+        {
+          "name": "selected_scopes",
+          "type": "input",
+          "field": "input",
+          "label": "Scopes",
+          "message": "Add comma seperated scopes for accessing Discord's api endpoints",
+          "required": true,
+          "className": "",
+          "placeholder": "Enter Discord's OAuth2.0 Scopes"
+        }
+      ],
+      "auth_link": "/auth/discord"
+    },
+    "headers": {},
+    "api_endpoint": "https://discord.com/api",
+    "released": 1,
+    "updated_at": "2024-12-22T08:53:47.000Z",
+    "website": "https://discord.com/",
+    "api_link_ref": "https://discord.com/developers/docs/reference",
+    "total_api": 151,
+    "credential_link": "https://discord.com/"
+  },
   "routes": {
     "discord__applications__me___get": {
       "provider_intent": "discord__applications__me___get",
